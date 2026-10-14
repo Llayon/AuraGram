@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>AuraGram Studio — Photo Studio Mini App</title>
+    <!-- TECH-DEBT(G0): Tailwind via runtime CDN kept intentionally for Gauntlet 0
+         to avoid visual regressions in the first release. Follow-up: vendor or
+         build CSS locally so the app has zero runtime CDN dependency. See README. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Telegram WebApp SDK (optional enhancement; app works without it) -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body class="h-screen w-screen flex flex-col justify-between bg-[#09090b] text-white select-none overflow-hidden">
+
+    <!-- Top Bar -->
+    <header class="flex items-center justify-between px-3.5 py-2.5 border-b border-white/10 bg-[#0d0d12]/90 z-20 shrink-0">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-violet-600 via-fuchsia-500 to-pink-500 flex items-center justify-center shadow-lg shadow-fuchsia-500/20">
+                <i class="ph-fill ph-sparkle text-white text-lg"></i>
+            </div>
+            <div>
+                <div class="flex items-center gap-1.5">
+                    <h1 class="text-sm font-bold tracking-tight bg-gradient-to-r from-white via-pink-100 to-violet-300 bg-clip-text text-transparent">AuraGram</h1>
+                    <span class="text-[9px] font-bold uppercase px-1.5 py-0.5 rounded-md bg-pink-500/20 text-pink-300 border border-pink-500/30">Photo Studio</span>
+                </div>
+                <p id="activeFilterName" class="text-[10px] text-zinc-400 font-medium">Clean Girl</p>
+                <p id="correctionNote" class="hidden"></p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-1.5">
+            <!-- Next Demo Photo Button -->
+            <button id="btnDemoPhoto" title="Сменить демо-портрет" class="px-2.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-zinc-300 flex items-center gap-1 active:scale-95 transition">
+                <i class="ph ph-images text-sm text-pink-400"></i>
+                <span class="hidden sm:inline">Демо</span>
+            </button>
+
+            <!-- Upload Own Photo -->
+            <label for="fileInput" class="px-2.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-zinc-200 flex items-center gap-1 cursor-pointer active:scale-95 transition">
+                <i class="ph ph-upload-simple text-sm text-violet-400"></i>
+                <span>Фото</span>
+            </label>
+            <input id="fileInput" type="file" accept="image/*" class="hidden">
+
+            <!-- Reset Button -->
+            <button id="btnReset" title="Сбросить все настройки" class="p-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-zinc-400 hover:text-white active:scale-95 transition">
+                <i class="ph ph-arrow-counter-clockwise text-sm"></i>
+            </button>
+
+            <!-- Save / Export Button -->
+            <button id="btnExport" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-500 hover:to-pink-500 text-xs font-semibold text-white shadow-lg shadow-pink-600/25 flex items-center gap-1.5 active:scale-95 transition disabled:opacity-40" disabled>
+                <i class="ph-bold ph-paper-plane-tilt text-xs"></i>
+                <span>Готово</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Interactive Viewport / Canvas Area -->
+    <main class="relative flex-1 flex items-center justify-center overflow-hidden bg-[#060608] p-2">
+        <!-- Ambient Background Glow -->
+        <div class="absolute inset-0 pointer-events-none opacity-25 bg-[radial-gradient(circle_at_center,rgba(236,72,153,0.22),transparent_70%)]"></div>
+
+        <!-- Canvas Wrapper -->
+        <div class="relative flex items-center justify-center max-w-full max-h-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
+            <canvas id="mainCanvas" class="max-h-[52vh] sm:max-h-[58vh] w-auto object-contain block rounded-2xl"></canvas>
+
+            <!-- Loading / error overlay: explicit load state, never a fake photo -->
+            <div id="loadOverlay">
+                <div class="spinner"></div>
+                <p id="loadOverlayText" class="text-xs font-medium text-zinc-200">Загрузка фото…</p>
+                <p id="loadError" class="text-[11px] text-zinc-400 max-w-[260px]"></p>
+            </div>
+
+            <!-- Original Badge when holding Compare -->
+            <div id="compareBadge" class="hidden absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur-md border border-white/20 text-[11px] font-semibold text-white tracking-wider uppercase pointer-events-none">
+                Оригинал (До)
+            </div>
+
+            <!-- Auto-tune HUD badge (rule-based presets; no ML model) -->
+            <div id="autoHudBadge" class="opacity-0 transition-opacity duration-300 absolute top-3 right-3 px-3 py-1.5 rounded-xl bg-black/80 backdrop-blur-md border border-pink-500/40 text-right pointer-events-none shadow-lg">
+                <div class="flex items-center justify-end gap-1.5 text-[11px] font-bold text-pink-300">
+                    <i class="ph-fill ph-sparkle"></i>
+                    <span id="autoSceneType">Портрет</span>
+                </div>
+                <p id="autoMetricsText" class="text-[10px] text-zinc-300 font-mono mt-0.5">Свет: 58% | Ретушь: 45%</p>
+            </div>
+        </div>
+
+        <!-- Floating Quick Action Pills (Auto-Style & Hold Before/After) -->
+        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
+            <button id="btnMagicAI" class="px-3.5 py-1.5 rounded-full glass-panel border border-pink-500/40 shadow-lg shadow-pink-500/10 flex items-center gap-1.5 text-xs font-semibold text-pink-200 hover:bg-pink-500/20 active:scale-95 transition">
+                <i class="ph-fill ph-magic-wand text-pink-400 text-sm"></i>
+                <span>Автостиль</span>
+            </button>
+
+            <button id="btnCompare" class="px-3.5 py-1.5 rounded-full glass-panel border border-white/15 shadow-lg flex items-center gap-1.5 text-xs font-medium text-zinc-200 hover:bg-white/10 active:scale-95 transition touch-none">
+                <i class="ph ph-arrows-left-right text-violet-400 text-sm"></i>
+                <span>Удерж. До/После</span>
+            </button>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toastMsg" class="pointer-events-none fixed top-14 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-zinc-900/95 border border-white/15 text-xs font-medium text-white shadow-xl opacity-0 -translate-y-2 transition-all duration-200">
+            Настройки применены
+        </div>
+    </main>
+
+    <!-- Bottom Control Deck -->
+    <section class="control-deck w-full glass-panel border-t border-white/10 z-20 shrink-0 flex flex-col">
+
+        <!-- Dynamic Intensity / Parameter Slider -->
+        <div id="sliderContainer" class="px-5 pt-2.5 pb-1 flex items-center gap-3">
+            <span id="sliderLabel" class="text-[11px] font-medium text-zinc-400 w-28 truncate">Сила фильтра</span>
+            <input id="mainSlider" type="range" min="0" max="100" value="100" class="flex-1">
+            <span id="sliderValue" class="text-[11px] font-bold text-pink-400 w-10 text-right font-mono">100%</span>
+        </div>
+
+        <!-- Tab Content Containers -->
+        <div class="h-24 flex items-center overflow-hidden relative">
+
+            <!-- TAB 1: PRESET FILTERS -->
+            <div id="tab-filters" class="w-full flex items-center gap-2.5 overflow-x-auto no-scrollbar px-4 py-1.5">
+                <!-- Populated dynamically via JS with live mini-canvas previews -->
+            </div>
+
+            <!-- TAB 2: BEAUTY & RETOUCH -->
+            <div id="tab-beauty" class="w-full hidden items-center gap-2.5 overflow-x-auto no-scrollbar px-4 py-1.5">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- TAB 3: FX & LIGHT LEAKS -->
+            <div id="tab-fx" class="w-full hidden items-center gap-2.5 overflow-x-auto no-scrollbar px-4 py-1.5">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- TAB 4: PRO ADJUSTMENTS -->
+            <div id="tab-adjust" class="w-full hidden items-center gap-2.5 overflow-x-auto no-scrollbar px-4 py-1.5">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- TAB 5: FRAMES & TEXT STAMP -->
+            <div id="tab-extras" class="w-full hidden items-center justify-between gap-2.5 overflow-x-auto no-scrollbar px-4 py-1.5">
+                <div class="flex items-center gap-2 shrink-0">
+                    <button data-stamp="none" aria-pressed="true" class="stamp-btn px-3 py-2 rounded-xl border border-violet-500 bg-violet-500/20 text-xs font-medium text-white shrink-0">Без рамки</button>
+                    <button data-stamp="date98" aria-pressed="false" class="stamp-btn px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-xs font-medium text-zinc-300 shrink-0">Штамп '98</button>
+                    <button data-stamp="polaroid" aria-pressed="false" class="stamp-btn px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-xs font-medium text-zinc-300 shrink-0">Polaroid</button>
+                    <button data-stamp="cinema" aria-pressed="false" class="stamp-btn px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-xs font-medium text-zinc-300 shrink-0">Cinema 21:9</button>
+                </div>
+                <div class="flex items-center gap-2 shrink-0 pl-2 border-l border-white/10">
+                    <input id="customCaption" type="text" placeholder="Подпись на фото..." maxlength="28" autocomplete="off" class="px-3 py-2 rounded-xl bg-black/50 border border-white/15 text-white placeholder-zinc-500 focus:outline-none focus:border-violet-500 w-40">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation Tabs -->
+        <nav class="grid grid-cols-5 border-t border-white/5 bg-[#0d0d11] px-1.5 py-1.5">
+            <button data-tab="filters" class="nav-tab flex flex-col items-center justify-center py-1 rounded-xl text-violet-400 font-semibold transition">
+                <i class="ph-fill ph-aperture text-lg"></i>
+                <span class="text-[10px] mt-0.5">Фильтры</span>
+            </button>
+            <button data-tab="beauty" class="nav-tab flex flex-col items-center justify-center py-1 rounded-xl text-zinc-400 hover:text-white font-medium transition">
+                <i class="ph-fill ph-magic-wand text-lg text-pink-400"></i>
+                <span class="text-[10px] mt-0.5">Бьюти</span>
+            </button>
+            <button data-tab="fx" class="nav-tab flex flex-col items-center justify-center py-1 rounded-xl text-zinc-400 hover:text-white font-medium transition">
+                <i class="ph ph-sparkle text-lg"></i>
+                <span class="text-[10px] mt-0.5">Эффекты</span>
+            </button>
+            <button data-tab="adjust" class="nav-tab flex flex-col items-center justify-center py-1 rounded-xl text-zinc-400 hover:text-white font-medium transition">
+                <i class="ph ph-sliders-horizontal text-lg"></i>
+                <span class="text-[10px] mt-0.5">Настройки</span>
+            </button>
+            <button data-tab="extras" class="nav-tab flex flex-col items-center justify-center py-1 rounded-xl text-zinc-400 hover:text-white font-medium transition">
+                <i class="ph ph-sticker text-lg"></i>
+                <span class="text-[10px] mt-0.5">Рамки</span>
+            </button>
+        </nav>
+    </section>
+
+    <!-- Export modal: honest local save. No fake Telegram photo sending.
+         Photo-to-bot delivery is deferred to a later Gauntlet. -->
+    <div id="exportModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4">
+        <div class="w-full max-w-sm rounded-3xl bg-[#14141c] border border-white/15 p-5 shadow-2xl flex flex-col items-center text-center">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-violet-600 to-pink-500 flex items-center justify-center mb-3 shadow-lg shadow-pink-500/30">
+                <i class="ph-fill ph-check-circle text-2xl text-white"></i>
+            </div>
+            <h3 class="text-base font-bold text-white">Фото готово к публикации!</h3>
+            <p class="text-xs text-zinc-400 mt-1 mb-4">Сохраните PNG на устройство или поделитесь через системное меню. Отправка фото в Telegram-бота появится в следующем этапе.</p>
+
+            <img id="exportPreviewImg" src="" alt="Preview" class="max-h-48 rounded-xl border border-white/10 mb-2 object-contain bg-black">
+            <p id="exportMeta" class="mb-4 px-1"></p>
+
+            <div class="w-full flex flex-col gap-2">
+                <button id="btnDownloadImage" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-500 hover:to-pink-500 text-xs font-bold text-white flex items-center justify-center gap-2 shadow-lg shadow-pink-600/25 active:scale-95 transition">
+                    <i class="ph-bold ph-download-simple text-sm"></i>
+                    <span>Скачать PNG на устройство</span>
+                </button>
+                <button id="btnShareImage" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 text-xs font-semibold text-white flex items-center justify-center gap-2 active:scale-95 transition disabled:opacity-40">
+                    <i class="ph-bold ph-share-network text-sm text-emerald-300"></i>
+                    <span>Поделиться…</span>
+                </button>
+                <button id="btnCloseModal" class="w-full py-2 rounded-xl text-xs font-medium text-zinc-400 hover:text-white mt-1">
+                    Вернуться к редактированию
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/app.js" defer></script>
+</body>
+</html>
