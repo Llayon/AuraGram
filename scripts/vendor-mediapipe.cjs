@@ -24,12 +24,16 @@ const SRC = path.join(ROOT, 'node_modules', '@mediapipe', 'tasks-vision');
 const DST = path.join(ROOT, 'vendor', 'mediapipe');
 
 const FILES = [
-  'vision_bundle.mjs',
-  'vision_bundle.cjs',
-  path.join('wasm', 'vision_wasm_internal.js'),
-  path.join('wasm', 'vision_wasm_internal.wasm'),
-  path.join('wasm', 'vision_wasm_nosimd_internal.js'),
-  path.join('wasm', 'vision_wasm_nosimd_internal.wasm')
+  // [npm source, vendored destination]
+  // NOTE: the CJS bundle is vendored as *.worker.js (byte-identical) because
+  // GitHub Pages serves *.cjs as application/node, which importScripts()
+  // inside the classic worker refuses. *.js is served as JavaScript.
+  ['vision_bundle.mjs', 'vision_bundle.mjs'],
+  ['vision_bundle.cjs', 'vision_bundle.worker.js'],
+  [path.join('wasm', 'vision_wasm_internal.js'), path.join('wasm', 'vision_wasm_internal.js')],
+  [path.join('wasm', 'vision_wasm_internal.wasm'), path.join('wasm', 'vision_wasm_internal.wasm')],
+  [path.join('wasm', 'vision_wasm_nosimd_internal.js'), path.join('wasm', 'vision_wasm_nosimd_internal.js')],
+  [path.join('wasm', 'vision_wasm_nosimd_internal.wasm'), path.join('wasm', 'vision_wasm_nosimd_internal.wasm')]
 ];
 
 function sha256(p) {
@@ -46,21 +50,21 @@ function main() {
   console.log(`tasks-vision ${pkg.version} (${pkg.license})`);
 
   let mismatch = 0;
-  for (const rel of FILES) {
-    const s = path.join(SRC, rel);
-    const d = path.join(DST, rel);
-    if (!fs.existsSync(s)) { console.error(`MISSING source: ${rel}`); process.exit(1); }
+  for (const [srcRel, dstRel] of FILES) {
+    const s = path.join(SRC, srcRel);
+    const d = path.join(DST, dstRel);
+    if (!fs.existsSync(s)) { console.error(`MISSING source: ${srcRel}`); process.exit(1); }
     if (checkOnly) {
       if (!fs.existsSync(d) || sha256(s) !== sha256(d)) {
-        console.error(`MISMATCH: ${rel} — run node scripts/vendor-mediapipe.mjs`);
+        console.error(`MISMATCH: ${dstRel} (from ${srcRel}) — run node scripts/vendor-mediapipe.cjs`);
         mismatch += 1;
       } else {
-        console.log(`ok: ${rel}`);
+        console.log(`ok: ${dstRel}`);
       }
     } else {
       fs.mkdirSync(path.dirname(d), { recursive: true });
       fs.copyFileSync(s, d);
-      console.log(`vendored: ${rel} (${fs.statSync(d).size} bytes)`);
+      console.log(`vendored: ${dstRel} (${fs.statSync(d).size} bytes)`);
     }
   }
   // License attribution (Apache-2.0, required redistribution notice).

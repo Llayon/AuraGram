@@ -5,10 +5,14 @@
 - Source: https://www.npmjs.com/package/@mediapipe/tasks-vision
 - Homepage: https://mediapipe.dev
 - License: **Apache License 2.0** (see `LICENSE.tasks-vision` in this directory,
-  copied from the npm package by `scripts/vendor-mediapipe.mjs`).
+  copied from the npm package by `scripts/vendor-mediapipe.cjs`).
 - Vendored files (byte-identical to the npm package, verified by
   `node scripts/vendor-mediapipe.cjs --check`):
   - `vision_bundle.mjs` — ESM runtime, imported locally (no CDN at runtime).
+  - `vision_bundle.worker.js` — byte-identical copy of the npm CJS bundle,
+    renamed because GitHub Pages serves `*.cjs` as `application/node`,
+    which `importScripts()` inside the classic worker refuses.
+    `*.js` is served as JavaScript.
   - `wasm/vision_wasm_internal.{js,wasm}` — SIMD WASM backend (~9.6 MB).
   - `wasm/vision_wasm_nosimd_internal.{js,wasm}` — no-SIMD fallback backend
     (~9.6 MB, used automatically on older browsers, e.g. pre-SIMD Safari).

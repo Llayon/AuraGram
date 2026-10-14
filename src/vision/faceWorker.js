@@ -19,7 +19,9 @@
  * faces: Array of faces; each face is an Array of [x, y, z] normalized triples.
  */
 var exports = {};
-importScripts('../../vendor/mediapipe/vision_bundle.cjs');
+// Vendored as *.worker.js (byte-identical to the npm CJS bundle): GitHub
+// Pages serves *.cjs as application/node, which importScripts() refuses.
+importScripts('../../vendor/mediapipe/vision_bundle.worker.js');
 
 var DEFAULTS = {
   runningMode: 'IMAGE',

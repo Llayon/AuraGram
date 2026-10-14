@@ -57,7 +57,7 @@ describe('F2 local model URLs', () => {
   });
   test('all vision URLs derive from module location (subpath-safe)', () => {
     assert.ok(DETECTOR().includes('new URL(') && DETECTOR().includes('import.meta.url'), 'detector must build URLs from import.meta.url');
-    assert.ok(WORKER().includes("'../../vendor/mediapipe/vision_bundle.cjs'"), 'classic worker must import the vendored CJS bundle relatively');
+    assert.ok(WORKER().includes("'../../vendor/mediapipe/vision_bundle.worker.js'"), 'classic worker must import the vendored bundle relatively');
     assert.ok(!/'\/vendor\//.test(DETECTOR() + WORKER()), 'absolute /vendor/ path breaks the /AuraGram/ subpath');
     assert.ok(!DETECTOR().includes('/AuraGram/'), 'hardcoded subpath breaks other deployments');
   });
