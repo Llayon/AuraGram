@@ -4,10 +4,13 @@
   "private": true,
   "description": "AuraGram Studio — static photo editor (Gauntlet 0). Local processing only, no backend.",
   "scripts": {
-    "test": "node --test tests/unit.test.js",
+    "test": "node --test tests/unit.test.js tests/vision.test.mjs",
     "test:e2e": "playwright test"
   },
   "devDependencies": {
     "@playwright/test": "^1.49.1"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "0.10.21"
   }
 }
