@@ -168,12 +168,15 @@ describe('lifecycle wiring', () => {
     assert.ok(d.includes('modelAssetPath'), 'model must load via same-origin URL (no cloned buffers)');
     assert.ok(!d.includes('modelAssetBuffer'), 'ArrayBuffer model loading is unsupported by the runtime');
   });
-  test('F10 reset clears geometry but keeps the cached model/runtime', () => {
-    assert.ok(APP().includes('resetFaceState()'), 'resetAll must reset face state');
-    const resetBlock = DETECTOR().slice(DETECTOR().indexOf('function reset()'), DETECTOR().indexOf('function destroy()'));
-    assert.ok(!resetBlock.includes('terminate'), 'reset must not kill the worker (model stays cached)');
-    assert.ok(!resetBlock.includes('mainLandmarker = null'), 'reset must not drop the landmarker');
-    assert.ok(resetBlock.includes("clearStore(store, 'not_started')"), 'reset must clear the store');
+  test('R11 reset preserves the photo geometry (settings-only reset)', () => {
+    const app = APP();
+    // resetAll must NOT invalidate the photo generation or clear the engine.
+    const resetBlock = app.slice(app.indexOf('function resetAll()'), app.indexOf('function resetAll()') + 2500);
+    assert.ok(!resetBlock.includes('faceImageId +='), 'Reset must not advance the photo generation');
+    assert.ok(!resetBlock.includes('engine.reset(') && !resetBlock.includes('newPhoto('), 'Reset must not touch detection state');
+    // ...while a NEW photo must invalidate immediately (R12).
+    const adoptBlock = app.slice(app.indexOf('async function adoptImage('), app.indexOf('async function adoptImage(') + 1500);
+    assert.ok(adoptBlock.includes('faceEngine.newPhoto(faceImageId)'), 'photo change must invalidate old geometry at once');
   });
   test('no temporary diagnostics leak into the release', () => {
     for (const [name, src] of [['app.js', APP()], ['faceDetector', DETECTOR()], ['faceWorker', WORKER()]]) {
@@ -185,12 +188,20 @@ describe('lifecycle wiring', () => {
 
 // F9: overlay isolation.
 describe('F9 overlay isolation', () => {
-  test('debug overlay lives on a separate canvas, never in the export path', () => {
-    assert.ok(HTML().includes('id="faceOverlay"'), 'overlay canvas missing');
-    assert.ok(HTML().includes('?debugFace=1') || APP().includes("get('debugFace')"), 'debug gate missing');
-    assert.ok(!APP().split('function openExportModal')[1].split('const btnExport')[0].includes('faceOverlay'), 'export must not reference the overlay');
+  test('debug overlays live on separate canvases, never in the export path', () => {
+    assert.ok(HTML().includes('id="faceOverlay"'), 'face overlay canvas missing');
+    assert.ok(HTML().includes('id="skinOverlay"'), 'skin overlay canvas missing');
+    assert.ok(HTML().includes('?debugFace=1') || APP().includes("get('debugFace')"), 'face debug gate missing');
+    assert.ok(APP().includes("get('debugSkin')"), 'skin debug gate missing');
+    const exportBlock = APP().split('function openExportModal')[1].split('const btnExport')[0];
+    assert.ok(!exportBlock.includes('faceOverlay') && !exportBlock.includes('skinOverlay'), 'export must not reference overlays');
+    // G1b contract: renderImage RECEIVES an immutable face snapshot but must
+    // never trigger detection itself (no scheduling, no engine, no detect).
     const renderFn = APP().slice(APP().indexOf('function renderImage('), APP().indexOf('function drawArtisticFX'));
-    assert.ok(!renderFn.includes('face'), 'render pipeline must not reference face data (non-regression)');
+    assert.ok(renderFn.includes('face || null'), 'render must accept a face snapshot');
+    for (const token of ['scheduleFaceDetection', 'ensureBackend', 'createFaceEngine', 'landmarker.detect', 'faceDetector']) {
+      assert.ok(!renderFn.includes(token), `render must not contain ${token} (no inference in the pipeline)`);
+    }
   });
   test('overlay module draws regions in distinct colors', () => {
     for (const c of ['#22d3ee', '#f472b6', '#fb923c', '#a78bfa', '#fb7185', '#facc15']) {
@@ -218,5 +229,56 @@ describe('F12 bounded input', () => {
     assert.ok(geo.FACE_DETECT_MAX_DIM >= 512 && geo.FACE_DETECT_MAX_DIM <= 640);
     const big = geo.detectionInputSize(4032, 3024);
     assert.ok(Math.max(big.w, big.h) <= 640);
+  });
+});
+
+// R15 / G1b-1.1: tolerant bounds — cropped faces survive, garbage does not.
+describe('tolerant landmark bounds', () => {
+  const mk = (mutate) => {
+    const lm = Array.from({ length: 478 }, () => ({ x: 0.5, y: 0.5, z: 0 }));
+    if (mutate) mutate(lm);
+    return lm;
+  };
+  test('slightly out-of-frame points stay valid (cropped portrait)', () => {
+    assert.equal(geo.isValidLandmarkSet(mk((lm) => {
+      lm[0] = { x: -0.05, y: 0.2, z: 0 };
+      lm[10] = { x: 1.08, y: 0.9, z: 0 };
+    })), true);
+  });
+  test('NaN / Infinity / wild coordinates are rejected', () => {
+    for (const bad of [
+      { x: NaN, y: 0.5, z: 0 }, { x: 0.5, y: Infinity, z: 0 },
+      { x: 5, y: 0.5, z: 0 }, { x: 0.5, y: -2, z: 0 }, null, undefined
+    ]) {
+      assert.equal(geo.isValidLandmarkSet(mk((lm) => { lm[7] = bad; })), false, JSON.stringify(bad));
+    }
+    assert.equal(geo.isValidLandmarkSet(mk().slice(0, 477)), false);
+  });
+  test('stored landmarks keep originals; rasterization clips (no shape damage)', () => {
+    const s = geo.createFaceStore();
+    const raw = mk((lm) => { lm[3] = { x: -0.08, y: 1.05, z: 0 }; });
+    geo.setStoreResult(s, 9, 800, 600, [raw]);
+    assert.equal(s.status, 'ready');
+    assert.deepEqual(s.faces[0].landmarks[3], { x: -0.08, y: 1.05, z: 0 });
+    assert.deepEqual(geo.clampPoint(s.faces[0].landmarks[3]), { x: 0, y: 1, z: 0 });
+  });
+});
+
+// R14 / G1b-1.2: bounded detect wait.
+describe('worker detect timeout', () => {
+  test('withTimeout resolves values and rejects hangs', async () => {
+    const { withTimeout } = await import('../src/vision/faceDetector.mjs');
+    assert.equal(await withTimeout(Promise.resolve(7), 500, 'x'), 7);
+    await assert.rejects(
+      withTimeout(new Promise(() => {}), 30, 'worker-detect-timeout'),
+      /worker-detect-timeout/
+    );
+  });
+  test('detect path condemns a hung worker and falls back (static wiring)', () => {
+    const d = DETECTOR();
+    assert.ok(d.includes('WORKER_DETECT_TIMEOUT_MS'), 'missing detect timeout constant');
+    assert.ok(d.includes('withTimeout(attempt'), 'detect must race against the timeout');
+    assert.ok(d.includes('workerReady = false'), 'timeout must condemn the worker');
+    assert.ok(d.includes('await nextPaint()'), 'main-thread fallback must yield paint first');
   });
 });

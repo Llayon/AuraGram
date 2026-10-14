@@ -105,6 +105,12 @@ input[type="range"]::-moz-range-thumb {
 }
 #faceOverlay.hidden { display: none; }
 
+/* G1b debug skin mask overlay: above the face overlay, same guarantees */
+#skinOverlay {
+  z-index: 6;
+}
+#skinOverlay.hidden { display: none; }
+
 /* Export meta line */
 #exportMeta {
   font-size: 11px;
