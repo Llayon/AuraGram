@@ -70,6 +70,9 @@
         <div class="relative flex items-center justify-center max-w-full max-h-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
             <canvas id="mainCanvas" class="max-h-[52vh] sm:max-h-[58vh] w-auto object-contain block rounded-2xl"></canvas>
 
+            <!-- G1a debug face overlay: separate canvas, never exported (shown only with ?debugFace=1) -->
+            <canvas id="faceOverlay" class="hidden absolute inset-0 w-full h-full pointer-events-none"></canvas>
+
             <!-- Loading / error overlay: explicit load state, never a fake photo -->
             <div id="loadOverlay">
                 <div class="spinner"></div>
@@ -81,6 +84,9 @@
             <div id="compareBadge" class="hidden absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur-md border border-white/20 text-[11px] font-semibold text-white tracking-wider uppercase pointer-events-none">
                 Оригинал (До)
             </div>
+
+            <!-- G1a face detection status (transient progress for all; details in ?debugFace=1) -->
+            <div id="faceStatusPill" class="hidden absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-medium text-zinc-200 pointer-events-none z-10"></div>
 
             <!-- Auto-tune HUD badge (rule-based presets; no ML model) -->
             <div id="autoHudBadge" class="opacity-0 transition-opacity duration-300 absolute top-3 right-3 px-3 py-1.5 rounded-xl bg-black/80 backdrop-blur-md border border-pink-500/40 text-right pointer-events-none shadow-lg">
