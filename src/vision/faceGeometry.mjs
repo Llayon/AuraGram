@@ -57,15 +57,39 @@ export function clearStore(store, status = 'not_started') {
   return store;
 }
 
-function isFinitePoint(p) {
-  return !!p && Number.isFinite(p.x) && Number.isFinite(p.y) && p.x >= 0 && p.x <= 1 && p.y >= 0 && p.y <= 1;
+function isFiniteLandmark(p) {
+  return !!p && Number.isFinite(p.x) && Number.isFinite(p.y)
+    && (p.z === undefined || Number.isFinite(p.z));
 }
 
-/** A usable face needs the full landmark set with sane normalized coords. */
+/**
+ * G1b (1.1): reasonable geometric limits. MediaPipe may legitimately return
+ * finite points slightly outside the frame (cropped faces) — those must NOT
+ * kill the whole face. Anything clearly broken (NaN/Infinity/far outside)
+ * is still rejected.
+ */
+const BOUND_MARGIN = 0.15;
+
+export function isPlausibleLandmark(p) {
+  return isFiniteLandmark(p)
+    && p.x >= -BOUND_MARGIN && p.x <= 1 + BOUND_MARGIN
+    && p.y >= -BOUND_MARGIN && p.y <= 1 + BOUND_MARGIN;
+}
+
+/** Clip to the frame for RASTERIZATION only — stored landmarks stay original. */
+export function clampPoint(p) {
+  return {
+    x: Math.min(1, Math.max(0, p.x)),
+    y: Math.min(1, Math.max(0, p.y)),
+    z: p.z === undefined ? 0 : p.z
+  };
+}
+
+/** A usable face needs the full landmark set with finite, plausible coords. */
 export function isValidLandmarkSet(landmarks) {
   return Array.isArray(landmarks)
     && landmarks.length === FACE_POINT_COUNT
-    && landmarks.every(isFinitePoint);
+    && landmarks.every(isPlausibleLandmark);
 }
 
 function pickRegion(landmarks, indices) {
