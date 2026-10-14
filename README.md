@@ -1,9 +1,11 @@
-# AuraGram Studio — Gauntlet 0 + 1a
+# AuraGram Studio — Gauntlet 0 + 1a + 1b
 
 Static mobile photo editor. **Local processing only** — no backend, no database,
 no accounts, no paid APIs, no cloud inference, no API keys in client code.
 Photos never leave the device. G1a adds on-device face geometry (MediaPipe
-Face Landmarker, WASM/CPU) — still zero-cost, still fully local.
+Face Landmarker, WASM/CPU); G1b turns the beauty tab into real face-aware
+retouch with texture preservation — still zero-cost, still fully local.
+
 
 Static mobile photo editor. **Local processing only** — no backend, no database,
 no accounts, no paid APIs, no cloud inference, no API keys in client code.
@@ -28,7 +30,7 @@ python3 -m http.server 8080
 Unit tests (no browser, no network):
 
 ```sh
-npm test            # G0 (tests/unit.test.js) + G1a (tests/vision.test.mjs)
+npm test            # G0 + G1a vision + G1b retouch unit suites
 node --check src/app.js
 ```
 
@@ -38,7 +40,14 @@ ESM modules, module/classic Workers and WASM require http, not file://):
 ```sh
 npm install
 npx playwright install chromium
-npm run test:e2e    # G0 regression (e2e.spec.js) + G1a real inference (e2e-face.spec.js)
+npm run test:e2e    # G0 regression + G1a real inference + G1b retouch (R1–R19)
+```
+
+Visual matrices (exact-pixel renders for critic review + report):
+
+```sh
+node tests/visual/make-synthetic.cjs     # deterministic skin-tone fixtures
+node tests/visual/render-matrix.cjs --out tests/visual/g1b --mask
 ```
 
 E2E uses only tiny programmatically-generated PNG fixtures in the OS temp dir —
@@ -82,7 +91,7 @@ no personal photos in the repo — plus two committed Unsplash-licensed fixtures
   G0 suite fully kept; E2E proves identical export bytes with debug on/off.
 - **Memory**: detection uses one transient ≤640px RGBA copy (~1–2 MB) +
   ImageBitmap, both freed right after inference; never concurrent with export
-  (single-shot after load). Export buffers unchanged from G0 (4096² RGBA ≈
+  (single-shot after load). Export buffers unchanged from G0 (4096² RGBA -
   64 MB peak per buffer — pre-existing G0 characteristic, documented cap +
   notice).
 
@@ -141,14 +150,53 @@ Debug: https://llayon.github.io/AuraGram/?debugFace=1
 3. No MediaPipe in G0 by design — hook reserved for **G1 (Local Face Detection
    & Skin-Aware Retouch)**: Face Landmarker, local segmentation, WebGL2,
    guided/bilateral filters. Nothing from G1 is implemented here.
-4. G1a does NOT use the geometry for retouch yet — overlays/masks for G1b.
-   Next: **G1b — Skin-Aware Retouch** (local skin masks from G1a geometry,
-   pore-preserving smoothing, redness correction). Nothing from G1b is
-   implemented here.
+4. G1b implements the retouch itself (below) — no second neural network was
+   added; segmentation stays geometric + classical.
+5. Next: **G1c — Natural Lash Enhancement & Fine Eye Retouch** (subtle,
+   structure-preserving lash/eye refinement). Nothing from G1c is implemented
+   here.
+
+## Gauntlet 1b — skin-aware retouch (what / how / limits)
+
+New modules: `src/retouch/skinMask.mjs` (landmark-driven mask: face oval,
+separate eye/brow/lip/nostril cutouts with guaranteed zero-cores, soft
+feather, conservative luminance/saturation/edge refinement — hue-blind, so
+all skin tones behave alike) and `src/retouch/retouch.mjs` (nonlinear
+intensity curves, per-photo mask cache, GPU chroma-domain passes).
+
+- **Smooth**: masked chroma-domain low-frequency smoothing (`color`
+  composite — destination luminance untouched, so pores, moles, freckles,
+  lashes and folds survive by construction). Replaces the old radial blur.
+- **Anti-red**: red-selective chroma pull with dead zone (low redness - no
+  effect), capped pull, luminance kept; lips/background masked out. Replaces
+  the old global hue wash + full-frame tint.
+- **Glow**: soft-light sheen from the smoothed layer, skin-masked, capped.
+- **Eyes**: micro-contrast (`overlay`) strictly inside eye ellipses.
+- **Blush**: soft-light rose at landmark-derived cheek apples.
+- **Sculpt**: honest limited face-anchored dodge & burn inside the mask
+  (no thinning, no reshaping — documented limitation, not 3D morphing).
+- Pipeline: `renderImage(..., face)` takes an immutable per-render snapshot;
+  base grade no longer leaks beauty into global brightness/contrast/hue;
+  preset-only renders are **byte-identical** to G1a (`neutral`/`vogue`
+  matrix hashes match); debug overlays (`?debugFace=1`, `?debugSkin=1`)
+  never touch export pixels (byte-equality E2E-proven).
+- Without a face every local pass skips (pill explains why); Reset preserves
+  the photo's geometry; photo change invalidates it at once; sliders never
+  re-run inference; worker detect has a 30 s bound with controlled fallback.
+- Measured on desktop Chromium (864x1080 preview): grade 4.4 ms, smooth100
+  6.3 ms, all-six 60 ms; mask build 11–19 ms one-time; 900x1125 export with
+  all six 71 ms; JS heap ~21 MB. Full-res scratch stays limited to the two
+  pre-existing reused buffers; masks live ≤384px. iPhone timings UNVERIFIED.
+- Memory budget: worst case - main + export + one reused full-res buffer
+  (+tiny mask/scratch canvases); documented 4096px/16.8MP cap + fallback
+  retained; R16 exports a 3000x2400 retouched photo cleanly in CI/Chromium.
+- Reference visuals: `tests/visual/baseline/` (G1a anchors),
+  `tests/visual/reference/` (mask, old-vs-new, eye/cheek zooms),
+  `tests/visual/synthetic/` (deterministic tone fixtures + generator).
 
 ## Physical devices
 
-Not tested on physical iPhones in Gauntlet 0/1a — do not claim otherwise.
+Not tested on physical iPhones in Gauntlets 0/1a/1b — do not claim otherwise.
 Safari/WebKit + Telegram WebView paths are code-reviewed (classic worker,
 no-SIMD WASM fallback, main-thread fallback, graceful disable) but
 UNVERIFIED on real iPhone X/11 hardware. Target floor: iPhone X; baseline:

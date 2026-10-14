@@ -6,4 +6,6 @@ Thumbs.db
 *.log
 playwright-report/
 test-results/
+tests/visual/g1b/
+tests/visual/out/
 .snapshots/
