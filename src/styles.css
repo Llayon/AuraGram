@@ -99,6 +99,12 @@ input[type="range"]::-moz-range-thumb {
 }
 #correctionNote.hidden { display: none; }
 
+/* G1a debug face overlay: stacked above the photo, never exported, never interactive */
+#faceOverlay {
+  z-index: 5;
+}
+#faceOverlay.hidden { display: none; }
+
 /* Export meta line */
 #exportMeta {
   font-size: 11px;

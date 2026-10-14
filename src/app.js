@@ -269,7 +269,9 @@ if (isBrowser) {
   })();
 
   // Render stats (Phase 2: basic measurements, no heavy telemetry).
-  const stats = { lastPreviewMs: 0, lastExportMs: 0, previewW: 0, previewH: 0, exportW: 0, exportH: 0, renders: 0 };
+  const stats = { lastPreviewMs: 0, lastExportMs: 0, previewW: 0, previewH: 0, exportW: 0, exportH: 0, renders: 0,
+    faceDetectionStatus: 'not_started', faceCount: 0, faceDetectMs: 0, modelLoadMs: 0, faceBlockMs: 0,
+    faceInputWidth: 0, faceInputHeight: 0, faceWorkerMode: 'none', faceGeometryBytes: 0 };
 
   // rAF-coalesced preview scheduling (Phase 2).
   let previewQueued = false;
@@ -282,6 +284,129 @@ if (isBrowser) {
       renderStudioCanvas();
       stats.lastPreviewMs = performance.now() - t0;
     });
+  }
+
+  // --- G1a: local face detection (geometry only — render pipeline untouched) --
+  // Model + WASM are lazy (first photo), local (./vendor/mediapipe/), and
+  // cached; inference runs ONCE per photo, never on slider/tab/preset edits.
+  let faceEngine = null;
+  let faceEngineLoading = null;
+  let faceImageId = 0;
+  let faceOverlayApi = null;
+  const isFaceDebug = (() => {
+    try {
+      return new URLSearchParams(window.location.search).get('debugFace') === '1';
+    } catch (e) {
+      return false;
+    }
+  })();
+
+  function updateFacePill(snap) {
+    const pill = document.getElementById('faceStatusPill');
+    if (!pill) return;
+    const st = (snap && snap.status) || (faceEngine ? faceEngine.status() : 'not_started');
+    const transient = st === 'loading_model' || st === 'detecting';
+    if (!transient && !isFaceDebug) {
+      pill.classList.add('hidden');
+      return;
+    }
+    pill.classList.remove('hidden');
+    const texts = {
+      loading_model: 'Загрузка модели лица…',
+      detecting: 'Поиск лица…',
+      ready: `Лицо: ${snap ? snap.faceCount : 0} · ${snap ? snap.detectMs.toFixed(0) : 0} мс`,
+      no_face: 'Лицо не найдено — фильтры работают',
+      failed: 'Анализ лица недоступен — фильтры работают',
+      unsupported: 'Анализ лица недоступен — фильтры работают',
+      not_started: ''
+    };
+    pill.textContent = texts[st] || '';
+    if (!pill.textContent) pill.classList.add('hidden');
+  }
+
+  function syncFaceOverlaySize() {
+    const overlay = document.getElementById('faceOverlay');
+    if (!overlay) return;
+    if (overlay.width !== mainCanvas.width || overlay.height !== mainCanvas.height) {
+      overlay.width = mainCanvas.width || 0;
+      overlay.height = mainCanvas.height || 0;
+    }
+  }
+
+  function refreshFaceOverlay() {
+    const overlay = document.getElementById('faceOverlay');
+    if (!overlay) return;
+    syncFaceOverlaySize();
+    const octx = overlay.getContext('2d');
+    if (!isFaceDebug || !faceEngine) {
+      octx.clearRect(0, 0, overlay.width, overlay.height);
+      overlay.classList.add('hidden');
+      return;
+    }
+    overlay.classList.remove('hidden');
+    try {
+      if (faceOverlayApi) {
+        faceOverlayApi.drawFaceOverlay(octx, faceEngine.store, overlay.width, overlay.height);
+      }
+    } catch (e) { /* overlay must never break the editor */ }
+  }
+
+  function onFaceStatus(snap) {
+    stats.faceDetectionStatus = snap.status;
+    stats.faceCount = snap.faceCount;
+    stats.faceDetectMs = snap.detectMs;
+    stats.modelLoadMs = snap.modelLoadMs;
+    stats.faceBlockMs = snap.blockMs || 0;
+    stats.faceInputWidth = snap.inputW;
+    stats.faceInputHeight = snap.inputH;
+    stats.faceWorkerMode = snap.workerMode;
+    stats.faceGeometryBytes = snap.geometryBytes;
+    updateFacePill(snap);
+    refreshFaceOverlay();
+  }
+
+  function ensureFaceEngine() {
+    if (faceEngine) return Promise.resolve(faceEngine);
+    if (!faceEngineLoading) {
+      // NOTE: dynamic import() inside a classic script resolves against the
+      // script's own URL (/src/app.js), NOT the document — so resolve against
+      // document.baseURI explicitly to stay correct under any Pages subpath.
+      const detectorUrl = new URL('src/vision/faceDetector.mjs', document.baseURI).href;
+      const overlayUrl = new URL('src/vision/faceOverlay.mjs', document.baseURI).href;
+      faceEngineLoading = import(detectorUrl).then((mod) => {
+        faceEngine = mod.createFaceEngine({ onStatus: onFaceStatus });
+        faceEngine._overlayUrl = overlayUrl;
+        return faceEngine;
+      }).catch(() => {
+        faceEngineLoading = null; // retry on next photo; editor unaffected
+        onFaceStatus({ status: 'failed', imageId: faceImageId, faceCount: 0, detectMs: 0, modelLoadMs: 0, blockMs: 0, workerMode: 'none', inputW: 0, inputH: 0, geometryBytes: 0 });
+        return null;
+      });
+    }
+    return faceEngineLoading;
+  }
+
+  function scheduleFaceDetection(img, imageId) {
+    // Fire-and-forget: detection runs after paint, exactly once per photo.
+    try {
+      ensureFaceEngine().then((engine) => {
+        if (!engine || imageId !== faceImageId) return; // stale photo (F6)
+        try {
+          if (!faceOverlayApi && faceEngine._overlayUrl) {
+            import(faceEngine._overlayUrl).then((m) => { faceOverlayApi = m; refreshFaceOverlay(); }).catch(() => {});
+          }
+          engine.schedule(imageId, img);
+        } catch (e) { /* face detection must never break photo loading */ }
+      });
+    } catch (e) { /* noop */ }
+  }
+
+  function resetFaceState() {
+    faceImageId += 1; // invalidate any in-flight job (F6/F10)
+    if (faceEngine) {
+      try { faceEngine.reset(); } catch (e) { /* noop */ }
+    }
+    onFaceStatus({ status: 'not_started', imageId: 0, faceCount: 0, detectMs: 0, modelLoadMs: stats.modelLoadMs, blockMs: 0, workerMode: stats.faceWorkerMode === 'none' ? 'none' : stats.faceWorkerMode, inputW: 0, inputH: 0, geometryBytes: 0 });
   }
 
   function setLoadStatus(status, errorText) {
@@ -699,6 +824,7 @@ if (isBrowser) {
     stats.previewH = mainCanvas.height;
     stats.renders += 1;
     updateCorrectionIndicator();
+    refreshFaceOverlay(); // debug overlay mirrors the preview; never touches pixels
   }
 
   // --- Correction indicator (1.1): Original preset keeps independent settings
@@ -745,6 +871,10 @@ if (isBrowser) {
     setLoadStatus('ready');
     renderStudioCanvas();
     renderFilterThumbnails();
+    // G1a: photo is already painted — now schedule one-shot face detection.
+    faceImageId += 1;
+    syncFaceOverlaySize();
+    scheduleFaceDetection(img, faceImageId);
     if (label) showToast(label);
   }
 
@@ -1251,6 +1381,7 @@ if (isBrowser) {
     updateSliderUI();
     renderStudioCanvas(); // full reset must paint the true original (T6)
     updateCorrectionIndicator();
+    resetFaceState(); // F10: clear detection geometry; model stays cached (F8)
   }
 
   const btnReset = document.getElementById('btnReset');
@@ -1410,6 +1541,9 @@ if (isBrowser) {
   }
 
   window.addEventListener('beforeunload', revokeExportUrl);
+  window.addEventListener('beforeunload', () => {
+    try { if (faceEngine) faceEngine.destroy(); } catch (e) { /* noop */ }
+  });
 
   // --- Init --------------------------------------------------------------------
   window.addEventListener('DOMContentLoaded', () => {
@@ -1453,7 +1587,18 @@ if (isBrowser) {
     renderStudioCanvas,
     renderImage,
     canSystemShare,
-    getExportBlob: () => currentExportBlob
+    getExportBlob: () => currentExportBlob,
+    // G1a: face detection state (geometry only; null until first photo).
+    isFaceDebug,
+    face: {
+      status: () => (faceEngine ? faceEngine.status() : stats.faceDetectionStatus),
+      store: () => (faceEngine ? faceEngine.store : null),
+      metrics: () => faceEngine ? faceEngine.metrics : null,
+      imageId: () => faceImageId,
+      schedule: scheduleFaceDetection,
+      refreshOverlay: refreshFaceOverlay,
+      reset: resetFaceState
+    }
   };
 }
 
