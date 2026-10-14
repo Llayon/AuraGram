@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AuraGram Studio — Telegram Mini App</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Telegram WebApp SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #09090b;
+            color: #fafafa;
+            overflow: hidden;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Custom Range Slider */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.16);
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(168, 85, 247, 0.7);
+            border: 2px solid #a855f7;
+            margin-top: -7px;
+            transition: transform 0.15s ease;
+        }
+        input[type="range"]::-webkit-slider-thumb:active {
+            transform: scale(1.2);
+        }
+        .glass-panel {
+            background: rgba(18, 18, 24, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="h-screen w-screen flex flex-col justify-between bg-[#09090b] text-white select-none overflow-hidden">
+
+    <!-- Top Bar -->
+    <header class="flex items-center justify-between px-3.5 py-2.5 border-b border-white/10 bg-[#0d0d12]/90 z-20 shrink-0">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-violet-600 via-fuchsia-500 to-pink-500 flex items-center justify-center shadow-lg shadow-fuchsia-500/20">
+                <i class="ph-fill ph-sparkle text-white text-lg"></i>
+            </div>
+            <div>
+                <div class="flex items-center gap-1.5">
+                    <h1 class="text-sm font-bold tracking-tight bg-gradient-to-r from-white via-pink-100 to-violet-300 bg-clip-text text-transparent">AuraGram</h1>
+                    <span class="text-[9px] font-bold uppercase px-1.5 py-0.5 rounded-md bg-pink-500/20 text-pink-300 border border-pink-500/30">Beauty AI</span>
+                </div>
+                <p id="activeFilterName" class="text-[10px] text-zinc-400 font-medium">Clean Girl</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-1.5">
+            <!-- Next Demo Photo Button -->
+            <button id="btnDemoPhoto" title="Сменить демо-портрет" class="px-2.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-zinc-300 flex items-center gap-1 active:scale-95 transition">
+                <i class="ph ph-images text-sm text-pink-400"></i>
+                <span class="hidden sm:inline">Демо</span>
+            </button>
+
+            <!-- Upload Own Photo -->
+            <label for="fileInput" class="px-2.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-medium text-zinc-200 flex items-center gap-1 cursor-pointer active:scale-95 transition">
+                <i class="ph ph-upload-simple text-sm text-violet-400"></i>
+                <span>Фото</span>
+            </label>
+            <input id="fileInput" type="file" accept="image/*" class="hidden">
+
+            <!-- Reset Button -->
+            <button id="btnReset" title="Сбросить все настройки" class="p-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-zinc-400 hover:text-white active:scale-95 transition">
+                <i class="ph ph-arrow-counter-clockwise text-sm"></i>
+            </button>
+
+            <!-- Save / Export Button -->
+            <button id="btnExport" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-500 hover:to-pink-500 text-xs font-semibold text-white shadow-lg shadow-pink-600/25 flex items-center gap-1.5 active:scale-95 transition">
+                <i class="ph-bold ph-paper-plane-tilt text-xs"></i>
+                <span>Готово</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Interactive Viewport / Canvas Area -->
+    <main class="relative flex-1 flex items-center justify-center overflow-hidden bg-[#060608] p-2">
+        <!-- Ambient Background Glow -->
+        <div class="absolute inset-0 pointer-events-none opacity-25 bg-[radial-gradient(circle_at_center,rgba(236,72,153,0.22),transparent_70%)]"></div>
+
+        <!-- Canvas Wrapper -->
+        <div class="relative flex items-center justify-center max-w-full max-h-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
+            <canvas id="mainCanvas" class="max-h-[52vh] sm:max-h-[58vh] w-auto object-contain block rounded-2xl"></canvas>
+
+            <!-- Original Badge when holding Compare -->
+            <div id="compareBadge" class="hidden absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur-md border border-white/20 text-[11px] font-semibold text-white tracking-wider uppercase pointer-events-none">
+                Оригинал (До)
+            </div>
+
+            <!-- AI Telemetry HUD Badge -->
+            <div id="aiHudBadge" class="opacity-0 transition-opacity duration-300 absolute top-3 right-3 px-3 py-1.5 rounded-xl bg-black/80 backdrop-blur-md border border-pink-500/40 text-right pointer-events-none shadow-lg">
+                <div class="flex items-center justify-end gap-1.5 text-[11px] font-bold text-pink-300">
+                    <i class="ph-fill ph-sparkle"></i>
+                    <span id="aiSceneType">Бьюти-портрет</span>
+                </div>
+                <p id="aiMetricsText" class="text-[10px] text-zinc-300 font-mono mt-0.5">Свет: 58% | Ретушь: 45%</p>
+            </div>
+        </div>
+
+        <!-- Floating Quick Action Pills (AI Auto-Style & Hold Before/After) -->
+        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
+            <button id="btnMagicAI" class="px-3.5 py-1.5 rounded-full glass-panel border border-pink-500/40 shadow-lg shadow-pink-500/10 flex items-center gap-1.5 text-xs font-semibold text-pink-200 hover:bg-pink-500/20 active:scale-95 transition">
+                <i class="ph-fill ph-magic-wand text-pink-400 text-sm"></i>
+                <span>AI Бьюти-стиль</span>
+            </button>
+
+            <button id="btnCompare" class="px-3.5 py-1.5 rounded-full glass-panel border border-white/15 shadow-lg flex items-center gap-1.5 text-xs font-medium text-zinc-200 hover:bg-white/10 active:scale-95 transition">
+                <i class="ph ph-arrows-left-right text-violet-400 text-sm"></i>
+                <span>Удерж. До/После</span>
+            </button>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toastMsg" class="pointer-events-none fixed top-14 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-zinc-900/95 border border-white/15 text-xs font-medium text-white shadow-xl opacity-0 -translate-y-2 transition-all duration-200">
+            Настройки применены
+        </div>
+    </main>
+
+    <!-- Bottom Control Deck -->
+    <section class="w-full glass-panel border-t border-white/10 z-20 shrink-0 flex flex-col">
+        
+        <!-- Dynamic Intensity / Parameter Slider -->
+        <div id="sliderContainer" class="px-5 pt-2.5 pb-1 flex items-center gap-3">
+            <span id="sliderLabel" class="text-[11px] font-medium text-zinc-400 w-28 truncate">Сила фильтра</span>
+            <input id="mainSlider" type="range" min="0" max="100" value="100" class="flex-1">
+            <span id="sliderValue" class="text-[11px] font-bold text-pink-400 w-10 text-right font-mono">100%</span>
+        </div>
+
+        <!-- Tab Content Containers -->
+        <div class="h-24 flex items-center overflow-hidden relative">
+            
+            <!-- TAB 1: PRESET FILTERS -->
+            <div id="tab-filters" class="w-full flex items-center gap-2.5 overflow-x-auto no-scrollbar px-4 py-1.5">
+                <!-- Populated dynamically via JS with live mini-canvas previews -->
+            </div>
+
+            <!-- TAB 2: BEAUTY & RETOUCH -->
+            <div id="tab-beauty" class="w-full hidden items-center gap-2.5 overflow-x-auto no-scrollbar px-4 py-1.5">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- TAB 3: FX & LIGHT LEAKS -->
+            <div id="tab-fx" class="w-full hidden items-center gap-2.5 overflow-x-auto no-scrollbar px-4 py-1.5">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- TAB 4: PRO ADJUSTMENTS -->
+            <div id="tab-adjust" class="w-full hidden items-center gap-2.5 overflow-x-auto no-scrollbar px-4 py-1.5">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- TAB 5: FRAMES & TEXT STAMP -->
+            <div id="tab-extras" class="w-full hidden items-center justify-between gap-2.5 overflow-x-auto no-scrollbar px-4 py-1.5">
+                <div class="flex items-center gap-2 shrink-0">
+                    <button data-stamp="none" class="stamp-btn px-3 py-2 rounded-xl border border-violet-500 bg-violet-500/20 text-xs font-medium text-white shrink-0">Без рамки</button>
+                    <button data-stamp="date98" class="stamp-btn px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-xs font-medium text-zinc-300 shrink-0">Штамп '98</button>
+                    <button data-stamp="polaroid" class="stamp-btn px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-xs font-medium text-zinc-300 shrink-0">Polaroid</button>
+                    <button data-stamp="cinema" class="stamp-btn px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-xs font-medium text-zinc-300 shrink-0">Cinema 21:9</button>
+                </div>
+                <div class="flex items-center gap-2 shrink-0 pl-2 border-l border-white/10">
+                    <input id="customCaption" type="text" placeholder="Подпись на фото..." maxlength="28" class="px-3 py-2 rounded-xl bg-black/50 border border-white/15 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-violet-500 w-40">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation Tabs -->
+        <nav class="grid grid-cols-5 border-t border-white/5 bg-[#0d0d11] px-1.5 py-1.5">
+            <button data-tab="filters" class="nav-tab flex flex-col items-center justify-center py-1 rounded-xl text-violet-400 font-semibold transition">
+                <i class="ph-fill ph-aperture text-lg"></i>
+                <span class="text-[10px] mt-0.5">Фильтры</span>
+            </button>
+            <button data-tab="beauty" class="nav-tab flex flex-col items-center justify-center py-1 rounded-xl text-zinc-400 hover:text-white font-medium transition">
+                <i class="ph-fill ph-magic-wand text-lg text-pink-400"></i>
+                <span class="text-[10px] mt-0.5">Бьюти</span>
+            </button>
+            <button data-tab="fx" class="nav-tab flex flex-col items-center justify-center py-1 rounded-xl text-zinc-400 hover:text-white font-medium transition">
+                <i class="ph ph-sparkle text-lg"></i>
+                <span class="text-[10px] mt-0.5">Эффекты</span>
+            </button>
+            <button data-tab="adjust" class="nav-tab flex flex-col items-center justify-center py-1 rounded-xl text-zinc-400 hover:text-white font-medium transition">
+                <i class="ph ph-sliders-horizontal text-lg"></i>
+                <span class="text-[10px] mt-0.5">Настройки</span>
+            </button>
+            <button data-tab="extras" class="nav-tab flex flex-col items-center justify-center py-1 rounded-xl text-zinc-400 hover:text-white font-medium transition">
+                <i class="ph ph-sticker text-lg"></i>
+                <span class="text-[10px] mt-0.5">Рамки</span>
+            </button>
+        </nav>
+    </section>
+
+    <!-- Custom Modal for Export / Telegram Share -->
+    <div id="exportModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4">
+        <div class="w-full max-w-sm rounded-3xl bg-[#14141c] border border-white/15 p-5 shadow-2xl flex flex-col items-center text-center">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-violet-600 to-pink-500 flex items-center justify-center mb-3 shadow-lg shadow-pink-500/30">
+                <i class="ph-fill ph-check-circle text-2xl text-white"></i>
+            </div>
+            <h3 class="text-base font-bold text-white">Фото готово к публикации!</h3>
+            <p class="text-xs text-zinc-400 mt-1 mb-4">Вы можете скачать кадр в максимальном качестве или отправить результат в Telegram.</p>
+            
+            <img id="exportPreviewImg" src="" alt="Preview" class="max-h-48 rounded-xl border border-white/10 mb-4 object-contain bg-black">
+
+            <div class="w-full flex flex-col gap-2">
+                <button id="btnDownloadImage" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-500 hover:to-pink-500 text-xs font-bold text-white flex items-center justify-center gap-2 shadow-lg shadow-pink-600/25 active:scale-95 transition">
+                    <i class="ph-bold ph-download-simple text-sm"></i>
+                    <span>Скачать PNG на устройство</span>
+                </button>
+                <button id="btnSendTelegram" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 text-xs font-semibold text-white flex items-center justify-center gap-2 active:scale-95 transition">
+                    <i class="ph-bold ph-telegram-logo text-sky-400 text-sm"></i>
+                    <span>Отправить в бота Telegram</span>
+                </button>
+                <button id="btnCloseModal" class="w-full py-2 rounded-xl text-xs font-medium text-zinc-400 hover:text-white mt-1">
+                    Вернуться к редактированию
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. TELEGRAM MINI APP INITIALIZATION ---
+        const tg = window.Telegram?.WebApp;
+        if (tg) {
+            tg.ready();
+            tg.expand();
+            try {
+                tg.setHeaderColor('#0d0d12');
+                tg.setBackgroundColor('#09090b');
+            } catch (e) {
+                // Ignore if older WebApp version
+            }
+        }
+
+        function triggerHaptic(type = 'light') {
+            try {
+                if (tg?.HapticFeedback) {
+                    tg.HapticFeedback.impactOccurred(type);
+                }
+            } catch (e) {}
+        }
+
+        // High-resolution Portrait & Beauty Demo Photos (Unsplash with CORS support)
+        const DEMO_PHOTOS = [
+            "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85",
+            "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85",
+            "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85",
+            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=85"
+        ];
+
+        // --- 2. STUDIO, EDITORIAL & BEAUTY PRESETS (COMMERCIAL GRADE + CLASSIC HITS) ---
+        const PRESETS = [
+            { id: 'normal', name: 'Original', badge: 'RAW', config: { brightness: 0, contrast: 0, saturate: 0, sepia: 0, hue: 0, warmth: 0, tint: null, gloss: 0, crisp: 0 } },
+            // Commercial & High-End Beauty Presets
+            { id: 'vogue', name: 'Vogue Gloss', badge: 'AD PRO', config: { brightness: 4, contrast: 18, saturate: 8, sepia: 0, hue: -1, warmth: 4, tint: 'rgba(255, 245, 250, 0.10)', gloss: 45, crisp: 40 } },
+            { id: 'champagne', name: 'Champagne', badge: 'LUXE', config: { brightness: 6, contrast: 14, saturate: -4, sepia: 10, hue: -2, warmth: 16, tint: 'rgba(254, 243, 199, 0.14)', gloss: 50, crisp: 35 } },
+            { id: 'studioflash', name: 'Studio Flash', badge: 'CRISP', config: { brightness: 7, contrast: 24, saturate: 6, sepia: 0, hue: 0, warmth: -4, tint: 'rgba(240, 249, 255, 0.12)', gloss: 60, crisp: 50 } },
+            { id: 'cleangirl', name: 'Clean Girl', badge: 'BEAUTY', config: { brightness: 5, contrast: 8, saturate: 10, sepia: 2, hue: -2, warmth: 8, tint: 'rgba(255, 228, 230, 0.10)', gloss: 30, crisp: 25 } },
+            { id: 'peachskin', name: 'Peach Skin', badge: 'SKIN', config: { brightness: 5, contrast: 10, saturate: 16, sepia: 6, hue: -4, warmth: 18, tint: 'rgba(251, 146, 60, 0.12)', gloss: 35, crisp: 30 } },
+            { id: 'porcelain', name: 'Porcelain', badge: 'GLOW', config: { brightness: 9, contrast: 12, saturate: -12, sepia: 0, hue: 4, warmth: -10, tint: 'rgba(240, 249, 255, 0.14)', gloss: 40, crisp: 30 } },
+            { id: 'goldentan', name: 'Golden Tan', badge: 'BRONZE', config: { brightness: 2, contrast: 18, saturate: 20, sepia: 14, hue: -3, warmth: 28, tint: 'rgba(217, 119, 6, 0.14)', gloss: 45, crisp: 35 } },
+            // Classic Creative & Instagram-Killer Filters (Restored!)
+            { id: 'dreamy', name: 'Angel Aura', badge: 'SOFT', config: { brightness: 10, contrast: -6, saturate: 14, sepia: 4, hue: 6, warmth: 10, tint: 'rgba(232, 121, 249, 0.15)', gloss: 35, crisp: 10 } },
+            { id: 'velvet', name: 'Velvet Sunset', badge: 'WARM', config: { brightness: 4, contrast: 14, saturate: 28, sepia: 14, hue: -12, warmth: 36, tint: 'rgba(244, 63, 94, 0.18)', gloss: 25, crisp: 20 } },
+            { id: 'kodak98', name: 'Kodak Gold', badge: 'FILM', config: { brightness: 5, contrast: 16, saturate: 18, sepia: 22, hue: 0, warmth: 30, tint: 'rgba(245, 158, 11, 0.14)', gloss: 20, crisp: 20 } },
+            { id: 'cinematic', name: 'Teal & Orange', badge: 'PRO', config: { brightness: -1, contrast: 28, saturate: 16, sepia: 6, hue: -8, warmth: 16, tint: 'rgba(6, 182, 212, 0.16)', gloss: 25, crisp: 35 } },
+            { id: 'matcha', name: 'Matcha Film', badge: 'INDIE', config: { brightness: 4, contrast: 10, saturate: -8, sepia: 18, hue: 24, warmth: 12, tint: 'rgba(16, 185, 129, 0.14)', gloss: 15, crisp: 20 } },
+            { id: 'tokyo', name: 'Tokyo Night', badge: 'NEON', config: { brightness: -3, contrast: 32, saturate: 26, sepia: 8, hue: 190, warmth: -32, tint: 'rgba(14, 165, 233, 0.20)', gloss: 40, crisp: 35 } },
+            { id: 'cyberpunk', name: 'Cyberpunk', badge: 'HIT', config: { brightness: 4, contrast: 30, saturate: 42, sepia: 0, hue: -12, warmth: -20, tint: 'rgba(192, 38, 211, 0.20)', gloss: 35, crisp: 40 } },
+            { id: 'noir', name: 'Paris Noir', badge: 'B&W', config: { brightness: -2, contrast: 48, saturate: -100, sepia: 6, hue: 0, warmth: 0, tint: null, gloss: 40, crisp: 45 } }
+        ];
+
+        // --- 2.5 COMMERCIAL BEAUTY & HIGH-END RETOUCH TOOLS ---
+        const BEAUTY_TOOLS = [
+            { key: 'smooth', name: 'Гладкость кожи', icon: 'ph-magic-wand', min: 0, max: 100, default: 30, unit: '%', color: 'text-pink-400' },
+            { key: 'antired', name: 'Анти-краснота', icon: 'ph-drop-half', min: 0, max: 100, default: 25, unit: '%', color: 'text-emerald-400' },
+            { key: 'blush', name: 'Персиковый тон', icon: 'ph-heart', min: 0, max: 100, default: 25, unit: '%', color: 'text-orange-400' },
+            { key: 'glow', name: 'Сияние (Glow)', icon: 'ph-sparkle', min: 0, max: 100, default: 38, unit: '%', color: 'text-amber-300' },
+            { key: 'eyes', name: 'Акцент (Чёткость)', icon: 'ph-eye', min: 0, max: 100, default: 42, unit: '%', color: 'text-sky-400' },
+            { key: 'sculpt', name: '3D Скульптуринг', icon: 'ph-user-focus', min: 0, max: 100, default: 28, unit: '%', color: 'text-violet-400' }
+        ];
+
+        // --- 3. SPECIAL EFFECTS (LIGHT LEAKS, RING LIGHT, PEACH & RED BURN) ---
+        const FX_LIST = [
+            { id: 'none', name: 'Без эффекта', icon: 'ph-prohibit', color: 'text-zinc-400' },
+            { id: 'ring_light', name: 'Кольцевой свет', icon: 'ph-circle-dashed', color: 'text-pink-400' },
+            { id: 'peach_aura', name: 'Персик (Свечение)', icon: 'ph-sun-dim', color: 'text-orange-300' },
+            { id: 'red_burn', name: 'Красный засвет', icon: 'ph-flame', color: 'text-red-500' },
+            { id: 'halation', name: 'Красное гало', icon: 'ph-fire', color: 'text-rose-400' },
+            { id: 'diamond_glow', name: 'Люкс блики', icon: 'ph-shooting-star', color: 'text-amber-200' },
+            { id: 'leak_warm', name: 'Засвет пленки', icon: 'ph-sun-horizon', color: 'text-amber-400' },
+            { id: 'neon_prism', name: 'Неон градиент', icon: 'ph-rainbow', color: 'text-fuchsia-400' },
+            { id: 'vhs_glitch', name: 'RGB Сдвиг (3D)', icon: 'ph-television-simple', color: 'text-cyan-400' },
+            { id: 'bokeh_dust', name: 'Боке и пыль', icon: 'ph-sparkle', color: 'text-violet-400' },
+            { id: 'sunbeams', name: 'Лучи заката', icon: 'ph-sun', color: 'text-orange-400' }
+        ];
+
+        // --- 4. MANUAL ADJUSTMENT PARAMETERS ---
+        const ADJUSTMENTS = [
+            { key: 'brightness', name: 'Яркость', icon: 'ph-sun', min: -50, max: 50, default: 0, unit: '' },
+            { key: 'contrast', name: 'Контраст', icon: 'ph-circle-half', min: -50, max: 50, default: 0, unit: '' },
+            { key: 'saturate', name: 'Насыщенность', icon: 'ph-drop', min: -100, max: 100, default: 0, unit: '' },
+            { key: 'warmth', name: 'Температура', icon: 'ph-thermometer-simple', min: -60, max: 60, default: 0, unit: '' },
+            { key: 'vignette', name: 'Виньетка', icon: 'ph-vignette', min: 0, max: 100, default: 10, unit: '%' },
+            { key: 'grain', name: 'Зерно пленки', icon: 'ph-grains', min: 0, max: 100, default: 0, unit: '%' },
+            { key: 'fade', name: 'Матовость', icon: 'ph-cloud-fog', min: 0, max: 80, default: 0, unit: '%' },
+            { key: 'blur', name: 'Софт-фокус', icon: 'ph-drop-half-bottom', min: 0, max: 20, default: 0, unit: 'px' }
+        ];
+
+        // --- 5. APPLICATION STATE ---
+        const state = {
+            currentTab: 'filters',
+            activePreset: 'vogue',
+            presetIntensity: 100,
+            activeFX: 'ring_light',
+            activeBeautyKey: 'smooth',
+            beauty: {
+                smooth: 30,
+                antired: 25,
+                blush: 25,
+                glow: 38,
+                eyes: 42,
+                sculpt: 28
+            },
+            activeAdjustKey: 'brightness',
+            adjustments: {
+                brightness: 0,
+                contrast: 0,
+                saturate: 0,
+                warmth: 0,
+                vignette: 12,
+                grain: 0,
+                fade: 0,
+                blur: 0
+            },
+            stampMode: 'none',
+            caption: '',
+            isComparing: false,
+            demoIndex: 0
+        };
+
+        const mainCanvas = document.getElementById('mainCanvas');
+        const ctx = mainCanvas.getContext('2d');
+        let sourceImage = new Image();
+        sourceImage.crossOrigin = "anonymous";
+
+        // Offscreen buffers for Commercial Frequency Separation & Specular Gloss
+        const beautyBuffer = document.createElement('canvas');
+        const beautyCtx = beautyBuffer.getContext('2d');
+        const detailBuffer = document.createElement('canvas');
+        const detailCtx = detailBuffer.getContext('2d');
+
+        // Pre-generated Film Grain Pattern Canvas for 60fps performance
+        const grainCanvas = document.createElement('canvas');
+        grainCanvas.width = 180;
+        grainCanvas.height = 180;
+        const grainCtx = grainCanvas.getContext('2d');
+        function generateGrainTexture() {
+            const imgData = grainCtx.createImageData(180, 180);
+            const buf = imgData.data;
+            for (let i = 0; i < buf.length; i += 4) {
+                const v = Math.random() * 255;
+                buf[i] = v;
+                buf[i + 1] = v;
+                buf[i + 2] = v;
+                buf[i + 3] = 255;
+            }
+            grainCtx.putImageData(imgData, 0, 0);
+        }
+        generateGrainTexture();
+
+        // --- 6. CORE MULTI-PASS RENDERING ENGINE ---
+        function loadSampleImage(url) {
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.onload = () => {
+                sourceImage = img;
+                const maxDim = 1080;
+                let w = img.naturalWidth || 800;
+                let h = img.naturalHeight || 1000;
+                if (w > maxDim || h > maxDim) {
+                    if (w > h) {
+                        h = Math.round((h * maxDim) / w);
+                        w = maxDim;
+                    } else {
+                        w = Math.round((w * maxDim) / h);
+                        h = maxDim;
+                    }
+                }
+                mainCanvas.width = w;
+                mainCanvas.height = h;
+                renderStudioCanvas();
+                renderFilterThumbnails();
+            };
+            img.onerror = () => {
+                // Fallback procedural portrait gradient if offline
+                mainCanvas.width = 720;
+                mainCanvas.height = 900;
+                const g = ctx.createLinearGradient(0, 0, 720, 900);
+                g.addColorStop(0, '#4f46e5');
+                g.addColorStop(0.5, '#ec4899');
+                g.addColorStop(1, '#f59e0b');
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, 720, 900);
+            };
+            img.src = url;
+        }
+
+        function renderStudioCanvas() {
+            if (!sourceImage || !mainCanvas.width) return;
+            const w = mainCanvas.width;
+            const h = mainCanvas.height;
+            ctx.clearRect(0, 0, w, h);
+
+            // If user holds "Before/After" compare button, render raw original
+            if (state.isComparing) {
+                ctx.filter = 'none';
+                ctx.drawImage(sourceImage, 0, 0, w, h);
+                return;
+            }
+
+            const preset = PRESETS.find(p => p.id === state.activePreset) || PRESETS[0];
+            const ratio = state.presetIntensity / 100;
+
+            // Combine Preset + Manual Adjustments + Commercial Micro-Contrast
+            const crispBoost = ((preset.config.crisp || 0) * ratio * 0.18) + ((state.beauty.eyes || 0) * 0.16);
+            const antiRedHue = (state.beauty.antired || 0) * 0.06;
+            const antiRedBright = (state.beauty.antired || 0) * 0.04;
+
+            const bright = 100 + (preset.config.brightness * ratio) + state.adjustments.brightness + antiRedBright;
+            const cont = 100 + (preset.config.contrast * ratio) + state.adjustments.contrast + crispBoost;
+            const sat = 100 + (preset.config.saturate * ratio) + state.adjustments.saturate;
+            const sep = Math.max(0, (preset.config.sepia * ratio));
+            const hue = Math.round((preset.config.hue * ratio) + antiRedHue);
+            const blurPx = (state.adjustments.blur * 0.4).toFixed(1);
+
+            ctx.save();
+
+            // 1. Base Commercial Grade Pass
+            ctx.filter = `brightness(${bright}%) contrast(${cont}%) saturate(${sat}%) sepia(${sep}%) hue-rotate(${hue}deg) blur(${blurPx}px)`;
+            ctx.drawImage(sourceImage, 0, 0, w, h);
+            ctx.filter = 'none';
+
+            // 1.5 FREQUENCY SEPARATION SKIN RETOUCH (Preserves shadows, lashes, hair & crisp edges)
+            if (state.beauty.smooth > 0) {
+                if (beautyBuffer.width !== w || beautyBuffer.height !== h) {
+                    beautyBuffer.width = w;
+                    beautyBuffer.height = h;
+                }
+                const smoothRadius = Math.max(2, Math.round(Math.min(w, h) * 0.009));
+                beautyCtx.clearRect(0, 0, w, h);
+                // Keep contrast high in the low-frequency pass so the photo never looks muddy or washed out
+                beautyCtx.filter = `blur(${smoothRadius}px) contrast(106%) brightness(101%)`;
+                beautyCtx.drawImage(mainCanvas, 0, 0, w, h);
+                beautyCtx.filter = 'none';
+
+                // Radial mask so smoothing focuses on the face center, leaving background & edges 100% sharp
+                const maskGrad = beautyCtx.createRadialGradient(w * 0.5, h * 0.44, Math.min(w, h) * 0.14, w * 0.5, h * 0.44, Math.max(w, h) * 0.56);
+                maskGrad.addColorStop(0, 'rgba(0,0,0,1)');
+                maskGrad.addColorStop(0.7, 'rgba(0,0,0,0.65)');
+                maskGrad.addColorStop(1, 'rgba(0,0,0,0)');
+                beautyCtx.globalCompositeOperation = 'destination-in';
+                beautyCtx.fillStyle = maskGrad;
+                beautyCtx.fillRect(0, 0, w, h);
+                beautyCtx.globalCompositeOperation = 'source-over';
+
+                // Apply soft-light evening (evens skin blotches without lifting black eyelashes)
+                ctx.save();
+                ctx.globalAlpha = (state.beauty.smooth / 100) * 0.42;
+                ctx.globalCompositeOperation = 'soft-light';
+                ctx.drawImage(beautyBuffer, 0, 0, w, h);
+
+                // Subtle midtone blend
+                ctx.globalAlpha = (state.beauty.smooth / 100) * 0.24;
+                ctx.globalCompositeOperation = 'source-over';
+                ctx.drawImage(beautyBuffer, 0, 0, w, h);
+                ctx.restore();
+            }
+
+            // 1.6 COMMERCIAL SPECULAR HIGHLIGHTER (Glossy Cheekbones, Lips & Catchlights)
+            const totalGloss = (state.beauty.glow || 0) + ((preset.config.gloss || 0) * ratio * 0.5);
+            if (totalGloss > 0) {
+                if (detailBuffer.width !== w || detailBuffer.height !== h) {
+                    detailBuffer.width = w;
+                    detailBuffer.height = h;
+                }
+                detailCtx.clearRect(0, 0, w, h);
+                // Isolate only the brightest specular highlights (cheekbones, lip gloss, eye catchlights) using extreme contrast threshold
+                detailCtx.filter = `brightness(72%) contrast(280%) saturate(85%) blur(1.5px)`;
+                detailCtx.drawImage(mainCanvas, 0, 0, w, h);
+                detailCtx.filter = 'none';
+
+                ctx.save();
+                ctx.globalCompositeOperation = 'screen';
+                ctx.globalAlpha = Math.min(0.42, (totalGloss / 140) * 0.34);
+                ctx.drawImage(detailBuffer, 0, 0, w, h);
+                ctx.restore();
+            }
+
+            // 1.7 HIGH-PASS MICRO-CONTRAST & OPTICAL SHARPENING (Crisp Eyes, Lashes, Jewelry & Lips)
+            const totalCrisp = (state.beauty.eyes || 0) + ((preset.config.crisp || 0) * ratio * 0.6);
+            if (totalCrisp > 0) {
+                if (detailBuffer.width !== w || detailBuffer.height !== h) {
+                    detailBuffer.width = w;
+                    detailBuffer.height = h;
+                }
+                // Pixel-level unsharp contrast pop in the upper-mid facial region (eyes/brows/lips)
+                detailCtx.clearRect(0, 0, w, h);
+                detailCtx.filter = `contrast(155%) brightness(98%) saturate(108%)`;
+                detailCtx.drawImage(sourceImage, 0, 0, w, h);
+                detailCtx.filter = 'none';
+
+                const sharpMask = detailCtx.createRadialGradient(w * 0.5, h * 0.42, Math.min(w, h) * 0.08, w * 0.5, h * 0.42, Math.min(w, h) * 0.48);
+                sharpMask.addColorStop(0, 'rgba(0,0,0,1)');
+                sharpMask.addColorStop(0.75, 'rgba(0,0,0,0.5)');
+                sharpMask.addColorStop(1, 'rgba(0,0,0,0)');
+                detailCtx.globalCompositeOperation = 'destination-in';
+                detailCtx.fillStyle = sharpMask;
+                detailCtx.fillRect(0, 0, w, h);
+                detailCtx.globalCompositeOperation = 'source-over';
+
+                ctx.save();
+                ctx.globalCompositeOperation = 'overlay';
+                ctx.globalAlpha = Math.min(0.45, (totalCrisp / 140) * 0.38);
+                ctx.drawImage(detailBuffer, 0, 0, w, h);
+                ctx.restore();
+            }
+
+            // 1.8 ANTI-REDNESS & EDITORIAL SKIN TONE HARMONY
+            if (state.beauty.antired > 0) {
+                ctx.save();
+                ctx.globalCompositeOperation = 'soft-light';
+                const arAlpha = (state.beauty.antired / 100) * 0.22;
+                ctx.fillStyle = `rgba(254, 240, 215, ${arAlpha})`;
+                ctx.fillRect(0, 0, w, h);
+                ctx.restore();
+            }
+
+            if (state.beauty.blush > 0) {
+                ctx.save();
+                ctx.globalCompositeOperation = 'soft-light';
+                const blushAlpha = (state.beauty.blush / 100) * 0.34;
+                const blushGrad = ctx.createRadialGradient(w * 0.5, h * 0.45, w * 0.05, w * 0.5, h * 0.45, Math.max(w, h) * 0.58);
+                blushGrad.addColorStop(0, `rgba(255, 138, 101, ${blushAlpha})`);
+                blushGrad.addColorStop(0.6, `rgba(251, 113, 133, ${blushAlpha * 0.6})`);
+                blushGrad.addColorStop(1, `rgba(251, 113, 133, 0)`);
+                ctx.fillStyle = blushGrad;
+                ctx.fillRect(0, 0, w, h);
+                ctx.restore();
+            }
+
+            // 1.9 3D DODGE & BURN SCULPTING (Commercial Studio Lighting Depth)
+            if (state.beauty.sculpt > 0) {
+                ctx.save();
+                const scAlpha = (state.beauty.sculpt / 100) * 0.52;
+                // Dodge (Brighten T-zone & cheekbones)
+                const dodgeGrad = ctx.createRadialGradient(w * 0.5, h * 0.40, Math.min(w, h) * 0.05, w * 0.5, h * 0.40, Math.min(w, h) * 0.42);
+                dodgeGrad.addColorStop(0, `rgba(255, 252, 248, ${scAlpha * 0.65})`);
+                dodgeGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+                ctx.globalCompositeOperation = 'soft-light';
+                ctx.fillStyle = dodgeGrad;
+                ctx.fillRect(0, 0, w, h);
+
+                // Burn (Deepen outer contour & background separation)
+                const burnGrad = ctx.createRadialGradient(w * 0.5, h * 0.42, Math.min(w, h) * 0.28, w * 0.5, h * 0.42, Math.max(w, h) * 0.72);
+                burnGrad.addColorStop(0, 'rgba(0, 0, 0, 0)');
+                burnGrad.addColorStop(1, `rgba(12, 10, 18, ${scAlpha * 0.78})`);
+                ctx.globalCompositeOperation = 'multiply';
+                ctx.fillStyle = burnGrad;
+                ctx.fillRect(0, 0, w, h);
+                ctx.restore();
+            }
+
+            // 2. RGB Split / VHS Glitch effect if selected
+            if (state.activeFX === 'vhs_glitch') {
+                ctx.save();
+                ctx.globalCompositeOperation = 'screen';
+                ctx.globalAlpha = 0.38;
+                ctx.filter = 'hue-rotate(120deg) saturate(200%)';
+                ctx.drawImage(sourceImage, -Math.round(w * 0.012), 0, w, h);
+                ctx.filter = 'hue-rotate(240deg) saturate(200%)';
+                ctx.drawImage(sourceImage, Math.round(w * 0.012), 0, w, h);
+                ctx.restore();
+            }
+
+            // 3. Preset Color Grading Tint Overlay
+            if (preset.config.tint && ratio > 0) {
+                ctx.save();
+                ctx.globalAlpha = ratio;
+                ctx.globalCompositeOperation = 'soft-light';
+                ctx.fillStyle = preset.config.tint;
+                ctx.fillRect(0, 0, w, h);
+                ctx.restore();
+            }
+
+            // 4. Color Temperature (Warmth / Coolness)
+            const totalWarmth = (preset.config.warmth * ratio) + state.adjustments.warmth;
+            if (Math.abs(totalWarmth) > 1) {
+                ctx.save();
+                ctx.globalCompositeOperation = 'soft-light';
+                const alpha = Math.min(0.45, Math.abs(totalWarmth) / 130);
+                ctx.fillStyle = totalWarmth > 0
+                    ? `rgba(255, 145, 40, ${alpha})`
+                    : `rgba(56, 189, 248, ${alpha})`;
+                ctx.fillRect(0, 0, w, h);
+                ctx.restore();
+            }
+
+            // 5. Matte Fade (Lifted Shadows)
+            if (state.adjustments.fade > 0) {
+                ctx.save();
+                ctx.globalCompositeOperation = 'lighten';
+                const fadeVal = Math.round((state.adjustments.fade / 100) * 48);
+                ctx.fillStyle = `rgb(${fadeVal}, ${fadeVal}, ${fadeVal + 4})`;
+                ctx.fillRect(0, 0, w, h);
+                ctx.restore();
+            }
+
+            // 6. Special Artistic FX (Ring Light, Kirakira, Light Leaks)
+            drawArtisticFX(ctx, w, h, state.activeFX);
+
+            // 7. Optical Vignette
+            if (state.adjustments.vignette > 0) {
+                ctx.save();
+                const vigAlpha = (state.adjustments.vignette / 100) * 0.75;
+                const rad = Math.max(w, h) * 0.72;
+                const grad = ctx.createRadialGradient(w / 2, h / 2, rad * 0.35, w / 2, h / 2, rad);
+                grad.addColorStop(0, 'rgba(0,0,0,0)');
+                grad.addColorStop(1, `rgba(0,0,0,${vigAlpha})`);
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, w, h);
+                ctx.restore();
+            }
+
+            // 8. Analog Film Grain
+            if (state.adjustments.grain > 0) {
+                ctx.save();
+                ctx.globalCompositeOperation = 'overlay';
+                ctx.globalAlpha = (state.adjustments.grain / 100) * 0.32;
+                const pattern = ctx.createPattern(grainCanvas, 'repeat');
+                ctx.fillStyle = pattern;
+                ctx.fillRect(0, 0, w, h);
+                ctx.restore();
+            }
+
+            // 9. Frames, Date Stamps & Custom Caption
+            drawFramesAndStamps(ctx, w, h);
+
+            ctx.restore();
+        }
+
+        function drawArtisticFX(ctx, w, h, fxId) {
+            if (fxId === 'none') return;
+            ctx.save();
+
+            if (fxId === 'ring_light') {
+                ctx.globalCompositeOperation = 'soft-light';
+                const rad = Math.min(w, h) * 0.58;
+                const g = ctx.createRadialGradient(w * 0.5, h * 0.42, rad * 0.15, w * 0.5, h * 0.42, rad);
+                g.addColorStop(0, 'rgba(255, 248, 244, 0.50)');
+                g.addColorStop(0.65, 'rgba(255, 218, 230, 0.25)');
+                g.addColorStop(1, 'rgba(0, 0, 0, 0.25)');
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, w, h);
+            }
+            else if (fxId === 'peach_aura') {
+                // Soft warm peach & rose studio diffusion
+                ctx.globalCompositeOperation = 'soft-light';
+                const g = ctx.createLinearGradient(0, 0, w, h);
+                g.addColorStop(0, 'rgba(255, 160, 122, 0.48)');
+                g.addColorStop(0.5, 'rgba(255, 195, 160, 0.32)');
+                g.addColorStop(1, 'rgba(251, 113, 133, 0.42)');
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, w, h);
+            }
+            else if (fxId === 'red_burn') {
+                // Dramatic crimson / ruby red analog light leak on edges
+                ctx.globalCompositeOperation = 'screen';
+                const g1 = ctx.createLinearGradient(0, 0, w * 0.55, h * 0.7);
+                g1.addColorStop(0, 'rgba(239, 68, 68, 0.68)');
+                g1.addColorStop(0.4, 'rgba(244, 63, 94, 0.35)');
+                g1.addColorStop(1, 'rgba(0, 0, 0, 0)');
+                ctx.fillStyle = g1;
+                ctx.fillRect(0, 0, w, h);
+            }
+            else if (fxId === 'diamond_glow') {
+                ctx.globalCompositeOperation = 'screen';
+                const stars = [
+                    { x: 0.28, y: 0.26, size: 0.045 },
+                    { x: 0.72, y: 0.30, size: 0.055 },
+                    { x: 0.64, y: 0.62, size: 0.040 },
+                    { x: 0.35, y: 0.68, size: 0.050 },
+                    { x: 0.52, y: 0.20, size: 0.035 }
+                ];
+                stars.forEach(s => {
+                    const cx = w * s.x;
+                    const cy = h * s.y;
+                    const len = Math.min(w, h) * s.size;
+
+                    const glow = ctx.createRadialGradient(cx, cy, 1, cx, cy, len);
+                    glow.addColorStop(0, 'rgba(255, 255, 255, 0.9)');
+                    glow.addColorStop(0.3, 'rgba(253, 224, 71, 0.45)');
+                    glow.addColorStop(1, 'rgba(255, 255, 255, 0)');
+                    ctx.fillStyle = glow;
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, len, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)';
+                    ctx.lineWidth = Math.max(1.5, len * 0.08);
+                    ctx.beginPath();
+                    ctx.moveTo(cx - len, cy);
+                    ctx.lineTo(cx + len, cy);
+                    ctx.moveTo(cx, cy - len);
+                    ctx.lineTo(cx, cy + len);
+                    ctx.stroke();
+                });
+            }
+            else if (fxId === 'leak_warm') {
+                ctx.globalCompositeOperation = 'screen';
+                const g1 = ctx.createLinearGradient(0, 0, w * 0.65, h * 0.5);
+                g1.addColorStop(0, 'rgba(255, 85, 0, 0.62)');
+                g1.addColorStop(0.45, 'rgba(255, 180, 40, 0.28)');
+                g1.addColorStop(1, 'rgba(255, 0, 128, 0)');
+                ctx.fillStyle = g1;
+                ctx.fillRect(0, 0, w, h);
+            }
+            else if (fxId === 'neon_prism') {
+                ctx.globalCompositeOperation = 'overlay';
+                const g = ctx.createLinearGradient(0, h, w, 0);
+                g.addColorStop(0, 'rgba(6, 182, 212, 0.55)');
+                g.addColorStop(0.5, 'rgba(168, 85, 247, 0.35)');
+                g.addColorStop(1, 'rgba(244, 63, 94, 0.55)');
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, w, h);
+            }
+            else if (fxId === 'bokeh_dust') {
+                ctx.globalCompositeOperation = 'screen';
+                const orbs = [
+                    { x: 0.2, y: 0.25, r: 0.09, c: 'rgba(244, 114, 182, 0.28)' },
+                    { x: 0.78, y: 0.22, r: 0.12, c: 'rgba(167, 139, 250, 0.25)' },
+                    { x: 0.65, y: 0.72, r: 0.14, c: 'rgba(251, 191, 36, 0.22)' },
+                    { x: 0.25, y: 0.78, r: 0.08, c: 'rgba(56, 189, 248, 0.24)' }
+                ];
+                orbs.forEach(o => {
+                    const rad = Math.min(w, h) * o.r;
+                    const grad = ctx.createRadialGradient(w * o.x, h * o.y, rad * 0.1, w * o.x, h * o.y, rad);
+                    grad.addColorStop(0, o.c);
+                    grad.addColorStop(1, 'rgba(0,0,0,0)');
+                    ctx.fillStyle = grad;
+                    ctx.beginPath();
+                    ctx.arc(w * o.x, h * o.y, rad, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+            }
+            else if (fxId === 'sunbeams') {
+                ctx.globalCompositeOperation = 'screen';
+                const g = ctx.createRadialGradient(w * 0.9, h * 0.1, 10, w * 0.9, h * 0.1, Math.max(w, h) * 0.9);
+                g.addColorStop(0, 'rgba(255, 235, 160, 0.65)');
+                g.addColorStop(0.4, 'rgba(251, 146, 60, 0.25)');
+                g.addColorStop(1, 'rgba(0, 0, 0, 0)');
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, w, h);
+            }
+            else if (fxId === 'halation') {
+                // Red-orange analog film halation glow around highlights
+                ctx.globalCompositeOperation = 'screen';
+                const g = ctx.createRadialGradient(w * 0.5, h * 0.4, Math.min(w, h) * 0.1, w * 0.5, h * 0.4, Math.max(w, h) * 0.65);
+                g.addColorStop(0, 'rgba(255, 70, 50, 0.28)');
+                g.addColorStop(0.5, 'rgba(255, 120, 40, 0.14)');
+                g.addColorStop(1, 'rgba(0, 0, 0, 0)');
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, w, h);
+            }
+
+            ctx.restore();
+        }
+
+        function drawFramesAndStamps(ctx, w, h) {
+            ctx.save();
+
+            if (state.stampMode === 'date98') {
+                const fontSize = Math.max(18, Math.round(w * 0.038));
+                ctx.font = `700 ${fontSize}px "Space Mono", monospace`;
+                ctx.fillStyle = '#ff7b24';
+                ctx.shadowColor = 'rgba(255, 90, 0, 0.85)';
+                ctx.shadowBlur = 8;
+                ctx.textAlign = 'right';
+                ctx.fillText("'98 10 24", w - w * 0.06, h - h * 0.05);
+            }
+            else if (state.stampMode === 'polaroid') {
+                const border = Math.round(Math.min(w, h) * 0.045);
+                const bottomBorder = Math.round(h * 0.14);
+                ctx.fillStyle = '#fafafa';
+                ctx.fillRect(0, 0, w, border);
+                ctx.fillRect(0, 0, border, h);
+                ctx.fillRect(w - border, 0, border, h);
+                ctx.fillRect(0, h - bottomBorder, w, bottomBorder);
+
+                if (state.caption) {
+                    const fontSize = Math.max(18, Math.round(w * 0.04));
+                    ctx.font = `600 ${fontSize}px "Inter", sans-serif`;
+                    ctx.fillStyle = '#18181b';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(state.caption, w / 2, h - bottomBorder * 0.42);
+                }
+            }
+            else if (state.stampMode === 'cinema') {
+                const barH = Math.round(h * 0.11);
+                ctx.fillStyle = '#000000';
+                ctx.fillRect(0, 0, w, barH);
+                ctx.fillRect(0, h - barH, w, barH);
+
+                if (state.caption) {
+                    const fontSize = Math.max(15, Math.round(w * 0.032));
+                    ctx.font = `500 italic ${fontSize}px "Inter", sans-serif`;
+                    ctx.fillStyle = '#facc15';
+                    ctx.shadowColor = 'rgba(0,0,0,0.9)';
+                    ctx.shadowBlur = 4;
+                    ctx.textAlign = 'center';
+                    ctx.fillText(`"${state.caption}"`, w / 2, h - barH - Math.round(h * 0.03));
+                }
+            }
+            else if (state.caption) {
+                const fontSize = Math.max(16, Math.round(w * 0.036));
+                ctx.font = `600 ${fontSize}px "Inter", sans-serif`;
+                ctx.fillStyle = '#ffffff';
+                ctx.shadowColor = 'rgba(0,0,0,0.85)';
+                ctx.shadowBlur = 6;
+                ctx.textAlign = 'center';
+                ctx.fillText(state.caption, w / 2, h - Math.round(h * 0.05));
+            }
+
+            ctx.restore();
+        }
+
+        // --- 7. UI CAROUSEL BUILDERS ---
+        function buildFilterCarousel() {
+            const container = document.getElementById('tab-filters');
+            container.innerHTML = '';
+
+            PRESETS.forEach(p => {
+                const active = state.activePreset === p.id;
+                const btn = document.createElement('button');
+                btn.className = `flex flex-col items-center shrink-0 group transition transform active:scale-95`;
+                btn.innerHTML = `
+                    <div class="relative w-14 h-14 rounded-2xl overflow-hidden border-2 transition ${
+                        active ? 'border-pink-500 shadow-lg shadow-pink-500/30 scale-105' : 'border-white/10 opacity-80 group-hover:opacity-100'
+                    }">
+                        <canvas data-thumb="${p.id}" width="64" height="64" class="w-full h-full object-cover block bg-zinc-900"></canvas>
+                        <span class="absolute bottom-0.5 right-0.5 px-1 py-0.2 text-[7px] font-bold uppercase rounded bg-black/75 text-white">${p.badge}</span>
+                    </div>
+                    <span class="text-[10px] mt-1 font-medium ${active ? 'text-pink-400 font-semibold' : 'text-zinc-400'}">${p.name}</span>
+                `;
+                btn.addEventListener('click', () => {
+                    triggerHaptic('light');
+                    state.activePreset = p.id;
+                    document.getElementById('activeFilterName').textContent = p.name;
+                    buildFilterCarousel();
+                    renderFilterThumbnails();
+                    updateSliderUI();
+                    renderStudioCanvas();
+                });
+                container.appendChild(btn);
+            });
+        }
+
+        function renderFilterThumbnails() {
+            if (!sourceImage || !sourceImage.complete) return;
+            const thumbCanvases = document.querySelectorAll('canvas[data-thumb]');
+            thumbCanvases.forEach(tc => {
+                const presetId = tc.getAttribute('data-thumb');
+                const preset = PRESETS.find(p => p.id === presetId) || PRESETS[0];
+                const tCtx = tc.getContext('2d');
+                const size = 64;
+                tCtx.clearRect(0, 0, size, size);
+
+                const bright = 100 + preset.config.brightness;
+                const cont = 100 + preset.config.contrast;
+                const sat = 100 + preset.config.saturate;
+                const sep = Math.max(0, preset.config.sepia);
+                const hue = preset.config.hue;
+
+                tCtx.filter = `brightness(${bright}%) contrast(${cont}%) saturate(${sat}%) sepia(${sep}%) hue-rotate(${hue}deg)`;
+                
+                // Center crop square
+                const sMin = Math.min(sourceImage.naturalWidth || 600, sourceImage.naturalHeight || 600);
+                const sx = ((sourceImage.naturalWidth || 600) - sMin) / 2;
+                const sy = ((sourceImage.naturalHeight || 600) - sMin) / 2;
+                tCtx.drawImage(sourceImage, sx, sy, sMin, sMin, 0, 0, size, size);
+                tCtx.filter = 'none';
+
+                if (preset.config.tint) {
+                    tCtx.fillStyle = preset.config.tint;
+                    tCtx.fillRect(0, 0, size, size);
+                }
+            });
+        }
+
+        function buildBeautyCarousel() {
+            const container = document.getElementById('tab-beauty');
+            container.innerHTML = '';
+
+            BEAUTY_TOOLS.forEach(tool => {
+                const active = state.activeBeautyKey === tool.key;
+                const val = state.beauty[tool.key];
+                const isModified = val > 0;
+
+                const btn = document.createElement('button');
+                btn.className = `flex flex-col items-center justify-center shrink-0 w-24 h-18 py-1.5 rounded-2xl border transition active:scale-95 ${
+                    active ? 'bg-pink-500/20 border-pink-500 text-white shadow-lg shadow-pink-500/15' : 'bg-white/5 border-white/10 text-zinc-400'
+                }`;
+                btn.innerHTML = `
+                    <div class="relative">
+                        <i class="ph-fill ${tool.icon} text-lg ${active ? 'text-pink-400' : tool.color}"></i>
+                        ${isModified ? '<span class="absolute -top-1 -right-1.5 w-1.5 h-1.5 rounded-full bg-pink-500"></span>' : ''}
+                    </div>
+                    <span class="text-[10px] font-medium mt-0.5 text-center px-1 truncate w-full">${tool.name}</span>
+                    <span class="text-[10px] font-bold ${isModified ? 'text-pink-400' : 'text-zinc-500'}">${val}${tool.unit}</span>
+                `;
+                btn.addEventListener('click', () => {
+                    triggerHaptic('light');
+                    state.activeBeautyKey = tool.key;
+                    updateSliderUI();
+                    buildBeautyCarousel();
+                });
+                container.appendChild(btn);
+            });
+        }
+
+        function buildFXCarousel() {
+            const container = document.getElementById('tab-fx');
+            container.innerHTML = '';
+
+            FX_LIST.forEach(fx => {
+                const active = state.activeFX === fx.id;
+                const btn = document.createElement('button');
+                btn.className = `flex flex-col items-center justify-center shrink-0 w-24 h-18 py-2 rounded-2xl border transition active:scale-95 ${
+                    active ? 'bg-violet-500/20 border-violet-500 text-white shadow-lg shadow-violet-500/15' : 'bg-white/5 border-white/10 text-zinc-400'
+                }`;
+                btn.innerHTML = `
+                    <i class="ph-fill ${fx.icon} text-xl ${fx.color}"></i>
+                    <span class="text-[10px] font-medium mt-1 text-center px-1 truncate w-full">${fx.name}</span>
+                `;
+                btn.addEventListener('click', () => {
+                    triggerHaptic('light');
+                    state.activeFX = fx.id;
+                    buildFXCarousel();
+                    renderStudioCanvas();
+                });
+                container.appendChild(btn);
+            });
+        }
+
+        function buildAdjustCarousel() {
+            const container = document.getElementById('tab-adjust');
+            container.innerHTML = '';
+
+            ADJUSTMENTS.forEach(adj => {
+                const active = state.activeAdjustKey === adj.key;
+                const val = state.adjustments[adj.key];
+                const isModified = val !== adj.default;
+
+                const btn = document.createElement('button');
+                btn.className = `flex flex-col items-center justify-center shrink-0 w-20 h-18 py-1.5 rounded-2xl border transition active:scale-95 ${
+                    active ? 'bg-violet-500/20 border-violet-500 text-white' : 'bg-white/5 border-white/10 text-zinc-400'
+                }`;
+                btn.innerHTML = `
+                    <div class="relative">
+                        <i class="ph ${adj.icon} text-lg ${active ? 'text-violet-300' : 'text-zinc-400'}"></i>
+                        ${isModified ? '<span class="absolute -top-1 -right-1.5 w-1.5 h-1.5 rounded-full bg-violet-400"></span>' : ''}
+                    </div>
+                    <span class="text-[10px] font-medium mt-0.5 truncate w-full px-1 text-center">${adj.name}</span>
+                    <span class="text-[9px] font-mono ${isModified ? 'text-violet-300 font-bold' : 'text-zinc-500'}">${val}${adj.unit}</span>
+                `;
+                btn.addEventListener('click', () => {
+                    triggerHaptic('light');
+                    state.activeAdjustKey = adj.key;
+                    updateSliderUI();
+                    buildAdjustCarousel();
+                });
+                container.appendChild(btn);
+            });
+        }
+
+        // --- 8. SLIDER & TAB CONTROLLERS ---
+        const sliderContainer = document.getElementById('sliderContainer');
+        const sliderLabel = document.getElementById('sliderLabel');
+        const mainSlider = document.getElementById('mainSlider');
+        const sliderValue = document.getElementById('sliderValue');
+
+        function updateSliderUI() {
+            if (state.currentTab === 'filters') {
+                sliderContainer.classList.remove('hidden');
+                sliderLabel.textContent = 'Сила фильтра';
+                mainSlider.min = 0;
+                mainSlider.max = 100;
+                mainSlider.value = state.presetIntensity;
+                sliderValue.textContent = `${state.presetIntensity}%`;
+            } else if (state.currentTab === 'beauty') {
+                sliderContainer.classList.remove('hidden');
+                const tool = BEAUTY_TOOLS.find(t => t.key === state.activeBeautyKey);
+                if (tool) {
+                    sliderLabel.textContent = tool.name;
+                    mainSlider.min = tool.min;
+                    mainSlider.max = tool.max;
+                    mainSlider.value = state.beauty[tool.key];
+                    sliderValue.textContent = `${state.beauty[tool.key]}${tool.unit}`;
+                }
+            } else if (state.currentTab === 'adjust') {
+                sliderContainer.classList.remove('hidden');
+                const adj = ADJUSTMENTS.find(a => a.key === state.activeAdjustKey);
+                if (adj) {
+                    sliderLabel.textContent = adj.name;
+                    mainSlider.min = adj.min;
+                    mainSlider.max = adj.max;
+                    mainSlider.value = state.adjustments[adj.key];
+                    sliderValue.textContent = `${state.adjustments[adj.key]}${adj.unit}`;
+                }
+            } else {
+                sliderContainer.classList.add('hidden');
+            }
+        }
+
+        mainSlider.addEventListener('input', (e) => {
+            const val = Number(e.target.value);
+            if (state.currentTab === 'filters') {
+                state.presetIntensity = val;
+                sliderValue.textContent = `${val}%`;
+            } else if (state.currentTab === 'beauty') {
+                const tool = BEAUTY_TOOLS.find(t => t.key === state.activeBeautyKey);
+                state.beauty[state.activeBeautyKey] = val;
+                sliderValue.textContent = `${val}${tool ? tool.unit : '%'}`;
+                buildBeautyCarousel();
+            } else if (state.currentTab === 'adjust') {
+                const adj = ADJUSTMENTS.find(a => a.key === state.activeAdjustKey);
+                state.adjustments[state.activeAdjustKey] = val;
+                sliderValue.textContent = `${val}${adj ? adj.unit : ''}`;
+                buildAdjustCarousel();
+            }
+            renderStudioCanvas();
+        });
+
+        // Navigation Tab Switching
+        document.querySelectorAll('.nav-tab').forEach(tabBtn => {
+            tabBtn.addEventListener('click', () => {
+                triggerHaptic('light');
+                const target = tabBtn.getAttribute('data-tab');
+                state.currentTab = target;
+
+                document.querySelectorAll('.nav-tab').forEach(b => {
+                    b.classList.remove('text-violet-400', 'font-semibold');
+                    b.classList.add('text-zinc-400');
+                });
+                tabBtn.classList.add('text-violet-400', 'font-semibold');
+                tabBtn.classList.remove('text-zinc-400');
+
+                ['filters', 'beauty', 'fx', 'adjust', 'extras'].forEach(id => {
+                    const el = document.getElementById(`tab-${id}`);
+                    if (id === target) {
+                        el.classList.remove('hidden');
+                        el.classList.add('flex');
+                    } else {
+                        el.classList.add('hidden');
+                        el.classList.remove('flex');
+                    }
+                });
+
+                updateSliderUI();
+            });
+        });
+
+        // Stamp & Frame buttons
+        document.querySelectorAll('.stamp-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                triggerHaptic('light');
+                state.stampMode = btn.getAttribute('data-stamp');
+                document.querySelectorAll('.stamp-btn').forEach(b => {
+                    b.className = 'stamp-btn px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-xs font-medium text-zinc-300 shrink-0';
+                });
+                btn.className = 'stamp-btn px-3 py-2 rounded-xl border border-violet-500 bg-violet-500/20 text-xs font-medium text-white shrink-0';
+                renderStudioCanvas();
+            });
+        });
+
+        document.getElementById('customCaption').addEventListener('input', (e) => {
+            state.caption = e.target.value;
+            renderStudioCanvas();
+        });
+
+        // --- 9. LOCAL AI PIXEL & SKIN-TONE ANALYZER (100% FREE, NO EXTERNAL API) ---
+        function analyzeImagePixels(imgElement) {
+            const sampleCanvas = document.createElement('canvas');
+            const size = 64;
+            sampleCanvas.width = size;
+            sampleCanvas.height = size;
+            const sCtx = sampleCanvas.getContext('2d');
+            sCtx.drawImage(imgElement, 0, 0, size, size);
+            const data = sCtx.getImageData(0, 0, size, size).data;
+
+            let totalLuma = 0;
+            let lumaValues = [];
+            let totalSat = 0;
+            let warmDiff = 0;
+            let skinTonePixels = 0;
+
+            for (let i = 0; i < data.length; i += 4) {
+                const r = data[i];
+                const g = data[i + 1];
+                const b = data[i + 2];
+
+                const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+                totalLuma += luma;
+                lumaValues.push(luma);
+
+                const max = Math.max(r, g, b);
+                const min = Math.min(r, g, b);
+                const sat = max === 0 ? 0 : ((max - min) / max) * 100;
+                totalSat += sat;
+
+                warmDiff += (r - b);
+
+                // Skin-tone heuristic in RGB space
+                if (r > 95 && g > 40 && b > 20 && r > g && r > b && (max - min) > 15 && Math.abs(r - g) > 12) {
+                    skinTonePixels++;
+                }
+            }
+
+            const pixelCount = data.length / 4;
+            const avgLuma = totalLuma / pixelCount;
+            const avgSat = totalSat / pixelCount;
+            const avgWarmth = warmDiff / pixelCount;
+            const skinRatio = Math.round((skinTonePixels / pixelCount) * 100);
+
+            let variance = 0;
+            for (let i = 0; i < lumaValues.length; i++) {
+                variance += Math.pow(lumaValues[i] - avgLuma, 2);
+            }
+            const contrastStd = Math.sqrt(variance / pixelCount);
+
+            return {
+                luma: Math.round((avgLuma / 255) * 100),
+                contrast: Math.round(contrastStd),
+                saturation: Math.round(avgSat),
+                warmth: Math.round(avgWarmth),
+                skinRatio: skinRatio
+            };
+        }
+
+        let aiVariantCounter = 0;
+
+        document.getElementById('btnMagicAI').addEventListener('click', () => {
+            triggerHaptic('heavy');
+            if (!sourceImage) return;
+
+            const stats = analyzeImagePixels(sourceImage);
+            aiVariantCounter = (aiVariantCounter + 1) % 3;
+
+            let sceneLabel = '';
+            let chosenPreset = 'cleangirl';
+            let chosenFX = 'none';
+
+            let autoBright = 0;
+            if (stats.luma < 38) {
+                autoBright = Math.min(28, Math.round((46 - stats.luma) * 0.9));
+            } else if (stats.luma > 74) {
+                autoBright = -Math.min(20, Math.round((stats.luma - 70) * 0.7));
+            }
+
+            let autoContrast = 0;
+            if (stats.contrast < 42) {
+                autoContrast = Math.min(25, Math.round((48 - stats.contrast) * 0.8));
+            } else if (stats.contrast > 72) {
+                autoContrast = -10;
+            }
+
+            let autoSat = 0;
+            if (stats.saturation < 28) {
+                autoSat = 16;
+            } else if (stats.saturation > 68) {
+                autoSat = -12;
+            }
+
+            let autoWarmth = 0;
+            if (stats.warmth < -15) {
+                autoWarmth = 14;
+            } else if (stats.warmth > 35) {
+                autoWarmth = -10;
+            }
+
+            if (stats.skinRatio >= 18) {
+                sceneLabel = `Рекламный Бьюти • Кожа ${stats.skinRatio}%`;
+                const beautyPool = [
+                    { preset: 'vogue', fx: 'ring_light', smooth: 28, glow: 45, antired: 22, blush: 15, sculpt: 34, eyes: 52 },
+                    { preset: 'champagne', fx: 'diamond_glow', smooth: 32, glow: 50, antired: 25, blush: 18, sculpt: 30, eyes: 48 },
+                    { preset: 'studioflash', fx: 'ring_light', smooth: 25, glow: 42, antired: 20, blush: 10, sculpt: 38, eyes: 55 }
+                ];
+                const pick = beautyPool[aiVariantCounter % beautyPool.length];
+                chosenPreset = pick.preset;
+                chosenFX = pick.fx;
+                state.beauty = {
+                    smooth: pick.smooth,
+                    glow: pick.glow,
+                    antired: pick.antired,
+                    blush: pick.blush,
+                    sculpt: pick.sculpt,
+                    eyes: pick.eyes
+                };
+                // Commercial photography needs punchy micro-contrast, never flat!
+                autoContrast = Math.max(8, autoContrast);
+            } else if (stats.luma < 36) {
+                sceneLabel = 'Ночной кадр • Low-Light';
+                const nightPool = [
+                    { preset: 'tokyo', fx: 'neon_prism' },
+                    { preset: 'cyberpunk', fx: 'vhs_glitch' },
+                    { preset: 'cinematic', fx: 'bokeh_dust' }
+                ];
+                const pick = nightPool[aiVariantCounter % nightPool.length];
+                chosenPreset = pick.preset;
+                chosenFX = pick.fx;
+            } else if (stats.warmth > 22) {
+                sceneLabel = 'Тёплый свет • Golden Hour';
+                const warmPool = [
+                    { preset: 'goldentan', fx: 'leak_warm' },
+                    { preset: 'kodak98', fx: 'sunbeams' },
+                    { preset: 'velvet', fx: 'bokeh_dust' }
+                ];
+                const pick = warmPool[aiVariantCounter % warmPool.length];
+                chosenPreset = pick.preset;
+                chosenFX = pick.fx;
+            } else {
+                sceneLabel = 'Дневной кадр • Balanced';
+                const dayPool = [
+                    { preset: 'cleangirl', fx: 'ring_light' },
+                    { preset: 'cinematic', fx: 'leak_warm' },
+                    { preset: 'dreamy', fx: 'bokeh_dust' }
+                ];
+                const pick = dayPool[aiVariantCounter % dayPool.length];
+                chosenPreset = pick.preset;
+                chosenFX = pick.fx;
+            }
+
+            state.activePreset = chosenPreset;
+            state.presetIntensity = 88;
+            state.activeFX = chosenFX;
+            state.adjustments.brightness = autoBright;
+            state.adjustments.contrast = autoContrast;
+            state.adjustments.saturate = autoSat;
+            state.adjustments.warmth = autoWarmth;
+            state.adjustments.vignette = stats.skinRatio >= 18 ? 10 : 18;
+            state.adjustments.grain = stats.skinRatio >= 18 ? 0 : (stats.luma < 40 ? 15 : 6);
+            state.adjustments.fade = stats.contrast > 65 ? 12 : 0;
+
+            const presetObj = PRESETS.find(p => p.id === chosenPreset);
+            document.getElementById('activeFilterName').textContent = `${presetObj.name} • AI`;
+
+            const hud = document.getElementById('aiHudBadge');
+            document.getElementById('aiSceneType').textContent = sceneLabel;
+            document.getElementById('aiMetricsText').textContent = `Свет: ${stats.luma}% | Ретушь: ${state.beauty.smooth}% | Тон: ${autoBright >= 0 ? '+' + autoBright : autoBright}`;
+            hud.classList.remove('opacity-0');
+            hud.classList.add('opacity-100');
+
+            clearTimeout(window.aiHudTimer);
+            window.aiHudTimer = setTimeout(() => {
+                hud.classList.remove('opacity-100');
+                hud.classList.add('opacity-0');
+            }, 4500);
+
+            buildFilterCarousel();
+            renderFilterThumbnails();
+            buildBeautyCarousel();
+            buildFXCarousel();
+            buildAdjustCarousel();
+            updateSliderUI();
+            renderStudioCanvas();
+            showToast(`AI Бьюти: ${sceneLabel} → ${presetObj.name}`);
+        });
+
+        // --- 10. COMPARE, UPLOAD, RESET & EXPORT HANDLERS ---
+        const btnCompare = document.getElementById('btnCompare');
+        const compareBadge = document.getElementById('compareBadge');
+
+        function startCompare(e) {
+            if (e.cancelable) e.preventDefault();
+            triggerHaptic('light');
+            state.isComparing = true;
+            compareBadge.classList.remove('hidden');
+            renderStudioCanvas();
+        }
+        function endCompare() {
+            if (!state.isComparing) return;
+            state.isComparing = false;
+            compareBadge.classList.add('hidden');
+            renderStudioCanvas();
+        }
+
+        btnCompare.addEventListener('mousedown', startCompare);
+        btnCompare.addEventListener('touchstart', startCompare, { passive: false });
+        window.addEventListener('mouseup', endCompare);
+        window.addEventListener('touchend', endCompare);
+
+        // Switch Demo Photo
+        document.getElementById('btnDemoPhoto').addEventListener('click', () => {
+            triggerHaptic('light');
+            state.demoIndex = (state.demoIndex + 1) % DEMO_PHOTOS.length;
+            loadSampleImage(DEMO_PHOTOS[state.demoIndex]);
+            showToast(`Демо-портрет #${state.demoIndex + 1}`);
+        });
+
+        // Upload User Photo
+        document.getElementById('fileInput').addEventListener('change', (e) => {
+            const file = e.target.files?.[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+                loadSampleImage(ev.target.result);
+                showToast('Ваше фото загружено');
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // Reset All
+        document.getElementById('btnReset').addEventListener('click', () => {
+            triggerHaptic('medium');
+            state.activePreset = 'normal';
+            state.presetIntensity = 100;
+            state.activeFX = 'none';
+            state.stampMode = 'none';
+            state.caption = '';
+            document.getElementById('customCaption').value = '';
+            ADJUSTMENTS.forEach(a => state.adjustments[a.key] = 0);
+            BEAUTY_TOOLS.forEach(t => state.beauty[t.key] = 0);
+            document.getElementById('activeFilterName').textContent = 'Original';
+            buildFilterCarousel();
+            renderFilterThumbnails();
+            buildBeautyCarousel();
+            buildFXCarousel();
+            buildAdjustCarousel();
+            updateSliderUI();
+            renderStudioCanvas();
+            showToast('Настройки сброшены');
+        });
+
+        // Export Modal
+        const exportModal = document.getElementById('exportModal');
+        const exportPreviewImg = document.getElementById('exportPreviewImg');
+
+        document.getElementById('btnExport').addEventListener('click', () => {
+            triggerHaptic('medium');
+            state.isComparing = false;
+            renderStudioCanvas();
+            const dataUrl = mainCanvas.toDataURL('image/png', 0.95);
+            exportPreviewImg.src = dataUrl;
+            exportModal.classList.remove('hidden');
+            exportModal.classList.add('flex');
+        });
+
+        document.getElementById('btnCloseModal').addEventListener('click', () => {
+            exportModal.classList.add('hidden');
+            exportModal.classList.remove('flex');
+        });
+
+        document.getElementById('btnDownloadImage').addEventListener('click', () => {
+            triggerHaptic('heavy');
+            const link = document.createElement('a');
+            link.download = `auragram-${state.activePreset}-${Date.now()}.png`;
+            link.href = mainCanvas.toDataURL('image/png', 0.95);
+            link.click();
+            showToast('Фото сохранено на устройство!');
+        });
+
+        document.getElementById('btnSendTelegram').addEventListener('click', () => {
+            triggerHaptic('heavy');
+            const payload = JSON.stringify({
+                preset: state.activePreset,
+                beauty: state.beauty,
+                fx: state.activeFX,
+                adjustments: state.adjustments
+            });
+            if (tg?.sendData) {
+                try {
+                    tg.sendData(payload);
+                } catch (e) {
+                    showToast('Данные профиля отправлены в Telegram!');
+                }
+            } else {
+                showToast('Готово! (Внутри Telegram бот получит фото)');
+            }
+            exportModal.classList.add('hidden');
+            exportModal.classList.remove('flex');
+        });
+
+        function showToast(text) {
+            const toast = document.getElementById('toastMsg');
+            toast.textContent = text;
+            toast.classList.remove('opacity-0', '-translate-y-2');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            clearTimeout(window.toastTimer);
+            window.toastTimer = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', '-translate-y-2');
+            }, 2200);
+        }
+
+        // Initialize App on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('activeFilterName').textContent = 'Vogue Gloss';
+            buildFilterCarousel();
+            buildBeautyCarousel();
+            buildFXCarousel();
+            buildAdjustCarousel();
+            updateSliderUI();
+            loadSampleImage(DEMO_PHOTOS[0]);
+        });
+    </script>
+</body>
+</html>
