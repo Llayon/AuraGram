@@ -249,8 +249,8 @@ if (isBrowser) {
   const ctx = mainCanvas.getContext('2d');
 
   // Reused offscreen buffers (Phase 2: never recreate per frame needlessly).
-  const beautyBuffer = document.createElement('canvas');
-  const beautyCtx = beautyBuffer.getContext('2d');
+  // detailBuffer serves the preset micro-contrast + the Eyes local pass.
+  // (The G0 beautyBuffer radial-smoothing scratch is gone with the old engine.)
   const detailBuffer = document.createElement('canvas');
   const detailCtx = detailBuffer.getContext('2d');
 
@@ -271,7 +271,8 @@ if (isBrowser) {
   // Render stats (Phase 2: basic measurements, no heavy telemetry).
   const stats = { lastPreviewMs: 0, lastExportMs: 0, previewW: 0, previewH: 0, exportW: 0, exportH: 0, renders: 0,
     faceDetectionStatus: 'not_started', faceCount: 0, faceDetectMs: 0, modelLoadMs: 0, faceBlockMs: 0,
-    faceInputWidth: 0, faceInputHeight: 0, faceWorkerMode: 'none', faceGeometryBytes: 0 };
+    faceInputWidth: 0, faceInputHeight: 0, faceWorkerMode: 'none', faceGeometryBytes: 0,
+    maskBuildMs: 0, retouchMs: 0, retouchRan: '' };
 
   // rAF-coalesced preview scheduling (Phase 2).
   let previewQueued = false;
@@ -306,7 +307,10 @@ if (isBrowser) {
     if (!pill) return;
     const st = (snap && snap.status) || (faceEngine ? faceEngine.status() : 'not_started');
     const transient = st === 'loading_model' || st === 'detecting';
-    if (!transient && !isFaceDebug) {
+    // G1b: no_face/failed are shown compactly to everyone (they explain why
+    // local retouch is inactive). Other terminal states stay debug-only.
+    const showTerminal = isFaceDebug || st === 'no_face' || st === 'failed' || st === 'unsupported';
+    if (!transient && !showTerminal) {
       pill.classList.add('hidden');
       return;
     }
@@ -315,7 +319,7 @@ if (isBrowser) {
       loading_model: 'Загрузка модели лица…',
       detecting: 'Поиск лица…',
       ready: `Лицо: ${snap ? snap.faceCount : 0} · ${snap ? snap.detectMs.toFixed(0) : 0} мс`,
-      no_face: 'Лицо не найдено — фильтры работают',
+      no_face: 'Лицо не найдено — локальная ретушь недоступна',
       failed: 'Анализ лица недоступен — фильтры работают',
       unsupported: 'Анализ лица недоступен — фильтры работают',
       not_started: ''
@@ -363,6 +367,12 @@ if (isBrowser) {
     stats.faceGeometryBytes = snap.geometryBytes;
     updateFacePill(snap);
     refreshFaceOverlay();
+    // G1b (3.4): when geometry lands after the photo was already painted,
+    // re-render once so face-aware retouch appears without any user action.
+    // (Renders never schedule detection, so this cannot loop.)
+    if (snap.status === 'ready' || snap.status === 'no_face' || snap.status === 'failed') {
+      requestPreviewRender();
+    }
   }
 
   function ensureFaceEngine() {
@@ -402,11 +412,10 @@ if (isBrowser) {
   }
 
   function resetFaceState() {
-    faceImageId += 1; // invalidate any in-flight job (F6/F10)
-    if (faceEngine) {
-      try { faceEngine.reset(); } catch (e) { /* noop */ }
-    }
-    onFaceStatus({ status: 'not_started', imageId: 0, faceCount: 0, detectMs: 0, modelLoadMs: stats.modelLoadMs, blockMs: 0, workerMode: stats.faceWorkerMode === 'none' ? 'none' : stats.faceWorkerMode, inputW: 0, inputH: 0, geometryBytes: 0 });
+    // G1b (1.3): settings Reset preserves the current photo's geometry —
+    // the photo did not change, so valid landmarks stay valid (R11).
+    // Photo changes invalidate via newPhoto() in adoptImage instead.
+    refreshFaceOverlay();
   }
 
   function setLoadStatus(status, errorText) {
@@ -446,8 +455,99 @@ if (isBrowser) {
     }, 2200);
   }
 
+  // --- G1b: face-aware retouch plumbing --------------------------------------
+  const isSkinDebug = (() => {
+    try {
+      return new URLSearchParams(window.location.search).get('debugSkin') === '1';
+    } catch (e) {
+      return false;
+    }
+  })();
+  let retouchSession = null;
+  let retouchLoading = null;
+
+  function importRetouchModule() {
+    // Same classic-script dynamic-import rule as the face engine: resolve
+    // against document.baseURI so Pages subpaths keep working.
+    const url = new URL('src/retouch/retouch.mjs', document.baseURI).href;
+    return import(url);
+  }
+
+  /** Immutable face snapshot for one render; null without valid geometry. */
+  function currentFaceSnapshot() {
+    if (!faceEngine) return null;
+    const store = faceEngine.store;
+    if (!store || store.status !== 'ready' || store.imageId !== faceImageId) return null;
+    const f = store.faces[0];
+    if (!f || !f.regions) return null;
+    return { imageId: store.imageId, regions: f.regions };
+  }
+
+  function runRetouchPasses(tctx, W, H, src, st, face, gradeFilter) {
+    const b = st.beauty;
+    const anyOn = b.smooth > 0 || b.antired > 0 || b.glow > 0 || b.eyes > 0 || b.blush > 0 || b.sculpt > 0;
+    if (!anyOn) return;
+    if (!face) return; // R9: no geometry → no local passes, never a fake fallback
+    if (!retouchSession) {
+      if (!retouchLoading) {
+        retouchLoading = importRetouchModule().then((mod) => {
+          retouchSession = mod.createRetouchSession();
+          requestPreviewRender();
+          refreshSkinOverlay();
+          return retouchSession;
+        }).catch(() => { retouchLoading = null; });
+      }
+      return; // grade stays; retouch lands on the next tick, never blocks
+    }
+    try {
+      const gradeSig = [st.activePreset, st.presetIntensity,
+        st.adjustments.brightness, st.adjustments.contrast,
+        st.adjustments.saturate, st.adjustments.blur].join('|');
+      const res = retouchSession.applyPasses(tctx, W, H, {
+        face, beauty: b, src, gradeFilter, gradeSig,
+        buffers: { detailBuffer, detailCtx }
+      });
+      const t = retouchSession.timings();
+      stats.retouchMs = res.ms;
+      stats.maskBuildMs = t.maskBuildMs;
+      stats.retouchRan = res.ran.join(',');
+    } catch (e) { /* local retouch must never break the grade */ }
+  }
+
+  function refreshSkinOverlay() {
+    const overlay = document.getElementById('skinOverlay');
+    if (!overlay) return;
+    if (overlay.width !== mainCanvas.width || overlay.height !== mainCanvas.height) {
+      overlay.width = mainCanvas.width || 0;
+      overlay.height = mainCanvas.height || 0;
+    }
+    const octx = overlay.getContext('2d');
+    const face = currentFaceSnapshot();
+    if (!isSkinDebug || !face || !isImageReady(sourceImage)) {
+      octx.clearRect(0, 0, overlay.width, overlay.height);
+      overlay.classList.add('hidden');
+      return;
+    }
+    if (!retouchSession) {
+      if (!retouchLoading) {
+        retouchLoading = importRetouchModule().then((mod) => {
+          retouchSession = mod.createRetouchSession();
+          refreshSkinOverlay();
+          return retouchSession;
+        }).catch(() => { retouchLoading = null; });
+      }
+      return;
+    }
+    overlay.classList.remove('hidden');
+    try {
+      retouchSession.ensureMasks(face, overlay.width, overlay.height, sourceImage);
+      retouchSession.paintDebugSkin(octx, overlay.width, overlay.height);
+    } catch (e) { /* overlay must never break the editor */ }
+  }
+
   // --- Shared render pipeline: identical settings/order for Preview & Export -
-  function renderImage(tctx, W, H, src, st) {
+  // face: immutable {imageId, regions} snapshot for this render (or null).
+  function renderImage(tctx, W, H, src, st, face) {
     tctx.clearRect(0, 0, W, H);
 
     // Before (compare hold): absolutely raw source, no processing at all.
@@ -462,135 +562,72 @@ if (isBrowser) {
     // Effect radii scale with output size so Export matches Preview (1.3).
     const refK = Math.min(W, H) / 720;
 
-    const crispBoost = ((preset.config.crisp || 0) * ratio * 0.18) + ((st.beauty.eyes || 0) * 0.16);
-    const antiRedHue = (st.beauty.antired || 0) * 0.06;
-    const antiRedBright = (st.beauty.antired || 0) * 0.04;
-
-    const bright = 100 + (preset.config.brightness * ratio) + st.adjustments.brightness + antiRedBright;
-    const cont = 100 + (preset.config.contrast * ratio) + st.adjustments.contrast + crispBoost;
+    // Global color grade ONLY. G1b (Phase 6): beauty must not leak into the
+    // base filter anymore (old antired hue/brightness and eyes-contrast terms
+    // tinted the whole photo). Preset crisp still shapes global contrast.
+    const bright = 100 + (preset.config.brightness * ratio) + st.adjustments.brightness;
+    const cont = 100 + (preset.config.contrast * ratio) + st.adjustments.contrast + ((preset.config.crisp || 0) * ratio * 0.18);
     const sat = 100 + (preset.config.saturate * ratio) + st.adjustments.saturate;
     const sep = Math.max(0, (preset.config.sepia * ratio));
-    const hue = Math.round((preset.config.hue * ratio) + antiRedHue);
+    const hue = Math.round(preset.config.hue * ratio);
     const blurPx = (st.adjustments.blur * 0.4 * refK).toFixed(2);
+    const gradeFilter = `brightness(${bright}%) contrast(${cont}%) saturate(${sat}%) sepia(${sep}%) hue-rotate(${hue}deg) blur(${blurPx}px)`;
 
     tctx.save();
-    tctx.filter = `brightness(${bright}%) contrast(${cont}%) saturate(${sat}%) sepia(${sep}%) hue-rotate(${hue}deg) blur(${blurPx}px)`;
+    tctx.filter = gradeFilter;
     tctx.drawImage(src, 0, 0, W, H);
     tctx.filter = 'none';
 
-    // Frequency-separation skin retouch (buffers reused).
-    if (st.beauty.smooth > 0) {
-      if (beautyBuffer.width !== W || beautyBuffer.height !== H) {
-        beautyBuffer.width = W; beautyBuffer.height = H;
+    // Face-aware retouch (G1b). No geometry → all local passes skip (R9);
+    // slider 0 → each pass is identity (R7). Immutable face snapshot per render.
+    runRetouchPasses(tctx, W, H, src, st, face || null, gradeFilter);
+
+    // Preset-driven gloss for preset-only renders (beauty.glow === 0):
+    // byte-identical to G1a. With glow active the face-aware pass replaces it.
+    if (st.beauty.glow === 0) {
+      const totalGloss = ((preset.config.gloss || 0) * ratio * 0.5);
+      if (totalGloss > 0) {
+        if (detailBuffer.width !== W || detailBuffer.height !== H) {
+          detailBuffer.width = W; detailBuffer.height = H;
+        }
+        detailCtx.clearRect(0, 0, W, H);
+        detailCtx.filter = 'brightness(72%) contrast(280%) saturate(85%) blur(1.5px)';
+        detailCtx.drawImage(tctx.canvas, 0, 0, W, H);
+        detailCtx.filter = 'none';
+        tctx.save();
+        tctx.globalCompositeOperation = 'screen';
+        tctx.globalAlpha = Math.min(0.42, (totalGloss / 140) * 0.34);
+        tctx.drawImage(detailBuffer, 0, 0, W, H);
+        tctx.restore();
       }
-      const smoothRadius = Math.max(2, Math.round(Math.min(W, H) * 0.009));
-      beautyCtx.clearRect(0, 0, W, H);
-      // NOTE: draw from an offscreen snapshot would be ideal; drawing from the
-      // target canvas here matches the prototype pipeline (self-feedback is
-      // part of the preserved look). Export uses the same path, so both match.
-      beautyCtx.filter = `blur(${smoothRadius}px) contrast(106%) brightness(101%)`;
-      beautyCtx.drawImage(tctx.canvas, 0, 0, W, H);
-      beautyCtx.filter = 'none';
-
-      const maskGrad = beautyCtx.createRadialGradient(W * 0.5, H * 0.44, Math.min(W, H) * 0.14, W * 0.5, H * 0.44, Math.max(W, H) * 0.56);
-      maskGrad.addColorStop(0, 'rgba(0,0,0,1)');
-      maskGrad.addColorStop(0.7, 'rgba(0,0,0,0.65)');
-      maskGrad.addColorStop(1, 'rgba(0,0,0,0)');
-      beautyCtx.globalCompositeOperation = 'destination-in';
-      beautyCtx.fillStyle = maskGrad;
-      beautyCtx.fillRect(0, 0, W, H);
-      beautyCtx.globalCompositeOperation = 'source-over';
-
-      tctx.save();
-      tctx.globalAlpha = (st.beauty.smooth / 100) * 0.42;
-      tctx.globalCompositeOperation = 'soft-light';
-      tctx.drawImage(beautyBuffer, 0, 0, W, H);
-      tctx.globalAlpha = (st.beauty.smooth / 100) * 0.24;
-      tctx.globalCompositeOperation = 'source-over';
-      tctx.drawImage(beautyBuffer, 0, 0, W, H);
-      tctx.restore();
     }
 
-    // Specular gloss.
-    const totalGloss = (st.beauty.glow || 0) + ((preset.config.gloss || 0) * ratio * 0.5);
-    if (totalGloss > 0) {
-      if (detailBuffer.width !== W || detailBuffer.height !== H) {
-        detailBuffer.width = W; detailBuffer.height = H;
+    // Preset-driven micro-contrast for preset-only renders (beauty.eyes 0):
+    // byte-identical to G1a. With eyes active the eye-localized pass replaces it.
+    if (st.beauty.eyes === 0) {
+      const totalCrisp = ((preset.config.crisp || 0) * ratio * 0.6);
+      if (totalCrisp > 0) {
+        if (detailBuffer.width !== W || detailBuffer.height !== H) {
+          detailBuffer.width = W; detailBuffer.height = H;
+        }
+        detailCtx.clearRect(0, 0, W, H);
+        detailCtx.filter = 'contrast(155%) brightness(98%) saturate(108%)';
+        detailCtx.drawImage(src, 0, 0, W, H);
+        detailCtx.filter = 'none';
+        const sharpMask = detailCtx.createRadialGradient(W * 0.5, H * 0.42, Math.min(W, H) * 0.08, W * 0.5, H * 0.42, Math.min(W, H) * 0.48);
+        sharpMask.addColorStop(0, 'rgba(0,0,0,1)');
+        sharpMask.addColorStop(0.75, 'rgba(0,0,0,0.5)');
+        sharpMask.addColorStop(1, 'rgba(0,0,0,0)');
+        detailCtx.globalCompositeOperation = 'destination-in';
+        detailCtx.fillStyle = sharpMask;
+        detailCtx.fillRect(0, 0, W, H);
+        detailCtx.globalCompositeOperation = 'source-over';
+        tctx.save();
+        tctx.globalCompositeOperation = 'overlay';
+        tctx.globalAlpha = Math.min(0.45, (totalCrisp / 140) * 0.38);
+        tctx.drawImage(detailBuffer, 0, 0, W, H);
+        tctx.restore();
       }
-      detailCtx.clearRect(0, 0, W, H);
-      detailCtx.filter = 'brightness(72%) contrast(280%) saturate(85%) blur(1.5px)';
-      detailCtx.drawImage(tctx.canvas, 0, 0, W, H);
-      detailCtx.filter = 'none';
-      tctx.save();
-      tctx.globalCompositeOperation = 'screen';
-      tctx.globalAlpha = Math.min(0.42, (totalGloss / 140) * 0.34);
-      tctx.drawImage(detailBuffer, 0, 0, W, H);
-      tctx.restore();
-    }
-
-    // Micro-contrast sharpening (upper-mid facial region).
-    const totalCrisp = (st.beauty.eyes || 0) + ((preset.config.crisp || 0) * ratio * 0.6);
-    if (totalCrisp > 0) {
-      if (detailBuffer.width !== W || detailBuffer.height !== H) {
-        detailBuffer.width = W; detailBuffer.height = H;
-      }
-      detailCtx.clearRect(0, 0, W, H);
-      detailCtx.filter = 'contrast(155%) brightness(98%) saturate(108%)';
-      detailCtx.drawImage(src, 0, 0, W, H);
-      detailCtx.filter = 'none';
-      const sharpMask = detailCtx.createRadialGradient(W * 0.5, H * 0.42, Math.min(W, H) * 0.08, W * 0.5, H * 0.42, Math.min(W, H) * 0.48);
-      sharpMask.addColorStop(0, 'rgba(0,0,0,1)');
-      sharpMask.addColorStop(0.75, 'rgba(0,0,0,0.5)');
-      sharpMask.addColorStop(1, 'rgba(0,0,0,0)');
-      detailCtx.globalCompositeOperation = 'destination-in';
-      detailCtx.fillStyle = sharpMask;
-      detailCtx.fillRect(0, 0, W, H);
-      detailCtx.globalCompositeOperation = 'source-over';
-      tctx.save();
-      tctx.globalCompositeOperation = 'overlay';
-      tctx.globalAlpha = Math.min(0.45, (totalCrisp / 140) * 0.38);
-      tctx.drawImage(detailBuffer, 0, 0, W, H);
-      tctx.restore();
-    }
-
-    if (st.beauty.antired > 0) {
-      tctx.save();
-      tctx.globalCompositeOperation = 'soft-light';
-      const arAlpha = (st.beauty.antired / 100) * 0.22;
-      tctx.fillStyle = `rgba(254, 240, 215, ${arAlpha})`;
-      tctx.fillRect(0, 0, W, H);
-      tctx.restore();
-    }
-
-    if (st.beauty.blush > 0) {
-      tctx.save();
-      tctx.globalCompositeOperation = 'soft-light';
-      const blushAlpha = (st.beauty.blush / 100) * 0.34;
-      const blushGrad = tctx.createRadialGradient(W * 0.5, H * 0.45, W * 0.05, W * 0.5, H * 0.45, Math.max(W, H) * 0.58);
-      blushGrad.addColorStop(0, `rgba(255, 138, 101, ${blushAlpha})`);
-      blushGrad.addColorStop(0.6, `rgba(251, 113, 133, ${blushAlpha * 0.6})`);
-      blushGrad.addColorStop(1, 'rgba(251, 113, 133, 0)');
-      tctx.fillStyle = blushGrad;
-      tctx.fillRect(0, 0, W, H);
-      tctx.restore();
-    }
-
-    if (st.beauty.sculpt > 0) {
-      tctx.save();
-      const scAlpha = (st.beauty.sculpt / 100) * 0.52;
-      const dodgeGrad = tctx.createRadialGradient(W * 0.5, H * 0.40, Math.min(W, H) * 0.05, W * 0.5, H * 0.40, Math.min(W, H) * 0.42);
-      dodgeGrad.addColorStop(0, `rgba(255, 252, 248, ${scAlpha * 0.65})`);
-      dodgeGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
-      tctx.globalCompositeOperation = 'soft-light';
-      tctx.fillStyle = dodgeGrad;
-      tctx.fillRect(0, 0, W, H);
-      const burnGrad = tctx.createRadialGradient(W * 0.5, H * 0.42, Math.min(W, H) * 0.28, W * 0.5, H * 0.42, Math.max(W, H) * 0.72);
-      burnGrad.addColorStop(0, 'rgba(0, 0, 0, 0)');
-      burnGrad.addColorStop(1, `rgba(12, 10, 18, ${scAlpha * 0.78})`);
-      tctx.globalCompositeOperation = 'multiply';
-      tctx.fillStyle = burnGrad;
-      tctx.fillRect(0, 0, W, H);
-      tctx.restore();
     }
 
     // RGB split glitch (draws from source, same in preview & export).
@@ -819,12 +856,13 @@ if (isBrowser) {
   function renderStudioCanvas() {
     if (!isImageReady(sourceImage)) return;
     if (!mainCanvas.width || !mainCanvas.height) return;
-    renderImage(ctx, mainCanvas.width, mainCanvas.height, sourceImage, state);
+    renderImage(ctx, mainCanvas.width, mainCanvas.height, sourceImage, state, currentFaceSnapshot());
     stats.previewW = mainCanvas.width;
     stats.previewH = mainCanvas.height;
     stats.renders += 1;
     updateCorrectionIndicator();
     refreshFaceOverlay(); // debug overlay mirrors the preview; never touches pixels
+    refreshSkinOverlay();
   }
 
   // --- Correction indicator (1.1): Original preset keeps independent settings
@@ -872,7 +910,12 @@ if (isBrowser) {
     renderStudioCanvas();
     renderFilterThumbnails();
     // G1a: photo is already painted — now schedule one-shot face detection.
+    // G1b (1.3): a NEW photo drops the previous photo's geometry at once,
+    // so it can never be retouched with stale landmarks (R12).
     faceImageId += 1;
+    if (faceEngine) {
+      try { faceEngine.newPhoto(faceImageId); } catch (e) { /* noop */ }
+    }
     syncFaceOverlaySize();
     scheduleFaceDetection(img, faceImageId);
     if (label) showToast(label);
@@ -1458,7 +1501,7 @@ if (isBrowser) {
     });
     const t0 = performance.now();
     try {
-      renderImage(ectx, dims.w, dims.h, sourceImage, frozen);
+      renderImage(ectx, dims.w, dims.h, sourceImage, frozen, currentFaceSnapshot());
     } catch (e) {
       showToast('Экспорт не удался: недостаточно памяти. Попробуйте фото меньшего размера.');
       return;
@@ -1598,6 +1641,16 @@ if (isBrowser) {
       schedule: scheduleFaceDetection,
       refreshOverlay: refreshFaceOverlay,
       reset: resetFaceState
+    },
+    // G1b: retouch engine (lazy; null until first face-aware render/debug).
+    isSkinDebug,
+    retouch: {
+      ready: () => !!retouchSession,
+      timings: () => (retouchSession ? retouchSession.timings() : null),
+      cacheKey: () => (retouchSession ? retouchSession.cacheKey() : ''),
+      snapshot: currentFaceSnapshot,
+      debugMaskDataUrl: () => (retouchSession ? retouchSession.debugMaskDataUrl() : null),
+      refreshSkinOverlay
     }
   };
 }
