@@ -1,0 +1,25 @@
+{
+  "settings": [
+    "neutral",
+    "default",
+    "vogue",
+    "smooth100",
+    "antired100"
+  ],
+  "fixtures": [
+    "tests/fixtures/portrait.jpg",
+    "tests/fixtures/edge-source.jpg"
+  ],
+  "files": [
+    "portrait-neutral.png",
+    "portrait-default.png",
+    "portrait-vogue.png",
+    "portrait-smooth100.png",
+    "portrait-antired100.png",
+    "edge-source-neutral.png",
+    "edge-source-default.png",
+    "edge-source-vogue.png",
+    "edge-source-smooth100.png",
+    "edge-source-antired100.png"
+  ]
+}
