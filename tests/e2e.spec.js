@@ -1,7 +1,9 @@
 /* AuraGram Gauntlet 0 — browser E2E (Playwright).
  * Run: npx playwright test
  * Uses small locally-generated PNGs only (no personal data, no network photos).
- * Covers T1–T14 at the browser level against index.html served from disk.
+ * Covers T1–T14 at the browser level against index.html served over local http
+ * (static-server.cjs via webServer — required so ESM/worker/WASM paths behave
+ * exactly like on GitHub Pages; file:// would block them via CORS).
  */
 const { test, expect } = require('@playwright/test');
 const fs = require('node:fs');
@@ -31,7 +33,7 @@ async function gotoApp(page) {
   page.on('console', (m) => {
     if (m.type() === 'error') errors.push(m.text());
   });
-  await page.goto('file:///' + path.join(ROOT, 'index.html').replace(/\\/g, '/'));
+  await page.goto('/index.html');
   await page.waitForFunction(() => !!window.AuraGram, null, { timeout: 10000 });
   return errors;
 }
@@ -57,7 +59,9 @@ test('T1 app boots without critical errors', async ({ page }) => {
   const errors = await gotoApp(page);
   const red = fixture('red', RED_PNG_B64);
   await uploadFixture(page, red);
-  const fatal = errors.filter((e) => !/favicon|net::|Failed to load resource/i.test(e));
+  // G1a: photo upload also schedules local face detection; allowlist the
+  // library's own info chatter (XNNPACK/WebGL), fail on anything else.
+  const fatal = errors.filter((e) => !/favicon|net::|Failed to load resource|XNNPACK|WebGL|GL Driver|Graph successfully|inference_feedback|face_landmarker_graph|gl_context/i.test(e));
   expect(fatal, JSON.stringify(fatal)).toEqual([]);
 });
 
