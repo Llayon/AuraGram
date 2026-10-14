@@ -14,6 +14,17 @@
  * entirely, so zero strength is identity (R7). Curves are nonlinear and
  * monotonic (R6). Everything is resolution-relative, so Preview and Export
  * share settings and order (R13).
+ *
+ * G1b.1 COMPOSITING CONTRACT (isolation):
+ *   Global preset + adjustments are independent of Beauty. Each local pass
+ *   touches ONLY its allowed region (contribution = intensity × mask):
+ *     Smooth  ⊂ skin mask · Anti-red ⊂ skin mask · Glow ⊂ skin mask
+ *     Eyes    ⊂ eye mask  · Blush ⊂ cheeks ∩ skin mask · Sculpt ⊂ skin mask
+ *   Soft mask edges allow a feathered falloff inside; outside the mask the
+ *   pass contributes zero. No pass uses `destination-in` on the main photo
+ *   canvas (only on private layers). G1b.1 audit: Smooth/Antired/Glow/Eyes/
+ *   Sculpt already satisfied the contract; Blush was fixed to intersect its
+ *   color layer with S.maskSkin before compositing.
  */
 import {
   maskSizeFor,
@@ -164,21 +175,63 @@ export function createRetouchSession() {
     tctx.restore();
   }
 
-  function applyBlush(tctx, W, H, face, strength) {
+  function applyBlush(tctx, W, H, face, strength, buffers) {
+    // G1b.1 P0-B fix: blush is painted on a separate transparent layer and
+    // then masked by S.maskSkin (skin ∩ ¬eyes/brows/lips/nostrils) via
+    // `destination-in` BEFORE touching the photo. Never apply
+    // `destination-in` to the main canvas — that would destroy pixels
+    // outside the mask. Reuses the shared detailBuffer (no new fullscreen
+    // canvas per slider tick); same cheek geometry and soft-light look as
+    // before, now strictly with contribution = intensity × skin mask.
+    const { detailBuffer, detailCtx } = buffers || {};
+    // Fallback (unit-test path without buffers): keep old direct paint so
+    // pure-geometry callers never crash — production always passes buffers.
     const cheeks = cheekCenters(face.regions);
-    tctx.save();
-    tctx.globalCompositeOperation = 'soft-light';
+    if (!detailBuffer || !detailCtx) {
+      tctx.save();
+      tctx.globalCompositeOperation = 'soft-light';
+      for (const c of cheeks) {
+        const cx = Math.min(W, Math.max(0, c.x * W));
+        const cy = Math.min(H, Math.max(0, c.y * H));
+        const r = Math.max(8, c.r * Math.min(W, H));
+        const g = tctx.createRadialGradient(cx, cy, r * 0.1, cx, cy, r);
+        g.addColorStop(0, `rgba(255, 138, 101, ${0.5 * strength})`);
+        g.addColorStop(0.6, `rgba(251, 113, 133, ${0.3 * strength})`);
+        g.addColorStop(1, 'rgba(251, 113, 133, 0)');
+        tctx.fillStyle = g;
+        tctx.fillRect(0, 0, W, H);
+      }
+      tctx.restore();
+      return;
+    }
+    if (detailBuffer.width !== W || detailBuffer.height !== H) {
+      detailBuffer.width = W; detailBuffer.height = H;
+    }
+    detailCtx.save();
+    detailCtx.globalCompositeOperation = 'source-over';
+    detailCtx.globalAlpha = 1;
+    detailCtx.filter = 'none';
+    detailCtx.clearRect(0, 0, W, H);
     for (const c of cheeks) {
       const cx = Math.min(W, Math.max(0, c.x * W));
       const cy = Math.min(H, Math.max(0, c.y * H));
       const r = Math.max(8, c.r * Math.min(W, H));
-      const g = tctx.createRadialGradient(cx, cy, r * 0.1, cx, cy, r);
+      const g = detailCtx.createRadialGradient(cx, cy, r * 0.1, cx, cy, r);
       g.addColorStop(0, `rgba(255, 138, 101, ${0.5 * strength})`);
       g.addColorStop(0.6, `rgba(251, 113, 133, ${0.3 * strength})`);
       g.addColorStop(1, 'rgba(251, 113, 133, 0)');
-      tctx.fillStyle = g;
-      tctx.fillRect(0, 0, W, H);
+      detailCtx.fillStyle = g;
+      detailCtx.fillRect(0, 0, W, H);
     }
+    // Intersect with the cached skin mask (upscaled, feathered).
+    detailCtx.globalCompositeOperation = 'destination-in';
+    detailCtx.drawImage(S.maskSkin, 0, 0, W, H);
+    detailCtx.globalCompositeOperation = 'source-over';
+    detailCtx.restore();
+    tctx.save();
+    tctx.globalCompositeOperation = 'soft-light';
+    tctx.globalAlpha = 1;
+    tctx.drawImage(detailBuffer, 0, 0, W, H);
     tctx.restore();
   }
 
@@ -258,7 +311,7 @@ export function createRetouchSession() {
       ran.push('eyes');
     }
     if (v.blush > 0) {
-      applyBlush(tctx, W, H, face, blushCurve(v.blush));
+      applyBlush(tctx, W, H, face, blushCurve(v.blush), buffers);
       ran.push('blush');
     }
     if (v.sculpt > 0) {
