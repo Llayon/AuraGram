@@ -582,9 +582,27 @@ if (isBrowser) {
     // slider 0 → each pass is identity (R7). Immutable face snapshot per render.
     runRetouchPasses(tctx, W, H, src, st, face || null, gradeFilter);
 
-    // Preset-driven gloss for preset-only renders (beauty.glow === 0):
-    // byte-identical to G1a. With glow active the face-aware pass replaces it.
-    if (st.beauty.glow === 0) {
+    // G1b.1 COMPOSITING CONTRACT (isolation of Global vs Local):
+    // ------------------------------------------------------------------
+    // Stage order in renderImage():
+    //   1. Base image (drawImage src with gradeFilter).
+    //   2. Global preset processing (gradeFilter: brightness/contrast/
+    //      saturate/sepia/hue + preset crisp contrast term).
+    //   3. Global adjustments (tint, warmth, fade — below).
+    //   4. Preset-specific global effects (gloss screen + crisp overlay).
+    //      ALWAYS run when the preset asks, INDEPENDENT of st.beauty.*.
+    //   5. Face-aware Beauty processing (runRetouchPasses, above): each tool
+    //      is strictly masked — Smooth/Antired/Glow/Sculpt ⊂ skin mask,
+    //      Eyes ⊂ eye mask, Blush ⊂ cheeks ∩ skin mask. Contribution =
+    //      intensity × spatial mask. Beauty NEVER disables/scales Stage 4.
+    //   6. Artistic FX.  7. Frame / stamp / caption.
+    // Byte-identity note: with all beauty at 0 the output below is
+    // pixel-identical to G1b/G1a (same ops, same order, same constants).
+
+    // Preset-driven gloss: GLOBAL screen pass, always applied when the preset
+    // asks. Independent of local Glow (G1b.1 P0-A fix: removed the gate that
+    // wrongly dropped global gloss whenever local Glow was engaged).
+    {
       const totalGloss = ((preset.config.gloss || 0) * ratio * 0.5);
       if (totalGloss > 0) {
         if (detailBuffer.width !== W || detailBuffer.height !== H) {
@@ -602,9 +620,10 @@ if (isBrowser) {
       }
     }
 
-    // Preset-driven micro-contrast for preset-only renders (beauty.eyes 0):
-    // byte-identical to G1a. With eyes active the eye-localized pass replaces it.
-    if (st.beauty.eyes === 0) {
+    // Preset-driven micro-contrast: GLOBAL overlay pass, always applied when
+    // the preset asks. Independent of local Eyes (G1b.1 P0-A fix: removed
+    // the gate that wrongly dropped global crisp whenever Eyes was engaged).
+    {
       const totalCrisp = ((preset.config.crisp || 0) * ratio * 0.6);
       if (totalCrisp > 0) {
         if (detailBuffer.width !== W || detailBuffer.height !== H) {

@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  testMatch: [/e2e\.spec\.js/, /e2e-face\.spec\.js/, /e2e-retouch\.spec\.js/],
+  testMatch: [/e2e\.spec\.js/, /e2e-face\.spec\.js/, /e2e-retouch\.spec\.js/, /e2e-g1b1\.spec\.js/],
   timeout: 120_000,
   retries: 0,
   use: {
