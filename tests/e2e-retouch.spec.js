@@ -3,7 +3,7 @@
  * synthetic tone patches + injected mock geometry for the algorithm matrix
  * (tones, texture, occlusion) without touching app state.
  */
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./app-fixtures.cjs');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
@@ -435,6 +435,7 @@ test('R13 preview and export agree within tolerance', async ({ page }) => {
   const ran = await page.evaluate(() => window.AuraGram.stats.retouchRan);
   expect(ran).toMatch(/smooth/);
   await page.click('#btnExport');
+  await page.waitForFunction(() => !!window.AuraGram.getExportBlob(), null, { timeout: 45000 });
   await expect(page.locator('#exportModal')).toBeVisible();
   const m = await page.evaluate(async () => {
     const blob = window.AuraGram.getExportBlob();
@@ -500,6 +501,7 @@ test('R17 debugSkin export equality', async ({ page }) => {
   await page.waitForFunction(() => window.AuraGram.retouch.ready(), null, { timeout: 60000 });
   await page.evaluate(() => window.AuraGram.renderStudioCanvas());
   await page.click('#btnExport');
+  await page.waitForFunction(() => !!window.AuraGram.getExportBlob(), null, { timeout: 45000 });
   await expect(page.locator('#exportModal')).toBeVisible();
   const bytesDebug = await page.evaluate(async () => Array.from(new Uint8Array(await window.AuraGram.getExportBlob().arrayBuffer())));
   await page.click('#btnCloseModal');
@@ -517,6 +519,7 @@ test('R17 debugSkin export equality', async ({ page }) => {
   await page2.waitForFunction(() => window.AuraGram.retouch.ready(), null, { timeout: 60000 });
   await page2.evaluate(() => window.AuraGram.renderStudioCanvas());
   await page2.click('#btnExport');
+  await page2.waitForFunction(() => !!window.AuraGram.getExportBlob(), null, { timeout: 45000 });
   await expect(page2.locator('#exportModal')).toBeVisible();
   const bytesPlain = await page2.evaluate(async () => Array.from(new Uint8Array(await window.AuraGram.getExportBlob().arrayBuffer())));
   expect(bytesPlain.length).toBeGreaterThan(1000);
@@ -559,6 +562,7 @@ test('R18 no external AI calls and no photo uploads', async ({ page }) => {
   await waitFaceTerminal(page);
   await isolateBeauty(page, 'smooth', 60);
   await page.click('#btnExport');
+  await page.waitForFunction(() => !!window.AuraGram.getExportBlob(), null, { timeout: 45000 });
   await expect(page.locator('#exportModal')).toBeVisible();
   // Static font stylesheet / G0 CDN assets are allowed; anything AI-shaped is not.
   const bad = reqs.filter((r) => /ml\.googleapis|aiplatform|vertex|openai|anthropic|huggingface|replicate|cohere|stability\.ai|mediapipe-models|storage\.googleapis.*(model|mediapipe)/i.test(r.url));
@@ -635,6 +639,7 @@ test('R10 beauty with failed detection degrades safely', async ({ page }) => {
   expect(await page.evaluate(() => window.AuraGram.face.status())).toBe('failed');
   await isolateBeauty(page, 'smooth', 80);
   await page.click('#btnExport');
+  await page.waitForFunction(() => !!window.AuraGram.getExportBlob(), null, { timeout: 45000 });
   await expect(page.locator('#exportModal')).toBeVisible();
   await page.unrouteAll();
 });
@@ -670,6 +675,7 @@ test('R16 large-photo export stays handled', async ({ page }) => {
     A.renderStudioCanvas();
   });
   await page.click('#btnExport', { timeout: 30000 });
+  await page.waitForFunction(() => !!window.AuraGram.getExportBlob(), null, { timeout: 45000 });
   await expect(page.locator('#exportModal')).toBeVisible({ timeout: 120000 });
   const ok = await page.evaluate(async () => {
     const b = window.AuraGram.getExportBlob();

@@ -5,6 +5,7 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import readAppSource from './app-source.cjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -12,7 +13,7 @@ import * as geo from '../src/vision/faceGeometry.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (rel) => fs.readFileSync(path.join(ROOT, rel), 'utf8');
-const APP = () => read('src/app.js');
+const APP = () => readAppSource();
 const DETECTOR = () => read('src/vision/faceDetector.mjs');
 const WORKER = () => read('src/vision/faceWorker.js');
 const OVERLAY = () => read('src/vision/faceOverlay.mjs');

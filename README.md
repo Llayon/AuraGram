@@ -1,4 +1,15 @@
-# AuraGram Studio — Gauntlet 0 + 1a + 1b
+# AuraGram Studio — local photo editor
+
+Current implementation includes face-aware skin retouch and G1c upper-lash
+enhancement (density, length, definition). UI CSS, fonts, icons, MediaPipe
+runtime and model are served locally. Telegram SDK is an optional asynchronous
+integration; external demo photos show an explicit error when unavailable.
+Uploaded photos can be edited and exported with external requests blocked.
+
+The stabilization checklist and validation journal are in
+[`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md).
+Release notes are in [`CHANGELOG.md`](CHANGELOG.md); PR checks and deployments
+are listed in [GitHub Actions](https://github.com/Llayon/AuraGram/actions/workflows/pages.yml).
 
 Static mobile photo editor. **Local processing only** — no backend, no database,
 no accounts, no paid APIs, no cloud inference, no API keys in client code.
@@ -6,20 +17,37 @@ Photos never leave the device. G1a adds on-device face geometry (MediaPipe
 Face Landmarker, WASM/CPU); G1b turns the beauty tab into real face-aware
 retouch with texture preservation — still zero-cost, still fully local.
 
-
-Static mobile photo editor. **Local processing only** — no backend, no database,
-no accounts, no paid APIs, no cloud inference, no API keys in client code.
-Photos never leave the device.
-
 - Entry point: `index.html` (root, so GitHub Pages serves it at `/`)
 - App logic: `src/app.js` · Styles: `src/styles.css`
 - Baseline prototype preserved in git history
   (`auragram_telegram_mini_app.html` → `index.html` refactor).
 
+The entry point wires these modules through explicit callbacks:
+
+- `src/state/editorState.js`: presets, tools, state factories, validation and dimensions (also usable from Node).
+- `src/rendering/imageRenderer.js`: shared preview/export pipeline and artistic effects.
+- `src/loading/photoLoader.js`: decoding, load tokens and object URL lifetime.
+- `src/ui/editorUI.js`: carousels, tabs, sliders, frames and caption controls.
+- `src/exporting/exportController.js`: export dialog, PNG lifetime, download and share.
+- `src/exporting/prepareExport.mjs`: bounded asynchronous export preparation.
+- `src/vision/` and `src/retouch/`: lazy face detection, geometry, masks and local effects.
+
+The browser factories are loaded in deferred script order. Face detection and
+retouch remain lazy ESM imports. `src/app.js` coordinates geometry invalidation,
+preview scheduling, comparison and auto-tuning.
+
 ## Run locally
 
-No build step. Serve the folder statically (any static server) or open
-`index.html` directly:
+Serve the committed generated resources over HTTP (not `file://`). After
+editing the UI or upgrading its dependencies, rebuild the local resources:
+
+```sh
+npm ci
+npm run build
+node tests/static-server.cjs 8137
+```
+
+Other static servers also work:
 
 ```sh
 npx serve .
@@ -39,9 +67,44 @@ ESM modules, module/classic Workers and WASM require http, not file://):
 
 ```sh
 npm install
-npx playwright install chromium
+npx playwright install chromium webkit
 npm run test:e2e    # G0 regression + G1a real inference + G1b retouch (R1–R19)
 ```
+
+The Chromium project runs functional checks; `webkit-mobile` runs mobile smoke
+checks using the iPhone 11 browser profile. All browser tests block external
+HTTPS requests and use local fixtures. Export assertions wait for the new PNG
+Blob. System Share is tested with a controlled API stub; this does not prove
+that a physical phone's share sheet works.
+The `chromium-performance` project runs the existing I14/L20 budgets with one
+worker after both functional projects finish, so concurrent inference and PNG
+encoding do not distort the relative timing checks. The L20 +15ms limit is unchanged.
+
+`npm run package:site` prepares `dist/` for static hosting after `npm run build`.
+`npm run check:site` serves that exact artifact and checks local module loading,
+real face detection, retouch and PNG export with external requests blocked.
+CI builds local resources, runs unit and browser tests, and publishes only the
+prepared static site. UI source is `src/utilities.input.css` plus the classes
+in HTML/JS; generated `src/utilities.css` is committed for direct static serving.
+The npm browser-test runner owns a temporary loopback server on a free port and
+closes it after the run. This also avoids shell process-tree shutdown hangs on Windows.
+
+Performance and UI inspection can be repeated with:
+
+```sh
+node scripts/measure-editor.cjs
+```
+
+This writes JSON and desktop/mobile screenshots to `test-results/measurements/`.
+On this Windows desktop with headless Chromium 156 and 16 logical processors,
+the 3000×2400 fixture with all six beauty tools at 60 and lashes at 50/30/40
+produced a 1080×864 preview with median render 126.5 ms (five warm samples) and
+a 3000×2400 PNG with render 962.4 ms. Retained canvases accounted for about
+46.7 MB of estimated RGBA storage; decoded source and temporary export canvas
+each add about 28.8 MB. These are dimensions × 4 estimates, not process RSS;
+native MediaPipe/WASM, codec and GPU allocations are excluded. JS heap values
+may be rounded by the browser. These desktop observations do not establish
+mobile performance or physical-device memory limits.
 
 Visual matrices (exact-pixel renders for critic review + report):
 
@@ -133,28 +196,53 @@ no personal photos in the repo — plus two committed Unsplash-licensed fixtures
 
 ## Deploy (GitHub Pages)
 
-`.github/workflows/pages.yml` — official Pages actions, minimal permissions,
-runs on `push` to `main` + `workflow_dispatch`. Gates before deploy: unit
-tests (`build` job) AND full Playwright E2E incl. real MediaPipe inference
-(`e2e` job). Pages Source = GitHub Actions (one-time owner action, done).
+Version **0.2.0** is prepared through a pull request into `main`.
+`.github/workflows/pages.yml` runs on pull requests targeting `main`, pushes
+to `main`, and manual dispatch. Both `build` and `e2e` must succeed before
+publication: clean dependency installation, local assets, unit tests, real
+MediaPipe inference, Chromium/WebKit regression checks, isolated performance
+budgets and the packaged-site smoke check.
+
+PR runs have read-only repository permissions and cannot deploy. Upload of the
+Pages artifact and the `deploy` job are restricted to `main` outside PR events.
+Only `deploy` receives Pages/OIDC write permissions. New commits cancel obsolete
+checks on the same PR; production deployments are serialized.
+
+Release procedure:
+
+1. Commit the implementation, generated UI resources and documentation on a feature branch.
+2. Push the branch, open a PR into `main`, and wait for `build` and `e2e` to pass on its latest commit.
+3. Merge the checked PR. The push to `main` repeats the gates and deploys the `dist/` artifact.
+4. Verify the published app reports `window.AuraGram.version === '0.2.0'`, then upload a local photo, check face-aware retouch and lashes, and download a valid PNG.
+
+Repeat the production smoke check with installed Chromium and WebKit:
+
+```sh
+npm run check:live -- https://llayon.github.io/AuraGram/
+```
+
+The check uses a licensed local fixture, verifies HTML/runtime versions, real
+face detection, lash controls, compare cancellation and PNG download in both
+engines. Requests outside the site's origin are blocked; photos are not uploaded.
+
+Pages Source must be GitHub Actions. Physical-device testing remains outside
+the user-approved release scope; the mobile checks use WebKit emulation.
 Live: https://llayon.github.io/AuraGram/ ·
 Debug: https://llayon.github.io/AuraGram/?debugFace=1
 
-## Technical debt (accepted for G0, tracked for later)
+## Processing and export
 
-1. **Tailwind via runtime CDN** kept to avoid visual regressions in the first
-   release. Follow-up: vendor or locally build CSS for zero runtime CDN
-   dependency.
-2. External demo photos (Unsplash) + fonts/icons CDNs require network; the app
-   degrades explicitly (error overlay) when offline.
-3. No MediaPipe in G0 by design — hook reserved for **G1 (Local Face Detection
-   & Skin-Aware Retouch)**: Face Landmarker, local segmentation, WebGL2,
-   guided/bilateral filters. Nothing from G1 is implemented here.
-4. G1b implements the retouch itself (below) — no second neural network was
-   added; segmentation stays geometric + classical.
-5. Next: **G1c — Natural Lash Enhancement & Fine Eye Retouch** (subtle,
-   structure-preserving lash/eye refinement). Nothing from G1c is implemented
-   here.
+Face Landmarker provides geometry; skin and lash enhancement use classical
+Canvas operations. No second neural network or remote inference is used.
+Lash masks protect inner corners separately for each eye, and lash length,
+stroke width and feathering scale with output resolution.
+
+Export captures the source and settings at click, waits for face analysis and
+the retouch module when required, and bounds preparation to 35 seconds. Changing
+the photo cancels the previous export. Repeated clicks during preparation are
+ignored. Encoding failures restore the controls and allow retry. If face
+analysis is unavailable, filters still work and the UI explains that local
+retouch cannot be applied. The 4096px export cap is retained.
 
 ## Gauntlet 1b — skin-aware retouch (what / how / limits)
 
@@ -183,7 +271,7 @@ intensity curves, per-photo mask cache, GPU chroma-domain passes).
 - Without a face every local pass skips (pill explains why); Reset preserves
   the photo's geometry; photo change invalidates it at once; sliders never
   re-run inference; worker detect has a 30 s bound with controlled fallback.
-- Measured on desktop Chromium (864x1080 preview): grade 4.4 ms, smooth100
+- Historical G1b measurements on desktop Chromium (864x1080 preview): grade 4.4 ms, smooth100
   6.3 ms, all-six 60 ms; mask build 11–19 ms one-time; 900x1125 export with
   all six 71 ms; JS heap ~21 MB. Full-res scratch stays limited to the two
   pre-existing reused buffers; masks live ≤384px. iPhone timings UNVERIFIED.
@@ -201,3 +289,25 @@ Safari/WebKit + Telegram WebView paths are code-reviewed (classic worker,
 no-SIMD WASM fallback, main-thread fallback, graceful disable) but
 UNVERIFIED on real iPhone X/11 hardware. Target floor: iPhone X; baseline:
 iPhone 11; plus modern Android and desktop Chrome (dev, measured).
+
+Current stabilization has automated Chromium and iPhone-profile WebKit checks,
+including local font loading, the lash panel, 320/375px header layout, caption
+focus, compare release, PNG download, Share API arguments and a scrollable
+export dialog on 320×568 and 375×667 screens. Native keyboards and share sheets,
+Telegram WebView integration and physical iPhone/Android memory behaviour still
+require device access. The Share API test uses a stub and never sends a file.
+
+The user accepted Chromium/WebKit emulation as sufficient for this stabilization
+on 2026-11-09. Physical-device testing is outside the agreed completion scope;
+the implementation plan is complete under that scope.
+
+Optional future physical-device checklist (use the current `dist/` build served over HTTPS):
+
+1. Record model, OS, browser/Telegram version and build revision.
+2. Load a camera portrait and a large photo, check face status and local retouch.
+3. Check independent lash sliders, Original vs Reset and press/release/cancel of Compare.
+4. Type a caption with the native keyboard, close it, rotate the phone and check control reachability.
+5. Download PNG, inspect its dimensions, open the native Share sheet and cancel it.
+6. Export the large photo repeatedly, change photos during preparation and record hangs, failures and timing.
+
+No physical-device validation is claimed; emulation is not treated as physical validation.

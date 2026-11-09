@@ -5,7 +5,7 @@
  * (static-server.cjs via webServer — required so ESM/worker/WASM paths behave
  * exactly like on GitHub Pages; file:// would block them via CORS).
  */
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./app-fixtures.cjs');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
@@ -161,6 +161,7 @@ test('T9/T10 export reuses settings and produces a valid PNG', async ({ page }) 
     window.AuraGram.renderStudioCanvas();
   });
   await page.click('#btnExport');
+  await page.waitForFunction(() => !!window.AuraGram.getExportBlob(), null, { timeout: 45000 });
   await expect(page.locator('#exportModal')).toBeVisible();
   const src = await page.locator('#exportPreviewImg').getAttribute('src');
   expect(src && src.startsWith('blob:')).toBe(true);

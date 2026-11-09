@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "generator": "scripts/gen-g1b1-golden.cjs",
+  "baseCommit": "c71df9d01591b7335619befdc57a96cc5b8bd5bd",
+  "tolerance": {
+    "relDrift": 0.005,
+    "note": "L24 also requires sampled mean abs diff < 2.0 grayscale levels"
+  },
+  "settings": [
+    "original",
+    "vogue",
+    "champagne",
+    "smooth100",
+    "antired100",
+    "glow100",
+    "eyes100",
+    "blush100",
+    "sculpt100"
+  ],
+  "goldens": {
+    "original": {
+      "sum": 8417094,
+      "mean": 575.3704286007246,
+      "w": 320,
+      "h": 320,
+      "fixture": "skin-light.png",
+      "face": "mock-4242"
+    },
+    "vogue": {
+      "sum": 9342643,
+      "mean": 638.6385262150523,
+      "w": 320,
+      "h": 320,
+      "fixture": "skin-light.png",
+      "face": "mock-4242"
+    },
+    "champagne": {
+      "sum": 9552226,
+      "mean": 652.965069382733,
+      "w": 320,
+      "h": 320,
+      "fixture": "skin-light.png",
+      "face": "mock-4242"
+    },
+    "smooth100": {
+      "sum": 8417224,
+      "mean": 575.3793150591291,
+      "w": 320,
+      "h": 320,
+      "fixture": "skin-light.png",
+      "face": "mock-4242"
+    },
+    "antired100": {
+      "sum": 8410816,
+      "mean": 574.9412810171577,
+      "w": 320,
+      "h": 320,
+      "fixture": "skin-light.png",
+      "face": "mock-4242"
+    },
+    "glow100": {
+      "sum": 8458891,
+      "mean": 578.2275616925285,
+      "w": 320,
+      "h": 320,
+      "fixture": "skin-light.png",
+      "face": "mock-4242"
+    },
+    "eyes100": {
+      "sum": 8425188,
+      "mean": 575.9237131724657,
+      "w": 320,
+      "h": 320,
+      "fixture": "skin-light.png",
+      "face": "mock-4242"
+    },
+    "blush100": {
+      "sum": 8417225,
+      "mean": 575.3793834165015,
+      "w": 320,
+      "h": 320,
+      "fixture": "skin-light.png",
+      "face": "mock-4242"
+    },
+    "sculpt100": {
+      "sum": 8254683,
+      "mean": 564.2684394011894,
+      "w": 320,
+      "h": 320,
+      "fixture": "skin-light.png",
+      "face": "mock-4242"
+    }
+  }
+}
