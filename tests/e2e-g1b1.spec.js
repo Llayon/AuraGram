@@ -2,7 +2,7 @@
  * Pixel-level regression: real canvas diffs, real MediaPipe geometry.
  * No string-presence assertions as proof — every gate measures pixels.
  */
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('./app-fixtures.cjs');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
@@ -378,6 +378,7 @@ test('I9 preview and export agree with glow/eyes/blush on', async ({ page }) => 
   expect(ran).toMatch(/eyes/);
   expect(ran).toMatch(/blush/);
   await page.click('#btnExport');
+  await page.waitForFunction(() => !!window.AuraGram.getExportBlob(), null, { timeout: 45000 });
   await expect(page.locator('#exportModal')).toBeVisible();
   const m = await page.evaluate(async () => {
     const blob = window.AuraGram.getExportBlob();
@@ -460,6 +461,7 @@ test('I12 no paid inference with G1b.1 passes', async ({ page }) => {
   await waitFaceTerminal(page);
   await applyState(page, { preset: 'vogue', intensity: 100, fx: 'none', beauty: { glow: 60, eyes: 60, blush: 60 } });
   await page.click('#btnExport');
+  await page.waitForFunction(() => !!window.AuraGram.getExportBlob(), null, { timeout: 45000 });
   await expect(page.locator('#exportModal')).toBeVisible();
   const bad = reqs.filter((r) => /ml\.googleapis|aiplatform|vertex|openai|anthropic|huggingface|replicate|cohere|stability\.ai|mediapipe-models|storage\.googleapis.*(model|mediapipe)/i.test(r.url));
   expect(bad, JSON.stringify(bad)).toEqual([]);

@@ -7,21 +7,18 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import readAppSource from './app-source.cjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const APP = fs.readFileSync(path.join(ROOT, 'src', 'app.js'), 'utf8');
+const APP = readAppSource();
 const RETOUCH = fs.readFileSync(path.join(ROOT, 'src', 'retouch', 'retouch.mjs'), 'utf8');
 
 describe('G1b.1 Bug A — preset globals independent of beauty', () => {
   test('no beauty-gated preset gloss/crisp conditions remain', () => {
     assert.ok(!APP.includes('if (st.beauty.glow === 0)'), 'gloss must not be gated on beauty.glow');
     assert.ok(!APP.includes('if (st.beauty.eyes === 0)'), 'crisp must not be gated on beauty.eyes');
-  });
-  test('compositing contract documented in renderImage', () => {
-    assert.ok(APP.includes('G1b.1 COMPOSITING CONTRACT'), 'contract comment missing in app.js');
-    assert.ok(RETOUCH.includes('G1b.1 COMPOSITING CONTRACT'), 'contract comment missing in retouch.mjs');
   });
   test('no early-return beauty kill-switches', () => {
     assert.ok(!/if\s*\(\s*beauty\.glow\s*>\s*0\s*\)\s*return/.test(APP), 'glow kill-switch found');
@@ -49,11 +46,21 @@ describe('G1b.1 Bug B — blush masked by skin', () => {
     assert.ok(!block.includes("tctx.globalCompositeOperation = 'destination-in'"), 'blush must not destination-in the main canvas');
     assert.ok(!block.includes('tctx.globalCompositeOperation = "destination-in"'), 'blush must not destination-in the main canvas');
   });
-  test('blush keeps cheek geometry + soft-light look, strength-gated', () => {
+  test('G1c 1.1: no unmasked blush fallback (safe skip without buffers)', () => {
+    // Without a buffer layer there is no masked path — the pass must skip,
+    // never paint raw gradients onto the photo canvas.
     const idx = RETOUCH.indexOf('function applyBlush');
-    const block = RETOUCH.slice(idx, idx + 4000);
-    assert.ok(block.includes('cheekCenters'), 'cheek anchoring lost');
-    assert.ok(block.includes('soft-light'), 'blush composite mode changed unexpectedly');
+    const end = RETOUCH.indexOf('function applySculpt');
+    const block = RETOUCH.slice(idx, end);
+    assert.ok(!block.includes('tctx.fillRect'), 'applyBlush must never fillRect the main canvas');
+    assert.ok(!block.includes('tctx.fillStyle'), 'applyBlush must never set fillStyle on the main canvas');
+    assert.ok(/if\s*\(!detailBuffer\s*\|\|\s*!detailCtx\)\s*return/.test(block), 'missing safe early-return without buffers');
+  });
+  test('blush keeps cheek geometry + soft-light look, strength-gated', () => {
+    const idx2 = RETOUCH.indexOf('function applyBlush');
+    const block2 = RETOUCH.slice(idx2, idx2 + 4000);
+    assert.ok(block2.includes('cheekCenters'), 'cheek anchoring lost');
+    assert.ok(block2.includes('soft-light'), 'blush composite mode changed unexpectedly');
     assert.ok(RETOUCH.includes("if (v.blush > 0)"), 'blush zero-gate missing (R7)');
   });
 });

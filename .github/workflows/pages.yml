@@ -1,18 +1,18 @@
-name: Deploy AuraGram to GitHub Pages
+name: CI and Deploy AuraGram
 
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
@@ -26,6 +26,12 @@ jobs:
         with:
           node-version: 24
 
+      - name: Install and build static site
+        run: |
+          npm ci
+          npm run build
+          npm run package:site
+
       - name: Verify static site
         run: |
           test -f index.html
@@ -34,13 +40,11 @@ jobs:
           node --check src/app.js
           npm test
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
       - name: Upload artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: dist
 
   e2e:
     runs-on: ubuntu-latest
@@ -60,19 +64,38 @@ jobs:
       - name: Verify vendored MediaPipe runtime
         run: node scripts/vendor-mediapipe.cjs --check
 
-      - name: Install Playwright Chromium
-        run: npx playwright install --with-deps chromium
+      - name: Build local UI resources
+        run: npm run build
 
-      - name: Run browser E2E (G0 regression + G1a face detection)
-        run: npx playwright test
+      - name: Install Playwright Chromium and WebKit
+        run: npx playwright install --with-deps chromium webkit
+
+      - name: Run functional, mobile and performance checks
+        run: npm run test:e2e
+
+      - name: Check packaged static site
+        run: |
+          npm run package:site
+          npm run check:site
 
   deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages-production
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: [build, e2e]
     steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

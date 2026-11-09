@@ -25,6 +25,12 @@
  *   canvas (only on private layers). G1b.1 audit: Smooth/Antired/Glow/Eyes/
  *   Sculpt already satisfied the contract; Blush was fixed to intersect its
  *   color layer with S.maskSkin before compositing.
+ *
+ * G1c — natural lash enhancement (separate local pass, Eyes → Lashes):
+ *   Upper lashes only, strictly inside per-eye ROI ∩ lash band. Analysis
+ *   (ridge detection on the ORIGINAL photo) runs once per photo and is
+ *   cached; warm renders only apply. All-zero lashes skip without touching
+ *   any canvas (G1b.1 golden identity holds).
  */
 import {
   maskSizeFor,
@@ -34,6 +40,9 @@ import {
   buildSkinAlpha,
   buildEyeAlpha
 } from './skinMask.mjs';
+import { describeEyes } from './eyeGeometry.mjs';
+import { analyzeEye } from './lashAnalysis.mjs';
+import { applyLashPass, isNeutralLashes } from './lashEnhancement.mjs';
 
 /** Nonlinear intensity curves (0..100 → 0..maxK). Monotonic by construction. */
 export function smoothCurve(v) { return Math.pow(Math.min(100, Math.max(0, v)) / 100, 1.4) * 0.9; }
@@ -69,9 +78,17 @@ export function createRetouchSession() {
     temp: null,  // rgb+mask combine (per pass)
     dered: null, // de-reddened target (cached per imageId+gradeSig)
     deredKey: '',
+    // G1c lash state: analysis cached per photo (grade/resolution independent),
+    // three small ROI scratch buffers reused across renders (never per tick).
+    lashKey: '',
+    lashEyes: null,  // {left,right} eye descriptions (normalized)
+    lashAn: null,    // {left,right} serializable analysis results
+    lashC1: null, lashC2: null, lashMask: null,
     lastMaskMs: 0,
     lastRetouchMs: 0,
-    lastDeredMs: 0
+    lastDeredMs: 0,
+    lastLashAnalyseMs: 0,
+    lastLashEnhanceMs: 0
   };
 
   function sizeCanvas(c, w, h) {
@@ -156,8 +173,35 @@ export function createRetouchSession() {
     S.lastDeredMs = performance.now() - t0;
   }
 
-  function applyEyes(tctx, W, H, src, face, strength, buffers) {
-    const { detailBuffer, detailCtx } = buffers;
+  /**
+   * G1c: lash analysis, once per photo. Grade- and resolution-independent by
+   * design (normalized geometry + fixed-size ROI bitmaps from the ORIGINAL),
+   * so slider moves and Preview/Export never re-run it. Returns true when
+   * fresh analysis ran, false on warm cache hit.
+   */
+  function ensureLashAnalysis(face, src) {
+    const key = `${face.imageId}`;
+    if (S.lashKey === key && S.lashAn) return false;
+    const t0 = performance.now();
+    const m = faceMetrics(face.regions);
+    const eyes = describeEyes(face.regions, m.w);
+    let an = null;
+    try {
+      an = {
+        left: analyzeEye(src, eyes.left, 'left'),
+        right: analyzeEye(src, eyes.right, 'right')
+      };
+    } catch (e) {
+      an = null; // analysis must never break the editor; pass skips below
+    }
+    S.lashEyes = eyes;
+    S.lashAn = an;
+    S.lashKey = key;
+    S.lastLashAnalyseMs = performance.now() - t0;
+    return true;
+  }
+
+  function applyEyes(tctx, W, H, src, face, strength, buffers) {    const { detailBuffer, detailCtx } = buffers;
     if (detailBuffer.width !== W || detailBuffer.height !== H) {
       detailBuffer.width = W; detailBuffer.height = H;
     }
@@ -183,27 +227,12 @@ export function createRetouchSession() {
     // outside the mask. Reuses the shared detailBuffer (no new fullscreen
     // canvas per slider tick); same cheek geometry and soft-light look as
     // before, now strictly with contribution = intensity × skin mask.
+    // G1c (Phase 1.1): the unmasked fallback is REMOVED. Without a valid
+    // buffer layer there is no masked path, so the pass safely skips (the
+    // photo is left untouched) instead of painting unmasked color.
     const { detailBuffer, detailCtx } = buffers || {};
-    // Fallback (unit-test path without buffers): keep old direct paint so
-    // pure-geometry callers never crash — production always passes buffers.
+    if (!detailBuffer || !detailCtx) return;
     const cheeks = cheekCenters(face.regions);
-    if (!detailBuffer || !detailCtx) {
-      tctx.save();
-      tctx.globalCompositeOperation = 'soft-light';
-      for (const c of cheeks) {
-        const cx = Math.min(W, Math.max(0, c.x * W));
-        const cy = Math.min(H, Math.max(0, c.y * H));
-        const r = Math.max(8, c.r * Math.min(W, H));
-        const g = tctx.createRadialGradient(cx, cy, r * 0.1, cx, cy, r);
-        g.addColorStop(0, `rgba(255, 138, 101, ${0.5 * strength})`);
-        g.addColorStop(0.6, `rgba(251, 113, 133, ${0.3 * strength})`);
-        g.addColorStop(1, 'rgba(251, 113, 133, 0)');
-        tctx.fillStyle = g;
-        tctx.fillRect(0, 0, W, H);
-      }
-      tctx.restore();
-      return;
-    }
     if (detailBuffer.width !== W || detailBuffer.height !== H) {
       detailBuffer.width = W; detailBuffer.height = H;
     }
@@ -281,7 +310,7 @@ export function createRetouchSession() {
    */
   function applyPasses(tctx, W, H, opts) {
     const t0 = performance.now();
-    const { face, beauty, src, gradeFilter, gradeSig, buffers } = opts;
+    const { face, beauty, lashes, src, gradeFilter, gradeSig, buffers } = opts;
     if (!hasFace(face)) return { ran: [], ms: 0 };
     ensureMasks(face, W, H, src);
     const ran = [];
@@ -309,6 +338,22 @@ export function createRetouchSession() {
     if (v.eyes > 0) {
       applyEyes(tctx, W, H, src, face, eyesCurve(v.eyes), buffers);
       ran.push('eyes');
+    }
+    // G1c: separate local lash pass (upper lashes only, ROI-clipped).
+    // Documented order: Eyes → Lashes → Blush → Sculpt. No intensity
+    // coupling with Eyes: both may sharpen nearby pixels, each stays small.
+    if (!isNeutralLashes(lashes)) {
+      ensureLashAnalysis(face, src);
+      if (S.lashEyes && S.lashAn) {
+        const t1 = performance.now();
+        // Three small ROI scratch buffers, reused across renders (L21).
+        const scratch = { c1: S.lashC1, c2: S.lashC2, mask: S.lashMask };
+        const res = applyLashPass(tctx, W, H, S.lashEyes, S.lashAn, lashes, scratch);
+        S.lashC1 = scratch.c1; S.lashC2 = scratch.c2; S.lashMask = scratch.mask;
+        S.lastLashEnhanceMs = performance.now() - t1;
+        res.ran.forEach((r) => { if (!ran.includes(r)) ran.push(r); });
+        if (!ran.includes('lashes') && res.ran.length) ran.push('lashes');
+      }
     }
     if (v.blush > 0) {
       applyBlush(tctx, W, H, face, blushCurve(v.blush), buffers);
@@ -349,10 +394,69 @@ export function createRetouchSession() {
     return c.toDataURL('image/png');
   }
 
+  /** Lash debug overlay (separate canvas, never exported): ROI, lid, tips. */
+  function paintDebugLashes(octx, W, H) {
+    octx.clearRect(0, 0, W, H);
+    if (!S.lashEyes || !S.lashAn) return null;
+    const info = [];
+    for (const side of ['left', 'right']) {
+      const desc = S.lashEyes[side], an = S.lashAn[side];
+      if (!desc || !desc.usable || !an) continue;
+      const rx0 = desc.roi.x0 * W, ry0 = desc.roi.y0 * H;
+      const rx1 = desc.roi.x1 * W, ry1 = desc.roi.y1 * H;
+      octx.save();
+      octx.strokeStyle = '#22d3ee';
+      octx.lineWidth = Math.max(1, W * 0.002);
+      octx.strokeRect(rx0, ry0, rx1 - rx0, ry1 - ry0);
+      // Upper lid line (pink).
+      octx.strokeStyle = '#f472b6';
+      octx.beginPath();
+      desc.upperLid.forEach((p, i) => {
+        const x = p.x * W, y = p.y * H;
+        if (i === 0) octx.moveTo(x, y);
+        else octx.lineTo(x, y);
+      });
+      octx.stroke();
+      // Confident tips (yellow) + directions (green).
+      octx.fillStyle = '#facc15';
+      octx.strokeStyle = '#4ade80';
+      for (const t of (an.tips || []).slice(0, 32)) {
+        const tx = (desc.roi.x0 + t.x * (desc.roi.x1 - desc.roi.x0)) * W;
+        const ty = (desc.roi.y0 + t.y * (desc.roi.y1 - desc.roi.y0)) * H;
+        octx.fillRect(tx - 1, ty - 1, 2, 2);
+        octx.beginPath();
+        octx.moveTo(tx, ty);
+        octx.lineTo(tx + t.dx * 8, ty + t.dy * 8);
+        octx.stroke();
+      }
+      octx.fillStyle = '#fff';
+      octx.font = `${Math.max(10, Math.round(W * 0.018))}px monospace`;
+      octx.fillText(`${side} c=${an.confidence.toFixed(2)} ${an.reason} n=${(an.tips || []).length}`, rx0 + 2, ry0 + 12);
+      octx.restore();
+      info.push({ side, confidence: an.confidence, reason: an.reason, tips: (an.tips || []).length });
+    }
+    return info;
+  }
+
+  /** Bounded buffer inventory for the L21 memory audit. */
+  function lashBufferInfo() {
+    const canvases = [S.maskSkin, S.maskEyes, S.low, S.temp, S.dered, S.lashC1, S.lashC2, S.lashMask].filter(Boolean);
+    let bytes = 0;
+    for (const c of canvases) bytes += (c.width || 0) * (c.height || 0) * 4;
+    return { count: canvases.length, bytes };
+  }
+
   return {
     applyPasses, ensureMasks, paintDebugSkin, debugMaskDataUrl,
+    paintDebugLashes, lashBufferInfo,
+    ensureLashAnalysis,
+    lashInfo: () => (S.lashAn ? {
+      key: S.lashKey,
+      left: { confidence: S.lashAn.left.confidence, reason: S.lashAn.left.reason, tips: S.lashAn.left.tips.length },
+      right: { confidence: S.lashAn.right.confidence, reason: S.lashAn.right.reason, tips: S.lashAn.right.tips.length }
+    } : null),
     curves: { smoothCurve, antiredCurve, glowCurve, eyesCurve, blushCurve, sculptCurve },
-    timings: () => ({ maskBuildMs: S.lastMaskMs, retouchMs: S.lastRetouchMs, deredMs: S.lastDeredMs }),
+    timings: () => ({ maskBuildMs: S.lastMaskMs, retouchMs: S.lastRetouchMs, deredMs: S.lastDeredMs, lashAnalyseMs: S.lastLashAnalyseMs, lashEnhanceMs: S.lastLashEnhanceMs }),
     cacheKey: () => S.key
   };
 }

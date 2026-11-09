@@ -9,14 +9,23 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const ROOT = path.resolve(__dirname, '..');
-const APP_JS = fs.readFileSync(path.join(ROOT, 'src', 'app.js'), 'utf8');
+const APP_JS = require('./app-source.cjs')();
 const INDEX_HTML = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 const CSS = fs.readFileSync(path.join(ROOT, 'src', 'styles.css'), 'utf8');
 
-const api = require('../src/app.js');
+const api = require('../src/state/editorState.js');
 
 // T1: app boots without critical errors (static level: files + parse + exports)
 describe('T1 boot', () => {
+  test('Node entry API remains usable without a browser and returns independent state', () => {
+    const legacy = require('../src/app.js');
+    const first = legacy.createNeutralState(), second = api.createNeutralState();
+    assert.deepEqual(first, second);
+    first.beauty.glow = 75;
+    assert.equal(second.beauty.glow, 0);
+    assert.equal(legacy.isStateNeutral(second), true);
+    assert.deepEqual(legacy.getExportDimensions(8000,4000), {w:4096,h:2048,capped:true});
+  });
   test('entry files exist and reference each other with relative paths (T14)', () => {
     assert.ok(fs.existsSync(path.join(ROOT, 'index.html')), 'index.html missing');
     assert.ok(fs.existsSync(path.join(ROOT, 'src', 'app.js')), 'src/app.js missing');

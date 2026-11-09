@@ -98,6 +98,15 @@ input[type="range"]::-moz-range-thumb {
   color: #f9a8d4;
 }
 #correctionNote.hidden { display: none; }
+#brandInfo { overflow: hidden; }
+#brandInfo p { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#btnCompare, #btnMagicAI { white-space: nowrap; flex-shrink: 0; }
+@media (max-width: 640px) {
+  #studioBadge { display: none; }
+}
+@media (max-width: 380px) {
+  #brandMark { display: none; }
+}
 
 /* G1a debug face overlay: stacked above the photo, never exported, never interactive */
 #faceOverlay {
@@ -116,6 +125,13 @@ input[type="range"]::-moz-range-thumb {
   font-size: 11px;
   color: #a1a1aa;
 }
+#exportModal > div {
+  max-height: calc(100vh - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+#exportPreviewImg { flex-shrink: 0; max-height: min(12rem, 25vh); }
 
 /* Prevent iOS auto-zoom on caption field: keep >=16px on small screens */
 #customCaption { font-size: 12px; }
