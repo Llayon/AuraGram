@@ -97,6 +97,6 @@ WebKit mobile: версия файлов совпадает, контраст pr
 - Экспорт 900×1125: Chromium 1 486 256 байт; WebKit 927 354 байта. Ошибок JavaScript и отправок фото на сервер нет.
 
 
-## G1c.1 follow-up ? HOLD
+## G1c.1 follow-up - HOLD
 
 Native ROI / structure-tracing experiment is on `feat/g1c1-lash-fidelity`. It is not a release or a closed gauntlet. See [G1C1_REPORT.md](G1C1_REPORT.md) for artifacts, independent critique and red gates.

@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased ? G1c.1 experimental candidate (HOLD)
+## Unreleased - G1c.1 experimental candidate (HOLD)
 
 - Implement native-source capped eye ROI and topology-based lids, directional ridge tracing and measured tip continuation.
 - Preserve the 0.5.1 density cap/interpolation; limit definition to measured ridges.
