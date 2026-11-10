@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5.0 — 2026-11-10
+
+- Fix silently ignored contrast and other Canvas filters in the tested mobile WebKit engine, affecting iPhone browser/WebView workflows.
+- Probe actual filtered pixels and use local software color/blur processing when native Canvas filters do not work.
+- Apply the compatible processing path to preview, PNG export, preset thumbnails, detail layers, skin/eye masks and lash definition/feathering; keep native rendering unchanged.
+- Add named user styles: save, apply, rename, update and delete up to 20 local styles. Applying a style is one Undo/Redo action; photos and captions are excluded.
+- Handle duplicate names, storage quota/denial and corrupt style libraries without blocking photo editing.
+- Version packaged first-party assets and module URLs to refresh cached processing code after releases.
+- Extend mobile pixel tests to every preset, adjustment control, FX, Beauty tool and lash setting, including an actual contrast-slider-to-PNG regression.
+
 ## 0.3.0 — 2026-11-10
 
 - Add settings-only Undo/Redo with 50 actions, grouped slider gestures and keyboard shortcuts.

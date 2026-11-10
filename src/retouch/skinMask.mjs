@@ -209,6 +209,9 @@ function traceEllipse(ctx, e, W, H) {
  * @returns {{coverage:number, featherPx:number}} quality stats
  * Output: black RGB, mask alpha in A. Protected areas cut to ~0 alpha.
  */
+import '../rendering/canvasFilters.js';
+const {drawFiltered} = globalThis.AuraGramCanvasFilters;
+
 export function buildSkinAlpha(mctx, regions, sourceImage, mw, mh) {
   const m = faceMetrics(regions);
   const featherPx = Math.max(2, Math.min(mw, mh) * 0.035);
@@ -224,9 +227,7 @@ export function buildSkinAlpha(mctx, regions, sourceImage, mw, mh) {
   hctx.fill();
 
   mctx.clearRect(0, 0, mw, mh);
-  mctx.filter = `blur(${featherPx.toFixed(1)}px)`;
-  mctx.drawImage(hard, 0, 0);
-  mctx.filter = 'none';
+  drawFiltered(mctx, hard, `blur(${featherPx.toFixed(1)}px)`, 0, 0);
 
   // 2. Punch HARD protection holes (alpha 1 shapes), then feather lightly so
   // cutouts stay tight but soft — no hard retouch contour, no full-frame leak.
@@ -242,9 +243,7 @@ export function buildSkinAlpha(mctx, regions, sourceImage, mw, mh) {
   const soft = document.createElement('canvas');
   soft.width = mw; soft.height = mh;
   const softCtx = soft.getContext('2d');
-  softCtx.filter = `blur(${cutBlur.toFixed(1)}px)`;
-  softCtx.drawImage(mctx.canvas, 0, 0);
-  softCtx.filter = 'none';
+  drawFiltered(softCtx, mctx.canvas, `blur(${cutBlur.toFixed(1)}px)`, 0, 0);
   mctx.clearRect(0, 0, mw, mh);
   mctx.drawImage(soft, 0, 0);
   // 3. Guaranteed zero-cores: feathering must never leave residual strength
@@ -260,9 +259,7 @@ export function buildSkinAlpha(mctx, regions, sourceImage, mw, mh) {
   const core = document.createElement('canvas');
   core.width = mw; core.height = mh;
   const coreCtx = core.getContext('2d');
-  coreCtx.filter = 'blur(1px)';
-  coreCtx.drawImage(mctx.canvas, 0, 0);
-  coreCtx.filter = 'none';
+  drawFiltered(coreCtx, mctx.canvas, 'blur(1px)', 0, 0);
   mctx.clearRect(0, 0, mw, mh);
   mctx.drawImage(core, 0, 0);
 
@@ -330,9 +327,7 @@ export function buildEyeAlpha(mctx, regions, mw, mh) {
   const soft = document.createElement('canvas');
   soft.width = mw; soft.height = mh;
   const sctx = soft.getContext('2d');
-  sctx.filter = `blur(${blurPx.toFixed(1)}px)`;
-  sctx.drawImage(mctx.canvas, 0, 0);
-  sctx.filter = 'none';
+  drawFiltered(sctx, mctx.canvas, `blur(${blurPx.toFixed(1)}px)`, 0, 0);
   mctx.clearRect(0, 0, mw, mh);
   mctx.drawImage(soft, 0, 0);
   return { featherPx: blurPx };

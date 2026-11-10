@@ -494,6 +494,7 @@ if (isBrowser) {
     if (!isImageReady(sourceImage)) return;
     if (!mainCanvas.width || !mainCanvas.height) return;
     renderImage(ctx, mainCanvas.width, mainCanvas.height, sourceImage, state, currentFaceSnapshot());
+    stats.canvasFilterBackend = window.AuraGramCanvasFilters.nativeSupported() ? 'native' : 'software';
     stats.previewW = mainCanvas.width;
     stats.previewH = mainCanvas.height;
     stats.renders += 1;
@@ -587,12 +588,11 @@ if (isBrowser) {
         const sat = 100 + preset.config.saturate;
         const sep = Math.max(0, preset.config.sepia);
         const hue = preset.config.hue;
-        tCtx.filter = `brightness(${bright}%) contrast(${cont}%) saturate(${sat}%) sepia(${sep}%) hue-rotate(${hue}deg)`;
+        const thumbnailFilter = `brightness(${bright}%) contrast(${cont}%) saturate(${sat}%) sepia(${sep}%) hue-rotate(${hue}deg)`;
         const nw = sourceImage.naturalWidth, nh = sourceImage.naturalHeight;
         const sMin = Math.min(nw, nh);
         const sx = (nw - sMin) / 2, sy = (nh - sMin) / 2;
-        tCtx.drawImage(sourceImage, sx, sy, sMin, sMin, 0, 0, size, size);
-        tCtx.filter = 'none';
+        window.AuraGramCanvasFilters.drawFiltered(tCtx, sourceImage, thumbnailFilter, sx, sy, sMin, sMin, 0, 0, size, size);
         if (preset.config.tint) {
           tCtx.globalCompositeOperation = 'soft-light';
           tCtx.fillStyle = preset.config.tint;
@@ -605,6 +605,21 @@ if (isBrowser) {
 
   const {buildFilterCarousel,buildBeautyCarousel,buildFXCarousel,buildAdjustCarousel,updateSliderUI}
     = window.AuraGramEditorUI.createEditorUI({state, PRESETS, BEAUTY_TOOLS, FX_LIST, ADJUSTMENTS, createLashesState, getActiveCorrectionCount, triggerHaptic, showToast, renderFilterThumbnails, requestPreviewRender, updateCorrectionIndicator});
+
+  const styleLibrary = window.AuraGramStyles.createStyleLibrary({
+    getStorage: () => window.localStorage, snapshot: settingsSnapshot
+  });
+  window.AuraGramStyleManager.createStyleManager({
+    library: styleLibrary, getState: () => state,
+    isReady: () => imageReady && loadState.status === 'ready', showToast,
+    storageKey: window.AuraGramStyles.STORAGE_KEY,
+    applyStyle(settings) {
+      history.commit(); history.begin();
+      editRevision++; session.cancelRestore();
+      applySettings(state, {...settings, caption:state.caption});
+      syncEditor(); history.commit();
+    }
+  });
 
   // --- Local pixel & skin-tone analyzer (rule-based presets, NOT a neural net)
   function analyzeImagePixels(imgElement) {
