@@ -1,0 +1,17 @@
+Independent read-only critic — terminal-appearance experiments11/12/13
+
+REJECT all three. LENGTH — HOLD.
+
+Compared frozen09/b46 against11/12/13 real light/natural PNGs atLength50/100, including characteristic crops from both eyes and native pixel metrics.
+
+11: measured alpha/triangle gives no useful extension and fewer changed pixels.
+12: removing duplicate slider/taper attenuation slightly increases response over11, without convincing visible benefit.
+13: some individual pixels gain contrast, but useful extension is unproven; natural-left becomes identity. Not an acceptable improvement.
+
+No new obvious needles in reviewed crops. That does not compensate for absent benefit. Existing source confidence/geometry gates must not be relaxed to make counts green. Restore product CV to b46, keep all failed evidence, do not merge or publish a partial release.
+
+Further diagnosis should freeze the renderer and independently annotate actual visible root-to-tip structures, quantify endpoint errors/false negatives, then test subpixel ridge-center/tangent refinement. Do not invent labels where the source does not resolve a hair.
+
+Diagnostic-script review found and prompted corrections: inert same-origin profile page instead of app/demo startup; explicit hashed image bytes and dimensions; separate geometry/appearance/render counters; missing expected portraits represented explicitly even with partial manifests. Replay verifies every source hash including checkout line endings and writes only a NEW audit directory.
+
+Final WebKit18 read-only verification: both light/natural completed, all source hashes equal13, all four ROIs equal WebKit09. Both-eye PNG50/100 show no useful Length and no new obvious needles/halo. Length100 changed pixels light9/0, natural1/25. Keep the interrupted13 and completed18 distinct. HOLD unchanged.

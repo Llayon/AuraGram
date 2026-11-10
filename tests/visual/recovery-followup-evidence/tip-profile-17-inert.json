@@ -1,0 +1,1677 @@
+{
+  "input": "tests/visual/out/recovery-final-09-streamed/manifest-chromium.json",
+  "sourceHashes": {
+    "retouch/eyeGeometry.mjs": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950",
+    "retouch/lashAnalysis.mjs": "87f964abc6ea6f1124d6e9b5fd1d4e9afede73f68bfd6b7c9c699554ae1b0e61",
+    "retouch/lashEnhancement.mjs": "6c28059e51e8bc88f5b913c5e2d8f49877f1c9e63bf11b9b5b3ca094394b2059",
+    "retouch/retouch.mjs": "4014946ff64e64cef3a5f67f00d2f6c80080a1dfab690fad1873403f579797d4",
+    "retouch/skinMask.mjs": "69f49df9d4b6279a1422a701c1ea1081c55834e736ee744bc1e83019c7a721ef",
+    "rendering/canvasFilters.js": "dfe7e11adcf495faccde264e7f7a8e07a43e3bfe5ef63c62256d7080eac0c2d9",
+    "rendering/imageRenderer.js": "38593563a1caeeaf983fdf22c7c01de79e7f70084f4b8e8d6ddb982e5ec03a00",
+    "vision/faceDetector.mjs": "85f2a7b61d5d728772a5e1374cd752ec7d162eb60d437903605455bf48e529f6",
+    "vision/faceGeometry.mjs": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009",
+    "vision/faceOverlay.mjs": "c801f52ef009373a49c6ab2590cde2f8ba3060f827f2e60837230d16c81441f8",
+    "vision/faceWorker.js": "4ff023742a523afdf1dd740726fdea602b94cedc0e389b64e5e09cd922f2b795"
+  },
+  "imageInputs": {
+    "hair-occlusion.jpg": {
+      "sha256": "b6211d89421b0f6dba6dcb3ca06103169c0ca9375767853ec83e6033e481b485",
+      "bytes": 702169
+    },
+    "beauty.jpg": {
+      "sha256": "658f4028a1ae27b4cca24fc75539ed73ab72257f0fcacbd2c34c9888eb4809fc",
+      "bytes": 1759937
+    },
+    "light.jpg": {
+      "sha256": "d0776e51a24cda5fa32b73bb1d464c75a3b02281331c88a42967330f5a3942de",
+      "bytes": 657318
+    },
+    "natural.jpg": {
+      "sha256": "abbe280b58a2119c32256e760299fd29337ba46d2291a8c3d60a93f004a0aaf0",
+      "bytes": 1163906
+    },
+    "edge900.jpg": {
+      "sha256": "c43db5cf32c49064e30cabc8eb80a109159d7dc43d1e7b50ae9d74aa2587a0f0",
+      "bytes": 83317
+    },
+    "eyeglasses.jpg": {
+      "sha256": "646c3b14d6ebd3fd5d3e2c88521fc1b93d92688cf8cd733ae4d5f479e8e2c8de",
+      "bytes": 435055
+    },
+    "freckles-blonde.jpg": {
+      "sha256": "2023a7613e9bf04de46bc95cb52c64e7872ffa9e47e2d87a98ccf3a7d87ae613",
+      "bytes": 1549834
+    },
+    "glasses.jpg": {
+      "sha256": "35d947096bba8054e4ea19d315ce86f50214970b137e367d9e3cb1b96dc3fc9c",
+      "bytes": 3098953
+    },
+    "light-rotated25.jpg": {
+      "sha256": "18a40e2961fca6ce897811a441d2dfea281f216381de61431e2bc379ce24839f",
+      "bytes": 848818
+    },
+    "low256.jpg": {
+      "sha256": "f61475d72f68f4a2b5d8842ad6701fb390e78416bb7f26bca4b1c1ee0fd4fae3",
+      "bytes": 11884
+    }
+  },
+  "requests": [
+    "/__lash_profile__",
+    "/tests/visual/out/dataset/hair-occlusion.jpg",
+    "/tests/visual/out/dataset/beauty.jpg",
+    "/tests/visual/out/dataset/light.jpg",
+    "/tests/visual/out/dataset/natural.jpg",
+    "/tests/visual/out/dataset/edge900.jpg",
+    "/tests/visual/out/dataset/eyeglasses.jpg",
+    "/tests/visual/out/dataset/freckles-blonde.jpg",
+    "/tests/visual/out/dataset/glasses.jpg",
+    "/tests/visual/out/dataset/light-rotated25.jpg",
+    "/tests/visual/out/dataset/low256.jpg"
+  ],
+  "auditorSHA256": "896259ff3fceb1f63d0fbb6f10dd789d7763787b8229159df0489ea55084b470",
+  "geometryEngine": "chromium",
+  "decoderEngine": "chromium",
+  "context": "Chromium inert same-origin document, no app.js or FaceMesh; external requests blocked",
+  "rows": [
+    {
+      "file": "hair-occlusion.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 1594,
+      "side": "left",
+      "tips": []
+    },
+    {
+      "file": "hair-occlusion.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 1594,
+      "side": "right",
+      "tips": []
+    },
+    {
+      "file": "beauty.jpg",
+      "sourceWidth": 3000,
+      "sourceHeight": 3751,
+      "side": "left",
+      "tips": []
+    },
+    {
+      "file": "beauty.jpg",
+      "sourceWidth": 3000,
+      "sourceHeight": 3751,
+      "side": "right",
+      "tips": []
+    },
+    {
+      "file": "light.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 1600,
+      "side": "left",
+      "tips": [
+        {
+          "x": 0.41369047619047616,
+          "y": 0.21717171717171718,
+          "c": 0.9543277025222778,
+          "width": 1.5,
+          "observedLength": 17.656854249492383,
+          "color": [
+            89,
+            79,
+            70
+          ],
+          "profile": [
+            {
+              "center": [
+                89,
+                79,
+                70
+              ],
+              "background": [
+                95.875,
+                85.875,
+                77.25
+              ],
+              "contrast": 6.902074999999982,
+              "sideDifference": 1.6958500000000072
+            },
+            {
+              "center": [
+                90,
+                80,
+                71
+              ],
+              "background": [
+                100.25,
+                89.875,
+                81.625
+              ],
+              "contrast": 10.008875000000003,
+              "sideDifference": 10.482250000000008
+            },
+            {
+              "center": [
+                89,
+                79,
+                70
+              ],
+              "background": [
+                100,
+                90,
+                81.75
+              ],
+              "contrast": 11.054149999999993,
+              "sideDifference": 1.8917000000000002
+            }
+          ],
+          "legacyStartAlpha": 0.24812520265579224,
+          "legacyPredictedContrast": 1.712578758120473
+        },
+        {
+          "x": 0.6101190476190477,
+          "y": 0.2474747474747475,
+          "c": 0.9161296273257458,
+          "width": 3.5,
+          "observedLength": 12.071067811865476,
+          "color": [
+            62,
+            54,
+            51
+          ],
+          "profile": [
+            {
+              "center": [
+                57,
+                47,
+                45
+              ],
+              "background": [
+                73.26412612375115,
+                64.52502049181429,
+                62.096382205188476
+              ],
+              "contrast": 17.226006664869686,
+              "sideDifference": 35.07523593888865
+            },
+            {
+              "center": [
+                62,
+                53,
+                50
+              ],
+              "background": [
+                86.29841485987743,
+                78.51898400319034,
+                75.53752049181429
+              ],
+              "contrast": 25.260829337800672,
+              "sideDifference": 44.87090663428286
+            },
+            {
+              "center": [
+                62,
+                54,
+                51
+              ],
+              "background": [
+                89.26981755688024,
+                82.49965494450511,
+                79.06174841356733
+              ],
+              "contrast": 28.206574664362357,
+              "sideDifference": 42.19103182456336
+            }
+          ],
+          "legacyStartAlpha": 0.2381937031046939,
+          "legacyPredictedContrast": 2.554247943402867
+        },
+        {
+          "x": 0.45535714285714285,
+          "y": 0.23737373737373738,
+          "c": 0.8578289263262371,
+          "width": 3,
+          "observedLength": 12.414213562373096,
+          "color": [
+            70,
+            60,
+            57
+          ],
+          "profile": [
+            {
+              "center": [
+                80,
+                70,
+                64
+              ],
+              "background": [
+                101,
+                90.25,
+                85.5
+              ],
+              "contrast": 20.49969999999999,
+              "sideDifference": 10.7868
+            },
+            {
+              "center": [
+                79,
+                70,
+                65
+              ],
+              "background": [
+                108.75,
+                98.5,
+                94.25
+              ],
+              "contrast": 28.819900000000004,
+              "sideDifference": 0.928600000000003
+            },
+            {
+              "center": [
+                70,
+                60,
+                57
+              ],
+              "background": [
+                102.25,
+                92,
+                88.25
+              ],
+              "contrast": 31.999000000000002,
+              "sideDifference": 2.856400000000008
+            }
+          ],
+          "legacyStartAlpha": 0.22303552084482164,
+          "legacyPredictedContrast": 6.754206981295818
+        },
+        {
+          "x": 0.31845238095238093,
+          "y": 0.3383838383838384,
+          "c": 0.9340521402868116,
+          "width": 2,
+          "observedLength": 11.242640687119286,
+          "color": [
+            125,
+            110,
+            104
+          ],
+          "profile": [
+            {
+              "center": [
+                125,
+                110,
+                103
+              ],
+              "background": [
+                137.68248463518694,
+                123.38067974559004,
+                115.9105372454447
+              ],
+              "contrast": 13.198299176607833,
+              "sideDifference": 0.8867989350563761
+            },
+            {
+              "center": [
+                126,
+                111,
+                104
+              ],
+              "background": [
+                136.1697845610035,
+                122.11006956129418,
+                114.65441007592739
+              ],
+              "contrast": 10.877266355388912,
+              "sideDifference": 1.7433960871721297
+            },
+            {
+              "center": [
+                125,
+                110,
+                104
+              ],
+              "background": [
+                140.78609441438067,
+                125.78609441438067,
+                119.54400452449313
+              ],
+              "contrast": 15.768615524330812,
+              "sideDifference": 15.206492494137223
+            }
+          ],
+          "legacyStartAlpha": 0.24285355647457102,
+          "legacyPredictedContrast": 3.1877198676771514
+        }
+      ]
+    },
+    {
+      "file": "light.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 1600,
+      "side": "right",
+      "tips": [
+        {
+          "x": 0.7705479452054794,
+          "y": 0.5,
+          "c": 0.6539412187605912,
+          "width": 3,
+          "observedLength": 6.242640687119285,
+          "color": [
+            121,
+            103,
+            93
+          ],
+          "profile": [
+            {
+              "center": [
+                116,
+                101,
+                92
+              ],
+              "background": [
+                124.4638220518849,
+                109.60972008563523,
+                100.78677106876006
+              ],
+              "contrast": 8.591485244641532,
+              "sideDifference": 14.532227553710669
+            },
+            {
+              "center": [
+                117,
+                100,
+                90
+              ],
+              "background": [
+                132.4392469112586,
+                116.45646783813294,
+                108.07450182688282
+              ],
+              "contrast": 16.357028723067202,
+              "sideDifference": 9.041649803233426
+            },
+            {
+              "center": [
+                121,
+                103,
+                93
+              ],
+              "background": [
+                133.15073974813208,
+                116.56714761313083,
+                108.4179606750064
+              ],
+              "contrast": 13.399648004099504,
+              "sideDifference": 13.975162860688158
+            }
+          ],
+          "legacyStartAlpha": 0.17002471687775372,
+          "legacyPredictedContrast": 1.0245494326580071
+        },
+        {
+          "x": 0.5993150684931506,
+          "y": 0.3256880733944954,
+          "c": 0.724552149451679,
+          "width": 2.5,
+          "observedLength": 7.242640687119285,
+          "color": [
+            91,
+            82,
+            75
+          ],
+          "profile": [
+            {
+              "center": [
+                100,
+                89,
+                83
+              ],
+              "background": [
+                106.996768244312,
+                96.48123058987491,
+                90.47496117974983
+              ],
+              "contrast": 7.377781243797216,
+              "sideDifference": 7.141506106533981
+            },
+            {
+              "center": [
+                100,
+                89,
+                83
+              ],
+              "background": [
+                113.98676241524642,
+                104.47437887599699,
+                97.50226124943329
+              ],
+              "contrast": 15.087924723803539,
+              "sideDifference": 9.288790071720896
+            },
+            {
+              "center": [
+                91,
+                82,
+                75
+              ],
+              "background": [
+                128.67401981882307,
+                118.67401981882308,
+                113.17405863907327
+              ],
+              "contrast": 36.99492262164513,
+              "sideDifference": 16.452647646552464
+            }
+          ],
+          "legacyStartAlpha": 0.18838355885743654,
+          "legacyPredictedContrast": 2.8022395813559062
+        }
+      ]
+    },
+    {
+      "file": "natural.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 3600,
+      "side": "left",
+      "tips": [
+        {
+          "x": 0.6502590673575129,
+          "y": 0.2786259541984733,
+          "c": 0.6512291641849054,
+          "width": 2.5,
+          "observedLength": 18.142135623730955,
+          "color": [
+            142,
+            100,
+            83
+          ],
+          "profile": [
+            {
+              "center": [
+                144,
+                98,
+                81
+              ],
+              "background": [
+                148.265,
+                102.94999999999999,
+                85.59
+              ],
+              "contrast": 4.778376999999978,
+              "sideDifference": 5.322118000000003
+            },
+            {
+              "center": [
+                141,
+                98,
+                81
+              ],
+              "background": [
+                149.39,
+                106.03,
+                88.63
+              ],
+              "contrast": 8.07765599999999,
+              "sideDifference": 6.6033199999999965
+            },
+            {
+              "center": [
+                142,
+                100,
+                83
+              ],
+              "background": [
+                146.83999999999997,
+                104.95999999999998,
+                87.975
+              ],
+              "contrast": 4.935570999999982,
+              "sideDifference": 6.901218
+            }
+          ],
+          "legacyStartAlpha": 0.1693195826880754,
+          "legacyPredictedContrast": 0.6144230073080836
+        },
+        {
+          "x": 0.5673575129533679,
+          "y": 0.33969465648854963,
+          "c": 0.7777497205597761,
+          "width": 1.5,
+          "observedLength": 6.242640687119286,
+          "color": [
+            126,
+            97,
+            87
+          ],
+          "profile": [
+            {
+              "center": [
+                140,
+                106,
+                97
+              ],
+              "background": [
+                145.215,
+                112.28,
+                102.03999999999999
+              ],
+              "contrast": 5.964053000000007,
+              "sideDifference": 9.585370000000097
+            },
+            {
+              "center": [
+                132,
+                100,
+                91
+              ],
+              "background": [
+                146.46500000000003,
+                115.43,
+                105.465
+              ],
+              "contrast": 15.155168000000003,
+              "sideDifference": 8.27765600000005
+            },
+            {
+              "center": [
+                126,
+                97,
+                87
+              ],
+              "background": [
+                144.05,
+                115.28,
+                105.06
+              ],
+              "contrast": 18.215217999999993,
+              "sideDifference": 10.434995999999941
+            }
+          ],
+          "legacyStartAlpha": 0.20221492734554178,
+          "legacyPredictedContrast": 3.255509275712497
+        },
+        {
+          "x": 0.6709844559585493,
+          "y": 0.38549618320610685,
+          "c": 0.6203291892132837,
+          "width": 2,
+          "observedLength": 5.242640687119285,
+          "color": [
+            41,
+            27,
+            18
+          ],
+          "profile": [
+            {
+              "center": [
+                63,
+                46,
+                36
+              ],
+              "background": [
+                76.75999999999999,
+                58.25999999999999,
+                48.61999999999999
+              ],
+              "contrast": 12.604891999999992,
+              "sideDifference": 5.351096000000027
+            },
+            {
+              "center": [
+                46,
+                31,
+                22
+              ],
+              "background": [
+                72.37999999999994,
+                56.87999999999994,
+                46.93999999999995
+              ],
+              "contrast": 25.91843199999993,
+              "sideDifference": 6.847888000000125
+            },
+            {
+              "center": [
+                41,
+                27,
+                18
+              ],
+              "background": [
+                67.17999999999996,
+                53.37999999999995,
+                43.939999999999955
+              ],
+              "contrast": 26.305711999999957,
+              "sideDifference": 0.8307839999999089
+            }
+          ],
+          "legacyStartAlpha": 0.16128558919545377,
+          "legacyPredictedContrast": 5.1886367569276315
+        }
+      ]
+    },
+    {
+      "file": "natural.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 3600,
+      "side": "right",
+      "tips": [
+        {
+          "x": 0.2800925925925926,
+          "y": 0.30970149253731344,
+          "c": 0.9262096826685897,
+          "width": 1.5,
+          "observedLength": 22.970562748477146,
+          "color": [
+            113,
+            76,
+            60
+          ],
+          "profile": [
+            {
+              "center": [
+                127,
+                90,
+                72
+              ],
+              "background": [
+                133.69574275274954,
+                95.01799516849971,
+                78.14849033699942
+              ],
+              "contrast": 5.456306056076883,
+              "sideDifference": 4.040678591312528
+            },
+            {
+              "center": [
+                124,
+                87,
+                69
+              ],
+              "background": [
+                133.1257925700613,
+                95.28173308974897,
+                78.45948067399883
+              ],
+              "contrast": 8.546213510846215,
+              "sideDifference": 9.300145472110756
+            },
+            {
+              "center": [
+                113,
+                76,
+                60
+              ],
+              "background": [
+                133.74502565981024,
+                96.67977807556039,
+                79.96240186768533
+              ],
+              "contrast": 20.641855149763344,
+              "sideDifference": 7.839585786197091
+            }
+          ],
+          "legacyStartAlpha": 0.24081451749383334,
+          "legacyPredictedContrast": 4.650587338780398
+        },
+        {
+          "x": 0.5254629629629629,
+          "y": 0.25,
+          "c": 0.9340521402868116,
+          "width": 1.5,
+          "observedLength": 22.82842712474619,
+          "color": [
+            161,
+            119,
+            102
+          ],
+          "profile": [
+            {
+              "center": [
+                169,
+                126,
+                109
+              ],
+              "background": [
+                179.74531978093776,
+                135.82088243712417,
+                119.32088243712417
+              ],
+              "contrast": 10.053517816418918,
+              "sideDifference": 0.1251383387676981
+            },
+            {
+              "center": [
+                166,
+                123,
+                106
+              ],
+              "background": [
+                179.2774745471668,
+                136.2774745471668,
+                119.34161777333333
+              ],
+              "contrast": 13.28210568809601,
+              "sideDifference": 1.9913517109756924
+            },
+            {
+              "center": [
+                161,
+                119,
+                102
+              ],
+              "background": [
+                177.40897717242393,
+                135.20817793053703,
+                117.70817793053708
+              ],
+              "contrast": 16.214767849362204,
+              "sideDifference": 3.747261378923838
+            }
+          ],
+          "legacyStartAlpha": 0.24285355647457102,
+          "legacyPredictedContrast": 4.193138118226291
+        },
+        {
+          "x": 0.3541666666666667,
+          "y": 0.2947761194029851,
+          "c": 1,
+          "width": 2,
+          "observedLength": 13.242640687119286,
+          "color": [
+            109,
+            76,
+            58
+          ],
+          "profile": [
+            {
+              "center": [
+                137,
+                99,
+                81
+              ],
+              "background": [
+                155.5,
+                116.5,
+                98.5
+              ],
+              "contrast": 17.712599999999995,
+              "sideDifference": 4.149599999999978
+            },
+            {
+              "center": [
+                124,
+                88,
+                69
+              ],
+              "background": [
+                152.5,
+                114,
+                96.5
+              ],
+              "contrast": 26.63979999999998,
+              "sideDifference": 7.289999999999992
+            },
+            {
+              "center": [
+                109,
+                76,
+                58
+              ],
+              "background": [
+                145,
+                107.5,
+                91
+              ],
+              "contrast": 32.565,
+              "sideDifference": 8.8596
+            }
+          ],
+          "legacyStartAlpha": 0.26,
+          "legacyPredictedContrast": 10.861656
+        },
+        {
+          "x": 0.4050925925925926,
+          "y": 0.2798507462686567,
+          "c": 0.7784695842079684,
+          "width": 3.5,
+          "observedLength": 20.89949493661167,
+          "color": [
+            148,
+            109,
+            93
+          ],
+          "profile": [
+            {
+              "center": [
+                165,
+                123,
+                107
+              ],
+              "background": [
+                166.49693641524135,
+                124.60753739799782,
+                108.77405091357286
+              ],
+              "contrast": 1.5960459048883138,
+              "sideDifference": 6.0903747161866875
+            },
+            {
+              "center": [
+                154,
+                114,
+                97
+              ],
+              "background": [
+                164.05162486517924,
+                123.55116541190438,
+                107.93918606932327
+              ],
+              "contrast": 9.757778183136253,
+              "sideDifference": 8.654674699059655
+            },
+            {
+              "center": [
+                148,
+                109,
+                93
+              ],
+              "background": [
+                160.55055168168553,
+                121.32781876818252,
+                106.10539271978891
+              ],
+              "contrast": 12.43131262489922,
+              "sideDifference": 12.753202133039622
+            }
+          ],
+          "legacyStartAlpha": 0.2024020918940718,
+          "legacyPredictedContrast": 3.2857643706354054
+        },
+        {
+          "x": 0.5902777777777778,
+          "y": 0.2947761194029851,
+          "c": 0.9803983893479962,
+          "width": 2,
+          "observedLength": 19.485281374238575,
+          "color": [
+            163,
+            121,
+            106
+          ],
+          "profile": [
+            {
+              "center": [
+                176,
+                133,
+                116
+              ],
+              "background": [
+                181,
+                137.5,
+                120.5
+              ],
+              "contrast": 4.606299999999976,
+              "sideDifference": 1.212600000000009
+            },
+            {
+              "center": [
+                172,
+                129,
+                112
+              ],
+              "background": [
+                179,
+                136,
+                119.5
+              ],
+              "contrast": 7.036100000000033,
+              "sideDifference": 1.9277999999999906
+            },
+            {
+              "center": [
+                163,
+                121,
+                106
+              ],
+              "background": [
+                177,
+                134.5,
+                119.5
+              ],
+              "contrast": 13.606299999999976,
+              "sideDifference": 1.0682000000000187
+            }
+          ],
+          "legacyStartAlpha": 0.254903581230479,
+          "legacyPredictedContrast": 4.250389765227614
+        },
+        {
+          "x": 0.5532407407407407,
+          "y": 0.2798507462686567,
+          "c": 0.7365608681885916,
+          "width": 1.5,
+          "observedLength": 17.414213562373096,
+          "color": [
+            171,
+            128,
+            112
+          ],
+          "profile": [
+            {
+              "center": [
+                175,
+                132,
+                115
+              ],
+              "background": [
+                178,
+                134.625,
+                117.625
+              ],
+              "contrast": 2.7047249999999963,
+              "sideDifference": 0.40945000000002096
+            },
+            {
+              "center": [
+                173,
+                130,
+                113
+              ],
+              "background": [
+                177.375,
+                134.375,
+                117.375
+              ],
+              "contrast": 4.375,
+              "sideDifference": 0.24999999999997158
+            },
+            {
+              "center": [
+                171,
+                128,
+                112
+              ],
+              "background": [
+                176,
+                133.5,
+                117.125
+              ],
+              "contrast": 5.366624999999971,
+              "sideDifference": 1.1584500000000162
+            }
+          ],
+          "legacyStartAlpha": 0.19150582572903382,
+          "legacyPredictedContrast": 1.2701671767934575
+        },
+        {
+          "x": 0.6458333333333334,
+          "y": 0.3694029850746269,
+          "c": 0.8865998037792473,
+          "width": 1,
+          "observedLength": 6.82842712474619,
+          "color": [
+            133,
+            95,
+            79
+          ],
+          "profile": [
+            {
+              "center": [
+                155,
+                115,
+                98
+              ],
+              "background": [
+                160.11271653593474,
+                119.91360251898186,
+                104.30230549725003
+              ],
+              "contrast": 5.056198514017012,
+              "sideDifference": 0.2000064932070842
+            },
+            {
+              "center": [
+                143,
+                104,
+                87
+              ],
+              "background": [
+                151.3955536230131,
+                112.31274945943736,
+                96.23855144494948
+              ],
+              "contrast": 8.397196527967509,
+              "sideDifference": 1.5103653024126942
+            },
+            {
+              "center": [
+                133,
+                95,
+                79
+              ],
+              "background": [
+                145.79737497436125,
+                108.63268555375961,
+                92.4792766931385
+              ],
+              "contrast": 13.444022404842684,
+              "sideDifference": 4.536185429181586
+            }
+          ],
+          "legacyStartAlpha": 0.2305159489826043,
+          "legacyPredictedContrast": 5.857225508346009
+        }
+      ]
+    },
+    {
+      "file": "edge900.jpg",
+      "sourceWidth": 900,
+      "sourceHeight": 1125,
+      "side": "left",
+      "tips": []
+    },
+    {
+      "file": "edge900.jpg",
+      "sourceWidth": 900,
+      "sourceHeight": 1125,
+      "side": "right",
+      "tips": []
+    },
+    {
+      "file": "eyeglasses.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 1600,
+      "side": "left",
+      "tips": [
+        {
+          "x": 0.7984293193717278,
+          "y": 0.43666666666666665,
+          "c": 0.7072044431839123,
+          "width": 1,
+          "observedLength": 3.8284271247461903,
+          "color": [
+            166,
+            141,
+            131
+          ],
+          "profile": [
+            {
+              "center": [
+                133,
+                91,
+                75
+              ],
+              "background": [
+                172.48494157678834,
+                133.0234031152499,
+                117.89776406503574
+              ],
+              "contrast": 41.5468550527475,
+              "sideDifference": 3.9376114794634987
+            },
+            {
+              "center": [
+                163,
+                129,
+                114
+              ],
+              "background": [
+                177.08747110938214,
+                144.10830320807372,
+                129.89804284696356
+              ],
+              "contrast": 14.94829350581972,
+              "sideDifference": 5.116010816662282
+            },
+            {
+              "center": [
+                166,
+                141,
+                131
+              ],
+              "background": [
+                147.56346598317208,
+                121.50481880408395,
+                111.31923965865178
+              ],
+              "contrast": -19.283511619942104,
+              "sideDifference": 59.656959663452824
+            }
+          ],
+          "legacyStartAlpha": 0.1838731552278172,
+          "legacyPredictedContrast": -0.9694059262697085
+        },
+        {
+          "x": 0.756544502617801,
+          "y": 0.4166666666666667,
+          "c": 0.8802369663954857,
+          "width": 1.5,
+          "observedLength": 4.414213562373095,
+          "color": [
+            145,
+            130,
+            125
+          ],
+          "profile": [
+            {
+              "center": [
+                138,
+                123,
+                115
+              ],
+              "background": [
+                168.78641330883755,
+                147.08849762729167,
+                141.0098851044727
+              ],
+              "contrast": 25.651198677040753,
+              "sideDifference": 22.795333474106002
+            },
+            {
+              "center": [
+                130,
+                115,
+                108
+              ],
+              "background": [
+                178.7849165522136,
+                158.48155327837446,
+                153.21755715312298
+              ],
+              "contrast": 44.73438779014951,
+              "sideDifference": 6.454540766311425
+            },
+            {
+              "center": [
+                145,
+                130,
+                125
+              ],
+              "background": [
+                147.2465472413752,
+                125.6470330760555,
+                119.03626578700747
+              ],
+              "contrast": -3.066207610666794,
+              "sideDifference": 67.63853528551951
+            }
+          ],
+          "legacyStartAlpha": 0.22886161126282628,
+          "legacyPredictedContrast": 4.218971956211113
+        },
+        {
+          "x": 0.7984293193717278,
+          "y": 0.5033333333333333,
+          "c": 0.8284271247461902,
+          "width": 2,
+          "observedLength": 4.82842712474619,
+          "color": [
+            53,
+            34,
+            20
+          ],
+          "profile": [
+            {
+              "center": [
+                24,
+                10,
+                0
+              ],
+              "background": [
+                129.5,
+                97.5,
+                86
+              ],
+              "contrast": 91.21849999999999,
+              "sideDifference": 138.62859999999998
+            },
+            {
+              "center": [
+                49,
+                35,
+                22
+              ],
+              "background": [
+                157.5,
+                120.5,
+                108
+              ],
+              "contrast": 90.42590000000001,
+              "sideDifference": 59.352999999999994
+            },
+            {
+              "center": [
+                53,
+                34,
+                20
+              ],
+              "background": [
+                128.5,
+                89.5,
+                75.5
+              ],
+              "contrast": 59.751999999999995,
+              "sideDifference": 0.7480000000000047
+            }
+          ],
+          "legacyStartAlpha": 0.21539105243400947,
+          "legacyPredictedContrast": 14.311507705241056
+        }
+      ]
+    },
+    {
+      "file": "eyeglasses.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 1600,
+      "side": "right",
+      "tips": []
+    },
+    {
+      "file": "freckles-blonde.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 3197,
+      "side": "left",
+      "tips": []
+    },
+    {
+      "file": "freckles-blonde.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 3197,
+      "side": "right",
+      "tips": []
+    },
+    {
+      "file": "glasses.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 3596,
+      "side": "left",
+      "tips": []
+    },
+    {
+      "file": "glasses.jpg",
+      "sourceWidth": 2400,
+      "sourceHeight": 3596,
+      "side": "right",
+      "tips": [],
+      "reason": "no-analysis-buffer"
+    },
+    {
+      "file": "light-rotated25.jpg",
+      "sourceWidth": 2852,
+      "sourceHeight": 2465,
+      "side": "left",
+      "tips": [
+        {
+          "x": 0.5544217687074829,
+          "y": 0.28618421052631576,
+          "c": 0.8113645131869389,
+          "width": 2.5,
+          "observedLength": 19.071067811865476,
+          "color": [
+            91,
+            82,
+            73
+          ],
+          "profile": [
+            {
+              "center": [
+                91,
+                81,
+                72
+              ],
+              "background": [
+                99.98119176962473,
+                89.48426824431199,
+                81.98119176962473
+              ],
+              "contrast": 8.697992064321042,
+              "sideDifference": 14.529093511858278
+            },
+            {
+              "center": [
+                91,
+                81,
+                72
+              ],
+              "background": [
+                108.54961179749809,
+                98.54649650256064,
+                89.56822592662243
+              ],
+              "contrast": 17.548727678681587,
+              "sideDifference": 0.9983870433677993
+            },
+            {
+              "center": [
+                91,
+                82,
+                73
+              ],
+              "background": [
+                118.00003882025018,
+                107.9938082303753,
+                100.49073175568802
+              ],
+              "contrast": 26.31581073231027,
+              "sideDifference": 10.243649722869208
+            }
+          ],
+          "legacyStartAlpha": 0.21095477342860414,
+          "legacyPredictedContrast": 1.6687771566149612
+        },
+        {
+          "x": 0.7448979591836735,
+          "y": 0.3848684210526316,
+          "c": 0.7905277858653376,
+          "width": 1,
+          "observedLength": 10.899494936611667,
+          "color": [
+            68,
+            60,
+            57
+          ],
+          "profile": [
+            {
+              "center": [
+                58,
+                48,
+                46
+              ],
+              "background": [
+                63.46415042944956,
+                54.05146103067894,
+                51.43382034355965
+              ],
+              "contrast": 5.8820051392475605,
+              "sideDifference": 6.694304673236786
+            },
+            {
+              "center": [
+                66,
+                57,
+                54
+              ],
+              "background": [
+                80.17188853987153,
+                71.20037879754125,
+                68.67188853987153
+              ],
+              "contrast": 14.228364772156915,
+              "sideDifference": 10.47522466093811
+            },
+            {
+              "center": [
+                68,
+                60,
+                57
+              ],
+              "background": [
+                88.78490257669732,
+                80.34740257669732,
+                77.78858223313767
+              ],
+              "contrast": 20.472268247892302,
+              "sideDifference": 13.054114828088657
+            }
+          ],
+          "legacyStartAlpha": 0.20553722432498778,
+          "legacyPredictedContrast": -1.1552414667343494
+        },
+        {
+          "x": 0.7789115646258503,
+          "y": 0.41118421052631576,
+          "c": 0.6326921876406575,
+          "width": 3.5,
+          "observedLength": 11.485281374238571,
+          "color": [
+            91,
+            86,
+            82
+          ],
+          "profile": [
+            {
+              "center": [
+                64,
+                57,
+                52
+              ],
+              "background": [
+                70.47823175568803,
+                63.12420742993872,
+                57.91613828662581
+              ],
+              "contrast": 6.184450409445837,
+              "sideDifference": 23.68349523140123
+            },
+            {
+              "center": [
+                73,
+                68,
+                64
+              ],
+              "background": [
+                82.15804865149863,
+                75.63628040718665,
+                70.7419308566871
+              ],
+              "contrast": 7.89523629838132,
+              "sideDifference": 28.476450403212134
+            },
+            {
+              "center": [
+                91,
+                86,
+                82
+              ],
+              "background": [
+                102.65160563193689,
+                96.58951216287468,
+                92.70443085668711
+              ],
+              "contrast": 10.823610364090555,
+              "sideDifference": 24.96374063461336
+            }
+          ],
+          "legacyStartAlpha": 0.16449996878657094,
+          "legacyPredictedContrast": -3.695088706512964
+        },
+        {
+          "x": 0.5884353741496599,
+          "y": 0.3059210526315789,
+          "c": 0.9262096826685897,
+          "width": 2,
+          "observedLength": 12.656854249492381,
+          "color": [
+            74,
+            63,
+            59
+          ],
+          "profile": [
+            {
+              "center": [
+                77,
+                66,
+                60
+              ],
+              "background": [
+                89.64690303349838,
+                78.64690303349838,
+                72.64690303349839
+              ],
+              "contrast": 12.64690303349839,
+              "sideDifference": 8.59349550499536
+            },
+            {
+              "center": [
+                82,
+                71,
+                65
+              ],
+              "background": [
+                100.9469030334983,
+                89.9469030334983,
+                84.85247584249836
+              ],
+              "contrast": 19.012285390308108,
+              "sideDifference": 3.600302938143713
+            },
+            {
+              "center": [
+                74,
+                63,
+                59
+              ],
+              "background": [
+                100.09674775249756,
+                89.13838853899743,
+                84.55510696599768
+              ],
+              "contrast": 26.08742277821699,
+              "sideDifference": 24.817853876816713
+            }
+          ],
+          "legacyStartAlpha": 0.24081451749383334,
+          "legacyPredictedContrast": 3.733227787958601
+        },
+        {
+          "x": 0.42517006802721086,
+          "y": 0.3059210526315789,
+          "c": 0.8136045555472194,
+          "width": 2,
+          "observedLength": 12.071067811865476,
+          "color": [
+            126,
+            111,
+            106
+          ],
+          "profile": [
+            {
+              "center": [
+                126,
+                111,
+                104
+              ],
+              "background": [
+                136.15685424949237,
+                121.98528137423855,
+                115.07106781186548
+              ],
+              "contrast": 10.815351548314197,
+              "sideDifference": 1.8251410260873087
+            },
+            {
+              "center": [
+                127,
+                112,
+                106
+              ],
+              "background": [
+                135.26955262170048,
+                121.26955262170046,
+                114.76955262170046
+              ],
+              "contrast": 9.020852621700456,
+              "sideDifference": 0.25437991130407056
+            },
+            {
+              "center": [
+                126,
+                111,
+                106
+              ],
+              "background": [
+                137.0355339059327,
+                122.86396103067888,
+                116.5355339059327
+              ],
+              "contrast": 11.591924985551188,
+              "sideDifference": 1.8410585278823106
+            }
+          ],
+          "legacyStartAlpha": 0.21153718444227707,
+          "legacyPredictedContrast": 2.257303045850341
+        }
+      ]
+    },
+    {
+      "file": "light-rotated25.jpg",
+      "sourceWidth": 2852,
+      "sourceHeight": 2465,
+      "side": "right",
+      "tips": [
+        {
+          "x": 0.7875,
+          "y": 0.4453551912568306,
+          "c": 0.9262096826685897,
+          "width": 2.5,
+          "observedLength": 11.071067811865476,
+          "color": [
+            73,
+            60,
+            52
+          ],
+          "profile": [
+            {
+              "center": [
+                81,
+                67,
+                58
+              ],
+              "background": [
+                102.50630823037528,
+                87.99700116581312,
+                79.99700116581312
+              ],
+              "contrast": 21.177479847739036,
+              "sideDifference": 37.05426362078434
+            },
+            {
+              "center": [
+                77,
+                64,
+                55
+              ],
+              "background": [
+                102.04322592662243,
+                87.04322592662243,
+                79.04322592662243
+              ],
+              "contrast": 23.540625926622425,
+              "sideDifference": 27.012992865754384
+            },
+            {
+              "center": [
+                73,
+                60,
+                52
+              ],
+              "background": [
+                105.52823175568801,
+                92.0095399860633,
+                83.52200116581311
+              ],
+              "contrast": 32.08461355346345,
+              "sideDifference": 9.819800545677651
+            }
+          ],
+          "legacyStartAlpha": 0.24081451749383334,
+          "legacyPredictedContrast": 6.819356571981624
+        }
+      ]
+    },
+    {
+      "file": "low256.jpg",
+      "sourceWidth": 256,
+      "sourceHeight": 320,
+      "side": "left",
+      "tips": [],
+      "reason": "no-analysis-buffer"
+    },
+    {
+      "file": "low256.jpg",
+      "sourceWidth": 256,
+      "sourceHeight": 320,
+      "side": "right",
+      "tips": [],
+      "reason": "no-analysis-buffer"
+    }
+  ]
+}

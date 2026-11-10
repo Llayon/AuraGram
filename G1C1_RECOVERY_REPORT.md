@@ -1,5 +1,7 @@
 # G1c.1 Recovery Pass — HOLD
 
+Следующий проход: [terminal-appearance experiments11–13](G1C1_TIP_FOLLOWUP_REPORT.md). Все три отклонены; продуктовый CV-код b46 сохранён, LENGTH остаётся HOLD.
+
 Дата: 2026-11-10. **G1c.1 NOT CLOSED. PR#5 остаётся Draft. Merge, частичный Density-релиз и deploy запрещены текущими результатами.**
 
 Density efficacy восстановлена с сохранением safety gates. Найден и исправлен реальный false positive на перекрывающих волосах. Length опирается на наблюдаемые структуры и меняет реальные pixels, но независимый critic не подтвердил достаточную визуальную пользу. Два исходных F1 остаются красными; пороги и исходные real-portrait tests не изменялись.

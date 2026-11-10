@@ -1,0 +1,7 @@
+# Keep evidence hashes independent of checkout line-ending settings.
+*.json -text
+*.gz -text
+*.txt -text
+*.png -text
+# Frozen checkout bytes may intentionally contain CRLF; do not reformat them.
+**/experimental-src/*.mjs -text -whitespace
