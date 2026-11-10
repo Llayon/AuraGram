@@ -39,6 +39,8 @@ async function verify(name, engine, options) {
       await page.locator('#'+id).evaluate((el,value) => {el.value=value;el.dispatchEvent(new Event('input',{bubbles:true}));},value);
     }
     await page.waitForFunction(() => window.AuraGram.stats.retouchRan.includes('lashes'),null,{timeout:60000});
+    // Finish the synthetic slider gesture before testing the disabled-state UI.
+    await page.locator('#lashDefinition').dispatchEvent('change');
     await page.locator('#btnUndo').click();
     if (await page.evaluate(() => Object.values(window.AuraGram.state.lashes).some(Boolean))) throw new Error('Live undo failed');
     await page.locator('#btnRedo').click();
