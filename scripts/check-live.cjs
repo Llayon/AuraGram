@@ -39,6 +39,10 @@ async function verify(name, engine, options) {
       await page.locator('#'+id).evaluate((el,value) => {el.value=value;el.dispatchEvent(new Event('input',{bubbles:true}));},value);
     }
     await page.waitForFunction(() => window.AuraGram.stats.retouchRan.includes('lashes'),null,{timeout:60000});
+    await page.locator('#btnUndo').click();
+    if (await page.evaluate(() => Object.values(window.AuraGram.state.lashes).some(Boolean))) throw new Error('Live undo failed');
+    await page.locator('#btnRedo').click();
+    if (await page.evaluate(() => window.AuraGram.state.lashes.definition) !== 40) throw new Error('Live redo failed');
     await page.locator('#btnCompare').dispatchEvent('pointerdown');
     if (!await page.evaluate(() => window.AuraGram.state.isComparing)) throw new Error('Compare did not start');
     await page.locator('#btnCompare').dispatchEvent('pointercancel');
@@ -56,8 +60,23 @@ async function verify(name, engine, options) {
     const [download] = await Promise.all([page.waitForEvent('download'),page.locator('#btnDownloadImage').click()]);
     const failure = await download.failure();
     if (failure || !download.suggestedFilename().endsWith('.png')) throw new Error('PNG download failed: '+failure);
+    await page.locator('#btnCloseModal').click();
+    const savedSettings = await page.evaluate(() => JSON.stringify(window.AuraGramEditorState.settingsSnapshot(window.AuraGram.state)));
+    await page.locator('#saveSession').check();
+    await page.waitForFunction(() => document.getElementById('sessionStatus').textContent === 'Сохранено на устройстве');
+    await page.reload();
+    await page.waitForFunction(() => window.AuraGram?.loadState.status === 'ready');
+    const restored = await page.evaluate(() => ({settings:JSON.stringify(window.AuraGramEditorState.settingsSnapshot(window.AuraGram.state)),
+      history:window.AuraGram.history.info().past, width:document.getElementById('mainCanvas').width}));
+    if (restored.settings !== savedSettings || restored.history !== 0 || restored.width !== 864) throw new Error('Live session recovery failed');
+    await page.locator('#btnClearSession').click();
+    await page.waitForFunction(() => document.getElementById('sessionStatus').textContent === 'Сохранение выключено');
+    await page.reload();
+    await page.waitForFunction(() => window.AuraGram?.loadState.status === 'error');
+    if (await page.locator('#saveSession').isChecked()) throw new Error('Live session deletion failed');
     if (errors.length || uploads.length) throw new Error(JSON.stringify({errors,uploads}));
-    console.log(JSON.stringify({browser:name,url:site.href,version:expectedVersion,...exported,download:download.suggestedFilename(),errors:0,photoUploads:0}));
+    console.log(JSON.stringify({browser:name,url:site.href,version:expectedVersion,...exported,download:download.suggestedFilename(),
+      history:true,sessionRestored:true,sessionDeleted:true,errors:0,photoUploads:0}));
   } finally {await browser.close();}
 }
 (async () => {

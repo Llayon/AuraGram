@@ -6,12 +6,16 @@ runtime and model are served locally. Telegram SDK is an optional asynchronous
 integration; external demo photos show an explicit error when unavailable.
 Uploaded photos can be edited and exported with external requests blocked.
 
+Version 0.3 adds Undo/Redo, opt-in local session recovery and visible retouch
+availability. Its implementation and release checklist is in
+[`IMPLEMENTATION_PLAN_0_3.md`](IMPLEMENTATION_PLAN_0_3.md).
+
 The stabilization checklist and validation journal are in
 [`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md).
 Release notes are in [`CHANGELOG.md`](CHANGELOG.md); PR checks and deployments
 are listed in [GitHub Actions](https://github.com/Llayon/AuraGram/actions/workflows/pages.yml).
 
-Static mobile photo editor. **Local processing only** — no backend, no database,
+Static mobile photo editor. **Local processing only** — no backend or server database,
 no accounts, no paid APIs, no cloud inference, no API keys in client code.
 Photos never leave the device. G1a adds on-device face geometry (MediaPipe
 Face Landmarker, WASM/CPU); G1b turns the beauty tab into real face-aware
@@ -25,6 +29,8 @@ retouch with texture preservation — still zero-cost, still fully local.
 The entry point wires these modules through explicit callbacks:
 
 - `src/state/editorState.js`: presets, tools, state factories, validation and dimensions (also usable from Node).
+- `src/state/history.js`: up to 50 settings snapshots; slider gestures form one action.
+- `src/state/sessionStore.js`: one opt-in IndexedDB session with serialized writes and deletion.
 - `src/rendering/imageRenderer.js`: shared preview/export pipeline and artistic effects.
 - `src/loading/photoLoader.js`: decoding, load tokens and object URL lifetime.
 - `src/ui/editorUI.js`: carousels, tabs, sliders, frames and caption controls.
@@ -35,6 +41,35 @@ The entry point wires these modules through explicit callbacks:
 The browser factories are loaded in deferred script order. Face detection and
 retouch remain lazy ESM imports. `src/app.js` coordinates geometry invalidation,
 preview scheduling, comparison and auto-tuning.
+
+## History and local recovery
+
+Use ↶ / ↷, Ctrl/Cmd+Z and Ctrl/Cmd+Shift+Z to undo and redo. Presets, Beauty,
+lashes, adjustments, effects, frames, caption, Auto-style and Reset participate.
+Navigation and holding Before do not create actions. Typing in the caption uses
+the browser's native text undo. A successful photo replacement starts a fresh
+history; a failed upload keeps it. Reloading restores a baseline, not the undo stack.
+
+“Сохранять на устройстве” is off by default. When enabled, one original encoded
+photo (up to 15 MB) and its validated settings are saved in this browser's
+IndexedDB after approximately 500 ms without changes. Wait for “Сохранено на
+устройстве” before closing or reloading. The label appears only after the
+transaction commits. The file bytes and settings are stored atomically; landmarks,
+render buffers and comparison state are rebuilt rather than persisted. Encoded
+bytes are used instead of a persisted Blob for WebKit compatibility, without
+re-encoding the image. Face analysis runs once again after recovery.
+
+Unchecking the option or pressing “Удалить” disables saving and deletes the
+stored session; the currently open photo stays available for editing. Deletion
+follows an in-flight save and invalidates delayed writes. A new upload takes
+precedence over a slow restore. Storage denial, quota errors or an invalid record
+show a status message and leave editing/export usable. Storage is local to the
+browser and origin: another browser/device does not share it, and clearing site
+data or browser storage eviction can remove it. Nothing is uploaded.
+
+The status line explains when face-aware Beauty or lash enhancement is unavailable;
+selected strengths are retained. Lash availability is shown for each eye after
+analysis, including low contrast, blur and insufficient visible lashes.
 
 ## Run locally
 
@@ -88,6 +123,9 @@ prepared static site. UI source is `src/utilities.input.css` plus the classes
 in HTML/JS; generated `src/utilities.css` is committed for direct static serving.
 The npm browser-test runner owns a temporary loopback server on a free port and
 closes it after the run. This also avoids shell process-tree shutdown hangs on Windows.
+
+The published-site check also exercises Undo/Redo, committed local saving,
+reload recovery and deletion in Chromium and WebKit mobile browser contexts.
 
 Performance and UI inspection can be repeated with:
 

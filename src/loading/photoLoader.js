@@ -28,18 +28,29 @@
       });
     }
 
-    function loadSampleImage(url) {
+    async function loadSampleImage(url) {
       const token = ++loadState.token;
       onLoading();
       setLoadStatus('loading');
-      decodeImage(url, token).then(
-        img => adoptImage(img, token, ''),
-        err => {
-          if (err && err.message === 'superseded') return;
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('demo-fetch-failed');
+        const blob = await response.blob();
+        if (blob.size > MAX_FILE_SIZE) throw new Error('demo-too-large');
+        await loadBlob(blob, token, '', 'demo');
+      } catch (err) {
+          if (token !== loadState.token || (err && err.message === 'superseded')) return;
           // Honest empty state (1.2): no decorative gradient masquerading as a photo.
           failLoad(token, 'Демо-фото недоступно (сеть/CORS). Нажмите «Фото» и загрузите своё изображение.');
-        }
-      );
+      }
+    }
+
+    async function loadBlob(blob, token, label, name) {
+      const objectUrl = URL.createObjectURL(blob);
+      try {
+        const img = await decodeImage(objectUrl, token);
+        await adoptImage(img, token, label, blob, name);
+      } finally { URL.revokeObjectURL(objectUrl); }
     }
 
     function loadFileImage(file) {
@@ -59,11 +70,9 @@
       const token = ++loadState.token;
       onLoading();
       setLoadStatus('loading');
-      const objectUrl = URL.createObjectURL(file);
-      decodeImage(objectUrl, token).then(
-        img => { URL.revokeObjectURL(objectUrl); adoptImage(img, token, 'Ваше фото загружено'); },
+      return loadBlob(file, token, 'Ваше фото загружено', file.name).then(
+        () => {},
         err => {
-          URL.revokeObjectURL(objectUrl);
           if (err && err.message === 'superseded') return;
           failLoad(token, 'Файл повреждён или не декодируется. Выберите другое изображение.');
           showToast('Файл повреждён или не декодируется.');
@@ -72,7 +81,7 @@
     }
 
 
-    return {loadSampleImage,loadFileImage};
+    return {loadSampleImage,loadFileImage,loadBlob};
   }
   return {createPhotoLoader};
 });

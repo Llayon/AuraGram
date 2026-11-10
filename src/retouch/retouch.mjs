@@ -74,7 +74,9 @@ export function createRetouchSession() {
     maskSkin: null, // black RGB + mask alpha, maskSizeFor(W,H)
     maskEyes: null, // white RGB + eye alpha
     mw: 0, mh: 0,
-    low: null,   // smoothed graded target (per render)
+    low: null,   // smoothed graded target, cached by source/mask/filter
+    lowKey: '', lowSource: null, lowRadius: 0,
+    lowMasked: null,
     temp: null,  // rgb+mask combine (per pass)
     dered: null, // de-reddened target (cached per imageId+gradeSig)
     deredKey: '',
@@ -114,10 +116,13 @@ export function createRetouchSession() {
     buildEyeAlpha(S.maskEyes.getContext('2d'), face.regions, mw, mh);
     S.key = key;
     S.deredKey = ''; // mask change invalidates the de-red cache too
+    S.lowKey = '';
     S.lastMaskMs = performance.now() - t0;
   }
 
   function ensureLow(W, H, src, gradeFilter, face) {
+    const key = `${S.key}|${gradeFilter}`;
+    if (S.lowKey === key && S.lowSource && S.lowSource.deref() === src) return S.lowRadius;
     S.low = sizeCanvas(S.low, S.mw, S.mh);
     const lctx = S.low.getContext('2d');
     const m = faceMetrics(face.regions);
@@ -127,6 +132,14 @@ export function createRetouchSession() {
     lctx.filter = `${gradeFilter} blur(${r.toFixed(1)}px)`;
     lctx.drawImage(src, 0, 0, S.mw, S.mh);
     lctx.filter = 'none';
+    S.lowKey = key; S.lowSource = new WeakRef(src); S.lowRadius = r;
+    S.lowMasked = sizeCanvas(S.lowMasked, S.mw, S.mh);
+    const masked = S.lowMasked.getContext('2d');
+    masked.clearRect(0, 0, S.mw, S.mh);
+    masked.drawImage(S.low, 0, 0);
+    masked.globalCompositeOperation = 'destination-in';
+    masked.drawImage(S.maskSkin, 0, 0);
+    masked.globalCompositeOperation = 'source-over';
     return r;
   }
 
@@ -318,7 +331,7 @@ export function createRetouchSession() {
     const needLow = v.smooth > 0 || v.glow > 0 || v.antired > 0;
     if (needLow) ensureLow(W, H, src, gradeFilter, face);
     if (v.smooth > 0) {
-      maskedColorOver(tctx, W, H, maskCombine(S.low), smoothCurve(v.smooth));
+      maskedColorOver(tctx, W, H, S.lowMasked, smoothCurve(v.smooth));
       ran.push('smooth');
     }
     if (v.antired > 0) {
@@ -327,7 +340,7 @@ export function createRetouchSession() {
       ran.push('antired');
     }
     if (v.glow > 0) {
-      const temp = maskCombine(S.low);
+      const temp = S.lowMasked;
       tctx.save();
       tctx.globalCompositeOperation = 'soft-light';
       tctx.globalAlpha = glowCurve(v.glow);
@@ -440,7 +453,7 @@ export function createRetouchSession() {
 
   /** Bounded buffer inventory for the L21 memory audit. */
   function lashBufferInfo() {
-    const canvases = [S.maskSkin, S.maskEyes, S.low, S.temp, S.dered, S.lashC1, S.lashC2, S.lashMask].filter(Boolean);
+    const canvases = [S.maskSkin, S.maskEyes, S.low, S.lowMasked, S.temp, S.dered, S.lashC1, S.lashC2, S.lashMask].filter(Boolean);
     let bytes = 0;
     for (const c of canvases) bytes += (c.width || 0) * (c.height || 0) * 4;
     return { count: canvases.length, bytes };

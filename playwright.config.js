@@ -20,7 +20,7 @@ export default defineConfig({
   },
   projects: [
     { name: 'chromium', grepInvert: performanceChecks, use: { ...devices['Desktop Chrome'] } },
-    { name: 'webkit-mobile', testMatch: /e2e-mobile\.spec\.js$/, use: { ...devices['iPhone 11'], browserName: 'webkit' } },
+    { name: 'webkit-mobile', testMatch: /e2e-(?:mobile|session)\.spec\.js$/, use: { ...devices['iPhone 11'], browserName: 'webkit' } },
     {
       name: 'chromium-performance',
       testMatch: /e2e-(?:g1b1|lashes)\.spec\.js$/,

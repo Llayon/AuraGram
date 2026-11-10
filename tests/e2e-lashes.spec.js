@@ -741,7 +741,9 @@ test('L21 memory: lash buffers bounded and reused', async ({ page }) => {
     await page.evaluate(() => window.AuraGram.renderStudioCanvas());
   }
   const b2 = await page.evaluate(() => window.AuraGram.lash.buffers());
-  expect(b1.count, 'bounded canvas count').toBeLessThanOrEqual(8);
+  // One additional mask-resolution layer caches the smooth/glow target in 0.3.
+  // The existing 4MB byte budget and no-growth requirement remain unchanged.
+  expect(b1.count, 'bounded canvas count').toBeLessThanOrEqual(9);
   expect(b2.count, 'no buffer growth across renders').toBe(b1.count);
   expect(b2.bytes, 'bounded bytes (<4MB)').toBeLessThan(4 * 1024 * 1024);
 });

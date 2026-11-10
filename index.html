@@ -2,7 +2,7 @@
 <html lang="ru" class="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="auragram-version" content="0.2.0">
+    <meta name="auragram-version" content="0.3.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>AuraGram Studio — Photo Studio Mini App</title>
     <!-- Generated locally by npm run build. -->
@@ -66,7 +66,15 @@
         </div>
     </header>
 
+    <div id="sessionToolbar" role="group" aria-label="История и сохранение" class="session-toolbar">
+        <button id="btnUndo" type="button" aria-label="Отменить действие" title="Отменить (Ctrl/Cmd+Z)" disabled>↶</button>
+        <button id="btnRedo" type="button" aria-label="Повторить действие" title="Повторить (Ctrl/Cmd+Shift+Z)" disabled>↷</button>
+        <label><input id="saveSession" type="checkbox"> Сохранять на устройстве</label>
+        <button id="btnClearSession" type="button" title="Удалить сохранённое фото и настройки">Удалить</button>
+        <span id="sessionStatus" role="status" aria-live="polite">Сохранение выключено</span>
+    </div>
     <!-- Main Interactive Viewport / Canvas Area -->
+    <p id="toolStatus" role="status" aria-live="polite" class="tool-status">Загрузите фото для анализа ретуши</p>
     <main class="relative flex-1 flex items-center justify-center overflow-hidden bg-[#060608] p-2">
         <!-- Ambient Background Glow -->
         <div class="absolute inset-0 pointer-events-none opacity-25 bg-[radial-gradient(circle_at_center,rgba(236,72,153,0.22),transparent_70%)]"></div>
@@ -249,6 +257,8 @@
     </div>
 
     <script src="./src/state/editorState.js" defer></script>
+    <script src="./src/state/history.js" defer></script>
+    <script src="./src/state/sessionStore.js" defer></script>
     <script src="./src/rendering/imageRenderer.js" defer></script>
     <script src="./src/loading/photoLoader.js" defer></script>
     <script src="./src/ui/editorUI.js" defer></script>
