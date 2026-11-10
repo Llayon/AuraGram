@@ -28,7 +28,7 @@
   const ACCEPTED_MIME_EXACT = new Set([
     'image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/bmp', 'image/heic', 'image/heif'
   ]);
-  const GAUNTLET_VERSION = '0.2.0';
+  const GAUNTLET_VERSION = '0.3.0';
 
   // --- Demo photos (remote; failure is explicit, never faked) ------------------
   const DEMO_PHOTOS = [
@@ -240,10 +240,38 @@
     return { w: cappedFit.w, h: cappedFit.h, capped };
   }
 
+  // Durable settings only: UI selection, loading and geometry never enter a snapshot.
+  function settingsSnapshot(input) {
+    const fallback = createNeutralState();
+    const st = input && typeof input === 'object' ? input : {};
+    const number = (v, min, max, def = 0) => typeof v === 'number' && Number.isFinite(v)
+      ? Math.min(max, Math.max(min, v)) : def;
+    const group = (value, tools) => Object.fromEntries(tools.map(t =>
+      [t.key, number(value && value[t.key], t.min, t.max, t.default || 0)]));
+    return {
+      activePreset: PRESETS.some(p => p.id === st.activePreset) ? st.activePreset : fallback.activePreset,
+      presetIntensity: number(st.presetIntensity, 0, 100, 100),
+      activeFX: FX_LIST.some(f => f.id === st.activeFX) ? st.activeFX : 'none',
+      beauty: group(st.beauty, BEAUTY_TOOLS.map(t => ({...t, default: 0}))),
+      lashes: group(st.lashes, Object.keys(LASH_DEFAULTS).map(key => ({key, min: 0, max: 100}))),
+      adjustments: group(st.adjustments, ADJUSTMENTS),
+      stampMode: ['none', 'date98', 'polaroid', 'cinema'].includes(st.stampMode) ? st.stampMode : 'none',
+      caption: typeof st.caption === 'string' ? st.caption.slice(0, 28) : ''
+    };
+  }
+
+  function applySettings(state, settings) {
+    Object.assign(state, settingsSnapshot(settings));
+  }
+
+  function sameSettings(a, b) {
+    return JSON.stringify(settingsSnapshot(a)) === JSON.stringify(settingsSnapshot(b));
+  }
+
   function isImageReady(img) {
     return !!(img && img.complete && img.naturalWidth > 0 && img.naturalHeight > 0);
   }
 
 
-  return { PREVIEW_MAX_DIM, EXPORT_MAX_DIM, EXPORT_MAX_PIXELS, MAX_FILE_SIZE, ACCEPTED_MIME_PREFIX, ACCEPTED_MIME_EXACT, GAUNTLET_VERSION, DEMO_PHOTOS, PRESETS, BEAUTY_TOOLS, FX_LIST, ADJUSTMENTS, LASH_DEFAULTS, createLashesState, isNeutralLashes, lashCorrectionCount, createInitialState, createNeutralState, isNeutralBeauty, isNeutralAdjustments, getActiveCorrectionCount, isStateNeutral, validateImageFile, fitInto, getPreviewDimensions, getExportDimensions, isImageReady };
+  return { settingsSnapshot, applySettings, sameSettings, PREVIEW_MAX_DIM, EXPORT_MAX_DIM, EXPORT_MAX_PIXELS, MAX_FILE_SIZE, ACCEPTED_MIME_PREFIX, ACCEPTED_MIME_EXACT, GAUNTLET_VERSION, DEMO_PHOTOS, PRESETS, BEAUTY_TOOLS, FX_LIST, ADJUSTMENTS, LASH_DEFAULTS, createLashesState, isNeutralLashes, lashCorrectionCount, createInitialState, createNeutralState, isNeutralBeauty, isNeutralAdjustments, getActiveCorrectionCount, isStateNeutral, validateImageFile, fitInto, getPreviewDimensions, getExportDimensions, isImageReady };
 });

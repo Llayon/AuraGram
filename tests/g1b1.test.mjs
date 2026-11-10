@@ -67,8 +67,12 @@ describe('G1b.1 Bug B — blush masked by skin', () => {
 
 describe('G1b.1 allowed-region contract', () => {
   test('all six tools route through masks (audit)', () => {
-    // Smooth/antired/glow via maskCombine (skin); eyes via maskEyes; sculpt via maskSkin.
-    assert.ok(RETOUCH.includes('maskCombine(S.low)'), 'smooth/glow skin path missing');
+    // Smooth/glow use a cached skin-masked layer; antired uses maskCombine.
+    const lowPath = RETOUCH.slice(RETOUCH.indexOf('function ensureLow'), RETOUCH.indexOf('function maskCombine'));
+    assert.ok(lowPath.includes("masked.globalCompositeOperation = 'destination-in'"));
+    assert.ok(lowPath.includes('masked.drawImage(S.maskSkin'), 'cached skin path missing');
+    assert.ok(RETOUCH.includes('maskedColorOver(tctx, W, H, S.lowMasked'), 'smooth skin path missing');
+    assert.ok(RETOUCH.includes('const temp = S.lowMasked'), 'glow skin path missing');
     assert.ok(RETOUCH.includes('maskCombine(S.dered)'), 'antired skin path missing');
     assert.ok(RETOUCH.includes('S.maskEyes'), 'eyes mask path missing');
     const sculptIdx = RETOUCH.indexOf('function applySculpt');

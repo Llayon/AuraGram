@@ -34,6 +34,84 @@ if (isBrowser) {
   const loadState = { status: 'idle', error: '', token: 0 };
   let sourceImage = null;      // full-resolution decoded image (export source)
   let imageReady = false;
+  let sourceBlob = null;
+  let sourceName = '';
+  let editRevision = 0;
+  const {settingsSnapshot, applySettings} = window.AuraGramEditorState;
+  const sessionCheckbox = document.getElementById('saveSession');
+  const session = window.AuraGramSession.createSessionController({
+    store: window.AuraGramSession.createIndexedDBStore((() => {
+      try { return window.indexedDB; } catch (error) { return null; }
+    })()),
+    snapshot: settingsSnapshot,
+    onStatus(status) {
+      const texts = {off:'Сохранение выключено', waiting:'Загрузите фото для сохранения',
+        pending:'Изменения не сохранены…', saving:'Сохраняется…', saved:'Сохранено на устройстве',
+        restoring:'Восстановление…', clearing:'Удаление…', invalid:'Сохранённая сессия повреждена',
+        error:'Не удалось сохранить или прочитать сессию. Можно повторить.'};
+      document.getElementById('sessionStatus').textContent = texts[status] || '';
+      sessionCheckbox.checked = session.enabled();
+    }
+  });
+  function saveCurrentSession() { session.update(sourceBlob, state, sourceName); }
+  const history = window.AuraGramHistory.createHistory({
+    read: () => settingsSnapshot(state),
+    write: value => { applySettings(state, value); syncEditor(); },
+    onChange(info) {
+      document.getElementById('btnUndo').disabled = !info.canUndo;
+      document.getElementById('btnRedo').disabled = !info.canRedo;
+      saveCurrentSession();
+    }
+  });
+  function syncEditor() {
+    buildFilterCarousel(); buildBeautyCarousel(); buildFXCarousel(); buildAdjustCarousel();
+    updateSliderUI(); renderFilterThumbnails();
+    document.getElementById('activeFilterName').textContent = PRESETS.find(p => p.id === state.activePreset).name;
+    document.getElementById('customCaption').value = state.caption;
+    document.querySelectorAll('.stamp-btn').forEach(button => {
+      const active = button.dataset.stamp === state.stampMode;
+      button.setAttribute('aria-pressed', String(active));
+      button.className = active
+        ? 'stamp-btn px-3 py-2 rounded-xl border border-violet-500 bg-violet-500/20 text-xs font-medium text-white shrink-0'
+        : 'stamp-btn px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-xs font-medium text-zinc-300 shrink-0';
+    });
+    document.getElementById('autoHudBadge').classList.remove('opacity-100');
+    document.getElementById('autoHudBadge').classList.add('opacity-0');
+    requestPreviewRender(); updateCorrectionIndicator();
+  }
+  document.getElementById('btnUndo').addEventListener('click', () => history.undo());
+  document.getElementById('btnRedo').addEventListener('click', () => history.redo());
+  sessionCheckbox.addEventListener('change', () => {
+    session.cancelRestore();
+    session.update(sourceBlob, state, sourceName);
+    session.enable(sessionCheckbox.checked);
+  });
+  document.getElementById('btnClearSession').addEventListener('click', () => session.clear());
+  const actionEvents = new WeakSet();
+  const editControl = target => target.closest('#mainSlider, #lashDensity, #lashLength, #lashDefinition, #customCaption');
+  const editAction = target => target.closest('#tab-filters button, #tab-fx button, .stamp-btn, #btnReset, #btnMagicAI');
+  document.addEventListener('input', e => {
+    if (editControl(e.target)) { editRevision++; session.cancelRestore(); history.begin(); }
+  }, true);
+  document.addEventListener('input', e => { if (editControl(e.target)) saveCurrentSession(); });
+  document.addEventListener('click', e => {
+    if (e.target.closest('button, .nav-tab')) history.commit();
+    if (editAction(e.target)) {
+      editRevision++; session.cancelRestore(); history.begin(); actionEvents.add(e);
+    }
+  }, true);
+  document.addEventListener('click', e => { if (actionEvents.has(e)) history.commit(); });
+  document.addEventListener('change', e => { if (editControl(e.target)) history.commit(); }, true);
+  document.addEventListener('focusout', e => { if (editControl(e.target)) history.commit(); });
+  window.addEventListener('pointerup', () => history.commit());
+  window.addEventListener('pointercancel', () => history.commit());
+  window.addEventListener('blur', () => history.commit());
+  document.addEventListener('keydown', e => {
+    if (!(e.ctrlKey || e.metaKey) || e.altKey || e.key.toLowerCase() !== 'z') return;
+    if (e.target.closest('input, textarea, [contenteditable="true"], [role="textbox"]') && e.target.type !== 'range') return;
+    e.preventDefault();
+    if (e.shiftKey) history.redo(); else history.undo();
+  });
 
   const mainCanvas = document.getElementById('mainCanvas');
   const ctx = mainCanvas.getContext('2d');
@@ -118,6 +196,31 @@ if (isBrowser) {
     if (!pill.textContent) pill.classList.add('hidden');
   }
 
+  function updateToolStatus() {
+    const el = document.getElementById('toolStatus');
+    if (!el) return;
+    const status = stats.faceDetectionStatus;
+    const messages = {
+      not_started:'Загрузите фото для анализа ретуши',
+      loading_model:'Загружается анализ лица. Фильтры и цветокоррекция доступны.',
+      detecting:'Поиск лица. Фильтры и цветокоррекция доступны.',
+      no_face:'Лицо не найдено: Бьюти и ресницы не применяются. Фильтры доступны.',
+      failed:'Анализ лица недоступен: Бьюти и ресницы не применяются. Фильтры доступны.',
+      unsupported:'Анализ лица недоступен: Бьюти и ресницы не применяются. Фильтры доступны.'
+    };
+    if (status !== 'ready') { el.textContent = messages[status] || messages.not_started; return; }
+    if (retouchFailed) { el.textContent = 'Ретушь не загрузилась. Фильтры доступны; значения сохранены.'; return; }
+    if (!retouchSession) {
+      el.textContent = retouchLoading ? 'Лицо найдено. Бьюти готовится; значения сохранены.' : 'Лицо найдено. Бьюти доступно; включите инструмент.';
+      return;
+    }
+    const info = retouchSession.lashInfo();
+    if (!info || info.key !== String(faceImageId)) { el.textContent = 'Бьюти доступно. Включите ресницы для анализа глаз.'; return; }
+    const reason = {ok:'доступно', weak:'слабый сигнал', blurry:'глаз размыт', sparse:'мало видимых ресниц',
+      'low-contrast':'низкий контраст', 'eye-unusable':'глаз слишком мал или закрыт'};
+    el.textContent = `Бьюти доступно. Ресницы: слева — ${reason[info.left.reason] || 'недоступно'}, справа — ${reason[info.right.reason] || 'недоступно'}.`;
+  }
+
   function syncFaceOverlaySize() {
     const overlay = document.getElementById('faceOverlay');
     if (!overlay) return;
@@ -156,6 +259,7 @@ if (isBrowser) {
     stats.faceWorkerMode = snap.workerMode;
     stats.faceGeometryBytes = snap.geometryBytes;
     updateFacePill(snap);
+    updateToolStatus();
     refreshFaceOverlay();
     // G1b (3.4): when geometry lands after the photo was already painted,
     // re-render once so face-aware retouch appears without any user action.
@@ -263,6 +367,7 @@ if (isBrowser) {
   })();
   let retouchSession = null;
   let retouchLoading = null;
+  let retouchFailed = false;
 
   function importRetouchModule() {
     // Same classic-script dynamic-import rule as the face engine: resolve
@@ -292,10 +397,11 @@ if (isBrowser) {
       if (!retouchLoading) {
         retouchLoading = importRetouchModule().then((mod) => {
           retouchSession = mod.createRetouchSession();
+          retouchFailed = false;
           requestPreviewRender();
           refreshSkinOverlay();
           return retouchSession;
-        }).catch(() => { retouchLoading = null; });
+        }).catch(() => { retouchLoading = null; retouchFailed = true; updateToolStatus(); });
       }
       return; // grade stays; retouch lands on the next tick, never blocks
     }
@@ -395,6 +501,7 @@ if (isBrowser) {
     refreshFaceOverlay(); // debug overlay mirrors the preview; never touches pixels
     refreshSkinOverlay();
     refreshLashOverlay();
+    updateToolStatus();
   }
 
   // --- Correction indicator (1.1): Original preset keeps independent settings
@@ -417,15 +524,26 @@ if (isBrowser) {
   }
 
   // --- Photo loading (1.2) ---------------------------------------------------
-  const {loadSampleImage,loadFileImage} = window.AuraGramPhotoLoader.createPhotoLoader({
+  const {loadSampleImage,loadFileImage,loadBlob} = window.AuraGramPhotoLoader.createPhotoLoader({
     loadState, validateImageFile, MAX_FILE_SIZE, setLoadStatus, showToast, adoptImage, failLoad,
-    onLoading: () => { imageReady = false; }, isReady: () => imageReady
+    onLoading: () => { session.cancelRestore(); imageReady = false; }, isReady: () => imageReady
   });
 
-  async function adoptImage(img, token, label) {
+  async function restoredLoader(record, token) {
+    const start = editRevision;
+    await loadBlob(record.blob, token, '', record.name);
+    if (token !== loadState.token) return;
+    if (start === editRevision) { applySettings(state, record.settings); syncEditor(); }
+    history.clear();
+  }
+
+  async function adoptImage(img, token, label, blob, name) {
     if (token !== loadState.token) return; // race: newer request already started
     const dims = getPreviewDimensions(img.naturalWidth, img.naturalHeight);
     sourceImage = img;
+    sourceBlob = blob || null;
+    sourceName = name || '';
+    history.clear();
     imageReady = true;
     mainCanvas.width = dims.w;
     mainCanvas.height = dims.h;
@@ -434,6 +552,9 @@ if (isBrowser) {
     // G1b (1.3): a NEW photo drops the previous photo's geometry at once,
     // so it can never be retouched with stale landmarks (R12).
     faceImageId += 1;
+    stats.faceDetectionStatus = 'detecting';
+    stats.retouchRan = '';
+    updateToolStatus();
     if (faceEngine) {
       try { faceEngine.newPhoto(faceImageId); } catch (e) { /* noop */ }
     }
@@ -675,6 +796,7 @@ if (isBrowser) {
   }
 
   function resetAll() {
+    history.begin();
     const neutral = createNeutralState();
     neutral.demoIndex = state.demoIndex;
     neutral.currentTab = state.currentTab;
@@ -701,6 +823,7 @@ if (isBrowser) {
     renderStudioCanvas(); // full reset must paint the true original (T6)
     updateCorrectionIndicator();
     resetFaceState(); // F10: clear detection geometry; model stays cached (F8)
+    history.commit();
   }
 
   const btnReset = document.getElementById('btnReset');
@@ -733,7 +856,7 @@ if (isBrowser) {
   });
 
   // --- Init --------------------------------------------------------------------
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('DOMContentLoaded', async () => {
     const nameEl = document.getElementById('activeFilterName');
     if (nameEl) nameEl.textContent = 'Vogue Gloss';
     buildFilterCarousel();
@@ -742,6 +865,19 @@ if (isBrowser) {
     buildAdjustCarousel();
     updateSliderUI();
     setLoadStatus('loading');
+    const initialToken = loadState.token;
+    const record = await session.restore();
+    // An upload or edit made while IndexedDB was opening takes precedence.
+    if (loadState.token !== initialToken) return;
+    if (record) {
+      const token = ++loadState.token;
+      try {
+        await restoredLoader(record, token);
+        return;
+      } catch (error) {
+        document.getElementById('sessionStatus').textContent = 'Сохранённое фото не читается. Загрузите другое.';
+      }
+    }
     loadSampleImage(DEMO_PHOTOS[0]);
   });
 
@@ -749,6 +885,8 @@ if (isBrowser) {
   window.AuraGram = {
     version: GAUNTLET_VERSION,
     state,
+    history,
+    session,
     loadState,
     stats,
     PRESETS,
