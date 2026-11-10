@@ -120,3 +120,19 @@ test('each Beauty tool and lash control changes portrait pixels with valid face 
   });
   for(const result of results)expect(result.difference,result.id).toBeGreaterThan(10);
 });
+
+test('maximum lash density darkens real lashes without opaque black blocks',async({page})=>{
+  const path=require('node:path');await page.setInputFiles('#fileInput',path.join(__dirname,'fixtures/edge-source.jpg'));
+  await page.waitForFunction(()=>window.AuraGram.face.status()==='ready');await page.waitForFunction(()=>window.AuraGram.retouch.ready());
+  const result=await page.evaluate(async()=>{
+    const A=window.AuraGram,img=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src='tests/fixtures/edge-source.jpg';});
+    const c=document.createElement('canvas');c.width=450;c.height=563;const x=c.getContext('2d'),face=A.retouch.snapshot(),st=A.createNeutralState();
+    A.renderImage(x,450,563,img,st,face);const before=x.getImageData(0,0,450,563).data.slice();
+    st.lashes.density=100;A.renderImage(x,450,563,img,st,face);const after=x.getImageData(0,0,450,563).data;
+    let changed=0,tooDark=0;
+    for(let i=0;i<before.length;i++){if(i%4===3)continue;if(after[i]!==before[i])changed++;
+      if(before[i]>20&&after[i]<Math.floor(before[i]*.65)-2)tooDark++;}
+    return {changed,tooDark};
+  });
+  expect(result.changed).toBeGreaterThan(10);expect(result.tooDark).toBe(0);
+});
