@@ -51,8 +51,8 @@ test('lash definition leaves skin above the lash band untouched', async ({ page 
     const read = y => Array.from(x.getImageData(50, y, 1, 1).data);
     const before = read(30), bandBefore = read(52);
     const desc = { usable: true, roi: { x0: 0, y0: 0, x1: 1, y1: 1 }, w: .6, h: .2,
-      upperLid: [{x:.2,y:.6},{x:.5,y:.55},{x:.8,y:.6}], brow: {x:.5,y:.1} };
-    applyLashPass(x, 100, 100, {left:desc,right:null}, {left:{confidence:1,rw:100,rh:100}},
+      upperLid: [{x:.2,y:.6},{x:.5,y:.55},{x:.8,y:.6}], lowerLid:[{x:.2,y:.6},{x:.5,y:.7},{x:.8,y:.6}],inner:{x:.2,y:.6},brow: {x:.5,y:.1} };
+    applyLashPass(x, 100, 100, {left:desc,right:null}, {left:{confidence:1,rw:100,rh:100,ridge:new Uint8Array(10000).fill(255)}},
       {density:0,length:0,definition:100}, {});
     return {before, after:read(30), bandBefore, bandAfter:read(52)};
   });
@@ -68,9 +68,10 @@ test('inner corners are protected on both tilted eyes', async ({page})=>{
       const x=c.getContext('2d');x.fillStyle='#668899';x.fillRect(0,0,720,720);
       const read=(nx,ny)=>Array.from(x.getImageData(Math.round(nx*720),Math.round(ny*720),1,1).data);
       const desc={usable:true,roi:{x0:0,y0:0,x1:1,y1:1},w:.6,h:.2,
-        upperLid:[{x:.2,y:.56},{x:.5,y:.55},{x:.8,y:.64}],brow:{x:.5,y:.1}};
+        upperLid:[{x:.2,y:.56},{x:.5,y:.55},{x:.8,y:.64}],lowerLid:[{x:.2,y:.6},{x:.5,y:.7},{x:.8,y:.6}],inner:{x:.2,y:.6},brow:{x:.5,y:.1}};
+      desc.inner=side==='left'?{x:.2,y:.56}:{x:.8,y:.64};
       const leftBefore=read(.23,.54),rightBefore=read(.77,.60);
-      applyLashPass(x,720,720,{[side]:desc},{[side]:{confidence:1,rw:100,rh:100}},
+      applyLashPass(x,720,720,{[side]:desc},{[side]:{confidence:1,rw:100,rh:100,ridge:new Uint8Array(10000).fill(255)}},
         {density:0,length:0,definition:100},{});
       return {side,leftBefore,rightBefore,left:read(.23,.54),right:read(.77,.60)};
     });
@@ -88,9 +89,9 @@ test('lash length and stroke width scale with export resolution',async({page})=>
       const c=document.createElement('canvas');c.width=c.height=size;
       const x=c.getContext('2d');x.fillStyle='#668899';x.fillRect(0,0,size,size);
       const desc={usable:true,roi:{x0:0,y0:0,x1:1,y1:1},w:.6,h:.2,
-        upperLid:[{x:.2,y:.6},{x:.5,y:.55},{x:.8,y:.6}],brow:{x:.5,y:.1}};
+        upperLid:[{x:.2,y:.6},{x:.5,y:.55},{x:.8,y:.6}],lowerLid:[{x:.2,y:.6},{x:.5,y:.7},{x:.8,y:.6}],inner:{x:.2,y:.6},brow:{x:.5,y:.1}};
       applyLashPass(x,size,size,{left:desc},{left:{confidence:1,rw:100,rh:100,
-        tips:[{x:.5,y:.52,dx:0,dy:-1,c:1}]}},{density:0,length:100,definition:0},{});
+        tips:[{x:.5,y:.52,dx:0,dy:-1,c:1,length:12,width:1,color:[26,19,24],evidence:{connected:true}}]}},{density:0,length:100,definition:0},{});
       const d=x.getImageData(0,0,size,size).data;
       let x0=size,y0=size,x1=0,y1=0,count=0;
       for(let iy=0;iy<size;iy++)for(let ix=0;ix<size;ix++){

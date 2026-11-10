@@ -95,3 +95,8 @@ WebKit mobile: версия файлов совпадает, контраст pr
 - Проверена фактически [опубликованная 0.5.1](https://llayon.github.io/AuraGram/?v=0.5.1): HTML/runtime совпадают; PNG, контраст 80/80, история, стили и сохранённая сессия работают в Chromium и WebKit.
 - Отдельный аудит каждого ползунка 0/25/50/100 и PNG повторён на опубликованной версии. Числа изменённых пикселей совпали с локальным аудитом; вне ROI и в защитных контрольных точках разница равна нулю. Нарушений ограничения густоты не обнаружено.
 - Экспорт 900×1125: Chromium 1 486 256 байт; WebKit 927 354 байта. Ошибок JavaScript и отправок фото на сервер нет.
+
+
+## G1c.1 follow-up ? HOLD
+
+Native ROI / structure-tracing experiment is on `feat/g1c1-lash-fidelity`. It is not a release or a closed gauntlet. See [G1C1_REPORT.md](G1C1_REPORT.md) for artifacts, independent critique and red gates.

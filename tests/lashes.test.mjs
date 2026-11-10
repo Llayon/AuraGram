@@ -51,8 +51,8 @@ function mockRegions(cx = 0.5, cy = 0.5, w = 0.4, h = 0.5) {
   });
   return {
     faceOval: ell(cx, cy, w / 2, h / 2, 36),
-    leftEye: ell(cx + w * 0.18, cy - h * 0.08, w * 0.06, h * 0.03, 16),
-    rightEye: ell(cx - w * 0.18, cy - h * 0.08, w * 0.06, h * 0.03, 16),
+    leftEye: eyeRing(cx + w * 0.18, cy - h * 0.08, w * 0.06, h * 0.03, true),
+    rightEye: eyeRing(cx - w * 0.18, cy - h * 0.08, w * 0.06, h * 0.03, false),
     leftEyebrow: ell(cx + w * 0.18, cy - h * 0.16, w * 0.07, h * 0.02, 10),
     rightEyebrow: ell(cx - w * 0.18, cy - h * 0.16, w * 0.07, h * 0.02, 10),
     lips: ell(cx, cy + h * 0.22, w * 0.11, h * 0.05, 20),
@@ -96,7 +96,7 @@ describe('L1 geometry mapping — ROI follows the real eye', () => {
   });
   test('ROI bitmap stays small (LASH_ROI_MAX_DIM cap)', () => {
     assert.ok(LASH_ROI_MAX_DIM <= 224, 'roi cap must stay small');
-    const s = lashRoiSize({ x0: 0.3, y0: 0.3, x1: 0.7, y1: 0.6 });
+    const s = lashRoiSize({ x0: 0.3, y0: 0.3, x1: 0.7, y1: 0.6 }, 1080, 1350);
     assert.ok(Math.max(s.w, s.h) <= LASH_ROI_MAX_DIM, `capped, got ${s.w}x${s.h}`);
     assert.ok(s.w >= 24 && s.h >= 16, 'minimum sane');
   });
@@ -191,4 +191,79 @@ describe('lash curves + state (L3/L6/L9 foundations)', () => {
   test('LASH_MIN_EYE_W sane', () => {
     assert.ok(LASH_MIN_EYE_W > 0 && LASH_MIN_EYE_W < 0.05, `min eye ${LASH_MIN_EYE_W}`);
   });
+});
+
+// Synthetic landmarks follow FACE_REGIONS, rather than arbitrary ellipse order.
+function eyeRing(cx,cy,rx,ry,left) {
+  const p=Array.from({length:16},(_,i)=>({x:cx+rx*Math.cos(Math.PI-i*Math.PI/8),y:cy+ry*Math.sin(Math.PI-i*Math.PI/8)}));
+  // p[0..8] lower arc, p[9..15] upper arc, both corners shared.
+  if(!left) return [p[0],...p.slice(1,9),...p.slice(9).reverse()];
+  return p;
+}
+
+// G1c.1: native resolution and measurable ridge evidence.
+import { analyzeLuma, lidFrame } from '../src/retouch/lashAnalysis.mjs';
+
+describe('LF1-LF5 native ROI and topology',()=>{
+ test('five source sizes provide more real samples up to cap, without upscale',()=>{
+  const roi={x0:.3,y0:.3,x1:.45,y1:.4};
+  let previous=0;
+  for(const [W,H] of [[320,400],[720,900],[1080,1350],[3000,2400],[4032,3024]]){
+   const s=lashRoiSize(roi,W,H);
+   assert.ok(s.w>=previous); previous=s.w;
+   assert.ok(s.w<=s.rawW&&s.h<=s.rawH&&s.scale<=1);
+   assert.ok(s.w*s.h<=224*224&&Math.max(s.w,s.h)<=224);
+   assert.ok(Math.abs(s.w-s.rawW*s.scale)<1.001&&Math.abs(s.h-s.rawH*s.scale)<1.001);
+  }
+  assert.equal(lashRoiSize(roi,40,50).status,'low-resolution');
+  assert.equal(lashRoiSize(roi,0,50).w,0);
+ });
+ test('area budget and upper bound survive hostile budgets',()=>{
+  for(const budget of [{maxSide:224,maxPixels:4096},{maxSide:10000,maxPixels:1e9}]){
+   const s=lashRoiSize({x0:0,y0:0,x1:1,y1:1},4032,3024,budget);
+   assert.ok(s.w*s.h<=Math.min(budget.maxPixels,384*384));assert.ok(s.w<=384&&s.h<=384);
+  }
+ });
+ test('canonical arcs stay upper/lower through +/-60 degree roll and partial crop',()=>{
+  for(const left of [true,false])for(const angle of [-60,-30,0,30,60]){
+   const ring=eyeRing(.5,.5,.1,.03,left),rad=angle*Math.PI/180;
+   const rotate=p=>({x:.5+(p.x-.5)*Math.cos(rad)-(p.y-.5)*Math.sin(rad),y:.5+(p.x-.5)*Math.sin(rad)+(p.y-.5)*Math.cos(rad)});
+   const pts=ring.map(rotate),before=JSON.stringify(pts),e=describeEye(pts,[],.4,left);
+   const expected=rotate({x:.5,y:.47});
+   assert.ok(e.upperLid.some(p=>Math.hypot(p.x-expected.x,p.y-expected.y)<1e-6));
+   const indices=left?[0,15,14,13,12,11,10,9,8]:[0,9,10,11,12,13,14,15,8];
+   assert.deepEqual(e.upperLid.map(p=>({x:p.x,y:p.y})),indices.map(i=>pts[i]));
+   assert.ok(e.lidNormal.x*Math.sin(rad)+e.lidNormal.y*(-Math.cos(rad))>.99);
+   assert.equal(JSON.stringify(pts),before);
+   const cropped=describeEye(pts.map(p=>({...p,x:p.x-.45})),[],.4,left);
+   assert.ok(cropped.roi.x0>=0&&cropped.roi.x1<=1);
+  }
+ });
+});
+
+function ridgeFixture(mode='hair'){
+ const w=64,h=48,luma=new Float32Array(w*h).fill(.8);
+ if(mode==='hair')for(let y=12;y<=30;y++)luma[y*w+32]=.15;
+ if(mode==='eyeliner')for(let x=8;x<55;x++)luma[30*w+x]=.15;
+ if(mode==='disconnected')for(let y=12;y<=24;y++)luma[y*w+32]=.15;
+ if(mode==='blur')for(let y=10;y<=30;y++)for(let x=20;x<=44;x++)luma[y*w+x]=.8-.3*Math.exp(-(((x-32)/5)**2));
+ return analyzeLuma(luma,w,h,[{x:4,y:32},{x:60,y:32}],[{x:4,y:40},{x:60,y:40}],24,{x:4,y:32});
+}
+
+describe('LF6-LF9 real structure evidence',()=>{
+ test('a connected thin valley yields a measured tangent and audit evidence',()=>{
+  const a=ridgeFixture();assert.ok(a.tips.length>0);
+  for(const t of a.tips){assert.ok(t.evidence.connected);assert.ok(t.dy<-.95);assert.ok(Math.abs(t.dx)<.1);
+   const ps=t.evidence.points;for(let i=1;i<ps.length;i++)assert.ok(Math.hypot(ps[i].x-ps[i-1].x,ps[i].y-ps[i-1].y)<=Math.SQRT2);
+  }
+  assert.deepEqual(ridgeFixture().tips,a.tips);
+ });
+ test('eyeliner, disconnected hairs and blur never produce length candidates',()=>{
+  for(const mode of ['eyeliner','disconnected','blur'])assert.equal(ridgeFixture(mode).tips.length,0,mode);
+  assert.ok(ridgeFixture('eyeliner').ridge.every(v=>v===0),'best orientation rejects lid-parallel line before density');
+ });
+ test('normal points away from eye after rotating pixel geometry',()=>{
+  const f=lidFrame([{x:5,y:20},{x:35,y:40}],[{x:0,y:30},{x:30,y:50}],25,20);
+  assert.ok(f.distance>0&&f.ny<0&&f.nx>0);
+ });
 });

@@ -724,6 +724,8 @@ test('L20 performance: lash warm cost within budget', async ({ page }) => {
     return { base, lashed, full, ua: navigator.userAgent, hw: navigator.hardwareConcurrency || 0 };
   });
   console.log('L20 perf ' + JSON.stringify(res));
+  expect(res.lashed.ran, 'performance must execute a real lash pass').toContain('density');
+  expect(res.lashed.enhanceMs).toBeGreaterThan(0);
   expect(res.lashed.median, 'warm render finishes').toBeLessThan(2000);
   // Target budget: +15ms over the lash-free warm render at 864×1080.
   expect(res.lashed.median - res.base.median, 'lash warm delta within +15ms').toBeLessThan(15);

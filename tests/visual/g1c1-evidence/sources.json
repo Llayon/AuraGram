@@ -1,0 +1,34 @@
+{
+  "license": "https://unsplash.com/license",
+  "baseline": "b02fac3c684f2a7e3178933cb66ded925ab8bce8",
+  "photos": {
+    "beauty": [
+      "photo-1534528741775-53994a69daeb",
+      3000
+    ],
+    "natural": [
+      "photo-1524504388940-b1c1722653e1",
+      2400
+    ],
+    "mascara": [
+      "photo-1517841905240-472988babdf9",
+      2400
+    ],
+    "glasses": [
+      "photo-1524250502761-1ac6f2e30d43",
+      2400
+    ],
+    "light": [
+      "photo-1508214751196-bcfd4ca60f91",
+      2400
+    ]
+  },
+  "note": "Names are historical audit identifiers, NOT verified categories. Do not count glasses as eyeglasses or light as pale eyelashes.",
+  "sha256": {
+    "beauty.jpg": "658f4028a1ae27b4cca24fc75539ed73ab72257f0fcacbd2c34c9888eb4809fc",
+    "glasses.jpg": "35d947096bba8054e4ea19d315ce86f50214970b137e367d9e3cb1b96dc3fc9c",
+    "light.jpg": "d0776e51a24cda5fa32b73bb1d464c75a3b02281331c88a42967330f5a3942de",
+    "mascara.jpg": "c0f1b8811d485c926c4db213d5d98fb839fafee8a9c902b71954f65760b64a3f",
+    "natural.jpg": "abbe280b58a2119c32256e760299fd29337ba46d2291a8c3d60a93f004a0aaf0"
+  }
+}

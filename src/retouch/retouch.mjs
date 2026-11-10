@@ -43,7 +43,7 @@ import {
   buildEyeAlpha
 } from './skinMask.mjs';
 import { describeEyes } from './eyeGeometry.mjs';
-import { analyzeEye } from './lashAnalysis.mjs';
+import { analyzeEye, LASH_ANALYSIS_VERSION } from './lashAnalysis.mjs';
 import { applyLashPass, isNeutralLashes } from './lashEnhancement.mjs';
 
 /** Nonlinear intensity curves (0..100 → 0..maxK). Monotonic by construction. */
@@ -188,13 +188,13 @@ export function createRetouchSession() {
 
   /**
    * G1c: lash analysis, once per photo. Grade- and resolution-independent by
-   * design (normalized geometry + fixed-size ROI bitmaps from the ORIGINAL),
+   * design (normalized geometry + native-resolution capped ROI from the ORIGINAL),
    * so slider moves and Preview/Export never re-run it. Returns true when
    * fresh analysis ran, false on warm cache hit.
    */
   function ensureLashAnalysis(face, src) {
-    const key = `${face.imageId}`;
-    if (S.lashKey === key && S.lashAn) return false;
+    const key = `${face.imageId}:${src.naturalWidth || src.width}x${src.naturalHeight || src.height}:${LASH_ANALYSIS_VERSION}:${JSON.stringify([face.regions.leftEye, face.regions.rightEye, face.regions.leftEyebrow, face.regions.rightEyebrow])}`;
+    if (S.lashKey === key && S.lashSource?.deref() === src && S.lashAn) return false;
     const t0 = performance.now();
     const m = faceMetrics(face.regions);
     const eyes = describeEyes(face.regions, m.w);
@@ -210,6 +210,7 @@ export function createRetouchSession() {
     S.lashEyes = eyes;
     S.lashAn = an;
     S.lashKey = key;
+    S.lashSource = new WeakRef(src);
     S.lastLashAnalyseMs = performance.now() - t0;
     return true;
   }

@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased ? G1c.1 experimental candidate (HOLD)
+
+- Implement native-source capped eye ROI and topology-based lids, directional ridge tracing and measured tip continuation.
+- Preserve the 0.5.1 density cap/interpolation; limit definition to measured ridges.
+- Not release-ready: real-fixture density/length efficacy regressions and incomplete visual dataset. See [G1C1_REPORT.md](G1C1_REPORT.md). Version remains 0.5.1.
+
 ## 0.5.1 — 2026-11-10
 
 - Fix overly dark rectangular patches at maximum lash density, found during a magnified visual audit.
