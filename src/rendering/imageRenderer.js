@@ -10,6 +10,7 @@
     grainCanvas,
     runRetouchPasses
   }) {
+    const {drawFiltered, drawFilteredOverlay} = globalThis.AuraGramCanvasFilters;
     // --- Shared render pipeline: identical settings/order for Preview & Export -
     // face: immutable {imageId, regions} snapshot for this render (or null).
     function renderImage(tctx, W, H, src, st, face) {
@@ -39,9 +40,7 @@
       const gradeFilter = `brightness(${bright}%) contrast(${cont}%) saturate(${sat}%) sepia(${sep}%) hue-rotate(${hue}deg) blur(${blurPx}px)`;
 
       tctx.save();
-      tctx.filter = gradeFilter;
-      tctx.drawImage(src, 0, 0, W, H);
-      tctx.filter = 'none';
+      drawFiltered(tctx, src, gradeFilter, 0, 0, W, H);
 
       // Face-aware retouch (G1b). No geometry → all local passes skip (R9);
       // slider 0 → each pass is identity (R7). Immutable face snapshot per render.
@@ -74,9 +73,7 @@
             detailBuffer.width = W; detailBuffer.height = H;
           }
           detailCtx.clearRect(0, 0, W, H);
-          detailCtx.filter = 'brightness(72%) contrast(280%) saturate(85%) blur(1.5px)';
-          detailCtx.drawImage(tctx.canvas, 0, 0, W, H);
-          detailCtx.filter = 'none';
+          drawFiltered(detailCtx, tctx.canvas, 'brightness(72%) contrast(280%) saturate(85%) blur(1.5px)', 0, 0, W, H);
           tctx.save();
           tctx.globalCompositeOperation = 'screen';
           tctx.globalAlpha = Math.min(0.42, (totalGloss / 140) * 0.34);
@@ -95,9 +92,7 @@
             detailBuffer.width = W; detailBuffer.height = H;
           }
           detailCtx.clearRect(0, 0, W, H);
-          detailCtx.filter = 'contrast(155%) brightness(98%) saturate(108%)';
-          detailCtx.drawImage(src, 0, 0, W, H);
-          detailCtx.filter = 'none';
+          drawFiltered(detailCtx, src, 'contrast(155%) brightness(98%) saturate(108%)', 0, 0, W, H);
           const sharpMask = detailCtx.createRadialGradient(W * 0.5, H * 0.42, Math.min(W, H) * 0.08, W * 0.5, H * 0.42, Math.min(W, H) * 0.48);
           sharpMask.addColorStop(0, 'rgba(0,0,0,1)');
           sharpMask.addColorStop(0.75, 'rgba(0,0,0,0.5)');
@@ -119,10 +114,8 @@
         tctx.save();
         tctx.globalCompositeOperation = 'screen';
         tctx.globalAlpha = 0.38;
-        tctx.filter = 'hue-rotate(120deg) saturate(200%)';
-        tctx.drawImage(src, -Math.round(W * 0.012), 0, W, H);
-        tctx.filter = 'hue-rotate(240deg) saturate(200%)';
-        tctx.drawImage(src, Math.round(W * 0.012), 0, W, H);
+        drawFilteredOverlay(tctx, src, 'hue-rotate(120deg) saturate(200%)', -Math.round(W * 0.012), 0, W, H);
+        drawFilteredOverlay(tctx, src, 'hue-rotate(240deg) saturate(200%)', Math.round(W * 0.012), 0, W, H);
         tctx.restore();
       }
 

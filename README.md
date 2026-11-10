@@ -6,9 +6,11 @@ runtime and model are served locally. Telegram SDK is an optional asynchronous
 integration; external demo photos show an explicit error when unavailable.
 Uploaded photos can be edited and exported with external requests blocked.
 
-Version 0.3 adds Undo/Redo, opt-in local session recovery and visible retouch
-availability. Its implementation and release checklist is in
-[`IMPLEMENTATION_PLAN_0_3.md`](IMPLEMENTATION_PLAN_0_3.md).
+Version 0.5 adds user styles and fixes contrast/other Canvas filters on browsers
+where assigning `CanvasRenderingContext2D.filter` does not process pixels.
+Its checklist is in [`IMPLEMENTATION_PLAN_0_5.md`](IMPLEMENTATION_PLAN_0_5.md).
+Undo/Redo and opt-in session recovery from 0.3 remain available;
+their journal is in [`IMPLEMENTATION_PLAN_0_3.md`](IMPLEMENTATION_PLAN_0_3.md).
 
 The stabilization checklist and validation journal are in
 [`IMPLEMENTATION_PLAN.md`](IMPLEMENTATION_PLAN.md).
@@ -31,6 +33,8 @@ The entry point wires these modules through explicit callbacks:
 - `src/state/editorState.js`: presets, tools, state factories, validation and dimensions (also usable from Node).
 - `src/state/history.js`: up to 50 settings snapshots; slider gestures form one action.
 - `src/state/sessionStore.js`: one opt-in IndexedDB session with serialized writes and deletion.
+- `src/state/styleLibrary.js` and `src/ui/styleManager.js`: named local processing styles and their dialog.
+- `src/rendering/canvasFilters.js`: pixel-tested native Canvas filters with a software fallback.
 - `src/rendering/imageRenderer.js`: shared preview/export pipeline and artistic effects.
 - `src/loading/photoLoader.js`: decoding, load tokens and object URL lifetime.
 - `src/ui/editorUI.js`: carousels, tabs, sliders, frames and caption controls.
@@ -70,6 +74,47 @@ data or browser storage eviction can remove it. Nothing is uploaded.
 The status line explains when face-aware Beauty or lash enhancement is unavailable;
 selected strengths are retained. Lash availability is shown for each eye after
 analysis, including low contrast, blur and insufficient visible lashes.
+
+## My styles
+
+“Мои стили” saves up to 20 named combinations of preset/intensity, Beauty,
+lashes, FX, adjustments and frame. Captions and photos are excluded. A style
+applies to the current photo as one Undo/Redo action and keeps its caption.
+The dialog can rename a style, update it from current settings or delete it;
+these library operations do not edit the photo. Names are limited to 32
+characters, with duplicate checks after whitespace/case normalization.
+
+Styles are saved only when requested, in `localStorage` under
+`auragram.styles.v1`, independently of the photo session. Deleting the saved
+session keeps styles. A quota failure keeps the previous library; a corrupt
+library requires explicit clearing before replacement. Browser/origin storage
+restrictions and site-data clearing also apply to this local library.
+
+## Mobile filter compatibility
+
+The 0.5 investigation reproduced a silent no-op in the tested WebKit engine:
+assigning `contrast(200%)` left a gray pixel at 96 instead of changing it to 64.
+Checking that a property can be assigned was insufficient. The editor now
+probes rendered pixels once and uses software processing if the native filter
+does not work. No browser-name or device-name assumption is needed.
+
+The fallback handles brightness, contrast, saturation, sepia, hue rotation and
+blur in preview, PNG export, filter thumbnails, detail layers and retouch masks.
+Working native filters retain their existing output. Software color transforms
+are compared with native results (≤2 channel levels on the test matrix).
+Small blur radii use a separable Gaussian; larger radii use a three-box
+approximation. Minor blur differences between engines are possible.
+
+Color-only processing uses 128-row pixel chunks. Blur needs a full RGBA pixel
+copy plus one scanline scratch buffer; the existing 4096px/16.8MP export cap
+still applies. Software processing may be slower than native Canvas filters,
+particularly on large photos. Physical-phone timing is not claimed.
+
+Packaged HTML and first-party module URLs carry the release version, so a
+refreshed page requests the new processing code rather than cached older files.
+The browser checks verify actual pixels for all 16 presets at 0/50/100,
+all adjustment controls (including negative ranges), artistic FX, six Beauty
+tools and the three lash controls in Chromium and WebKit mobile.
 
 ## Run locally
 

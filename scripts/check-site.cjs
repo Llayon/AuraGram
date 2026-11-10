@@ -1,6 +1,7 @@
 'use strict';
 const { spawn } = require('node:child_process');
-const { chromium } = require('@playwright/test');
+const { chromium, webkit, devices } = require('@playwright/test');
+const { verifyContrast } = require('./check-live.cjs');
 const path = require('node:path');
 const fs = require('node:fs');
 const root = path.resolve(__dirname, '..');
@@ -19,12 +20,16 @@ async function main() {
       server.once('error',error=>{clearTimeout(timer);reject(error);});
       server.once('exit',code=>{clearTimeout(timer);reject(new Error('Server exited '+code));});
     });
-    browser=await chromium.launch();
-    const page=await browser.newPage();
+    for(const [name,engine,options] of [['chromium',chromium,{}],['webkit-mobile',webkit,devices['iPhone 11']]]) {
+    browser=await engine.launch();
+    const page=await browser.newPage(options);
     const errors=[];
+    const assets=[];
     page.on('pageerror',error=>errors.push(error.message));
+    page.on('request',request=>{const asset=new URL(request.url());if(asset.pathname.includes('/src/')&&/\.(?:js|mjs|css)$/.test(asset.pathname))assets.push(asset);});
     await page.route('https://**/*',route=>route.abort());
     await page.goto(url+'/index.html');
+    const contrast=await verifyContrast(page);
     await page.setInputFiles('#fileInput',path.join(root,'tests/fixtures/portrait.jpg'));
     await page.waitForFunction(()=>window.AuraGram?.loadState.status==='ready');
     await page.waitForFunction(()=>window.AuraGram.face.status()==='ready',null,{timeout:60000});
@@ -36,10 +41,12 @@ async function main() {
         type:blob.type,head:Array.from(new Uint8Array(await blob.arrayBuffer()).slice(0,8)),
         faceCount:A.stats.faceCount,retouch:A.stats.retouchRan};
     });
-    if(errors.length||image.version!==expectedVersion||image.htmlVersion!==expectedVersion||image.type!=='image/png'||image.head.join(',')!=='137,80,78,71,13,10,26,10'||image.faceCount!==1||!image.retouch){
+    if(errors.length||image.version!==expectedVersion||image.htmlVersion!==expectedVersion||image.type!=='image/png'||image.head.join(',')!=='137,80,78,71,13,10,26,10'||image.faceCount!==1||!image.retouch||assets.some(asset=>asset.searchParams.get('v')!==expectedVersion)){
       throw new Error(JSON.stringify({errors,image}));
     }
-    console.log('Packaged site: local modules, real face detection, retouch and PNG export passed.');
+    console.log('Packaged site '+name+': versioned modules, contrast '+contrast.preview+'/'+contrast.exported+' ('+contrast.backend+'), real face detection, retouch and PNG export passed.');
+    await browser.close();browser=null;
+    }
   }finally{if(browser)await browser.close();server.kill();}
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

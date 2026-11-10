@@ -5,13 +5,40 @@ const expectedVersion = require('../package.json').version;
 const site = new URL(process.argv[2] || 'https://llayon.github.io/AuraGram/');
 if (site.protocol !== 'https:') throw new Error('Published-site verification requires HTTPS');
 
+async function verifyContrast(page) {
+  const png = await page.evaluate(() => {
+    const c=document.createElement('canvas');c.width=c.height=128;
+    const x=c.getContext('2d');x.fillStyle='rgb(96,96,96)';x.fillRect(0,0,128,128);return c.toDataURL().split(',')[1];
+  });
+  await page.setInputFiles('#fileInput',{name:'contrast.png',mimeType:'image/png',buffer:Buffer.from(png,'base64')});
+  await page.waitForFunction(()=>window.AuraGram.loadState.status==='ready');
+  await page.locator('#btnReset').click();await page.locator('[data-tab="adjust"]').click();
+  await page.locator('[data-adjustment="contrast"]').click();
+  await page.locator('#mainSlider').evaluate(el=>{el.value=50;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));});
+  await page.waitForFunction(()=>document.getElementById('mainCanvas').getContext('2d').getImageData(64,64,1,1).data[0]<82);
+  await page.locator('#btnExport').click();await page.waitForFunction(()=>!!window.AuraGram.getExportBlob());
+  const result=await page.evaluate(async()=>{
+    const url=URL.createObjectURL(window.AuraGram.getExportBlob());
+    try {const img=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=url;});
+      const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d');x.drawImage(img,0,0);
+      return {preview:document.getElementById('mainCanvas').getContext('2d').getImageData(64,64,1,1).data[0],
+        exported:x.getImageData(64,64,1,1).data[0],backend:window.AuraGram.stats.canvasFilterBackend};
+    }finally{URL.revokeObjectURL(url);}
+  });
+  if(result.preview<79||result.preview>81||result.exported!==result.preview)throw new Error('Live contrast failed: '+JSON.stringify(result));
+  await page.locator('#btnCloseModal').click();await page.locator('#btnUndo').click();await page.locator('#btnUndo').click();
+  return result;
+}
+
 async function verify(name, engine, options) {
   const browser = await engine.launch();
   try {
     const page = await browser.newPage(options);
-    const errors = [], uploads = [];
+    const errors = [], uploads = [], assetRequests = [];
     page.on('pageerror', error => errors.push(error.message));
     page.on('request', request => {
+      const asset = new URL(request.url());
+      if(asset.origin===site.origin && asset.pathname.includes('/src/') && /\.(?:js|mjs|css)$/.test(asset.pathname)) assetRequests.push(asset);
       if (['POST','PUT','PATCH'].includes(request.method()) && request.postData()) uploads.push(request.url());
     });
     await page.route('**/*', route => {
@@ -29,6 +56,7 @@ async function verify(name, engine, options) {
     if (version.runtime !== expectedVersion || version.html !== expectedVersion) {
       throw new Error('Published version mismatch: '+JSON.stringify({expectedVersion,...version}));
     }
+    const contrast = await verifyContrast(page);
     await page.setInputFiles('#fileInput',path.join(__dirname,'../tests/fixtures/edge-source.jpg'));
     await page.waitForFunction(() => window.AuraGram.loadState.status === 'ready');
     await page.waitForFunction(() => ['ready','no_face','failed','unsupported'].includes(window.AuraGram.face.status()),null,{timeout:120000});
@@ -63,6 +91,10 @@ async function verify(name, engine, options) {
     const failure = await download.failure();
     if (failure || !download.suggestedFilename().endsWith('.png')) throw new Error('PNG download failed: '+failure);
     await page.locator('#btnCloseModal').click();
+    await page.locator('#btnOpenStyles').click();await page.locator('#styleName').fill('Live verification');
+    await page.locator('#btnSaveStyle').click();
+    await page.waitForFunction(()=>document.getElementById('styleStatus').textContent==='Стиль сохранён на устройстве.');
+    await page.locator('#btnCloseStyles').click();
     const savedSettings = await page.evaluate(() => JSON.stringify(window.AuraGramEditorState.settingsSnapshot(window.AuraGram.state)));
     await page.locator('#saveSession').check();
     await page.waitForFunction(() => document.getElementById('sessionStatus').textContent === 'Сохранено на устройстве');
@@ -76,12 +108,20 @@ async function verify(name, engine, options) {
     await page.reload();
     await page.waitForFunction(() => window.AuraGram?.loadState.status === 'error');
     if (await page.locator('#saveSession').isChecked()) throw new Error('Live session deletion failed');
+    await page.setInputFiles('#fileInput',path.join(__dirname,'../tests/fixtures/edge-source.jpg'));
+    await page.waitForFunction(()=>window.AuraGram.loadState.status==='ready');
+    await page.locator('#btnOpenStyles').click();
+    await page.getByRole('button',{name:'Применить стиль «Live verification»',exact:true}).click();
+    const appliedStyle = await page.evaluate(()=>window.AuraGram.state.lashes.definition);
+    if(appliedStyle!==40)throw new Error('Live style recovery failed');
+    if(assetRequests.some(asset=>asset.searchParams.get('v')!==expectedVersion))throw new Error('Unversioned first-party asset');
     if (errors.length || uploads.length) throw new Error(JSON.stringify({errors,uploads}));
     console.log(JSON.stringify({browser:name,url:site.href,version:expectedVersion,...exported,download:download.suggestedFilename(),
-      history:true,sessionRestored:true,sessionDeleted:true,errors:0,photoUploads:0}));
+      contrast,styles:true,history:true,sessionRestored:true,sessionDeleted:true,errors:0,photoUploads:0}));
   } finally {await browser.close();}
 }
-(async () => {
+module.exports = {verifyContrast};
+if (require.main === module) (async () => {
   await verify('chromium',chromium,{viewport:{width:1280,height:800}});
   await verify('webkit-mobile',webkit,{...devices['iPhone 11']});
 })().catch(error=>{console.error(error);process.exitCode=1;});

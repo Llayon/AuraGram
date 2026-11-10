@@ -126,6 +126,8 @@
         const val = state.adjustments[adj.key];
         const isModified = val !== adj.default;
         const btn = document.createElement('button');
+        btn.dataset.adjustment = adj.key;
+        btn.setAttribute('aria-pressed', String(active));
         btn.className = `flex flex-col items-center justify-center shrink-0 w-20 py-1.5 rounded-2xl border transition active:scale-95 ${active ? 'bg-violet-500/20 border-violet-500 text-white' : 'bg-white/5 border-white/10 text-zinc-400'}`;
         btn.innerHTML =
           `<div class="relative"><i aria-hidden="true" class="ph ${adj.icon} text-lg ${active ? 'text-violet-300' : 'text-zinc-400'}"></i>` +

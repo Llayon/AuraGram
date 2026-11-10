@@ -19,6 +19,8 @@
  */
 
 /** Nonlinear conservative strength curves (0..100 → factor). Monotonic. */
+import '../rendering/canvasFilters.js';
+const {drawFiltered, nativeSupported, applyPixelsFilter} = globalThis.AuraGramCanvasFilters;
 export function lashDensityCurve(v) { return Math.pow(Math.min(100, Math.max(0, v)) / 100, 1.3) * 0.5; }
 export function lashLengthCurve(v) { return Math.pow(Math.min(100, Math.max(0, v)) / 100, 1.2); }
 export function lashDefinitionCurve(v) { return Math.pow(Math.min(100, Math.max(0, v)) / 100, 1.1) * 0.45; }
@@ -73,6 +75,14 @@ function buildBandMask(mctx, mw, mh, lidPts, bandUpPx, browY, innerIsLeft, scale
   mctx.fill();
   mctx.filter = 'none';
   mctx.restore();
+  if (!nativeSupported()) {
+    applyPixelsFilter(mctx, `blur(${scale}px)`);
+    // putImageData ignores Canvas clipping: enforce the inner-corner guard again.
+    const left = innerIsLeft ? Math.ceil(minX + guard) : Math.ceil(minX);
+    const right = innerIsLeft ? Math.floor(maxX) : Math.floor(maxX - guard);
+    mctx.clearRect(0, 0, left, mh);
+    mctx.clearRect(right, 0, mw - right, mh);
+  }
   return true;
 }
 
@@ -134,9 +144,7 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
     // --- Definition: masked local contrast, overlay. ---
     if (defK > 0) {
       c2x.clearRect(0, 0, rw, rh);
-      c2x.filter = 'contrast(135%) brightness(103%)';
-      c2x.drawImage(scratch.c1, 0, 0);
-      c2x.filter = 'none';
+      drawFiltered(c2x, scratch.c1, 'contrast(135%) brightness(103%)', 0, 0);
       if (buildBandMask(mx, rw, rh, lidOut, bandUpPx, browOut, innerIsLeft, scale)) {
         c2x.globalCompositeOperation = 'destination-in';
         c2x.drawImage(scratch.mask, 0, 0);

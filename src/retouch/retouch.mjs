@@ -32,6 +32,8 @@
  *   cached; warm renders only apply. All-zero lashes skip without touching
  *   any canvas (G1b.1 golden identity holds).
  */
+import '../rendering/canvasFilters.js';
+const {drawFiltered} = globalThis.AuraGramCanvasFilters;
 import {
   maskSizeFor,
   faceMetrics,
@@ -129,9 +131,7 @@ export function createRetouchSession() {
     const facePx = m.w * S.mw;
     const r = Math.min(18, Math.max(1.5, facePx * 0.045));
     lctx.clearRect(0, 0, S.mw, S.mh);
-    lctx.filter = `${gradeFilter} blur(${r.toFixed(1)}px)`;
-    lctx.drawImage(src, 0, 0, S.mw, S.mh);
-    lctx.filter = 'none';
+    drawFiltered(lctx, src, `${gradeFilter} blur(${r.toFixed(1)}px)`, 0, 0, S.mw, S.mh);
     S.lowKey = key; S.lowSource = new WeakRef(src); S.lowRadius = r;
     S.lowMasked = sizeCanvas(S.lowMasked, S.mw, S.mh);
     const masked = S.lowMasked.getContext('2d');
@@ -219,9 +219,7 @@ export function createRetouchSession() {
       detailBuffer.width = W; detailBuffer.height = H;
     }
     detailCtx.clearRect(0, 0, W, H);
-    detailCtx.filter = 'contrast(150%) brightness(99%) saturate(110%)';
-    detailCtx.drawImage(src, 0, 0, W, H);
-    detailCtx.filter = 'none';
+    drawFiltered(detailCtx, src, 'contrast(150%) brightness(99%) saturate(110%)', 0, 0, W, H);
     detailCtx.globalCompositeOperation = 'destination-in';
     detailCtx.drawImage(S.maskEyes, 0, 0, W, H);
     detailCtx.globalCompositeOperation = 'source-over';

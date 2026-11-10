@@ -2,7 +2,7 @@
 <html lang="ru" class="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="auragram-version" content="0.3.0">
+    <meta name="auragram-version" content="0.5.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>AuraGram Studio — Photo Studio Mini App</title>
     <!-- Generated locally by npm run build. -->
@@ -69,6 +69,7 @@
     <div id="sessionToolbar" role="group" aria-label="История и сохранение" class="session-toolbar">
         <button id="btnUndo" type="button" aria-label="Отменить действие" title="Отменить (Ctrl/Cmd+Z)" disabled>↶</button>
         <button id="btnRedo" type="button" aria-label="Повторить действие" title="Повторить (Ctrl/Cmd+Shift+Z)" disabled>↷</button>
+        <button id="btnOpenStyles" type="button" aria-haspopup="dialog">Мои стили</button>
         <label><input id="saveSession" type="checkbox"> Сохранять на устройстве</label>
         <button id="btnClearSession" type="button" title="Удалить сохранённое фото и настройки">Удалить</button>
         <span id="sessionStatus" role="status" aria-live="polite">Сохранение выключено</span>
@@ -257,11 +258,32 @@
     </div>
 
     <script src="./src/state/editorState.js" defer></script>
+    <dialog id="styleDialog" aria-labelledby="styleDialogTitle" aria-describedby="styleDialogHelp">
+        <div class="style-heading">
+            <h2 id="styleDialogTitle">Мои стили</h2>
+            <button id="btnCloseStyles" type="button" aria-label="Закрыть мои стили">×</button>
+        </div>
+        <p id="styleDialogHelp">Сохраняются цвет, бьюти, ресницы, эффекты и рамка. Фото и подпись не входят в стиль. До 20 стилей на этом устройстве.</p>
+        <form id="styleForm">
+            <label for="styleName">Название стиля</label>
+            <input id="styleName" type="text" maxlength="32" autocomplete="off" placeholder="Например, Мягкий портрет" required>
+            <div class="style-form-actions">
+                <button id="btnSaveStyle" type="submit">Сохранить текущий стиль</button>
+                <button id="btnCancelStyleRename" type="button" hidden>Отмена</button>
+            </div>
+        </form>
+        <p id="styleStatus" role="status" aria-live="polite"></p>
+        <button id="btnResetStyleLibrary" type="button" hidden>Очистить повреждённую библиотеку</button>
+        <ul id="styleList" aria-label="Сохранённые стили"></ul>
+    </dialog>
     <script src="./src/state/history.js" defer></script>
+    <script src="./src/state/styleLibrary.js" defer></script>
     <script src="./src/state/sessionStore.js" defer></script>
+    <script src="./src/rendering/canvasFilters.js" defer></script>
     <script src="./src/rendering/imageRenderer.js" defer></script>
     <script src="./src/loading/photoLoader.js" defer></script>
     <script src="./src/ui/editorUI.js" defer></script>
+    <script src="./src/ui/styleManager.js" defer></script>
     <script src="./src/exporting/exportController.js" defer></script>
     <script src="./src/app.js" defer></script>
 </body>
