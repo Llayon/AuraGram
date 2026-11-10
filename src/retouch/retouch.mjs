@@ -88,6 +88,7 @@ export function createRetouchSession() {
     lashEyes: null,  // {left,right} eye descriptions (normalized)
     lashAn: null,    // {left,right} serializable analysis results
     lashC1: null, lashC2: null, lashMask: null,
+    lashBandCache: null, // fixed four small alpha-mask slots, <=1MiB total
     lastMaskMs: 0,
     lastRetouchMs: 0,
     lastDeredMs: 0,
@@ -359,9 +360,10 @@ export function createRetouchSession() {
       if (S.lashEyes && S.lashAn) {
         const t1 = performance.now();
         // Three small ROI scratch buffers, reused across renders (L21).
-        const scratch = { c1: S.lashC1, c2: S.lashC2, mask: S.lashMask };
+        const scratch = { c1: S.lashC1, c2: S.lashC2, mask: S.lashMask,bandCache:S.lashBandCache };
         const res = applyLashPass(tctx, W, H, S.lashEyes, S.lashAn, lashes, scratch);
         S.lashC1 = scratch.c1; S.lashC2 = scratch.c2; S.lashMask = scratch.mask;
+        S.lashBandCache=scratch.bandCache;
         S.lastLashEnhanceMs = performance.now() - t1;
         res.ran.forEach((r) => { if (!ran.includes(r)) ran.push(r); });
         if (!ran.includes('lashes') && res.ran.length) ran.push('lashes');
@@ -455,7 +457,9 @@ export function createRetouchSession() {
     const canvases = [S.maskSkin, S.maskEyes, S.low, S.lowMasked, S.temp, S.dered, S.lashC1, S.lashC2, S.lashMask].filter(Boolean);
     let bytes = 0;
     for (const c of canvases) bytes += (c.width || 0) * (c.height || 0) * 4;
-    return { count: canvases.length, bytes };
+    const maskCacheBytes=(S.lashBandCache||[]).reduce((sum,e)=>sum+(e?.image?.data.byteLength||0),0);
+    const analysisBytes=Object.values(S.lashAn||{}).reduce((sum,a)=>sum+(a.retainedTypedArrayBytes||0),0);
+    return { count: canvases.length, bytes:bytes+maskCacheBytes+analysisBytes,maskCacheBytes,analysisBytes };
   }
 
   return {

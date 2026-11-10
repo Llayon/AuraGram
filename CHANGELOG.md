@@ -2,6 +2,9 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- Recovery: separate local Density evidence from strict Length evidence, normalize local contrast and reject observed crossing-hair structures. Preserve bilinear compositing and the35% darkening cap.
+- Cache bounded geometry masks; retain all original test thresholds. Density efficacy/L6/L22 recovered; Length visual usefulness and two original efficacy checks remain HOLD. See [Recovery report](G1C1_RECOVERY_REPORT.md).
+
 - Implement native-source capped eye ROI and topology-based lids, directional ridge tracing and measured tip continuation.
 - Preserve the 0.5.1 density cap/interpolation; limit definition to measured ridges.
 - Not release-ready: real-fixture density/length efficacy regressions and incomplete visual dataset. See [G1C1_REPORT.md](G1C1_REPORT.md). Version remains 0.5.1.

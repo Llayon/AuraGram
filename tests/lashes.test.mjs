@@ -202,7 +202,8 @@ function eyeRing(cx,cy,rx,ry,left) {
 }
 
 // G1c.1: native resolution and measurable ridge evidence.
-import { analyzeLuma, lidFrame } from '../src/retouch/lashAnalysis.mjs';
+import { analyzeLuma, lidFrame, crossingHairEvidence } from '../src/retouch/lashAnalysis.mjs';
+import { lengthGeometry } from '../src/retouch/lashEnhancement.mjs';
 
 describe('LF1-LF5 native ROI and topology',()=>{
  test('five source sizes provide more real samples up to cap, without upscale',()=>{
@@ -265,5 +266,66 @@ describe('LF6-LF9 real structure evidence',()=>{
  test('normal points away from eye after rotating pixel geometry',()=>{
   const f=lidFrame([{x:5,y:20},{x:35,y:40}],[{x:0,y:30},{x:30,y:50}],25,20);
   assert.ok(f.distance>0&&f.ny<0&&f.nx>0);
+ });
+});
+
+describe('Recovery evidence separation and observed endpoints',()=>{
+ function line({weak=false,clipped=false}={}) {
+  const w=64,h=48,luma=new Float32Array(w*h).fill(.8);
+  for(let y=clipped?3:12;y<=30;y++)luma[y*w+32]=.15;
+  if(weak)for(let y=8;y<12;y++)luma[y*w+32]=.765;
+  return analyzeLuma(luma,w,h,[{x:4,y:32},{x:60,y:32}],[{x:4,y:40},{x:60,y:40}],26,{x:4,y:32});
+ }
+ test('density retains coherent local faint ridges without inventing Length',()=>{
+  const w=64,h=48,luma=new Float32Array(w*h).fill(.8);
+  for(let y=12;y<=25;y++)luma[y*w+32]=.765;
+  const a=analyzeLuma(luma,w,h,[{x:4,y:32},{x:60,y:32}],[{x:4,y:40},{x:60,y:40}],26,{x:4,y:32});
+  assert.ok(a.densityConfidenceMap.some(v=>v>0));
+  assert.equal(a.tips.length,0,'disconnected faint details are never Length candidates');
+  const rgba=new Uint8ClampedArray(w*h*4);
+  fillDensityRGBA(rgba,w,h,a.densityRidge,w,h,100,1);
+  assert.ok(rgba.some((v,i)=>i%4!==3&&v<255),'legacy cutoff does not erase the local supported signal');
+ });
+ test('horizontal liner and isolated dark noise receive no density support',()=>{
+  assert.ok(ridgeFixture('eyeliner').densityConfidenceMap.every(v=>v===0));
+  const a=new Float32Array(64*48).fill(.8);a[20*64+32]=.1;
+  const v=analyzeLuma(a,64,48,[{x:4,y:32},{x:60,y:32}],[{x:4,y:40},{x:60,y:40}],26,{x:4,y:32});
+  assert.ok(v.densityConfidenceMap.every(v=>v===0));
+ });
+ test('density uses supported local contrast rather than raw illumination',()=>{
+  const values=[];
+  for(const scale of [1,.5]){
+   const luma=new Float32Array(64*48).fill(.8*scale);
+   for(let y=12;y<=30;y++)luma[y*64+32]=.72*scale;
+   const a=analyzeLuma(luma,64,48,[{x:4,y:32},{x:60,y:32}],[{x:4,y:40},{x:60,y:40}],26,{x:4,y:32});
+   values.push(a.densityConfidenceMap[24*64+32]);
+  }
+  assert.ok(values[0]>0);assert.ok(Math.abs(values[0]-values[1])<=1);
+ });
+ test('tip follows the observed faint distal continuation beyond the strong seed',()=>{
+  const a=line({weak:true});assert.ok(a.tips.length>0);
+  assert.ok(a.tips.some(t=>t.y*48<12),'tip reaches faint visible end');
+  for(const t of a.tips)assert.ok(t.evidence.measuredCount>=4&&t.evidence.connected);
+ });
+ test('line continuing beyond the analysis boundary is never a valid tip',()=>{
+  const a=line({clipped:true});assert.equal(a.tips.length,0);
+  assert.ok(a.diagnostics.rejectionCounts['clipped-tip']>0);
+ });
+ test('crossing-line guard requires observed continuation beyond the lower lid',()=>{
+  const w=80,h=64,upper=[{x:6,y:22},{x:74,y:22}],lower=[{x:6,y:36},{x:74,y:36}];
+  const lashes=new Float32Array(w*h).fill(.8),hair=new Float32Array(w*h).fill(.8);
+  for(const x of [22,54])for(let y=10;y<60;y++){hair[y*w+x]=.1;if(y<22)lashes[y*w+x]=.1;}
+  assert.equal(crossingHairEvidence(lashes,w,h,upper,lower).occluded,false);
+  const crossing=crossingHairEvidence(hair,w,h,upper,lower);
+  assert.ok(crossing.paths.length>=2);assert.equal(crossing.occluded,true);
+  for(const p of crossing.paths)assert.ok(p.points.at(-1).y>36+4);
+ });
+ test('zero tangent component is preserved and Length scales continuously',()=>{
+  const a=line(),tip=a.tips[0];assert.equal(tip.dx,0);assert.ok(tip.dy<-.99);
+  const an={rw:64,rh:48},g=lengthGeometry(tip,an,128,96,40,50),g2=lengthGeometry(tip,an,256,192,80,50);
+  assert.equal(g2.length,g.length*2);assert.equal(g2.width,g.width*2);
+  assert.ok(lengthGeometry(tip,an,128,96,40,51).length>g.length);
+  assert.equal(lengthGeometry(tip,an,128,96,40,0).length,0);
+  assert.ok(g.analysisLength<=tip.length*.12&&g.analysisLength<=3);
  });
 });

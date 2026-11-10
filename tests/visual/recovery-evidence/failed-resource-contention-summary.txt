@@ -1,0 +1,155 @@
+Original full log: recovery-final-e2e.log (preserved locally).
+
+  1) [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+
+    Error: length
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 10
+    Received:   0
+
+      119 |     return results;
+      120 |   });
+    > 121 |   for(const result of results)expect(result.difference,result.id).toBeGreaterThan(10);
+
+  2) [chromium] › tests\e2e-g1b1.spec.js:410:1 › I10 before/after round-trip ───────────────────────
+
+    Error: release restores the edit
+
+    expect(received).toBe(expected) // Object.is equality
+
+
+      425 |     return { before, after };
+      426 |   });
+    > 427 |   expect(rawVsEdited.after, 'release restores the edit').toBe(edited);
+
+  3) [chromium] › tests\e2e-g1b1.spec.js:433:1 › I11 reset clears beauty, keeps face geometry ──────
+
+    Test timeout of 120000ms exceeded.
+
+    Error: page.evaluate: Test timeout of 120000ms exceeded.
+
+      435 |   await uploadFile(page, EDGE());
+      436 |   await waitFaceTerminal(page);
+    > 437 |   const before = await page.evaluate(() => ({
+          |                             ^
+      438 |     id: window.AuraGram.face.imageId(),
+      439 |     faces: window.AuraGram.face.store().faces.length
+
+  4) [chromium] › tests\e2e-lashes.spec.js:443:1 › L11 blurred eyes are guarded (no black strokes) ─
+
+    Error: blurred eyes: near-idle (guarded)
+
+    expect(received).toBeLessThan(expected)
+
+    Expected: < 0.6
+    Received:   123.47343357058676
+
+      468 |   const full = await canvasDataUrl(page);
+      469 |   const m = await callPx(page, PX.meanAbsDiff, { a: base, b: full });
+    > 470 |   expect(m.mean, 'blurred eyes: near-idle (guarded)').toBeLessThan(0.6);
+
+  5) [chromium] › tests\e2e-lashes.spec.js:475:1 › L12 low-resolution portrait stays safe ──────────
+
+    Error: worker process exited unexpectedly (code=3221226505, signal=null)
+
+  6) [chromium] › tests\e2e-session.spec.js:190:1 › retouch cache matches fresh renders across grade, size and photo changes 
+
+    Error: page.evaluate: TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:62230/src/retouch/retouch.mjs
+
+      191 |   await ready(page);
+      192 |   await page.waitForFunction(()=>window.AuraGram.face.status()==='ready');
+    > 193 |   const differences=await page.evaluate(async()=>{
+          |                                ^
+
+  6) [chromium] › tests\e2e-session.spec.js:190:1 › retouch cache matches fresh renders across grade, size and photo changes 
+
+    Error: page.evaluate: TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:62230/src/retouch/retouch.mjs
+
+      191 |   await ready(page);
+      192 |   await page.waitForFunction(()=>window.AuraGram.face.status()==='ready');
+    > 193 |   const differences=await page.evaluate(async()=>{
+          |                                ^
+      194 |     const {createRetouchSession}=await import(new URL('src/retouch/retouch.mjs',document.baseURI));
+      195 |     const img=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src='tests/fixtures/portrait.jpg';});
+      196 |     const cached=createRetouchSession(), face=window.AuraGram.retouch.snapshot();
+        at D:\Programms\alisagram\tests\e2e-session.spec.js:193:32
+
+  7) [webkit-mobile] › tests\e2e-colors.spec.js:64:1 › every adjustment control routes its minimum and maximum to visible preview changes 
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('[data-tab="adjust"]')
+        - locator resolved to <button data-tab="adjust" class="nav-tab flex flex-col items-center justify-center py-1 rounded-xl text-zinc-400 hover:text-white font-medium transition">…</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+
+
+      67 |   await page.setInputFiles('#fileInput',{name:'controls.png',mimeType:'image/png',buffer:Buffer.from(png,'base64')});
+      68 |   await page.waitForFunction(()=>window.AuraGram.loadState.status==='ready');
+
+  8) [webkit-mobile] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+
+    Error: length
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 10
+    Received:   0
+
+      119 |     return results;
+      120 |   });
+    > 121 |   for(const result of results)expect(result.difference,result.id).toBeGreaterThan(10);
+
+  9) [webkit-mobile] › tests\e2e-fidelity.spec.js:3:1 › LF16 LF17 LF20 real native analysis, active render and scaled geometry 
+
+    Error: page.evaluate: Target page, context or browser has been closed
+
+       5 |  await page.setInputFiles('#fileInput',path.join(__dirname,'fixtures/edge-source.jpg'));
+       6 |  await page.waitForFunction(()=>window.AuraGram.face.status()==='ready',null,{timeout:100000});
+    >  7 |  const result=await page.evaluate(async()=>{
+         |                          ^
+       8 |   const {describeEyes}=await import('/src/retouch/eyeGeometry.mjs');
+       9 |   const {analyzeEye}=await import('/src/retouch/lashAnalysis.mjs');
+      10 |   const {applyLashPass}=await import('/src/retouch/lashEnhancement.mjs');
+        at D:\Programms\alisagram\tests\e2e-fidelity.spec.js:7:26
+
+  10) [webkit-mobile] › tests\e2e-session.spec.js:16:1 › history groups slider input, skips UI navigation and synchronizes undo/redo 
+
+    Error: locator.click: Target page, context or browser has been closed
+    Call log:
+      - waiting for locator('#btnUndo')
+        - locator resolved to <button id="btnUndo" type="button" title="Отменить (Ctrl/Cmd+Z)" aria-label="Отменить действие">↶</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+
+
+      23 |   expect(await page.evaluate(()=>window.AuraGram.history.info().past)).toBe(1);
+      24 |   await page.locator('[data-tab="beauty"]').click();
+
+  11) [webkit-mobile] › tests\e2e-styles.spec.js:9:1 › saved style survives reload, applies in one undo step and retains the current caption 
+
+    Error: worker process exited unexpectedly (code=3221226505, signal=null)
+
+  12) [webkit-mobile] › tests\e2e-styles.spec.js:26:1 › rename, update and delete change the library without editing the photo 
+
+    Error: browserContext.newPage: Target page, context or browser has been closed
+
+    Error Context: test-results\e2e-styles-rename-update-a-e15f6-y-without-editing-the-photo-webkit-mobile\error-context.md
+
+  12 failed
+    [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+
+  12) [webkit-mobile] › tests\e2e-styles.spec.js:26:1 › rename, update and delete change the library without editing the photo 
+
+    Error: browserContext.newPage: Target page, context or browser has been closed
+
+    Error Context: test-results\e2e-styles-rename-update-a-e15f6-y-without-editing-the-photo-webkit-mobile\error-context.md
+
+  12 failed
+    [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+    [chromium] › tests\e2e-g1b1.spec.js:410:1 › I10 before/after round-trip ────────────────────────
+    [chromium] › tests\e2e-g1b1.spec.js:433:1 › I11 reset clears beauty, keeps face geometry ───────
+    [chromium] › tests\e2e-lashes.spec.js:443:1 › L11 blurred eyes are guarded (no black strokes) ──
+    [chromium] › tests\e2e-lashes.spec.js:475:1 › L12 low-resolution portrait stays safe ───────────

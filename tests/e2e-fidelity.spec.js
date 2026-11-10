@@ -26,3 +26,66 @@ test('LF16 LF17 LF20 real native analysis, active render and scaled geometry',as
  expect(result.summaries.left.rw).toBeGreaterThan(35);
  for(const p of result.perf){expect(p.ran).toContain('density');expect(p.ran).toContain('definition');expect(p.changed).toBeGreaterThan(0);}
 });
+
+test('Recovery rejects the real hair-covered eye while retaining visible-eye evidence',async({page},testInfo)=>{
+ await page.goto('/index.html');await page.waitForFunction(()=>!!window.AuraGram);
+ await page.setInputFiles('#fileInput',path.join(__dirname,'visual/recovery-evidence/hair-occlusion-original.jpg'));
+ await page.waitForFunction(()=>window.AuraGram.face.status()==='ready',null,{timeout:100000});
+ const result=await page.evaluate(async()=>{
+  const {describeEyes}=await import('/src/retouch/eyeGeometry.mjs'),{analyzeEye}=await import('/src/retouch/lashAnalysis.mjs');
+  const {applyLashPass}=await import('/src/retouch/lashEnhancement.mjs');
+  const regs=window.AuraGram.face.store().faces[0].regions;
+  const eyes=describeEyes(regs,Math.max(...regs.faceOval.map(p=>p.x))-Math.min(...regs.faceOval.map(p=>p.x)));
+  const im=new Image();im.src='/tests/visual/recovery-evidence/hair-occlusion-original.jpg';await im.decode();
+  const an={left:analyzeEye(im,eyes.left,'left'),right:analyzeEye(im,eyes.right,'right')};
+  const c=document.createElement('canvas');c.width=900;c.height=Math.round(im.height/im.width*900);const x=c.getContext('2d');
+  x.drawImage(im,0,0,c.width,c.height);const before=x.getImageData(0,0,c.width,c.height).data;
+  applyLashPass(x,c.width,c.height,eyes,an,{density:100,length:100,definition:100},{});
+  const after=x.getImageData(0,0,c.width,c.height).data,r=eyes.left.roi;let hiddenDifference=0;
+  for(let y=Math.ceil(r.y0*c.height);y<Math.floor(r.y1*c.height);y++)for(let ix=Math.ceil(r.x0*c.width);ix<Math.floor(r.x1*c.width);ix++){
+   const i=(y*c.width+ix)*4;for(let k=0;k<3;k++)hiddenDifference+=Math.abs(after[i+k]-before[i+k]);}
+  return {hiddenDifference,left:{confidence:an.left.confidence,reason:an.left.reason,tips:an.left.tips.length,crossing:an.left.diagnostics?.crossing},
+   right:{confidence:an.right.confidence,densityPixels:an.right.diagnostics?.densityPixels}};
+ });
+ console.log('Recovery real occlusion '+JSON.stringify({hiddenDifference:result.hiddenDifference,
+  left:{confidence:result.left.confidence,reason:result.left.reason,tips:result.left.tips,
+   crossingPaths:result.left.crossing.paths.length,axisCoverage:result.left.crossing.coveredAxisFraction},right:result.right}));
+ await testInfo.attach('real-occlusion.json',{body:JSON.stringify(result,null,2),contentType:'application/json'});
+ expect(result.left.confidence).toBe(0);expect(result.left.tips).toBe(0);expect(result.left.reason).toBe('crossing-structures');
+ expect(result.hiddenDifference).toBe(0);expect(result.right.confidence).toBeGreaterThan(0);expect(result.right.densityPixels).toBeGreaterThan(0);
+});
+
+test('Recovery active Length survives real preview and full PNG in both engines',async({page},testInfo)=>{
+ const file=path.join(__dirname,'visual/g1c1-evidence/natural-full-original.jpg');
+ await page.goto('/index.html');await page.waitForFunction(()=>!!window.AuraGram);
+ await page.setInputFiles('#fileInput',file);
+ await page.waitForFunction(()=>window.AuraGram.face.status()==='ready',null,{timeout:100000});
+ await page.waitForFunction(()=>window.AuraGram.retouch.ready());
+ const preview=await page.evaluate(()=>{
+  const A=window.AuraGram;A.resetAll();A.renderStudioCanvas();
+  const c=document.getElementById('mainCanvas'),x=c.getContext('2d'),base=x.getImageData(0,0,c.width,c.height).data.slice();
+  A.state.lashes.length=100;const t=performance.now();A.renderStudioCanvas();const renderMs=performance.now()-t;
+  const after=x.getImageData(0,0,c.width,c.height).data;let difference=0;
+  for(let i=0;i<after.length;i++)if(i%4!==3)difference+=Math.abs(after[i]-base[i]);
+  return {difference,renderMs,ran:A.stats.retouchRan,key:A.lash.info().key};
+ });
+ expect(preview.ran).toContain('length');expect(preview.difference).toBeGreaterThan(10);
+ await page.click('#btnExport');await page.waitForFunction(()=>!!window.AuraGram.getExportBlob(),null,{timeout:60000});
+ const exported=await page.evaluate(async()=>{
+  const A=window.AuraGram,blob=A.getExportBlob(),url=URL.createObjectURL(blob);
+  try{
+   const output=new Image();output.src=url;await output.decode();
+   const source=new Image();source.src='/tests/visual/g1c1-evidence/natural-full-original.jpg';await source.decode();
+   const c=document.createElement('canvas');c.width=output.width;c.height=output.height;
+   const x=c.getContext('2d');x.drawImage(source,0,0,c.width,c.height);const before=x.getImageData(0,0,c.width,c.height).data;
+   x.drawImage(output,0,0);const after=x.getImageData(0,0,c.width,c.height).data;let difference=0,changed=0;
+   for(let i=0;i<after.length;i+=4){let d=0;for(let k=0;k<3;k++)d+=Math.abs(after[i+k]-before[i+k]);difference+=d;if(d)changed++;}
+   return {difference,changed,width:c.width,height:c.height,bytes:blob.size,ran:A.stats.retouchRan,key:A.lash.info().key,renderMs:A.stats.lastExportMs};
+  }finally{URL.revokeObjectURL(url);}
+ });
+ expect(exported.difference).toBeGreaterThan(10);expect(exported.ran).toContain('length');
+ expect(exported.key).toBe(preview.key);expect(exported.width).toBe(2400);expect(exported.height).toBe(3600);
+ delete preview.key;delete exported.key;
+ console.log('Recovery real preview/export '+JSON.stringify({preview,exported}));
+ await testInfo.attach('active-preview-export.json',{body:JSON.stringify({preview,exported},null,2),contentType:'application/json'});
+});

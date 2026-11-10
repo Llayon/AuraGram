@@ -14,8 +14,9 @@
  *
  * Protected BY CONSTRUCTION: every layer is clipped to its Eye ROI rect and
  * masked to the upper-lash band (above the upper lid). Iris, pupil, sclera
- * (below the lid), inner corner, brow, cheek, hair, background cannot be
- * touched — the pixels are never drawn there.
+ * (below the lid), inner corner, brow, cheek and background outside that
+ * band are excluded geometrically. In-band occluders require image evidence
+ * rejection in analysis; FaceMesh alone does not identify a visible eye.
  */
 
 /** Nonlinear conservative strength curves (0..100 → factor). Monotonic. */
@@ -70,6 +71,16 @@ function sizeCanvas(c, w, h) {
   }
   if (c.width !== w || c.height !== h) { c.width = w; c.height = h; }
   return c;
+}
+
+/** Measured candidate geometry; shared with diagnostics, independent of density. */
+export function lengthGeometry(tip, an, rw, rh, eyeHeight, strength) {
+  const vx=tip.dx*rw/an.rw,vy=tip.dy*rh/an.rh,vl=Math.hypot(vx,vy);
+  if(!vl)return null;
+  const maximum=Math.min(3*rw/an.rw,eyeHeight*.12);
+  const length=Math.min(maximum,tip.length*vl*.12)*lashLengthCurve(strength);
+  return {x:tip.x*rw,y:tip.y*rh,ex:tip.x*rw+vx/vl*length,ey:tip.y*rh+vy/vl*length,
+    length,analysisLength:length/vl,width:tip.width*vl*.65,confidence:tip.c};
 }
 
 /**
@@ -128,7 +139,8 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
     { desc: eyeDescs.left, an: analyses && analyses.left, innerIsLeft: true },
     { desc: eyeDescs.right, an: analyses && analyses.right, innerIsLeft: false }
   ];
-  for (const { desc, an, innerIsLeft } of eyes) {
+  if(!Array.isArray(scratch.bandCache))scratch.bandCache=new Array(4);
+  for (const [eyeIndex,{ desc, an, innerIsLeft }] of eyes.entries()) {
     if (!desc || !desc.usable || !desc.inner || !desc.lowerLid?.length || !an || an.confidence <= 0) {
       perEye.push({ usable: !!(desc && desc.usable), confidence: an ? an.confidence : 0, reason: an ? an.reason : 'eye-unusable', ran: [] });
       continue;
@@ -143,6 +155,8 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
       continue;
     }
     const eyeRan = [];
+    let lengthAttempts=0;
+    const extensions=scratch.diagnostics?[]:null;
     const toOut = (p) => ({
       x: (p.x - desc.roi.x0) / (desc.roi.x1 - desc.roi.x0) * rw,
       y: (p.y - desc.roi.y0) / (desc.roi.y1 - desc.roi.y0) * rh
@@ -158,12 +172,26 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
     const c1x = scratch.c1.getContext('2d');
     const c2x = scratch.c2.getContext('2d');
     const mx = scratch.mask.getContext('2d');
-    const bandUpPx = Math.min(rh * 0.5, Math.max(3 * scale, (desc.h * H) * 0.35));
+    // The analysis zone is the source of truth for the applicator too.
+    // A narrower legacy 0.35-eye-height band clipped genuine distal ridges
+    // and could erase an otherwise valid measured Length candidate.
+    const bandUpPx = an.bandH > 0 ? an.bandH * rh
+      : Math.min(rh * .5, Math.max(3 * scale, desc.h * H * .35));
     tctx.save();
     tctx.beginPath();
     tctx.rect(rx0, ry0, rw, rh);
     tctx.clip();
-    const bandReady = buildBandMask(mx, rw, rh, lidOut, bandUpPx, browOut, innerOut, lowerOut, scale);
+    const getBand=(height,kind)=>{
+      // Fixed four slots; only small masks are cached (<=1MiB total).
+      // Geometry, render size and feather scale all participate in identity.
+      const index=eyeIndex*2+kind,key=JSON.stringify([rw,rh,height,lidOut,lowerOut,browOut,innerOut,scale]);
+      const cached=scratch.bandCache[index];
+      if(cached?.key===key){mx.putImageData(cached.image,0,0);return true;}
+      const ready=buildBandMask(mx,rw,rh,lidOut,height,browOut,innerOut,lowerOut,scale);
+      if(ready&&rw*rh<=65536)scratch.bandCache[index]={key,image:mx.getImageData(0,0,rw,rh)};
+      return ready;
+    };
+    const bandReady = getBand(bandUpPx,0);
     // Snapshot the graded ROI once (all layers derive from the same base).
     c1x.clearRect(0, 0, rw, rh);
     c1x.drawImage(tctx.canvas, rx0, ry0, rw, rh, 0, 0, rw, rh);
@@ -174,7 +202,7 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
       // Definition follows observed fine ridges too, rather than increasing
       // contrast over an entire strip of skin/makeup. Independent of sliders.
       const detailMask = c1x.createImageData(rw,rh);
-      fillDensityRGBA(detailMask.data,rw,rh,an.ridge,an.rw,an.rh,100,1);
+      fillDensityRGBA(detailMask.data,rw,rh,an.densityRidge || an.ridge,an.rw,an.rh,100,1);
       for(let i=0;i<detailMask.data.length;i+=4) {
         const alpha=Math.min(255,(255-detailMask.data[i])*255/89);
         detailMask.data[i]=detailMask.data[i+1]=detailMask.data[i+2]=255;
@@ -189,7 +217,7 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
         c2x.globalCompositeOperation = 'source-over';
         tctx.save();
         tctx.globalCompositeOperation = 'overlay';
-        tctx.globalAlpha = defK * an.confidence;
+        tctx.globalAlpha = defK * (an.densityConfidence ?? an.confidence);
         tctx.drawImage(scratch.c2, rx0, ry0);
         tctx.restore();
         eyeRan.push('definition');
@@ -199,7 +227,7 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
     if (densK > 0 && an.ridge && an.ridge.length) {
       c2x.clearRect(0, 0, rw, rh);
       const density = c2x.createImageData(rw, rh);
-      fillDensityRGBA(density.data, rw, rh, an.ridge, an.rw, an.rh, lashes.density, an.confidence);
+      fillDensityRGBA(density.data, rw, rh, an.densityRidge || an.ridge, an.rw, an.rh, lashes.density, an.densityConfidence ?? an.confidence);
       c2x.putImageData(density, 0, 0);
       if (bandReady) {
         c2x.globalCompositeOperation = 'destination-in';
@@ -213,32 +241,32 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
       }
     }
     // --- Length: extend confident tips with fading tapers (source-over). ---
-    if (lenK > 0 && an.confidence >= .25 && an.tips && an.tips.length) {
+    if (lenK > 0 && (an.lengthConfidence ?? an.confidence) >= .25 && an.tips && an.tips.length) {
       const maxLen = Math.min(3 * pxPerAnPx, (desc.h * H) * .12);
       c2x.clearRect(0,0,rw,rh);c2x.lineCap='round';
       let drew=false;
       for(const tip of an.tips) {
         if(!tip.evidence?.connected || tip.c<.6 || !tip.color) continue;
-        const tx=tip.x*rw,ty=tip.y*rh;
-        const vx=tip.dx*rw/an.rw,vy=tip.dy*rh/an.rh,vl=Math.hypot(vx,vy);
-        const L=Math.min(maxLen,tip.length*vl*.12)*lenK;
-        if(L<=0) continue;
-        const ex=tx+vx/vl*L,ey=ty+vy/vl*L;
+        const geometry=lengthGeometry(tip,an,rw,rh,desc.h*H,lashes.length);
+        if(!geometry||geometry.length<=0) continue;
+        const {x:tx,y:ty,ex,ey}=geometry;
         const [r,g,b]=tip.color;
         // Fixed candidate set; continuous geometry, width and opacity. No
         // slider-dependent seed count or fan, no minimum visible jump.
         for(let k=0;k<6;k++) {
           const a=k/6,beta=(k+1)/6;
           c2x.strokeStyle=`rgba(${r},${g},${b},${.26*tip.c*lenK*(1-a)**2})`;
-          c2x.lineWidth=Math.max(.08,tip.width*vl*.65*(1-a));
+          c2x.lineWidth=Math.max(.08,geometry.width*(1-a));
           c2x.beginPath();c2x.moveTo(tx+(ex-tx)*a,ty+(ey-ty)*a);
           c2x.lineTo(tx+(ex-tx)*beta,ty+(ey-ty)*beta);c2x.stroke();
         }
         drew=true;
+        lengthAttempts++;
+        if(extensions)extensions.push({...geometry,x:tx+rx0,y:ty+ry0,ex:ex+rx0,ey:ey+ry0});
       }
       if (drew) {
         // Extension may reach slightly above the band — allow headroom.
-        if (buildBandMask(mx, rw, rh, lidOut, bandUpPx + maxLen, browOut, innerOut, lowerOut, scale)) {
+        if (getBand(bandUpPx + maxLen,1)) {
           c2x.globalCompositeOperation = 'destination-in';
           c2x.drawImage(scratch.mask, 0, 0);
           c2x.globalCompositeOperation = 'source-over';
@@ -251,7 +279,8 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
       }
     }
     tctx.restore(); // un-clip ROI
-    perEye.push({ usable: true, confidence: an.confidence, reason: an.reason, ran: eyeRan });
+    perEye.push({ usable: true, confidence: an.confidence, reason: an.reason, ran: eyeRan,lengthAttempts,
+      ...(extensions?{extensions}:{}),side:an.side });
     eyeRan.forEach((r) => { if (!ran.includes(r)) ran.push(r); });
   }
   const ms = (typeof performance !== 'undefined') ? performance.now() - t0 : 0;

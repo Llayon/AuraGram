@@ -1,0 +1,6 @@
+
+> auragram@0.5.1 check:site
+> node scripts/check-site.cjs
+
+Packaged site chromium: versioned modules, contrast 80/80 (native), real face detection, retouch and PNG export passed.
+Packaged site webkit-mobile: versioned modules, contrast 80/80 (software), real face detection, retouch and PNG export passed.

@@ -732,6 +732,51 @@ test('L20 performance: lash warm cost within budget', async ({ page }) => {
   expect(res.full.w * res.full.h > 0, 'nonzero canvas').toBe(true);
 });
 
+test('L20 performance: active Density and connected Length on real natural portrait',async({page},testInfo)=>{
+ await gotoApp(page);
+ await uploadFile(page,path.resolve(__dirname,'visual/g1c1-evidence/natural-full-original.jpg'));
+ expect(await waitFaceTerminal(page)).toBe('ready');
+ await applyLashState(page,{lashes:{density:35,length:30,definition:25}});
+ const result=await page.evaluate(async()=>{
+  const A=window.AuraGram,c=document.getElementById('mainCanvas'),x=c.getContext('2d');
+  const configure=l=>{A.state.lashes={density:0,length:0,definition:0,...l};A.stats.retouchRan='';A.renderStudioCanvas();};
+  configure({});const basePixels=x.getImageData(0,0,c.width,c.height).data.slice();
+  const strengths={density:35,length:100,definition:25};
+  configure({length:strengths.length});const lengthPixels=x.getImageData(0,0,c.width,c.height).data;
+  let lengthDifference=0;for(let i=0;i<lengthPixels.length;i++)if(i%4!==3)lengthDifference+=Math.abs(lengthPixels[i]-basePixels[i]);
+  const lengthRan=A.stats.retouchRan;
+  configure({density:strengths.density});const densityPixels=x.getImageData(0,0,c.width,c.height).data;
+  let densityDifference=0;for(let i=0;i<densityPixels.length;i++)if(i%4!==3)densityDifference+=Math.abs(densityPixels[i]-basePixels[i]);
+  const key=A.lash.info().key,coldAnalysisMs=A.retouch.timings().lashAnalyseMs;
+  const samples=l=>{configure(l);A.renderStudioCanvas();const times=[];
+   for(let i=0;i<9;i++){const t=performance.now();A.renderStudioCanvas();times.push(performance.now()-t);}
+   times.sort((a,b)=>a-b);return {median:times[4],times,ran:A.stats.retouchRan};};
+  const off=samples({}),active=samples(strengths);
+  return {fixture:'natural-full-original.jpg',strengths,width:c.width,height:c.height,coldAnalysisMs,off,active,
+   delta:active.median-off.median,lengthDifference,densityDifference,lengthRan,
+   keyStable:key===A.lash.info().key,analysisMsStable:coldAnalysisMs===A.retouch.timings().lashAnalyseMs};
+ });
+ console.log('Recovery active perf '+JSON.stringify(result));
+ await testInfo.attach('active-lash-performance.json',{body:JSON.stringify(result,null,2),contentType:'application/json'});
+ expect(result.lengthDifference,'actual Length-only preview pixels').toBeGreaterThan(10);
+ expect(result.densityDifference,'actual Density-only preview pixels').toBeGreaterThan(10);
+ expect(result.lengthRan).toContain('length');expect(result.active.ran).toContain('density');expect(result.active.ran).toContain('length');
+ expect(result.keyStable&&result.analysisMsStable,'no slider-time analysis').toBe(true);
+ expect(result.delta,'active warm delta target+15ms').toBeLessThan(15);
+ const exported=await page.evaluate(async()=>{
+  const A=window.AuraGram,original=HTMLCanvasElement.prototype.toBlob;let encodeMs=0;
+  HTMLCanvasElement.prototype.toBlob=function(callback,...args){const t=performance.now();return original.call(this,blob=>{encodeMs=performance.now()-t;callback(blob);},...args);};
+  const start=performance.now();document.getElementById('btnExport').click();
+  while(!A.getExportBlob())await new Promise(r=>setTimeout(r,4));
+  HTMLCanvasElement.prototype.toBlob=original;
+  return {renderMs:A.stats.lastExportMs,encodeMs,buttonToBlobMs:performance.now()-start,
+   width:A.stats.exportW,height:A.stats.exportH,bytes:A.getExportBlob().size,ran:A.stats.retouchRan};
+ });
+ console.log('Recovery full export '+JSON.stringify(exported));
+ await testInfo.attach('full-export-performance.json',{body:JSON.stringify(exported,null,2),contentType:'application/json'});
+ expect(exported.ran).toContain('length');expect(exported.bytes).toBeGreaterThan(1000);
+});
+
 // L21: bounded buffers, no per-render growth.
 test('L21 memory: lash buffers bounded and reused', async ({ page }) => {
   await gotoApp(page);

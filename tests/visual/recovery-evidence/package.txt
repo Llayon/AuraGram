@@ -1,0 +1,5 @@
+
+> auragram@0.5.1 package:site
+> node scripts/package-site.cjs
+
+Static site prepared in dist/.
