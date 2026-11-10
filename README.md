@@ -320,6 +320,12 @@ Canvas operations. No second neural network or remote inference is used.
 Lash masks protect inner corners separately for each eye, and lash length,
 stroke width and feathering scale with output resolution.
 
+Since 0.5.1, density uses bilinear sampling of the detected ridge map and a
+bounded multiplication layer (at most 35% darkening before subsequent global
+effects), scaled by analysis confidence. It preserves the source detail and
+avoids the opaque rectangular patches that the previous ridge-pixel drawing
+could produce at maximum strength. Length and definition remain independent.
+
 Export captures the source and settings at click, waits for face analysis and
 the retouch module when required, and bounds preparation to 35 seconds. Changing
 the photo cancels the previous export. Repeated clicks during preparation are

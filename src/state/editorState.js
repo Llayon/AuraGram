@@ -28,7 +28,7 @@
   const ACCEPTED_MIME_EXACT = new Set([
     'image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/bmp', 'image/heic', 'image/heif'
   ]);
-  const GAUNTLET_VERSION = '0.5.0';
+  const GAUNTLET_VERSION = '0.5.1';
 
   // --- Demo photos (remote; failure is explicit, never faked) ------------------
   const DEMO_PHOTOS = [

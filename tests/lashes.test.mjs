@@ -17,8 +17,31 @@ import {
 import { lumaOf, lidYAt, scoreConfidence } from '../src/retouch/lashAnalysis.mjs';
 import {
   lashDensityCurve, lashLengthCurve, lashDefinitionCurve,
-  isNeutralLashes, lashCorrectionCount
+  isNeutralLashes, lashCorrectionCount, fillDensityRGBA
 } from '../src/retouch/lashEnhancement.mjs';
+
+test('density target preserves source brightness and scales with strength/confidence', () => {
+  const ridge=new Uint8Array([255,255,255,255]), data=new Uint8ClampedArray(8*8*4);
+  const minima=[];
+  for(const strength of [0,25,50,100]) {
+    fillDensityRGBA(data,8,8,ridge,2,2,strength,1);
+    const rgb=Array.from(data).filter((value,index)=>index%4!==3);
+    minima.push(Math.min(...rgb));assert.ok(Math.min(...rgb)>=166);
+    for(let i=3;i<data.length;i+=4)assert.equal(data[i],255);
+  }
+  assert.equal(minima[0],255);assert.ok(minima[1]>minima[2]&&minima[2]>minima[3]);
+  fillDensityRGBA(data,8,8,ridge,2,2,100,0);assert.ok(data.every(value=>value===255));
+  fillDensityRGBA(data,8,8,ridge,2,2,100,.5);assert.ok(data[0]>minima[3]);
+});
+
+test('density interpolates ridge edges rather than drawing opaque pixel rectangles', () => {
+  const data=new Uint8ClampedArray(16*2*4);
+  fillDensityRGBA(data,16,2,new Uint8Array([255,0,255,0]),2,2,100,1);
+  const values=Array.from({length:16},(_,x)=>data[x*4]);
+  assert.ok(values.some(value=>value>166&&value<255));
+  for(let x=1;x<16;x++){assert.ok(values[x]>=values[x-1]);assert.ok(values[x]-values[x-1]<=20);}
+  fillDensityRGBA(data,16,2,new Uint8Array(),2,2,100);assert.ok(data.every(value=>value===255));
+});
 
 // Same mock face shape as the retouch suite (normalized, centered).
 function mockRegions(cx = 0.5, cy = 0.5, w = 0.4, h = 0.5) {

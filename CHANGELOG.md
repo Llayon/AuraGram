@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.1 — 2026-11-10
+
+- Fix overly dark rectangular patches at maximum lash density, found during a magnified visual audit.
+- Bilinearly sample the ridge map and cap the density multiplication target at 35% darkening, weighted by eye-analysis confidence. Preserve the existing band/ROI protection and independent length/definition controls.
+- Add unit tests for smooth interpolation, strength/confidence scaling and bounded darkening, plus a Chromium/WebKit portrait regression that rejects opaque black density blocks.
+
 ## 0.5.0 — 2026-11-10
 
 - Fix silently ignored contrast and other Canvas filters in the tested mobile WebKit engine, affecting iPhone browser/WebView workflows.

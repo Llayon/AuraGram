@@ -34,6 +34,34 @@ export function lashCorrectionCount(l) {
   return (l.density > 0 ? 1 : 0) + (l.length > 0 ? 1 : 0) + (l.definition > 0 ? 1 : 0);
 }
 
+/** Smooth multiplicative target: retain at least 65% of the source intensity.
+ * Bilinear ridge sampling avoids opaque rectangles when ROI pixels are scaled.
+ * Weak eye analysis reduces the contribution instead of adding black blocks.
+ */
+export function fillDensityRGBA(data, W, H, ridge, aw, ah, strength, confidence = 1) {
+  data.fill(255);
+  if (!ridge || aw < 1 || ah < 1 || ridge.length < aw * ah) return data;
+  const gain = 0.7 * lashDensityCurve(strength) * (Number.isFinite(confidence) ? Math.max(0, Math.min(1, confidence)) : 0);
+  if (!gain) return data;
+  for (let y = 0; y < H; y++) {
+    const sy = (y + 0.5) * ah / H - 0.5;
+    const y0 = Math.max(0, Math.min(ah - 1, Math.floor(sy))), y1 = Math.min(ah - 1, y0 + 1);
+    const fy = Math.max(0, Math.min(1, sy - y0));
+    for (let x = 0; x < W; x++) {
+      const sx = (x + 0.5) * aw / W - 0.5;
+      const x0 = Math.max(0, Math.min(aw - 1, Math.floor(sx))), x1 = Math.min(aw - 1, x0 + 1);
+      const fx = Math.max(0, Math.min(1, sx - x0));
+      const top = ridge[y0 * aw + x0] * (1 - fx) + ridge[y0 * aw + x1] * fx;
+      const bottom = ridge[y1 * aw + x0] * (1 - fx) + ridge[y1 * aw + x1] * fx;
+      const signal = Math.max(0, ((top * (1 - fy) + bottom * fy) / 255 - 0.25) / 0.75);
+      const value = Math.round(255 * (1 - gain * Math.min(1, signal)));
+      const i = (y * W + x) * 4;
+      data[i] = data[i + 1] = data[i + 2] = value;
+    }
+  }
+  return data;
+}
+
 function sizeCanvas(c, w, h) {
   if (!c) {
     c = document.createElement('canvas');
@@ -160,20 +188,9 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
     // --- Density: darken detected ridges only (multiply, white = noop). ---
     if (densK > 0 && an.ridge && an.ridge.length) {
       c2x.clearRect(0, 0, rw, rh);
-      c2x.fillStyle = '#fff';
-      c2x.fillRect(0, 0, rw, rh);
-      const sx = rw / Math.max(1, an.rw), sy = rh / Math.max(1, an.rh);
-      c2x.fillStyle = '#000';
-      for (let ay = 0; ay < an.rh; ay++) {
-        for (let ax = 0; ax < an.rw; ax++) {
-          const s = an.ridge[ay * an.rw + ax] / 255;
-          if (s > 0.25) {
-            c2x.globalAlpha = Math.min(1, s * densK * 2);
-            c2x.fillRect(Math.floor(ax * sx), Math.floor(ay * sy), Math.max(1, Math.ceil(sx)), Math.max(1, Math.ceil(sy)));
-          }
-        }
-      }
-      c2x.globalAlpha = 1;
+      const density = c2x.createImageData(rw, rh);
+      fillDensityRGBA(density.data, rw, rh, an.ridge, an.rw, an.rh, lashes.density, an.confidence);
+      c2x.putImageData(density, 0, 0);
       if (buildBandMask(mx, rw, rh, lidOut, bandUpPx, browOut, innerIsLeft, scale)) {
         c2x.globalCompositeOperation = 'destination-in';
         c2x.drawImage(scratch.mask, 0, 0);
