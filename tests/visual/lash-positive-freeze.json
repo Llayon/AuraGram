@@ -1,0 +1,11 @@
+{
+  "baseline": "44420129460f9c719e1bb47f1fb7161c297d714c",
+  "meaning": "Original-only new-source labels frozen before new-source FaceMesh/detector results. Earlier project knowledge disclosed. Not certified natural-lash ground truth.",
+  "inputs": {
+    "tests/visual/lash-positive-sources.json": "8a4acccc3d8087208f4a091e3f4a039f8fa7f61ce449fa39377bd174b3355728",
+    "tests/visual/lash-positive-crops.json": "ac7fc1e85c6688a51c1f1b64a77b5603098525d0c946762644ca3b42daea4706",
+    "tests/visual/lash-positive-primary-labels.json": "b151428e1a9ec48beb0e6f5f4b4d01c4276b2af74d02c381159d9f39fafda105",
+    "tests/visual/lash-positive-independent-labels.json": "468daac3073d159cfd006e97e72a966e65de64d6928a6992dea233d8195c8462"
+  },
+  "originalCropManifestSHA256": "0416503ea93ca5ba0e2ee80055ae533daa2f5121a5600c38d80a8e8ee9bf1c8b"
+}

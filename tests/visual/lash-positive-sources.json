@@ -1,0 +1,11 @@
+{
+  "stage": "Original-only positive endpoint screening",
+  "baseline": "44420129460f9c719e1bb47f1fb7161c297d714c",
+  "selection": "New original photo pages selected for detail before detector output. Descriptions are leads, not verified bare lashes or valid endpoint positives.",
+  "license": "https://www.pexels.com/license/",
+  "sources": [
+    {"file":"pexels-10460940.jpg","author":"Henry de Guzman","page":"https://www.pexels.com/photo/close-up-photo-of-a-beautiful-woman-s-face-10460940/","url":"https://images.pexels.com/photos/10460940/pexels-photo-10460940.jpeg?cs=srgb&dl=pexels-henry-de-guzman-72935623-10460940.jpg&fm=jpg","advertisedDimensions":[3648,5472]},
+    {"file":"pexels-7298680.jpg","author":"Kindel Media","page":"https://www.pexels.com/photo/close-up-photo-of-a-woman-s-face-7298680/","url":"https://images.pexels.com/photos/7298680/pexels-photo-7298680.jpeg?cs=srgb&dl=pexels-kindelmedia-7298680.jpg&fm=jpg","advertisedDimensions":[5184,2920]},
+    {"file":"pexels-3763152.jpg","author":"Andrea Piacquadio","page":"https://www.pexels.com/photo/brown-freckles-on-face-3763152/","url":"https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg?cs=srgb&dl=pexels-olly-3763152.jpg&fm=jpg","advertisedDimensions":[6812,4450]}
+  ]
+}

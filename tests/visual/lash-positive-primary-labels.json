@@ -1,0 +1,21 @@
+{
+  "schema":"original-only-sparse-positive-screen-v1",
+  "baseline":"44420129460f9c719e1bb47f1fb7161c297d714c",
+  "method":"Primary annotator viewed original portraits and integer native crops, then nearest-neighbour 4x detail crops, before any new detector output. Earlier project/source algorithms known; these three new photos were unseen before this stage.",
+  "coordinates":"x-right/y-down native crop pixels. Add sourceRectNative origin for full-source coordinates. Manual uncertainty is engineering judgement, not calibrated confidence.",
+  "limits":"Sparse visible distal-structure labels, not biological bare-lash ground truth or proof of safe extension. Roots merge into makeup/lid; no anatomical root assigned. Local shaft axis is not exact terminal derivative.",
+  "views":[
+    {"file":"pexels-10460940.jpg","view":"screen-right","sourceRectNative":[1700,1690,1250,800],"status":"RESOLVABLE_COATED_DISTAL_STRUCTURES","biologicalNaturalness":"UNVERIFIED","notes":"Sharp makeup and eyeliner; iris patterned contact visible. Some distal shafts separated against skin. Do not treat full fan as natural bare lashes.","labels":[
+      {"id":"primary-104-right-a","tipNative":[918,148],"tipUncertaintyPx":4,"localProximalNativePoints":[[913,168],[908,186],[901,207]],"localAxisUncertaintyDeg":10,"root":"UNRESOLVED_MERGED_LID","notes":"Separated dark distal shaft; tip fades into texture. No exact derivative claim."},
+      {"id":"primary-104-right-b","tipNative":[565,162],"tipUncertaintyPx":5,"localProximalNativePoints":[[570,184],[575,207],[581,229]],"localAxisUncertaintyDeg":10,"root":"UNRESOLVED_MERGED_LID","notes":"Long central shaft with distal contrast over textured makeup; neighboring shafts not labelled."}
+    ]},
+    {"file":"pexels-7298680.jpg","view":"screen-left","sourceRectNative":[1900,980,550,420],"status":"PARTIAL_COATED_STRUCTURE_DETAIL","biologicalNaturalness":"UNVERIFIED","notes":"Coated/clumped shafts and crossings; several isolated distal stretches, some broad tips. Native detail softer than10460940.","labels":[
+      {"id":"primary-729-left-a","tipNative":[257,123],"tipUncertaintyPx":5,"localProximalNativePoints":[[263,141],[269,157],[277,174]],"localAxisUncertaintyDeg":12,"root":"UNRESOLVED_MERGED_LID","notes":"Distal shaft above central lid; tip uncertainty includes weak fade into fold. Not validated as a bare fiber."}
+    ]},
+    {"file":"pexels-3763152.jpg","view":"screen-right","sourceRectNative":[3520,1370,750,540],"status":"EXACT_ENDPOINT_UNRESOLVED","biologicalNaturalness":"UNVERIFIED","labels":[],"notes":"Dark overlapping upper structures, distal blur. Large source dimensions do not resolve exact tips."},
+    {"file":"pexels-10460940.jpg","view":"screen-left","sourceRectNative":[0,2050,850,700],"status":"UNLABELLED_THIS_SPARSE_SCREEN","labels":[]},
+    {"file":"pexels-7298680.jpg","view":"screen-right","sourceRectNative":[2710,850,590,430],"status":"UNLABELLED_THIS_SPARSE_SCREEN","labels":[]},
+    {"file":"pexels-3763152.jpg","view":"screen-left","sourceRectNative":[2550,1390,680,540],"status":"EXACT_ENDPOINT_UNRESOLVED","labels":[]}
+  ],
+  "lightLashCoverage":"Prior8727422 pale endpoints remain unresolved; these new source titles do not establish light bare-lash positives. NOT COVERED for confirmed light bare upper tips."
+}

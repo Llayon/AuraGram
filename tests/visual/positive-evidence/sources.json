@@ -1,0 +1,67 @@
+{
+  "note": "Three new Pexels originals; previous licensed controls reused. No bare/biological lash certification, no endorsement.",
+  "sources": [
+    {
+      "file": "pexels-10460940.jpg",
+      "author": "Henry de Guzman",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-a-beautiful-woman-s-face-10460940/",
+      "url": "https://images.pexels.com/photos/10460940/pexels-photo-10460940.jpeg?cs=srgb&dl=pexels-henry-de-guzman-72935623-10460940.jpg&fm=jpg",
+      "advertisedDimensions": [
+        3648,
+        5472
+      ],
+      "width": 3648,
+      "height": 5472,
+      "sha256": "897807ffe7d7431fe2d1b3bc55741dd361cdc39be3d2a929886c9fcc52abca49",
+      "path": "sources/pexels-10460940.jpg"
+    },
+    {
+      "file": "pexels-7298680.jpg",
+      "author": "Kindel Media",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-a-woman-s-face-7298680/",
+      "url": "https://images.pexels.com/photos/7298680/pexels-photo-7298680.jpeg?cs=srgb&dl=pexels-kindelmedia-7298680.jpg&fm=jpg",
+      "advertisedDimensions": [
+        5184,
+        2920
+      ],
+      "width": 5184,
+      "height": 2920,
+      "sha256": "bb652bce409113d758e990bb95fa70aa445000782a95766bd9e4cb40a26267f5",
+      "path": "sources/pexels-7298680.jpg"
+    },
+    {
+      "file": "pexels-3763152.jpg",
+      "author": "Andrea Piacquadio",
+      "page": "https://www.pexels.com/photo/brown-freckles-on-face-3763152/",
+      "url": "https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg?cs=srgb&dl=pexels-olly-3763152.jpg&fm=jpg",
+      "advertisedDimensions": [
+        6812,
+        4450
+      ],
+      "width": 6812,
+      "height": 4450,
+      "sha256": "a82cbf70db1b39b11bf8abe63a8d9ce9cd35f4619f0d88d7689d6ceae7dd6713",
+      "path": "sources/pexels-3763152.jpg"
+    },
+    {
+      "file": "edge900.jpg",
+      "sha256": "c43db5cf32c49064e30cabc8eb80a109159d7dc43d1e7b50ae9d74aa2587a0f0",
+      "path": "../crossing-evidence/legacy-sources/edge900.jpg"
+    },
+    {
+      "file": "pexels-8727422.jpg",
+      "sha256": "ad949e502d6ff35c6b9801b82d67f0d484532f65b8ee77fdc792548231127ecd",
+      "path": "../crossing-evidence/../expanded-evidence/sources/pexels-8727422.jpg"
+    },
+    {
+      "file": "pexels-7123010.jpg",
+      "sha256": "4234570fa7eb81e3ac0b617b362ae92e0e4ec8ee803c31a6131eb42bb272631c",
+      "path": "../crossing-evidence/../expanded-evidence/sources/pexels-7123010.jpg"
+    },
+    {
+      "file": "hair-occlusion.jpg",
+      "sha256": "b6211d89421b0f6dba6dcb3ca06103169c0ca9375767853ec83e6033e481b485",
+      "path": "../crossing-evidence/legacy-sources/hair-occlusion.jpg"
+    }
+  ]
+}

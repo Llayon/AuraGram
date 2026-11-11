@@ -1,0 +1,12 @@
+[
+  {
+    "engine": "chromium",
+    "fixture": "pexels-7298680.jpg",
+    "fixedNativeRenderPNGIdentities": 39
+  },
+  {
+    "engine": "webkit",
+    "fixture": "pexels-7298680.jpg",
+    "fixedNativeRenderPNGIdentities": 39
+  }
+]
