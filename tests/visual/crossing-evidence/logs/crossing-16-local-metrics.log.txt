@@ -1,0 +1,126 @@
+chromium light.jpg older-chromium-control right both-arcs -1 -1 [
+  { root: 8.566538258520684, path: 6.89589784281821 },
+  { root: 13.540885000167714, path: 13.540885000167714 }
+]
+chromium light.jpg older-chromium-control right both-arcs 1 -1 [
+  { root: 16.551247827560196, path: 16.551247827560196 },
+  { root: 9.84371517795174, path: 8.442028442978874 }
+]
+chromium light.jpg older-chromium-control right both-arcs 1 0 [
+  { root: 12.824265671776347, path: 12.824265671776347 },
+  { root: 13.80914320565692, path: 8.60775651290661 }
+]
+chromium light.jpg older-chromium-control right both-arcs 1 1 [
+  { root: 12.237953750451803, path: 12.237953750451803 },
+  { root: 10.702135210881517, path: 9.661832400453232 }
+]
+chromium hair-occlusion.jpg older-chromium-control left lower-only 0 -1 [ { root: 19.785657250520497, path: 15.561354300024448 } ]
+chromium pexels-7123010.jpg closed-chromium right both-arcs 0 -1 [
+  { root: 12.840710562813767, path: 12.840710562813767 },
+  { root: 32.56823171476504, path: 29.09400911936769 }
+]
+chromium pexels-7123010.jpg closed-chromium right both-arcs 0 0 [
+  { root: 4.427001431410783, path: 4.427001431410783 },
+  { root: 29.96901584570329, path: 28.857556180512145 }
+]
+chromium pexels-7123010.jpg closed-chromium right both-arcs 0 1 [
+  { root: 32.53897419957049, path: 29.044249384025935 },
+  { root: 10.079534248101673, path: 9.118236391023839 }
+]
+chromium pexels-7123010.jpg closed-chromium right both-arcs 1 1 [
+  { root: 30.332048004606335, path: 28.937420218681147 },
+  { root: 4.8494172579257295, path: 4.8494172579257295 }
+]
+chromium pexels-7123010.jpg closed-webkit right both-arcs -1 -1 [
+  { root: 6.733946975533505, path: 6.151927820067483 },
+  { root: 14.403016791279166, path: 12.189334898297501 },
+  { root: 3.506510581619633, path: 3.506510581619633 }
+]
+chromium pexels-7123010.jpg closed-webkit right both-arcs -1 0 [
+  { root: 9.745063724161213, path: 9.745063724161213 },
+  { root: 9.544688510719295, path: 8.606830894725999 },
+  { root: 3.3645704184524305, path: 3.3645704184524305 }
+]
+chromium pexels-7123010.jpg closed-webkit right both-arcs -1 1 [
+  { root: 3.13727214417784, path: 3.13727214417784 },
+  { root: 30.87007128474322, path: 29.022746948173946 },
+  { root: 20.82110513331237, path: 18.74557417567118 },
+  { root: 9.625747120290551, path: 9.625747120290551 },
+  { root: 8.69205565883674, path: 8.444401847004865 }
+]
+chromium pexels-7123010.jpg closed-webkit right both-arcs 0 -1 [
+  { root: 6.401952567292641, path: 5.863662569365616 },
+  { root: 14.038026480762033, path: 12.007047778160295 }
+]
+chromium pexels-7123010.jpg closed-webkit right both-arcs 0 0 [
+  { root: 8.96821235138151, path: 8.96821235138151 },
+  { root: 12.267041924372437, path: 11.213130170165472 },
+  { root: 5.847657275845258, path: 5.847657275845258 }
+]
+chromium pexels-7123010.jpg closed-webkit right both-arcs 1 -1 [
+  { root: 12.596914592923097, path: 12.596914592923097 },
+  { root: 20.47216277643366, path: 18.902156435556837 }
+]
+chromium pexels-7123010.jpg closed-webkit right both-arcs 1 1 [
+  { root: 31.622338825546674, path: 28.749074907250993 },
+  { root: 21.57315159683493, path: 19.16423361582621 },
+  { root: 5.98121976354314, path: 5.98121976354314 },
+  { root: 11.526273701360438, path: 10.90675517979431 }
+]
+chromium pexels-7123010.jpg closed-webkit right lower-only 0 -1 [
+  { root: 4.200249453476716, path: 4.200249453476716 },
+  { root: 11.00737403454393, path: 10.433733700315008 }
+]
+chromium pexels-7123010.jpg closed-webkit right lower-only 0 1 [
+  { root: 11.597152051870244, path: 11.597152051870244 },
+  { root: 15.510255209798002, path: 15.510255209798002 },
+  { root: 22.57777036339906, path: 21.701403158047906 }
+]
+webkit light.jpg older-chromium-control right both-arcs -1 -1 [
+  { root: 13.540885000167714, path: 13.540885000167714 },
+  { root: 12.311056076101092, path: 7.422094505084363 }
+]
+webkit light.jpg older-chromium-control right both-arcs -1 0 [
+  { root: 13.741199743087304, path: 13.741199743087304 },
+  { root: 12.953774193228346, path: 8.399104456810703 }
+]
+webkit light.jpg older-chromium-control right both-arcs 0 1 [
+  { root: 12.109305610907745, path: 12.109305610907745 },
+  { root: 3.320518547727434, path: 2.563001901550805 },
+  { root: 15.395806619018572, path: 9.645789087042917 }
+]
+webkit light.jpg older-chromium-control right both-arcs 1 -1 [
+  { root: 16.551247827560196, path: 16.551247827560196 },
+  { root: 9.84371517795174, path: 8.442028442978874 }
+]
+webkit light.jpg older-chromium-control right both-arcs 1 0 [
+  { root: 12.824265671776352, path: 12.824265671776352 },
+  { root: 10.022060683300712, path: 8.210677177243214 }
+]
+webkit light.jpg older-chromium-control right both-arcs 1 1 [
+  { root: 12.237953750451805, path: 12.237953750451805 },
+  { root: 10.702135210881517, path: 9.661832400453232 }
+]
+webkit hair-occlusion.jpg older-chromium-control left lower-only 0 -1 [ { root: 52.09151343471329, path: 50.74500198033033 } ]
+webkit pexels-12367370.jpg actual-webkit right both-arcs 1 0 [
+  { root: 76.31999279968151, path: 72.76180091638012 },
+  { root: 64.47545150625112, path: 62.89679525591344 },
+  { root: 51.58167264005865, path: 50.460719204618144 }
+]
+webkit pexels-7123010.jpg closed-chromium left lower-only 0 -1 [
+  { root: 8.001256404025, path: 8.001256404025 },
+  { root: 42.13459038852146, path: 41.532000377043595 }
+]
+webkit pexels-7123010.jpg closed-chromium right both-arcs -1 0 [
+  { root: 3.658909551501321, path: 3.010297095829501 },
+  { root: 44.40491948025234, path: 41.69607498700854 }
+]
+webkit pexels-7123010.jpg closed-webkit right both-arcs 1 1 [
+  { root: 29.344603159039984, path: 27.741627881741746 },
+  { root: 8.494296956554388, path: 8.494296956554388 },
+  { root: 6.8128479127117565, path: 6.606749662239311 }
+]
+webkit pexels-7123010.jpg closed-webkit right lower-only 0 -1 [
+  { root: 8.965194907208678, path: 8.965194907208678 },
+  { root: 7.597316325112492, path: 6.3123715199777655 }
+]

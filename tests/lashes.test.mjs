@@ -378,6 +378,21 @@ describe('Recovery evidence separation and observed endpoints',()=>{
   assert.ok(crossing.paths.length>=2);assert.equal(crossing.occluded,true);
   for(const p of crossing.paths)assert.ok(p.points.at(-1).y>36+4);
  });
+ test('one observed crossing vetoes Length without suppressing distant local Density',()=>{
+  const w=80,h=64,upper=[{x:6,y:22},{x:74,y:22}],lower=[{x:6,y:36},{x:74,y:36}];
+  const clear=new Float32Array(w*h).fill(.8),mixed=new Float32Array(w*h).fill(.8);
+  for(let y=8;y<=22;y++)clear[y*w+54]=mixed[y*w+54]=.1;
+  for(let y=8;y<60;y++)mixed[y*w+22]=.1;
+  const crossing=crossingHairEvidence(mixed,w,h,upper,lower);
+  assert.equal(crossing.occluded,false,'strong whole-eye coverage rule unchanged');
+  assert.equal(crossing.lengthAbstain,true);
+  const a=analyzeLuma(clear,w,h,upper,lower,18,{x:6,y:22});
+  const b=analyzeLuma(mixed,w,h,upper,lower,18,{x:6,y:22},[],{recoverBoundaryTips:true});
+  assert.ok(a.tips.length>0);assert.equal(b.tips.length,0);assert.equal(b.lengthConfidence,0);
+  assert.equal(b.diagnostics.lengthAbstention,'observed-crossing-continuation');
+  assert.ok(b.densityConfidence>0);
+  for(let y=8;y<22;y++)for(let x=50;x<59;x++)assert.equal(b.densityConfidenceMap[y*w+x],a.densityConfidenceMap[y*w+x]);
+ });
  test('zero tangent component is preserved and Length scales continuously',()=>{
   const a=line(),tip=a.tips[0];assert.equal(tip.dx,0);assert.ok(tip.dy<-.99);
   const an={rw:64,rh:48},g=lengthGeometry(tip,an,128,96,40,50),g2=lengthGeometry(tip,an,256,192,80,50);

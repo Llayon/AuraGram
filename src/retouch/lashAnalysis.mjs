@@ -45,7 +45,7 @@ export function scoreConfidence({ sharp01, coverage, contrast01, usable }) {
   return { confidence, reason: confidence < 0.25 ? 'weak' : 'ok' };
 }
 
-export const LASH_ANALYSIS_VERSION = 'g1c1-recovery-5-boundary-context';
+export const LASH_ANALYSIS_VERSION = 'g1c1-recovery-6-crossing-length-abstention';
 
 /** Closest point on the canonical upper arc, in actual bitmap pixels.
  * Signed distance is positive OUTSIDE the eye. No screen-y assumption.
@@ -126,7 +126,13 @@ export function crossingHairEvidence(luma,w,h,lid,lower) {
     }
   }
   const span=paths.length?Math.max(...paths.map(p=>p.root.x*(lid.at(-1).x-lid[0].x)+p.root.y*(lid.at(-1).y-lid[0].y)))-Math.min(...paths.map(p=>p.root.x*(lid.at(-1).x-lid[0].x)+p.root.y*(lid.at(-1).y-lid[0].y))):0;
-  return {paths,testedOpenings,coveredAxisFraction:eyeW?span/(eyeW*eyeW):0,occluded:paths.length>=2&&span>eyeW*eyeW*.25};
+  return {paths,testedOpenings,coveredAxisFraction:eyeW?span/(eyeW*eyeW):0,occluded:paths.length>=2&&span>eyeW*eyeW*.25,
+    // Whole-eye Density rejection keeps its existing coverage rule. Length
+    // has a stricter interpretation policy: even a single observed path
+    // through and beyond the opening makes extension ambiguous. This is a
+    // conservative veto, not proof of a true occluder or invalidity of every
+    // other hair. No new span cutoff or repeated sampling at render time.
+    lengthAbstain:paths.length>0};
 }
 
 /** Minimal pipeline: directional valley filters + connected local tracing.
@@ -150,7 +156,8 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
   });
   if(crossing.occluded)return {ridge,ridgeResponseMap,densityRidge,densityConfidenceMap,rootConnectionMap:new Uint8Array(n),
     densityConfidence:0,lengthConfidence:0,confidence:0,reason:'crossing-structures',tips:[],traces:[],sharp01:0,coverage:0,contrast01:0,
-    diagnostics:{potentialRidgePixels:0,densityPixels:0,tracingSeeds:0,tracedStructures:0,rejectionCounts:{},crossing},
+    diagnostics:{potentialRidgePixels:0,densityPixels:0,tracingSeeds:0,tracedStructures:0,rejectionCounts:{},crossing,
+      tracingEnabled:false,lengthAbstention:'crossing-structures'},
     typedArrayBytes:n*49,retainedTypedArrayBytes:n*5};
   let count=0, hits=0, lapSum=0, contrastSum=0;
   let measuredContextPixels=0;
@@ -455,7 +462,7 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
     }
   }
   }
-  traceSeeds(seeds,bandH);
+  if(!crossing.lengthAbstain)traceSeeds(seeds,bandH);
   const baselineTipCount=tips.length;
   const referenceSharpGate=smoothstep(.005,.035,count?lapSum/count:0);
   const baselineLengthConfidence=tips.reduce((maximum,tip)=>Math.max(maximum,tip.c),0)*referenceSharpGate;
@@ -482,6 +489,7 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
   return {ridge,ridgeResponseMap,densityRidge,densityConfidenceMap,rootConnectionMap,densityConfidence,lengthConfidence,baselineLengthConfidence,boundaryLengthConfidence,
     tips,traces,sharp01,coverage,contrast01,confidence,reason:confidence<.01?'blurry':confidence<.25?'weak':'ok',
     diagnostics:{potentialRidgePixels:hits,densityPixels,densityWeight,contextualSamples,tracingSeeds:seeds.length,tracedStructures,rejectionCounts,crossing,
+      tracingEnabled:!crossing.lengthAbstain,lengthAbstention:crossing.lengthAbstain?'observed-crossing-continuation':null,
       boundaryContext:{baselineTipCount,recoveredTips:tips.length-baselineTipCount,clippedSeeds:clippedSeeds.length,measuredContextPixels,baselineDirectionUpdates,referenceBandH:bandH,searchBandH:lengthSearchBandH}},
     typedArrayBytes:n*49, retainedTypedArrayBytes:ridge.byteLength+ridgeResponseMap.byteLength+densityRidge.byteLength+densityConfidenceMap.byteLength+rootConnectionMap.byteLength,
     ...(options.debug?{debug:{responseMap,anisotropy,dx,dy,distance,valid}}:{})};

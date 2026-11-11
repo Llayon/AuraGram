@@ -110,3 +110,5 @@ Local tangent step: [G1C1_TANGENT_REPORT.md](G1C1_TANGENT_REPORT.md). Original-o
 Native source profiles: [G1C1_SOURCE_CENTERS_REPORT.md](G1C1_SOURCE_CENTERS_REPORT.md). Fixed/free-anchor sensitivity explains short-window bias; no accurate unique terminal tangent established. Product unchanged; Draft/HOLD. Independent sharper real-photo endpoint/axis evidence is needed before adopting a continuation fit.
 
 Real-photo expansion: [G1C1_EXPANDED_DATASET_REPORT.md](G1C1_EXPANDED_DATASET_REPORT.md). Eight new sources and independently frozen screening add challenge coverage;4ready/4no_face. Active natural Length still unverified. A new closed-white-liner abstention gate fails Chromium and passes WebKit; preserve it and study crossing-guard perturbations next. Draft/HOLD; production unchanged.
+
+Crossing stability: [G1C1_CROSSING_REPORT.md](G1C1_CROSSING_REPORT.md). V6 fixes the closed-white-liner abstention gate with a conservative Length-only observed-crossing veto. Density/Definition remain exact; possible false vetoes in geometry-jitter controls are retained and material. Original F1 failures/useful Length remain HOLD. No production release.

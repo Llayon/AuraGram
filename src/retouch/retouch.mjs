@@ -469,9 +469,11 @@ export function createRetouchSession() {
     lashInfo: () => (S.lashAn ? {
       key: S.lashKey,
       left: { confidence: S.lashAn.left.confidence, reason: S.lashAn.left.reason, tips: S.lashAn.left.tips.length,
-        recoveredTips: S.lashAn.left.diagnostics?.boundaryContext?.recoveredTips || 0 },
+        recoveredTips: S.lashAn.left.diagnostics?.boundaryContext?.recoveredTips || 0,
+        lengthAbstention: S.lashAn.left.diagnostics?.lengthAbstention || null },
       right: { confidence: S.lashAn.right.confidence, reason: S.lashAn.right.reason, tips: S.lashAn.right.tips.length,
-        recoveredTips: S.lashAn.right.diagnostics?.boundaryContext?.recoveredTips || 0 }
+        recoveredTips: S.lashAn.right.diagnostics?.boundaryContext?.recoveredTips || 0,
+        lengthAbstention: S.lashAn.right.diagnostics?.lengthAbstention || null }
     } : null),
     curves: { smoothCurve, antiredCurve, glowCurve, eyesCurve, blushCurve, sculptCurve },
     timings: () => ({ maskBuildMs: S.lastMaskMs, retouchMs: S.lastRetouchMs, deredMs: S.lastDeredMs, lashAnalyseMs: S.lastLashAnalyseMs, lashEnhanceMs: S.lastLashEnhanceMs }),

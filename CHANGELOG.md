@@ -2,6 +2,7 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- V6 adds conservative Length-only abstention on observed crossing continuations, fixing the new closed-white-liner gate while preserving Density/Definition pixels. Geometry-jitter controls expose possible false vetoes/recall loss; useful Length remains HOLD. See [crossing report](G1C1_CROSSING_REPORT.md).
 - Expand QA with eight licensed original photo assets, frozen independent screening and both-engine native comparisons. Add a conservative unresolved-white-liner abstention gate; it reproduces a new Chromium failure. Product unchanged, Length HOLD. See [expanded dataset report](G1C1_EXPANDED_DATASET_REPORT.md).
 - Native source-profile audit: preserve measured center profiles, rejected support and fixed/free-anchor sensitivity in both engines. Accurate terminal continuation remains unproven; product unchanged. See [source-center report](G1C1_SOURCE_CENTERS_REPORT.md).
 - Local tangent audit: freeze provisional short-window annotations and retain a rejected offline curve-fit comparison. No product changes; exact terminal direction remains uncertain. See [tangent report](G1C1_TANGENT_REPORT.md).
