@@ -4,6 +4,7 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- Diagnose three exact old endpoint candidates using native/coarse profiles in both decoders. Confirm directional/resampling and localization ambiguity; native-only or floor-only replacement is not justified. Product and mandatory tests unchanged, Length HOLD. See [fixed-case report](G1C1_ENDPOINT_CASE_REPORT.md).
 - Freeze independent original-only endpoint annotations on three new licensed portraits; identify preterminal Length strokes and preserve fixed-set/full-rerun endpoint-guard ablations. Neither experiment adopted: remaining artifacts and control-candidate loss keep Length HOLD. Product unchanged. See [positive endpoint report](G1C1_POSITIVE_ENDPOINT_REPORT.md).
 - V6 adds conservative Length-only abstention on observed crossing continuations, fixing the new closed-white-liner gate while preserving Density/Definition pixels. Geometry-jitter controls expose possible false vetoes/recall loss; useful Length remains HOLD. See [crossing report](G1C1_CROSSING_REPORT.md).
 - Expand QA with eight licensed original photo assets, frozen independent screening and both-engine native comparisons. Add a conservative unresolved-white-liner abstention gate; it reproduces a new Chromium failure. Product unchanged, Length HOLD. See [expanded dataset report](G1C1_EXPANDED_DATASET_REPORT.md).

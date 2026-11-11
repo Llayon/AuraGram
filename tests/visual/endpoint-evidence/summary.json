@@ -1,0 +1,1864 @@
+{
+  "meaning": "Fixed Chromium224 old identities in both decoders. Operator outcomes are diagnostic; manual axes are not runtime estimates. Offset probes move the physical measurement point, not a pure resampling-grid experiment.",
+  "cases": [
+    {
+      "id": "C104-right-old16",
+      "nativeRGBAEqual": true,
+      "source": {
+        "x": 478.241120568037,
+        "y": 2295.993913743442
+      },
+      "nativeRGBA_SHA256": "5ea2b0b9d0a5495c659a4fcf43487a8dbde2489aec8e6447a06ce6e0e07b9fc2",
+      "manual": {
+        "pointsSourceTowardDistal": [
+          [
+            478,
+            2296
+          ],
+          [
+            482,
+            2286
+          ],
+          [
+            485,
+            2276
+          ]
+        ],
+        "pointUncertaintyPx": 2,
+        "angleIntervalDegrees": [
+          -85,
+          -50
+        ],
+        "axisSource": "post-selection original-only critic, profiles unseen; modified images known from earlier selection",
+        "notes": "Visible oblique continuation, not a true endpoint or root annotation; nearby parallel hair cannot be ruled out."
+      }
+    },
+    {
+      "id": "PI729R1",
+      "nativeRGBAEqual": true,
+      "source": {
+        "x": 2951.5082734580037,
+        "y": 969.4180255267273
+      },
+      "nativeRGBA_SHA256": "e55d627e28e60a78ef8f23d93a48f60d4bab5d5f925742fd8514bf9be51cd19d",
+      "manual": {
+        "tipSource": [
+          2952,
+          973
+        ],
+        "tipUncertaintyPx": 4,
+        "pointsSourceTowardDistal": [
+          [
+            2951,
+            1003
+          ],
+          [
+            2952,
+            993
+          ],
+          [
+            2952,
+            983
+          ],
+          [
+            2952,
+            973
+          ]
+        ],
+        "angleIntervalDegrees": [
+          -115,
+          -65
+        ],
+        "axisSource": "previous frozen independent original-only annotation; not an exact terminal derivative"
+      }
+    },
+    {
+      "id": "PI729R2",
+      "nativeRGBAEqual": true,
+      "source": {
+        "x": 3086.5213587670323,
+        "y": 980.0786445133376
+      },
+      "nativeRGBA_SHA256": "ea5eb38c6cd64ef3b1f224cb591ac96168635cbfd93b08519074d7b7069e8983",
+      "manual": {
+        "tipSource": [
+          3084,
+          982
+        ],
+        "tipUncertaintyPx": 4,
+        "pointsSourceTowardDistal": [
+          [
+            3066,
+            1012
+          ],
+          [
+            3072,
+            1002
+          ],
+          [
+            3078,
+            992
+          ],
+          [
+            3084,
+            982
+          ]
+        ],
+        "angleIntervalDegrees": [
+          -85,
+          -35
+        ],
+        "axisSource": "previous frozen independent original-only annotation; not an exact terminal derivative"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 4.828629350611232,
+      "response0": 0.033550798892976796,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "continuing-transverse-ridge": 2,
+        "passes-existing-endpoint-check": 5,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 4.828629350611232,
+      "response0": 0.19419766605946837,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 2,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 4.828629350611232,
+      "response0": 0.1746001548419227,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 7,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 4.826193224432402,
+      "response0": 0.055973670086018584,
+      "maxResponseOffsets1to2": 0.0033221654843769155,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 4,
+        "passes-existing-endpoint-check": 5
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 4.826193224432402,
+      "response0": 0.3904015472925598,
+      "maxResponseOffsets1to2": 0.4745338482096437,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 3,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 4.826193224432402,
+      "response0": 0.19409790774066762,
+      "maxResponseOffsets1to2": 0.22320363277636157,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "continuing-transverse-ridge": 3
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 3.369230181210076,
+      "response0": 0.08533477784910415,
+      "maxResponseOffsets1to2": 0.10133235916960981,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 1,
+        "continuing-transverse-ridge": 6,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 3.369230181210076,
+      "response0": 0.24315917150163427,
+      "maxResponseOffsets1to2": 0.10475832450051092,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 2,
+        "continuing-transverse-ridge": 5,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 3.369230181210076,
+      "response0": 0.1746001548419227,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 7,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 3.3687141386624226,
+      "response0": 0.1455937638137419,
+      "maxResponseOffsets1to2": 0.2321303502892348,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 2,
+        "continuing-transverse-ridge": 7
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 3.3687141386624226,
+      "response0": 0.3384595088913266,
+      "maxResponseOffsets1to2": 0.49656614794760456,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 1,
+        "continuing-transverse-ridge": 7,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 3.3687141386624226,
+      "response0": 0.19409790774066762,
+      "maxResponseOffsets1to2": 0.23972185793528453,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "continuing-transverse-ridge": 3
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 2.8042040017524856,
+      "response0": 0.167992190643573,
+      "maxResponseOffsets1to2": 0.15376659303994045,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "continuing-transverse-ridge": 7,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 2.8042040017524856,
+      "response0": 0.26372806080118266,
+      "maxResponseOffsets1to2": 0.1759397722612312,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 1,
+        "continuing-transverse-ridge": 6,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 2.8042040017524856,
+      "response0": 0.1746001548419227,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "passes-existing-endpoint-check": 2,
+        "continuing-transverse-ridge": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 2.8041553910260975,
+      "response0": 0.23295870148253842,
+      "maxResponseOffsets1to2": 0.22807905451217303,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "continuing-transverse-ridge": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 2.8041553910260975,
+      "response0": 0.37201654539493434,
+      "maxResponseOffsets1to2": 0.5180986250798288,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 1,
+        "continuing-transverse-ridge": 8
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 2.8041553910260975,
+      "response0": 0.19409790774066762,
+      "maxResponseOffsets1to2": 0.24325658214568907,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "continuing-transverse-ridge": 3
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 2.6651547466525587,
+      "response0": 0.04105411469936261,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 5,
+        "continuing-transverse-ridge": 1,
+        "weak-fitted-tip-direction": 3
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 2.6651547466525587,
+      "response0": 0.03697440448288103,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 4,
+        "continuing-transverse-ridge": 2,
+        "weak-fitted-tip-direction": 3
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 2.6651547466525587,
+      "response0": 0.012759622603116444,
+      "maxResponseOffsets1to2": 0.010369589959005027,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "continuing-transverse-ridge": 2,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 2.6651347467962982,
+      "response0": 0.036784420609891635,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 5,
+        "continuing-transverse-ridge": 1,
+        "weak-fitted-tip-direction": 3
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 2.6651347467962982,
+      "response0": 0.03364413361007257,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 4,
+        "continuing-transverse-ridge": 1,
+        "weak-fitted-tip-direction": 4
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 2.6651347467962982,
+      "response0": 0.010793806606864187,
+      "maxResponseOffsets1to2": 0.009996437252457968,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "continuing-transverse-ridge": 2,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 1.8571025096355596,
+      "response0": 0.012621757175242276,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 5,
+        "continuing-transverse-ridge": 2,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 1.8571025096355596,
+      "response0": 0.03392218424375004,
+      "maxResponseOffsets1to2": 0.005529281591181115,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "passes-existing-endpoint-check": 3
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 1.8571025096355596,
+      "response0": 0.012759622603116444,
+      "maxResponseOffsets1to2": 0.015749969744049963,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 3,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.8570980761629023,
+      "response0": 0.009456562085436437,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 4,
+        "weak-fitted-tip-direction": 5
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.8570980761629023,
+      "response0": 0.03265395079900968,
+      "maxResponseOffsets1to2": 0.004275644623843097,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "passes-existing-endpoint-check": 3
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.8570980761629023,
+      "response0": 0.010793806606864187,
+      "maxResponseOffsets1to2": 0.01352920642277472,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 3,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 1.5448463354490496,
+      "response0": 0.021398506083627866,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 5,
+        "continuing-transverse-ridge": 2,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 1.5448463354490496,
+      "response0": 0.021467067336991053,
+      "maxResponseOffsets1to2": 0.006771196011945868,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 2,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 1.5448463354490496,
+      "response0": 0.012759622603116444,
+      "maxResponseOffsets1to2": 0.014095897337586594,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 4
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.5448456924466574,
+      "response0": 0.01943651880771552,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 5,
+        "continuing-transverse-ridge": 2,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.5448456924466574,
+      "response0": 0.019933634779640774,
+      "maxResponseOffsets1to2": 0.00696201643358102,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 2,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.5448456924466574,
+      "response0": 0.010793806606864187,
+      "maxResponseOffsets1to2": 0.01341552127128888,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 3,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 2.6562500485870597,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "passes-existing-endpoint-check": 2,
+        "continuing-transverse-ridge": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 2.6562500485870597,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 7,
+        "passes-existing-endpoint-check": 1,
+        "continuing-transverse-ridge": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 2.6562500485870597,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 2.6603974950327824,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 2.6603974950327824,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 2.6603974950327824,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.8551218100282492,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 8,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.8551218100282492,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 8,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.8551218100282492,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0.0006404704882299606,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.8560460248382222,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.8560460248382222,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.8560460248382222,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.5445586884776763,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.5445586884776763,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0.0005601825424518536,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.5445586884776763,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0.0005775120736332406,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.5446930021143919,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.5446930021143919,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.5446930021143919,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 4.828629350611232,
+      "response0": 0.17946960031986192,
+      "maxResponseOffsets1to2": 0.11027100309728566,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "continuing-transverse-ridge": 3,
+        "passes-existing-endpoint-check": 4,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 4.828629350611232,
+      "response0": 0.19419766605946837,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 2,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 4.828629350611232,
+      "response0": 0.1746001548419227,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 7,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 4.826193224432402,
+      "response0": 0.19285609913315366,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 3,
+        "continuing-transverse-ridge": 3,
+        "passes-existing-endpoint-check": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 4.826193224432402,
+      "response0": 0.3904015472925598,
+      "maxResponseOffsets1to2": 0.4745338482096437,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 3,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 4.826193224432402,
+      "response0": 0.19409790774066762,
+      "maxResponseOffsets1to2": 0.22320363277636157,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "continuing-transverse-ridge": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 3.369230181210076,
+      "response0": 0.08854883590056767,
+      "maxResponseOffsets1to2": 0.1802552434593582,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 1,
+        "continuing-transverse-ridge": 6,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 3.369230181210076,
+      "response0": 0.24315917150163427,
+      "maxResponseOffsets1to2": 0.10475832450051092,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 2,
+        "continuing-transverse-ridge": 5,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 3.369230181210076,
+      "response0": 0.1746001548419227,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 7,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 3.3687141386624226,
+      "response0": 0.14960462294558752,
+      "maxResponseOffsets1to2": 0.3073334783820798,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 2,
+        "continuing-transverse-ridge": 7
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 3.3687141386624226,
+      "response0": 0.3384595088913266,
+      "maxResponseOffsets1to2": 0.49656614794760456,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 1,
+        "continuing-transverse-ridge": 7,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 3.3687141386624226,
+      "response0": 0.19409790774066762,
+      "maxResponseOffsets1to2": 0.23972185793528453,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "continuing-transverse-ridge": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 2.8042040017524856,
+      "response0": 0.19820652621412727,
+      "maxResponseOffsets1to2": 0.15890306429018852,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "continuing-transverse-ridge": 7,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 2.8042040017524856,
+      "response0": 0.26372806080118266,
+      "maxResponseOffsets1to2": 0.1759397722612312,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 1,
+        "continuing-transverse-ridge": 6,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 2.8042040017524856,
+      "response0": 0.1746001548419227,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "passes-existing-endpoint-check": 2,
+        "continuing-transverse-ridge": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 2.804155391026097,
+      "response0": 0.2909722196425376,
+      "maxResponseOffsets1to2": 0.23352302267793745,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "continuing-transverse-ridge": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 2.804155391026097,
+      "response0": 0.3720165453949329,
+      "maxResponseOffsets1to2": 0.5180986250798288,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 1,
+        "continuing-transverse-ridge": 8
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -70.70995378081128,
+      "stepNative": 2.804155391026097,
+      "response0": 0.19409790774066762,
+      "maxResponseOffsets1to2": 0.24325658214568907,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "continuing-transverse-ridge": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 2.6651547466525587,
+      "response0": 0.0365729331970214,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 5,
+        "continuing-transverse-ridge": 1,
+        "weak-fitted-tip-direction": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 2.6651547466525587,
+      "response0": 0.03697440448288103,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 4,
+        "continuing-transverse-ridge": 2,
+        "weak-fitted-tip-direction": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 2.6651547466525587,
+      "response0": 0.012759622603116444,
+      "maxResponseOffsets1to2": 0.010369589959005027,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "continuing-transverse-ridge": 2,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 2.6651347467962987,
+      "response0": 0.03393424246289814,
+      "maxResponseOffsets1to2": 0.004073098102701053,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 5,
+        "continuing-transverse-ridge": 1,
+        "weak-fitted-tip-direction": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 2.6651347467962987,
+      "response0": 0.03364413361007257,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 4,
+        "continuing-transverse-ridge": 1,
+        "weak-fitted-tip-direction": 4
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 2.6651347467962987,
+      "response0": 0.010793806606864187,
+      "maxResponseOffsets1to2": 0.009996437252457968,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "continuing-transverse-ridge": 2,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 1.8571025096355596,
+      "response0": 0.01105135929899892,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 5,
+        "continuing-transverse-ridge": 2,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 1.8571025096355596,
+      "response0": 0.03392218424375004,
+      "maxResponseOffsets1to2": 0.005529281591181115,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "passes-existing-endpoint-check": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 1.8571025096355596,
+      "response0": 0.012759622603116444,
+      "maxResponseOffsets1to2": 0.015749969744049963,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 3,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.8570980761629026,
+      "response0": 0.008055333549522314,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 5,
+        "continuing-transverse-ridge": 1,
+        "weak-fitted-tip-direction": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.8570980761629026,
+      "response0": 0.03265395079900968,
+      "maxResponseOffsets1to2": 0.004275644623843097,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "passes-existing-endpoint-check": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.8570980761629026,
+      "response0": 0.010793806606864187,
+      "maxResponseOffsets1to2": 0.01352920642277472,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 3,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -90,
+      "stepNative": 1.5448463354490496,
+      "response0": 0.020603900017663213,
+      "maxResponseOffsets1to2": 0.0009716992746861691,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 5,
+        "continuing-transverse-ridge": 2,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -90,
+      "stepNative": 1.5448463354490496,
+      "response0": 0.021467067336991053,
+      "maxResponseOffsets1to2": 0.006771196011945868,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 2,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -90,
+      "stepNative": 1.5448463354490496,
+      "response0": 0.012759622603116444,
+      "maxResponseOffsets1to2": 0.014095897337586594,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 4
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.5448456924466571,
+      "response0": 0.01861560513674776,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "passes-existing-endpoint-check",
+      "anchorOffsetCounts": {
+        "passes-existing-endpoint-check": 5,
+        "continuing-transverse-ridge": 2,
+        "weak-fitted-tip-direction": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.5448456924466571,
+      "response0": 0.019933634779640774,
+      "maxResponseOffsets1to2": 0.00696201643358102,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 2,
+        "passes-existing-endpoint-check": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -88.09084756700362,
+      "stepNative": 1.5448456924466571,
+      "response0": 0.010793806606864187,
+      "maxResponseOffsets1to2": 0.01341552127128888,
+      "interpretation": "continuing-transverse-ridge",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 5,
+        "continuing-transverse-ridge": 3,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 2.65625004858706,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 6,
+        "passes-existing-endpoint-check": 3
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 2.65625004858706,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 7,
+        "passes-existing-endpoint-check": 1,
+        "continuing-transverse-ridge": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 2.65625004858706,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 2.6603974950327824,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 2.6603974950327824,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 224,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 2.6603974950327824,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.8551218100282492,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 8,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.8551218100282492,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 8,
+        "passes-existing-endpoint-check": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.8551218100282492,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0.0006404704882299606,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.8560460248382225,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.8560460248382225,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 320,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.8560460248382225,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "analysis",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.5445586884776765,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-scale-matched",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.5445586884776765,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0.0005601825424518536,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "stored-render-tangent",
+      "mode": "native-fine",
+      "axisDegrees": -45.19239929918166,
+      "stepNative": 1.5445586884776765,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0.0005775120736332406,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "analysis",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.544693002114392,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-scale-matched",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.544693002114392,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "cap": 384,
+      "direction": "annotated-local-shaft-axis",
+      "mode": "native-fine",
+      "axisDegrees": -59.03624346792648,
+      "stepNative": 1.544693002114392,
+      "response0": 0,
+      "maxResponseOffsets1to2": 0,
+      "interpretation": "weak-fitted-tip-direction",
+      "anchorOffsetCounts": {
+        "weak-fitted-tip-direction": 9
+      }
+    }
+  ]
+}

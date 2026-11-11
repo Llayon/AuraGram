@@ -29,3 +29,11 @@ curate-lash-positive.cjs -text
 replay-lash-positive.cjs -text
 validate-lash-positive.cjs -text
 lash-expanded-render.cjs -text
+lash-endpoint-case-select.cjs -text
+lash-endpoint-cases.json -text
+lash-endpoint-profile.mjs -text
+lash-endpoint-probe.cjs -text
+lash-endpoint-render-crops.cjs -text
+lash-endpoint-plot.py -text
+curate-lash-endpoint.cjs -text
+validate-lash-endpoint.cjs -text

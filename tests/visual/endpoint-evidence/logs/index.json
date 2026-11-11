@@ -1,0 +1,72 @@
+[
+  {
+    "file": "tipcase-02-chromium.log.txt",
+    "sha256": "c091bc4086a73664bf05408124e0d01a1aa0c27d88aea760aa374c32368b8703",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-03-chromium.log.txt",
+    "sha256": "dae1774b6870d7c982286457ae63f493d2bc6d1ef9ead918fe80c1a240db6fac",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-03-webkit.log.txt",
+    "sha256": "caf2c27ee4f8369752f3f64cc605c1d0f2a00c541d282fb35e5ae73ad4c0c372",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-04-plot-install.log.txt",
+    "sha256": "35ee68e40fda177f78496e4c019405b3d5d799b19ec66b057de520fdfd09bf1f",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-05-plots.log.txt",
+    "sha256": "754a316aac789c3ca54471a601fdc3f9a2d49af5ea6fc41ebec79801afe8ab40",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-06-unit.log.txt",
+    "sha256": "008e95d0b6c90e8aa9c6900d335f8754ad44f7ab129df28b8c634c3de2c4a108",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-07-browser.log.txt",
+    "sha256": "85e776d22a839a9aa8cdc9e131edc98b1ece2385a3610f6ecb25bc6fcb86d078",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-08-crops.log.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-09-curation.log.txt",
+    "sha256": "e748dc558e60a5f2e92cb9a47a6ca505ec8a9e087c9751eb483746bf5f219f73",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-10-curation.log.txt",
+    "sha256": "2579cce41c5c0b49757c02f8d780b63d920826537d51bf65a6525aa70fda552b",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-11-performance.log.txt",
+    "sha256": "9edd94b51f86494d5fd47fe8cd5657ef59581f4d2f271a1d52bf35b6775f6d23",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-12-build.log.txt",
+    "sha256": "c862820285b1b2f44eccbb6c5c16053e90a4c96a0f912d109a05263708ebbe99",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-12-checksite.log.txt",
+    "sha256": "bf8845d07dbf47c2c9bd59eaf5726740bfce33e55343cbb926fc1610caeadb7e",
+    "urlUserinfoRedactions": 0
+  },
+  {
+    "file": "tipcase-12-package.log.txt",
+    "sha256": "02f65488c4539214059d054bf7608045810e54ff484ed1eece4ac0fd4a39d4ce",
+    "urlUserinfoRedactions": 0
+  }
+]
