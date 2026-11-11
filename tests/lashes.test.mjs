@@ -19,6 +19,33 @@ import {
   lashDensityCurve, lashLengthCurve, lashDefinitionCurve,
   isNeutralLashes, lashCorrectionCount, fillDensityRGBA
 } from '../src/retouch/lashEnhancement.mjs';
+import {sampleObservedTipColor} from '../src/retouch/lashEnhancement.mjs';
+
+test('recovered tip sampling preserves the applied monochrome grade and source-pixel centres',()=>{
+ const data=new Uint8ClampedArray([20,20,20,255,40,40,40,255,60,60,60,255,80,80,80,255]);
+ const analysis={rw:2,rh:2},tip={evidence:{points:[{x:0,y:0},{x:0,y:0},{x:1,y:1}]}};
+ assert.deepEqual(sampleObservedTipColor(data,2,2,analysis,tip),[80,80,80]);
+ tip.evidence.points[2]={x:.5,y:.5};
+ assert.deepEqual(sampleObservedTipColor(data,2,2,analysis,tip),[50,50,50]);
+ assert.deepEqual(sampleObservedTipColor(data,2,2,analysis,tip,{x:.25,y:-.25,width:2,height:2}),[45,45,45]);
+});
+
+test('measured tip coordinates and widths scale through fractional preview/export ROI boundaries',()=>{
+ const tip={x:.25,y:.75,dx:0,dy:-1,c:.8,length:100,width:1};
+ const analysis={rw:100,rh:80},values=[];
+ for(const width of [300,1000]){
+  const height=width*1.5,roi={x0:.1013,y0:.4027,x1:.2782,y1:.515};
+  const originX=Math.round(roi.x0*width),originY=Math.round(roi.y0*height);
+  const rectangle={x:roi.x0*width-originX,y:roi.y0*height-originY,width:(roi.x1-roi.x0)*width,height:(roi.y1-roi.y0)*height};
+  const geometry=lengthGeometry(tip,analysis,Math.round(rectangle.width),Math.round(rectangle.height),width*.1,100,rectangle);
+  assert.ok(Math.abs(geometry.x+originX-.145525*width)<1e-10);
+  assert.ok(Math.abs(geometry.y+originY-.486925*height)<1e-10);
+  assert.ok(geometry.analysisLength<=3);
+  values.push(geometry);
+ }
+ assert.ok(Math.abs(values[1].width/values[0].width-1000/300)<1e-10);
+ assert.ok(Math.abs(values[1].length/values[0].length-1000/300)<1e-10);
+});
 
 test('density target preserves source brightness and scales with strength/confidence', () => {
   const ridge=new Uint8Array([255,255,255,255]), data=new Uint8ClampedArray(8*8*4);
@@ -242,13 +269,13 @@ describe('LF1-LF5 native ROI and topology',()=>{
  });
 });
 
-function ridgeFixture(mode='hair'){
+function ridgeFixture(mode='hair',options={}){
  const w=64,h=48,luma=new Float32Array(w*h).fill(.8);
  if(mode==='hair')for(let y=12;y<=30;y++)luma[y*w+32]=.15;
  if(mode==='eyeliner')for(let x=8;x<55;x++)luma[30*w+x]=.15;
  if(mode==='disconnected')for(let y=12;y<=24;y++)luma[y*w+32]=.15;
  if(mode==='blur')for(let y=10;y<=30;y++)for(let x=20;x<=44;x++)luma[y*w+x]=.8-.3*Math.exp(-(((x-32)/5)**2));
- return analyzeLuma(luma,w,h,[{x:4,y:32},{x:60,y:32}],[{x:4,y:40},{x:60,y:40}],24,{x:4,y:32});
+ return analyzeLuma(luma,w,h,[{x:4,y:32},{x:60,y:32}],[{x:4,y:40},{x:60,y:40}],24,{x:4,y:32},[],options);
 }
 
 describe('LF6-LF9 real structure evidence',()=>{
@@ -270,6 +297,37 @@ describe('LF6-LF9 real structure evidence',()=>{
 });
 
 describe('Recovery evidence separation and observed endpoints',()=>{
+ function boundaryFixture(continues=false) {
+  const width=64,height=64,luma=new Float32Array(width*height).fill(.8);
+  for(let y=20;y<=30;y++)luma[y*width+20]=.15;
+  for(let y=continues?3:11;y<=30;y++)luma[y*width+42]=.15;
+  const parameters=[luma,width,height,[{x:4,y:32},{x:60,y:32}],[{x:4,y:42},{x:60,y:42}],22,{x:4,y:32},[]];
+  return {base:analyzeLuma(...parameters),recovered:analyzeLuma(...parameters,{recoverBoundaryTips:true})};
+ }
+ test('boundary context recovers a real connected end while preserving Density and baseline tips',()=>{
+  const {base,recovered}=boundaryFixture();
+  assert.equal(base.tips.length,1);assert.equal(recovered.tips.length,2);
+  assert.deepEqual(recovered.tips.slice(0,base.tips.length),base.tips);
+  for(const field of ['densityRidge','densityConfidenceMap','rootConnectionMap'])assert.deepEqual(recovered[field],base[field]);
+  assert.equal(recovered.densityConfidence,base.densityConfidence);
+  assert.equal(recovered.baselineLengthConfidence,base.lengthConfidence);
+  const tip=recovered.tips.at(-1);
+  assert.ok(tip.evidence.boundaryRecovery&&tip.evidence.connected&&tip.c>=.6);
+  assert.ok(tip.evidence.tipDistance>=22-1.5);
+  assert.ok(tip.evidence.searchBandH<=22+4);
+  assert.ok(tip.evidence.endpointRidgeProfile.filter(point=>point.offset>=1&&point.offset<=2).every(point=>point.response<.006));
+  assert.equal(recovered.diagnostics.boundaryContext.recoveredTips,1);
+  assert.equal(recovered.typedArrayBytes,base.typedArrayBytes);
+  assert.equal(recovered.retainedTypedArrayBytes,base.retainedTypedArrayBytes);
+ });
+ test('context cannot turn a line continuing beyond available evidence into a tip',()=>{
+  const {base,recovered}=boundaryFixture(true);
+  assert.deepEqual(recovered.tips,base.tips);
+  assert.equal(recovered.diagnostics.boundaryContext.recoveredTips,0);
+ });
+ test('boundary recovery retains blur, eyeliner and disconnected-structure rejection',()=>{
+  for(const mode of ['blur','eyeliner','disconnected'])assert.equal(ridgeFixture(mode,{recoverBoundaryTips:true}).tips.length,0,mode);
+ });
  function line({weak=false,clipped=false}={}) {
   const w=64,h=48,luma=new Float32Array(w*h).fill(.8);
   for(let y=clipped?3:12;y<=30;y++)luma[y*w+32]=.15;

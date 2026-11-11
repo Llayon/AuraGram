@@ -65,7 +65,7 @@ async function main(){
      if(maxSide===224)Object.assign(analysis,value);
     }
     const perEye=Object.fromEntries(Object.entries(analysis).map(([s,v])=>[s,{roi:eyes[s].roi,confidence:v.confidence,reason:v.reason,densityConfidence:v.densityConfidence,lengthConfidence:v.lengthConfidence,diagnostics:v.diagnostics,tips:v.tips,traces:v.traces}]));
-    if(metadataOnly)return {file,engine,W,H,budgets,perEye,images:[]};
+    if(metadataOnly)return {file,engine,W,H,geometry:eyes,budgets,perEye,images:[]};
     const canvas=()=>{const c=document.createElement('canvas');c.width=W;c.height=H;c.getContext('2d').drawImage(source,0,0);return c;};
     const base=canvas(),before=base.getContext('2d').getImageData(0,0,W,H).data;base.width=base.height=0;
     const images=[],renderDiagnostics={},pixelEvidence={};

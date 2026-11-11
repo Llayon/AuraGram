@@ -1,0 +1,242 @@
+
+> auragram@0.5.1 test:e2e
+> node scripts/run-e2e.cjs --workers=1
+
+
+Running 167 tests using 1 worker
+
+node.exe : (node:28628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+строка:1 знак:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:28628) Wa... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   1 [chromium] › tests\e2e-colors.spec.js:5:1 › contrast slider changes real preview and exported PNG pixels (1.3s)
+  ok   2 [chromium] › tests\e2e-colors.spec.js:28:1 › every preset and intensity produces processed pixels in this browser (475ms)
+  ok   3 [chromium] › tests\e2e-colors.spec.js:48:1 › all adjustment sliders and artistic effects alter pixels (391ms)
+  ok   4 [chromium] › tests\e2e-colors.spec.js:64:1 › every adjustment control routes its minimum and maximum to visible preview changes (2.3s)
+  ok   5 [chromium] › tests\e2e-colors.spec.js:84:1 › software color transforms agree with native Canvas filters where supported (319ms)
+  x    6 [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry (1.7s)
+(node:25656) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   7 [chromium] › tests\e2e-colors.spec.js:124:1 › maximum lash density darkens real lashes without opaque black blocks (1.5s)
+  ok   8 [chromium] › tests\e2e-exporting.spec.js:10:1 › export waits for retouch and retains the settings captured at click (1.0s)
+  ok   9 [chromium] › tests\e2e-exporting.spec.js:44:1 › photo change during PNG encoding cancels export and invalidates old geometry before paint (1.0s)
+  ok  10 [chromium] › tests\e2e-exporting.spec.js:77:1 › PNG encoding failure restores controls and allows retry (502ms)
+  ok  11 [chromium] › tests\e2e-exporting.spec.js:90:1 › delayed face analysis follows rapid photo changes and export waits for the final photo (1.3s)
+  ok  12 [chromium] › tests\e2e-face.spec.js:118:1 › face: real inference finds the portrait face (884ms)
+  ok  13 [chromium] › tests\e2e-face.spec.js:139:1 › face: inference runs in the Web Worker when available (827ms)
+  ok  14 [chromium] › tests\e2e-face.spec.js:148:1 › face: off-center / landscape / portrait / no-face compositions (1.8s)
+  ok  15 [chromium] › tests\e2e-face.spec.js:171:1 › face: off-center bounds track the face position (1.0s)
+  ok  16 [chromium] › tests\e2e-face.spec.js:182:1 › face: rapid photo switch never applies stale landmarks (786ms)
+  ok  17 [chromium] › tests\e2e-face.spec.js:195:1 › face: blocked model degrades to failed, editor and export survive (464ms)
+  ok  18 [chromium] › tests\e2e-face.spec.js:214:1 › face: debug overlay renders and never leaks into export (3.2s)
+  ok  19 [chromium] › tests\e2e-face.spec.js:271:1 › face: no overlay without ?debugFace=1 (831ms)
+LF real analysis {"summaries":{"left":{"rw":98,"rh":69,"confidence":0.9771008424590681,"coverage":0.010169491525423728,"contrast":0.05065015858934491,"sharp":0.03229651255796185,"tips":0,"maxRidge":255,"ridgePixels":5,"ms":33.29999999701977,"reason":"ok"},"right":{"rw":113,"rh":67,"confidence":1,"coverage":0.030033370411568408,"contrast":0.061890693670372664,"sharp":0.04095822336510636,"tips":0,"maxRidge":255,"ridgePixels":25,"ms":16.700000002980232,"reason":"ok"}},"perf":[{"width":450,"changed":13,"times":[10.5,1.5,1.9000000059604645,1.2000000029802322,1.7000000029802322,2.100000001490116,1.5,1.0999999940395355,0.8999999985098839],"ran":["definition","density"]},{"width":900,"changed":55,"times":[8,4,3.2000000029802322,3.7000000029802322,3.2000000029802322,2.6999999955296516,2.100000001490116,3,2.2999999970197678],"ran":["definition","density"]}]}
+  ok  20 [chromium] › tests\e2e-fidelity.spec.js:3:1 › LF16 LF17 LF20 real native analysis, active render and scaled geometry (1.5s)
+Recovery real occlusion {"hiddenDifference":0,"left":{"confidence":0,"reason":"crossing-structures","tips":0,"crossingPaths":3,"axisCoverage":0.2822369614788697},"right":{"confidence":0.7689171760695295,"densityPixels":310}}
+  ok  21 [chromium] › tests\e2e-fidelity.spec.js:30:1 › Recovery rejects the real hair-covered eye while retaining visible-eye evidence (1.5s)
+Recovery real preview/export {"preview":{"difference":227,"renderMs":160.60000000149012,"ran":"length,lashes"},"exported":{"difference":597,"changed":67,"width":2400,"height":3600,"bytes":9224866,"ran":"length,lashes","renderMs":174.70000000298023}}
+  ok  22 [chromium] › tests\e2e-fidelity.spec.js:58:1 › Recovery active Length survives real preview and full PNG in both engines (3.1s)
+Boundary context real cache {"recoveredTips":2,"analysisMs":106.69999999552965,"samples":[{"length":25,"keyStable":true,"recoveredTips":2,"analysisMs":106.69999999552965,"ran":"length,lashes"},{"length":50,"keyStable":true,"recoveredTips":2,"analysisMs":106.69999999552965,"ran":"length,lashes"},{"length":75,"keyStable":true,"recoveredTips":2,"analysisMs":106.69999999552965,"ran":"length,lashes"},{"length":100,"keyStable":true,"recoveredTips":2,"analysisMs":106.69999999552965,"ran":"length,lashes"}],"repeatedPixelDifference":0}
+  ok  23 [chromium] › tests\e2e-fidelity.spec.js:93:1 › Boundary context recovers real terminal structures and keeps their analysis stable on sliders (1.6s)
+Boundary monochrome protection {"recoveredTips":2,"difference":96,"coloredPixels":0,"brightenedChannels":0,"ran":["length"]}
+  ok  24 [chromium] › tests\e2e-fidelity.spec.js:123:1 › Boundary recovery preserves a monochrome grade without brightening pixels (2.2s)
+  ok  25 [chromium] › tests\e2e-g1b1.spec.js:185:1 › I1 preset unchanged at Beauty=0 (Original/Vogue/Champagne) (2.4s)
+  ok  26 [chromium] › tests\e2e-g1b1.spec.js:206:1 › I2 glow zero-to-one preserves pixels outside skin mask (Vogue) (1.8s)
+  ok  27 [chromium] › tests\e2e-g1b1.spec.js:226:1 › I3 glow full range (25/50/100) keeps background locked (Vogue) (3.0s)
+  ok  28 [chromium] › tests\e2e-g1b1.spec.js:249:1 › I4 eyes zero-to-one preserves global look outside eye mask (2.0s)
+  ok  29 [chromium] › tests\e2e-g1b1.spec.js:269:1 › I5 eyes full range (25/50/100) keeps globals (Vogue) (2.9s)
+  ok  30 [chromium] › tests\e2e-g1b1.spec.js:291:1 › I6 blush isolation at 100 (cheeks change, background not) (1.9s)
+  ok  31 [chromium] › tests\e2e-g1b1.spec.js:315:1 › I7 blush100 spares eyes, brows, lips (1.6s)
+  ok  32 [chromium] › tests\e2e-g1b1.spec.js:342:1 › I8 no face: beauty skipped, preset stays on (962ms)
+  ok  33 [chromium] › tests\e2e-g1b1.spec.js:371:1 › I9 preview and export agree with glow/eyes/blush on (2.0s)
+  ok  34 [chromium] › tests\e2e-g1b1.spec.js:410:1 › I10 before/after round-trip (1.8s)
+  ok  35 [chromium] › tests\e2e-g1b1.spec.js:433:1 › I11 reset clears beauty, keeps face geometry (1.6s)
+  ok  36 [chromium] › tests\e2e-g1b1.spec.js:456:1 › I12 no paid inference with G1b.1 passes (2.0s)
+  ok  37 [chromium] › tests\e2e-g1b1.spec.js:473:1 › I13 real MediaPipe geometry + isolation on real face (2.1s)
+  ok  38 [chromium] › tests\e2e-integration.spec.js:4:1 › a delayed Telegram SDK does not block editing and initializes when ready (448ms)
+  ok  39 [chromium] › tests\e2e-lashes.spec.js:218:1 › L1 geometry mapping follows the detected eyes (1.2s)
+  ok  40 [chromium] › tests\e2e-lashes.spec.js:242:1 › L2 left and right eyes keep their own geometry (1.2s)
+  ok  41 [chromium] › tests\e2e-lashes.spec.js:259:1 › L3 zero lashes change nothing (2.4s)
+  ok  42 [chromium] › tests\e2e-lashes.spec.js:274:1 › L4 background isolation at full lashes (2.1s)
+  ok  43 [chromium] › tests\e2e-lashes.spec.js:290:1 › L5 protected regions survive full lashes (1.8s)
+  ok  44 [chromium] › tests\e2e-lashes.spec.js:306:43 › lash protection on a real tilted face (2.0s)
+  ok  45 [chromium] › tests\e2e-lashes.spec.js:306:43 › lash protection on a real cropped face (1.5s)
+  ok  46 [chromium] › tests\e2e-lashes.spec.js:334:1 › L6 density monotonicity without jumps or strips (2.7s)
+  ok  47 [chromium] › tests\e2e-lashes.spec.js:358:1 › L7 length monotonicity and spatial extension (2.3s)
+  ok  48 [chromium] › tests\e2e-lashes.spec.js:390:1 › L8 definition is band-local (1.7s)
+  ok  49 [chromium] › tests\e2e-lashes.spec.js:406:1 › L9 identical settings give identical pixels (2.1s)
+  ok  50 [chromium] › tests\e2e-lashes.spec.js:420:1 › L10 no face: lashes skip safely (943ms)
+  ok  51 [chromium] › tests\e2e-lashes.spec.js:443:1 › L11 blurred eyes are guarded (no black strokes) (1.6s)
+  ok  52 [chromium] › tests\e2e-lashes.spec.js:475:1 › L12 low-resolution portrait stays safe (962ms)
+  ok  53 [chromium] › tests\e2e-lashes.spec.js:502:1 › L13 preview and export agree with lashes on (2.1s)
+  ok  54 [chromium] › tests\e2e-lashes.spec.js:539:1 › L14 reset zeroes lashes, keeps geometry (1.6s)
+  ok  55 [chromium] › tests\e2e-lashes.spec.js:562:1 › L15 before/after round-trip with lashes (2.1s)
+  ok  56 [chromium] › tests\e2e-lashes.spec.js:583:1 › L16 preset independence (Vogue/Champagne globals kept) (3.8s)
+  ok  57 [chromium] › tests\e2e-lashes.spec.js:604:1 › L17 lash sliders never touch beauty.eyes and vice versa (2.3s)
+  ok  58 [chromium] › tests\e2e-lashes.spec.js:639:1 › L18 lash cache never leaks across photos (1.3s)
+  ok  59 [chromium] › tests\e2e-lashes.spec.js:655:1 › L19 no inference or re-analysis on slider moves (1.3s)
+  ok  60 [chromium] › tests\e2e-lashes.spec.js:783:1 › L21 memory: lash buffers bounded and reused (1.5s)
+  ok  61 [chromium] › tests\e2e-lashes.spec.js:801:1 › L22 real portrait: detection finds lashes and enhances them (1.6s)
+  ok  62 [chromium] › tests\e2e-lashes.spec.js:822:1 › L23 blush safe-skip without a buffer layer (310ms)
+  ok  63 [chromium] › tests\e2e-lashes.spec.js:875:1 › L24 golden regression vs G1b.1 baseline (461ms)
+  ok  64 [chromium] › tests\e2e-lashes.spec.js:930:1 › L25 no paid inference with lashes on (1.8s)
+  ok  65 [chromium] › tests\e2e-lashes.spec.js:947:1 › debugLashes overlay renders without touching export (14.3s)
+  ok  66 [chromium] › tests\e2e-mobile.spec.js:10:1 › offline UI has local styling, readable icons and a usable lash panel (537ms)
+  ok  67 [chromium] › tests\e2e-mobile.spec.js:33:32 › header and compare controls fit at 320px (421ms)
+  ok  68 [chromium] › tests\e2e-mobile.spec.js:33:32 › header and compare controls fit at 375px (418ms)
+  ok  69 [chromium] › tests\e2e-mobile.spec.js:47:1 › caption field remains reachable and compare restores the edit (472ms)
+  ok  70 [chromium] › tests\e2e-mobile.spec.js:61:1 › offline export produces a downloadable PNG (1.0s)
+  ok  71 [chromium] › tests\e2e-mobile.spec.js:72:1 › system share receives the completed PNG (1.0s)
+  ok  72 [chromium] › tests\e2e-mobile.spec.js:87:71 › export dialog fits 320x568 (935ms)
+  ok  73 [chromium] › tests\e2e-mobile.spec.js:87:71 › export dialog fits 375x667 (922ms)
+  ok  74 [chromium] › tests\e2e-retouch.spec.js:122:1 › R1 neutral render equals the original pixels (349ms)
+  ok  75 [chromium] › tests\e2e-retouch.spec.js:151:1 › R7 zero strength is identity for every tool (1.0s)
+  ok  76 [chromium] › tests\e2e-retouch.spec.js:164:1 › R3/R4/R5 protected regions and background survive smooth100 (1.4s)
+  ok  77 [chromium] › tests\e2e-retouch.spec.js:205:1 › R6 monotonic smooth; texture and mole survive at 100 (2.8s)
+  ok  78 [chromium] › tests\e2e-retouch.spec.js:283:1 › R8 antired isolation: red background object and lips spared (1.5s)
+  ok  79 [chromium] › tests\e2e-retouch.spec.js:352:1 › R9 no face: retouch skipped, editor works (896ms)
+  ok  80 [chromium] › tests\e2e-retouch.spec.js:377:1 › R11 reset preserves valid geometry of the same photo (1.1s)
+  ok  81 [chromium] › tests\e2e-retouch.spec.js:401:1 › R12 geometry follows the current photo (1.2s)
+  ok  82 [chromium] › tests\e2e-retouch.spec.js:422:1 › R13 preview and export agree within tolerance (1.8s)
+  ok  83 [chromium] › tests\e2e-retouch.spec.js:468:1 › R15 half-cropped face is kept, not dropped (906ms)
+  ok  84 [chromium] › tests\e2e-retouch.spec.js:490:1 › R17 debugSkin export equality (15.2s)
+  ok  85 [chromium] › tests\e2e-retouch.spec.js:531:1 › R2 mask geometry is resolution-stable (1.3s)
+  ok  86 [chromium] › tests\e2e-retouch.spec.js:557:1 › R18 no external AI calls and no photo uploads (1.3s)
+  ok  87 [chromium] › tests\e2e-retouch.spec.js:575:1 › P1/P2 tools are face-localized and bounded (2.9s)
+  ok  88 [chromium] › tests\e2e-retouch.spec.js:631:1 › R10 beauty with failed detection degrades safely (538ms)
+  ok  89 [chromium] › tests\e2e-retouch.spec.js:648:1 › R16 large-photo export stays handled (1.8s)
+  ok  90 [chromium] › tests\e2e-retouch.spec.js:691:1 › R19 real retouch keeps texture on a real portrait (1.7s)
+  ok  91 [chromium] › tests\e2e-retouch.spec.js:738:1 › tones: synthetic skin tones keep texture, spare background (510ms)
+  ok  92 [chromium] › tests\e2e-retouch.spec.js:820:1 › occlusion: refinement spares the glasses bar (370ms)
+  ok  93 [chromium] › tests\e2e-session.spec.js:16:1 › history groups slider input, skips UI navigation and synchronizes undo/redo (778ms)
+  ok  94 [chromium] › tests\e2e-session.spec.js:36:1 › preset, caption, frame, autostyle and reset are independent undoable actions (1.1s)
+  ok  95 [chromium] › tests\e2e-session.spec.js:56:1 › keyboard history preserves native text editing and does not rerun face detection (1.2s)
+  ok  96 [chromium] › tests\e2e-session.spec.js:74:1 › opt-in session restores the original photo and settings with a fresh history (2.2s)
+  ok  97 [chromium] › tests\e2e-session.spec.js:91:1 › clear deletes persisted photo, cancels pending saving and survives reload (2.2s)
+  ok  98 [chromium] › tests\e2e-session.spec.js:102:1 › new photo clears history only after successful decoding (477ms)
+  ok  99 [chromium] › tests\e2e-session.spec.js:112:1 › unavailable storage leaves editing and export usable (1.4s)
+  ok 100 [chromium] › tests\e2e-session.spec.js:122:1 › session controls fit narrow screens and status explains unavailable retouch (811ms)
+  ok 101 [chromium] › tests\e2e-session.spec.js:144:1 › corrupt records and quota errors do not block editing (1.5s)
+  ok 102 [chromium] › tests\e2e-session.spec.js:167:1 › upload takes precedence over a delayed saved-session read (3.7s)
+  ok 103 [chromium] › tests\e2e-session.spec.js:190:1 › retouch cache matches fresh renders across grade, size and photo changes (1.2s)
+  ok 104 [chromium] › tests\e2e-stability.spec.js:9:1 › negative Noir saturation retains the same grade as zero saturation (292ms)
+  ok 105 [chromium] › tests\e2e-stability.spec.js:24:1 › all preset and saturation combinations produce accepted canvas grades (381ms)
+  ok 106 [chromium] › tests\e2e-stability.spec.js:46:1 › lash definition leaves skin above the lash band untouched (345ms)
+  ok 107 [chromium] › tests\e2e-stability.spec.js:63:1 › inner corners are protected on both tilted eyes (550ms)
+  ok 108 [chromium] › tests\e2e-stability.spec.js:85:1 › lash length and stroke width scale with export resolution (1.1s)
+  ok 109 [chromium] › tests\e2e-styles.spec.js:9:1 › saved style survives reload, applies in one undo step and retains the current caption (1.3s)
+  ok 110 [chromium] › tests\e2e-styles.spec.js:26:1 › rename, update and delete change the library without editing the photo (1.2s)
+  ok 111 [chromium] › tests\e2e-styles.spec.js:45:1 › duplicate names are rejected and markup names remain literal text (621ms)
+  ok 112 [chromium] › tests\e2e-styles.spec.js:53:1 › storage denial and quota failure keep photo editing available and preserve saved styles (827ms)
+  ok 113 [chromium] › tests\e2e-styles.spec.js:68:1 › invalid library can only be replaced by explicit clearing and session deletion keeps styles (708ms)
+  ok 114 [chromium] › tests\e2e-styles.spec.js:76:1 › style dialog fits 320px, scrolls long libraries and restores keyboard focus (605ms)
+  ok 115 [chromium] › tests\e2e.spec.js:58:1 › T1 app boots without critical errors (342ms)
+  ok 116 [chromium] › tests\e2e.spec.js:69:1 › T2 user can upload a photo (372ms)
+  ok 117 [chromium] › tests\e2e.spec.js:82:1 › T3 corrupt image does not break the editor (1.6s)
+  ok 118 [chromium] › tests\e2e.spec.js:98:1 › T4 rapid switching causes no load race (354ms)
+  ok 119 [chromium] › tests\e2e.spec.js:110:1 › T5 preset changes image; T6 reset returns original (360ms)
+  ok 120 [chromium] › tests\e2e.spec.js:130:1 › T7 hold shows original; T8 release restores edit (797ms)
+  ok 121 [chromium] › tests\e2e.spec.js:155:1 › T9/T10 export reuses settings and produces a valid PNG (877ms)
+  ok 122 [chromium] › tests\e2e.spec.js:180:1 › T12 no fake Telegram sending (300ms)
+  ok 123 [chromium] › tests\e2e.spec.js:191:3 › T13 controls reachable at 320x568 (391ms)
+  ok 124 [chromium] › tests\e2e.spec.js:191:3 › T13 controls reachable at 375x667 (378ms)
+  ok 125 [chromium] › tests\e2e.spec.js:191:3 › T13 controls reachable at 390x844 (353ms)
+  ok 126 [chromium] › tests\e2e.spec.js:191:3 › T13 controls reachable at 430x932 (364ms)
+  ok 127 [chromium] › tests\e2e.spec.js:203:1 › T13 desktop 1280x800 layout (342ms)
+(node:25256) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 128 [webkit-mobile] › tests\e2e-colors.spec.js:5:1 › contrast slider changes real preview and exported PNG pixels (3.3s)
+  ok 129 [webkit-mobile] › tests\e2e-colors.spec.js:28:1 › every preset and intensity produces processed pixels in this browser (1.3s)
+  ok 130 [webkit-mobile] › tests\e2e-colors.spec.js:48:1 › all adjustment sliders and artistic effects alter pixels (2.9s)
+  ok 131 [webkit-mobile] › tests\e2e-colors.spec.js:64:1 › every adjustment control routes its minimum and maximum to visible preview changes (8.6s)
+  ok 132 [webkit-mobile] › tests\e2e-colors.spec.js:84:1 › software color transforms agree with native Canvas filters where supported (2.8s)
+  x  133 [webkit-mobile] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry (6.3s)
+(node:26852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 134 [webkit-mobile] › tests\e2e-colors.spec.js:124:1 › maximum lash density darkens real lashes without opaque black blocks (4.0s)
+LF real analysis {"summaries":{"left":{"rw":98,"rh":69,"confidence":0.9454444375260879,"coverage":0.009019165727170236,"contrast":0.048633495068118524,"sharp":0.030748619738936826,"tips":0,"maxRidge":242,"ridgePixels":6,"ms":41,"reason":"ok"},"right":{"rw":113,"rh":67,"confidence":1,"coverage":0.027777777777777776,"contrast":0.06452676418339225,"sharp":0.042067346167233254,"tips":0,"maxRidge":255,"ridgePixels":24,"ms":15,"reason":"ok"}},"perf":[{"width":450,"changed":11,"times":[17,10,8,10,10,10,10,10,8],"ran":["definition","density"]},{"width":900,"changed":35,"times":[23,18,19,20,21,17,15,19,18],"ran":["definition","density"]}]}
+  ok 135 [webkit-mobile] › tests\e2e-fidelity.spec.js:3:1 › LF16 LF17 LF20 real native analysis, active render and scaled geometry (3.1s)
+Recovery real occlusion {"hiddenDifference":0,"left":{"confidence":0,"reason":"crossing-structures","tips":0,"crossingPaths":4,"axisCoverage":0.4046794993235599},"right":{"confidence":0.8794320560403013,"densityPixels":341}}
+  ok 136 [webkit-mobile] › tests\e2e-fidelity.spec.js:30:1 › Recovery rejects the real hair-covered eye while retaining visible-eye evidence (4.8s)
+Recovery real preview/export {"preview":{"difference":68,"renderMs":185,"ran":"length,lashes"},"exported":{"difference":224,"changed":56,"width":2400,"height":3600,"bytes":6283204,"ran":"length,lashes","renderMs":272}}
+  ok 137 [webkit-mobile] › tests\e2e-fidelity.spec.js:58:1 › Recovery active Length survives real preview and full PNG in both engines (9.2s)
+Boundary context real cache {"recoveredTips":2,"analysisMs":140,"samples":[{"length":25,"keyStable":true,"recoveredTips":2,"analysisMs":140,"ran":"length,lashes"},{"length":50,"keyStable":true,"recoveredTips":2,"analysisMs":140,"ran":"length,lashes"},{"length":75,"keyStable":true,"recoveredTips":2,"analysisMs":140,"ran":"length,lashes"},{"length":100,"keyStable":true,"recoveredTips":2,"analysisMs":140,"ran":"length,lashes"}],"repeatedPixelDifference":0}
+  ok 138 [webkit-mobile] › tests\e2e-fidelity.spec.js:93:1 › Boundary context recovers real terminal structures and keeps their analysis stable on sliders (5.9s)
+Boundary monochrome protection {"recoveredTips":2,"difference":27,"coloredPixels":0,"brightenedChannels":0,"ran":["length"]}
+  ok 139 [webkit-mobile] › tests\e2e-fidelity.spec.js:123:1 › Boundary recovery preserves a monochrome grade without brightening pixels (5.6s)
+  ok 140 [webkit-mobile] › tests\e2e-mobile.spec.js:10:1 › offline UI has local styling, readable icons and a usable lash panel (4.4s)
+  ok 141 [webkit-mobile] › tests\e2e-mobile.spec.js:33:32 › header and compare controls fit at 320px (3.5s)
+  ok 142 [webkit-mobile] › tests\e2e-mobile.spec.js:33:32 › header and compare controls fit at 375px (3.3s)
+  ok 143 [webkit-mobile] › tests\e2e-mobile.spec.js:47:1 › caption field remains reachable and compare restores the edit (4.0s)
+  ok 144 [webkit-mobile] › tests\e2e-mobile.spec.js:61:1 › offline export produces a downloadable PNG (4.4s)
+  ok 145 [webkit-mobile] › tests\e2e-mobile.spec.js:72:1 › system share receives the completed PNG (5.1s)
+  ok 146 [webkit-mobile] › tests\e2e-mobile.spec.js:87:71 › export dialog fits 320x568 (4.4s)
+  ok 147 [webkit-mobile] › tests\e2e-mobile.spec.js:87:71 › export dialog fits 375x667 (4.5s)
+  ok 148 [webkit-mobile] › tests\e2e-session.spec.js:16:1 › history groups slider input, skips UI navigation and synchronizes undo/redo (5.5s)
+  ok 149 [webkit-mobile] › tests\e2e-session.spec.js:36:1 › preset, caption, frame, autostyle and reset are independent undoable actions (6.4s)
+  ok 150 [webkit-mobile] › tests\e2e-session.spec.js:56:1 › keyboard history preserves native text editing and does not rerun face detection (5.1s)
+  ok 151 [webkit-mobile] › tests\e2e-session.spec.js:74:1 › opt-in session restores the original photo and settings with a fresh history (7.1s)
+  ok 152 [webkit-mobile] › tests\e2e-session.spec.js:91:1 › clear deletes persisted photo, cancels pending saving and survives reload (5.6s)
+  ok 153 [webkit-mobile] › tests\e2e-session.spec.js:102:1 › new photo clears history only after successful decoding (3.9s)
+  ok 154 [webkit-mobile] › tests\e2e-session.spec.js:112:1 › unavailable storage leaves editing and export usable (4.9s)
+  ok 155 [webkit-mobile] › tests\e2e-session.spec.js:122:1 › session controls fit narrow screens and status explains unavailable retouch (4.5s)
+  ok 156 [webkit-mobile] › tests\e2e-session.spec.js:144:1 › corrupt records and quota errors do not block editing (5.2s)
+  ok 157 [webkit-mobile] › tests\e2e-session.spec.js:167:1 › upload takes precedence over a delayed saved-session read (8.3s)
+  ok 158 [webkit-mobile] › tests\e2e-session.spec.js:190:1 › retouch cache matches fresh renders across grade, size and photo changes (5.6s)
+  ok 159 [webkit-mobile] › tests\e2e-styles.spec.js:9:1 › saved style survives reload, applies in one undo step and retains the current caption (7.8s)
+  ok 160 [webkit-mobile] › tests\e2e-styles.spec.js:26:1 › rename, update and delete change the library without editing the photo (7.0s)
+  ok 161 [webkit-mobile] › tests\e2e-styles.spec.js:45:1 › duplicate names are rejected and markup names remain literal text (5.3s)
+  ok 162 [webkit-mobile] › tests\e2e-styles.spec.js:53:1 › storage denial and quota failure keep photo editing available and preserve saved styles (6.0s)
+  ok 163 [webkit-mobile] › tests\e2e-styles.spec.js:68:1 › invalid library can only be replaced by explicit clearing and session deletion keeps styles (5.0s)
+  ok 164 [webkit-mobile] › tests\e2e-styles.spec.js:76:1 › style dialog fits 320px, scrolls long libraries and restores keyboard focus (4.9s)
+
+
+  1) [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+
+    Error: length
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 10
+    Received:   0
+
+      119 |     return results;
+      120 |   });
+    > 121 |   for(const result of results)expect(result.difference,result.id).toBeGreaterThan(10);
+          |                                                                   ^
+      122 | });
+      123 |
+      124 | test('maximum lash density darkens real lashes without opaque black blocks',async({page})=>{
+        at D:\Programms\alisagram\tests\e2e-colors.spec.js:121:67
+
+    Error Context: test-results\e2e-colors-each-Beauty-too-c121f-ls-with-valid-face-geometry-chromium\error-context.md
+
+  2) [webkit-mobile] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+
+    Error: length
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 10
+    Received:   0
+
+      119 |     return results;
+      120 |   });
+    > 121 |   for(const result of results)expect(result.difference,result.id).toBeGreaterThan(10);
+          |                                                                   ^
+      122 | });
+      123 |
+      124 | test('maximum lash density darkens real lashes without opaque black blocks',async({page})=>{
+        at D:\Programms\alisagram\tests\e2e-colors.spec.js:121:67
+
+    Error Context: test-results\e2e-colors-each-Beauty-too-c121f-ls-with-valid-face-geometry-webkit-mobile\error-context.md
+
+  2 failed
+    [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+    [webkit-mobile] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+  3 did not run
+  162 passed (6.5m)

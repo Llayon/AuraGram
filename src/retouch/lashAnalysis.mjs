@@ -45,7 +45,7 @@ export function scoreConfidence({ sharp01, coverage, contrast01, usable }) {
   return { confidence, reason: confidence < 0.25 ? 'weak' : 'ok' };
 }
 
-export const LASH_ANALYSIS_VERSION = 'g1c1-recovery-4';
+export const LASH_ANALYSIS_VERSION = 'g1c1-recovery-5-boundary-context';
 
 /** Closest point on the canonical upper arc, in actual bitmap pixels.
  * Signed distance is positive OUTSIDE the eye. No screen-y assumption.
@@ -153,9 +153,12 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
     diagnostics:{potentialRidgePixels:0,densityPixels:0,tracingSeeds:0,tracedStructures:0,rejectionCounts:{},crossing},
     typedArrayBytes:n*49,retainedTypedArrayBytes:n*5};
   let count=0, hits=0, lapSum=0, contrastSum=0;
+  let measuredContextPixels=0;
+  function measureRidges(maxDistance, minDistance = 0) {
   for(let y=3;y<h-3;y++) for(let x=3;x<w-3;x++) {
+    if(minDistance>0 && valid[y*w+x])continue;
     const i=y*w+x, f=lidFrame(lid,lower,x,y);
-    if(!f || f.distance<0.5 || f.distance>bandH || Math.hypot(x-inner.x,y-inner.y)<eyeW*.12||crossesHair(x,y)) continue;
+    if(!f || f.distance<0.5 || f.distance<=minDistance || f.distance>maxDistance || Math.hypot(x-inner.x,y-inner.y)<eyeW*.12||crossesHair(x,y)) continue;
     // No extrapolation beyond either corner; partial-crop pixels are skipped.
     const a=lid[0], b=lid.at(-1), vx=b.x-a.x, vy=b.y-a.y;
     const u=((x-a.x)*vx+(y-a.y)*vy)/(vx*vx+vy*vy);
@@ -168,7 +171,9 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
       sample(luma,w,h,x+f.nx*bandH*.7+f.ny*3,y+f.ny*bandH*.7-f.nx*3));
     if(f.distance<=Math.max(3,bandH*.35) && skin-v>.07)rootSupport[i]=1;
     const lap=Math.abs(4*v-luma[i-1]-luma[i+1]-luma[i-w]-luma[i+w]);
-    sharp[i]=lap; lapSum+=lap; count++;
+    sharp[i]=lap;
+    if(f.distance<=bandH){lapSum+=lap;count++;}
+    else measuredContextPixels++;
     let best=0, bx=0, by=0, bestIndex=0;
     const responses=[];
     for(let directionIndex=0;directionIndex<directions.length;directionIndex++) {
@@ -199,13 +204,16 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
     ridgeResponseMap[i]=Math.round(Math.min(1,best/.15)*255);
     anisotropy[i]=Math.max(0,(best-Math.max(0,responses[(bestIndex+4)%8]))/best);
     ridge[i]=Math.round(255*smoothstep(.018,.09,best));
-    if(ridge[i]>40) { hits++; contrastSum+=best; }
+    if(ridge[i]>40 && f.distance<=bandH) { hits++; contrastSum+=best; }
   }
+  }
+  measureRidges(bandH);
   // A contrast transition can tie several filter directions at one observed
   // pixel. Resolve only a single ambiguous sample bracketed by two directly
   // observed, aligned valleys. Context-resolved pixels cannot propagate this
   // rule, and the transverse dark valley must still exist in the image.
-  let contextualSamples=0;
+  let contextualSamples=0, baselineDirectionUpdates=0;
+  function resolveContextDirections() {
   for(let y=3;y<h-3;y++)for(let x=3;x<w-3;x++) {
     const i=y*w+x;
     if(!responseMap[i]||anisotropy[i]>=.5)continue;
@@ -219,9 +227,12 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
       const valley=Math.min(sample(luma,w,h,x+px*1.5,y+py*1.5),sample(luma,w,h,x-px*1.5,y-py*1.5))-luma[i];
       if(valley<.006)continue;
       dx[i]=dx[j];dy[i]=dy[j];anisotropy[i]=Math.min(anisotropy[j],anisotropy[k]);
+      if(measuredContextPixels && distance[i]<=bandH)baselineDirectionUpdates++;
       contextOrientation[i]=1;contextualSamples++;break;
     }
   }
+  }
+  resolveContextDirections();
   // Density needs local thin-detail evidence, not an entire root-to-tip trace.
   // Compare aligned neighbours and transverse/longitudinal contrast to reject
   // isolated noise and lid-parallel makeup. Do not multiply by global coverage:
@@ -288,8 +299,11 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
     densityPixels++;densityWeight+=q;
   }
   const traces=[], tips=[], used=new Uint8Array(n), rejectionCounts={};
+  const clippedSeeds=[];
+  let tracingPhase='baseline';
   let tracedStructures=0;
   const recordTrace=trace=>{
+    if(tracingPhase==='boundary-context')trace.boundaryRecovery=true;
     tracedStructures++;
     rejectionCounts[trace.reason]=(rejectionCounts[trace.reason]||0)+1;
     if(traces.length<128)traces.push(trace);
@@ -297,7 +311,8 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
   const seeds=[];
   for(let i=0;i<n;i++) if(ridge[i]>60 && distance[i]>Math.max(3,bandH*.18)) seeds.push(i);
   seeds.sort((a,b)=>distance[b]-distance[a] || ridge[b]-ridge[a] || a-b);
-  for(const strongSeed of seeds) {
+  function traceSeeds(seedList, searchBandH) {
+  for(const strongSeed of seedList) {
     if(tips.length>=48) break;
     if(used[strongSeed]) continue;
     // Strong seeds are not automatically visible tips. Follow actual faint
@@ -319,7 +334,8 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
       if(next<0)break;
       seed=next;outwardSeen.add(seed);outwardPath.push(seed);
     }
-    if(distance[seed]>=bandH-1.5||seed%w<=3||seed%w>=w-4||Math.floor(seed/w)<=3||Math.floor(seed/w)>=h-4) {
+    if(distance[seed]>=searchBandH-1.5||seed%w<=3||seed%w>=w-4||Math.floor(seed/w)<=3||Math.floor(seed/w)>=h-4) {
+      if(tracingPhase==='baseline')clippedSeeds.push(strongSeed);
       recordTrace({points:outwardPath.map(i=>({x:i%w,y:Math.floor(i/w)})),reason:'clipped-tip',confidence:0});
       continue;
     }
@@ -390,6 +406,46 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
       width+=radius;
     }
     if(width>4){trace.reason='wide';recordTrace(trace);continue;} // thick makeup / clump is not a fine hair
+    if(tracingPhase==='boundary-context') {
+      // Only revisit the former endpoint guard. The same measured path must
+      // still reach the lid and pass the existing renderer confidence gates.
+      const sharpGate=smoothstep(.005,.035,count?lapSum/count:0);
+      if(distance[seed]<bandH-1.5 || c<.6 || c*sharpGate<.25)continue;
+      const prefix=points.slice(0,distal.length);
+      const overlapsDistalPath=tips.some(existing=>{
+        if(Math.abs(existing.dx*tx+existing.dy*ty)<.85)return false;
+        const other=existing.evidence.points.slice(0,existing.evidence.distalCount);
+        const close=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y)<=1;
+        // Use both observed distal prefixes, never the merged root route.
+        return prefix.filter(p=>other.some(q=>close(p,q))).length>=3 &&
+          other.filter(p=>prefix.some(q=>close(p,q))).length>=3;
+      });
+      if(overlapsDistalPath){trace.reason='duplicate-distal-path';recordTrace(trace);continue;}
+      trace.referenceBandH=bandH;trace.searchBandH=searchBandH;trace.clippedSeed=strongSeed;
+      trace.endpointRidgeProfile=[-2,-1,0,.5,1,1.5,2,3].map(offset=>{
+        const x=tip.x+tx*offset,y=tip.y+ty*offset,center=sample(luma,w,h,x,y);
+        const along=(sample(luma,w,h,x+tx,y+ty)+sample(luma,w,h,x-tx,y-ty))*.5;
+        let response=0,transverseContrast=-Infinity;
+        for(const radius of [.75,1.5]){
+          const left=sample(luma,w,h,x-ty*radius,y+tx*radius),right=sample(luma,w,h,x+ty*radius,y-tx*radius);
+          const farLeft=sample(luma,w,h,x-ty*radius*5/3,y+tx*radius*5/3),farRight=sample(luma,w,h,x+ty*radius*5/3,y-tx*radius*5/3);
+          const valley=Math.min(left-center,right-center,(farLeft+farRight)*.5-center);
+          transverseContrast=Math.max(transverseContrast,valley);
+          response=Math.max(response,valley-Math.max(0,along-center)*.5);
+        }
+        return {offset,center,transverseContrast,response};
+      });
+      if(trace.endpointRidgeProfile.find(p=>p.offset===0).response<.006){
+        trace.reason='weak-fitted-tip-direction';recordTrace(trace);continue;
+      }
+      // An orientation failure alone is not a visible endpoint. Confirm that
+      // the measured transverse valley falls below the existing observation
+      // floor over consecutive samples beyond the tip, even on a darkening
+      // background. Do not mistake background luma slope for a hair ending.
+      if(trace.endpointRidgeProfile.some(p=>p.offset>=1&&p.offset<=2&&p.response>=.006)){
+        trace.reason='continuing-transverse-ridge';recordTrace(trace);continue;
+      }
+    }
     recordTrace(trace);
     tips.push({x:(tip.x+.5)/w,y:(tip.y+.5)/h,dx:tx,dy:ty,c,length:observedLength,width,
       evidence:trace});
@@ -398,15 +454,35 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
       for(let oy=-2;oy<=2;oy++) for(let ox=-2;ox<=2;ox++) if(x+ox>=0&&x+ox<w&&y+oy>=0&&y+oy<h) used[(y+oy)*w+x+ox]=1;
     }
   }
+  }
+  traceSeeds(seeds,bandH);
+  const baselineTipCount=tips.length;
+  const referenceSharpGate=smoothstep(.005,.035,count?lapSum/count:0);
+  const baselineLengthConfidence=tips.reduce((maximum,tip)=>Math.max(maximum,tip.c),0)*referenceSharpGate;
+  let lengthSearchBandH=bandH;
+  if(options.recoverBoundaryTips && clippedSeeds.length && tips.length<48 && referenceSharpGate>=.25) {
+    // Context is for Length only. Freeze the already-computed Density maps
+    // before measuring an extra filter-support radius (2.5px) plus the
+    // existing endpoint guard (1.5px). Root/skin/brow/seed scales stay bandH.
+    lengthSearchBandH=Math.min(h*.45,bandH+4);
+    if(lengthSearchBandH>bandH) {
+      measureRidges(lengthSearchBandH,bandH);
+      resolveContextDirections();
+      tracingPhase='boundary-context';
+      traceSeeds(clippedSeeds,lengthSearchBandH);
+    }
+  }
   const sharp01=count?lapSum/count:0, coverage=count?hits/count:0, contrast01=hits?contrastSum/hits:0;
   // Pixel coverage is not column coverage: gate separately from legacy score.
   const sharpGate=smoothstep(.005,.035,sharp01);
   const densityConfidence=densityPixels?sharpGate:0;
   const lengthConfidence=tips.reduce((a,t)=>Math.max(a,t.c),0)*sharpGate;
+  const boundaryLengthConfidence=tips.slice(baselineTipCount).reduce((maximum,tip)=>Math.max(maximum,tip.c),0)*sharpGate;
   const confidence=Math.max(densityConfidence,lengthConfidence);
-  return {ridge,ridgeResponseMap,densityRidge,densityConfidenceMap,rootConnectionMap,densityConfidence,lengthConfidence,
+  return {ridge,ridgeResponseMap,densityRidge,densityConfidenceMap,rootConnectionMap,densityConfidence,lengthConfidence,baselineLengthConfidence,boundaryLengthConfidence,
     tips,traces,sharp01,coverage,contrast01,confidence,reason:confidence<.01?'blurry':confidence<.25?'weak':'ok',
-    diagnostics:{potentialRidgePixels:hits,densityPixels,densityWeight,contextualSamples,tracingSeeds:seeds.length,tracedStructures,rejectionCounts,crossing},
+    diagnostics:{potentialRidgePixels:hits,densityPixels,densityWeight,contextualSamples,tracingSeeds:seeds.length,tracedStructures,rejectionCounts,crossing,
+      boundaryContext:{baselineTipCount,recoveredTips:tips.length-baselineTipCount,clippedSeeds:clippedSeeds.length,measuredContextPixels,baselineDirectionUpdates,referenceBandH:bandH,searchBandH:lengthSearchBandH}},
     typedArrayBytes:n*49, retainedTypedArrayBytes:ridge.byteLength+ridgeResponseMap.byteLength+densityRidge.byteLength+densityConfidenceMap.byteLength+rootConnectionMap.byteLength,
     ...(options.debug?{debug:{responseMap,anisotropy,dx,dy,distance,valid}}:{})};
 }
@@ -430,13 +506,14 @@ export function analyzeEye(src, eyeDesc, side, budget) {
     const lid=eyeDesc.upperLid.map(toRoi), lower=eyeDesc.lowerLid.map(toRoi);
     const mid=lid[Math.floor(lid.length/2)], low=lower[Math.floor(lower.length/2)];
     const bandH=Math.max(3,Math.min(rh*.45,Math.hypot(mid.x-low.x,mid.y-low.y)*.65));
-    const result=analyzeLuma(luma,rw,rh,lid,lower,bandH,toRoi(eyeDesc.inner),(eyeDesc.browPoints||[]).map(toRoi));
+    const result=analyzeLuma(luma,rw,rh,lid,lower,bandH,toRoi(eyeDesc.inner),(eyeDesc.browPoints||[]).map(toRoi),{recoverBoundaryTips:true});
     // Sample the actual observed hair colour; no universal black ink.
     for(const tip of result.tips) {
       const p=tip.evidence.points[Math.min(2,tip.evidence.points.length-1)], i=(p.y*rw+p.x)*4;
       tip.color=[data[i],data[i+1],data[i+2]];
     }
-    return {...result,side,size,rw,rh,lidRoi:lid.map(p=>({x:p.x/rw,y:p.y/rh})),bandH:bandH/rh,ms:performance.now()-t0};
+    return {...result,side,size,rw,rh,lidRoi:lid.map(p=>({x:p.x/rw,y:p.y/rh})),bandH:bandH/rh,
+      lengthBandH:(result.diagnostics?.boundaryContext?.recoveredTips?result.diagnostics.boundaryContext.searchBandH:bandH)/rh,ms:performance.now()-t0};
   } catch(e) { return empty('eye-unusable'); }
   finally { c.width=0;c.height=0; }
 }

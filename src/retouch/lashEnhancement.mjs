@@ -74,13 +74,33 @@ function sizeCanvas(c, w, h) {
 }
 
 /** Measured candidate geometry; shared with diagnostics, independent of density. */
-export function lengthGeometry(tip, an, rw, rh, eyeHeight, strength) {
-  const vx=tip.dx*rw/an.rw,vy=tip.dy*rh/an.rh,vl=Math.hypot(vx,vy);
+export function lengthGeometry(tip, an, rw, rh, eyeHeight, strength, sourceRect=null) {
+  const width=sourceRect?.width??rw,height=sourceRect?.height??rh;
+  const vx=tip.dx*width/an.rw,vy=tip.dy*height/an.rh,vl=Math.hypot(vx,vy);
   if(!vl)return null;
-  const maximum=Math.min(3*rw/an.rw,eyeHeight*.12);
+  const maximum=Math.min(3*(sourceRect?vl:rw/an.rw),eyeHeight*.12);
   const length=Math.min(maximum,tip.length*vl*.12)*lashLengthCurve(strength);
-  return {x:tip.x*rw,y:tip.y*rh,ex:tip.x*rw+vx/vl*length,ey:tip.y*rh+vy/vl*length,
+  const x=tip.x*width+(sourceRect?.x??0),y=tip.y*height+(sourceRect?.y??0);
+  return {x,y,ex:x+vx/vl*length,ey:y+vy/vl*length,
     length,analysisLength:length/vl,width:tip.width*vl*.65,confidence:tip.c};
+}
+
+/** Observed body colour after the user's grade and existing lash controls.
+ * Bilinear sampling uses the same normalized measured sample in preview and
+ * export. This keeps recovered tips inside a monochrome or tinted grade.
+ */
+export function sampleObservedTipColor(rgba, width, height, analysis, tip, sourceRect=null) {
+  const points=tip.evidence.points;
+  const point=points[Math.min(2,points.length-1)];
+  const x=Math.max(0,Math.min(width-1,(point.x+.5)*(sourceRect?.width??width)/analysis.rw+(sourceRect?.x??0)-.5));
+  const y=Math.max(0,Math.min(height-1,(point.y+.5)*(sourceRect?.height??height)/analysis.rh+(sourceRect?.y??0)-.5));
+  const x0=Math.floor(x),y0=Math.floor(y),x1=Math.min(width-1,x0+1),y1=Math.min(height-1,y0+1);
+  const fx=x-x0,fy=y-y0;
+  return [0,1,2].map(channel=>{
+    const top=rgba[(y0*width+x0)*4+channel]*(1-fx)+rgba[(y0*width+x1)*4+channel]*fx;
+    const bottom=rgba[(y1*width+x0)*4+channel]*(1-fx)+rgba[(y1*width+x1)*4+channel]*fx;
+    return Math.round(top*(1-fy)+bottom*fy);
+  });
 }
 
 /**
@@ -184,11 +204,11 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
     const getBand=(height,kind)=>{
       // Fixed four slots; only small masks are cached (<=1MiB total).
       // Geometry, render size and feather scale all participate in identity.
-      const index=eyeIndex*2+kind,key=JSON.stringify([rw,rh,height,lidOut,lowerOut,browOut,innerOut,scale]);
-      const cached=scratch.bandCache[index];
+      const index=kind===undefined?null:eyeIndex*2+kind,key=JSON.stringify([rw,rh,height,lidOut,lowerOut,browOut,innerOut,scale]);
+      const cached=index===null?null:scratch.bandCache[index];
       if(cached?.key===key){mx.putImageData(cached.image,0,0);return true;}
       const ready=buildBandMask(mx,rw,rh,lidOut,height,browOut,innerOut,lowerOut,scale);
-      if(ready&&rw*rh<=65536)scratch.bandCache[index]={key,image:mx.getImageData(0,0,rw,rh)};
+      if(ready&&index!==null&&rw*rh<=65536)scratch.bandCache[index]={key,image:mx.getImageData(0,0,rw,rh)};
       return ready;
     };
     const bandReady = getBand(bandUpPx,0);
@@ -243,14 +263,31 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
     // --- Length: extend confident tips with fading tapers (source-over). ---
     if (lenK > 0 && (an.lengthConfidence ?? an.confidence) >= .25 && an.tips && an.tips.length) {
       const maxLen = Math.min(3 * pxPerAnPx, (desc.h * H) * .12);
+      // The scratch bitmap is integer-clipped, but measured positions belong
+      // to the exact normalized source ROI. Keep its fractional origin/scale.
+      const sourceRect={x:desc.roi.x0*W-rx0,y:desc.roi.y0*H-ry0,
+        width:(desc.roi.x1-desc.roi.x0)*W,height:(desc.roi.y1-desc.roi.y0)*H};
+      const groups=[
+        {tips:an.tips.filter(tip=>!tip.evidence?.boundaryRecovery),height:bandUpPx+maxLen,cacheKind:1,confidence:an.baselineLengthConfidence??an.lengthConfidence??an.confidence,composite:'source-over',recovered:false},
+        {tips:an.tips.filter(tip=>tip.evidence?.boundaryRecovery),height:Math.max(bandUpPx,(an.lengthBandH??an.bandH)*rh)+maxLen,cacheKind:undefined,confidence:an.boundaryLengthConfidence??0,composite:'darken',recovered:true}
+      ];
+      let gradedPixels=null;
+      if(groups[1].tips.length && groups[1].confidence>=.25){
+        // Read the reusable ROI scratch, before either Length cohort draws.
+        // Colour then stays independent of Length strength and its strokes.
+        c1x.clearRect(0,0,rw,rh);c1x.drawImage(tctx.canvas,rx0,ry0,rw,rh,0,0,rw,rh);
+        gradedPixels=c1x.getImageData(0,0,rw,rh).data;
+      }
+      for(const group of groups){
+      if(!group.tips.length||group.confidence<.25)continue;
       c2x.clearRect(0,0,rw,rh);c2x.lineCap='round';
       let drew=false;
-      for(const tip of an.tips) {
+      for(const tip of group.tips) {
         if(!tip.evidence?.connected || tip.c<.6 || !tip.color) continue;
-        const geometry=lengthGeometry(tip,an,rw,rh,desc.h*H,lashes.length);
+        const geometry=lengthGeometry(tip,an,rw,rh,desc.h*H,lashes.length,group.recovered?sourceRect:null);
         if(!geometry||geometry.length<=0) continue;
         const {x:tx,y:ty,ex,ey}=geometry;
-        const [r,g,b]=tip.color;
+        const [r,g,b]=group.recovered?sampleObservedTipColor(gradedPixels,rw,rh,an,tip,sourceRect):tip.color;
         // Fixed candidate set; continuous geometry, width and opacity. No
         // slider-dependent seed count or fan, no minimum visible jump.
         for(let k=0;k<6;k++) {
@@ -262,20 +299,21 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
         }
         drew=true;
         lengthAttempts++;
-        if(extensions)extensions.push({...geometry,x:tx+rx0,y:ty+ry0,ex:ex+rx0,ey:ey+ry0});
+        if(extensions)extensions.push({...geometry,boundaryRecovery:!!tip.evidence.boundaryRecovery,x:tx+rx0,y:ty+ry0,ex:ex+rx0,ey:ey+ry0});
       }
       if (drew) {
         // Extension may reach slightly above the band — allow headroom.
-        if (getBand(bandUpPx + maxLen,1)) {
+        if (getBand(group.height,group.cacheKind)) {
           c2x.globalCompositeOperation = 'destination-in';
           c2x.drawImage(scratch.mask, 0, 0);
           c2x.globalCompositeOperation = 'source-over';
           tctx.save();
-          tctx.globalCompositeOperation = 'source-over';
+          tctx.globalCompositeOperation = group.composite;
           tctx.drawImage(scratch.c2, rx0, ry0);
           tctx.restore();
-          eyeRan.push('length');
+          if(!eyeRan.includes('length'))eyeRan.push('length');
         }
+      }
       }
     }
     tctx.restore(); // un-clip ROI

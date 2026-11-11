@@ -468,8 +468,10 @@ export function createRetouchSession() {
     ensureLashAnalysis,
     lashInfo: () => (S.lashAn ? {
       key: S.lashKey,
-      left: { confidence: S.lashAn.left.confidence, reason: S.lashAn.left.reason, tips: S.lashAn.left.tips.length },
-      right: { confidence: S.lashAn.right.confidence, reason: S.lashAn.right.reason, tips: S.lashAn.right.tips.length }
+      left: { confidence: S.lashAn.left.confidence, reason: S.lashAn.left.reason, tips: S.lashAn.left.tips.length,
+        recoveredTips: S.lashAn.left.diagnostics?.boundaryContext?.recoveredTips || 0 },
+      right: { confidence: S.lashAn.right.confidence, reason: S.lashAn.right.reason, tips: S.lashAn.right.tips.length,
+        recoveredTips: S.lashAn.right.diagnostics?.boundaryContext?.recoveredTips || 0 }
     } : null),
     curves: { smoothCurve, antiredCurve, glowCurve, eyesCurve, blushCurve, sculptCurve },
     timings: () => ({ maskBuildMs: S.lastMaskMs, retouchMs: S.lastRetouchMs, deredMs: S.lastDeredMs, lashAnalyseMs: S.lastLashAnalyseMs, lashEnhanceMs: S.lastLashEnhanceMs }),

@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'../..'),base='b02fac3c684f2a7e3178933cb66ded9
 const photos={beauty:['photo-1534528741775-53994a69daeb',3000],natural:['photo-1524504388940-b1c1722653e1',2400],mascara:['photo-1517841905240-472988babdf9',2400],glasses:['photo-1524250502761-1ac6f2e30d43',2400],light:['photo-1508214751196-bcfd4ca60f91',2400]};
 function download(url,target){return new Promise((resolve,reject)=>{https.get(url,res=>{if(res.statusCode!==200){res.resume();return reject(new Error(url+': '+res.statusCode));}const out=fs.createWriteStream(target);res.pipe(out);out.on('finish',()=>out.close(resolve));out.on('error',reject);}).on('error',reject);});}
 async function main(){
- for(const [ref,folder] of [[base,'baseline-src'],['f496403afdd4b8399dcb492ecb83e9e304f0c0d3','recovery-baseline-src']]){
+ for(const [ref,folder] of [[base,'baseline-src'],['f496403afdd4b8399dcb492ecb83e9e304f0c0d3','recovery-baseline-src'],['b46b2855f3b8cbd4e0fd990c420bfbdf15151557','recovery4-src']]){
  const files=cp.execFileSync('git',['ls-tree','-r','--name-only',ref,'src/retouch','src/vision','src/rendering'],{cwd:root,encoding:'utf8'}).trim().split('\n');
  for(const file of files){const target=path.join(__dirname,'out',folder,file.slice(4));fs.mkdirSync(path.dirname(target),{recursive:true});if(!fs.existsSync(target))fs.writeFileSync(target,cp.execFileSync('git',['show',ref+':'+file],{cwd:root}));}
  }

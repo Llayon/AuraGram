@@ -102,3 +102,5 @@ WebKit mobile: версия файлов совпадает, контраст pr
 Native ROI / structure-tracing experiment is on `feat/g1c1-lash-fidelity`. It is not a release or a closed gauntlet. See [G1C1_REPORT.md](G1C1_REPORT.md) for artifacts, independent critique and red gates.
 
 Recovery results: [G1C1_RECOVERY_REPORT.md](G1C1_RECOVERY_REPORT.md). Density efficacy and crossing-hair safety improved; Length visual usefulness remains HOLD. PR#5 stays Draft and production0.5.1 is unchanged.
+
+Boundary-context localization follow-up: [G1C1_LOCALIZATION_REPORT.md](G1C1_LOCALIZATION_REPORT.md). Provisional original-only annotations, independent critic, both-engine frozen controls and active performance are preserved. Selected endpoint localization improves; useful Length and original F1 remain HOLD. No production publication.

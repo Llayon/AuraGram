@@ -89,3 +89,73 @@ test('Recovery active Length survives real preview and full PNG in both engines'
  console.log('Recovery real preview/export '+JSON.stringify({preview,exported}));
  await testInfo.attach('active-preview-export.json',{body:JSON.stringify({preview,exported},null,2),contentType:'application/json'});
 });
+
+test('Boundary context recovers real terminal structures and keeps their analysis stable on sliders',async({page},testInfo)=>{
+ await page.goto('/index.html');await page.waitForFunction(()=>!!window.AuraGram);
+ await page.setInputFiles('#fileInput',path.join(__dirname,'visual/g1c1-evidence/natural-full-original.jpg'));
+ await page.waitForFunction(()=>window.AuraGram.face.status()==='ready',null,{timeout:100000});
+ await page.waitForFunction(()=>window.AuraGram.retouch.ready());
+ const result=await page.evaluate(()=>{
+  const A=window.AuraGram;A.resetAll();A.state.lashes.length=100;A.renderStudioCanvas();
+  const canvas=document.getElementById('mainCanvas'),context=canvas.getContext('2d');
+  const firstPixels=context.getImageData(0,0,canvas.width,canvas.height).data;
+  const first=A.lash.info(),analysisMs=A.retouch.timings().lashAnalyseMs;
+  const recovered=info=>(info.left.recoveredTips||0)+(info.right.recoveredTips||0);
+  const samples=[25,50,75,100].map(length=>{
+   A.state.lashes.length=length;A.renderStudioCanvas();
+   const info=A.lash.info();
+   return {length,keyStable:info.key===first.key,recoveredTips:recovered(info),analysisMs:A.retouch.timings().lashAnalyseMs,ran:A.stats.retouchRan};
+  });
+  const lastPixels=context.getImageData(0,0,canvas.width,canvas.height).data;
+  let repeatedPixelDifference=0;for(let index=0;index<lastPixels.length;index++)repeatedPixelDifference+=Math.abs(lastPixels[index]-firstPixels[index]);
+  return {recoveredTips:recovered(first),analysisMs,samples,repeatedPixelDifference};
+ });
+ expect(result.recoveredTips).toBeGreaterThan(0);
+ expect(result.repeatedPixelDifference).toBe(0);
+ for(const sample of result.samples){
+  expect(sample.keyStable).toBe(true);expect(sample.analysisMs).toBe(result.analysisMs);
+  expect(sample.recoveredTips).toBe(result.recoveredTips);expect(sample.ran).toContain('length');
+ }
+ console.log('Boundary context real cache '+JSON.stringify(result));
+ await testInfo.attach('boundary-context-real-cache.json',{body:JSON.stringify(result,null,2),contentType:'application/json'});
+});
+
+test('Boundary recovery preserves a monochrome grade without brightening pixels',async({page},testInfo)=>{
+ await page.goto('/index.html');await page.waitForFunction(()=>!!window.AuraGram);
+ await page.setInputFiles('#fileInput',path.join(__dirname,'visual/g1c1-evidence/natural-full-original.jpg'));
+ await page.waitForFunction(()=>window.AuraGram.face.status()==='ready',null,{timeout:100000});
+ const result=await page.evaluate(async()=>{
+  const {describeEyes}=await import('/src/retouch/eyeGeometry.mjs');
+  const {analyzeEye}=await import('/src/retouch/lashAnalysis.mjs');
+  const {applyLashPass}=await import('/src/retouch/lashEnhancement.mjs');
+  const regions=window.AuraGram.face.store().faces[0].regions;
+  const eyes=describeEyes(regions,Math.max(...regions.faceOval.map(p=>p.x))-Math.min(...regions.faceOval.map(p=>p.x)));
+  const image=new Image();image.src='/tests/visual/g1c1-evidence/natural-full-original.jpg';await image.decode();
+  const analysis=Object.fromEntries(['left','right'].map(side=>{
+   const value=analyzeEye(image,eyes[side],side);
+   return [side,{...value,tips:value.tips.filter(tip=>tip.evidence?.boundaryRecovery)}];
+  }));
+  const recoveredTips=analysis.left.tips.length+analysis.right.tips.length;
+  const canvas=document.createElement('canvas');canvas.width=image.width;canvas.height=image.height;
+  try{
+   const context=canvas.getContext('2d');context.drawImage(image,0,0);
+   window.AuraGramCanvasFilters.applyPixelsFilter(context,'saturate(0%)');
+   const before=context.getImageData(0,0,canvas.width,canvas.height).data;
+   const applied=applyLashPass(context,canvas.width,canvas.height,eyes,analysis,{density:0,length:100,definition:0},{});
+   const after=context.getImageData(0,0,canvas.width,canvas.height).data;
+   let difference=0,coloredPixels=0,brightenedChannels=0;
+   for(let index=0;index<after.length;index+=4){
+    if(after[index]!==after[index+1]||after[index+1]!==after[index+2])coloredPixels++;
+    for(let channel=0;channel<3;channel++){
+     difference+=Math.abs(after[index+channel]-before[index+channel]);
+     if(after[index+channel]>before[index+channel])brightenedChannels++;
+    }
+   }
+   return {recoveredTips,difference,coloredPixels,brightenedChannels,ran:applied.ran};
+  }finally{canvas.width=canvas.height=0;}
+ });
+ expect(result.recoveredTips).toBeGreaterThan(0);expect(result.difference).toBeGreaterThan(10);
+ expect(result.coloredPixels).toBe(0);expect(result.brightenedChannels).toBe(0);expect(result.ran).toContain('length');
+ console.log('Boundary monochrome protection '+JSON.stringify(result));
+ await testInfo.attach('boundary-monochrome-protection.json',{body:JSON.stringify(result,null,2),contentType:'application/json'});
+});

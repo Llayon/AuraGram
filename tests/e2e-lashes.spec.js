@@ -752,13 +752,15 @@ test('L20 performance: active Density and connected Length on real natural portr
    for(let i=0;i<9;i++){const t=performance.now();A.renderStudioCanvas();times.push(performance.now()-t);}
    times.sort((a,b)=>a-b);return {median:times[4],times,ran:A.stats.retouchRan};};
   const off=samples({}),active=samples(strengths);
+  const lashInfo=A.lash.info(),recoveredTips=(lashInfo.left.recoveredTips||0)+(lashInfo.right.recoveredTips||0);
   return {fixture:'natural-full-original.jpg',strengths,width:c.width,height:c.height,coldAnalysisMs,off,active,
-   delta:active.median-off.median,lengthDifference,densityDifference,lengthRan,
+   delta:active.median-off.median,lengthDifference,densityDifference,lengthRan,recoveredTips,
    keyStable:key===A.lash.info().key,analysisMsStable:coldAnalysisMs===A.retouch.timings().lashAnalyseMs};
  });
  console.log('Recovery active perf '+JSON.stringify(result));
  await testInfo.attach('active-lash-performance.json',{body:JSON.stringify(result,null,2),contentType:'application/json'});
  expect(result.lengthDifference,'actual Length-only preview pixels').toBeGreaterThan(10);
+ expect(result.recoveredTips,'measured boundary recovery participates in timed Length').toBeGreaterThan(0);
  expect(result.densityDifference,'actual Density-only preview pixels').toBeGreaterThan(10);
  expect(result.lengthRan).toContain('length');expect(result.active.ran).toContain('density');expect(result.active.ran).toContain('length');
  expect(result.keyStable&&result.analysisMsStable,'no slider-time analysis').toBe(true);

@@ -2,6 +2,7 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- Boundary-context follow-up: recover selected observed tips with additional native-ROI context; preserve existing Density/Definition and baseline Length pixels. Correct new-tip fractional mapping and graded color. Endpoint localization improved, but useful natural Length remains unproven; original efficacy tests remain red. See [localization report](G1C1_LOCALIZATION_REPORT.md). No release.
 - Recovery: separate local Density evidence from strict Length evidence, normalize local contrast and reject observed crossing-hair structures. Preserve bilinear compositing and the35% darkening cap.
 - Cache bounded geometry masks; retain all original test thresholds. Density efficacy/L6/L22 recovered; Length visual usefulness and two original efficacy checks remain HOLD. See [Recovery report](G1C1_RECOVERY_REPORT.md).
 
