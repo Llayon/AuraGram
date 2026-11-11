@@ -1,0 +1,49 @@
+
+> auragram@0.5.1 test:e2e
+> node scripts/run-e2e.cjs --project=chromium-performance --no-deps --workers=1
+
+
+Running 3 tests using 1 worker
+
+node.exe : (node:33740) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+строка:1 знак:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:33740) Wa... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+I14 perf {"times":{"blush0":{"ms":75.3999999910593,"w":864,"h":1080,"ran":"","maskMs":0,"retouchMs":0},"blush50":{"ms":89.80000001192093,"w":864,"h":1080,"ran":"blush","maskMs":23,"retouchMs":20.599999994039536},"blush100":{"ms":98.8999999910593,"w":864,"h":1080,"ran":"blush","maskMs":23,"retouchMs":22.799999997019768},"glowEyes":{"ms":112.69999998807907,"w":864,"h":1080,"ran":"glow,eyes","maskMs":23,"retouchMs":26.900000005960464},"all":{"ms":192.59999999403954,"w":864,"h":1080,"ran":"smooth,antired,glow,eyes,blush,sculpt","maskMs":23,"retouchMs":83.09999999403954}},"ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36","hw":16}
+  ok 1 [chromium-performance] › tests\e2e-g1b1.spec.js:498:1 › I14 performance: no slider-time inference, bounded render cost (2.5s)
+L20 perf {"base":{"median":77.40000000596046,"samples":[74.5,77,77.40000000596046,77.70000000298023,79.8999999910593],"w":864,"h":1080,"analyseMs":0,"enhanceMs":0,"ran":""},"lashed":{"median":94.5,"samples":[84.29999999701977,87.09999999403954,94.5,96.6000000089407,98.29999999701977],"w":864,"h":1080,"analyseMs":66.79999999701977,"enhanceMs":25.69999998807907,"ran":"definition,density,lashes"},"full":{"median":88,"samples":[79.79999999701977,85.40000000596046,88,90.70000000298023,91.8999999910593],"w":864,"h":1080,"analyseMs":66.79999999701977,"enhanceMs":22.600000008940697,"ran":"definition,density,lashes"},"ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36","hw":16}
+  x  2 [chromium-performance] › tests\e2e-lashes.spec.js:686:1 › L20 performance: lash warm cost within budget (3.3s)
+(node:28696) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Recovery active perf {"fixture":"natural-full-original.jpg","strengths":{"density":35,"length":100,"definition":25},"width":720,"height":1080,"coldAnalysisMs":185.20000000298023,"off":{"median":16.600000008940697,"times":[15.299999997019768,15.5,16.30000001192093,16.400000005960464,16.600000008940697,17,18.099999994039536,18.5,20.5],"ran":""},"active":{"median":24.5,"times":[21.700000002980232,22.200000002980232,22.299999997019768,23.099999994039536,24.5,25.100000008940697,26.799999997019768,26.80000001192093,33.599999994039536],"ran":"definition,density,length,lashes"},"delta":7.899999991059303,"lengthDifference":227,"densityDifference":206,"lengthRan":"length,lashes","recoveredTips":2,"keyStable":true,"analysisMsStable":true}
+Recovery full export {"renderMs":242.1000000089407,"encodeMs":377.20000000298023,"buttonToBlobMs":700.2000000029802,"width":2400,"height":3600,"bytes":9225180,"ran":"definition,density,length,lashes"}
+  ok 3 [chromium-performance] › tests\e2e-lashes.spec.js:735:1 › L20 performance: active Density and connected Length on real natural portrait (3.2s)
+
+
+  1) [chromium-performance] › tests\e2e-lashes.spec.js:686:1 › L20 performance: lash warm cost within budget 
+
+    Error: lash warm delta within +15ms
+
+    expect(received).toBeLessThan(expected)
+
+    Expected: < 15
+    Received:   17.099999994039536
+
+      729 |   expect(res.lashed.median, 'warm render finishes').toBeLessThan(2000);
+      730 |   // Target budget: +15ms over the lash-free warm render at 864×1080.
+    > 731 |   expect(res.lashed.median - res.base.median, 'lash warm delta within +15ms').toBeLessThan(15);
+          |                                                                               ^
+      732 |   expect(res.full.w * res.full.h > 0, 'nonzero canvas').toBe(true);
+      733 | });
+      734 |
+        at D:\Programms\alisagram\tests\e2e-lashes.spec.js:731:79
+
+    Error Context: test-results\e2e-lashes-L20-performance-lash-warm-cost-within-budget-chromium-performance\error-context.md
+
+  1 failed
+    [chromium-performance] › tests\e2e-lashes.spec.js:686:1 › L20 performance: lash warm cost within budget 
+  2 passed (12.3s)

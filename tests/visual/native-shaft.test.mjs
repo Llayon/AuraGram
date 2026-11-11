@@ -3,6 +3,7 @@ import{analyzeNativeShaft}from'./lash-native-shaft.mjs';
 import{checkShaftContinuity}from'./lash-native-continuity.mjs';
 import{probeAnchor}from'./lash-anchor-probe.mjs';
 import{inspectLoss}from'./lash-loss-profiles.mjs';
+import{followCurve}from'./lash-curve-probe.mjs';
 const protocol=JSON.parse(fs.readFileSync(new URL('./lash-shaft-protocol.json',import.meta.url)));
 function fixture(kind){const w=80,h=80,luma=new Float32Array(w*h);for(let y=0;y<h;y++)for(let x=0;x<w;x++){
  const center=40-Math.tan(Math.PI/12)*(y-20),gauss=d=>Math.exp(-d*d/(2*.35*.35));
@@ -73,4 +74,25 @@ test('missing loss or automatic axis does not initiate a new profile search',()=
   const r=inspectLoss(new Float32Array(1),1,1,{x:0,y:0},a,loss,{sx:1,sy:1,margin:1.5,protocol:lossProtocol,centerProtocol:protocol});
   assert.equal(r.available,false);assert.equal(r.rows.length,0);assert.equal(r.endpointConfirmed,false);
  }
+});
+
+const curveProtocol=JSON.parse(fs.readFileSync(new URL('./lash-curve-protocol.json',import.meta.url)));
+function curveFixture(kind){const w=80,h=80,luma=Float32Array.from({length:w*h},(_,i)=>{
+ const x=i%w,y=Math.floor(i/w),g=d=>Math.exp(-d*d/(2*.35*.35));
+ if(kind==='gap'&&y===27)return .8;
+ const fork=kind==='fork'?Math.max(0,30-y)*.6:0;
+ return .8-.55*Math.max(g(x-40-fork),g(x-40+fork));
+});return{w,h,luma};}
+function runCurve(kind,eligibility={body:true,association:true}){const f=curveFixture(kind);return followCurve(f.luma,f.w,f.h,{x:40,y:34},vertical,eligibility,{margin:1.5,protocol:curveProtocol});}
+test('bounded native following retains a straight supported shaft without endpoint approval',()=>{
+ const r=runCurve('straight');assert.equal(r.reason,'arc-budget');assert.ok(r.points.at(-1).arc<=12);assert.ok(r.points.length>10);assert.ok(r.attempts.every(a=>a.linkAccepted));assert.equal(r.endpointConfirmed,false);
+});
+test('a symmetric fork cannot be silently selected as one supported continuation',()=>{
+ const r=runCurve('fork');assert.notEqual(r.reason,'arc-budget');assert.ok(r.points.at(-1).y>27);assert.equal(r.outcome,'UNKNOWN');assert.equal(r.attempts.at(-1).linkAccepted,undefined);
+});
+test('native curve following stops at a gap and never resumes beyond it',()=>{
+ const r=runCurve('gap');assert.ok(r.points.at(-1).y>27);assert.notEqual(r.reason,'arc-budget');assert.equal(r.endpointConfirmed,false);
+});
+test('unconfirmed body or anchor association cannot seed a curve',()=>{
+ for(const eligibility of [{body:false,association:true},{body:true,association:false}]){const r=runCurve('straight',eligibility);assert.equal(r.available,false);assert.equal(r.points.length,0);assert.equal(r.attempts.length,0);}
 });

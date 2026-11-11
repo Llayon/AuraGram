@@ -1,0 +1,35 @@
+{
+  "total": 192,
+  "counts": {
+    "straight/0/0/point": {
+      "arc-budget": 18,
+      "search-boundary": 6
+    },
+    "straight/0/0/pixel-area-8x8": {
+      "arc-budget": 18,
+      "search-boundary": 6
+    },
+    "straight/25/0/point": {
+      "turn-bound": 17,
+      "search-boundary": 7
+    },
+    "straight/25/0/pixel-area-8x8": {
+      "turn-bound": 17,
+      "search-boundary": 7
+    },
+    "quadratic/0/0.015/point": {
+      "search-boundary": 24
+    },
+    "quadratic/0/0.015/pixel-area-8x8": {
+      "search-boundary": 24
+    },
+    "quadratic/0/0.03/point": {
+      "search-boundary": 23,
+      "turn-bound": 1
+    },
+    "quadratic/0/0.03/pixel-area-8x8": {
+      "search-boundary": 23,
+      "turn-bound": 1
+    }
+  }
+}

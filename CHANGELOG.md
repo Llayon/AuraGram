@@ -4,6 +4,7 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- Reject an offline bounded curve follower: C104 stops on initialization/local-axis mismatch, R1 on search boundary, R2 remains ineligible. Preserve36real configurations plus14initial/192raster controls showing bootstrap and half-pixel plateau limitations. No threshold relaxation or runtime adoption. See [curve report](G1C1_CURVE_REPORT.md).
 - Preserve all-axis transverse native profiles around recorded losses. C104 has strong displaced support, consistent with lateral escape rather than an ending; R1/R2 remain crease/junction ambiguities. No runtime adoption or endpoint approval. See [loss-profile report](G1C1_LOSS_PROFILES_REPORT.md).
 - Test the formerly unmeasured old-anchor/native-center association on all frozen axes. C104/R1 have sampled short-segment support; R2 remains unresolved. Fixed-axis losses/reentries do not prove endpoints; independent source-pixel critique retains Length HOLD. Runtime unchanged. See [anchor-association report](G1C1_ANCHOR_ASSOCIATION_REPORT.md).
 - Add image-only native pre-tip center/TLS diagnostics and five analytic mechanism tests. Frozen cases reveal stable R1 body direction, short C104 support and R2 window/continuity ambiguity; all-axis forward checks do not establish endpoints. Runtime unchanged, Length HOLD. See [native-shaft report](G1C1_NATIVE_SHAFT_REPORT.md).

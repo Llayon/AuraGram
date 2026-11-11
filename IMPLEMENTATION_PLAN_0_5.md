@@ -140,3 +140,14 @@ See [anchor-association report](G1C1_ANCHOR_ASSOCIATION_REPORT.md) and retained 
 - [ ] Useful natural endpoint localization, mandatory Length efficacy and release gates remain unresolved.
 
 See [loss-profile report](G1C1_LOSS_PROFILES_REPORT.md). Runtime/production unchanged.
+
+
+## G1c.1 bounded curve following (prototype rejected, HOLD)
+
+- [x] Same fixed identities/all axes; bounded local centers and dense links; no product tip move.
+- [x] Preserve36real configurations,14initial analytic controls and192width/phase/sampling controls.
+- [x] Independent critic identifies initialization mismatch, short first-fit support and half-pixel plateau; no endpoint/one-fiber approval.
+- [x] Preserve initial L20 +17.1ms FAIL and isolated repeat PASS; no stable-performance claim.
+- [ ] Subpixel center/initialization consistency, useful natural Length, mandatory efficacy and release gates remain unresolved.
+
+See [curve report](G1C1_CURVE_REPORT.md). Runtime/production unchanged; no threshold relaxation.

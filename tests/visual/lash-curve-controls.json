@@ -1,0 +1,9 @@
+{
+ "meaning":"Declared after real curve stop/critic, before analytic control measurements. Characterize initialization mismatch versus known curvature without tuning the real-photo protocol. Analytic controls do not establish portrait naturalness or general branch rejection.",
+ "width":80,"height":80,"seed":{"x":40,"y":34},
+ "background":0.8,"amplitude":0.55,"sigmaNative":0.35,
+ "straightInitialErrorsDegrees":[0,5,10,15,25],
+ "quadraticCurvatures":[0.015,0.03],
+ "marginsNative":[1.5,2.5],
+ "shape":"straight: x=40; quadratic: x=40+k*(34-y)^2; luminance=.8-.55*exp(-(x-centerX)^2/(2*.35^2)); y points downward. Initial direction -90+error degrees, curvature controls start vertical. Same production-independent protocol, no fitting/tuning to measured output."
+}
