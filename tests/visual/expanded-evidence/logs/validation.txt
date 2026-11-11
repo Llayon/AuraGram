@@ -1,0 +1,23 @@
+{
+  "nativeSources": 8,
+  "originalViews": 13,
+  "provisionalLabels": 9,
+  "freezes": {
+    "lash-expanded-independent-labels.json": "3a32cb1c3769db18e53d258ee44e86a03300ed466c5fb10c3957a357cc2044cb",
+    "lash-expanded-additional-labels.json": "f2c38c7dda2fdd3c4ed13521495c51c538a476eb8dc1448f539cb095d7dbe175"
+  },
+  "engines": {
+    "chromium": {
+      "ready": 4,
+      "noFace": 4,
+      "tipDataExactlyReproduced": true,
+      "modelRequests": 0
+    },
+    "webkit": {
+      "ready": 4,
+      "noFace": 4,
+      "tipDataExactlyReproduced": true,
+      "modelRequests": 0
+    }
+  }
+}

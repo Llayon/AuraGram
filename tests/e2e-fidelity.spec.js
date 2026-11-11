@@ -1,5 +1,41 @@
 ﻿const {test,expect}=require('./app-fixtures.cjs');
 const path=require('node:path');
+
+// Conservative abstention requirement for this frozen closed/white-liner
+// photograph: original-only reviewers could not establish upper endpoints.
+// This is not ground truth that eyelashes are absent, or a ban on all closed eyes.
+test('unresolved closed white-liner fixture abstains from Length after real analysis',async({page},testInfo)=>{
+ const fixture='tests/visual/expanded-evidence/sources/pexels-7123010.jpg';
+ await page.goto('/index.html');await page.waitForFunction(()=>!!window.AuraGram);
+ await page.setInputFiles('#fileInput',path.resolve(__dirname,'..',fixture));
+ await page.waitForFunction(()=>['ready','no_face','failed'].includes(window.AuraGram.face.status()),null,{timeout:100000});
+ expect(await page.evaluate(()=>window.AuraGram.face.status()),'must exercise real FaceMesh, not no_face fallback').toBe('ready');
+ const result=await page.evaluate(async fixture=>{
+  const {describeEyes}=await import('/src/retouch/eyeGeometry.mjs');
+  const {analyzeEye,LASH_ANALYSIS_VERSION}=await import('/src/retouch/lashAnalysis.mjs');
+  const {applyLashPass}=await import('/src/retouch/lashEnhancement.mjs');
+  const regions=window.AuraGram.face.store().faces[0].regions;
+  const eyes=describeEyes(regions,Math.max(...regions.faceOval.map(p=>p.x))-Math.min(...regions.faceOval.map(p=>p.x)));
+  const image=new Image();image.src='/'+fixture;await image.decode();
+  const analysis=Object.fromEntries(['left','right'].map(s=>[s,analyzeEye(image,eyes[s],s)]));
+  const c=document.createElement('canvas');c.width=image.width;c.height=image.height;
+  try{const x=c.getContext('2d');x.drawImage(image,0,0);const before=x.getImageData(0,0,c.width,c.height).data;
+   const applied=applyLashPass(x,c.width,c.height,eyes,analysis,{density:0,length:100,definition:0},{diagnostics:true});
+   const after=x.getImageData(0,0,c.width,c.height).data;let difference=0;
+   for(let i=0;i<after.length;i++)difference+=Math.abs(after[i]-before[i]);
+   return {analysisVersion:LASH_ANALYSIS_VERSION,analyzedEyes:Object.values(analysis).filter(a=>a.rw>0&&a.rh>0).length,difference,
+    attempts:applied.perEye.reduce((n,e)=>n+(e.lengthAttempts||0),0),ran:applied.ran,
+    eyes:Object.fromEntries(Object.entries(analysis).map(([s,a])=>[s,{reason:a.reason,lengthConfidence:a.lengthConfidence,tips:a.tips.length,crossing:a.diagnostics.crossing}]))};
+  }finally{c.width=c.height=0;}
+ },fixture);
+ console.log('Closed white-liner abstention '+JSON.stringify(result));
+ await testInfo.attach('closed-white-liner-abstention.json',{body:JSON.stringify(result,null,2),contentType:'application/json'});
+ expect(result.analyzedEyes,'actual native lash analysis ran for both eyes').toBe(2);
+ expect(result.attempts,'unknown tips must not generate even clipped/invisible strokes').toBe(0);
+ expect(result.ran).not.toContain('length');
+ expect(result.difference,'Length-only must preserve this unresolved source').toBe(0);
+});
+
 test('LF16 LF17 LF20 real native analysis, active render and scaled geometry',async({page},testInfo)=>{
  await page.goto('/index.html');await page.waitForFunction(()=>!!window.AuraGram);
  await page.setInputFiles('#fileInput',path.join(__dirname,'fixtures/edge-source.jpg'));

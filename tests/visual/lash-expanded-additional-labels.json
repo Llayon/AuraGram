@@ -1,0 +1,68 @@
+{
+  "schema": "auragram-expanded-independent-additional-original-labels-v1",
+  "method": "Original-only independent manual inspection of two new full-source thumbnails and three unscaled native eye crops. No detector, analysis output, source CV code or primary labels viewed in this stage before freezing.",
+  "exposureDisclosure": "These two additional photographs were not seen by this annotator before this pass. Earlier work exposed the annotator to other datasets and the product algorithm.",
+  "coordinateConvention": "Any future labels would be x-right/y-down native crop pixels, with sourceRectNative giving full-photo origin. No coordinates are invented here because reliable sampled upper endpoints were not established.",
+  "limits": "No labels does not mean no real lashes exist or that a detector should necessarily fail. These are upper-endpoint NOT RESOLVABLE judgments from source inspection, not calibrated ground truth or whole-eye recall measurements. Photo appearance cannot certify bare lashes or makeup history.",
+  "cropManifestSHA256": "f7fe7dbf8b38be279880ff276056a8ed3766bfd11b70a4ca6efacae75bb11561",
+  "views": [
+    {
+      "file": "pexels-18485027.jpg",
+      "view": "visible-open-eye",
+      "sourceSHA256": "459806e480f5553970d0dbaccb088daac30046fcae413d1dd50a382dbeae79d9",
+      "sourceRectNative": [
+        1250,
+        2250,
+        1500,
+        1100
+      ],
+      "originalCrop": "tests/visual/out/expanded-07-screening/pexels-18485027-visible-open-eye-1x.png",
+      "originalCropSHA256": "90eabe3cd65056c69e75ec5e1f6fcb3ee184af5620c7b54eb047b7e58c92a2d9",
+      "assessmentStatus": "SOFT_UPPER_LASH_ENDPOINTS_NOT_RESOLVABLE",
+      "assessment": "Open eye and dark lash line are visible, but fine upper shafts and tips are soft/merged. Forehead hair approaches and crosses the brow/upper-eye region. Large native dimensions do not supply reliably separable distal upper structures in this crop. No endpoint or local tangent label asserted.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "makeupOrArtificialLashHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": []
+    },
+    {
+      "file": "pexels-7859838.jpg",
+      "view": "screen-left",
+      "sourceSHA256": "3b3f37769db3b2b40e723a756a40379d060d46e5ccc4623f735949576a6c574e",
+      "sourceRectNative": [
+        1200,
+        300,
+        900,
+        600
+      ],
+      "originalCrop": "tests/visual/out/expanded-07-screening/pexels-7859838-screen-left-1x.png",
+      "originalCropSHA256": "7fd08eeddc2569fbc89f7721ea6644435910af7128a917bc0f8934e853a64885",
+      "assessmentStatus": "DARK_UPPER_LASHES_MERGED_UNDER_LID",
+      "assessment": "Open eye has fine dark upper structures projecting into the eye opening below the upper lid. Shadow, overlap and merged roots prevent confident assignment of individual visible tips with a local axis. Lower lashes are more distinct but are outside the requested upper-lash annotation scope.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "makeupOrArtificialLashHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": []
+    },
+    {
+      "file": "pexels-7859838.jpg",
+      "view": "screen-right",
+      "sourceSHA256": "3b3f37769db3b2b40e723a756a40379d060d46e5ccc4623f735949576a6c574e",
+      "sourceRectNative": [
+        2300,
+        350,
+        1000,
+        650
+      ],
+      "originalCrop": "tests/visual/out/expanded-07-screening/pexels-7859838-screen-right-1x.png",
+      "originalCropSHA256": "44d678262d30cc2397b8b08716e73426ac17457b0eab37f2b2f7020c16749b69",
+      "assessmentStatus": "DARK_UPPER_LASH_ENDPOINTS_AMBIGUOUS",
+      "assessment": "Open eye with several fine dark upper hairs over the opening. Upper-lid shadow and overlapping shafts prevent confident endpoint localization; no invented coordinates supplied. Distinct lower-lash detail does not establish upper-lash suitability.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "makeupOrArtificialLashHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": []
+    }
+  ],
+  "freezePolicy": "Initial six-photo labels remain unchanged. Preserve this file after detector exposure; store later disagreements separately."
+}

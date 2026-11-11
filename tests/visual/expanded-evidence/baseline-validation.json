@@ -1,0 +1,60 @@
+{
+  "production": "b883cf5d8cbcc75723b4701e98444fc349db4856",
+  "files": {
+    "retouch/eyeGeometry.mjs": {
+      "rawSHA256": "b2f130c65245ef0a9c14e0099f644f0a435cbb3cd456b67674832b9fffd0f725",
+      "normalizedSHA256": "b2f130c65245ef0a9c14e0099f644f0a435cbb3cd456b67674832b9fffd0f725",
+      "productionSHA256": "b2f130c65245ef0a9c14e0099f644f0a435cbb3cd456b67674832b9fffd0f725"
+    },
+    "retouch/lashAnalysis.mjs": {
+      "rawSHA256": "3a8d3c55cec53ec388f16203dbcc9cfd68fbf8f0184dcebb29a81c638dc67e21",
+      "normalizedSHA256": "3a8d3c55cec53ec388f16203dbcc9cfd68fbf8f0184dcebb29a81c638dc67e21",
+      "productionSHA256": "3a8d3c55cec53ec388f16203dbcc9cfd68fbf8f0184dcebb29a81c638dc67e21"
+    },
+    "retouch/lashEnhancement.mjs": {
+      "rawSHA256": "f63b3c4eeaece71411c59041071a22893001d51708fa45d9a2226bbdc31a73d1",
+      "normalizedSHA256": "f63b3c4eeaece71411c59041071a22893001d51708fa45d9a2226bbdc31a73d1",
+      "productionSHA256": "f63b3c4eeaece71411c59041071a22893001d51708fa45d9a2226bbdc31a73d1"
+    },
+    "retouch/retouch.mjs": {
+      "rawSHA256": "24d29c3db4575ec767e4d534c72df24b172d9d9de74e0fb942ec1b6e7c93156a",
+      "normalizedSHA256": "24d29c3db4575ec767e4d534c72df24b172d9d9de74e0fb942ec1b6e7c93156a",
+      "productionSHA256": "24d29c3db4575ec767e4d534c72df24b172d9d9de74e0fb942ec1b6e7c93156a"
+    },
+    "retouch/skinMask.mjs": {
+      "rawSHA256": "a4afc05bca77d70d2a0cdd77f813af415faa2f1c6b4f02429d4ec2dd14352b5a",
+      "normalizedSHA256": "a4afc05bca77d70d2a0cdd77f813af415faa2f1c6b4f02429d4ec2dd14352b5a",
+      "productionSHA256": "a4afc05bca77d70d2a0cdd77f813af415faa2f1c6b4f02429d4ec2dd14352b5a"
+    },
+    "rendering/canvasFilters.js": {
+      "rawSHA256": "b21453b58fd7150b1bc187d8d907181030f46616c264d5207836584ed8912568",
+      "normalizedSHA256": "b21453b58fd7150b1bc187d8d907181030f46616c264d5207836584ed8912568",
+      "productionSHA256": "b21453b58fd7150b1bc187d8d907181030f46616c264d5207836584ed8912568"
+    },
+    "rendering/imageRenderer.js": {
+      "rawSHA256": "6a7d0375cb081b0bcdbbe953a9311075773e20fff91cb21e554324f919b56da6",
+      "normalizedSHA256": "6a7d0375cb081b0bcdbbe953a9311075773e20fff91cb21e554324f919b56da6",
+      "productionSHA256": "6a7d0375cb081b0bcdbbe953a9311075773e20fff91cb21e554324f919b56da6"
+    },
+    "vision/faceDetector.mjs": {
+      "rawSHA256": "cabd5c0122fa5d658981b0e86c07a274f2f1ce9d3b81b2adbe9c07ab1b48e741",
+      "normalizedSHA256": "cabd5c0122fa5d658981b0e86c07a274f2f1ce9d3b81b2adbe9c07ab1b48e741",
+      "productionSHA256": "cabd5c0122fa5d658981b0e86c07a274f2f1ce9d3b81b2adbe9c07ab1b48e741"
+    },
+    "vision/faceGeometry.mjs": {
+      "rawSHA256": "491c94d9b613b1dfcfbffac89b50c15b131f02281d7aad0a92d8e705b5caea7d",
+      "normalizedSHA256": "491c94d9b613b1dfcfbffac89b50c15b131f02281d7aad0a92d8e705b5caea7d",
+      "productionSHA256": "491c94d9b613b1dfcfbffac89b50c15b131f02281d7aad0a92d8e705b5caea7d"
+    },
+    "vision/faceOverlay.mjs": {
+      "rawSHA256": "67bece45d82a35f1e6fd3be69140042990c9f9a6f838a0d884b61bd4d22ec183",
+      "normalizedSHA256": "67bece45d82a35f1e6fd3be69140042990c9f9a6f838a0d884b61bd4d22ec183",
+      "productionSHA256": "67bece45d82a35f1e6fd3be69140042990c9f9a6f838a0d884b61bd4d22ec183"
+    },
+    "vision/faceWorker.js": {
+      "rawSHA256": "0cad9ac8a6d03f505133db86996549ac45b3236aaa547721d22ca7d6817f034e",
+      "normalizedSHA256": "0cad9ac8a6d03f505133db86996549ac45b3236aaa547721d22ca7d6817f034e",
+      "productionSHA256": "0cad9ac8a6d03f505133db86996549ac45b3236aaa547721d22ca7d6817f034e"
+    }
+  }
+}

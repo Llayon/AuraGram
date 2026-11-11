@@ -7,3 +7,8 @@ lash-tangent-fit.mjs -text
 lash-source-centers.mjs -text
 lash-source-centers.cjs -text
 lash-source-report.cjs -text
+lash-expanded-independent-labels.json -text
+lash-expanded-additional-labels.json -text
+lash-expanded-primary-screen.json -text
+lash-expanded-sources.json -text
+lash-expanded-screen-crops.json -text

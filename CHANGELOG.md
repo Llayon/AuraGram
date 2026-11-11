@@ -2,6 +2,7 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- Expand QA with eight licensed original photo assets, frozen independent screening and both-engine native comparisons. Add a conservative unresolved-white-liner abstention gate; it reproduces a new Chromium failure. Product unchanged, Length HOLD. See [expanded dataset report](G1C1_EXPANDED_DATASET_REPORT.md).
 - Native source-profile audit: preserve measured center profiles, rejected support and fixed/free-anchor sensitivity in both engines. Accurate terminal continuation remains unproven; product unchanged. See [source-center report](G1C1_SOURCE_CENTERS_REPORT.md).
 - Local tangent audit: freeze provisional short-window annotations and retain a rejected offline curve-fit comparison. No product changes; exact terminal direction remains uncertain. See [tangent report](G1C1_TANGENT_REPORT.md).
 - Boundary-context follow-up: recover selected observed tips with additional native-ROI context; preserve existing Density/Definition and baseline Length pixels. Correct new-tip fractional mapping and graded color. Endpoint localization improved, but useful natural Length remains unproven; original efficacy tests remain red. See [localization report](G1C1_LOCALIZATION_REPORT.md). No release.
@@ -10,7 +11,7 @@
 
 - Implement native-source capped eye ROI and topology-based lids, directional ridge tracing and measured tip continuation.
 - Preserve the 0.5.1 density cap/interpolation; limit definition to measured ridges.
-- Not release-ready: real-fixture density/length efficacy regressions and incomplete visual dataset. See [G1C1_REPORT.md](G1C1_REPORT.md). Version remains 0.5.1.
+- Initial experimental pass had real-fixture Density/Length efficacy regressions and incomplete visual coverage; Recovery restored Density. Length efficacy, naturalness and the new abstention gate remain HOLD. Historical [G1C1_REPORT.md](G1C1_REPORT.md) is preserved. Version remains 0.5.1.
 
 ## 0.5.1 — 2026-11-10
 
