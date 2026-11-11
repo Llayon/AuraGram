@@ -104,3 +104,5 @@ Native ROI / structure-tracing experiment is on `feat/g1c1-lash-fidelity`. It is
 Recovery results: [G1C1_RECOVERY_REPORT.md](G1C1_RECOVERY_REPORT.md). Density efficacy and crossing-hair safety improved; Length visual usefulness remains HOLD. PR#5 stays Draft and production0.5.1 is unchanged.
 
 Boundary-context localization follow-up: [G1C1_LOCALIZATION_REPORT.md](G1C1_LOCALIZATION_REPORT.md). Provisional original-only annotations, independent critic, both-engine frozen controls and active performance are preserved. Selected endpoint localization improves; useful Length and original F1 remain HOLD. No production publication.
+
+Local tangent step: [G1C1_TANGENT_REPORT.md](G1C1_TANGENT_REPORT.md). Original-only short-window annotation cannot certify the left exact terminal tangent. Offline quadratic correction rejected; product unchanged, PR#5 Draft/HOLD. Next: source-luminance center refinement at fixed tips and renderer.

@@ -1,2 +1,6 @@
 lash-localization-labels.json -text
 lash-localization-independent-labels.json -text
+lash-tangent-primary-labels.json -text
+lash-tangent-independent-labels.json -text
+lash-tangent-audit.cjs -text
+lash-tangent-fit.mjs -text
