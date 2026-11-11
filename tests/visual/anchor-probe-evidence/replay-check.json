@@ -1,0 +1,6 @@
+{
+  "chromiumExact": true,
+  "webkitExact": true,
+  "sameHelpers": true,
+  "sameProtocol": true
+}

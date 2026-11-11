@@ -1,0 +1,10 @@
+{
+  "baseline": "1dd24bfcc2846b599c890064b4ed739e8d24f6d7",
+  "meaning": "Declared before anchor measurements. Same frozen identities and every automatic axis. Diagnostic sampled contrast only; no new candidate, recentering, fitted-tip relocation, manual input or product rendering.",
+  "stepNative": 0.5,
+  "maximumForwardNative": 12,
+  "radiiNative": [0.75, 1.5],
+  "alongStepNative": 1,
+  "observationFloor": 0.006,
+  "policy": "Test the complete straight anchor-to-first-center segment for each available axis using its fixed transverse normal. Require prior dense body support separately. Inspect every forward sample, including losses and reentries. Support is not same-fiber ownership; contrast loss is UNKNOWN, never an approved endpoint. Fully supported bounded continuation means continuing-within-bound only. No threshold optimization or favorable-window selection."
+}

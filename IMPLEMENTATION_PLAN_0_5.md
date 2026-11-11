@@ -120,3 +120,13 @@ Original-only positives and endpoint gate: [G1C1_POSITIVE_ENDPOINT_REPORT.md](G1
 Three fixed endpoint cases: [G1C1_ENDPOINT_CASE_REPORT.md](G1C1_ENDPOINT_CASE_REPORT.md). Old C104-right-old16 and PI729R1/R2 stay fixed; native/coarse operators show direction-dependent continuation and unresolved bilateral support at a crease junction. Native RGBA equal across engines does not make coarse response identical. Anchor-offset sensitivity is not pure grid phase. No product adoption; next establish native pre-tip centers and same-structure axis support without new seeds or favorable phase selection. Draft/HOLD.
 
 Native pre-tip centers: [G1C1_NATIVE_SHAFT_REPORT.md](G1C1_NATIVE_SHAFT_REPORT.md). Image-only bounded transverse centers and unanchored TLS measure R1 body direction and limited C104 support; R2 is window-dependent and fails dense contrast probes. Every available automatic axis tested forward: C104/R1 continue, R2 weak. Sparse/dense support is not endpoint/biological ownership proof;0→2association remains untested. Five analytic checks added to npm test; runtime, old assertions and cap unchanged. Next bounded endpoint/continuing/UNKNOWN experiment, Draft/HOLD.
+
+
+## G1c.1 fixed-anchor association diagnostic (HOLD)
+
+- [x] Continue same three frozen identities/all automatic axes; no manual direction, new candidate, recentering or product rendering.
+- [x] Measure anchor-to-first-center sampled association and forward 0?12 native px; preserve losses/reentries and both decoders.
+- [x] Independent source-pixel critic: C104 lateral departure likely; R1/R2 crease junction ambiguity. No endpoint approval or runtime adoption.
+- [ ] Image-supported endpoint localization, useful natural Length, mandatory efficacy failures and full release gates remain unresolved.
+
+See [anchor-association report](G1C1_ANCHOR_ASSOCIATION_REPORT.md) and retained gallery. Production unchanged.

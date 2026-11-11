@@ -47,3 +47,8 @@ lash-native-shaft-plot.py -text
 native-shaft.test.mjs -text
 curate-native-shaft.cjs -text
 validate-native-shaft.cjs -text
+lash-anchor-protocol.json -text
+lash-anchor-probe.mjs -text
+lash-anchor-probe.cjs -text whitespace=cr-at-eol
+lash-anchor-plot.py -text
+curate-anchor-probe.cjs -text whitespace=cr-at-eol

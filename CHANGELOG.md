@@ -4,6 +4,7 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- Test the formerly unmeasured old-anchor/native-center association on all frozen axes. C104/R1 have sampled short-segment support; R2 remains unresolved. Fixed-axis losses/reentries do not prove endpoints; independent source-pixel critique retains Length HOLD. Runtime unchanged. See [anchor-association report](G1C1_ANCHOR_ASSOCIATION_REPORT.md).
 - Add image-only native pre-tip center/TLS diagnostics and five analytic mechanism tests. Frozen cases reveal stable R1 body direction, short C104 support and R2 window/continuity ambiguity; all-axis forward checks do not establish endpoints. Runtime unchanged, Length HOLD. See [native-shaft report](G1C1_NATIVE_SHAFT_REPORT.md).
 - Diagnose three exact old endpoint candidates using native/coarse profiles in both decoders. Confirm directional/resampling and localization ambiguity; native-only or floor-only replacement is not justified. Product and mandatory tests unchanged, Length HOLD. See [fixed-case report](G1C1_ENDPOINT_CASE_REPORT.md).
 - Freeze independent original-only endpoint annotations on three new licensed portraits; identify preterminal Length strokes and preserve fixed-set/full-rerun endpoint-guard ablations. Neither experiment adopted: remaining artifacts and control-candidate loss keep Length HOLD. Product unchanged. See [positive endpoint report](G1C1_POSITIVE_ENDPOINT_REPORT.md).

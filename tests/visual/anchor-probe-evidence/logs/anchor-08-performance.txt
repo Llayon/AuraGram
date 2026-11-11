@@ -1,0 +1,19 @@
+
+> auragram@0.5.1 test:e2e
+> node scripts/run-e2e.cjs --project=chromium --workers=1 --grep L20 performance|LF16 LF17 LF20
+
+
+Running 1 test using 1 worker
+
+node.exe : (node:29064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+строка:1 знак:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:29064) Wa... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+LF real analysis {"summaries":{"left":{"rw":98,"rh":69,"confidence":0.9771008424590681,"coverage":0.010169491525423728,"contrast":0.05065015858934491,"sharp":0.03229651255796185,"tips":0,"maxRidge":255,"ridgePixels":5,"ms":36.5,"reason":"ok"},"right":{"rw":113,"rh":67,"confidence":1,"coverage":0.030033370411568408,"contrast":0.061890693670372664,"sharp":0.04095822336510636,"tips":0,"maxRidge":255,"ridgePixels":25,"ms":18.899999991059303,"reason":"ok"}},"perf":[{"width":450,"changed":13,"times":[11.600000008940697,1.6000000089406967,1.7000000029802322,1.0999999940395355,1.9000000059604645,1.2999999970197678,1.4000000059604645,2.4000000059604645,1.2999999970197678],"ran":["definition","density"]},{"width":900,"changed":55,"times":[33.900000005960464,4.100000008940697,3.5999999940395355,4.700000002980232,2.9000000059604645,3.6000000089406967,2.2000000029802322,2.0999999940395355,2.0999999940395355],"ran":["definition","density"]}]}
+  ok 1 [chromium] › tests\e2e-fidelity.spec.js:39:1 › LF16 LF17 LF20 real native analysis, active render and scaled geometry (1.7s)
+
+  1 passed (3.3s)
