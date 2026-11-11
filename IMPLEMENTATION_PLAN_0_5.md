@@ -130,3 +130,13 @@ Native pre-tip centers: [G1C1_NATIVE_SHAFT_REPORT.md](G1C1_NATIVE_SHAFT_REPORT.m
 - [ ] Image-supported endpoint localization, useful natural Length, mandatory efficacy failures and full release gates remain unresolved.
 
 See [anchor-association report](G1C1_ANCHOR_ASSOCIATION_REPORT.md) and retained gallery. Production unchanged.
+
+
+## G1c.1 loss-neighborhood transverse profiles (HOLD)
+
+- [x] Preserve fixed identities/all axes and measure loss +/-1 native px without manual direction or product tip moves.
+- [x] C104 displaced support explains fixed-axis loss; R1/R2 retain edge/junction ambiguity. Preserve all 140 profiles and36figures.
+- [x] Independent critic: margin counts use different distance neighborhoods and are correlated; no endpoint or same-fiber approval.
+- [ ] Useful natural endpoint localization, mandatory Length efficacy and release gates remain unresolved.
+
+See [loss-profile report](G1C1_LOSS_PROFILES_REPORT.md). Runtime/production unchanged.

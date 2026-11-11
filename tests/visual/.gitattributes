@@ -52,3 +52,8 @@ lash-anchor-probe.mjs -text
 lash-anchor-probe.cjs -text whitespace=cr-at-eol
 lash-anchor-plot.py -text
 curate-anchor-probe.cjs -text whitespace=cr-at-eol
+lash-loss-protocol.json -text
+lash-loss-profiles.mjs -text
+lash-loss-profiles.cjs -text
+lash-loss-plot.py -text
+curate-loss-profiles.cjs -text

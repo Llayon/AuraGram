@@ -2,6 +2,7 @@ import{test}from'node:test';import assert from'node:assert/strict';import fs fro
 import{analyzeNativeShaft}from'./lash-native-shaft.mjs';
 import{checkShaftContinuity}from'./lash-native-continuity.mjs';
 import{probeAnchor}from'./lash-anchor-probe.mjs';
+import{inspectLoss}from'./lash-loss-profiles.mjs';
 const protocol=JSON.parse(fs.readFileSync(new URL('./lash-shaft-protocol.json',import.meta.url)));
 function fixture(kind){const w=80,h=80,luma=new Float32Array(w*h);for(let y=0;y<h;y++)for(let x=0;x<w;x++){
  const center=40-Math.tan(Math.PI/12)*(y-20),gauss=d=>Math.exp(-d*d/(2*.35*.35));
@@ -54,4 +55,22 @@ test('missing anchor support and cropped kernels both prevent endpoint approval'
  const cropped=probeAnchor(f.luma,f.w,f.h,{x:0,y:30},{x:0,y:32},vertical,true,anchorProtocol);
  assert.ok(cropped.association.some(p=>p.unavailable));assert.equal(cropped.outcome,'UNKNOWN');
  assert.equal(cropped.firstUnsupportedNative,null);assert.equal(cropped.firstUnavailableNative,0);
+});
+
+const lossProtocol=JSON.parse(fs.readFileSync(new URL('./lash-loss-protocol.json',import.meta.url)));
+test('off-axis thin support is retained without declaring a new endpoint',()=>{
+ const w=80,h=80,luma=Float32Array.from({length:w*h},(_,i)=>.8-.55*Math.exp(-((i%w-41.1)**2)/(2*.35*.35)));
+ const r=inspectLoss(luma,w,h,{x:40,y:30},vertical,3,{sx:6,sy:6,margin:1.5,protocol:lossProtocol,centerProtocol:protocol});
+ assert.ok(r.rows.some(p=>p.displacedSupport));assert.equal(r.outcome,'UNKNOWN');assert.equal(r.endpointConfirmed,false);
+});
+test('one-sided edge near a loss cannot become displaced thin support',()=>{
+ const w=80,h=80,luma=Float32Array.from({length:w*h},(_,i)=>i%w<41?.2:.8);
+ const r=inspectLoss(luma,w,h,{x:40,y:30},vertical,3,{sx:6,sy:6,margin:1.5,protocol:lossProtocol,centerProtocol:protocol});
+ assert.equal(r.displacedSupportRows,0);assert.ok(r.rows.every(p=>!p.accepted));
+});
+test('missing loss or automatic axis does not initiate a new profile search',()=>{
+ for(const [a,loss] of [[{available:false},3],[vertical,null]]){
+  const r=inspectLoss(new Float32Array(1),1,1,{x:0,y:0},a,loss,{sx:1,sy:1,margin:1.5,protocol:lossProtocol,centerProtocol:protocol});
+  assert.equal(r.available,false);assert.equal(r.rows.length,0);assert.equal(r.endpointConfirmed,false);
+ }
 });
