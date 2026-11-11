@@ -1,5 +1,5 @@
 *.json -text
 *.gz -text
 *.csv -text
-*.svg -text
+assets/*.svg binary
 *.txt -whitespace
