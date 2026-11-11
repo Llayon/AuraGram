@@ -1,0 +1,8 @@
+git : warning: in the working copy of 'tests/visual/.gitattributes', LF will be replaced by CRLF the next time Git 
+touches it
+строка:2 знак:1
++ git diff --check > tests/visual/out/shaft-15-format.log 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (warning: in the... Git touches it:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

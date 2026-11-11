@@ -37,3 +37,13 @@ lash-endpoint-render-crops.cjs -text
 lash-endpoint-plot.py -text
 curate-lash-endpoint.cjs -text
 validate-lash-endpoint.cjs -text
+lash-shaft-protocol.json -text
+lash-shaft-continuity-protocol.json -text
+lash-native-shaft.mjs -text
+lash-native-shaft.cjs -text
+lash-native-continuity.mjs -text
+lash-native-continuity.cjs -text
+lash-native-shaft-plot.py -text
+native-shaft.test.mjs -text
+curate-native-shaft.cjs -text
+validate-native-shaft.cjs -text

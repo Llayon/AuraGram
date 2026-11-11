@@ -1,0 +1,13 @@
+✔ image-derived centers recover a sloped shaft without manual direction input (7.4018ms)
+✔ equally strong parallel valleys are unresolved, not selected as one fiber (2.9936ms)
+✔ a one-sided intensity step is not a thin dark center (1.323ms)
+✔ missing measured center prevents fitting across an image gap (2.5821ms)
+✔ dense evidence detects an unsampled gap between two valid center rows (2.4061ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 152.0249

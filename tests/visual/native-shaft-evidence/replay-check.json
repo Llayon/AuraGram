@@ -1,0 +1,22 @@
+[
+  {
+    "engine": "chromium",
+    "kind": "centers",
+    "allResultsExact": true
+  },
+  {
+    "engine": "chromium",
+    "kind": "dense-forward",
+    "allResultsExact": true
+  },
+  {
+    "engine": "webkit",
+    "kind": "centers",
+    "allResultsExact": true
+  },
+  {
+    "engine": "webkit",
+    "kind": "dense-forward",
+    "allResultsExact": true
+  }
+]
