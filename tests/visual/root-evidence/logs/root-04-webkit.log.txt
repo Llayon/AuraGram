@@ -1,0 +1,65 @@
+webkit light.jpg older-chromium-control
+webkit natural.jpg older-chromium-control
+webkit hair-occlusion.jpg older-chromium-control
+webkit light-rotated25.jpg older-chromium-control
+webkit pexels-8727422.jpg actual-webkit
+webkit pexels-12367370.jpg actual-webkit
+webkit pexels-7859838.jpg actual-webkit
+webkit pexels-7123010.jpg closed-chromium
+webkit pexels-7123010.jpg closed-webkit
+{
+  "light.jpg/older-chromium-control/right": {
+    "conditions": 6,
+    "candidates": 13,
+    "rejected": 0,
+    "allowed": 13,
+    "stops": {
+      "no-observed-valley": 13
+    }
+  },
+  "hair-occlusion.jpg/older-chromium-control/left": {
+    "conditions": 1,
+    "candidates": 1,
+    "rejected": 0,
+    "allowed": 1,
+    "stops": {
+      "no-observed-valley": 1
+    }
+  },
+  "pexels-12367370.jpg/actual-webkit/right": {
+    "conditions": 1,
+    "candidates": 3,
+    "rejected": 0,
+    "allowed": 3,
+    "stops": {
+      "no-observed-valley": 3
+    }
+  },
+  "pexels-7123010.jpg/closed-chromium/left": {
+    "conditions": 1,
+    "candidates": 2,
+    "rejected": 0,
+    "allowed": 2,
+    "stops": {
+      "no-observed-valley": 2
+    }
+  },
+  "pexels-7123010.jpg/closed-chromium/right": {
+    "conditions": 1,
+    "candidates": 2,
+    "rejected": 0,
+    "allowed": 2,
+    "stops": {
+      "no-observed-valley": 2
+    }
+  },
+  "pexels-7123010.jpg/closed-webkit/right": {
+    "conditions": 2,
+    "candidates": 5,
+    "rejected": 0,
+    "allowed": 5,
+    "stops": {
+      "no-observed-valley": 5
+    }
+  }
+}

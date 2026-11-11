@@ -1,5 +1,7 @@
 # Changelog
 
+- G1c.1 offline proximal-root continuation experiment rejected: all 70 tested candidate observations remained unresolved, including closed/hair negatives. Product v6 unchanged; original Length efficacy failures and HOLD remain. See `G1C1_ROOT_CONTINUATION_REPORT.md`.
+
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
 - V6 adds conservative Length-only abstention on observed crossing continuations, fixing the new closed-white-liner gate while preserving Density/Definition pixels. Geometry-jitter controls expose possible false vetoes/recall loss; useful Length remains HOLD. See [crossing report](G1C1_CROSSING_REPORT.md).

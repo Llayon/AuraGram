@@ -1,0 +1,47 @@
+chromium light.jpg older-chromium-control
+chromium natural.jpg older-chromium-control
+chromium hair-occlusion.jpg older-chromium-control
+chromium light-rotated25.jpg older-chromium-control
+chromium pexels-8727422.jpg actual-chromium
+chromium pexels-12367370.jpg actual-chromium
+chromium pexels-7859838.jpg actual-chromium
+chromium pexels-7123010.jpg closed-chromium
+chromium pexels-7123010.jpg closed-webkit
+{
+  "light.jpg/older-chromium-control/right": {
+    "conditions": 4,
+    "candidates": 8,
+    "rejected": 0,
+    "allowed": 8,
+    "stops": {
+      "no-observed-valley": 8
+    }
+  },
+  "hair-occlusion.jpg/older-chromium-control/left": {
+    "conditions": 1,
+    "candidates": 1,
+    "rejected": 0,
+    "allowed": 1,
+    "stops": {
+      "no-observed-valley": 1
+    }
+  },
+  "pexels-7123010.jpg/closed-chromium/right": {
+    "conditions": 4,
+    "candidates": 8,
+    "rejected": 0,
+    "allowed": 8,
+    "stops": {
+      "no-observed-valley": 8
+    }
+  },
+  "pexels-7123010.jpg/closed-webkit/right": {
+    "conditions": 9,
+    "candidates": 27,
+    "rejected": 0,
+    "allowed": 27,
+    "stops": {
+      "no-observed-valley": 27
+    }
+  }
+}
