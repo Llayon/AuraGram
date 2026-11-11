@@ -2,6 +2,7 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- Native source-profile audit: preserve measured center profiles, rejected support and fixed/free-anchor sensitivity in both engines. Accurate terminal continuation remains unproven; product unchanged. See [source-center report](G1C1_SOURCE_CENTERS_REPORT.md).
 - Local tangent audit: freeze provisional short-window annotations and retain a rejected offline curve-fit comparison. No product changes; exact terminal direction remains uncertain. See [tangent report](G1C1_TANGENT_REPORT.md).
 - Boundary-context follow-up: recover selected observed tips with additional native-ROI context; preserve existing Density/Definition and baseline Length pixels. Correct new-tip fractional mapping and graded color. Endpoint localization improved, but useful natural Length remains unproven; original efficacy tests remain red. See [localization report](G1C1_LOCALIZATION_REPORT.md). No release.
 - Recovery: separate local Density evidence from strict Length evidence, normalize local contrast and reject observed crossing-hair structures. Preserve bilinear compositing and the35% darkening cap.

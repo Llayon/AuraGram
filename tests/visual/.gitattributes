@@ -4,3 +4,6 @@ lash-tangent-primary-labels.json -text
 lash-tangent-independent-labels.json -text
 lash-tangent-audit.cjs -text
 lash-tangent-fit.mjs -text
+lash-source-centers.mjs -text
+lash-source-centers.cjs -text
+lash-source-report.cjs -text

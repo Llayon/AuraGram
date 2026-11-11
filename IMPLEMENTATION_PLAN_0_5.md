@@ -106,3 +106,5 @@ Recovery results: [G1C1_RECOVERY_REPORT.md](G1C1_RECOVERY_REPORT.md). Density ef
 Boundary-context localization follow-up: [G1C1_LOCALIZATION_REPORT.md](G1C1_LOCALIZATION_REPORT.md). Provisional original-only annotations, independent critic, both-engine frozen controls and active performance are preserved. Selected endpoint localization improves; useful Length and original F1 remain HOLD. No production publication.
 
 Local tangent step: [G1C1_TANGENT_REPORT.md](G1C1_TANGENT_REPORT.md). Original-only short-window annotation cannot certify the left exact terminal tangent. Offline quadratic correction rejected; product unchanged, PR#5 Draft/HOLD. Next: source-luminance center refinement at fixed tips and renderer.
+
+Native source profiles: [G1C1_SOURCE_CENTERS_REPORT.md](G1C1_SOURCE_CENTERS_REPORT.md). Fixed/free-anchor sensitivity explains short-window bias; no accurate unique terminal tangent established. Product unchanged; Draft/HOLD. Independent sharper real-photo endpoint/axis evidence is needed before adopting a continuation fit.
