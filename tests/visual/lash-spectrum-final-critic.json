@@ -1,0 +1,106 @@
+{
+  "schema": "auragram-independent-spectrum-final-critic-v1",
+  "verdict": "REJECT ADOPTION / LENGTH HOLD / G1c.1 NOT CLOSED",
+  "scope": "Bounded final pack/hash/result/test-portability/report review. Independently ran read-only validator and inspected stored logs/code; no browser/model inference, source/protocol/label edit, extra study or pack modification. This final companion remains outside preserved pack to avoid self-hash. Mutable report is reviewed but not hash-pinned here.",
+  "references": [
+    {
+      "path": "tests/visual/spectrum-evidence/files.json",
+      "sha256": "ab155f3305639baaf00be5bce8233b384496c3e78ec4bb560dc66284090e7162"
+    },
+    {
+      "path": "tests/visual/spectrum-evidence/index.html",
+      "sha256": "c7b98fb945d888a8d5418679bdfcbeb9c00bce4f357b69cd1073c59564581882"
+    },
+    {
+      "path": "tests/visual/validate-lash-spectrum.cjs",
+      "sha256": "8a0a30d82eae1793110460efe91fce5d09951b89021bed12228029145261cbe2"
+    },
+    {
+      "path": "tests/visual/replay-lash-spectrum.cjs",
+      "sha256": "e611c7820e5969bc133bd29081b77cddc3d6500265f1ac23e154ebc6a13b427d"
+    },
+    {
+      "path": "tests/visual/lash-spectrum-protocol.json",
+      "sha256": "84dd5c3ce9284a847e787f5a4dddcf2090989ae7d9e3f75a7588915c90555f5a"
+    },
+    {
+      "path": "tests/visual/lash-spectrum.mjs",
+      "sha256": "a77d1032929a2f60442726df43d0cf500476bb328cb61ee74b74da863a0929b7"
+    },
+    {
+      "path": "tests/visual/lash-spectrum-instrument.cjs",
+      "sha256": "a7372b0644a396364899b6fbecf6286907a69eaf989e614daecd48c9d10a7f19"
+    },
+    {
+      "path": "tests/visual/lash-spectrum-run.cjs",
+      "sha256": "f1941e7230ed2515c6199eadc43ddbccfec61dbbb746dbb42f0876f57c8c5bea"
+    },
+    {
+      "path": "tests/visual/lash-spectrum.test.mjs",
+      "sha256": "6b215dfe27281daf69365491932e3cda19afedc05316d8acc6919654227ba01a"
+    },
+    {
+      "path": "tests/visual/out/spectrum-02-experiment/result.json",
+      "sha256": "79ee04183d2a9a694754318e5fc830aff5ceb331d26b69bf4364594cdbf0b6d4"
+    },
+    {
+      "path": "tests/visual/out/spectrum-06-verification/result.json",
+      "sha256": "7c9d7aaace6d0b3aa48092ce55a2bffa912faffd1ca3e2b4afcc5be61a149a38"
+    }
+  ],
+  "priorCritics": [
+    {
+      "path": "tests/visual/lash-spectrum-protocol-critic.json",
+      "sha256": "459d1e9508fae0a658ac639880b500206b617aa1ba1a657bf11ed5e5c5587519"
+    },
+    {
+      "path": "tests/visual/lash-spectrum-code-critic.json",
+      "sha256": "58be2351eb2ac7fe2b34a7cc837711ab6b9926a24be3881e33dd00cdcfeb286a"
+    },
+    {
+      "path": "tests/visual/lash-spectrum-visual-critic.json",
+      "sha256": "f00d3459a0dda65efd8edf4304e6abdcd0e333d50213530790d0006eb5ab8f1a"
+    }
+  ],
+  "finalIntegrity": {
+    "independentlyExecuted": "node tests/visual/validate-lash-spectrum.cjs PASS",
+    "rawByteMappings": 665,
+    "PNGReferences": 504,
+    "galleryLocalLinks": 592,
+    "brokenLinks": 0,
+    "versionEyeRecords": 64,
+    "numericVerification06": "Exact result/sidecar reproduction after excluding only elapsedMs. Original replay tolerance1e-9/max4.4964e-15,167932winning-edge checks, fixed pixel/root sets and baseline/undirected containment retained.",
+    "stateAndWitnessChecks": "Validator checks baseline?expanded?observed-loose, expanded pixels active, roots active, original qualified0, bounded typed arrays and all saved four-point witnesses have four distinct existing pixels.",
+    "retention": "All03text-overflow,04intermediate and05scoped sets84figures+84nativecrops each, exact historical plot tools and raw02/06 data retained. Prior critic23manual PNG coverage remains explicit; this final review does not claim all504images manually judged.",
+    "curationBookkeeping": "Final archived curation log is152bytes/nonzero. Parent preserved first packet built while its own log was still open in ignored out/spectrum-07-initial-pack, then rebuilt canonical packet after log closure. This is not a detector/numeric change; initial copy location is parent-reported local retention, not additional committed scientific evidence.",
+    "replay": "Replay source checks every stored raw hash and refuses conflicting existing bytes, restores only missing ignored paths. Parent reports zero conflicts; critic did not perform extra restoration/mutation."
+  },
+  "testPortabilityAndDiff": {
+    "portableNewUnit": "New eight tests use pure source/capture/math synthetic fixtures. They do not call legacy loadInputs or raw live-src hash validation for metadata availability; importing its hash function has no such file-check side effect. No repeat of the prior CRLF/LF fixture coupling found.",
+    "productAndOldAssertions": "git diff HEAD for src, relevant original E2E/lash unit/golden paths and package-lock empty. Existing rejected graph source unchanged outside this new spectrum helper. Package only adds spectrum test module; old tests/thresholds, version0.5.1 and dependencies retained.",
+    "freshUnitStoredLog": "196PASS/0FAIL/0SKIPPED/0CANCELLED,188previous+8new. Critic earlier independently ran targeted8PASS.",
+    "functionalBrowserStoredLog": "166PASS/2originalLengthF1FAIL/3dependentNOTRUN. Mandatory suite remains RED; original requiredRGB>10 receives0 in both engines.",
+    "unchangedProductPerformanceStoredLog": "Isolated3PASS; natural720x1080 D35/L100/Def25 off16.1ms/active19.9ms/delta+3.8ms,actualLengthRGB227/DensityRGB206,2tips,stablecache/analysis. L20+6.7ms is a separate fixture. Performance proves execution/cost, not aesthetic acceptance or spectrum-graph speed.",
+    "coldProductAnalysisMs": 135.7,
+    "activeProductExport": {
+      "size": [
+        2400,
+        3600
+      ],
+      "renderMs": 197.9,
+      "encodeMs": 311.6,
+      "buttonToBlobMs": 579.2
+    },
+    "buildPackageSite": "Completed raw logs inspected: build resources prepared, static package prepared, native Chromium/software WebKit real face/retouch/PNG smoke success. New Ubuntu CI after push must be checked separately; no inferred CI PASS.",
+    "physicalPhones": "UNVERIFIED; offline138B/pixel expanded typed arrays plus64B/pixel spectra do not bound total app/process/mobile memory."
+  },
+  "visualAndReportAssessment": {
+    "displayFixes": "Previous actual05inspection accepted first3automatic probe retention with explicit unreachable statuses and separated EYE TOTALS/SELECTED PAIR scope. Titles/legends/plots distinguish mode IDs, numeric floor, eligibility outline, original winner and diagnostic lines from biological hairs.",
+    "sameScientificConclusion": "ChromiumV1F2L1 recovers one45state/45pixel route with8middle pairs/7rooted4point pairs: ambiguous, no verified root/free tip. Other no-loose-route references remain unreachable. WebKitV3pair8doesnotcreate4point or global restoration.",
+    "controls": "Hair/white-liner and protected-opening contexts gain expanded reach too. State support is not positive-specific; rooted graph compatibility does not establish physical strand or endpoint ownership. No Length rendered; conditional renderer gate failed.",
+    "reportCorrectness": "Reviewed report explicitly acknowledges larger hypothesis space despite unchanged floors, case exposure, all unfavorable outcomes, no biological/calibrated precision claims, no physical mobile guarantee, unchanged product performance and original mandatory failures. No substantive unsupported release/naturalness claim found.",
+    "terminology": "Zero added nodes must mean spatial pixel/root nodes only: alternative orientation STATES and possible paths are deliberately added. This distinction is explicit in this critic and report hypothesis-space discussion."
+  },
+  "blockers": "No new reproducible integrity/test-portability blocker found. Original efficacy and unverified physical continuity remain release blockers; PR must remain Draft/HOLD, no merge/deploy/partial release.",
+  "nextBoundedDecision": "Any future same-strand/free-tip experiment must retain source evidence, uncertainty and hair/liner/opening controls. Expanded state reach alone, stronger rendering or lower floors is not a permitted fix."
+}

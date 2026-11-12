@@ -4,6 +4,7 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- Reject the bounded eight-direction graph experiment: one archived Chromium reference becomes reachable, but multiple direction witnesses and expansion on hair/liner controls leave strand ownership unresolved. Preserve all responses, both browser grids and diagnostic figures; no product adoption. See [spectrum report](G1C1_SPECTRUM_REPORT.md).
 - Locate exact graph rejection witnesses with read-only instrumentation:64unchanged replays,34,458frontier checks, route-specific45/90degree conflicts and thinning witnesses; no pruning reach loss on this corpus. Preserve initial metadata/display errors and fixes.188unitPASS, original Length failures remain; no detector/product change. See [break census report](G1C1_BREAK_CENSUS_REPORT.md).
 - Fix the new availability unit's Linux CI coupling to Windows checkout bytes: read the same hash-bound frozen FaceMesh records; keep identical assertions and strict CV replay-source checks. Preserve the failed build and exact test revision in additive CI evidence.
 - Reject offline downward connected-graph prototype on real photos: local ridge evidence exists but root connectivity fails; V3 thinning worsens some reach. Preserve both versions, failed intermediate analytic gate,64input replays and gate-specific diagnostics.181unitPASS, original Length browser failures remain; no product adoption. See [downward report](G1C1_DOWNWARD_REPORT.md).

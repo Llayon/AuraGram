@@ -221,3 +221,14 @@ See [downward report](G1C1_DOWNWARD_REPORT.md). Product source/version/productio
 - [ ] Image-supported same-strand continuity at these transitions, actual free endings and useful natural Length remain unproven. No threshold relaxation/adoption.
 
 See [break census report](G1C1_BREAK_CENSUS_REPORT.md). Product/prototype source, geometry, guards, models and version unchanged; PR#5 Draft.
+
+## G1c.1 bounded full-direction-spectrum experiment (HOLD)
+
+- [x] Freeze the existing nodes, automatic roots, numeric floors and source references before measuring all eight directional responses.
+- [x] Retain state-consistent paths and separate pairwise, four-distinct-pixel and root-state evidence; do not teleport direction within a pixel.
+- [x] Replay all 64 eye records; verify 167,932 winning-edge predicates and original/expanded/observed-loose reach containment.
+- [x] One Chromium reference route restored, but alternative witnesses and hair/liner control expansion prevent strand ownership or naturalness approval.
+- [x] Independent code critic agrees: REJECT ADOPTION; renderer admission condition not met. No new Length or effect difference map.
+- [ ] Mandatory Length efficacy, credible free endings and natural visual benefit remain unresolved. PR#5 Draft; no merge/deploy.
+
+See [spectrum report](G1C1_SPECTRUM_REPORT.md). This is an expanded offline hypothesis space, not a product safety-equivalent refactor.

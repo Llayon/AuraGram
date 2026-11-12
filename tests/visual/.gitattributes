@@ -150,3 +150,8 @@ validate-lash-break.cjs -text
 replay-lash-break.cjs -text
 lash-break-final-critic.json -text
 lash-break-references.cjs -text
+
+lash-spectrum* -text
+curate-lash-spectrum.cjs -text
+validate-lash-spectrum.cjs -text
+replay-lash-spectrum.cjs -text

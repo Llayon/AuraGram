@@ -1,0 +1,120 @@
+{
+  "schema": "auragram-independent-spectrum-code-critic-v1",
+  "decision": "Expanded-state implementation consistent with bounded experiment; renderer condition NOT met. REJECT ADOPTION / LENGTH HOLD.",
+  "scope": "Code/capture/run/tests and raw02 results reviewed before scientific PNG critique. Independently executed eight pure mechanism tests and read fixed results, no browser/model inference or source/protocol/label edits.",
+  "references": [
+    {
+      "path": "tests/visual/lash-spectrum-protocol.json",
+      "sha256": "84dd5c3ce9284a847e787f5a4dddcf2090989ae7d9e3f75a7588915c90555f5a"
+    },
+    {
+      "path": "tests/visual/lash-spectrum-protocol-critic.json",
+      "sha256": "459d1e9508fae0a658ac639880b500206b617aa1ba1a657bf11ed5e5c5587519"
+    },
+    {
+      "path": "tests/visual/lash-spectrum.mjs",
+      "sha256": "a77d1032929a2f60442726df43d0cf500476bb328cb61ee74b74da863a0929b7"
+    },
+    {
+      "path": "tests/visual/lash-spectrum-instrument.cjs",
+      "sha256": "a7372b0644a396364899b6fbecf6286907a69eaf989e614daecd48c9d10a7f19"
+    },
+    {
+      "path": "tests/visual/lash-spectrum-run.cjs",
+      "sha256": "f1941e7230ed2515c6199eadc43ddbccfec61dbbb746dbb42f0876f57c8c5bea"
+    },
+    {
+      "path": "tests/visual/lash-spectrum.test.mjs",
+      "sha256": "6b215dfe27281daf69365491932e3cda19afedc05316d8acc6919654227ba01a"
+    },
+    {
+      "path": "tests/visual/out/spectrum-02-experiment/result.json",
+      "sha256": "79ee04183d2a9a694754318e5fc830aff5ceb331d26b69bf4364594cdbf0b6d4"
+    }
+  ],
+  "independentTests": "node --test tests/visual/lash-spectrum.test.mjs:8PASS/0FAIL/0SKIPPED/0CANCELLED.",
+  "protocolCautionDispositions": [
+    {
+      "id": "SPECTRUM-C1",
+      "status": "EXPLICITLY_ACKNOWLEDGED",
+      "detail": "Helper/result explicitly call this larger hypothesis/path space despite unchanged numeric floors. Fixed original pixel/root masks do not imply identical eligibility."
+    },
+    {
+      "id": "SPECTRUM-C2",
+      "status": "IMPLEMENTED_CHECKED",
+      "detail": "All8raw responses captured asFloat64 before winner selection; unavailable storedNaN. Each alternate uses own orthogonal anisotropy and same response/normal floors. Original winner mode must remain eligible with exact original Float32 direction;167932recorded winner-edge checks match actual raw edge."
+    },
+    {
+      "id": "SPECTRUM-C3",
+      "status": "IMPLEMENTED_CHECKED",
+      "detail": "pairSpectrum separates pair feasibility, local4point combinations, source-state reach and rooted4point combinations. Rooted witness starts from globally reached before-state and uses same modes through middle pixels."
+    },
+    {
+      "id": "SPECTRUM-C4",
+      "status": "LIMIT_REMAINS_EXPLICIT",
+      "detail": "modeEdge requires distinct8-neighbor pixels, prevents direct same-pixel mode switch. Four-point witness has four distinct pixels. Physical strand switching at ambiguous neighboring modes remains possible. Actual restored C217route45states/45distinctpixels uncensored, but that does not certify one fiber."
+    },
+    {
+      "id": "SPECTRUM-C5",
+      "status": "CONTAINMENT_CONFIRMED",
+      "detail": "Expanded reach contains baseline raw-directed reach and remains inside observed undirected reach. C217V1L2/V3both no-loose-route targets remain unreachable."
+    },
+    {
+      "id": "SPECTRUM-C6",
+      "status": "BOUNDED_WITH_SCOPE",
+      "detail": "Reach queue/states bounded8N; inspection retains maxSteps/censoring. Recorded maximum expanded typed-array bytes4976832 excludes spectra/input/original arrays/JS objects/source decode and is not integrated app/mobile memory."
+    }
+  ],
+  "rawVerification": {
+    "originalEyeReplays": 64,
+    "browserMaxNumericDifference": 4.496403249731884e-15,
+    "winningEdgePredicateChecks": 167932,
+    "allBaselineReachContained": true,
+    "allExpandedReachInsideObservedLoose": true,
+    "nodesAdded": 0,
+    "rootPixelsAdded": 0,
+    "thresholdChanges": 0,
+    "modelRequests": 0
+  },
+  "specificResults": [
+    {
+      "context": "Chromium217V1L1",
+      "result": "Expanded target reachable,45states/45distinctspatialpixels,uncensored; selected first frontier has8supported mode pairs and7rooted4point pairs.",
+      "judgment": "Image-mode/root reach restored in this hypothesis, but ambiguous; not unique physical continuity or resolved terminal."
+    },
+    {
+      "context": "Chromium217V1L2/V3both",
+      "result": "No expanded route.",
+      "judgment": "Correctly respects undirected observed-mask bound; no gap/new pixel invented."
+    },
+    {
+      "context": "WebKit217V1both",
+      "result": "First selected frontier pairCount0; target remains unreachable.",
+      "judgment": "Alternate response capture alone does not bypass actual support/alignment constraints."
+    },
+    {
+      "context": "WebKit217V3both",
+      "result": "8middle-mode pairs but local4point0/rooted4point0 and target unreachable.",
+      "judgment": "Pairwise feasibility is correctly not equated with local/root-global restoration."
+    },
+    {
+      "context": "ChromiumV1hairleft",
+      "result": "Root reachable pixels160?375;22frontier edges have rooted4point support.",
+      "judgment": "Expansion is not positive-specific; covering hair remains in guard-protected ambiguity context."
+    },
+    {
+      "context": "ChromiumV1white712left",
+      "result": "Root reachable pixels206?291;23frontier edges have rooted4point support.",
+      "judgment": "Same support enlargement admits unresolved liner/merged structures; no safe detector adoption."
+    }
+  ],
+  "remainingRisks": [
+    "Eligible mode spectra are engineering response, not calibrated probabilities or native physical tangent truth.",
+    "Root-state reach through one deterministic state path does not establish unique biological ownership; many supported modes increase ambiguity.",
+    "Expanded reach does not localize a free tip, prove absence of curved continuation or authorize extension.",
+    "Scalar counts are not precision/recall; white-liner/hair controls are ambiguous contexts, not no-lash groundtruth.",
+    "Global reach may have censored inspection routes; neither reach nor local four-point support is an accepted candidate."
+  ],
+  "codeReviewConclusion": "No reproducible code blocker found in current bounded state construction. Strongly retain nonadoption: restored control contexts and unresolved fiber/end ownership violate the conditional renderer gate.",
+  "nextVisualReview": "Actual source/working-grid spectra/compatible witness vectors and alternate state routes on the same217/white-liner/hair/protected-opening contexts. Show all pair counts/ambiguity, including W-V3pairwise-only failure; do not cherry-pick first lexical witness as true hair."
+}
