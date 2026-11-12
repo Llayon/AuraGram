@@ -27,5 +27,5 @@ test('unreached components exclude roots and strictly reached vertices with dete
  const active=new Uint8Array(9),roots=new Uint8Array(9),strict=new Uint8Array(9);for(const i of [0,1,3,4,8])active[i]=1;roots[0]=1;strict[0]=strict[3]=1;const loose=rootReach(active,roots,3,3),c=unreachedComponents(active,loose,strict,3,3);assert.equal(c.length,1);assert.equal(c[0].size,3);assert.equal(c[0].minIndex,1);assert.equal(c[0].target,8);
 });
 test('real ready-photo references are not mislabeled as no-face by filename matching',()=>{
- const {loadInputs}=require('./lash-domain-inputs.cjs'),d=loadInputs(),r=partitionReferences(d.labels,d.runs.map(r=>r.file));assert.equal(r.ready.length,5);assert.equal(r.unavailable.length,3);assert.ok(r.ready.some(l=>l.id==='F2-217-L1'));assert.ok(r.unavailable.every(l=>l.file==='pexels-31215869.jpg'));
+ const {frozenAvailability}=require('./lash-break-references.cjs'),d=frozenAvailability(),r=partitionReferences(d.labels,d.availableFiles);assert.equal(r.ready.length,5);assert.equal(r.unavailable.length,3);assert.ok(r.ready.some(l=>l.id==='F2-217-L1'));assert.ok(r.unavailable.every(l=>l.file==='pexels-31215869.jpg'));
 });

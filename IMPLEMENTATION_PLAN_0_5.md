@@ -217,6 +217,7 @@ See [downward report](G1C1_DOWNWARD_REPORT.md). Product source/version/productio
 - [x] Locate21745/90degree gate witnesses and first removed reference-route pixels; raw/pruned reachsets equal on all eyes.
 - [x] Correct no-face availability bookkeeping and automatic-NMS/zoom display; preserve initial outputs/tools/figures.
 - [x]188unitPASS;166browserPASS/2oldLengthFAIL/3dependentNOTRUN; active old-engine performance3PASS+3.8ms and packaged Chromium/WebKit smokePASS.
+- [x] Preserve first pushed build187PASS/1FAIL; fix metadata unit's CRLF/LF dependency with identical assertions and frozen records. Windows188PASS/LF dependency fixture7PASS; new GitHub build requires separate verification, never inferred.
 - [ ] Image-supported same-strand continuity at these transitions, actual free endings and useful natural Length remain unproven. No threshold relaxation/adoption.
 
 See [break census report](G1C1_BREAK_CENSUS_REPORT.md). Product/prototype source, geometry, guards, models and version unchanged; PR#5 Draft.
