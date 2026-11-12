@@ -107,3 +107,15 @@ lash-freeend-code-review.json -text
 lash-freeend-inputs.cjs -text
 lash-freeend-verified-render.cjs -text
 lash-freeend-final-critic.json -text
+lash-domain-audit.cjs -text
+lash-domain-inputs.cjs -text
+lash-domain-overlays.cjs -text
+lash-domain-prepare.cjs -text
+lash-domain-protocol-critic.json -text
+lash-domain-protocol.json -text
+lash-domain-visual-critic.json -text
+lash-domain.mjs -text
+lash-domain.test.mjs -text
+curate-lash-domain.cjs -text
+validate-lash-domain.cjs -text
+lash-domain-final-critic.json -text

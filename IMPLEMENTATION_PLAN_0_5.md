@@ -185,3 +185,14 @@ See [terminal report](G1C1_TERMINAL_REPORT.md). Runtime/production unchanged.
 - [ ] Useful natural Length, applicable positive/free-end coverage, physical devices and mandatory release gates remain open.
 
 See [free-ending dataset report](G1C1_FREEEND_DATASET_REPORT.md). PR#5 remains Draft; no partial release.
+
+## G1c.1 closed-eye geometry/domain audit (HOLD)
+
+- [x] Freeze32eyes/16engine-source cases and reuse original-only labels without seeding analysis.
+- [x] Measure opening clearance, signed upper distance, axial membership, aperture and fixed below-arc probes; retain all cutoffs and failures.
+- [x] Replay native v6 crossing paths/flags/grids exactly in Chromium/WebKit without MediaPipe inference.
+- [x] Critic/fixer: reject retracing/touching contours; preserve initial audit/helper and identical real-case measurements.
+- [x] 171unitPASS, original166browserPASS/2LengthFAIL/3dependentNOTRUN; geometry is not a semantic upper-lash/skin mask.
+- [ ] Actual image-only downward upper root/tip evidence, natural effect and original efficacy release gates remain open.
+
+See [domain report](G1C1_DOMAIN_REPORT.md). No source geometry, product guards, renderer, model, version or production change.

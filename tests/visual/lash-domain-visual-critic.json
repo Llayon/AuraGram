@@ -1,0 +1,208 @@
+{
+  "schema": "auragram-independent-domain-visual-critic-v1",
+  "decision": "LENGTH HOLD; no product domain widening or guard bypass justified",
+  "scope": "Actual stored Chromium/WebKit native context/overlays and coarse geometric probes, raw01/03 metrics and current pending report reviewed. No browser/model inference launched; no protocol/labels/product edits. This geometry-only stage renders no new lash effect, so it cannot establish natural extension.",
+  "references": [
+    {
+      "path": "tests/visual/lash-domain-protocol.json",
+      "sha256": "e0207ae13fdb0072edb52705f3a77c50c81352cd600c0a8f9032d662e40719df"
+    },
+    {
+      "path": "tests/visual/lash-domain.mjs",
+      "sha256": "2c7739c290c49052e3d54136e43df059d5c4ae1089359f82d57e4fb1befe005d"
+    },
+    {
+      "path": "tests/visual/lash-domain-protocol-critic.json",
+      "sha256": "d293ceca3dd43ea9a40af6cb17f2bec18c74b640d9af0f1c5938685c6f262de0"
+    },
+    {
+      "path": "tests/visual/out/domain-01-audit/audit.json",
+      "sha256": "27f7c5a0986bb1a6ae1cc42870ca9240b9084a1cfb05693208c2efba1dad767a"
+    },
+    {
+      "path": "tests/visual/out/domain-03-audit-fixed/audit.json",
+      "sha256": "2acdbd6aae16468b29ff1ac64c1f063b4a8811086df64e4c23b35ed7403833fb"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/manifest-chromium.json",
+      "sha256": "a8eb94a5baabef2a49d5e38e1533ea210c247dd3d84eeb1a44c40933ce3b67e3"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/manifest-webkit.json",
+      "sha256": "9f18cf35bd8e276b524cd097a8d04abecb2621b8661f2e88d9708572d87d91d0"
+    },
+    {
+      "path": "G1C1_DOMAIN_REPORT.md",
+      "sha256": "e2b610e3c36ed38f99150f0795f9809560662b8bcf9fae2be232b82b2a51e7b8"
+    }
+  ],
+  "inspectedImages": [
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-21792059.jpg-right-original-native.png",
+      "sha256": "badbfd74165ba2b4b33aae14a659ad0d646a4f477998923c1641575491ec8f26"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-21792059.jpg-right-geometry-paths-native.png",
+      "sha256": "f2898cc3944da507bb5338815996dc97059f9cc7864c3c35a82a69311484d8c7"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-21792059.jpg-right-geometric-probes.png",
+      "sha256": "a969bde21de8989f43d887800f7b77a6da0b9f2a15297ecde766db1820cb466b"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/webkit-pexels-21792059.jpg-right-geometry-paths-native.png",
+      "sha256": "c26cd57f4d9bed172822729c8110fc6a7986e22d6e31c4c819ca47cc1f3da549"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/webkit-pexels-21792059.jpg-right-geometric-probes.png",
+      "sha256": "d73c4d17c23f9d6b8988cd4120298453d63476c357a1abafa04f33002cc665c2"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-left-original-native.png",
+      "sha256": "871af3b14eb12608e1116b576ab0840dc62776ae330c2f3a9a59d808b24bb0dc"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-left-geometry-paths-native.png",
+      "sha256": "0e2ff3631496dcd416cd780a32248b7f501813554c541bfc1c31cef6818965ff"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-left-geometric-probes.png",
+      "sha256": "4ab5103232e4ae303cb156391cc8217c51605325d39068be126c01197f46746f"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/webkit-pexels-7123010.jpg-left-geometry-paths-native.png",
+      "sha256": "bea806297e7bd23552fc29c8d6cf3ee6298fb2ce1821971b4b5be0070ea1fb6f"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/webkit-pexels-7123010.jpg-left-geometric-probes.png",
+      "sha256": "b61e456ea320821a362ab6b56fbc71bd4635331da8ccbb92bc2e52596ef7fe59"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-right-original-native.png",
+      "sha256": "48e531267117ccb0e200b8c613cfe83948b3824b64dcfaa64cd375a91815ca73"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-right-geometry-paths-native.png",
+      "sha256": "ae7c4fc1e848eabb62536939f0222d33b65beb30030791be78c22d7517e90c5d"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-right-geometric-probes.png",
+      "sha256": "e2819ebbb2dac058b1b188c8041e6e426235dd10d22e17bbcc4513b7e05d1420"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/webkit-pexels-7123010.jpg-right-geometry-paths-native.png",
+      "sha256": "d3bbb814f83aad684331eb024b6114b4a5ae85af13b5e09616ab038b05fc46f4"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/webkit-pexels-7123010.jpg-right-geometric-probes.png",
+      "sha256": "a56212be2bc7d42d9755e1ba082e09992ccb8affa18b8c5b3f650b8dc20e125b"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-hair-occlusion.jpg-left-original-native.png",
+      "sha256": "a05e59c19012094d809eaf77a64e9b03e5e5c5f1b01c09c348b03b70d9bfff05"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-hair-occlusion.jpg-left-geometry-paths-native.png",
+      "sha256": "11c50120e125f862fdb14e7a3418e8e1075c8f752e48647f884f0c92bb9d0842"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-hair-occlusion.jpg-left-geometric-probes.png",
+      "sha256": "0572ab6ca62142848c165d17eebda45e1ba7a57677c725f20a5a5495ff8eb7ed"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/webkit-hair-occlusion.jpg-left-geometry-paths-native.png",
+      "sha256": "ac90f7be571b54483707546594f4ff8efc7ce86d9a325d5cd36bd3fbd5c2f8e2"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/webkit-hair-occlusion.jpg-left-geometric-probes.png",
+      "sha256": "3832b0f269f720a15dcfd20d8ba0d880bf1e617d8a4dc4b694bfff65bf7f0ba1"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-32526448.jpg-right-original-native.png",
+      "sha256": "9248072a68a6cf7dd1305be6f7a494a83380001a154518ccc7ffdd85bb8e633a"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-32526448.jpg-right-geometry-paths-native.png",
+      "sha256": "7516226612ec858fcab1da4c95acdd6d3b8c4d7da0fef4033268e6a9a2cbbf5e"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/chromium-pexels-32526448.jpg-right-geometric-probes.png",
+      "sha256": "51d835630adb3721c59aaece8d4bc88a6d6b3e477e9093a7ef457fb25b4105ac"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/webkit-pexels-32526448.jpg-right-geometry-paths-native.png",
+      "sha256": "0bf84f02204fed71f09bd68abc6b18532c11b99eaca2afb43c58da1bb3230fc5"
+    },
+    {
+      "path": "tests/visual/out/domain-02-overlays/webkit-pexels-32526448.jpg-right-geometric-probes.png",
+      "sha256": "502ef234125c3fee4f2bc73115ea45e454663eb3c91309bf5c0dc56cc1dc6981"
+    }
+  ],
+  "numericChecks": {
+    "frozenProtocolSHA": "e0207ae13fdb0072edb52705f3a77c50c81352cd600c0a8f9032d662e40719df",
+    "cases": 16,
+    "eyes": 32,
+    "01to03": "Deep equivalent after recursively excluding only new selfContact field and helperSHA256; no measured current-case result changed.",
+    "geometryUsable": "All32 pass declared numerical checks, not semantic boundary certification.",
+    "overlayBindings": "Both manifests8 cases/56files each, bind audit03 SHA and current helper SHA; every actualNativeCrossingReplay says exact paths/flags/grid PASS.",
+    "217SubjectRightAperture": {
+      "chromium": 0.0642,
+      "webkit": 0.08471
+    },
+    "217ProvisionalLabels": "Both centerpoints outside predicted opening and in depth.5; neither in depth.25. Their engineering uncertainty does not certify entire-probe membership.",
+    "712Paths": "8Chromium/11WebKit observed paths across both eyes have at least one stored point in probe at aperture cutoffs that admit217. Not certified false hairs, full curve containment or false-positive rates.",
+    "hair": "Hair-covered left eye has3Chromium/4WebKit crossing paths intersecting depth.5; aperture~.18061 is admitted only by the declared.24 cutoff, not narrower declared cutoffs.",
+    "461Axial": "~-.0326Chromium/-.0350WebKit, outside frozen.1..9 axial range; exclusion not fixed with a favorable corner exception."
+  },
+  "specificVisualFindings": [
+    {
+      "source": "217right C/W",
+      "observation": "Original/annotated native context shows projected upper fan below canonical upper/lower arcs. White annotated endpoint circles lie on visible skin well below predicted opening. Red paths overlap ambiguous dark upper-fan/shaft regions.",
+      "interpretation": "Supports current geometric-domain mismatch. Does not prove all paths are foreign hair or that guard should be disabled; local single-fiber/root ownership and accurate true endpoints remain provisional."
+    },
+    {
+      "source": "712both C/W",
+      "observation": "Closed white-liner contexts contain thick bright liner edge, merged dark shafts and other crossing hair/texture. Broad below-domain overlaps those unresolved regions despite narrow descriptive aperture.",
+      "interpretation": "Aperture plus below-polygon geometry cannot separate safe positive endings from these ambiguity controls. These images are not no-lash groundtruth; path admission is not8/11 proven false eyelashes."
+    },
+    {
+      "source": "hairleft C/W",
+      "observation": "Actual native image is covered by long external hair. Predicted eye polygon is positioned over the hair field; broader geometric probe extends through it.",
+      "interpretation": "Numerically usable geometry is not semantic opening/skin. Broad aperture admission cannot justify processing the covered eye."
+    },
+    {
+      "source": "325right C/W",
+      "observation": "Frozen projected upper-ending circles lie over visible sclera inside predicted opening. Broader below probe extends below lower arc into lower-lash/skin neighborhood.",
+      "interpretation": "Keep opening protection. A below-domain is not intrinsically upper-lash-only; lower lashes/skin can occupy it even though anatomy above differs."
+    },
+    {
+      "source": "coarse diagrams all requested cases/engines",
+      "observation": "Red opening, amber clearance and blue/purple probes show geometric regions with corner exclusion. Small96-column maps deliberately discard native boundary detail.",
+      "interpretation": "Useful for explaining scope, not masks usable at export, ownership labels or pixel-level safety proof."
+    }
+  ],
+  "fixerReview": {
+    "selfContact": "Earlier collinear-backtracking counterexample now selfContact=true/usable=false. Existing01 helper/audit retained; new diagnostic changes do not alter frozen thresholds or product source.",
+    "residualGeometryLimits": "Topology checks still numerical only; aperture uses equal landmark-index projected absolute gaps with signed profile retained. Normal ambiguity near low aperture and center-only uncertainty limitations remain explicit."
+  },
+  "reportReview": {
+    "status": "Current report still says verification in progress; appropriate until final logs/pack are complete. No unsupported naturalness, skin segmentation, precision/recall or full-green-CI claim found.",
+    "pendingEditorialUpdates": [
+      "Update eight new tests/170unit to final nine new tests/171unit only after verifying latest unit log.",
+      "Include selfContact/touch-overlap guard and preserved01/new03 correction in numerical-validity explanation.",
+      "Record final both-engine replay/visual critique and full mandatory failure counts without treating dependent NOTRUN asPASS."
+    ],
+    "overall": "Main conclusion matches observed images: simple domain widening/scalar aperture cutoffs do not establish a safe useful Length policy."
+  },
+  "nextMinimalDecision": "Do not adopt either diagnostic depth/cutoff. Any later prototype needs source-intensity evidence tying one resolved visible upper structure to its root and terminal segment on permitted pixels, with the same white-liner/hair negatives and protected opening retained. New positive activity alone cannot justify bypassing existing ambiguity guards.",
+  "immutableLabels": [
+    {
+      "path": "tests/visual/lash-freeend-independent-labels.json",
+      "sha256": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800"
+    },
+    {
+      "path": "tests/visual/lash-freeend2-independent-labels.json",
+      "sha256": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810"
+    }
+  ]
+}

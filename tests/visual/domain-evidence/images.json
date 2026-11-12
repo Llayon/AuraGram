@@ -1,0 +1,562 @@
+[
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light.jpg-original-portrait.png",
+    "file": "assets/424acd9f72ad51003d4e1670547a15430edc06e67ea3560f5e72b69bfd977658.png",
+    "sha256": "424acd9f72ad51003d4e1670547a15430edc06e67ea3560f5e72b69bfd977658"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light.jpg-left-original-native.png",
+    "file": "assets/a0d01a10761eb9c1a53b13d7c774031fbe279bb86a1475cb8cfab311a45645ee.png",
+    "sha256": "a0d01a10761eb9c1a53b13d7c774031fbe279bb86a1475cb8cfab311a45645ee"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light.jpg-left-geometry-paths-native.png",
+    "file": "assets/13e85e978e4ae8089f2a5f609bf063953e77f25e803b9580d77891e7a14dab0b.png",
+    "sha256": "13e85e978e4ae8089f2a5f609bf063953e77f25e803b9580d77891e7a14dab0b"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light.jpg-left-geometric-probes.png",
+    "file": "assets/d9e8ba4b5e3a82a59cb5cb698a25601743b51f2984f4ad0b90cfd347fc65c099.png",
+    "sha256": "d9e8ba4b5e3a82a59cb5cb698a25601743b51f2984f4ad0b90cfd347fc65c099"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light.jpg-right-original-native.png",
+    "file": "assets/32c36d46992189f6b507b127c9eb72e0ae0ab9b204b97a69bea049c2822cf96d.png",
+    "sha256": "32c36d46992189f6b507b127c9eb72e0ae0ab9b204b97a69bea049c2822cf96d"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light.jpg-right-geometry-paths-native.png",
+    "file": "assets/4cd474eeacd53d9f1d1ec55c8552dc625bfe55ac1d7a81017991b81d2f952432.png",
+    "sha256": "4cd474eeacd53d9f1d1ec55c8552dc625bfe55ac1d7a81017991b81d2f952432"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light.jpg-right-geometric-probes.png",
+    "file": "assets/264e7d28c948d56ab4bde32900b1ec365b2d6c30d6549bbff9714949946087ad.png",
+    "sha256": "264e7d28c948d56ab4bde32900b1ec365b2d6c30d6549bbff9714949946087ad"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-natural.jpg-original-portrait.png",
+    "file": "assets/b900e069a9f8b1d78cb22bfa99bb9e30b4d5f18fe638303b5cb2a70ffb1552da.png",
+    "sha256": "b900e069a9f8b1d78cb22bfa99bb9e30b4d5f18fe638303b5cb2a70ffb1552da"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-natural.jpg-left-original-native.png",
+    "file": "assets/591fe6939218c3b926a99d65d879a38802f14c8a1119b5a32a90c0e8d0b2653a.png",
+    "sha256": "591fe6939218c3b926a99d65d879a38802f14c8a1119b5a32a90c0e8d0b2653a"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-natural.jpg-left-geometry-paths-native.png",
+    "file": "assets/b6c53623703de7f2be03ad0e96dea712a4462b8ccb6cf14916491f5b2e71cf02.png",
+    "sha256": "b6c53623703de7f2be03ad0e96dea712a4462b8ccb6cf14916491f5b2e71cf02"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-natural.jpg-left-geometric-probes.png",
+    "file": "assets/dfba45f38e205c690b0dabdf054d8a6a5e7e3c044addbbef0812416297274bef.png",
+    "sha256": "dfba45f38e205c690b0dabdf054d8a6a5e7e3c044addbbef0812416297274bef"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-natural.jpg-right-original-native.png",
+    "file": "assets/5b4f024b072d3b8b540f3f4985b39487a38b09b4e89d9bcd71fad28dd0ceb232.png",
+    "sha256": "5b4f024b072d3b8b540f3f4985b39487a38b09b4e89d9bcd71fad28dd0ceb232"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-natural.jpg-right-geometry-paths-native.png",
+    "file": "assets/433e83124ebf6a858d25903963b64b1c835b6b1433d03f7e8d5cb16484705393.png",
+    "sha256": "433e83124ebf6a858d25903963b64b1c835b6b1433d03f7e8d5cb16484705393"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-natural.jpg-right-geometric-probes.png",
+    "file": "assets/859a37c5e849057e216d1524511bf8c2e45ee85372bca41bb5c45028d15069f3.png",
+    "sha256": "859a37c5e849057e216d1524511bf8c2e45ee85372bca41bb5c45028d15069f3"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-hair-occlusion.jpg-original-portrait.png",
+    "file": "assets/a00ab9f398d89bd8c778165b4ec66b6bbb5db4fec7439a9db668468ef22229db.png",
+    "sha256": "a00ab9f398d89bd8c778165b4ec66b6bbb5db4fec7439a9db668468ef22229db"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-hair-occlusion.jpg-left-original-native.png",
+    "file": "assets/a05e59c19012094d809eaf77a64e9b03e5e5c5f1b01c09c348b03b70d9bfff05.png",
+    "sha256": "a05e59c19012094d809eaf77a64e9b03e5e5c5f1b01c09c348b03b70d9bfff05"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-hair-occlusion.jpg-left-geometry-paths-native.png",
+    "file": "assets/11c50120e125f862fdb14e7a3418e8e1075c8f752e48647f884f0c92bb9d0842.png",
+    "sha256": "11c50120e125f862fdb14e7a3418e8e1075c8f752e48647f884f0c92bb9d0842"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-hair-occlusion.jpg-left-geometric-probes.png",
+    "file": "assets/0572ab6ca62142848c165d17eebda45e1ba7a57677c725f20a5a5495ff8eb7ed.png",
+    "sha256": "0572ab6ca62142848c165d17eebda45e1ba7a57677c725f20a5a5495ff8eb7ed"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-hair-occlusion.jpg-right-original-native.png",
+    "file": "assets/02512a78cbf470b281867e03d07dfb0a15ee6281e2e4c3e9acb8fa515f5a4deb.png",
+    "sha256": "02512a78cbf470b281867e03d07dfb0a15ee6281e2e4c3e9acb8fa515f5a4deb"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-hair-occlusion.jpg-right-geometry-paths-native.png",
+    "file": "assets/6eca6b802fbfdd674b0399c5c47e534c3da8806b6322d674f599b59ccf29f917.png",
+    "sha256": "6eca6b802fbfdd674b0399c5c47e534c3da8806b6322d674f599b59ccf29f917"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-hair-occlusion.jpg-right-geometric-probes.png",
+    "file": "assets/ef80f5a7ac38291ce91289b16640d64a52f202e33994327fb9c0b3e3cee055c2.png",
+    "sha256": "ef80f5a7ac38291ce91289b16640d64a52f202e33994327fb9c0b3e3cee055c2"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light-rotated25.jpg-original-portrait.png",
+    "file": "assets/fc05d23ea75d3b29622f00f009327608a916821887dee73eaa4c0f1bdf264998.png",
+    "sha256": "fc05d23ea75d3b29622f00f009327608a916821887dee73eaa4c0f1bdf264998"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light-rotated25.jpg-left-original-native.png",
+    "file": "assets/3f6f5ae75d3649d7510054ed2558829f7816ee29e23faeb02180c09efca2f0aa.png",
+    "sha256": "3f6f5ae75d3649d7510054ed2558829f7816ee29e23faeb02180c09efca2f0aa"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light-rotated25.jpg-left-geometry-paths-native.png",
+    "file": "assets/e4a94d9bd0ccc32eab0b24dcbb428940783094a870452b66ea734b8f17f05824.png",
+    "sha256": "e4a94d9bd0ccc32eab0b24dcbb428940783094a870452b66ea734b8f17f05824"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light-rotated25.jpg-left-geometric-probes.png",
+    "file": "assets/094128c7f46f94e12131b8fb22a108e6795a00b977d68b8ebe8dce4e141f2f21.png",
+    "sha256": "094128c7f46f94e12131b8fb22a108e6795a00b977d68b8ebe8dce4e141f2f21"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light-rotated25.jpg-right-original-native.png",
+    "file": "assets/f24d753a4e8205d82f34699546d8821b71f8e611121dddb22d04b7935c644a0c.png",
+    "sha256": "f24d753a4e8205d82f34699546d8821b71f8e611121dddb22d04b7935c644a0c"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light-rotated25.jpg-right-geometry-paths-native.png",
+    "file": "assets/877a359c23f15b1f0ad24f416c002170fc347e78822e41d2df6153ef8f5b12a7.png",
+    "sha256": "877a359c23f15b1f0ad24f416c002170fc347e78822e41d2df6153ef8f5b12a7"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-light-rotated25.jpg-right-geometric-probes.png",
+    "file": "assets/3758aefdcfe42d12b0cd55a872b468c3edbeb0212f246f44777b67e1df7abe90.png",
+    "sha256": "3758aefdcfe42d12b0cd55a872b468c3edbeb0212f246f44777b67e1df7abe90"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-original-portrait.png",
+    "file": "assets/900c28cf0028a98c272af90c0b36affe086e124315235df90b32587937c27288.png",
+    "sha256": "900c28cf0028a98c272af90c0b36affe086e124315235df90b32587937c27288"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-left-original-native.png",
+    "file": "assets/871af3b14eb12608e1116b576ab0840dc62776ae330c2f3a9a59d808b24bb0dc.png",
+    "sha256": "871af3b14eb12608e1116b576ab0840dc62776ae330c2f3a9a59d808b24bb0dc"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-left-geometry-paths-native.png",
+    "file": "assets/0e2ff3631496dcd416cd780a32248b7f501813554c541bfc1c31cef6818965ff.png",
+    "sha256": "0e2ff3631496dcd416cd780a32248b7f501813554c541bfc1c31cef6818965ff"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-left-geometric-probes.png",
+    "file": "assets/4ab5103232e4ae303cb156391cc8217c51605325d39068be126c01197f46746f.png",
+    "sha256": "4ab5103232e4ae303cb156391cc8217c51605325d39068be126c01197f46746f"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-right-original-native.png",
+    "file": "assets/48e531267117ccb0e200b8c613cfe83948b3824b64dcfaa64cd375a91815ca73.png",
+    "sha256": "48e531267117ccb0e200b8c613cfe83948b3824b64dcfaa64cd375a91815ca73"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-right-geometry-paths-native.png",
+    "file": "assets/ae7c4fc1e848eabb62536939f0222d33b65beb30030791be78c22d7517e90c5d.png",
+    "sha256": "ae7c4fc1e848eabb62536939f0222d33b65beb30030791be78c22d7517e90c5d"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-7123010.jpg-right-geometric-probes.png",
+    "file": "assets/e2819ebbb2dac058b1b188c8041e6e426235dd10d22e17bbcc4513b7e05d1420.png",
+    "sha256": "e2819ebbb2dac058b1b188c8041e6e426235dd10d22e17bbcc4513b7e05d1420"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-32526448.jpg-original-portrait.png",
+    "file": "assets/e2c36ce41548465846656a270203690d41786c20def383dda2a228650a312ea2.png",
+    "sha256": "e2c36ce41548465846656a270203690d41786c20def383dda2a228650a312ea2"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-32526448.jpg-left-original-native.png",
+    "file": "assets/eded94bed8f5c70c534f31ecfd3be79213962d5caed5a4f081ae896d8a269cc1.png",
+    "sha256": "eded94bed8f5c70c534f31ecfd3be79213962d5caed5a4f081ae896d8a269cc1"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-32526448.jpg-left-geometry-paths-native.png",
+    "file": "assets/32856263e7eb3a0b543912714371106526523da632e2717c00a8576190a75f68.png",
+    "sha256": "32856263e7eb3a0b543912714371106526523da632e2717c00a8576190a75f68"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-32526448.jpg-left-geometric-probes.png",
+    "file": "assets/726273ef25ba17c919247321df9c0f314dff9f1cf67d4ee705e17368edf4336b.png",
+    "sha256": "726273ef25ba17c919247321df9c0f314dff9f1cf67d4ee705e17368edf4336b"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-32526448.jpg-right-original-native.png",
+    "file": "assets/9248072a68a6cf7dd1305be6f7a494a83380001a154518ccc7ffdd85bb8e633a.png",
+    "sha256": "9248072a68a6cf7dd1305be6f7a494a83380001a154518ccc7ffdd85bb8e633a"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-32526448.jpg-right-geometry-paths-native.png",
+    "file": "assets/7516226612ec858fcab1da4c95acdd6d3b8c4d7da0fef4033268e6a9a2cbbf5e.png",
+    "sha256": "7516226612ec858fcab1da4c95acdd6d3b8c4d7da0fef4033268e6a9a2cbbf5e"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-32526448.jpg-right-geometric-probes.png",
+    "file": "assets/51d835630adb3721c59aaece8d4bc88a6d6b3e477e9093a7ef457fb25b4105ac.png",
+    "sha256": "51d835630adb3721c59aaece8d4bc88a6d6b3e477e9093a7ef457fb25b4105ac"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-4611686.jpg-original-portrait.png",
+    "file": "assets/514d48e44cad49cd91724060c846e0ae5459648a29f5a18e71735dde5144e8ad.png",
+    "sha256": "514d48e44cad49cd91724060c846e0ae5459648a29f5a18e71735dde5144e8ad"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-4611686.jpg-left-original-native.png",
+    "file": "assets/a889cc56bdce729a68d3fa14511fb66939a064bdf670b46beae044f62d1ed34b.png",
+    "sha256": "a889cc56bdce729a68d3fa14511fb66939a064bdf670b46beae044f62d1ed34b"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-4611686.jpg-left-geometry-paths-native.png",
+    "file": "assets/d233aec96d1810e810056ce913462f61e190423327c942122f83ae0e05f80662.png",
+    "sha256": "d233aec96d1810e810056ce913462f61e190423327c942122f83ae0e05f80662"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-4611686.jpg-left-geometric-probes.png",
+    "file": "assets/3cc640cf87d6c112164ac01ea19a29b27d60439a8ed9f087c6ea813932f3f100.png",
+    "sha256": "3cc640cf87d6c112164ac01ea19a29b27d60439a8ed9f087c6ea813932f3f100"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-4611686.jpg-right-original-native.png",
+    "file": "assets/abf5696bcfa317e90e8f214baa2f5ed22811fcf370742dbc527e93cafd1419a4.png",
+    "sha256": "abf5696bcfa317e90e8f214baa2f5ed22811fcf370742dbc527e93cafd1419a4"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-4611686.jpg-right-geometry-paths-native.png",
+    "file": "assets/e22a14bc46acb5729e10cbe8532d8d078e98af91d81bd1c210a7aa92dd3868a7.png",
+    "sha256": "e22a14bc46acb5729e10cbe8532d8d078e98af91d81bd1c210a7aa92dd3868a7"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-4611686.jpg-right-geometric-probes.png",
+    "file": "assets/bf378fed8bd441671db5c0b34ebc693417e955036cfb5a89a17a863928c8fca5.png",
+    "sha256": "bf378fed8bd441671db5c0b34ebc693417e955036cfb5a89a17a863928c8fca5"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-21792059.jpg-original-portrait.png",
+    "file": "assets/dbc21b51737278aa256c65b41dd192f12e3a52e04991318a860f95dc7055819f.png",
+    "sha256": "dbc21b51737278aa256c65b41dd192f12e3a52e04991318a860f95dc7055819f"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-21792059.jpg-left-original-native.png",
+    "file": "assets/dab2555efdbc5615453d4ed95071dfbff3d0c4c1107a66429fa04db380f87f2a.png",
+    "sha256": "dab2555efdbc5615453d4ed95071dfbff3d0c4c1107a66429fa04db380f87f2a"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-21792059.jpg-left-geometry-paths-native.png",
+    "file": "assets/bab6c0c80edf7525067f9a13ea2e1b1435ee73d785dce1007a7be2090e6506be.png",
+    "sha256": "bab6c0c80edf7525067f9a13ea2e1b1435ee73d785dce1007a7be2090e6506be"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-21792059.jpg-left-geometric-probes.png",
+    "file": "assets/49e81e5705736621760c7f7d3e81cf4f91436c2aa2501bc63b2110b3aa213176.png",
+    "sha256": "49e81e5705736621760c7f7d3e81cf4f91436c2aa2501bc63b2110b3aa213176"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-21792059.jpg-right-original-native.png",
+    "file": "assets/badbfd74165ba2b4b33aae14a659ad0d646a4f477998923c1641575491ec8f26.png",
+    "sha256": "badbfd74165ba2b4b33aae14a659ad0d646a4f477998923c1641575491ec8f26"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-21792059.jpg-right-geometry-paths-native.png",
+    "file": "assets/f2898cc3944da507bb5338815996dc97059f9cc7864c3c35a82a69311484d8c7.png",
+    "sha256": "f2898cc3944da507bb5338815996dc97059f9cc7864c3c35a82a69311484d8c7"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/chromium-pexels-21792059.jpg-right-geometric-probes.png",
+    "file": "assets/a969bde21de8989f43d887800f7b77a6da0b9f2a15297ecde766db1820cb466b.png",
+    "sha256": "a969bde21de8989f43d887800f7b77a6da0b9f2a15297ecde766db1820cb466b"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light.jpg-original-portrait.png",
+    "file": "assets/8e7d6cc4629c2dcb640ba192efd080daa6526ee587ac3dbf7a22b01d20ecf45b.png",
+    "sha256": "8e7d6cc4629c2dcb640ba192efd080daa6526ee587ac3dbf7a22b01d20ecf45b"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light.jpg-left-original-native.png",
+    "file": "assets/3f3cc4dd429657248cd960753f3d8c801d15d276cf99b8c84f5b780210bb3c2b.png",
+    "sha256": "3f3cc4dd429657248cd960753f3d8c801d15d276cf99b8c84f5b780210bb3c2b"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light.jpg-left-geometry-paths-native.png",
+    "file": "assets/e94aa7cb0f449aa3cf25fa51c6606bf47b264dad83dac1964ae3f23fe3f95692.png",
+    "sha256": "e94aa7cb0f449aa3cf25fa51c6606bf47b264dad83dac1964ae3f23fe3f95692"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light.jpg-left-geometric-probes.png",
+    "file": "assets/3922a0013367162719a31cca8a0eff6afba3260e3760aaf62eba536cdd058461.png",
+    "sha256": "3922a0013367162719a31cca8a0eff6afba3260e3760aaf62eba536cdd058461"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light.jpg-right-original-native.png",
+    "file": "assets/331202cd9089f55ac1b8aca1b73e91bf926f88ceb9f6f8ab23ab0c28a3aa6fe9.png",
+    "sha256": "331202cd9089f55ac1b8aca1b73e91bf926f88ceb9f6f8ab23ab0c28a3aa6fe9"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light.jpg-right-geometry-paths-native.png",
+    "file": "assets/1855ad41c73df849915a521f204b795de500056ee4a05f1236d899bc21ae96cd.png",
+    "sha256": "1855ad41c73df849915a521f204b795de500056ee4a05f1236d899bc21ae96cd"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light.jpg-right-geometric-probes.png",
+    "file": "assets/9481ead76799c49c232de02fb6a882a78e1001c9771aa966039fdaf7cb7bdf83.png",
+    "sha256": "9481ead76799c49c232de02fb6a882a78e1001c9771aa966039fdaf7cb7bdf83"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-natural.jpg-original-portrait.png",
+    "file": "assets/73f31907ca230f3e7abc9fcb20c7fc0e6d6bd34b3659fb9da01c1adadb456398.png",
+    "sha256": "73f31907ca230f3e7abc9fcb20c7fc0e6d6bd34b3659fb9da01c1adadb456398"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-natural.jpg-left-original-native.png",
+    "file": "assets/5ed05691ee8468930578aa98e660a6aff9ee2b50f21212b52f0b6686e40b1b5a.png",
+    "sha256": "5ed05691ee8468930578aa98e660a6aff9ee2b50f21212b52f0b6686e40b1b5a"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-natural.jpg-left-geometry-paths-native.png",
+    "file": "assets/8759865b22be2b80785a45788be9edb5baf3baff35a7439167dcf3a1b69ac1f5.png",
+    "sha256": "8759865b22be2b80785a45788be9edb5baf3baff35a7439167dcf3a1b69ac1f5"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-natural.jpg-left-geometric-probes.png",
+    "file": "assets/a86ce9fe65b6595aa35f10f914ab6991f3cb26274ae15cfd6575717975d80bc4.png",
+    "sha256": "a86ce9fe65b6595aa35f10f914ab6991f3cb26274ae15cfd6575717975d80bc4"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-natural.jpg-right-original-native.png",
+    "file": "assets/a6f00329f8be2ba8829afcf486932443596d15331a93f9d446d5f2a26ee4e585.png",
+    "sha256": "a6f00329f8be2ba8829afcf486932443596d15331a93f9d446d5f2a26ee4e585"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-natural.jpg-right-geometry-paths-native.png",
+    "file": "assets/be4172bca32a6d15a05ab5c8d87d5a2b2a0ddde0bd02250ae0bf64ebfef1d3b6.png",
+    "sha256": "be4172bca32a6d15a05ab5c8d87d5a2b2a0ddde0bd02250ae0bf64ebfef1d3b6"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-natural.jpg-right-geometric-probes.png",
+    "file": "assets/7ede72f0646a31d4f450640d131f98440625f8b281ab7cfdc3ab8ce4c81d420d.png",
+    "sha256": "7ede72f0646a31d4f450640d131f98440625f8b281ab7cfdc3ab8ce4c81d420d"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-hair-occlusion.jpg-original-portrait.png",
+    "file": "assets/d70290485de2110fb685878115a0a5ccae0d17132b97996012a1d80e91f18ed4.png",
+    "sha256": "d70290485de2110fb685878115a0a5ccae0d17132b97996012a1d80e91f18ed4"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-hair-occlusion.jpg-left-original-native.png",
+    "file": "assets/a9ba7aa8583ad8a41fda728a111275c9a1624f1527d0ce6f506868c22bd2ee5a.png",
+    "sha256": "a9ba7aa8583ad8a41fda728a111275c9a1624f1527d0ce6f506868c22bd2ee5a"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-hair-occlusion.jpg-left-geometry-paths-native.png",
+    "file": "assets/ac90f7be571b54483707546594f4ff8efc7ce86d9a325d5cd36bd3fbd5c2f8e2.png",
+    "sha256": "ac90f7be571b54483707546594f4ff8efc7ce86d9a325d5cd36bd3fbd5c2f8e2"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-hair-occlusion.jpg-left-geometric-probes.png",
+    "file": "assets/3832b0f269f720a15dcfd20d8ba0d880bf1e617d8a4dc4b694bfff65bf7f0ba1.png",
+    "sha256": "3832b0f269f720a15dcfd20d8ba0d880bf1e617d8a4dc4b694bfff65bf7f0ba1"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-hair-occlusion.jpg-right-original-native.png",
+    "file": "assets/ced748ec8565fd3a6780b25365de664c627c415fff3e00a4ffe0f01a7bba4e26.png",
+    "sha256": "ced748ec8565fd3a6780b25365de664c627c415fff3e00a4ffe0f01a7bba4e26"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-hair-occlusion.jpg-right-geometry-paths-native.png",
+    "file": "assets/4bb763338ffd69c5ed05c3ba09bdd4bc708ef9cdb13d5da8db62008e697fdf8b.png",
+    "sha256": "4bb763338ffd69c5ed05c3ba09bdd4bc708ef9cdb13d5da8db62008e697fdf8b"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-hair-occlusion.jpg-right-geometric-probes.png",
+    "file": "assets/68b8bd587ea71f1b8d53bfad7ca981dcbf88287a4e533e8551845ce777dbc97c.png",
+    "sha256": "68b8bd587ea71f1b8d53bfad7ca981dcbf88287a4e533e8551845ce777dbc97c"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light-rotated25.jpg-original-portrait.png",
+    "file": "assets/925b652e88efa3113ac2db67461dc7799ae5b0ce911bef166d3d7be383e9b7bd.png",
+    "sha256": "925b652e88efa3113ac2db67461dc7799ae5b0ce911bef166d3d7be383e9b7bd"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light-rotated25.jpg-left-original-native.png",
+    "file": "assets/a1e624b936b3e186cbb865ccfe4e68f013c696b4f81ed094f6d3d872016db159.png",
+    "sha256": "a1e624b936b3e186cbb865ccfe4e68f013c696b4f81ed094f6d3d872016db159"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light-rotated25.jpg-left-geometry-paths-native.png",
+    "file": "assets/823da4851bc59b6c183eb64541164cf42a7ef2492de562782457816d8326284e.png",
+    "sha256": "823da4851bc59b6c183eb64541164cf42a7ef2492de562782457816d8326284e"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light-rotated25.jpg-left-geometric-probes.png",
+    "file": "assets/d9613421cd2fa14aab81561b570da3e56b0be6abe22dc527cf4390660b15f65d.png",
+    "sha256": "d9613421cd2fa14aab81561b570da3e56b0be6abe22dc527cf4390660b15f65d"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light-rotated25.jpg-right-original-native.png",
+    "file": "assets/d77207fc203056aee009922250fcdd52ba80abc56a63cfd4a81566a39a2fb85e.png",
+    "sha256": "d77207fc203056aee009922250fcdd52ba80abc56a63cfd4a81566a39a2fb85e"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light-rotated25.jpg-right-geometry-paths-native.png",
+    "file": "assets/832cd97feb6fe0b4e237e56da013b481337a0a9fc130599806ca671fd125480e.png",
+    "sha256": "832cd97feb6fe0b4e237e56da013b481337a0a9fc130599806ca671fd125480e"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-light-rotated25.jpg-right-geometric-probes.png",
+    "file": "assets/a0c376701676f7a34d783ca842e38a4a3f69210ab4f9e7135d1e2248a00d8ff6.png",
+    "sha256": "a0c376701676f7a34d783ca842e38a4a3f69210ab4f9e7135d1e2248a00d8ff6"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-7123010.jpg-original-portrait.png",
+    "file": "assets/6c06b95c8320b6c2f1401cad9d286a9023be77bc9c7542f98ff8c94bca379b50.png",
+    "sha256": "6c06b95c8320b6c2f1401cad9d286a9023be77bc9c7542f98ff8c94bca379b50"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-7123010.jpg-left-original-native.png",
+    "file": "assets/23aa09be220214fe3c0f07bbaf1cf12e942ec603418e5013f40f906896ce0984.png",
+    "sha256": "23aa09be220214fe3c0f07bbaf1cf12e942ec603418e5013f40f906896ce0984"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-7123010.jpg-left-geometry-paths-native.png",
+    "file": "assets/bea806297e7bd23552fc29c8d6cf3ee6298fb2ce1821971b4b5be0070ea1fb6f.png",
+    "sha256": "bea806297e7bd23552fc29c8d6cf3ee6298fb2ce1821971b4b5be0070ea1fb6f"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-7123010.jpg-left-geometric-probes.png",
+    "file": "assets/b61e456ea320821a362ab6b56fbc71bd4635331da8ccbb92bc2e52596ef7fe59.png",
+    "sha256": "b61e456ea320821a362ab6b56fbc71bd4635331da8ccbb92bc2e52596ef7fe59"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-7123010.jpg-right-original-native.png",
+    "file": "assets/fb7978a2139f0a9e9acefef1dc8df3ddd29a261737d1856c4ef8795049cae67f.png",
+    "sha256": "fb7978a2139f0a9e9acefef1dc8df3ddd29a261737d1856c4ef8795049cae67f"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-7123010.jpg-right-geometry-paths-native.png",
+    "file": "assets/d3bbb814f83aad684331eb024b6114b4a5ae85af13b5e09616ab038b05fc46f4.png",
+    "sha256": "d3bbb814f83aad684331eb024b6114b4a5ae85af13b5e09616ab038b05fc46f4"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-7123010.jpg-right-geometric-probes.png",
+    "file": "assets/a56212be2bc7d42d9755e1ba082e09992ccb8affa18b8c5b3f650b8dc20e125b.png",
+    "sha256": "a56212be2bc7d42d9755e1ba082e09992ccb8affa18b8c5b3f650b8dc20e125b"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-32526448.jpg-original-portrait.png",
+    "file": "assets/01384cc0afac31726467429bf2e94431eb2f6c6cd49003d144d4b7b3dddc657b.png",
+    "sha256": "01384cc0afac31726467429bf2e94431eb2f6c6cd49003d144d4b7b3dddc657b"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-32526448.jpg-left-original-native.png",
+    "file": "assets/13e5138709b052941d9fb2a6af5849dec10ed84b5f4012880a683806b6312455.png",
+    "sha256": "13e5138709b052941d9fb2a6af5849dec10ed84b5f4012880a683806b6312455"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-32526448.jpg-left-geometry-paths-native.png",
+    "file": "assets/0f6e750e9781fe6e5d90be71b2b9e8e26fc967dde983f4521a2e1f98b1e30314.png",
+    "sha256": "0f6e750e9781fe6e5d90be71b2b9e8e26fc967dde983f4521a2e1f98b1e30314"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-32526448.jpg-left-geometric-probes.png",
+    "file": "assets/1823f23831047d57b053fc2b87d844261e65c57055a03f680db511ffbac24c35.png",
+    "sha256": "1823f23831047d57b053fc2b87d844261e65c57055a03f680db511ffbac24c35"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-32526448.jpg-right-original-native.png",
+    "file": "assets/4d3aef607f2a7c2564d8de80cf70bf95d2a2832ca096995b42cf24cb5d2bf7ef.png",
+    "sha256": "4d3aef607f2a7c2564d8de80cf70bf95d2a2832ca096995b42cf24cb5d2bf7ef"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-32526448.jpg-right-geometry-paths-native.png",
+    "file": "assets/0bf84f02204fed71f09bd68abc6b18532c11b99eaca2afb43c58da1bb3230fc5.png",
+    "sha256": "0bf84f02204fed71f09bd68abc6b18532c11b99eaca2afb43c58da1bb3230fc5"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-32526448.jpg-right-geometric-probes.png",
+    "file": "assets/502ef234125c3fee4f2bc73115ea45e454663eb3c91309bf5c0dc56cc1dc6981.png",
+    "sha256": "502ef234125c3fee4f2bc73115ea45e454663eb3c91309bf5c0dc56cc1dc6981"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-4611686.jpg-original-portrait.png",
+    "file": "assets/498f52c6c463468d1afcc7ecbd5dc5771b46a5d9251904bd52b9a513da814f89.png",
+    "sha256": "498f52c6c463468d1afcc7ecbd5dc5771b46a5d9251904bd52b9a513da814f89"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-4611686.jpg-left-original-native.png",
+    "file": "assets/8b2af6a2107348b289f06d17ab5867a4e5605cfe06bf2325dbdba826a4e8cea9.png",
+    "sha256": "8b2af6a2107348b289f06d17ab5867a4e5605cfe06bf2325dbdba826a4e8cea9"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-4611686.jpg-left-geometry-paths-native.png",
+    "file": "assets/8a62ac73ed5631c59a484d73531fbf9a2fb34434c6ff79782378b57c9e18d3a2.png",
+    "sha256": "8a62ac73ed5631c59a484d73531fbf9a2fb34434c6ff79782378b57c9e18d3a2"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-4611686.jpg-left-geometric-probes.png",
+    "file": "assets/6b4d30a2901e871899e237b2c6bc1c1f8239756aa2a6e0547f89bdc4322a6a2a.png",
+    "sha256": "6b4d30a2901e871899e237b2c6bc1c1f8239756aa2a6e0547f89bdc4322a6a2a"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-4611686.jpg-right-original-native.png",
+    "file": "assets/6231e4c6b58f9bb5095c33d5e36453b8d2d9f4935ac2e43dedf3941f0f830db8.png",
+    "sha256": "6231e4c6b58f9bb5095c33d5e36453b8d2d9f4935ac2e43dedf3941f0f830db8"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-4611686.jpg-right-geometry-paths-native.png",
+    "file": "assets/49b4ac125d1e6762f52bd7b450a79b9f233637a46e0dfd0d1a93f2034a8b5ce6.png",
+    "sha256": "49b4ac125d1e6762f52bd7b450a79b9f233637a46e0dfd0d1a93f2034a8b5ce6"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-4611686.jpg-right-geometric-probes.png",
+    "file": "assets/37c6ae8c8ed4c7299e5836a9d1b549cfb1130d8f34afc9c38524053f34cf2202.png",
+    "sha256": "37c6ae8c8ed4c7299e5836a9d1b549cfb1130d8f34afc9c38524053f34cf2202"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-21792059.jpg-original-portrait.png",
+    "file": "assets/480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd.png",
+    "sha256": "480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-21792059.jpg-left-original-native.png",
+    "file": "assets/2ac54cac993b57b554bc7e97b483322ed2a5f0674129e6c02bdedfc6bdafd023.png",
+    "sha256": "2ac54cac993b57b554bc7e97b483322ed2a5f0674129e6c02bdedfc6bdafd023"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-21792059.jpg-left-geometry-paths-native.png",
+    "file": "assets/e6611a70e49c4e9567c42e69dc0dab0a7bd3cbf130547cb47d9defdf87b52e93.png",
+    "sha256": "e6611a70e49c4e9567c42e69dc0dab0a7bd3cbf130547cb47d9defdf87b52e93"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-21792059.jpg-left-geometric-probes.png",
+    "file": "assets/0526bb850dfe2893f3f5632001dee7cf2360b9c68d526a98cc86bb934076e842.png",
+    "sha256": "0526bb850dfe2893f3f5632001dee7cf2360b9c68d526a98cc86bb934076e842"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-21792059.jpg-right-original-native.png",
+    "file": "assets/160e3a84e3ed81b332c61aa61ee8aa893641c5bd8f79a98e70da9601cdea9f8c.png",
+    "sha256": "160e3a84e3ed81b332c61aa61ee8aa893641c5bd8f79a98e70da9601cdea9f8c"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-21792059.jpg-right-geometry-paths-native.png",
+    "file": "assets/c26cd57f4d9bed172822729c8110fc6a7986e22d6e31c4c819ca47cc1f3da549.png",
+    "sha256": "c26cd57f4d9bed172822729c8110fc6a7986e22d6e31c4c819ca47cc1f3da549"
+  },
+  {
+    "original": "tests/visual/out/domain-02-overlays/webkit-pexels-21792059.jpg-right-geometric-probes.png",
+    "file": "assets/d73c4d17c23f9d6b8988cd4120298453d63476c357a1abafa04f33002cc665c2.png",
+    "sha256": "d73c4d17c23f9d6b8988cd4120298453d63476c357a1abafa04f33002cc665c2"
+  }
+]
