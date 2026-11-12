@@ -151,3 +151,14 @@ See [loss-profile report](G1C1_LOSS_PROFILES_REPORT.md). Runtime/production unch
 - [ ] Subpixel center/initialization consistency, useful natural Length, mandatory efficacy and release gates remain unresolved.
 
 See [curve report](G1C1_CURVE_REPORT.md). Runtime/production unchanged; no threshold relaxation.
+
+
+## G1c.1 subpixel center and measured initialization (HOLD)
+
+- [x] Bound observed center and bootstrap orientation; preserve .5search/15subsequent-turn/12arc budgets.
+- [x] Independent critic reproduces disconnected-neighbor bias; V2restricts mass to connected contrast component and adds regression.
+- [x] Retain all36real configurations, V0/V1/V2records and unchanged14/192analytic controls; budget reach36/192 to184/192 is not endpoint approval.
+- [x] 159unitPASS; mandatory Length failures remain explicit; no existing assertions/goldens weakened.
+- [ ] Same-fiber/free-end/natural-Length, held-out coverage and full release gates remain unresolved.
+
+See [subpixel report](G1C1_SUBPIXEL_REPORT.md). Diagnostic candidate only; runtime/production unchanged.

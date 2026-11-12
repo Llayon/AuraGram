@@ -4,6 +4,8 @@ import{checkShaftContinuity}from'./lash-native-continuity.mjs';
 import{probeAnchor}from'./lash-anchor-probe.mjs';
 import{inspectLoss}from'./lash-loss-profiles.mjs';
 import{followCurve}from'./lash-curve-probe.mjs';
+import{followCurve as followSubpixel}from'./lash-subpixel-probe.mjs';
+import{measureCentroid}from'./lash-subpixel-center.mjs';
 const protocol=JSON.parse(fs.readFileSync(new URL('./lash-shaft-protocol.json',import.meta.url)));
 function fixture(kind){const w=80,h=80,luma=new Float32Array(w*h);for(let y=0;y<h;y++)for(let x=0;x<w;x++){
  const center=40-Math.tan(Math.PI/12)*(y-20),gauss=d=>Math.exp(-d*d/(2*.35*.35));
@@ -95,4 +97,27 @@ test('native curve following stops at a gap and never resumes beyond it',()=>{
 });
 test('unconfirmed body or anchor association cannot seed a curve',()=>{
  for(const eligibility of [{body:false,association:true},{body:true,association:false}]){const r=runCurve('straight',eligibility);assert.equal(r.available,false);assert.equal(r.points.length,0);assert.equal(r.attempts.length,0);}
+});
+
+const subpixelProtocol=JSON.parse(fs.readFileSync(new URL('./lash-subpixel-component-protocol.json',import.meta.url)));
+test('symmetric half-pixel plateau has a centered observation without selecting a neighbor',()=>{
+ const w=80,h=80,luma=Float32Array.from({length:w*h},(_,i)=>.8-.55*Math.exp(-((i%w-40.5)**2)/(2*.7*.7)));
+ const r=measureCentroid(luma,w,h,{x:40.5,y:34},{x:0,y:-1},1.5,subpixelProtocol);assert.equal(r.accepted,true);assert.ok(Math.abs(r.shift)<1e-10);
+});
+test('measured initialization corrects a coarse prior while subsequent turns retain their bound',()=>{
+ const f=curveFixture('straight'),angle=-65*Math.PI/180,r=followSubpixel(f.luma,f.w,f.h,{x:40,y:34},{available:true,tx:Math.cos(angle),ty:Math.sin(angle)},{body:true,association:true},{margin:1.5,protocol:subpixelProtocol});
+ assert.equal(r.reason,'arc-budget');assert.ok(r.initializationCorrectionDegrees>20);assert.ok(r.attempts.filter(a=>a.linkAccepted).every(a=>a.turnDegrees<=15));assert.ok(r.points.at(-1).arc<=12);assert.equal(r.endpointConfirmed,false);
+});
+test('centroid observation rejects separate dominant valleys and one-sided steps',()=>{
+ const w=80,h=80;for(const kind of ['pair','step']){
+ const luma=Float32Array.from({length:w*h},(_,i)=>{const x=i%w,g=d=>Math.exp(-d*d/(2*.25*.25));return kind==='step'?(x<40?.2:.8):.8-.55*Math.max(g(x-39),g(x-41));});
+ const r=measureCentroid(luma,w,h,{x:40,y:34},{x:0,y:-1},1.5,subpixelProtocol);assert.equal(r.accepted,false);}
+});
+test('subpixel paths still stop at gaps and a symmetric fork without endpoint approval',()=>{
+ for(const kind of ['gap','fork']){const f=curveFixture(kind),r=followSubpixel(f.luma,f.w,f.h,{x:40,y:34},vertical,{body:true,association:true},{margin:1.5,protocol:subpixelProtocol});assert.notEqual(r.reason,'arc-budget');assert.equal(r.endpointConfirmed,false);assert.ok(!r.points.length||r.points.at(-1).y>27);}
+});
+test('a weaker disconnected neighbor cannot pull the dominant subpixel center',()=>{
+ const w=80,h=80;
+ for(const slope of [0,.002]){const luma=Float32Array.from({length:w*h},(_,i)=>{const x=i%w;return .8+slope*(x-40)-(x===40?.55:x===42?.1:0);});
+ const r=measureCentroid(luma,w,h,{x:40,y:34},{x:0,y:-1},2.5,subpixelProtocol);assert.equal(r.accepted,true);assert.ok(Math.abs(r.shift)<1e-5);assert.ok(r.massComponentRange[1]<2);}
 });

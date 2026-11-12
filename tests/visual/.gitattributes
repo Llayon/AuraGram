@@ -69,3 +69,13 @@ lash-curve-raster-controls.json -text
 lash-curve-raster-controls.cjs -text
 lash-curve-raster-plot.py -text
 curate-curve-raster.cjs -text
+lash-subpixel-protocol.json -text
+lash-subpixel-center.mjs -text
+lash-subpixel-probe.mjs -text
+lash-subpixel-probe.cjs -text
+lash-subpixel-controls.cjs -text
+lash-subpixel-raster-controls.cjs -text
+lash-subpixel-plot.py -text
+curate-subpixel.cjs -text
+lash-subpixel-component-protocol.json -text
+lash-subpixel-raster-plot.py -text
