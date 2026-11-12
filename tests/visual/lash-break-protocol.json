@@ -1,0 +1,27 @@
+{
+  "schema": "auragram-offline-graph-break-census-v1",
+  "baseline": "19775561981e3ca419d7c6250583432e330128da",
+  "meaning": "Read-only graph/feature census, no new detector or effect. Prior outcomes/labels known; not blind. Exact instrumentation must preserve original arrays/traces/diagnostics. Never modify source landmarks, thresholds or prototype/applicator.",
+  "inputs": {
+    "tests/visual/lash-downward.mjs": "4f62a02b3593ee4b8067f0418cb01d3e39663993ea92403de6a67d1ef2a8c3e8",
+    "tests/visual/lash-domain.mjs": "2c7739c290c49052e3d54136e43df059d5c4ae1089359f82d57e4fb1befe005d",
+    "tests/visual/lash-downward-protocol.json": "7ff4778a30cc1d7147c34217dc9f04ed3aaa8ebab993e203e4ed7b1cf2661363",
+    "tests/visual/downward-evidence/files.json": "189c3860c9de312880b63e0c05991acb3483cea3c490d13e87a282ba13350d69",
+    "tests/visual/lash-freeend-independent-labels.json": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800",
+    "tests/visual/lash-freeend2-independent-labels.json": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810"
+  },
+  "corpus": "Both V1/V3, both engines, same32 paired eyes/64version-eye records. Read packed Float32 buffers, no model/image analysis rerun.",
+  "operations": [
+    "All directed-root frontier neighbor pairs, co-occurring rejection gates; counts are not mutually exclusive or semantic false positives.",
+    "All undirected active components and root-reach. Additional raw-directed reach separates pruning from other edge gates; never eligible Length.",
+    "For each loose-root-connected but strictly unreached component, choose largest root BFS distance then smallest pixel index as representative. Store all component summaries, display first3 by component size then minimum index. First failing edge on that fixed shortest8-neighbor root route is a diagnostic, not first physical hair break.",
+    "For posthoc sparse labels only, choose nearest active pixel in native source coordinates. Report uncertainty, loose reach and first gate on the predetermined automatic-root BFS route if one exists. No label seeds/directions/candidate generation.",
+    "For paired V1/V3, inspect first removed pixel on the V1 diagnostic route, including bilinear NMS contributors and their active/orientation states. No gap filling or hypothetical acceptance."
+  ],
+  "display": {
+    "automaticExamplesPerEye": 3,
+    "gridScale": 4
+  },
+  "numericReplayTolerance": 1e-9,
+  "remaining": "HOLD. Geometry/root-zone/contrast-support/path continuity is not certified same-strand or free-tip evidence."
+}

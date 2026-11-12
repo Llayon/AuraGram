@@ -1,0 +1,3356 @@
+{
+  "tests/visual/out/break-01-census/census.json": {
+    "asset": "data/5842a6e1f5d197f1fb3684eda2565dbe216ba9a502195877f964904394be331c.gz",
+    "sha256": "5842a6e1f5d197f1fb3684eda2565dbe216ba9a502195877f964904394be331c",
+    "bytes": 31828793,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-light.jpg-left-V1-masks.json.gz": {
+    "asset": "data/206bc38f0a8ceb13e72529e4adef7442622cb724060154a3bd41b00c19c1df2f.gz",
+    "sha256": "206bc38f0a8ceb13e72529e4adef7442622cb724060154a3bd41b00c19c1df2f",
+    "bytes": 1911,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-light.jpg-right-V1-masks.json.gz": {
+    "asset": "data/7b96b578144e2943e3d564ca8aae8e734a36beeddd6fce9ecbee37aaf019a26c.gz",
+    "sha256": "7b96b578144e2943e3d564ca8aae8e734a36beeddd6fce9ecbee37aaf019a26c",
+    "bytes": 1977,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-light.jpg-left-V3-masks.json.gz": {
+    "asset": "data/6ff14448ddaca2b721e8af0728fbddf1bbe5f8fc1b1aef4bd5f9d5f08732354f.gz",
+    "sha256": "6ff14448ddaca2b721e8af0728fbddf1bbe5f8fc1b1aef4bd5f9d5f08732354f",
+    "bytes": 1845,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-light.jpg-right-V3-masks.json.gz": {
+    "asset": "data/5643fc2a7a7d9444a0729c2ac09242e458c6cdf5c1b3b3cf7431214f7c1ef4b5.gz",
+    "sha256": "5643fc2a7a7d9444a0729c2ac09242e458c6cdf5c1b3b3cf7431214f7c1ef4b5",
+    "bytes": 1899,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-natural.jpg-left-V1-masks.json.gz": {
+    "asset": "data/4da849d79366e99e507b0eb4261ae851a229444033233e41037f52cb77b72723.gz",
+    "sha256": "4da849d79366e99e507b0eb4261ae851a229444033233e41037f52cb77b72723",
+    "bytes": 2247,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-natural.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4eb12f9841b36c010d36a9a86ebbfb7276c0250392ad72dff457e4339fccb11d.gz",
+    "sha256": "4eb12f9841b36c010d36a9a86ebbfb7276c0250392ad72dff457e4339fccb11d",
+    "bytes": 2629,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-natural.jpg-left-V3-masks.json.gz": {
+    "asset": "data/6a0a74743b3845b96822f90aa2bb1b062ff1744401c61730d5a79556a84f4149.gz",
+    "sha256": "6a0a74743b3845b96822f90aa2bb1b062ff1744401c61730d5a79556a84f4149",
+    "bytes": 2150,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-natural.jpg-right-V3-masks.json.gz": {
+    "asset": "data/baf8a80d295fb3ac186f7b24517dfd184bc03c56ebb8dc81cbd103be853aa2c2.gz",
+    "sha256": "baf8a80d295fb3ac186f7b24517dfd184bc03c56ebb8dc81cbd103be853aa2c2",
+    "bytes": 2528,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-hair-occlusion.jpg-left-V1-masks.json.gz": {
+    "asset": "data/f118e8d7ba2863113ddac60ad3e16afb8aeef40f3e172a0b1d77ffecc06364b6.gz",
+    "sha256": "f118e8d7ba2863113ddac60ad3e16afb8aeef40f3e172a0b1d77ffecc06364b6",
+    "bytes": 3605,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-hair-occlusion.jpg-right-V1-masks.json.gz": {
+    "asset": "data/a25fa7b2f93ca7047a69473fc7aab75a511336b9585e1ef918a5db139444d00b.gz",
+    "sha256": "a25fa7b2f93ca7047a69473fc7aab75a511336b9585e1ef918a5db139444d00b",
+    "bytes": 3599,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-hair-occlusion.jpg-left-V3-masks.json.gz": {
+    "asset": "data/50a1c2abd22aecd15893271e1506e170d404b458afb912efbd60ece3b7058573.gz",
+    "sha256": "50a1c2abd22aecd15893271e1506e170d404b458afb912efbd60ece3b7058573",
+    "bytes": 3279,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-hair-occlusion.jpg-right-V3-masks.json.gz": {
+    "asset": "data/09fbd611def99ad61b1468ad1842e8df987ea75f6bea17272b6f857a19b6457f.gz",
+    "sha256": "09fbd611def99ad61b1468ad1842e8df987ea75f6bea17272b6f857a19b6457f",
+    "bytes": 3377,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-light-rotated25.jpg-left-V1-masks.json.gz": {
+    "asset": "data/5262e7ebb2d7cd2299ebe980f367e8207125c277becdaf53eb060d63abaea2c1.gz",
+    "sha256": "5262e7ebb2d7cd2299ebe980f367e8207125c277becdaf53eb060d63abaea2c1",
+    "bytes": 2315,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-light-rotated25.jpg-right-V1-masks.json.gz": {
+    "asset": "data/bbc3f3409ecc2a9e90f2ee0e710e9fd2ac7c538ebd373a77763a6f9123eadd1d.gz",
+    "sha256": "bbc3f3409ecc2a9e90f2ee0e710e9fd2ac7c538ebd373a77763a6f9123eadd1d",
+    "bytes": 2301,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-light-rotated25.jpg-left-V3-masks.json.gz": {
+    "asset": "data/d14ec742a0d7a5c20e719d4f16efb39b897295178c62078fcf4fd6530d05453b.gz",
+    "sha256": "d14ec742a0d7a5c20e719d4f16efb39b897295178c62078fcf4fd6530d05453b",
+    "bytes": 2205,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-light-rotated25.jpg-right-V3-masks.json.gz": {
+    "asset": "data/cd5a58d4e0b392bdd07694076e29fafb5aea7f5d020e2ba29edebb3baa4ae1a6.gz",
+    "sha256": "cd5a58d4e0b392bdd07694076e29fafb5aea7f5d020e2ba29edebb3baa4ae1a6",
+    "bytes": 2182,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-7123010.jpg-left-V1-masks.json.gz": {
+    "asset": "data/468ec0887f8797129d4cb323a6e5b016cbe1c33792959d739c62c1c9f22f7e66.gz",
+    "sha256": "468ec0887f8797129d4cb323a6e5b016cbe1c33792959d739c62c1c9f22f7e66",
+    "bytes": 2811,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-7123010.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4241b2c2f9dd100af87e48a1744517843f83694019d7434643d3232358c67240.gz",
+    "sha256": "4241b2c2f9dd100af87e48a1744517843f83694019d7434643d3232358c67240",
+    "bytes": 1569,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-7123010.jpg-left-V3-masks.json.gz": {
+    "asset": "data/8d626d80f5c519352904f752e1251a0fdab9a4f20a7d0746f05ed40ef4899e5d.gz",
+    "sha256": "8d626d80f5c519352904f752e1251a0fdab9a4f20a7d0746f05ed40ef4899e5d",
+    "bytes": 2730,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-7123010.jpg-right-V3-masks.json.gz": {
+    "asset": "data/47c4e0b1b7e08d9a3512f58ab5ffe7a085cc246733599d61ac9dc02e88b37e31.gz",
+    "sha256": "47c4e0b1b7e08d9a3512f58ab5ffe7a085cc246733599d61ac9dc02e88b37e31",
+    "bytes": 1543,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-32526448.jpg-left-V1-masks.json.gz": {
+    "asset": "data/82607b5c5562d13b2189024b3b0bd53c980427a44dea5c8a14dc5cccb26e451f.gz",
+    "sha256": "82607b5c5562d13b2189024b3b0bd53c980427a44dea5c8a14dc5cccb26e451f",
+    "bytes": 4762,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-32526448.jpg-right-V1-masks.json.gz": {
+    "asset": "data/f9d454ca1488424a94143749494b2ad5aebf54e6c171f7ee21071a0a7b265e98.gz",
+    "sha256": "f9d454ca1488424a94143749494b2ad5aebf54e6c171f7ee21071a0a7b265e98",
+    "bytes": 5300,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-32526448.jpg-left-V3-masks.json.gz": {
+    "asset": "data/855c93fcbf4771906b60cf73e7e3bfce4f1434e8883e73894248d11e4cf87192.gz",
+    "sha256": "855c93fcbf4771906b60cf73e7e3bfce4f1434e8883e73894248d11e4cf87192",
+    "bytes": 4434,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-32526448.jpg-right-V3-masks.json.gz": {
+    "asset": "data/e5de943090f4f8be960c074384e24857da3e44c147443a892481d5dabb66a608.gz",
+    "sha256": "e5de943090f4f8be960c074384e24857da3e44c147443a892481d5dabb66a608",
+    "bytes": 4937,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-4611686.jpg-left-V1-masks.json.gz": {
+    "asset": "data/6a23f4541ff3f52a4c36f593a53f622c7acde9d01f3b3b6f9a1afe5800c8cc34.gz",
+    "sha256": "6a23f4541ff3f52a4c36f593a53f622c7acde9d01f3b3b6f9a1afe5800c8cc34",
+    "bytes": 4671,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-4611686.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4417fa71a1ff4663f1eb0059bbdd395492e0f7d92d5fb837eb5250dbcf6e3c6c.gz",
+    "sha256": "4417fa71a1ff4663f1eb0059bbdd395492e0f7d92d5fb837eb5250dbcf6e3c6c",
+    "bytes": 3293,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-4611686.jpg-left-V3-masks.json.gz": {
+    "asset": "data/290cae22981965a65f5802c3d29e6e2904f5aea1110642bc984122c387523026.gz",
+    "sha256": "290cae22981965a65f5802c3d29e6e2904f5aea1110642bc984122c387523026",
+    "bytes": 4408,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-4611686.jpg-right-V3-masks.json.gz": {
+    "asset": "data/78ef6efe44dde9d940ff3e8a606995e206a9705ba81a6cb3d9a3b152cbf9cc2d.gz",
+    "sha256": "78ef6efe44dde9d940ff3e8a606995e206a9705ba81a6cb3d9a3b152cbf9cc2d",
+    "bytes": 3104,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-21792059.jpg-left-V1-masks.json.gz": {
+    "asset": "data/9f946c22040d5cf9f7418f752f7c5f4beee207f61ef65be59d013a72dd95f059.gz",
+    "sha256": "9f946c22040d5cf9f7418f752f7c5f4beee207f61ef65be59d013a72dd95f059",
+    "bytes": 2460,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-21792059.jpg-right-V1-masks.json.gz": {
+    "asset": "data/152ca5a661a11ccab5edf1002ab6e5ff960964961bb9134d8426f0cdbf30ae4b.gz",
+    "sha256": "152ca5a661a11ccab5edf1002ab6e5ff960964961bb9134d8426f0cdbf30ae4b",
+    "bytes": 4767,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-21792059.jpg-left-V3-masks.json.gz": {
+    "asset": "data/2749e1ced84dceb5f52baa5a624b23bd4d068cb88ca094d24df94c81ac3a8389.gz",
+    "sha256": "2749e1ced84dceb5f52baa5a624b23bd4d068cb88ca094d24df94c81ac3a8389",
+    "bytes": 2323,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/chromium-pexels-21792059.jpg-right-V3-masks.json.gz": {
+    "asset": "data/7584eb9940455e7f68dffc2ca9277b460331aab5053d3fd200854c05d1608f45.gz",
+    "sha256": "7584eb9940455e7f68dffc2ca9277b460331aab5053d3fd200854c05d1608f45",
+    "bytes": 4134,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-light.jpg-left-V1-masks.json.gz": {
+    "asset": "data/67e5b30a810a49d1055d91426de5b9c9041214f3a0b181fc51ca08a3ca3f1d2a.gz",
+    "sha256": "67e5b30a810a49d1055d91426de5b9c9041214f3a0b181fc51ca08a3ca3f1d2a",
+    "bytes": 1813,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-light.jpg-right-V1-masks.json.gz": {
+    "asset": "data/fa79d7226db68cc6ccb7adf29ca390d1224b9dcd7ba9a04d833457b94a1ceb64.gz",
+    "sha256": "fa79d7226db68cc6ccb7adf29ca390d1224b9dcd7ba9a04d833457b94a1ceb64",
+    "bytes": 1952,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-light.jpg-left-V3-masks.json.gz": {
+    "asset": "data/97c0fffe9d9c550d288b6e2d7d1dc8dead08753a3caed69b23e7062c3e4a1e35.gz",
+    "sha256": "97c0fffe9d9c550d288b6e2d7d1dc8dead08753a3caed69b23e7062c3e4a1e35",
+    "bytes": 1728,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-light.jpg-right-V3-masks.json.gz": {
+    "asset": "data/f213dcc8dee58e14e8cea3b3b637721cfe5d90efcb58db22163ae84d578954dd.gz",
+    "sha256": "f213dcc8dee58e14e8cea3b3b637721cfe5d90efcb58db22163ae84d578954dd",
+    "bytes": 1894,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-natural.jpg-left-V1-masks.json.gz": {
+    "asset": "data/457d09dd18326bcb7419e17cc486bd00f7e0d7611e93a16866169819d602fcc4.gz",
+    "sha256": "457d09dd18326bcb7419e17cc486bd00f7e0d7611e93a16866169819d602fcc4",
+    "bytes": 2179,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-natural.jpg-right-V1-masks.json.gz": {
+    "asset": "data/395e4bb01010958d74e7d090106abe9844b9d8f36ce10e6556a102356a31f628.gz",
+    "sha256": "395e4bb01010958d74e7d090106abe9844b9d8f36ce10e6556a102356a31f628",
+    "bytes": 2441,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-natural.jpg-left-V3-masks.json.gz": {
+    "asset": "data/1c5752792bdb22d558fed6f1f9c72babd51d7fff279ec58d8aa2cf67895ecef6.gz",
+    "sha256": "1c5752792bdb22d558fed6f1f9c72babd51d7fff279ec58d8aa2cf67895ecef6",
+    "bytes": 2061,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-natural.jpg-right-V3-masks.json.gz": {
+    "asset": "data/4377e5eb878b9788bd3cb1fb0cacd400f54afd0b6790cbec7483bb91f38f82eb.gz",
+    "sha256": "4377e5eb878b9788bd3cb1fb0cacd400f54afd0b6790cbec7483bb91f38f82eb",
+    "bytes": 2343,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-hair-occlusion.jpg-left-V1-masks.json.gz": {
+    "asset": "data/582eefa90794a0ae24979848706cadda118cf811c75060215a8455b3c7ac30e0.gz",
+    "sha256": "582eefa90794a0ae24979848706cadda118cf811c75060215a8455b3c7ac30e0",
+    "bytes": 4055,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-hair-occlusion.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4907bd878b0b3c7cdbaf96f003363135d88788a66ed562a3eb6a8bce2e90fec3.gz",
+    "sha256": "4907bd878b0b3c7cdbaf96f003363135d88788a66ed562a3eb6a8bce2e90fec3",
+    "bytes": 3923,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-hair-occlusion.jpg-left-V3-masks.json.gz": {
+    "asset": "data/9b52f1c460511000f18c51c766667c8cb32681aebd89877a2e295ec1d0021e31.gz",
+    "sha256": "9b52f1c460511000f18c51c766667c8cb32681aebd89877a2e295ec1d0021e31",
+    "bytes": 3533,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-hair-occlusion.jpg-right-V3-masks.json.gz": {
+    "asset": "data/04416885d931ced9b6e533cd6d89a41aec0bfec254ca2278feec94dd67158930.gz",
+    "sha256": "04416885d931ced9b6e533cd6d89a41aec0bfec254ca2278feec94dd67158930",
+    "bytes": 3555,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-light-rotated25.jpg-left-V1-masks.json.gz": {
+    "asset": "data/61bf8e281130d86eb8681f0ff47231d679e18db070ae2eeb1c35bc1603e4b7c7.gz",
+    "sha256": "61bf8e281130d86eb8681f0ff47231d679e18db070ae2eeb1c35bc1603e4b7c7",
+    "bytes": 2441,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-light-rotated25.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4f4871d340845b74fc013a3a7d083eb9684613a19b3d48cda80e5c684941c09d.gz",
+    "sha256": "4f4871d340845b74fc013a3a7d083eb9684613a19b3d48cda80e5c684941c09d",
+    "bytes": 2194,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-light-rotated25.jpg-left-V3-masks.json.gz": {
+    "asset": "data/e49a587108c0821b574204407fe70cf8b2d54cc79aa9c5f2382139a52727d8e4.gz",
+    "sha256": "e49a587108c0821b574204407fe70cf8b2d54cc79aa9c5f2382139a52727d8e4",
+    "bytes": 2323,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-light-rotated25.jpg-right-V3-masks.json.gz": {
+    "asset": "data/05f20d935b20459548dd0fa6979dda979b9de6af3cecc27eb196f4a80976c9d0.gz",
+    "sha256": "05f20d935b20459548dd0fa6979dda979b9de6af3cecc27eb196f4a80976c9d0",
+    "bytes": 2129,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-7123010.jpg-left-V1-masks.json.gz": {
+    "asset": "data/0384d75b65c9825a08bff21d5ea6f7c9afaca5e1eed05bea98b961fd8e13f835.gz",
+    "sha256": "0384d75b65c9825a08bff21d5ea6f7c9afaca5e1eed05bea98b961fd8e13f835",
+    "bytes": 3086,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-7123010.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4b2e91e7afb02652c38980e111f050e82d612095ca47cef42fb6a4236c9d5e89.gz",
+    "sha256": "4b2e91e7afb02652c38980e111f050e82d612095ca47cef42fb6a4236c9d5e89",
+    "bytes": 1893,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-7123010.jpg-left-V3-masks.json.gz": {
+    "asset": "data/758c4622e726506d8c01cd93c45bf9e90ddf813870a1ddc2c785f64f63338824.gz",
+    "sha256": "758c4622e726506d8c01cd93c45bf9e90ddf813870a1ddc2c785f64f63338824",
+    "bytes": 2882,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-7123010.jpg-right-V3-masks.json.gz": {
+    "asset": "data/f8e3b5da01078c209349c644cc2350c1668d24fff51ebe05ec055a53383d5f8e.gz",
+    "sha256": "f8e3b5da01078c209349c644cc2350c1668d24fff51ebe05ec055a53383d5f8e",
+    "bytes": 1889,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-32526448.jpg-left-V1-masks.json.gz": {
+    "asset": "data/5563bd1f1390e387c599cb59e008834fe6d4e013bf8e674faa6acfbb4dd98f66.gz",
+    "sha256": "5563bd1f1390e387c599cb59e008834fe6d4e013bf8e674faa6acfbb4dd98f66",
+    "bytes": 4925,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-32526448.jpg-right-V1-masks.json.gz": {
+    "asset": "data/62de2aaa96878c35f17a441f288fcd590088f4828f738be5fd850cc3351fa6e0.gz",
+    "sha256": "62de2aaa96878c35f17a441f288fcd590088f4828f738be5fd850cc3351fa6e0",
+    "bytes": 5471,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-32526448.jpg-left-V3-masks.json.gz": {
+    "asset": "data/12707ad23f8743bfe1dd47f8cfe37e62e07e6bd56292af31b14c36ff7dad87ee.gz",
+    "sha256": "12707ad23f8743bfe1dd47f8cfe37e62e07e6bd56292af31b14c36ff7dad87ee",
+    "bytes": 4638,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-32526448.jpg-right-V3-masks.json.gz": {
+    "asset": "data/3fdf79465f0938648dffb5856144a0b0f972eb021bb698f10ed3fda3ed3d07d5.gz",
+    "sha256": "3fdf79465f0938648dffb5856144a0b0f972eb021bb698f10ed3fda3ed3d07d5",
+    "bytes": 5104,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-4611686.jpg-left-V1-masks.json.gz": {
+    "asset": "data/2b2d01573795b8c4eec125e3bbc3dfd69a76ff5c2f0a900977fde1d2eef54444.gz",
+    "sha256": "2b2d01573795b8c4eec125e3bbc3dfd69a76ff5c2f0a900977fde1d2eef54444",
+    "bytes": 5193,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-4611686.jpg-right-V1-masks.json.gz": {
+    "asset": "data/b01367eec5cf10de6fe26d8c3c8275728ffe3eaf30833f4c49bba5de9667bb6a.gz",
+    "sha256": "b01367eec5cf10de6fe26d8c3c8275728ffe3eaf30833f4c49bba5de9667bb6a",
+    "bytes": 3282,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-4611686.jpg-left-V3-masks.json.gz": {
+    "asset": "data/efd152aa055e836d419efa516399340f5305e2ec9ca57a007b5a258378cba49f.gz",
+    "sha256": "efd152aa055e836d419efa516399340f5305e2ec9ca57a007b5a258378cba49f",
+    "bytes": 4540,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-4611686.jpg-right-V3-masks.json.gz": {
+    "asset": "data/b8028fe0b909bdcd9c69d9379237525a81a26bc7c4e2883c1831ce84e49291ef.gz",
+    "sha256": "b8028fe0b909bdcd9c69d9379237525a81a26bc7c4e2883c1831ce84e49291ef",
+    "bytes": 2937,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-21792059.jpg-left-V1-masks.json.gz": {
+    "asset": "data/f1047cad42f8f8c025bd133dd5ab2594edbf89e5c8ab441c177ddc55dc1356cc.gz",
+    "sha256": "f1047cad42f8f8c025bd133dd5ab2594edbf89e5c8ab441c177ddc55dc1356cc",
+    "bytes": 2487,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-21792059.jpg-right-V1-masks.json.gz": {
+    "asset": "data/8dc7d9b14acbdae5eebc8e6f2f210e9238ee007de80e8f53881c0845cb95bb86.gz",
+    "sha256": "8dc7d9b14acbdae5eebc8e6f2f210e9238ee007de80e8f53881c0845cb95bb86",
+    "bytes": 5678,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-21792059.jpg-left-V3-masks.json.gz": {
+    "asset": "data/08b393c25d301c4c5ca2e11c908b8758e15c5d3ee834887056348027210a083b.gz",
+    "sha256": "08b393c25d301c4c5ca2e11c908b8758e15c5d3ee834887056348027210a083b",
+    "bytes": 2427,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census/webkit-pexels-21792059.jpg-right-V3-masks.json.gz": {
+    "asset": "data/f6cd5d2ce4c1c99c5f525bf64dc52e0f40d9aa9c9fc47fceb2760bd11b4a4276.gz",
+    "sha256": "f6cd5d2ce4c1c99c5f525bf64dc52e0f40d9aa9c9fc47fceb2760bd11b4a4276",
+    "bytes": 5187,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/census.json": {
+    "asset": "data/5cb0be2b8ad604b7267df76578bc978f3e306e98707b64ffa5db2db75fd38c8e.gz",
+    "sha256": "5cb0be2b8ad604b7267df76578bc978f3e306e98707b64ffa5db2db75fd38c8e",
+    "bytes": 31828205,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-light.jpg-left-V1-masks.json.gz": {
+    "asset": "data/206bc38f0a8ceb13e72529e4adef7442622cb724060154a3bd41b00c19c1df2f.gz",
+    "sha256": "206bc38f0a8ceb13e72529e4adef7442622cb724060154a3bd41b00c19c1df2f",
+    "bytes": 1911,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-light.jpg-right-V1-masks.json.gz": {
+    "asset": "data/7b96b578144e2943e3d564ca8aae8e734a36beeddd6fce9ecbee37aaf019a26c.gz",
+    "sha256": "7b96b578144e2943e3d564ca8aae8e734a36beeddd6fce9ecbee37aaf019a26c",
+    "bytes": 1977,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-light.jpg-left-V3-masks.json.gz": {
+    "asset": "data/6ff14448ddaca2b721e8af0728fbddf1bbe5f8fc1b1aef4bd5f9d5f08732354f.gz",
+    "sha256": "6ff14448ddaca2b721e8af0728fbddf1bbe5f8fc1b1aef4bd5f9d5f08732354f",
+    "bytes": 1845,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-light.jpg-right-V3-masks.json.gz": {
+    "asset": "data/5643fc2a7a7d9444a0729c2ac09242e458c6cdf5c1b3b3cf7431214f7c1ef4b5.gz",
+    "sha256": "5643fc2a7a7d9444a0729c2ac09242e458c6cdf5c1b3b3cf7431214f7c1ef4b5",
+    "bytes": 1899,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-natural.jpg-left-V1-masks.json.gz": {
+    "asset": "data/4da849d79366e99e507b0eb4261ae851a229444033233e41037f52cb77b72723.gz",
+    "sha256": "4da849d79366e99e507b0eb4261ae851a229444033233e41037f52cb77b72723",
+    "bytes": 2247,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-natural.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4eb12f9841b36c010d36a9a86ebbfb7276c0250392ad72dff457e4339fccb11d.gz",
+    "sha256": "4eb12f9841b36c010d36a9a86ebbfb7276c0250392ad72dff457e4339fccb11d",
+    "bytes": 2629,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-natural.jpg-left-V3-masks.json.gz": {
+    "asset": "data/6a0a74743b3845b96822f90aa2bb1b062ff1744401c61730d5a79556a84f4149.gz",
+    "sha256": "6a0a74743b3845b96822f90aa2bb1b062ff1744401c61730d5a79556a84f4149",
+    "bytes": 2150,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-natural.jpg-right-V3-masks.json.gz": {
+    "asset": "data/baf8a80d295fb3ac186f7b24517dfd184bc03c56ebb8dc81cbd103be853aa2c2.gz",
+    "sha256": "baf8a80d295fb3ac186f7b24517dfd184bc03c56ebb8dc81cbd103be853aa2c2",
+    "bytes": 2528,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-hair-occlusion.jpg-left-V1-masks.json.gz": {
+    "asset": "data/f118e8d7ba2863113ddac60ad3e16afb8aeef40f3e172a0b1d77ffecc06364b6.gz",
+    "sha256": "f118e8d7ba2863113ddac60ad3e16afb8aeef40f3e172a0b1d77ffecc06364b6",
+    "bytes": 3605,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-hair-occlusion.jpg-right-V1-masks.json.gz": {
+    "asset": "data/a25fa7b2f93ca7047a69473fc7aab75a511336b9585e1ef918a5db139444d00b.gz",
+    "sha256": "a25fa7b2f93ca7047a69473fc7aab75a511336b9585e1ef918a5db139444d00b",
+    "bytes": 3599,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-hair-occlusion.jpg-left-V3-masks.json.gz": {
+    "asset": "data/50a1c2abd22aecd15893271e1506e170d404b458afb912efbd60ece3b7058573.gz",
+    "sha256": "50a1c2abd22aecd15893271e1506e170d404b458afb912efbd60ece3b7058573",
+    "bytes": 3279,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-hair-occlusion.jpg-right-V3-masks.json.gz": {
+    "asset": "data/09fbd611def99ad61b1468ad1842e8df987ea75f6bea17272b6f857a19b6457f.gz",
+    "sha256": "09fbd611def99ad61b1468ad1842e8df987ea75f6bea17272b6f857a19b6457f",
+    "bytes": 3377,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-light-rotated25.jpg-left-V1-masks.json.gz": {
+    "asset": "data/5262e7ebb2d7cd2299ebe980f367e8207125c277becdaf53eb060d63abaea2c1.gz",
+    "sha256": "5262e7ebb2d7cd2299ebe980f367e8207125c277becdaf53eb060d63abaea2c1",
+    "bytes": 2315,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-light-rotated25.jpg-right-V1-masks.json.gz": {
+    "asset": "data/bbc3f3409ecc2a9e90f2ee0e710e9fd2ac7c538ebd373a77763a6f9123eadd1d.gz",
+    "sha256": "bbc3f3409ecc2a9e90f2ee0e710e9fd2ac7c538ebd373a77763a6f9123eadd1d",
+    "bytes": 2301,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-light-rotated25.jpg-left-V3-masks.json.gz": {
+    "asset": "data/d14ec742a0d7a5c20e719d4f16efb39b897295178c62078fcf4fd6530d05453b.gz",
+    "sha256": "d14ec742a0d7a5c20e719d4f16efb39b897295178c62078fcf4fd6530d05453b",
+    "bytes": 2205,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-light-rotated25.jpg-right-V3-masks.json.gz": {
+    "asset": "data/cd5a58d4e0b392bdd07694076e29fafb5aea7f5d020e2ba29edebb3baa4ae1a6.gz",
+    "sha256": "cd5a58d4e0b392bdd07694076e29fafb5aea7f5d020e2ba29edebb3baa4ae1a6",
+    "bytes": 2182,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-7123010.jpg-left-V1-masks.json.gz": {
+    "asset": "data/468ec0887f8797129d4cb323a6e5b016cbe1c33792959d739c62c1c9f22f7e66.gz",
+    "sha256": "468ec0887f8797129d4cb323a6e5b016cbe1c33792959d739c62c1c9f22f7e66",
+    "bytes": 2811,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-7123010.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4241b2c2f9dd100af87e48a1744517843f83694019d7434643d3232358c67240.gz",
+    "sha256": "4241b2c2f9dd100af87e48a1744517843f83694019d7434643d3232358c67240",
+    "bytes": 1569,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-7123010.jpg-left-V3-masks.json.gz": {
+    "asset": "data/8d626d80f5c519352904f752e1251a0fdab9a4f20a7d0746f05ed40ef4899e5d.gz",
+    "sha256": "8d626d80f5c519352904f752e1251a0fdab9a4f20a7d0746f05ed40ef4899e5d",
+    "bytes": 2730,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-7123010.jpg-right-V3-masks.json.gz": {
+    "asset": "data/47c4e0b1b7e08d9a3512f58ab5ffe7a085cc246733599d61ac9dc02e88b37e31.gz",
+    "sha256": "47c4e0b1b7e08d9a3512f58ab5ffe7a085cc246733599d61ac9dc02e88b37e31",
+    "bytes": 1543,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-32526448.jpg-left-V1-masks.json.gz": {
+    "asset": "data/82607b5c5562d13b2189024b3b0bd53c980427a44dea5c8a14dc5cccb26e451f.gz",
+    "sha256": "82607b5c5562d13b2189024b3b0bd53c980427a44dea5c8a14dc5cccb26e451f",
+    "bytes": 4762,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-32526448.jpg-right-V1-masks.json.gz": {
+    "asset": "data/f9d454ca1488424a94143749494b2ad5aebf54e6c171f7ee21071a0a7b265e98.gz",
+    "sha256": "f9d454ca1488424a94143749494b2ad5aebf54e6c171f7ee21071a0a7b265e98",
+    "bytes": 5300,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-32526448.jpg-left-V3-masks.json.gz": {
+    "asset": "data/855c93fcbf4771906b60cf73e7e3bfce4f1434e8883e73894248d11e4cf87192.gz",
+    "sha256": "855c93fcbf4771906b60cf73e7e3bfce4f1434e8883e73894248d11e4cf87192",
+    "bytes": 4434,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-32526448.jpg-right-V3-masks.json.gz": {
+    "asset": "data/e5de943090f4f8be960c074384e24857da3e44c147443a892481d5dabb66a608.gz",
+    "sha256": "e5de943090f4f8be960c074384e24857da3e44c147443a892481d5dabb66a608",
+    "bytes": 4937,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-4611686.jpg-left-V1-masks.json.gz": {
+    "asset": "data/6a23f4541ff3f52a4c36f593a53f622c7acde9d01f3b3b6f9a1afe5800c8cc34.gz",
+    "sha256": "6a23f4541ff3f52a4c36f593a53f622c7acde9d01f3b3b6f9a1afe5800c8cc34",
+    "bytes": 4671,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-4611686.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4417fa71a1ff4663f1eb0059bbdd395492e0f7d92d5fb837eb5250dbcf6e3c6c.gz",
+    "sha256": "4417fa71a1ff4663f1eb0059bbdd395492e0f7d92d5fb837eb5250dbcf6e3c6c",
+    "bytes": 3293,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-4611686.jpg-left-V3-masks.json.gz": {
+    "asset": "data/290cae22981965a65f5802c3d29e6e2904f5aea1110642bc984122c387523026.gz",
+    "sha256": "290cae22981965a65f5802c3d29e6e2904f5aea1110642bc984122c387523026",
+    "bytes": 4408,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-4611686.jpg-right-V3-masks.json.gz": {
+    "asset": "data/78ef6efe44dde9d940ff3e8a606995e206a9705ba81a6cb3d9a3b152cbf9cc2d.gz",
+    "sha256": "78ef6efe44dde9d940ff3e8a606995e206a9705ba81a6cb3d9a3b152cbf9cc2d",
+    "bytes": 3104,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-21792059.jpg-left-V1-masks.json.gz": {
+    "asset": "data/9f946c22040d5cf9f7418f752f7c5f4beee207f61ef65be59d013a72dd95f059.gz",
+    "sha256": "9f946c22040d5cf9f7418f752f7c5f4beee207f61ef65be59d013a72dd95f059",
+    "bytes": 2460,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-21792059.jpg-right-V1-masks.json.gz": {
+    "asset": "data/152ca5a661a11ccab5edf1002ab6e5ff960964961bb9134d8426f0cdbf30ae4b.gz",
+    "sha256": "152ca5a661a11ccab5edf1002ab6e5ff960964961bb9134d8426f0cdbf30ae4b",
+    "bytes": 4767,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-21792059.jpg-left-V3-masks.json.gz": {
+    "asset": "data/2749e1ced84dceb5f52baa5a624b23bd4d068cb88ca094d24df94c81ac3a8389.gz",
+    "sha256": "2749e1ced84dceb5f52baa5a624b23bd4d068cb88ca094d24df94c81ac3a8389",
+    "bytes": 2323,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/chromium-pexels-21792059.jpg-right-V3-masks.json.gz": {
+    "asset": "data/7584eb9940455e7f68dffc2ca9277b460331aab5053d3fd200854c05d1608f45.gz",
+    "sha256": "7584eb9940455e7f68dffc2ca9277b460331aab5053d3fd200854c05d1608f45",
+    "bytes": 4134,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-light.jpg-left-V1-masks.json.gz": {
+    "asset": "data/67e5b30a810a49d1055d91426de5b9c9041214f3a0b181fc51ca08a3ca3f1d2a.gz",
+    "sha256": "67e5b30a810a49d1055d91426de5b9c9041214f3a0b181fc51ca08a3ca3f1d2a",
+    "bytes": 1813,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-light.jpg-right-V1-masks.json.gz": {
+    "asset": "data/fa79d7226db68cc6ccb7adf29ca390d1224b9dcd7ba9a04d833457b94a1ceb64.gz",
+    "sha256": "fa79d7226db68cc6ccb7adf29ca390d1224b9dcd7ba9a04d833457b94a1ceb64",
+    "bytes": 1952,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-light.jpg-left-V3-masks.json.gz": {
+    "asset": "data/97c0fffe9d9c550d288b6e2d7d1dc8dead08753a3caed69b23e7062c3e4a1e35.gz",
+    "sha256": "97c0fffe9d9c550d288b6e2d7d1dc8dead08753a3caed69b23e7062c3e4a1e35",
+    "bytes": 1728,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-light.jpg-right-V3-masks.json.gz": {
+    "asset": "data/f213dcc8dee58e14e8cea3b3b637721cfe5d90efcb58db22163ae84d578954dd.gz",
+    "sha256": "f213dcc8dee58e14e8cea3b3b637721cfe5d90efcb58db22163ae84d578954dd",
+    "bytes": 1894,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-natural.jpg-left-V1-masks.json.gz": {
+    "asset": "data/457d09dd18326bcb7419e17cc486bd00f7e0d7611e93a16866169819d602fcc4.gz",
+    "sha256": "457d09dd18326bcb7419e17cc486bd00f7e0d7611e93a16866169819d602fcc4",
+    "bytes": 2179,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-natural.jpg-right-V1-masks.json.gz": {
+    "asset": "data/395e4bb01010958d74e7d090106abe9844b9d8f36ce10e6556a102356a31f628.gz",
+    "sha256": "395e4bb01010958d74e7d090106abe9844b9d8f36ce10e6556a102356a31f628",
+    "bytes": 2441,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-natural.jpg-left-V3-masks.json.gz": {
+    "asset": "data/1c5752792bdb22d558fed6f1f9c72babd51d7fff279ec58d8aa2cf67895ecef6.gz",
+    "sha256": "1c5752792bdb22d558fed6f1f9c72babd51d7fff279ec58d8aa2cf67895ecef6",
+    "bytes": 2061,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-natural.jpg-right-V3-masks.json.gz": {
+    "asset": "data/4377e5eb878b9788bd3cb1fb0cacd400f54afd0b6790cbec7483bb91f38f82eb.gz",
+    "sha256": "4377e5eb878b9788bd3cb1fb0cacd400f54afd0b6790cbec7483bb91f38f82eb",
+    "bytes": 2343,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-hair-occlusion.jpg-left-V1-masks.json.gz": {
+    "asset": "data/582eefa90794a0ae24979848706cadda118cf811c75060215a8455b3c7ac30e0.gz",
+    "sha256": "582eefa90794a0ae24979848706cadda118cf811c75060215a8455b3c7ac30e0",
+    "bytes": 4055,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-hair-occlusion.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4907bd878b0b3c7cdbaf96f003363135d88788a66ed562a3eb6a8bce2e90fec3.gz",
+    "sha256": "4907bd878b0b3c7cdbaf96f003363135d88788a66ed562a3eb6a8bce2e90fec3",
+    "bytes": 3923,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-hair-occlusion.jpg-left-V3-masks.json.gz": {
+    "asset": "data/9b52f1c460511000f18c51c766667c8cb32681aebd89877a2e295ec1d0021e31.gz",
+    "sha256": "9b52f1c460511000f18c51c766667c8cb32681aebd89877a2e295ec1d0021e31",
+    "bytes": 3533,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-hair-occlusion.jpg-right-V3-masks.json.gz": {
+    "asset": "data/04416885d931ced9b6e533cd6d89a41aec0bfec254ca2278feec94dd67158930.gz",
+    "sha256": "04416885d931ced9b6e533cd6d89a41aec0bfec254ca2278feec94dd67158930",
+    "bytes": 3555,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-light-rotated25.jpg-left-V1-masks.json.gz": {
+    "asset": "data/61bf8e281130d86eb8681f0ff47231d679e18db070ae2eeb1c35bc1603e4b7c7.gz",
+    "sha256": "61bf8e281130d86eb8681f0ff47231d679e18db070ae2eeb1c35bc1603e4b7c7",
+    "bytes": 2441,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-light-rotated25.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4f4871d340845b74fc013a3a7d083eb9684613a19b3d48cda80e5c684941c09d.gz",
+    "sha256": "4f4871d340845b74fc013a3a7d083eb9684613a19b3d48cda80e5c684941c09d",
+    "bytes": 2194,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-light-rotated25.jpg-left-V3-masks.json.gz": {
+    "asset": "data/e49a587108c0821b574204407fe70cf8b2d54cc79aa9c5f2382139a52727d8e4.gz",
+    "sha256": "e49a587108c0821b574204407fe70cf8b2d54cc79aa9c5f2382139a52727d8e4",
+    "bytes": 2323,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-light-rotated25.jpg-right-V3-masks.json.gz": {
+    "asset": "data/05f20d935b20459548dd0fa6979dda979b9de6af3cecc27eb196f4a80976c9d0.gz",
+    "sha256": "05f20d935b20459548dd0fa6979dda979b9de6af3cecc27eb196f4a80976c9d0",
+    "bytes": 2129,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-7123010.jpg-left-V1-masks.json.gz": {
+    "asset": "data/0384d75b65c9825a08bff21d5ea6f7c9afaca5e1eed05bea98b961fd8e13f835.gz",
+    "sha256": "0384d75b65c9825a08bff21d5ea6f7c9afaca5e1eed05bea98b961fd8e13f835",
+    "bytes": 3086,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-7123010.jpg-right-V1-masks.json.gz": {
+    "asset": "data/4b2e91e7afb02652c38980e111f050e82d612095ca47cef42fb6a4236c9d5e89.gz",
+    "sha256": "4b2e91e7afb02652c38980e111f050e82d612095ca47cef42fb6a4236c9d5e89",
+    "bytes": 1893,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-7123010.jpg-left-V3-masks.json.gz": {
+    "asset": "data/758c4622e726506d8c01cd93c45bf9e90ddf813870a1ddc2c785f64f63338824.gz",
+    "sha256": "758c4622e726506d8c01cd93c45bf9e90ddf813870a1ddc2c785f64f63338824",
+    "bytes": 2882,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-7123010.jpg-right-V3-masks.json.gz": {
+    "asset": "data/f8e3b5da01078c209349c644cc2350c1668d24fff51ebe05ec055a53383d5f8e.gz",
+    "sha256": "f8e3b5da01078c209349c644cc2350c1668d24fff51ebe05ec055a53383d5f8e",
+    "bytes": 1889,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-32526448.jpg-left-V1-masks.json.gz": {
+    "asset": "data/5563bd1f1390e387c599cb59e008834fe6d4e013bf8e674faa6acfbb4dd98f66.gz",
+    "sha256": "5563bd1f1390e387c599cb59e008834fe6d4e013bf8e674faa6acfbb4dd98f66",
+    "bytes": 4925,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-32526448.jpg-right-V1-masks.json.gz": {
+    "asset": "data/62de2aaa96878c35f17a441f288fcd590088f4828f738be5fd850cc3351fa6e0.gz",
+    "sha256": "62de2aaa96878c35f17a441f288fcd590088f4828f738be5fd850cc3351fa6e0",
+    "bytes": 5471,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-32526448.jpg-left-V3-masks.json.gz": {
+    "asset": "data/12707ad23f8743bfe1dd47f8cfe37e62e07e6bd56292af31b14c36ff7dad87ee.gz",
+    "sha256": "12707ad23f8743bfe1dd47f8cfe37e62e07e6bd56292af31b14c36ff7dad87ee",
+    "bytes": 4638,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-32526448.jpg-right-V3-masks.json.gz": {
+    "asset": "data/3fdf79465f0938648dffb5856144a0b0f972eb021bb698f10ed3fda3ed3d07d5.gz",
+    "sha256": "3fdf79465f0938648dffb5856144a0b0f972eb021bb698f10ed3fda3ed3d07d5",
+    "bytes": 5104,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-4611686.jpg-left-V1-masks.json.gz": {
+    "asset": "data/2b2d01573795b8c4eec125e3bbc3dfd69a76ff5c2f0a900977fde1d2eef54444.gz",
+    "sha256": "2b2d01573795b8c4eec125e3bbc3dfd69a76ff5c2f0a900977fde1d2eef54444",
+    "bytes": 5193,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-4611686.jpg-right-V1-masks.json.gz": {
+    "asset": "data/b01367eec5cf10de6fe26d8c3c8275728ffe3eaf30833f4c49bba5de9667bb6a.gz",
+    "sha256": "b01367eec5cf10de6fe26d8c3c8275728ffe3eaf30833f4c49bba5de9667bb6a",
+    "bytes": 3282,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-4611686.jpg-left-V3-masks.json.gz": {
+    "asset": "data/efd152aa055e836d419efa516399340f5305e2ec9ca57a007b5a258378cba49f.gz",
+    "sha256": "efd152aa055e836d419efa516399340f5305e2ec9ca57a007b5a258378cba49f",
+    "bytes": 4540,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-4611686.jpg-right-V3-masks.json.gz": {
+    "asset": "data/b8028fe0b909bdcd9c69d9379237525a81a26bc7c4e2883c1831ce84e49291ef.gz",
+    "sha256": "b8028fe0b909bdcd9c69d9379237525a81a26bc7c4e2883c1831ce84e49291ef",
+    "bytes": 2937,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-21792059.jpg-left-V1-masks.json.gz": {
+    "asset": "data/f1047cad42f8f8c025bd133dd5ab2594edbf89e5c8ab441c177ddc55dc1356cc.gz",
+    "sha256": "f1047cad42f8f8c025bd133dd5ab2594edbf89e5c8ab441c177ddc55dc1356cc",
+    "bytes": 2487,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-21792059.jpg-right-V1-masks.json.gz": {
+    "asset": "data/8dc7d9b14acbdae5eebc8e6f2f210e9238ee007de80e8f53881c0845cb95bb86.gz",
+    "sha256": "8dc7d9b14acbdae5eebc8e6f2f210e9238ee007de80e8f53881c0845cb95bb86",
+    "bytes": 5678,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-21792059.jpg-left-V3-masks.json.gz": {
+    "asset": "data/08b393c25d301c4c5ca2e11c908b8758e15c5d3ee834887056348027210a083b.gz",
+    "sha256": "08b393c25d301c4c5ca2e11c908b8758e15c5d3ee834887056348027210a083b",
+    "bytes": 2427,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census-fixed/webkit-pexels-21792059.jpg-right-V3-masks.json.gz": {
+    "asset": "data/f6cd5d2ce4c1c99c5f525bf64dc52e0f40d9aa9c9fc47fceb2760bd11b4a4276.gz",
+    "sha256": "f6cd5d2ce4c1c99c5f525bf64dc52e0f40d9aa9c9fc47fceb2760bd11b4a4276",
+    "bytes": 5187,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/census.json": {
+    "asset": "data/ff4abd58cfad025770e13b87ff6078503dfdf216ba8c8d8821e40daf60df24fa.gz",
+    "sha256": "ff4abd58cfad025770e13b87ff6078503dfdf216ba8c8d8821e40daf60df24fa",
+    "bytes": 31834093,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-light.jpg-left-V1-masks.json.gz": {
+    "asset": "data/262af1f41c2f41ba0454f8b3da510c978f7f25e0b38eb7ff3eec61a226cd1815.gz",
+    "sha256": "262af1f41c2f41ba0454f8b3da510c978f7f25e0b38eb7ff3eec61a226cd1815",
+    "bytes": 16959,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-light.jpg-right-V1-masks.json.gz": {
+    "asset": "data/c32076446a70764d76d50ab17b4a7d523a6a46e133dbb8ebd17a26c517957ce0.gz",
+    "sha256": "c32076446a70764d76d50ab17b4a7d523a6a46e133dbb8ebd17a26c517957ce0",
+    "bytes": 16678,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-light.jpg-left-V3-masks.json.gz": {
+    "asset": "data/04b6c048814846894a75d41fbb053ef1c6ed201e7dde7ee14d2e8576fd13a3d9.gz",
+    "sha256": "04b6c048814846894a75d41fbb053ef1c6ed201e7dde7ee14d2e8576fd13a3d9",
+    "bytes": 16887,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-light.jpg-right-V3-masks.json.gz": {
+    "asset": "data/456555295fa9b55f7091e5bc766b932dce2af22afecd234bb9e214dfe4fa1f1a.gz",
+    "sha256": "456555295fa9b55f7091e5bc766b932dce2af22afecd234bb9e214dfe4fa1f1a",
+    "bytes": 16595,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-natural.jpg-left-V1-masks.json.gz": {
+    "asset": "data/2c06e0fd8b29ddc8a03c748949737a1c8392076a7e9c5b50f0d89b2f4faac5c0.gz",
+    "sha256": "2c06e0fd8b29ddc8a03c748949737a1c8392076a7e9c5b50f0d89b2f4faac5c0",
+    "bytes": 21972,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-natural.jpg-right-V1-masks.json.gz": {
+    "asset": "data/cd3c5d450aa5483b7c46f29bde8f11c04c9275eb92c0691fd1cbd6fb46032045.gz",
+    "sha256": "cd3c5d450aa5483b7c46f29bde8f11c04c9275eb92c0691fd1cbd6fb46032045",
+    "bytes": 26108,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-natural.jpg-left-V3-masks.json.gz": {
+    "asset": "data/34102ad86b85b007fa2506f5ca35c2c24b5b09eb3e07222f898c73714c1ad1b6.gz",
+    "sha256": "34102ad86b85b007fa2506f5ca35c2c24b5b09eb3e07222f898c73714c1ad1b6",
+    "bytes": 21868,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-natural.jpg-right-V3-masks.json.gz": {
+    "asset": "data/78c4d270e7b82829d5c014d63c08003ebe87c36afc17673add4357d43b024820.gz",
+    "sha256": "78c4d270e7b82829d5c014d63c08003ebe87c36afc17673add4357d43b024820",
+    "bytes": 26007,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-hair-occlusion.jpg-left-V1-masks.json.gz": {
+    "asset": "data/9e201a3b5a3f4dd204dc0c07bb5ee21fbc1e0eaaadbb0f9aecd87576520e0800.gz",
+    "sha256": "9e201a3b5a3f4dd204dc0c07bb5ee21fbc1e0eaaadbb0f9aecd87576520e0800",
+    "bytes": 26850,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-hair-occlusion.jpg-right-V1-masks.json.gz": {
+    "asset": "data/cc384d26a00472665212ee120bbc24fc039e1b297e1b58f6e27099d8e0b7276e.gz",
+    "sha256": "cc384d26a00472665212ee120bbc24fc039e1b297e1b58f6e27099d8e0b7276e",
+    "bytes": 28063,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-hair-occlusion.jpg-left-V3-masks.json.gz": {
+    "asset": "data/3af0ddd2bb85ad3a60674acad39cfda8d81e9d6029885c263df13d46479eb901.gz",
+    "sha256": "3af0ddd2bb85ad3a60674acad39cfda8d81e9d6029885c263df13d46479eb901",
+    "bytes": 26523,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-hair-occlusion.jpg-right-V3-masks.json.gz": {
+    "asset": "data/0db5c2ac702db9580f034c77e90defa460df716885cfa9644595823881d1dee1.gz",
+    "sha256": "0db5c2ac702db9580f034c77e90defa460df716885cfa9644595823881d1dee1",
+    "bytes": 27836,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-light-rotated25.jpg-left-V1-masks.json.gz": {
+    "asset": "data/915d49f4575337c911c279ce0c2164196bd6e1c8b8bba90d530454d92ab90f2e.gz",
+    "sha256": "915d49f4575337c911c279ce0c2164196bd6e1c8b8bba90d530454d92ab90f2e",
+    "bytes": 19818,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-light-rotated25.jpg-right-V1-masks.json.gz": {
+    "asset": "data/29596e6970333c67b78ecdadafe71a7ec95ba1a82d44c7ea769ed7685ad84864.gz",
+    "sha256": "29596e6970333c67b78ecdadafe71a7ec95ba1a82d44c7ea769ed7685ad84864",
+    "bytes": 18981,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-light-rotated25.jpg-left-V3-masks.json.gz": {
+    "asset": "data/e8c29839a315bd0fddbb00e9ea9892e2a148cd475356dd7924c3f30792c70ea7.gz",
+    "sha256": "e8c29839a315bd0fddbb00e9ea9892e2a148cd475356dd7924c3f30792c70ea7",
+    "bytes": 19706,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-light-rotated25.jpg-right-V3-masks.json.gz": {
+    "asset": "data/5b61da96377eb385dda9d7bb09be5560116f12051dc44f50b9c6c3ab49fbfc5c.gz",
+    "sha256": "5b61da96377eb385dda9d7bb09be5560116f12051dc44f50b9c6c3ab49fbfc5c",
+    "bytes": 18861,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-7123010.jpg-left-V1-masks.json.gz": {
+    "asset": "data/265985f462cd04b14fad496708fb14ecfb34ea4db9cd3558603656d91a698879.gz",
+    "sha256": "265985f462cd04b14fad496708fb14ecfb34ea4db9cd3558603656d91a698879",
+    "bytes": 22021,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-7123010.jpg-right-V1-masks.json.gz": {
+    "asset": "data/9f36ece143e493997fa5fe990df2ad0eb369371916ae37c5961a91c403d2d035.gz",
+    "sha256": "9f36ece143e493997fa5fe990df2ad0eb369371916ae37c5961a91c403d2d035",
+    "bytes": 12902,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-7123010.jpg-left-V3-masks.json.gz": {
+    "asset": "data/c9143b4c0ac53a14e11ab8c7b4edead1cf0f6f20ade25cdb7e89a8e842804057.gz",
+    "sha256": "c9143b4c0ac53a14e11ab8c7b4edead1cf0f6f20ade25cdb7e89a8e842804057",
+    "bytes": 21934,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-7123010.jpg-right-V3-masks.json.gz": {
+    "asset": "data/e69e3a7cb881fd8e6247763e44ef60f638ef8ee45e21c33c8b34cc7ad2bb48e8.gz",
+    "sha256": "e69e3a7cb881fd8e6247763e44ef60f638ef8ee45e21c33c8b34cc7ad2bb48e8",
+    "bytes": 12879,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-32526448.jpg-left-V1-masks.json.gz": {
+    "asset": "data/bea89880d2382cdc86f2885cf7025f63c948b82ab70191222bc92110d52110ca.gz",
+    "sha256": "bea89880d2382cdc86f2885cf7025f63c948b82ab70191222bc92110d52110ca",
+    "bytes": 40285,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-32526448.jpg-right-V1-masks.json.gz": {
+    "asset": "data/84754e0b33335bd70aae968b84deb791bf282e1c77921587390675e263868184.gz",
+    "sha256": "84754e0b33335bd70aae968b84deb791bf282e1c77921587390675e263868184",
+    "bytes": 43168,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-32526448.jpg-left-V3-masks.json.gz": {
+    "asset": "data/bc3390e05e51fbfa248320bc70deaac2b65e04572e8dd1d67f2405501c0f7bf5.gz",
+    "sha256": "bc3390e05e51fbfa248320bc70deaac2b65e04572e8dd1d67f2405501c0f7bf5",
+    "bytes": 39955,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-32526448.jpg-right-V3-masks.json.gz": {
+    "asset": "data/6609eabbbe05496108449913e62a4aa6f73875d67bc9676bc6966b08ec2b7bb6.gz",
+    "sha256": "6609eabbbe05496108449913e62a4aa6f73875d67bc9676bc6966b08ec2b7bb6",
+    "bytes": 42794,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-4611686.jpg-left-V1-masks.json.gz": {
+    "asset": "data/622bc29a8d20adba8bb073875b32d1d3ffcbdbed51f1029f7dd79e4108df50a5.gz",
+    "sha256": "622bc29a8d20adba8bb073875b32d1d3ffcbdbed51f1029f7dd79e4108df50a5",
+    "bytes": 37005,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-4611686.jpg-right-V1-masks.json.gz": {
+    "asset": "data/e4f728fa026305913eb7a5fe6e15a655bd48bb0dc97afbff7438713d81d2a504.gz",
+    "sha256": "e4f728fa026305913eb7a5fe6e15a655bd48bb0dc97afbff7438713d81d2a504",
+    "bytes": 25963,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-4611686.jpg-left-V3-masks.json.gz": {
+    "asset": "data/1249a15a492ce6ba7a9d233bc8912ed4643293d5bc9cb840307f4248c9040194.gz",
+    "sha256": "1249a15a492ce6ba7a9d233bc8912ed4643293d5bc9cb840307f4248c9040194",
+    "bytes": 36738,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-4611686.jpg-right-V3-masks.json.gz": {
+    "asset": "data/52f5a26ae2c70ca33590ae24b225bbe6ef92361d15eb1d467772c7e5a8219e7a.gz",
+    "sha256": "52f5a26ae2c70ca33590ae24b225bbe6ef92361d15eb1d467772c7e5a8219e7a",
+    "bytes": 25766,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-21792059.jpg-left-V1-masks.json.gz": {
+    "asset": "data/3453a6af081dbd0ec0eabed8f347eccc5a328a7e51f30e57b5c0debfaffafc14.gz",
+    "sha256": "3453a6af081dbd0ec0eabed8f347eccc5a328a7e51f30e57b5c0debfaffafc14",
+    "bytes": 19782,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-21792059.jpg-right-V1-masks.json.gz": {
+    "asset": "data/bb8f7df139f377710d67a7d43817da9d518c764b9eccaae484130c88156d95b9.gz",
+    "sha256": "bb8f7df139f377710d67a7d43817da9d518c764b9eccaae484130c88156d95b9",
+    "bytes": 35979,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-21792059.jpg-left-V3-masks.json.gz": {
+    "asset": "data/bd8b9e8535962637ed35e63c86b3c75592930ba36312989f911ab52ada156f5c.gz",
+    "sha256": "bd8b9e8535962637ed35e63c86b3c75592930ba36312989f911ab52ada156f5c",
+    "bytes": 19645,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/chromium-pexels-21792059.jpg-right-V3-masks.json.gz": {
+    "asset": "data/e11376254eb1a76a5bdc129aa3d50804f85f4bd6429e43382bd559491a1ad5d7.gz",
+    "sha256": "e11376254eb1a76a5bdc129aa3d50804f85f4bd6429e43382bd559491a1ad5d7",
+    "bytes": 35349,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-light.jpg-left-V1-masks.json.gz": {
+    "asset": "data/e005ec2d4ccc034378b06bc62af49ab24f72fedde76d18d4fc0af98f4c992ea2.gz",
+    "sha256": "e005ec2d4ccc034378b06bc62af49ab24f72fedde76d18d4fc0af98f4c992ea2",
+    "bytes": 15985,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-light.jpg-right-V1-masks.json.gz": {
+    "asset": "data/e17f7eae08d89789930960ec719d8b8ce9db298198005479525978e2a8ebd22f.gz",
+    "sha256": "e17f7eae08d89789930960ec719d8b8ce9db298198005479525978e2a8ebd22f",
+    "bytes": 16315,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-light.jpg-left-V3-masks.json.gz": {
+    "asset": "data/13da8d14db46fee93c4b8432a443cfcbf5915f5957238a7953812ccf98f3de90.gz",
+    "sha256": "13da8d14db46fee93c4b8432a443cfcbf5915f5957238a7953812ccf98f3de90",
+    "bytes": 15896,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-light.jpg-right-V3-masks.json.gz": {
+    "asset": "data/5d3bd67dfb5aa06b62a1d3b4e3737aeb7bf51d8a4b8627923b621092f2b136a3.gz",
+    "sha256": "5d3bd67dfb5aa06b62a1d3b4e3737aeb7bf51d8a4b8627923b621092f2b136a3",
+    "bytes": 16256,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-natural.jpg-left-V1-masks.json.gz": {
+    "asset": "data/b9dc7c351ebeb271a658eeca81b0b79e867183b6f7c958db639273c1da0f1ab4.gz",
+    "sha256": "b9dc7c351ebeb271a658eeca81b0b79e867183b6f7c958db639273c1da0f1ab4",
+    "bytes": 21686,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-natural.jpg-right-V1-masks.json.gz": {
+    "asset": "data/135127955cea8f73e74c9e5893175058e99419dc51462b74563425d5b698c65a.gz",
+    "sha256": "135127955cea8f73e74c9e5893175058e99419dc51462b74563425d5b698c65a",
+    "bytes": 24357,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-natural.jpg-left-V3-masks.json.gz": {
+    "asset": "data/08c181a5145d5c309a8643d55f6811647e05ad38b8929b3f9eb1330e4ab1e8fb.gz",
+    "sha256": "08c181a5145d5c309a8643d55f6811647e05ad38b8929b3f9eb1330e4ab1e8fb",
+    "bytes": 21562,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-natural.jpg-right-V3-masks.json.gz": {
+    "asset": "data/710a0ff887e532f8e57671d159241ff6caafd76990d748cd31c1fa13aa76d0da.gz",
+    "sha256": "710a0ff887e532f8e57671d159241ff6caafd76990d748cd31c1fa13aa76d0da",
+    "bytes": 24264,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-hair-occlusion.jpg-left-V1-masks.json.gz": {
+    "asset": "data/01fd2739253013fb81d3685597b2731e3e99e69b72c630dfc3b37a5b16160b7c.gz",
+    "sha256": "01fd2739253013fb81d3685597b2731e3e99e69b72c630dfc3b37a5b16160b7c",
+    "bytes": 29054,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-hair-occlusion.jpg-right-V1-masks.json.gz": {
+    "asset": "data/2930b095380467ab46e58e005c476e8ff2c005f2e51762159d3aa8c4d8fc9512.gz",
+    "sha256": "2930b095380467ab46e58e005c476e8ff2c005f2e51762159d3aa8c4d8fc9512",
+    "bytes": 29647,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-hair-occlusion.jpg-left-V3-masks.json.gz": {
+    "asset": "data/98ffcd6da1e1acda7e8ea481afcb323e474b1281de343b0ce23b4dedd3154eb7.gz",
+    "sha256": "98ffcd6da1e1acda7e8ea481afcb323e474b1281de343b0ce23b4dedd3154eb7",
+    "bytes": 28520,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-hair-occlusion.jpg-right-V3-masks.json.gz": {
+    "asset": "data/f95261a0328b6e9f405b630e5d35537aef16268d413ba46ad24e2c1952dbb284.gz",
+    "sha256": "f95261a0328b6e9f405b630e5d35537aef16268d413ba46ad24e2c1952dbb284",
+    "bytes": 29276,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-light-rotated25.jpg-left-V1-masks.json.gz": {
+    "asset": "data/60513c24d3e39c28a1a475920d66a0e716d6a69a713de95eca9d523a3e422044.gz",
+    "sha256": "60513c24d3e39c28a1a475920d66a0e716d6a69a713de95eca9d523a3e422044",
+    "bytes": 21371,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-light-rotated25.jpg-right-V1-masks.json.gz": {
+    "asset": "data/a73afbcf8eb073386c713da7779b7e743fb4f6b8c540bd1945b07361ffeca2bf.gz",
+    "sha256": "a73afbcf8eb073386c713da7779b7e743fb4f6b8c540bd1945b07361ffeca2bf",
+    "bytes": 18693,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-light-rotated25.jpg-left-V3-masks.json.gz": {
+    "asset": "data/7100f291acdcac9cc274d8fa93edc4dffa6ff5150cefcda6c0c0616e203618da.gz",
+    "sha256": "7100f291acdcac9cc274d8fa93edc4dffa6ff5150cefcda6c0c0616e203618da",
+    "bytes": 21248,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-light-rotated25.jpg-right-V3-masks.json.gz": {
+    "asset": "data/0207b639f846efe896b6eb5dd228ce8b9e752f8c3be9a9180111b24498a34f2c.gz",
+    "sha256": "0207b639f846efe896b6eb5dd228ce8b9e752f8c3be9a9180111b24498a34f2c",
+    "bytes": 18630,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-7123010.jpg-left-V1-masks.json.gz": {
+    "asset": "data/2715e0d60a2643f289c5b173d8c7fe3977d50548237cc10f742aacfac4a817fa.gz",
+    "sha256": "2715e0d60a2643f289c5b173d8c7fe3977d50548237cc10f742aacfac4a817fa",
+    "bytes": 23715,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-7123010.jpg-right-V1-masks.json.gz": {
+    "asset": "data/0d8307f57735305f602f2083b4d4a472c2af5e63dfd4c64ec2ab79f5f8695f8d.gz",
+    "sha256": "0d8307f57735305f602f2083b4d4a472c2af5e63dfd4c64ec2ab79f5f8695f8d",
+    "bytes": 14893,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-7123010.jpg-left-V3-masks.json.gz": {
+    "asset": "data/24a26bb5db862c309049c74ea9fb99d5a4685785f5c8d82008bc347134747595.gz",
+    "sha256": "24a26bb5db862c309049c74ea9fb99d5a4685785f5c8d82008bc347134747595",
+    "bytes": 23496,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-7123010.jpg-right-V3-masks.json.gz": {
+    "asset": "data/58eeebd8dcb2e83f0bfcee5dc107ae6a50777fb95b9b6de5228a435852080ae4.gz",
+    "sha256": "58eeebd8dcb2e83f0bfcee5dc107ae6a50777fb95b9b6de5228a435852080ae4",
+    "bytes": 14893,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-32526448.jpg-left-V1-masks.json.gz": {
+    "asset": "data/86180d952dc0c5482d168f3220eaf1d34c68af48e0e613838c91c6a0821d90c1.gz",
+    "sha256": "86180d952dc0c5482d168f3220eaf1d34c68af48e0e613838c91c6a0821d90c1",
+    "bytes": 41588,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-32526448.jpg-right-V1-masks.json.gz": {
+    "asset": "data/8cf4809b6831b9ca540c7cd61b9d3d821a43a09e281c4ea9cdf3194992a7e60b.gz",
+    "sha256": "8cf4809b6831b9ca540c7cd61b9d3d821a43a09e281c4ea9cdf3194992a7e60b",
+    "bytes": 44273,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-32526448.jpg-left-V3-masks.json.gz": {
+    "asset": "data/89053bd5e59eb9dfe0458ffbab03a56c87d9a89425dd07882a3d98b7c476eedf.gz",
+    "sha256": "89053bd5e59eb9dfe0458ffbab03a56c87d9a89425dd07882a3d98b7c476eedf",
+    "bytes": 41304,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-32526448.jpg-right-V3-masks.json.gz": {
+    "asset": "data/283a7302a4181cb65e835e544bf63b306e5ead8b6842c0f10ea2955f80253a69.gz",
+    "sha256": "283a7302a4181cb65e835e544bf63b306e5ead8b6842c0f10ea2955f80253a69",
+    "bytes": 43916,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-4611686.jpg-left-V1-masks.json.gz": {
+    "asset": "data/04c3cb664e4bca5729a9a839761ade4a5017c046f698bbd5167dd53c3de5b0b8.gz",
+    "sha256": "04c3cb664e4bca5729a9a839761ade4a5017c046f698bbd5167dd53c3de5b0b8",
+    "bytes": 38867,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-4611686.jpg-right-V1-masks.json.gz": {
+    "asset": "data/fed300012f556f4c375d8a8f8aa15a22300cb62bf486cd1b38ed841271fe3072.gz",
+    "sha256": "fed300012f556f4c375d8a8f8aa15a22300cb62bf486cd1b38ed841271fe3072",
+    "bytes": 24850,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-4611686.jpg-left-V3-masks.json.gz": {
+    "asset": "data/92cb7de9661929f441f1fe6b8b15ab64d2151700dde7a3edcb506c37cf402fd4.gz",
+    "sha256": "92cb7de9661929f441f1fe6b8b15ab64d2151700dde7a3edcb506c37cf402fd4",
+    "bytes": 38187,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-4611686.jpg-right-V3-masks.json.gz": {
+    "asset": "data/e5f2f1c3e518de3570c6095f7f3286f902acf10bff371867fe5ce9a3d5d46158.gz",
+    "sha256": "e5f2f1c3e518de3570c6095f7f3286f902acf10bff371867fe5ce9a3d5d46158",
+    "bytes": 24496,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-21792059.jpg-left-V1-masks.json.gz": {
+    "asset": "data/0e00094d577b188cf1153b9dbf373993b895be8758525927f3e821d8511be59e.gz",
+    "sha256": "0e00094d577b188cf1153b9dbf373993b895be8758525927f3e821d8511be59e",
+    "bytes": 22727,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-21792059.jpg-right-V1-masks.json.gz": {
+    "asset": "data/bce32833806d2b14e000ec24192a82fd8b8b249d6cc9c01c8f616d4a510d84a4.gz",
+    "sha256": "bce32833806d2b14e000ec24192a82fd8b8b249d6cc9c01c8f616d4a510d84a4",
+    "bytes": 41343,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-21792059.jpg-left-V3-masks.json.gz": {
+    "asset": "data/e2fd8a6b8182ffc5871ad958183c8a50111e6503da40ef3ec6321485956fefe6.gz",
+    "sha256": "e2fd8a6b8182ffc5871ad958183c8a50111e6503da40ef3ec6321485956fefe6",
+    "bytes": 22663,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-display-data/webkit-pexels-21792059.jpg-right-V3-masks.json.gz": {
+    "asset": "data/be1e147cf2e6486ed3810acca2fca8840014f5e0689d8eec9f5c289f3fd6e118.gz",
+    "sha256": "be1e147cf2e6486ed3810acca2fca8840014f5e0689d8eec9f5c289f3fd6e118",
+    "bytes": 40830,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-run.cjs": {
+    "asset": "data/30307a9d10382ff57ff0bf83f771fe07a87375115a3044ea394398e29cc45073.gz",
+    "sha256": "30307a9d10382ff57ff0bf83f771fe07a87375115a3044ea394398e29cc45073",
+    "bytes": 11406,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-graph.mjs": {
+    "asset": "data/f8851939f96c6442c10da82bf89373df42285440a04f1dce521f0a42deccdced.gz",
+    "sha256": "f8851939f96c6442c10da82bf89373df42285440a04f1dce521f0a42deccdced",
+    "bytes": 3611,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-run.cjs": {
+    "asset": "data/03d60b1a655162ab85f5de7fa41f8d55a18932292e4e1a992889c2109971a3e6.gz",
+    "sha256": "03d60b1a655162ab85f5de7fa41f8d55a18932292e4e1a992889c2109971a3e6",
+    "bytes": 11551,
+    "gzip": true
+  },
+  "tests/visual/out/break-04-plots/manifest.json": {
+    "asset": "data/f656a8f3bc3ad3564ed29490852389c248c1d96973da7ebb35951dcd3d405bc2.gz",
+    "sha256": "f656a8f3bc3ad3564ed29490852389c248c1d96973da7ebb35951dcd3d405bc2",
+    "bytes": 48464,
+    "gzip": true
+  },
+  "tests/visual/out/break-04-plot.py": {
+    "asset": "data/41a897e638284fa00c23f7100986746c7343f74e44f61fe64497e11b029c201d.gz",
+    "sha256": "41a897e638284fa00c23f7100986746c7343f74e44f61fe64497e11b029c201d",
+    "bytes": 7400,
+    "gzip": true
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-light.jpg-left-automatic.png": {
+    "asset": "assets/4921df2c0c50f1da10642b6aa96c668ef40a42319e7953315675e01b0ab5d64a.png",
+    "sha256": "4921df2c0c50f1da10642b6aa96c668ef40a42319e7953315675e01b0ab5d64a",
+    "bytes": 172751,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-light.jpg-left-automatic-source160.png": {
+    "asset": "assets/a7c9b4cd3f380dc7dbafa5085aee5c4da1d1bfbde9fac5d10126c404971e646a.png",
+    "sha256": "a7c9b4cd3f380dc7dbafa5085aee5c4da1d1bfbde9fac5d10126c404971e646a",
+    "bytes": 38297,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-light.jpg-right-automatic.png": {
+    "asset": "assets/62b64050e5226a959532e4f9ceaeb71338540630cf9256c0d192ff749076db67.png",
+    "sha256": "62b64050e5226a959532e4f9ceaeb71338540630cf9256c0d192ff749076db67",
+    "bytes": 172840,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-light.jpg-right-automatic-source160.png": {
+    "asset": "assets/3f72adc424230f964e856cc09ffb073d1b7ad884d1dac1675e869684fa97b556.png",
+    "sha256": "3f72adc424230f964e856cc09ffb073d1b7ad884d1dac1675e869684fa97b556",
+    "bytes": 36267,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-light.jpg-left-automatic.png": {
+    "asset": "assets/af2520f319168ac04d36ad2e73496ae0d309176a059962c0253fb69aa44f4ebd.png",
+    "sha256": "af2520f319168ac04d36ad2e73496ae0d309176a059962c0253fb69aa44f4ebd",
+    "bytes": 171721,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-light.jpg-left-automatic-source160.png": {
+    "asset": "assets/a7c9b4cd3f380dc7dbafa5085aee5c4da1d1bfbde9fac5d10126c404971e646a.png",
+    "sha256": "a7c9b4cd3f380dc7dbafa5085aee5c4da1d1bfbde9fac5d10126c404971e646a",
+    "bytes": 38297,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-light.jpg-right-automatic.png": {
+    "asset": "assets/2f758f904de3412eeb5f428f1c12b3fadca34353dc07a445723cb6b03d20f30d.png",
+    "sha256": "2f758f904de3412eeb5f428f1c12b3fadca34353dc07a445723cb6b03d20f30d",
+    "bytes": 171088,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-light.jpg-right-automatic-source160.png": {
+    "asset": "assets/3f72adc424230f964e856cc09ffb073d1b7ad884d1dac1675e869684fa97b556.png",
+    "sha256": "3f72adc424230f964e856cc09ffb073d1b7ad884d1dac1675e869684fa97b556",
+    "bytes": 36267,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-natural.jpg-left-automatic.png": {
+    "asset": "assets/766d38dbee1eff5a6fad089bc2bc0914ba9aa15f071cd1e437262e80385246a0.png",
+    "sha256": "766d38dbee1eff5a6fad089bc2bc0914ba9aa15f071cd1e437262e80385246a0",
+    "bytes": 197722,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-natural.jpg-left-automatic-source160.png": {
+    "asset": "assets/e5c5f8461449c69b9a3dfb09da850c6bb8e7b9caa12b975dbd094bd95ed5def2.png",
+    "sha256": "e5c5f8461449c69b9a3dfb09da850c6bb8e7b9caa12b975dbd094bd95ed5def2",
+    "bytes": 31777,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-natural.jpg-right-automatic.png": {
+    "asset": "assets/06bff596ee3ceb2b4c6e45488cc6993a4fecba4bc78e6b21f6a4a93b1ee64af5.png",
+    "sha256": "06bff596ee3ceb2b4c6e45488cc6993a4fecba4bc78e6b21f6a4a93b1ee64af5",
+    "bytes": 207108,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-natural.jpg-right-automatic-source160.png": {
+    "asset": "assets/878600ba3be58d872d27576600c5f44dc43b3bcc700fc0354e8daffe51074215.png",
+    "sha256": "878600ba3be58d872d27576600c5f44dc43b3bcc700fc0354e8daffe51074215",
+    "bytes": 33020,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-natural.jpg-left-automatic.png": {
+    "asset": "assets/e324d89e216ac10ec45288b409b9268da1502726daf01c44c76b26537dd770e1.png",
+    "sha256": "e324d89e216ac10ec45288b409b9268da1502726daf01c44c76b26537dd770e1",
+    "bytes": 198207,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-natural.jpg-left-automatic-source160.png": {
+    "asset": "assets/d46dd01b19fa313c9e88fd23e6974d2a3a55143c59ac0743a5a197452b54fa9c.png",
+    "sha256": "d46dd01b19fa313c9e88fd23e6974d2a3a55143c59ac0743a5a197452b54fa9c",
+    "bytes": 30049,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-natural.jpg-right-automatic.png": {
+    "asset": "assets/c1c40d03f7152f09de5b12f82cfb6d8f651402bd84976c423af01cd2594b659d.png",
+    "sha256": "c1c40d03f7152f09de5b12f82cfb6d8f651402bd84976c423af01cd2594b659d",
+    "bytes": 190969,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-natural.jpg-right-automatic-source160.png": {
+    "asset": "assets/30c69ae9969cd8c3de6a6b78b45773d83f3ae402312149fd6a379ac04355e535.png",
+    "sha256": "30c69ae9969cd8c3de6a6b78b45773d83f3ae402312149fd6a379ac04355e535",
+    "bytes": 32732,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-hair-occlusion.jpg-left-automatic.png": {
+    "asset": "assets/1ce85ad895a808818acc1423638d0b1a1bfa7373436ee80fbcbf8188dce4dd5b.png",
+    "sha256": "1ce85ad895a808818acc1423638d0b1a1bfa7373436ee80fbcbf8188dce4dd5b",
+    "bytes": 217291,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-hair-occlusion.jpg-left-automatic-source160.png": {
+    "asset": "assets/21f98736fbd6889b9011766e8eefa842c9b6e254da4998d5b624c7be0bc786d0.png",
+    "sha256": "21f98736fbd6889b9011766e8eefa842c9b6e254da4998d5b624c7be0bc786d0",
+    "bytes": 34538,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-hair-occlusion.jpg-right-automatic.png": {
+    "asset": "assets/43c6ec316310de3f2aa1f28dc25247ce330483eb7dcbbf0429a1c7ff7a8b09c3.png",
+    "sha256": "43c6ec316310de3f2aa1f28dc25247ce330483eb7dcbbf0429a1c7ff7a8b09c3",
+    "bytes": 229304,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-hair-occlusion.jpg-right-automatic-source160.png": {
+    "asset": "assets/803f6b399cb94b70219ae484ac154db5757e7d05044dd6a3987e9a927b264a06.png",
+    "sha256": "803f6b399cb94b70219ae484ac154db5757e7d05044dd6a3987e9a927b264a06",
+    "bytes": 33720,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-hair-occlusion.jpg-left-automatic.png": {
+    "asset": "assets/f2fb2f3226585e4b223f3884d6aef9e8746550c590f019448cc37272748a9d08.png",
+    "sha256": "f2fb2f3226585e4b223f3884d6aef9e8746550c590f019448cc37272748a9d08",
+    "bytes": 215867,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-hair-occlusion.jpg-left-automatic-source160.png": {
+    "asset": "assets/ce51887c4fd69c9eebba77da6c2547f4478b411aed4e39f1cb3d60f7c7227982.png",
+    "sha256": "ce51887c4fd69c9eebba77da6c2547f4478b411aed4e39f1cb3d60f7c7227982",
+    "bytes": 35362,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-hair-occlusion.jpg-right-automatic.png": {
+    "asset": "assets/d37f725dd868b19fc550cd2d3d0d25309e478c92a000bac6957f35c022680f79.png",
+    "sha256": "d37f725dd868b19fc550cd2d3d0d25309e478c92a000bac6957f35c022680f79",
+    "bytes": 226834,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-hair-occlusion.jpg-right-automatic-source160.png": {
+    "asset": "assets/c1f7c7edd117d395175082a48837c11898c4db7152cf8b1446f4378ce1f9cd9b.png",
+    "sha256": "c1f7c7edd117d395175082a48837c11898c4db7152cf8b1446f4378ce1f9cd9b",
+    "bytes": 33977,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-light-rotated25.jpg-left-automatic.png": {
+    "asset": "assets/c68a34b9e55e7508e11644b1278b6affd08d31cacb209ea42b793801f831fa0d.png",
+    "sha256": "c68a34b9e55e7508e11644b1278b6affd08d31cacb209ea42b793801f831fa0d",
+    "bytes": 208761,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-light-rotated25.jpg-left-automatic-source160.png": {
+    "asset": "assets/fce5aeb64d0e2e907224c396f6937b760b698ea5cd322d2762e4ee48bb6393af.png",
+    "sha256": "fce5aeb64d0e2e907224c396f6937b760b698ea5cd322d2762e4ee48bb6393af",
+    "bytes": 32268,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-light-rotated25.jpg-right-automatic.png": {
+    "asset": "assets/1b847bcd380130a5e80165747f9ea03ad95856d51a9d6b5e6c79fc5eb96e4b34.png",
+    "sha256": "1b847bcd380130a5e80165747f9ea03ad95856d51a9d6b5e6c79fc5eb96e4b34",
+    "bytes": 189497,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-light-rotated25.jpg-right-automatic-source160.png": {
+    "asset": "assets/02a8a92954039df571caa88c04568b4dba644db4725174d0ec47db33c19876dd.png",
+    "sha256": "02a8a92954039df571caa88c04568b4dba644db4725174d0ec47db33c19876dd",
+    "bytes": 31383,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-light-rotated25.jpg-left-automatic.png": {
+    "asset": "assets/f576eb1303265f84626a482a352a57b9a441a3fa60bf5816b9f9939ffa7d150b.png",
+    "sha256": "f576eb1303265f84626a482a352a57b9a441a3fa60bf5816b9f9939ffa7d150b",
+    "bytes": 206975,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-light-rotated25.jpg-left-automatic-source160.png": {
+    "asset": "assets/fce5aeb64d0e2e907224c396f6937b760b698ea5cd322d2762e4ee48bb6393af.png",
+    "sha256": "fce5aeb64d0e2e907224c396f6937b760b698ea5cd322d2762e4ee48bb6393af",
+    "bytes": 32268,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-light-rotated25.jpg-right-automatic.png": {
+    "asset": "assets/4bd29f2fed6398595b97bd4ff9600227c2a0449b267992cf528b82ff9c017077.png",
+    "sha256": "4bd29f2fed6398595b97bd4ff9600227c2a0449b267992cf528b82ff9c017077",
+    "bytes": 188426,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-light-rotated25.jpg-right-automatic-source160.png": {
+    "asset": "assets/a63a833ea34d1a410cda51ecbe50cabef7abc534bdcd0804dbd8c1ea8d006bfa.png",
+    "sha256": "a63a833ea34d1a410cda51ecbe50cabef7abc534bdcd0804dbd8c1ea8d006bfa",
+    "bytes": 31319,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-7123010.jpg-left-automatic.png": {
+    "asset": "assets/61d48285496bed3d42b4d6e73f1b3470723e1db04a269ecb352e56f7354f2c9b.png",
+    "sha256": "61d48285496bed3d42b4d6e73f1b3470723e1db04a269ecb352e56f7354f2c9b",
+    "bytes": 354907,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-7123010.jpg-left-automatic-source160.png": {
+    "asset": "assets/76db4f910b90d2ee7b72955f57c9b03858d59cdf2bae987a235d32a33a040a77.png",
+    "sha256": "76db4f910b90d2ee7b72955f57c9b03858d59cdf2bae987a235d32a33a040a77",
+    "bytes": 39998,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-7123010.jpg-right-automatic.png": {
+    "asset": "assets/22930ba0a5c8f5c6a015cfca1887b8acef2680904954352f8af19629bf19e495.png",
+    "sha256": "22930ba0a5c8f5c6a015cfca1887b8acef2680904954352f8af19629bf19e495",
+    "bytes": 273320,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-7123010.jpg-right-automatic-source160.png": {
+    "asset": "assets/29a65ad2713d454610f76ba5ee904a8936adac42c431d966929cf39afe2a8767.png",
+    "sha256": "29a65ad2713d454610f76ba5ee904a8936adac42c431d966929cf39afe2a8767",
+    "bytes": 38275,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-7123010.jpg-left-automatic.png": {
+    "asset": "assets/3a3e553f19b7e0d2724e4c5d6f65177c129c566fc54209cc2ae80e7615d1d51b.png",
+    "sha256": "3a3e553f19b7e0d2724e4c5d6f65177c129c566fc54209cc2ae80e7615d1d51b",
+    "bytes": 354405,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-7123010.jpg-left-automatic-source160.png": {
+    "asset": "assets/f8f41f5d6b973f3b32ca175b30117ac3e346bbded8043f1c6ec22d73bc9fec22.png",
+    "sha256": "f8f41f5d6b973f3b32ca175b30117ac3e346bbded8043f1c6ec22d73bc9fec22",
+    "bytes": 40226,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-7123010.jpg-right-automatic.png": {
+    "asset": "assets/a02531557f30e1efbefce4770175e231ffd66f2d024c02278bed3d24923e5776.png",
+    "sha256": "a02531557f30e1efbefce4770175e231ffd66f2d024c02278bed3d24923e5776",
+    "bytes": 273423,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-7123010.jpg-right-automatic-source160.png": {
+    "asset": "assets/67cc1d00f5ce42b61c55a7b03c10b203af0b538cda075c50b5d50a5c717877fc.png",
+    "sha256": "67cc1d00f5ce42b61c55a7b03c10b203af0b538cda075c50b5d50a5c717877fc",
+    "bytes": 38513,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-32526448.jpg-left-automatic.png": {
+    "asset": "assets/64e2e06f8cee78fffbdb9025a70c81dae250cf66bccff5f59580271d93441010.png",
+    "sha256": "64e2e06f8cee78fffbdb9025a70c81dae250cf66bccff5f59580271d93441010",
+    "bytes": 483645,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-32526448.jpg-left-automatic-source160.png": {
+    "asset": "assets/a8964d838065ac3f596b1cf413ea781b7c95c2ed71e4c960edf007100095be79.png",
+    "sha256": "a8964d838065ac3f596b1cf413ea781b7c95c2ed71e4c960edf007100095be79",
+    "bytes": 30734,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-32526448.jpg-right-automatic.png": {
+    "asset": "assets/148b55a3030120ed406db3d951b053a5e85bd48edb480b24e2324f3de29c3138.png",
+    "sha256": "148b55a3030120ed406db3d951b053a5e85bd48edb480b24e2324f3de29c3138",
+    "bytes": 432990,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-32526448.jpg-right-automatic-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-32526448.jpg-right-F325-L1.png": {
+    "asset": "assets/fb20b4db5191966f121cbe74705c0fd0e3cbd2b7a504bae44deba8844f08c126.png",
+    "sha256": "fb20b4db5191966f121cbe74705c0fd0e3cbd2b7a504bae44deba8844f08c126",
+    "bytes": 429784,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-32526448.jpg-right-F325-L1-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-32526448.jpg-right-F325-L2.png": {
+    "asset": "assets/8075f9dfa5e444b6efc4e587f5666be4e8aab0509f31a0dc8b8cc34f109b2ace.png",
+    "sha256": "8075f9dfa5e444b6efc4e587f5666be4e8aab0509f31a0dc8b8cc34f109b2ace",
+    "bytes": 429599,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-32526448.jpg-right-F325-L2-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-32526448.jpg-left-automatic.png": {
+    "asset": "assets/1037e13705aeec767aba9363b58854ac50e33684f5d851ccc02453440587f015.png",
+    "sha256": "1037e13705aeec767aba9363b58854ac50e33684f5d851ccc02453440587f015",
+    "bytes": 480288,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-32526448.jpg-left-automatic-source160.png": {
+    "asset": "assets/a95d2a523f687bbd604badc8c6150fb4cfd5f8c80b7b7aaecaec423bfb130567.png",
+    "sha256": "a95d2a523f687bbd604badc8c6150fb4cfd5f8c80b7b7aaecaec423bfb130567",
+    "bytes": 28308,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-32526448.jpg-right-automatic.png": {
+    "asset": "assets/dea28ca44ffb049025f4a35f0de195187ce5bd5478e93c3626ece2bd9242a91b.png",
+    "sha256": "dea28ca44ffb049025f4a35f0de195187ce5bd5478e93c3626ece2bd9242a91b",
+    "bytes": 431841,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-32526448.jpg-right-automatic-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-32526448.jpg-right-F325-L1.png": {
+    "asset": "assets/504b0d79be15605d252709652d3ecfea0f51c4e41a9bf73cab9dcaf90db57acc.png",
+    "sha256": "504b0d79be15605d252709652d3ecfea0f51c4e41a9bf73cab9dcaf90db57acc",
+    "bytes": 439192,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-32526448.jpg-right-F325-L1-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-32526448.jpg-right-F325-L2.png": {
+    "asset": "assets/dbe7a150f03b5a675b5421909f92049eace36f2893e6c6737dcfe7cfe3e513dd.png",
+    "sha256": "dbe7a150f03b5a675b5421909f92049eace36f2893e6c6737dcfe7cfe3e513dd",
+    "bytes": 439437,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-32526448.jpg-right-F325-L2-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-4611686.jpg-left-automatic.png": {
+    "asset": "assets/217f95487bd508525c6b7368e8dbab3593e267116c6b95bb9f0696f816d72f2e.png",
+    "sha256": "217f95487bd508525c6b7368e8dbab3593e267116c6b95bb9f0696f816d72f2e",
+    "bytes": 467298,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-4611686.jpg-left-automatic-source160.png": {
+    "asset": "assets/2f40f8025094cd59e2a653f8385a11e908cf8a3f56acaff13d5750a7ff60fe5e.png",
+    "sha256": "2f40f8025094cd59e2a653f8385a11e908cf8a3f56acaff13d5750a7ff60fe5e",
+    "bytes": 35698,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-4611686.jpg-right-automatic.png": {
+    "asset": "assets/8efe5c1464ced3e65e5f027e7970976782468633943a6fbe620894470ee6acaa.png",
+    "sha256": "8efe5c1464ced3e65e5f027e7970976782468633943a6fbe620894470ee6acaa",
+    "bytes": 395741,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-4611686.jpg-right-automatic-source160.png": {
+    "asset": "assets/083d0f567f06622b8e82514967a58846dfde8eb314127e561ce0bf619bfbec6e.png",
+    "sha256": "083d0f567f06622b8e82514967a58846dfde8eb314127e561ce0bf619bfbec6e",
+    "bytes": 43714,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-4611686.jpg-right-F461-L1.png": {
+    "asset": "assets/d3dce216073e5975a9daecc5e8e5da77bacafaa20d7f285aabbaf9b6bae3a9af.png",
+    "sha256": "d3dce216073e5975a9daecc5e8e5da77bacafaa20d7f285aabbaf9b6bae3a9af",
+    "bytes": 378404,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-4611686.jpg-right-F461-L1-source160.png": {
+    "asset": "assets/5e1afe2da52af411e5d11df8eb8a6e53f4a7650226baeafcf580a4705aa5cfa5.png",
+    "sha256": "5e1afe2da52af411e5d11df8eb8a6e53f4a7650226baeafcf580a4705aa5cfa5",
+    "bytes": 44494,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-4611686.jpg-left-automatic.png": {
+    "asset": "assets/98109ca303d96c37249f8c0edea82ad22cbc030f4c6b35b06593ffaffb865fa8.png",
+    "sha256": "98109ca303d96c37249f8c0edea82ad22cbc030f4c6b35b06593ffaffb865fa8",
+    "bytes": 466372,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-4611686.jpg-left-automatic-source160.png": {
+    "asset": "assets/2f40f8025094cd59e2a653f8385a11e908cf8a3f56acaff13d5750a7ff60fe5e.png",
+    "sha256": "2f40f8025094cd59e2a653f8385a11e908cf8a3f56acaff13d5750a7ff60fe5e",
+    "bytes": 35698,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-4611686.jpg-right-automatic.png": {
+    "asset": "assets/47cfd93a287dbb945bf4464b93dfbc264f1e8feddfac160508dccd886cfdd8f5.png",
+    "sha256": "47cfd93a287dbb945bf4464b93dfbc264f1e8feddfac160508dccd886cfdd8f5",
+    "bytes": 393105,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-4611686.jpg-right-automatic-source160.png": {
+    "asset": "assets/8abb99c128117b04ccbca860b60f80bc3c18bc8c16f0c8c6f045faa70bf4fc2b.png",
+    "sha256": "8abb99c128117b04ccbca860b60f80bc3c18bc8c16f0c8c6f045faa70bf4fc2b",
+    "bytes": 40921,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-4611686.jpg-right-F461-L1.png": {
+    "asset": "assets/75ab900a0d22534746d9742796f2ecbe60d2f02f7400bbfdabbccaf4bd58c9b4.png",
+    "sha256": "75ab900a0d22534746d9742796f2ecbe60d2f02f7400bbfdabbccaf4bd58c9b4",
+    "bytes": 377873,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-4611686.jpg-right-F461-L1-source160.png": {
+    "asset": "assets/5e1afe2da52af411e5d11df8eb8a6e53f4a7650226baeafcf580a4705aa5cfa5.png",
+    "sha256": "5e1afe2da52af411e5d11df8eb8a6e53f4a7650226baeafcf580a4705aa5cfa5",
+    "bytes": 44494,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-21792059.jpg-left-automatic.png": {
+    "asset": "assets/96aa692a30b58356bbe9a0fa7badf48dbbddab62f4ebe303588762e502e14091.png",
+    "sha256": "96aa692a30b58356bbe9a0fa7badf48dbbddab62f4ebe303588762e502e14091",
+    "bytes": 319714,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-21792059.jpg-left-automatic-source160.png": {
+    "asset": "assets/372d9da0aa119235adbb5e611be44a8f256d238046e3c8d069bf2d3c81407f92.png",
+    "sha256": "372d9da0aa119235adbb5e611be44a8f256d238046e3c8d069bf2d3c81407f92",
+    "bytes": 27471,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-21792059.jpg-right-automatic.png": {
+    "asset": "assets/9c1c68b2552f5d877950025dca428e82e98589beb4ad4e2178a32be466d28973.png",
+    "sha256": "9c1c68b2552f5d877950025dca428e82e98589beb4ad4e2178a32be466d28973",
+    "bytes": 496618,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-21792059.jpg-right-automatic-source160.png": {
+    "asset": "assets/f075e4a575b7bd20415df8356a3548261ddc668cd0ccc46695ebf96b6f5379d9.png",
+    "sha256": "f075e4a575b7bd20415df8356a3548261ddc668cd0ccc46695ebf96b6f5379d9",
+    "bytes": 37854,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-21792059.jpg-right-F2-217-L1.png": {
+    "asset": "assets/79ec5abf53c25135a8bdec332d1cf6e9de4329727393184c78004805096fa024.png",
+    "sha256": "79ec5abf53c25135a8bdec332d1cf6e9de4329727393184c78004805096fa024",
+    "bytes": 494835,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-21792059.jpg-right-F2-217-L1-source160.png": {
+    "asset": "assets/480f499bd6d4dbe0bb4626cb0a4417d337970dd45cea9eb1df7dbc3bd878d022.png",
+    "sha256": "480f499bd6d4dbe0bb4626cb0a4417d337970dd45cea9eb1df7dbc3bd878d022",
+    "bytes": 40188,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-21792059.jpg-right-F2-217-L2.png": {
+    "asset": "assets/a22bdb722ba115dc7cd5ee1a7ae31e189e6181646807a96c8b8f2bfd02102bcf.png",
+    "sha256": "a22bdb722ba115dc7cd5ee1a7ae31e189e6181646807a96c8b8f2bfd02102bcf",
+    "bytes": 480855,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V1-pexels-21792059.jpg-right-F2-217-L2-source160.png": {
+    "asset": "assets/f7d30a742bba023b1b8a4cb1dc6ca8d12b9733aece5c0dd9d349fba9f0aeb834.png",
+    "sha256": "f7d30a742bba023b1b8a4cb1dc6ca8d12b9733aece5c0dd9d349fba9f0aeb834",
+    "bytes": 34486,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-21792059.jpg-left-automatic.png": {
+    "asset": "assets/d4e79d5cb7aec3ac35bd82776a32c0ea82e9df6b5c4ab6652bf713810627385e.png",
+    "sha256": "d4e79d5cb7aec3ac35bd82776a32c0ea82e9df6b5c4ab6652bf713810627385e",
+    "bytes": 318949,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-21792059.jpg-left-automatic-source160.png": {
+    "asset": "assets/ade0fef4eab4943d36a2e176548c6910fc261d0def358a127faa819d07180c25.png",
+    "sha256": "ade0fef4eab4943d36a2e176548c6910fc261d0def358a127faa819d07180c25",
+    "bytes": 22939,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-21792059.jpg-right-automatic.png": {
+    "asset": "assets/8f90d0145a44c22549d0f61f2fadda6a37648308e06c5a88452052ac3b4552d9.png",
+    "sha256": "8f90d0145a44c22549d0f61f2fadda6a37648308e06c5a88452052ac3b4552d9",
+    "bytes": 492478,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-21792059.jpg-right-automatic-source160.png": {
+    "asset": "assets/ab31d64dbfb24150dd2a2a150e964099d52bf69915047fae26e1f462521b01a7.png",
+    "sha256": "ab31d64dbfb24150dd2a2a150e964099d52bf69915047fae26e1f462521b01a7",
+    "bytes": 46008,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-21792059.jpg-right-F2-217-L1.png": {
+    "asset": "assets/40eae3ce7ea33eec0f98fab1f7a7d37e390b09d1538007ce56acd36f35ad9238.png",
+    "sha256": "40eae3ce7ea33eec0f98fab1f7a7d37e390b09d1538007ce56acd36f35ad9238",
+    "bytes": 491467,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-21792059.jpg-right-F2-217-L1-source160.png": {
+    "asset": "assets/3c189522cdbd5a1e46cd77c83abd4b82c284e48ad6840b766b5293a2d19c8477.png",
+    "sha256": "3c189522cdbd5a1e46cd77c83abd4b82c284e48ad6840b766b5293a2d19c8477",
+    "bytes": 41328,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-21792059.jpg-right-F2-217-L2.png": {
+    "asset": "assets/794be217d9d2725a8cb47a8b7113fe6f872c56c729702bc622d84562bf644f0b.png",
+    "sha256": "794be217d9d2725a8cb47a8b7113fe6f872c56c729702bc622d84562bf644f0b",
+    "bytes": 480487,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/chromium-V3-pexels-21792059.jpg-right-F2-217-L2-source160.png": {
+    "asset": "assets/f7d30a742bba023b1b8a4cb1dc6ca8d12b9733aece5c0dd9d349fba9f0aeb834.png",
+    "sha256": "f7d30a742bba023b1b8a4cb1dc6ca8d12b9733aece5c0dd9d349fba9f0aeb834",
+    "bytes": 34486,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-light.jpg-left-automatic.png": {
+    "asset": "assets/4f952f3279c2a6889cdd94844deb9c4c48dc4ff5bab520c41e326c5577725170.png",
+    "sha256": "4f952f3279c2a6889cdd94844deb9c4c48dc4ff5bab520c41e326c5577725170",
+    "bytes": 167695,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-light.jpg-left-automatic-source160.png": {
+    "asset": "assets/bd38fae5712e4af69c57ed94dd4f1118c7e123402499b654caeec1d79e3a3709.png",
+    "sha256": "bd38fae5712e4af69c57ed94dd4f1118c7e123402499b654caeec1d79e3a3709",
+    "bytes": 38295,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-light.jpg-right-automatic.png": {
+    "asset": "assets/9d329384cadf0fa8a0c386b8b13c31b909a00daf4fe16043901994cd2521af5d.png",
+    "sha256": "9d329384cadf0fa8a0c386b8b13c31b909a00daf4fe16043901994cd2521af5d",
+    "bytes": 171568,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-light.jpg-right-automatic-source160.png": {
+    "asset": "assets/c014366130af08132250607711401144de6dde4d2222bc048b299551d64ab8c8.png",
+    "sha256": "c014366130af08132250607711401144de6dde4d2222bc048b299551d64ab8c8",
+    "bytes": 36208,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-light.jpg-left-automatic.png": {
+    "asset": "assets/cdb749a4a2b95d75762483dc06098809e3da6349a3e55f704459816f17ec1a33.png",
+    "sha256": "cdb749a4a2b95d75762483dc06098809e3da6349a3e55f704459816f17ec1a33",
+    "bytes": 166281,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-light.jpg-left-automatic-source160.png": {
+    "asset": "assets/bd38fae5712e4af69c57ed94dd4f1118c7e123402499b654caeec1d79e3a3709.png",
+    "sha256": "bd38fae5712e4af69c57ed94dd4f1118c7e123402499b654caeec1d79e3a3709",
+    "bytes": 38295,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-light.jpg-right-automatic.png": {
+    "asset": "assets/1af824fd639dc3df270c841f0df2f3d6ee0d7248322800c6cfaa3fadd0b3ac08.png",
+    "sha256": "1af824fd639dc3df270c841f0df2f3d6ee0d7248322800c6cfaa3fadd0b3ac08",
+    "bytes": 170126,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-light.jpg-right-automatic-source160.png": {
+    "asset": "assets/c014366130af08132250607711401144de6dde4d2222bc048b299551d64ab8c8.png",
+    "sha256": "c014366130af08132250607711401144de6dde4d2222bc048b299551d64ab8c8",
+    "bytes": 36208,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-natural.jpg-left-automatic.png": {
+    "asset": "assets/2f5ca0eec8e29872b8fbe5281e383804e676f79624b30180d302442b70f3c01a.png",
+    "sha256": "2f5ca0eec8e29872b8fbe5281e383804e676f79624b30180d302442b70f3c01a",
+    "bytes": 198356,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-natural.jpg-left-automatic-source160.png": {
+    "asset": "assets/e5c5f8461449c69b9a3dfb09da850c6bb8e7b9caa12b975dbd094bd95ed5def2.png",
+    "sha256": "e5c5f8461449c69b9a3dfb09da850c6bb8e7b9caa12b975dbd094bd95ed5def2",
+    "bytes": 31777,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-natural.jpg-right-automatic.png": {
+    "asset": "assets/dc75e980700b157cc0e5b2eba86d69fd3ea7e58b602501cf9343daf2e1cfffd8.png",
+    "sha256": "dc75e980700b157cc0e5b2eba86d69fd3ea7e58b602501cf9343daf2e1cfffd8",
+    "bytes": 199881,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-natural.jpg-right-automatic-source160.png": {
+    "asset": "assets/4f2f6b689e17a36d08985895e6c8fd5448582cd0f82aaeddf13f40efa14a8906.png",
+    "sha256": "4f2f6b689e17a36d08985895e6c8fd5448582cd0f82aaeddf13f40efa14a8906",
+    "bytes": 30936,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-natural.jpg-left-automatic.png": {
+    "asset": "assets/d48597c98a8140d7af91c52d032e8032851293f43399ca8f5505c12f5b59d81b.png",
+    "sha256": "d48597c98a8140d7af91c52d032e8032851293f43399ca8f5505c12f5b59d81b",
+    "bytes": 197742,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-natural.jpg-left-automatic-source160.png": {
+    "asset": "assets/d46dd01b19fa313c9e88fd23e6974d2a3a55143c59ac0743a5a197452b54fa9c.png",
+    "sha256": "d46dd01b19fa313c9e88fd23e6974d2a3a55143c59ac0743a5a197452b54fa9c",
+    "bytes": 30049,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-natural.jpg-right-automatic.png": {
+    "asset": "assets/f2125a01b9b01906f435b979bfc164a8e0e4958dc385578461b394f765765b23.png",
+    "sha256": "f2125a01b9b01906f435b979bfc164a8e0e4958dc385578461b394f765765b23",
+    "bytes": 183667,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-natural.jpg-right-automatic-source160.png": {
+    "asset": "assets/30c69ae9969cd8c3de6a6b78b45773d83f3ae402312149fd6a379ac04355e535.png",
+    "sha256": "30c69ae9969cd8c3de6a6b78b45773d83f3ae402312149fd6a379ac04355e535",
+    "bytes": 32732,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-hair-occlusion.jpg-left-automatic.png": {
+    "asset": "assets/37aa0abbd2a3b072cb2b45efce2e8b0fbd4b07ec28eb43d7c412063b0bbca459.png",
+    "sha256": "37aa0abbd2a3b072cb2b45efce2e8b0fbd4b07ec28eb43d7c412063b0bbca459",
+    "bytes": 225975,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-hair-occlusion.jpg-left-automatic-source160.png": {
+    "asset": "assets/fadc3181218f152abb0bd2323e34e40da6ce75f1a0ee9a1fbfadc65662b19338.png",
+    "sha256": "fadc3181218f152abb0bd2323e34e40da6ce75f1a0ee9a1fbfadc65662b19338",
+    "bytes": 35003,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-hair-occlusion.jpg-right-automatic.png": {
+    "asset": "assets/ff001342c8b453cefa479488574c660481670ac23d395e4ae852f4c1a6fa6daf.png",
+    "sha256": "ff001342c8b453cefa479488574c660481670ac23d395e4ae852f4c1a6fa6daf",
+    "bytes": 234015,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-hair-occlusion.jpg-right-automatic-source160.png": {
+    "asset": "assets/2327e5f2ebd5cd58509247950cb0fd085934daf0ab1e0875992f264dc8fa7f8d.png",
+    "sha256": "2327e5f2ebd5cd58509247950cb0fd085934daf0ab1e0875992f264dc8fa7f8d",
+    "bytes": 33804,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-hair-occlusion.jpg-left-automatic.png": {
+    "asset": "assets/11bc78a8ee13ca5271e379795d2061ed8cbbc4df111ae304fea84dd3804ff47e.png",
+    "sha256": "11bc78a8ee13ca5271e379795d2061ed8cbbc4df111ae304fea84dd3804ff47e",
+    "bytes": 223254,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-hair-occlusion.jpg-left-automatic-source160.png": {
+    "asset": "assets/b6a3e5ebf0cac300f92e75d4bd9bb32efbc775854f1f8490fb502fd17f03a641.png",
+    "sha256": "b6a3e5ebf0cac300f92e75d4bd9bb32efbc775854f1f8490fb502fd17f03a641",
+    "bytes": 35058,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-hair-occlusion.jpg-right-automatic.png": {
+    "asset": "assets/9e31b537b91852115233b8ebe4dc3ad9ab1dff799f7e28b1f005098cc7588a02.png",
+    "sha256": "9e31b537b91852115233b8ebe4dc3ad9ab1dff799f7e28b1f005098cc7588a02",
+    "bytes": 229389,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-hair-occlusion.jpg-right-automatic-source160.png": {
+    "asset": "assets/2eae7244e319ea57404b6f15a101677c342586cfe7b2a2fb02c4a25fd1479cf7.png",
+    "sha256": "2eae7244e319ea57404b6f15a101677c342586cfe7b2a2fb02c4a25fd1479cf7",
+    "bytes": 33678,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-light-rotated25.jpg-left-automatic.png": {
+    "asset": "assets/58e247d7b06b2d450cc9d67f8c7d036afabcf5de1ee4f4eaebf9790f29a1da0c.png",
+    "sha256": "58e247d7b06b2d450cc9d67f8c7d036afabcf5de1ee4f4eaebf9790f29a1da0c",
+    "bytes": 215059,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-light-rotated25.jpg-left-automatic-source160.png": {
+    "asset": "assets/577e0895b79db86963d72195f1761e8458e6b9e836b25f7a1689d72b05be2edf.png",
+    "sha256": "577e0895b79db86963d72195f1761e8458e6b9e836b25f7a1689d72b05be2edf",
+    "bytes": 33650,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-light-rotated25.jpg-right-automatic.png": {
+    "asset": "assets/83b121be3a72ec71ec7bd7b42488c3775e4b05a1e061eefd92a8c33566315e60.png",
+    "sha256": "83b121be3a72ec71ec7bd7b42488c3775e4b05a1e061eefd92a8c33566315e60",
+    "bytes": 185846,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-light-rotated25.jpg-right-automatic-source160.png": {
+    "asset": "assets/84ad57d0cd1b53650845f0af320db8177235711ed8ea3397a598a72f0e36fa02.png",
+    "sha256": "84ad57d0cd1b53650845f0af320db8177235711ed8ea3397a598a72f0e36fa02",
+    "bytes": 31662,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-light-rotated25.jpg-left-automatic.png": {
+    "asset": "assets/a13401f90590044b2687c7713c7878c188175208360b79cf2e742c836057c50b.png",
+    "sha256": "a13401f90590044b2687c7713c7878c188175208360b79cf2e742c836057c50b",
+    "bytes": 211979,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-light-rotated25.jpg-left-automatic-source160.png": {
+    "asset": "assets/577e0895b79db86963d72195f1761e8458e6b9e836b25f7a1689d72b05be2edf.png",
+    "sha256": "577e0895b79db86963d72195f1761e8458e6b9e836b25f7a1689d72b05be2edf",
+    "bytes": 33650,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-light-rotated25.jpg-right-automatic.png": {
+    "asset": "assets/f2b1b3e4b956cadb9ffc917cc08b309572b41b7e80a3fdbd2e0e37882ac6e109.png",
+    "sha256": "f2b1b3e4b956cadb9ffc917cc08b309572b41b7e80a3fdbd2e0e37882ac6e109",
+    "bytes": 185645,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-light-rotated25.jpg-right-automatic-source160.png": {
+    "asset": "assets/84ad57d0cd1b53650845f0af320db8177235711ed8ea3397a598a72f0e36fa02.png",
+    "sha256": "84ad57d0cd1b53650845f0af320db8177235711ed8ea3397a598a72f0e36fa02",
+    "bytes": 31662,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-7123010.jpg-left-automatic.png": {
+    "asset": "assets/f20b2cbd1694e990ab51c0b07d10f2f973b667b034b4b6cc6c842748497d2df3.png",
+    "sha256": "f20b2cbd1694e990ab51c0b07d10f2f973b667b034b4b6cc6c842748497d2df3",
+    "bytes": 361344,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-7123010.jpg-left-automatic-source160.png": {
+    "asset": "assets/9659865cee126b83089d3e41cd1da86ef1a8521d43f295ff40e44aec4d94efee.png",
+    "sha256": "9659865cee126b83089d3e41cd1da86ef1a8521d43f295ff40e44aec4d94efee",
+    "bytes": 39667,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-7123010.jpg-right-automatic.png": {
+    "asset": "assets/ac1120ca94f253be05b210a07c8d8d3f0bfed6656cda23232dc640edc622ac6e.png",
+    "sha256": "ac1120ca94f253be05b210a07c8d8d3f0bfed6656cda23232dc640edc622ac6e",
+    "bytes": 281227,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-7123010.jpg-right-automatic-source160.png": {
+    "asset": "assets/d35222e488233de7c3b7d0c66f0e4800fa55c908324ae622f46241235e9681ce.png",
+    "sha256": "d35222e488233de7c3b7d0c66f0e4800fa55c908324ae622f46241235e9681ce",
+    "bytes": 39186,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-7123010.jpg-left-automatic.png": {
+    "asset": "assets/7a9411492d70e652aac3fe8007de1d6d8cc401d7d6c49a491c28bf3732a138df.png",
+    "sha256": "7a9411492d70e652aac3fe8007de1d6d8cc401d7d6c49a491c28bf3732a138df",
+    "bytes": 355859,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-7123010.jpg-left-automatic-source160.png": {
+    "asset": "assets/6659189905e86a7d6746d2330cd4e1a5c38f1fa4fa436612005531f22f68f930.png",
+    "sha256": "6659189905e86a7d6746d2330cd4e1a5c38f1fa4fa436612005531f22f68f930",
+    "bytes": 39174,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-7123010.jpg-right-automatic.png": {
+    "asset": "assets/91909a62af18ca73a3e64a7004708c50a8593018043098bafb36b21e3c427477.png",
+    "sha256": "91909a62af18ca73a3e64a7004708c50a8593018043098bafb36b21e3c427477",
+    "bytes": 279628,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-7123010.jpg-right-automatic-source160.png": {
+    "asset": "assets/34beaed336a7c88cffadab2f79aa4d8b1f5d6a944d227f9924a07b412a4b031c.png",
+    "sha256": "34beaed336a7c88cffadab2f79aa4d8b1f5d6a944d227f9924a07b412a4b031c",
+    "bytes": 38950,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-32526448.jpg-left-automatic.png": {
+    "asset": "assets/11db1fc9f707cc02a1a56d4b45a530e95a4396ba0fc35a025f97dc273faaaa26.png",
+    "sha256": "11db1fc9f707cc02a1a56d4b45a530e95a4396ba0fc35a025f97dc273faaaa26",
+    "bytes": 471518,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-32526448.jpg-left-automatic-source160.png": {
+    "asset": "assets/aa049b28a3f0d8880b88228c7e77379d72038fb2526c13438b644b308594307d.png",
+    "sha256": "aa049b28a3f0d8880b88228c7e77379d72038fb2526c13438b644b308594307d",
+    "bytes": 29459,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-32526448.jpg-right-automatic.png": {
+    "asset": "assets/baed766df79264b927c73ea1b9f217cae2b22313ca3fb90abaa3d92ee1459088.png",
+    "sha256": "baed766df79264b927c73ea1b9f217cae2b22313ca3fb90abaa3d92ee1459088",
+    "bytes": 424464,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-32526448.jpg-right-automatic-source160.png": {
+    "asset": "assets/da86e0d045d97969ce5e96604e85153d444ddb0801bd62a0d6c98dda9ee28f60.png",
+    "sha256": "da86e0d045d97969ce5e96604e85153d444ddb0801bd62a0d6c98dda9ee28f60",
+    "bytes": 32947,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-32526448.jpg-right-F325-L1.png": {
+    "asset": "assets/80c806208e2818c3e5445b1b53feddbb30b5da46f3cfeabdceb617784bffc1cc.png",
+    "sha256": "80c806208e2818c3e5445b1b53feddbb30b5da46f3cfeabdceb617784bffc1cc",
+    "bytes": 422226,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-32526448.jpg-right-F325-L1-source160.png": {
+    "asset": "assets/8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487.png",
+    "sha256": "8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487",
+    "bytes": 33092,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-32526448.jpg-right-F325-L2.png": {
+    "asset": "assets/af1349e658a368b33aed316bc23f4f5dc3bc12f6ab761c377777bd5598fb9ef5.png",
+    "sha256": "af1349e658a368b33aed316bc23f4f5dc3bc12f6ab761c377777bd5598fb9ef5",
+    "bytes": 422112,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-32526448.jpg-right-F325-L2-source160.png": {
+    "asset": "assets/8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487.png",
+    "sha256": "8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487",
+    "bytes": 33092,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-32526448.jpg-left-automatic.png": {
+    "asset": "assets/d6c45cec369df5833ff0fa9841b857477b4d72632591ffe16e0a616f4c504979.png",
+    "sha256": "d6c45cec369df5833ff0fa9841b857477b4d72632591ffe16e0a616f4c504979",
+    "bytes": 469891,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-32526448.jpg-left-automatic-source160.png": {
+    "asset": "assets/089a5f0e6840981d700e355350a0d2ec4cec3785576b02205d5ca8d28ef1d118.png",
+    "sha256": "089a5f0e6840981d700e355350a0d2ec4cec3785576b02205d5ca8d28ef1d118",
+    "bytes": 28660,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-32526448.jpg-right-automatic.png": {
+    "asset": "assets/dd41aa3e7ec4a50cb59c4d524f9d8b7575adc12d5ed56cc8fecf4b46b75f5e7b.png",
+    "sha256": "dd41aa3e7ec4a50cb59c4d524f9d8b7575adc12d5ed56cc8fecf4b46b75f5e7b",
+    "bytes": 423406,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-32526448.jpg-right-automatic-source160.png": {
+    "asset": "assets/da86e0d045d97969ce5e96604e85153d444ddb0801bd62a0d6c98dda9ee28f60.png",
+    "sha256": "da86e0d045d97969ce5e96604e85153d444ddb0801bd62a0d6c98dda9ee28f60",
+    "bytes": 32947,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-32526448.jpg-right-F325-L1.png": {
+    "asset": "assets/04356faa13ea6059a763e35609e63973986267341171f0acb31105d93e94bb44.png",
+    "sha256": "04356faa13ea6059a763e35609e63973986267341171f0acb31105d93e94bb44",
+    "bytes": 422799,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-32526448.jpg-right-F325-L1-source160.png": {
+    "asset": "assets/8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487.png",
+    "sha256": "8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487",
+    "bytes": 33092,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-32526448.jpg-right-F325-L2.png": {
+    "asset": "assets/a00e1500962f3004b525b4a9209990984ff363ec35e6e74d5119ba81b20a9267.png",
+    "sha256": "a00e1500962f3004b525b4a9209990984ff363ec35e6e74d5119ba81b20a9267",
+    "bytes": 422607,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-32526448.jpg-right-F325-L2-source160.png": {
+    "asset": "assets/8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487.png",
+    "sha256": "8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487",
+    "bytes": 33092,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-4611686.jpg-left-automatic.png": {
+    "asset": "assets/fd4c7d11938c4db2ff2a9f530e187571d486e092d31afc39d51274e933833394.png",
+    "sha256": "fd4c7d11938c4db2ff2a9f530e187571d486e092d31afc39d51274e933833394",
+    "bytes": 465569,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-4611686.jpg-left-automatic-source160.png": {
+    "asset": "assets/4460174cf932e40c4a3e08fa159a76018eab4cc088a24fa28c49c1c60d76ca94.png",
+    "sha256": "4460174cf932e40c4a3e08fa159a76018eab4cc088a24fa28c49c1c60d76ca94",
+    "bytes": 38080,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-4611686.jpg-right-automatic.png": {
+    "asset": "assets/db0a829f837719694f919e1a4f313bacf98da91312bc330cf939ea5179ed27d8.png",
+    "sha256": "db0a829f837719694f919e1a4f313bacf98da91312bc330cf939ea5179ed27d8",
+    "bytes": 363278,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-4611686.jpg-right-automatic-source160.png": {
+    "asset": "assets/724848b633b07aa149bbe5db38fdf89ff971c4a2bf5aebbe6bbc3a17f35f39af.png",
+    "sha256": "724848b633b07aa149bbe5db38fdf89ff971c4a2bf5aebbe6bbc3a17f35f39af",
+    "bytes": 37613,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-4611686.jpg-right-F461-L1.png": {
+    "asset": "assets/fd6dad8b9ab83fdcde92fb4558104cab16d58602b6379f898a35e4f99e8b54a2.png",
+    "sha256": "fd6dad8b9ab83fdcde92fb4558104cab16d58602b6379f898a35e4f99e8b54a2",
+    "bytes": 347929,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-4611686.jpg-right-F461-L1-source160.png": {
+    "asset": "assets/aaecdd0a07f13bc4c240318add2287784f288d88575d2e78c2c66c7f4d3d4c33.png",
+    "sha256": "aaecdd0a07f13bc4c240318add2287784f288d88575d2e78c2c66c7f4d3d4c33",
+    "bytes": 44854,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-4611686.jpg-left-automatic.png": {
+    "asset": "assets/61f38fa1c5fd0b53b676093e02c33fe4bbdbd25cb56dc2f27f6263b77f04af1b.png",
+    "sha256": "61f38fa1c5fd0b53b676093e02c33fe4bbdbd25cb56dc2f27f6263b77f04af1b",
+    "bytes": 459673,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-4611686.jpg-left-automatic-source160.png": {
+    "asset": "assets/0ef4d75e7f466b70c66a441abd35edada67c1aa948641d2acc9d022e3d46174d.png",
+    "sha256": "0ef4d75e7f466b70c66a441abd35edada67c1aa948641d2acc9d022e3d46174d",
+    "bytes": 34932,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-4611686.jpg-right-automatic.png": {
+    "asset": "assets/95730e75caf39a46e568a637af720386379844877c5893b4dae45c0108b01b77.png",
+    "sha256": "95730e75caf39a46e568a637af720386379844877c5893b4dae45c0108b01b77",
+    "bytes": 360661,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-4611686.jpg-right-automatic-source160.png": {
+    "asset": "assets/0d0914e8d93b95a59cd960d9c024811acf8d46c3919e51f33dd666dfa2a814ce.png",
+    "sha256": "0d0914e8d93b95a59cd960d9c024811acf8d46c3919e51f33dd666dfa2a814ce",
+    "bytes": 45801,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-4611686.jpg-right-F461-L1.png": {
+    "asset": "assets/cdd1c37eea72b39634fbc1cc4b79a2574b1eb29bfb13682cf17ca0edb0987f44.png",
+    "sha256": "cdd1c37eea72b39634fbc1cc4b79a2574b1eb29bfb13682cf17ca0edb0987f44",
+    "bytes": 347961,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-4611686.jpg-right-F461-L1-source160.png": {
+    "asset": "assets/aaecdd0a07f13bc4c240318add2287784f288d88575d2e78c2c66c7f4d3d4c33.png",
+    "sha256": "aaecdd0a07f13bc4c240318add2287784f288d88575d2e78c2c66c7f4d3d4c33",
+    "bytes": 44854,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-21792059.jpg-left-automatic.png": {
+    "asset": "assets/8d7dee9275b2a00c602147351cf26527a18d96a276ba717779931ff7f7637e7f.png",
+    "sha256": "8d7dee9275b2a00c602147351cf26527a18d96a276ba717779931ff7f7637e7f",
+    "bytes": 321413,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-21792059.jpg-left-automatic-source160.png": {
+    "asset": "assets/b95f74105782c9577c90e82b55b1c2efe12ac8a2e4abd05ecc311f2978048044.png",
+    "sha256": "b95f74105782c9577c90e82b55b1c2efe12ac8a2e4abd05ecc311f2978048044",
+    "bytes": 26760,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-21792059.jpg-right-automatic.png": {
+    "asset": "assets/daee12cabbd31dd44bdd4157364833a83bc06f5f74dc98ce6d8d7c0df1905dac.png",
+    "sha256": "daee12cabbd31dd44bdd4157364833a83bc06f5f74dc98ce6d8d7c0df1905dac",
+    "bytes": 505498,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-21792059.jpg-right-automatic-source160.png": {
+    "asset": "assets/2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36.png",
+    "sha256": "2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36",
+    "bytes": 33580,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-21792059.jpg-right-F2-217-L1.png": {
+    "asset": "assets/32c2c594f30f95ccc4815adc08232b97ac9f05827e8d0bade60d9192b8761301.png",
+    "sha256": "32c2c594f30f95ccc4815adc08232b97ac9f05827e8d0bade60d9192b8761301",
+    "bytes": 503455,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-21792059.jpg-right-F2-217-L1-source160.png": {
+    "asset": "assets/0e07b864a99751738ab6068d4e5d2248ced8204bebda50bd0717eb34e330e638.png",
+    "sha256": "0e07b864a99751738ab6068d4e5d2248ced8204bebda50bd0717eb34e330e638",
+    "bytes": 39660,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-21792059.jpg-right-F2-217-L2.png": {
+    "asset": "assets/99565dde5cefdbd551f4ff90c4f581c4df8c817905eabb6a8fef45fd1f714fb5.png",
+    "sha256": "99565dde5cefdbd551f4ff90c4f581c4df8c817905eabb6a8fef45fd1f714fb5",
+    "bytes": 503255,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V1-pexels-21792059.jpg-right-F2-217-L2-source160.png": {
+    "asset": "assets/0e07b864a99751738ab6068d4e5d2248ced8204bebda50bd0717eb34e330e638.png",
+    "sha256": "0e07b864a99751738ab6068d4e5d2248ced8204bebda50bd0717eb34e330e638",
+    "bytes": 39660,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-21792059.jpg-left-automatic.png": {
+    "asset": "assets/0a35efbf30310a62f1ff7c9974007e3cc53231b9a45e1989c1724ed6aa79a9d9.png",
+    "sha256": "0a35efbf30310a62f1ff7c9974007e3cc53231b9a45e1989c1724ed6aa79a9d9",
+    "bytes": 321226,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-21792059.jpg-left-automatic-source160.png": {
+    "asset": "assets/b95f74105782c9577c90e82b55b1c2efe12ac8a2e4abd05ecc311f2978048044.png",
+    "sha256": "b95f74105782c9577c90e82b55b1c2efe12ac8a2e4abd05ecc311f2978048044",
+    "bytes": 26760,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-21792059.jpg-right-automatic.png": {
+    "asset": "assets/1c26b188754e582656c70d06f2686ccfb7eb6598a5d322038ed7caee382153e6.png",
+    "sha256": "1c26b188754e582656c70d06f2686ccfb7eb6598a5d322038ed7caee382153e6",
+    "bytes": 504317,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-21792059.jpg-right-automatic-source160.png": {
+    "asset": "assets/2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36.png",
+    "sha256": "2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36",
+    "bytes": 33580,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-21792059.jpg-right-F2-217-L1.png": {
+    "asset": "assets/4fa9e631d2fb9610ed0b91e15c577925f6aedbb3b66d331b66f02253598ecd13.png",
+    "sha256": "4fa9e631d2fb9610ed0b91e15c577925f6aedbb3b66d331b66f02253598ecd13",
+    "bytes": 509856,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-21792059.jpg-right-F2-217-L1-source160.png": {
+    "asset": "assets/2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36.png",
+    "sha256": "2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36",
+    "bytes": 33580,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-21792059.jpg-right-F2-217-L2.png": {
+    "asset": "assets/f82d338c0737fa60661252d4e4e4520f96be91c877053150c1ef4ba8cd6f16d3.png",
+    "sha256": "f82d338c0737fa60661252d4e4e4520f96be91c877053150c1ef4ba8cd6f16d3",
+    "bytes": 509047,
+    "gzip": false
+  },
+  "tests/visual/out/break-04-plots/webkit-V3-pexels-21792059.jpg-right-F2-217-L2-source160.png": {
+    "asset": "assets/2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36.png",
+    "sha256": "2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36",
+    "bytes": 33580,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/manifest.json": {
+    "asset": "data/439032f4e827d6c3f6f2fc5027d616a981b76c205d6db70339e9f1875699fa3e.gz",
+    "sha256": "439032f4e827d6c3f6f2fc5027d616a981b76c205d6db70339e9f1875699fa3e",
+    "bytes": 56682,
+    "gzip": true
+  },
+  "tests/visual/lash-break-plot.py": {
+    "asset": "data/5e5bcba1823ba6fa627390afcec02b75c209c109ae1e926e6043e9574d676f4b.gz",
+    "sha256": "5e5bcba1823ba6fa627390afcec02b75c209c109ae1e926e6043e9574d676f4b",
+    "bytes": 7738,
+    "gzip": true
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-light.jpg-left-automatic.png": {
+    "asset": "assets/c7177677ad8792826965ee7d2d27a2474715e58478ea986b700960936f3d00db.png",
+    "sha256": "c7177677ad8792826965ee7d2d27a2474715e58478ea986b700960936f3d00db",
+    "bytes": 173930,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-light.jpg-left-automatic-source160.png": {
+    "asset": "assets/a7c9b4cd3f380dc7dbafa5085aee5c4da1d1bfbde9fac5d10126c404971e646a.png",
+    "sha256": "a7c9b4cd3f380dc7dbafa5085aee5c4da1d1bfbde9fac5d10126c404971e646a",
+    "bytes": 38297,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-light.jpg-right-automatic.png": {
+    "asset": "assets/823526ff3a2b979f78fec10937c03d00b8be53472a935ce081ad4a5c48ad1380.png",
+    "sha256": "823526ff3a2b979f78fec10937c03d00b8be53472a935ce081ad4a5c48ad1380",
+    "bytes": 173883,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-light.jpg-right-automatic-source160.png": {
+    "asset": "assets/3f72adc424230f964e856cc09ffb073d1b7ad884d1dac1675e869684fa97b556.png",
+    "sha256": "3f72adc424230f964e856cc09ffb073d1b7ad884d1dac1675e869684fa97b556",
+    "bytes": 36267,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-light.jpg-left-automatic.png": {
+    "asset": "assets/65847af626d79fc79d3222e713c0ee55f675b172fff097d99d28a9089f69bddf.png",
+    "sha256": "65847af626d79fc79d3222e713c0ee55f675b172fff097d99d28a9089f69bddf",
+    "bytes": 172860,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-light.jpg-left-automatic-source160.png": {
+    "asset": "assets/a7c9b4cd3f380dc7dbafa5085aee5c4da1d1bfbde9fac5d10126c404971e646a.png",
+    "sha256": "a7c9b4cd3f380dc7dbafa5085aee5c4da1d1bfbde9fac5d10126c404971e646a",
+    "bytes": 38297,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-light.jpg-right-automatic.png": {
+    "asset": "assets/ac80fb644d3c8af83d895059c643b87df0b57c9edd3b65ff49f566ffcd0eafcb.png",
+    "sha256": "ac80fb644d3c8af83d895059c643b87df0b57c9edd3b65ff49f566ffcd0eafcb",
+    "bytes": 172210,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-light.jpg-right-automatic-source160.png": {
+    "asset": "assets/3f72adc424230f964e856cc09ffb073d1b7ad884d1dac1675e869684fa97b556.png",
+    "sha256": "3f72adc424230f964e856cc09ffb073d1b7ad884d1dac1675e869684fa97b556",
+    "bytes": 36267,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-natural.jpg-left-automatic.png": {
+    "asset": "assets/25cbbd295a8307df5d75efb2523affa9448b8b492ada15c65f7a9fe1c0f52b68.png",
+    "sha256": "25cbbd295a8307df5d75efb2523affa9448b8b492ada15c65f7a9fe1c0f52b68",
+    "bytes": 198797,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-natural.jpg-left-automatic-source160.png": {
+    "asset": "assets/e5c5f8461449c69b9a3dfb09da850c6bb8e7b9caa12b975dbd094bd95ed5def2.png",
+    "sha256": "e5c5f8461449c69b9a3dfb09da850c6bb8e7b9caa12b975dbd094bd95ed5def2",
+    "bytes": 31777,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-natural.jpg-right-automatic.png": {
+    "asset": "assets/b05f6dcfd836879630636e39fe1e02d1c5103b1f02bc2153885a19249c9283ce.png",
+    "sha256": "b05f6dcfd836879630636e39fe1e02d1c5103b1f02bc2153885a19249c9283ce",
+    "bytes": 208192,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-natural.jpg-right-automatic-source160.png": {
+    "asset": "assets/878600ba3be58d872d27576600c5f44dc43b3bcc700fc0354e8daffe51074215.png",
+    "sha256": "878600ba3be58d872d27576600c5f44dc43b3bcc700fc0354e8daffe51074215",
+    "bytes": 33020,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-natural.jpg-left-automatic.png": {
+    "asset": "assets/069ad386e2b43ffceb222c27f4092b227bb4ad5406b3e4939616a5b9dbcc9b1b.png",
+    "sha256": "069ad386e2b43ffceb222c27f4092b227bb4ad5406b3e4939616a5b9dbcc9b1b",
+    "bytes": 214879,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-natural.jpg-left-automatic-source160.png": {
+    "asset": "assets/d46dd01b19fa313c9e88fd23e6974d2a3a55143c59ac0743a5a197452b54fa9c.png",
+    "sha256": "d46dd01b19fa313c9e88fd23e6974d2a3a55143c59ac0743a5a197452b54fa9c",
+    "bytes": 30049,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-natural.jpg-right-automatic.png": {
+    "asset": "assets/ab62c8d905ad26314eaba1cfde858ea56d202c59a41cb4d658a880a836d7a68f.png",
+    "sha256": "ab62c8d905ad26314eaba1cfde858ea56d202c59a41cb4d658a880a836d7a68f",
+    "bytes": 203943,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-natural.jpg-right-automatic-source160.png": {
+    "asset": "assets/878600ba3be58d872d27576600c5f44dc43b3bcc700fc0354e8daffe51074215.png",
+    "sha256": "878600ba3be58d872d27576600c5f44dc43b3bcc700fc0354e8daffe51074215",
+    "bytes": 33020,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-hair-occlusion.jpg-left-automatic.png": {
+    "asset": "assets/a0426004ed3925bfe7732697eb32d781190af75283ec434212e2a53930258468.png",
+    "sha256": "a0426004ed3925bfe7732697eb32d781190af75283ec434212e2a53930258468",
+    "bytes": 218289,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-hair-occlusion.jpg-left-automatic-source160.png": {
+    "asset": "assets/21f98736fbd6889b9011766e8eefa842c9b6e254da4998d5b624c7be0bc786d0.png",
+    "sha256": "21f98736fbd6889b9011766e8eefa842c9b6e254da4998d5b624c7be0bc786d0",
+    "bytes": 34538,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-hair-occlusion.jpg-right-automatic.png": {
+    "asset": "assets/5e2d1725125e5544d848fca67f53280f64efb952200f5025d905d8154777aff3.png",
+    "sha256": "5e2d1725125e5544d848fca67f53280f64efb952200f5025d905d8154777aff3",
+    "bytes": 230328,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-hair-occlusion.jpg-right-automatic-source160.png": {
+    "asset": "assets/803f6b399cb94b70219ae484ac154db5757e7d05044dd6a3987e9a927b264a06.png",
+    "sha256": "803f6b399cb94b70219ae484ac154db5757e7d05044dd6a3987e9a927b264a06",
+    "bytes": 33720,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-hair-occlusion.jpg-left-automatic.png": {
+    "asset": "assets/e10c2a531f4554a181926ddc527ae4a763917bc4db7397342855e258ed3ff9dd.png",
+    "sha256": "e10c2a531f4554a181926ddc527ae4a763917bc4db7397342855e258ed3ff9dd",
+    "bytes": 230626,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-hair-occlusion.jpg-left-automatic-source160.png": {
+    "asset": "assets/ce51887c4fd69c9eebba77da6c2547f4478b411aed4e39f1cb3d60f7c7227982.png",
+    "sha256": "ce51887c4fd69c9eebba77da6c2547f4478b411aed4e39f1cb3d60f7c7227982",
+    "bytes": 35362,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-hair-occlusion.jpg-right-automatic.png": {
+    "asset": "assets/04e452ff9ce1c9c6254c0fd54bbd21e12c3ce1876547b53277e378e82ae328a9.png",
+    "sha256": "04e452ff9ce1c9c6254c0fd54bbd21e12c3ce1876547b53277e378e82ae328a9",
+    "bytes": 241121,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-hair-occlusion.jpg-right-automatic-source160.png": {
+    "asset": "assets/c1f7c7edd117d395175082a48837c11898c4db7152cf8b1446f4378ce1f9cd9b.png",
+    "sha256": "c1f7c7edd117d395175082a48837c11898c4db7152cf8b1446f4378ce1f9cd9b",
+    "bytes": 33977,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-light-rotated25.jpg-left-automatic.png": {
+    "asset": "assets/9baaf1432020f0428e6665c2d0170eae6d92edf3c976c8253f8bae006df2e5ce.png",
+    "sha256": "9baaf1432020f0428e6665c2d0170eae6d92edf3c976c8253f8bae006df2e5ce",
+    "bytes": 209836,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-light-rotated25.jpg-left-automatic-source160.png": {
+    "asset": "assets/fce5aeb64d0e2e907224c396f6937b760b698ea5cd322d2762e4ee48bb6393af.png",
+    "sha256": "fce5aeb64d0e2e907224c396f6937b760b698ea5cd322d2762e4ee48bb6393af",
+    "bytes": 32268,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-light-rotated25.jpg-right-automatic.png": {
+    "asset": "assets/be428b36a3d39c0965e38d16cbb24834a760f6897c467a3abe1e4a7e0da7dc3d.png",
+    "sha256": "be428b36a3d39c0965e38d16cbb24834a760f6897c467a3abe1e4a7e0da7dc3d",
+    "bytes": 190585,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-light-rotated25.jpg-right-automatic-source160.png": {
+    "asset": "assets/02a8a92954039df571caa88c04568b4dba644db4725174d0ec47db33c19876dd.png",
+    "sha256": "02a8a92954039df571caa88c04568b4dba644db4725174d0ec47db33c19876dd",
+    "bytes": 31383,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-light-rotated25.jpg-left-automatic.png": {
+    "asset": "assets/6ca3e1a3d5835d1c754bb06340928842dc53323689afd50990e3862edd4c1d78.png",
+    "sha256": "6ca3e1a3d5835d1c754bb06340928842dc53323689afd50990e3862edd4c1d78",
+    "bytes": 208059,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-light-rotated25.jpg-left-automatic-source160.png": {
+    "asset": "assets/fce5aeb64d0e2e907224c396f6937b760b698ea5cd322d2762e4ee48bb6393af.png",
+    "sha256": "fce5aeb64d0e2e907224c396f6937b760b698ea5cd322d2762e4ee48bb6393af",
+    "bytes": 32268,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-light-rotated25.jpg-right-automatic.png": {
+    "asset": "assets/cf94ddf42329db9ef9dd2679743bb76e3da9a2a886a549b912a2229d4d6c7432.png",
+    "sha256": "cf94ddf42329db9ef9dd2679743bb76e3da9a2a886a549b912a2229d4d6c7432",
+    "bytes": 199925,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-light-rotated25.jpg-right-automatic-source160.png": {
+    "asset": "assets/a63a833ea34d1a410cda51ecbe50cabef7abc534bdcd0804dbd8c1ea8d006bfa.png",
+    "sha256": "a63a833ea34d1a410cda51ecbe50cabef7abc534bdcd0804dbd8c1ea8d006bfa",
+    "bytes": 31319,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-7123010.jpg-left-automatic.png": {
+    "asset": "assets/56f3c0f1c6fa99b53aa8297ad977ddd8872dfa1123f6ffef315617557f5cc0c4.png",
+    "sha256": "56f3c0f1c6fa99b53aa8297ad977ddd8872dfa1123f6ffef315617557f5cc0c4",
+    "bytes": 355998,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-7123010.jpg-left-automatic-source160.png": {
+    "asset": "assets/76db4f910b90d2ee7b72955f57c9b03858d59cdf2bae987a235d32a33a040a77.png",
+    "sha256": "76db4f910b90d2ee7b72955f57c9b03858d59cdf2bae987a235d32a33a040a77",
+    "bytes": 39998,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-7123010.jpg-right-automatic.png": {
+    "asset": "assets/7a8d5f47f269fa50924737ae1a2bd2b6781aff5e32029bcaa3e07340b05ad175.png",
+    "sha256": "7a8d5f47f269fa50924737ae1a2bd2b6781aff5e32029bcaa3e07340b05ad175",
+    "bytes": 274359,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-7123010.jpg-right-automatic-source160.png": {
+    "asset": "assets/29a65ad2713d454610f76ba5ee904a8936adac42c431d966929cf39afe2a8767.png",
+    "sha256": "29a65ad2713d454610f76ba5ee904a8936adac42c431d966929cf39afe2a8767",
+    "bytes": 38275,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-7123010.jpg-left-automatic.png": {
+    "asset": "assets/0c6077d28d6f691a34101a78f32ce546ea2f840d6b1ffe03ea237b6a980f5124.png",
+    "sha256": "0c6077d28d6f691a34101a78f32ce546ea2f840d6b1ffe03ea237b6a980f5124",
+    "bytes": 369374,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-7123010.jpg-left-automatic-source160.png": {
+    "asset": "assets/f8f41f5d6b973f3b32ca175b30117ac3e346bbded8043f1c6ec22d73bc9fec22.png",
+    "sha256": "f8f41f5d6b973f3b32ca175b30117ac3e346bbded8043f1c6ec22d73bc9fec22",
+    "bytes": 40226,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-7123010.jpg-right-automatic.png": {
+    "asset": "assets/f1bd4a757bcbf553e7728495f924a264de40029157696646079c4f656750d8bd.png",
+    "sha256": "f1bd4a757bcbf553e7728495f924a264de40029157696646079c4f656750d8bd",
+    "bytes": 287679,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-7123010.jpg-right-automatic-source160.png": {
+    "asset": "assets/67cc1d00f5ce42b61c55a7b03c10b203af0b538cda075c50b5d50a5c717877fc.png",
+    "sha256": "67cc1d00f5ce42b61c55a7b03c10b203af0b538cda075c50b5d50a5c717877fc",
+    "bytes": 38513,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-32526448.jpg-left-automatic.png": {
+    "asset": "assets/76a79e4f6e815be59aee38f2e803c08a02283e6574afff25b1c89973b761617b.png",
+    "sha256": "76a79e4f6e815be59aee38f2e803c08a02283e6574afff25b1c89973b761617b",
+    "bytes": 484742,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-32526448.jpg-left-automatic-source160.png": {
+    "asset": "assets/a8964d838065ac3f596b1cf413ea781b7c95c2ed71e4c960edf007100095be79.png",
+    "sha256": "a8964d838065ac3f596b1cf413ea781b7c95c2ed71e4c960edf007100095be79",
+    "bytes": 30734,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-32526448.jpg-right-automatic.png": {
+    "asset": "assets/d0b22376609a1d2727e9446d6c7e513c589ef89313ef1fb59ab054981f19940f.png",
+    "sha256": "d0b22376609a1d2727e9446d6c7e513c589ef89313ef1fb59ab054981f19940f",
+    "bytes": 434058,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-32526448.jpg-right-automatic-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-32526448.jpg-right-F325-L1.png": {
+    "asset": "assets/0c12dc683f667d131bf657c20a72636f9f88b4b39ef4bbd846d9a453b025d3a6.png",
+    "sha256": "0c12dc683f667d131bf657c20a72636f9f88b4b39ef4bbd846d9a453b025d3a6",
+    "bytes": 430885,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-32526448.jpg-right-F325-L1-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-32526448.jpg-right-F325-L2.png": {
+    "asset": "assets/88f71896234cfb302c1900cbfeb81f46e58b096aab0a460be6e4673dd4c41953.png",
+    "sha256": "88f71896234cfb302c1900cbfeb81f46e58b096aab0a460be6e4673dd4c41953",
+    "bytes": 430700,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-32526448.jpg-right-F325-L2-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-32526448.jpg-left-automatic.png": {
+    "asset": "assets/fe1467cd3e75c9f8e1b186e7220707b14d76cc80397ada5aeb7ab173149cb0b5.png",
+    "sha256": "fe1467cd3e75c9f8e1b186e7220707b14d76cc80397ada5aeb7ab173149cb0b5",
+    "bytes": 495529,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-32526448.jpg-left-automatic-source160.png": {
+    "asset": "assets/a95d2a523f687bbd604badc8c6150fb4cfd5f8c80b7b7aaecaec423bfb130567.png",
+    "sha256": "a95d2a523f687bbd604badc8c6150fb4cfd5f8c80b7b7aaecaec423bfb130567",
+    "bytes": 28308,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-32526448.jpg-right-automatic.png": {
+    "asset": "assets/31e14de43f37cb70e7d39c8abee5b2fd0159111e45ef6e605be7e61112c981a2.png",
+    "sha256": "31e14de43f37cb70e7d39c8abee5b2fd0159111e45ef6e605be7e61112c981a2",
+    "bytes": 441513,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-32526448.jpg-right-automatic-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-32526448.jpg-right-F325-L1.png": {
+    "asset": "assets/08ec1703ffc1f684cc267a9ad4240b15f4663322186479bbe208432a698b2483.png",
+    "sha256": "08ec1703ffc1f684cc267a9ad4240b15f4663322186479bbe208432a698b2483",
+    "bytes": 440017,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-32526448.jpg-right-F325-L1-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-32526448.jpg-right-F325-L2.png": {
+    "asset": "assets/d96c8bde1cd2bd29a9e040253ea558cfbeb10720ad26cbce9eff93c2500cb444.png",
+    "sha256": "d96c8bde1cd2bd29a9e040253ea558cfbeb10720ad26cbce9eff93c2500cb444",
+    "bytes": 440237,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-32526448.jpg-right-F325-L2-source160.png": {
+    "asset": "assets/34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625.png",
+    "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625",
+    "bytes": 32804,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-4611686.jpg-left-automatic.png": {
+    "asset": "assets/3d3d03f6d5d59ae306e942e7e4da3a2ccd1c73b1ac13b294ceeeba5d6589aca4.png",
+    "sha256": "3d3d03f6d5d59ae306e942e7e4da3a2ccd1c73b1ac13b294ceeeba5d6589aca4",
+    "bytes": 468392,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-4611686.jpg-left-automatic-source160.png": {
+    "asset": "assets/2f40f8025094cd59e2a653f8385a11e908cf8a3f56acaff13d5750a7ff60fe5e.png",
+    "sha256": "2f40f8025094cd59e2a653f8385a11e908cf8a3f56acaff13d5750a7ff60fe5e",
+    "bytes": 35698,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-4611686.jpg-right-automatic.png": {
+    "asset": "assets/4b0c7816b3098584460fe5ef7c0a0312054469f667159c244fd2f2b39620bc42.png",
+    "sha256": "4b0c7816b3098584460fe5ef7c0a0312054469f667159c244fd2f2b39620bc42",
+    "bytes": 396830,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-4611686.jpg-right-automatic-source160.png": {
+    "asset": "assets/083d0f567f06622b8e82514967a58846dfde8eb314127e561ce0bf619bfbec6e.png",
+    "sha256": "083d0f567f06622b8e82514967a58846dfde8eb314127e561ce0bf619bfbec6e",
+    "bytes": 43714,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-4611686.jpg-right-F461-L1.png": {
+    "asset": "assets/f648396038d7fa7601f70a007aa61705cd51ead75b55dab2640ef0a3790bec47.png",
+    "sha256": "f648396038d7fa7601f70a007aa61705cd51ead75b55dab2640ef0a3790bec47",
+    "bytes": 379241,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-4611686.jpg-right-F461-L1-source160.png": {
+    "asset": "assets/5e1afe2da52af411e5d11df8eb8a6e53f4a7650226baeafcf580a4705aa5cfa5.png",
+    "sha256": "5e1afe2da52af411e5d11df8eb8a6e53f4a7650226baeafcf580a4705aa5cfa5",
+    "bytes": 44494,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-4611686.jpg-left-automatic.png": {
+    "asset": "assets/ebb093cf841afba940beb0c9294eaa9cf6235d7577c3011d7d0e5d2a83a94b40.png",
+    "sha256": "ebb093cf841afba940beb0c9294eaa9cf6235d7577c3011d7d0e5d2a83a94b40",
+    "bytes": 477188,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-4611686.jpg-left-automatic-source160.png": {
+    "asset": "assets/2f40f8025094cd59e2a653f8385a11e908cf8a3f56acaff13d5750a7ff60fe5e.png",
+    "sha256": "2f40f8025094cd59e2a653f8385a11e908cf8a3f56acaff13d5750a7ff60fe5e",
+    "bytes": 35698,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-4611686.jpg-right-automatic.png": {
+    "asset": "assets/b73553c136c75865ca5cc464d2fb44b26f07c6beb197bcf4d9dc3d985aab7d96.png",
+    "sha256": "b73553c136c75865ca5cc464d2fb44b26f07c6beb197bcf4d9dc3d985aab7d96",
+    "bytes": 407189,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-4611686.jpg-right-automatic-source160.png": {
+    "asset": "assets/8abb99c128117b04ccbca860b60f80bc3c18bc8c16f0c8c6f045faa70bf4fc2b.png",
+    "sha256": "8abb99c128117b04ccbca860b60f80bc3c18bc8c16f0c8c6f045faa70bf4fc2b",
+    "bytes": 40921,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-4611686.jpg-right-F461-L1.png": {
+    "asset": "assets/3b21ec7063c208e48179698a5ee67864c09cae8308ba784edfd27424521a3ad8.png",
+    "sha256": "3b21ec7063c208e48179698a5ee67864c09cae8308ba784edfd27424521a3ad8",
+    "bytes": 378688,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-4611686.jpg-right-F461-L1-source160.png": {
+    "asset": "assets/5e1afe2da52af411e5d11df8eb8a6e53f4a7650226baeafcf580a4705aa5cfa5.png",
+    "sha256": "5e1afe2da52af411e5d11df8eb8a6e53f4a7650226baeafcf580a4705aa5cfa5",
+    "bytes": 44494,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-21792059.jpg-left-automatic.png": {
+    "asset": "assets/b4890b7b5b5223e05ef3f0fb4f17828982501b0d6c774e4562dcfea756ad87c4.png",
+    "sha256": "b4890b7b5b5223e05ef3f0fb4f17828982501b0d6c774e4562dcfea756ad87c4",
+    "bytes": 320804,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-21792059.jpg-left-automatic-source160.png": {
+    "asset": "assets/372d9da0aa119235adbb5e611be44a8f256d238046e3c8d069bf2d3c81407f92.png",
+    "sha256": "372d9da0aa119235adbb5e611be44a8f256d238046e3c8d069bf2d3c81407f92",
+    "bytes": 27471,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-21792059.jpg-right-automatic.png": {
+    "asset": "assets/499acde7bd632cbbb07bfccca82da0a16be1a673ff705cb94e8a1659aced26a0.png",
+    "sha256": "499acde7bd632cbbb07bfccca82da0a16be1a673ff705cb94e8a1659aced26a0",
+    "bytes": 497676,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-21792059.jpg-right-automatic-source160.png": {
+    "asset": "assets/f075e4a575b7bd20415df8356a3548261ddc668cd0ccc46695ebf96b6f5379d9.png",
+    "sha256": "f075e4a575b7bd20415df8356a3548261ddc668cd0ccc46695ebf96b6f5379d9",
+    "bytes": 37854,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-21792059.jpg-right-F2-217-L1.png": {
+    "asset": "assets/1939b3ef1ba5018500c76b472f128ab5c710fff51eecd375c26838fcebf5e6a9.png",
+    "sha256": "1939b3ef1ba5018500c76b472f128ab5c710fff51eecd375c26838fcebf5e6a9",
+    "bytes": 495935,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-21792059.jpg-right-F2-217-L1-source160.png": {
+    "asset": "assets/480f499bd6d4dbe0bb4626cb0a4417d337970dd45cea9eb1df7dbc3bd878d022.png",
+    "sha256": "480f499bd6d4dbe0bb4626cb0a4417d337970dd45cea9eb1df7dbc3bd878d022",
+    "bytes": 40188,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-21792059.jpg-right-F2-217-L2.png": {
+    "asset": "assets/919148e7a93fd8d42b173752715043ce670d3f61427b3531d40fe95d6e1879ec.png",
+    "sha256": "919148e7a93fd8d42b173752715043ce670d3f61427b3531d40fe95d6e1879ec",
+    "bytes": 481965,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V1-pexels-21792059.jpg-right-F2-217-L2-source160.png": {
+    "asset": "assets/f7d30a742bba023b1b8a4cb1dc6ca8d12b9733aece5c0dd9d349fba9f0aeb834.png",
+    "sha256": "f7d30a742bba023b1b8a4cb1dc6ca8d12b9733aece5c0dd9d349fba9f0aeb834",
+    "bytes": 34486,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-21792059.jpg-left-automatic.png": {
+    "asset": "assets/3774062752a28dc667d71832f60c6667ec36aedb1838c90c109d347ba08f315f.png",
+    "sha256": "3774062752a28dc667d71832f60c6667ec36aedb1838c90c109d347ba08f315f",
+    "bytes": 333918,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-21792059.jpg-left-automatic-source160.png": {
+    "asset": "assets/ade0fef4eab4943d36a2e176548c6910fc261d0def358a127faa819d07180c25.png",
+    "sha256": "ade0fef4eab4943d36a2e176548c6910fc261d0def358a127faa819d07180c25",
+    "bytes": 22939,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-21792059.jpg-right-automatic.png": {
+    "asset": "assets/082533f301a53cedbc0a8ae2c82742be51d76486fe4bc36eb5263a8e3276e727.png",
+    "sha256": "082533f301a53cedbc0a8ae2c82742be51d76486fe4bc36eb5263a8e3276e727",
+    "bytes": 505348,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-21792059.jpg-right-automatic-source160.png": {
+    "asset": "assets/ab31d64dbfb24150dd2a2a150e964099d52bf69915047fae26e1f462521b01a7.png",
+    "sha256": "ab31d64dbfb24150dd2a2a150e964099d52bf69915047fae26e1f462521b01a7",
+    "bytes": 46008,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-21792059.jpg-right-F2-217-L1.png": {
+    "asset": "assets/4d068c222917778f2e4a79b404f9f91bffb5bae1f1eca2fe9393b3551e6af1e0.png",
+    "sha256": "4d068c222917778f2e4a79b404f9f91bffb5bae1f1eca2fe9393b3551e6af1e0",
+    "bytes": 492214,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-21792059.jpg-right-F2-217-L1-source160.png": {
+    "asset": "assets/3c189522cdbd5a1e46cd77c83abd4b82c284e48ad6840b766b5293a2d19c8477.png",
+    "sha256": "3c189522cdbd5a1e46cd77c83abd4b82c284e48ad6840b766b5293a2d19c8477",
+    "bytes": 41328,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-21792059.jpg-right-F2-217-L2.png": {
+    "asset": "assets/f0ab35a2669b4a5078f38c8f3e1af09fe75942e9cab513ec909f431950586c4b.png",
+    "sha256": "f0ab35a2669b4a5078f38c8f3e1af09fe75942e9cab513ec909f431950586c4b",
+    "bytes": 481596,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/chromium-V3-pexels-21792059.jpg-right-F2-217-L2-source160.png": {
+    "asset": "assets/f7d30a742bba023b1b8a4cb1dc6ca8d12b9733aece5c0dd9d349fba9f0aeb834.png",
+    "sha256": "f7d30a742bba023b1b8a4cb1dc6ca8d12b9733aece5c0dd9d349fba9f0aeb834",
+    "bytes": 34486,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-light.jpg-left-automatic.png": {
+    "asset": "assets/5b25ac47020aa96c14df82347e9da81c1ab504bc2a19d993c9775ce0526945f0.png",
+    "sha256": "5b25ac47020aa96c14df82347e9da81c1ab504bc2a19d993c9775ce0526945f0",
+    "bytes": 168669,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-light.jpg-left-automatic-source160.png": {
+    "asset": "assets/bd38fae5712e4af69c57ed94dd4f1118c7e123402499b654caeec1d79e3a3709.png",
+    "sha256": "bd38fae5712e4af69c57ed94dd4f1118c7e123402499b654caeec1d79e3a3709",
+    "bytes": 38295,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-light.jpg-right-automatic.png": {
+    "asset": "assets/769fbf0a49d8972d163a54406fa517c0e0c960d9ec4b4b057e64585a0405af25.png",
+    "sha256": "769fbf0a49d8972d163a54406fa517c0e0c960d9ec4b4b057e64585a0405af25",
+    "bytes": 172635,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-light.jpg-right-automatic-source160.png": {
+    "asset": "assets/c014366130af08132250607711401144de6dde4d2222bc048b299551d64ab8c8.png",
+    "sha256": "c014366130af08132250607711401144de6dde4d2222bc048b299551d64ab8c8",
+    "bytes": 36208,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-light.jpg-left-automatic.png": {
+    "asset": "assets/d6298f33c283bba8e7dda50e5b09e1b750b4dfa7d8455855279f53a9460d4325.png",
+    "sha256": "d6298f33c283bba8e7dda50e5b09e1b750b4dfa7d8455855279f53a9460d4325",
+    "bytes": 167316,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-light.jpg-left-automatic-source160.png": {
+    "asset": "assets/bd38fae5712e4af69c57ed94dd4f1118c7e123402499b654caeec1d79e3a3709.png",
+    "sha256": "bd38fae5712e4af69c57ed94dd4f1118c7e123402499b654caeec1d79e3a3709",
+    "bytes": 38295,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-light.jpg-right-automatic.png": {
+    "asset": "assets/9515a2ff842257e8e75838bb4d3309436a7847f50d99d247a7be42090377cc45.png",
+    "sha256": "9515a2ff842257e8e75838bb4d3309436a7847f50d99d247a7be42090377cc45",
+    "bytes": 171170,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-light.jpg-right-automatic-source160.png": {
+    "asset": "assets/c014366130af08132250607711401144de6dde4d2222bc048b299551d64ab8c8.png",
+    "sha256": "c014366130af08132250607711401144de6dde4d2222bc048b299551d64ab8c8",
+    "bytes": 36208,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-natural.jpg-left-automatic.png": {
+    "asset": "assets/77770a2a37f07a83d76b16f2d2a26be08e5f20efd870203ca60531926f1b1015.png",
+    "sha256": "77770a2a37f07a83d76b16f2d2a26be08e5f20efd870203ca60531926f1b1015",
+    "bytes": 199442,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-natural.jpg-left-automatic-source160.png": {
+    "asset": "assets/e5c5f8461449c69b9a3dfb09da850c6bb8e7b9caa12b975dbd094bd95ed5def2.png",
+    "sha256": "e5c5f8461449c69b9a3dfb09da850c6bb8e7b9caa12b975dbd094bd95ed5def2",
+    "bytes": 31777,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-natural.jpg-right-automatic.png": {
+    "asset": "assets/24b8e2e35b4a8cb5bfe6e6ca12c45b35fcf56498b82773c753b36168c649536e.png",
+    "sha256": "24b8e2e35b4a8cb5bfe6e6ca12c45b35fcf56498b82773c753b36168c649536e",
+    "bytes": 200978,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-natural.jpg-right-automatic-source160.png": {
+    "asset": "assets/4f2f6b689e17a36d08985895e6c8fd5448582cd0f82aaeddf13f40efa14a8906.png",
+    "sha256": "4f2f6b689e17a36d08985895e6c8fd5448582cd0f82aaeddf13f40efa14a8906",
+    "bytes": 30936,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-natural.jpg-left-automatic.png": {
+    "asset": "assets/c56f7680dc3bc56f2cf0af35f354ac0a79615a4a2074eb7cc6bbd15f130e816c.png",
+    "sha256": "c56f7680dc3bc56f2cf0af35f354ac0a79615a4a2074eb7cc6bbd15f130e816c",
+    "bytes": 213004,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-natural.jpg-left-automatic-source160.png": {
+    "asset": "assets/d46dd01b19fa313c9e88fd23e6974d2a3a55143c59ac0743a5a197452b54fa9c.png",
+    "sha256": "d46dd01b19fa313c9e88fd23e6974d2a3a55143c59ac0743a5a197452b54fa9c",
+    "bytes": 30049,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-natural.jpg-right-automatic.png": {
+    "asset": "assets/dd8e75b4852fac9c4d47ebaaddbdb6c436235d1b15150ec64014206afb605463.png",
+    "sha256": "dd8e75b4852fac9c4d47ebaaddbdb6c436235d1b15150ec64014206afb605463",
+    "bytes": 193790,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-natural.jpg-right-automatic-source160.png": {
+    "asset": "assets/cb4e06f1e9bd92c2ef1de02c6e089f6a47be09f2e0c58aaac9a9769fe03f96f4.png",
+    "sha256": "cb4e06f1e9bd92c2ef1de02c6e089f6a47be09f2e0c58aaac9a9769fe03f96f4",
+    "bytes": 30954,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-hair-occlusion.jpg-left-automatic.png": {
+    "asset": "assets/d979931c76f8c2f26480db0f9304331362e79d8f4fc90607ee53f5bce9c10127.png",
+    "sha256": "d979931c76f8c2f26480db0f9304331362e79d8f4fc90607ee53f5bce9c10127",
+    "bytes": 227031,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-hair-occlusion.jpg-left-automatic-source160.png": {
+    "asset": "assets/fadc3181218f152abb0bd2323e34e40da6ce75f1a0ee9a1fbfadc65662b19338.png",
+    "sha256": "fadc3181218f152abb0bd2323e34e40da6ce75f1a0ee9a1fbfadc65662b19338",
+    "bytes": 35003,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-hair-occlusion.jpg-right-automatic.png": {
+    "asset": "assets/69ad9a1da71a5e39aa60d7992ad56dbd40c994de7e86a7bf7831154b19873aba.png",
+    "sha256": "69ad9a1da71a5e39aa60d7992ad56dbd40c994de7e86a7bf7831154b19873aba",
+    "bytes": 235072,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-hair-occlusion.jpg-right-automatic-source160.png": {
+    "asset": "assets/2327e5f2ebd5cd58509247950cb0fd085934daf0ab1e0875992f264dc8fa7f8d.png",
+    "sha256": "2327e5f2ebd5cd58509247950cb0fd085934daf0ab1e0875992f264dc8fa7f8d",
+    "bytes": 33804,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-hair-occlusion.jpg-left-automatic.png": {
+    "asset": "assets/751dc660e995c5f67d2249c4f819b3af0928b5229b99dba4d9137ba569366805.png",
+    "sha256": "751dc660e995c5f67d2249c4f819b3af0928b5229b99dba4d9137ba569366805",
+    "bytes": 237669,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-hair-occlusion.jpg-left-automatic-source160.png": {
+    "asset": "assets/b6a3e5ebf0cac300f92e75d4bd9bb32efbc775854f1f8490fb502fd17f03a641.png",
+    "sha256": "b6a3e5ebf0cac300f92e75d4bd9bb32efbc775854f1f8490fb502fd17f03a641",
+    "bytes": 35058,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-hair-occlusion.jpg-right-automatic.png": {
+    "asset": "assets/95e0b4bf725c0d1c87fad31966b54fd84e4c93ef2fe927590677f21f8a4f2277.png",
+    "sha256": "95e0b4bf725c0d1c87fad31966b54fd84e4c93ef2fe927590677f21f8a4f2277",
+    "bytes": 239349,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-hair-occlusion.jpg-right-automatic-source160.png": {
+    "asset": "assets/2eae7244e319ea57404b6f15a101677c342586cfe7b2a2fb02c4a25fd1479cf7.png",
+    "sha256": "2eae7244e319ea57404b6f15a101677c342586cfe7b2a2fb02c4a25fd1479cf7",
+    "bytes": 33678,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-light-rotated25.jpg-left-automatic.png": {
+    "asset": "assets/13f2db4b159e8f2305f63a8c4181824a19633bb30f4e1669ea533271eff5c104.png",
+    "sha256": "13f2db4b159e8f2305f63a8c4181824a19633bb30f4e1669ea533271eff5c104",
+    "bytes": 216134,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-light-rotated25.jpg-left-automatic-source160.png": {
+    "asset": "assets/577e0895b79db86963d72195f1761e8458e6b9e836b25f7a1689d72b05be2edf.png",
+    "sha256": "577e0895b79db86963d72195f1761e8458e6b9e836b25f7a1689d72b05be2edf",
+    "bytes": 33650,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-light-rotated25.jpg-right-automatic.png": {
+    "asset": "assets/35c65a9fafcc26f9e2d78e9ff14a794ff603f66866beac13c621472dd5f627ac.png",
+    "sha256": "35c65a9fafcc26f9e2d78e9ff14a794ff603f66866beac13c621472dd5f627ac",
+    "bytes": 186931,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-light-rotated25.jpg-right-automatic-source160.png": {
+    "asset": "assets/84ad57d0cd1b53650845f0af320db8177235711ed8ea3397a598a72f0e36fa02.png",
+    "sha256": "84ad57d0cd1b53650845f0af320db8177235711ed8ea3397a598a72f0e36fa02",
+    "bytes": 31662,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-light-rotated25.jpg-left-automatic.png": {
+    "asset": "assets/1b0a245f2f708155e0dd0399a47c3389d49c6f87858fed31bcaba3e3e76511b6.png",
+    "sha256": "1b0a245f2f708155e0dd0399a47c3389d49c6f87858fed31bcaba3e3e76511b6",
+    "bytes": 222173,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-light-rotated25.jpg-left-automatic-source160.png": {
+    "asset": "assets/577e0895b79db86963d72195f1761e8458e6b9e836b25f7a1689d72b05be2edf.png",
+    "sha256": "577e0895b79db86963d72195f1761e8458e6b9e836b25f7a1689d72b05be2edf",
+    "bytes": 33650,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-light-rotated25.jpg-right-automatic.png": {
+    "asset": "assets/ea6a5e551f034279127bdca6e6c4bd2328e89ee1a7f25eea0b0eb55bcfd8d97a.png",
+    "sha256": "ea6a5e551f034279127bdca6e6c4bd2328e89ee1a7f25eea0b0eb55bcfd8d97a",
+    "bytes": 200359,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-light-rotated25.jpg-right-automatic-source160.png": {
+    "asset": "assets/84ad57d0cd1b53650845f0af320db8177235711ed8ea3397a598a72f0e36fa02.png",
+    "sha256": "84ad57d0cd1b53650845f0af320db8177235711ed8ea3397a598a72f0e36fa02",
+    "bytes": 31662,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-7123010.jpg-left-automatic.png": {
+    "asset": "assets/0fd5937293c172799259bfd7df3bface5959f1add33343b199d7e3a0dd1c4991.png",
+    "sha256": "0fd5937293c172799259bfd7df3bface5959f1add33343b199d7e3a0dd1c4991",
+    "bytes": 362400,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-7123010.jpg-left-automatic-source160.png": {
+    "asset": "assets/9659865cee126b83089d3e41cd1da86ef1a8521d43f295ff40e44aec4d94efee.png",
+    "sha256": "9659865cee126b83089d3e41cd1da86ef1a8521d43f295ff40e44aec4d94efee",
+    "bytes": 39667,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-7123010.jpg-right-automatic.png": {
+    "asset": "assets/698b505a3ad5596b6164866dffc29aac2f95372e542cdb440058a3c6df13804d.png",
+    "sha256": "698b505a3ad5596b6164866dffc29aac2f95372e542cdb440058a3c6df13804d",
+    "bytes": 282313,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-7123010.jpg-right-automatic-source160.png": {
+    "asset": "assets/d35222e488233de7c3b7d0c66f0e4800fa55c908324ae622f46241235e9681ce.png",
+    "sha256": "d35222e488233de7c3b7d0c66f0e4800fa55c908324ae622f46241235e9681ce",
+    "bytes": 39186,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-7123010.jpg-left-automatic.png": {
+    "asset": "assets/b35d7539cfcc012e20b28588f11c246b22064c4639e4fe8bc8397c6ee0ea2652.png",
+    "sha256": "b35d7539cfcc012e20b28588f11c246b22064c4639e4fe8bc8397c6ee0ea2652",
+    "bytes": 370812,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-7123010.jpg-left-automatic-source160.png": {
+    "asset": "assets/6659189905e86a7d6746d2330cd4e1a5c38f1fa4fa436612005531f22f68f930.png",
+    "sha256": "6659189905e86a7d6746d2330cd4e1a5c38f1fa4fa436612005531f22f68f930",
+    "bytes": 39174,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-7123010.jpg-right-automatic.png": {
+    "asset": "assets/d445a2ce32f954f7ed50b1ac4640830ccda65878b4cf20e11277021179a02b82.png",
+    "sha256": "d445a2ce32f954f7ed50b1ac4640830ccda65878b4cf20e11277021179a02b82",
+    "bytes": 288948,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-7123010.jpg-right-automatic-source160.png": {
+    "asset": "assets/34beaed336a7c88cffadab2f79aa4d8b1f5d6a944d227f9924a07b412a4b031c.png",
+    "sha256": "34beaed336a7c88cffadab2f79aa4d8b1f5d6a944d227f9924a07b412a4b031c",
+    "bytes": 38950,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-32526448.jpg-left-automatic.png": {
+    "asset": "assets/2f0502e5ab450f6ac1c06b7e0c56f4177037300c034b6fb485ae717cb013bda0.png",
+    "sha256": "2f0502e5ab450f6ac1c06b7e0c56f4177037300c034b6fb485ae717cb013bda0",
+    "bytes": 472599,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-32526448.jpg-left-automatic-source160.png": {
+    "asset": "assets/aa049b28a3f0d8880b88228c7e77379d72038fb2526c13438b644b308594307d.png",
+    "sha256": "aa049b28a3f0d8880b88228c7e77379d72038fb2526c13438b644b308594307d",
+    "bytes": 29459,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-32526448.jpg-right-automatic.png": {
+    "asset": "assets/a0562131574a84d121fa31fca0a09ab387a9aebda85fcb9423e1eb477ac5d7d2.png",
+    "sha256": "a0562131574a84d121fa31fca0a09ab387a9aebda85fcb9423e1eb477ac5d7d2",
+    "bytes": 425569,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-32526448.jpg-right-automatic-source160.png": {
+    "asset": "assets/da86e0d045d97969ce5e96604e85153d444ddb0801bd62a0d6c98dda9ee28f60.png",
+    "sha256": "da86e0d045d97969ce5e96604e85153d444ddb0801bd62a0d6c98dda9ee28f60",
+    "bytes": 32947,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-32526448.jpg-right-F325-L1.png": {
+    "asset": "assets/d9476a450951d2a8613f09da9b865344783b4f9d330cf6ce4f9c7349cb4b33a8.png",
+    "sha256": "d9476a450951d2a8613f09da9b865344783b4f9d330cf6ce4f9c7349cb4b33a8",
+    "bytes": 423324,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-32526448.jpg-right-F325-L1-source160.png": {
+    "asset": "assets/8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487.png",
+    "sha256": "8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487",
+    "bytes": 33092,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-32526448.jpg-right-F325-L2.png": {
+    "asset": "assets/735ceae9cd8b0f0670121069bbb9d2ca5c0146827cbc6edd3745c3cf68126dab.png",
+    "sha256": "735ceae9cd8b0f0670121069bbb9d2ca5c0146827cbc6edd3745c3cf68126dab",
+    "bytes": 423210,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-32526448.jpg-right-F325-L2-source160.png": {
+    "asset": "assets/8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487.png",
+    "sha256": "8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487",
+    "bytes": 33092,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-32526448.jpg-left-automatic.png": {
+    "asset": "assets/2a6edf023565708d0e859371d2749ddfcf333fafb79c44f309b4edc5db33ab6d.png",
+    "sha256": "2a6edf023565708d0e859371d2749ddfcf333fafb79c44f309b4edc5db33ab6d",
+    "bytes": 484400,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-32526448.jpg-left-automatic-source160.png": {
+    "asset": "assets/089a5f0e6840981d700e355350a0d2ec4cec3785576b02205d5ca8d28ef1d118.png",
+    "sha256": "089a5f0e6840981d700e355350a0d2ec4cec3785576b02205d5ca8d28ef1d118",
+    "bytes": 28660,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-32526448.jpg-right-automatic.png": {
+    "asset": "assets/8beb7a8ca3a993eb415f14a183389becf5f1946dde8db5e9a65547254d1ff414.png",
+    "sha256": "8beb7a8ca3a993eb415f14a183389becf5f1946dde8db5e9a65547254d1ff414",
+    "bytes": 432578,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-32526448.jpg-right-automatic-source160.png": {
+    "asset": "assets/da86e0d045d97969ce5e96604e85153d444ddb0801bd62a0d6c98dda9ee28f60.png",
+    "sha256": "da86e0d045d97969ce5e96604e85153d444ddb0801bd62a0d6c98dda9ee28f60",
+    "bytes": 32947,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-32526448.jpg-right-F325-L1.png": {
+    "asset": "assets/5b0d92a5a561f618f7014e4e816033bc037b4c32765992b4052c2fc3a7e2728a.png",
+    "sha256": "5b0d92a5a561f618f7014e4e816033bc037b4c32765992b4052c2fc3a7e2728a",
+    "bytes": 423898,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-32526448.jpg-right-F325-L1-source160.png": {
+    "asset": "assets/8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487.png",
+    "sha256": "8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487",
+    "bytes": 33092,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-32526448.jpg-right-F325-L2.png": {
+    "asset": "assets/c48cba513efd6b87519da9bb25a9f944eefbb40f1f9fce52d6a6cc4a210ce40a.png",
+    "sha256": "c48cba513efd6b87519da9bb25a9f944eefbb40f1f9fce52d6a6cc4a210ce40a",
+    "bytes": 423706,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-32526448.jpg-right-F325-L2-source160.png": {
+    "asset": "assets/8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487.png",
+    "sha256": "8e7ddc18ff1a4add422005fe4f6a6e3493058a0b1cd8f2a9091a63f7ed927487",
+    "bytes": 33092,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-4611686.jpg-left-automatic.png": {
+    "asset": "assets/0ffec063160e6fed8ef363b25758f6cc0fb5dda921a401a4b89231699401223e.png",
+    "sha256": "0ffec063160e6fed8ef363b25758f6cc0fb5dda921a401a4b89231699401223e",
+    "bytes": 466695,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-4611686.jpg-left-automatic-source160.png": {
+    "asset": "assets/4460174cf932e40c4a3e08fa159a76018eab4cc088a24fa28c49c1c60d76ca94.png",
+    "sha256": "4460174cf932e40c4a3e08fa159a76018eab4cc088a24fa28c49c1c60d76ca94",
+    "bytes": 38080,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-4611686.jpg-right-automatic.png": {
+    "asset": "assets/4444dab7e2b94d58bd48bed3133f29f4d281d2f037c6790bd6c17d2c89a083e1.png",
+    "sha256": "4444dab7e2b94d58bd48bed3133f29f4d281d2f037c6790bd6c17d2c89a083e1",
+    "bytes": 364373,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-4611686.jpg-right-automatic-source160.png": {
+    "asset": "assets/724848b633b07aa149bbe5db38fdf89ff971c4a2bf5aebbe6bbc3a17f35f39af.png",
+    "sha256": "724848b633b07aa149bbe5db38fdf89ff971c4a2bf5aebbe6bbc3a17f35f39af",
+    "bytes": 37613,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-4611686.jpg-right-F461-L1.png": {
+    "asset": "assets/8051586badfe0ae7cd042aea7ed7538f26f5816b8e395655a679c82d657984aa.png",
+    "sha256": "8051586badfe0ae7cd042aea7ed7538f26f5816b8e395655a679c82d657984aa",
+    "bytes": 349017,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-4611686.jpg-right-F461-L1-source160.png": {
+    "asset": "assets/aaecdd0a07f13bc4c240318add2287784f288d88575d2e78c2c66c7f4d3d4c33.png",
+    "sha256": "aaecdd0a07f13bc4c240318add2287784f288d88575d2e78c2c66c7f4d3d4c33",
+    "bytes": 44854,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-4611686.jpg-left-automatic.png": {
+    "asset": "assets/4dcad2e5025da7bb2ca40c7573d6c30fa1adaf27083b298d49b4408a30ff0183.png",
+    "sha256": "4dcad2e5025da7bb2ca40c7573d6c30fa1adaf27083b298d49b4408a30ff0183",
+    "bytes": 474569,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-4611686.jpg-left-automatic-source160.png": {
+    "asset": "assets/0ef4d75e7f466b70c66a441abd35edada67c1aa948641d2acc9d022e3d46174d.png",
+    "sha256": "0ef4d75e7f466b70c66a441abd35edada67c1aa948641d2acc9d022e3d46174d",
+    "bytes": 34932,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-4611686.jpg-right-automatic.png": {
+    "asset": "assets/744eb2813cd6ca001e209b4f4a676d0878eeb6238268796b7bd9df5db1289694.png",
+    "sha256": "744eb2813cd6ca001e209b4f4a676d0878eeb6238268796b7bd9df5db1289694",
+    "bytes": 375089,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-4611686.jpg-right-automatic-source160.png": {
+    "asset": "assets/0d0914e8d93b95a59cd960d9c024811acf8d46c3919e51f33dd666dfa2a814ce.png",
+    "sha256": "0d0914e8d93b95a59cd960d9c024811acf8d46c3919e51f33dd666dfa2a814ce",
+    "bytes": 45801,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-4611686.jpg-right-F461-L1.png": {
+    "asset": "assets/00dfdf36a16478770f2d5ae2c94f140d12d79b885041ea72898a85976d043eaf.png",
+    "sha256": "00dfdf36a16478770f2d5ae2c94f140d12d79b885041ea72898a85976d043eaf",
+    "bytes": 349047,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-4611686.jpg-right-F461-L1-source160.png": {
+    "asset": "assets/aaecdd0a07f13bc4c240318add2287784f288d88575d2e78c2c66c7f4d3d4c33.png",
+    "sha256": "aaecdd0a07f13bc4c240318add2287784f288d88575d2e78c2c66c7f4d3d4c33",
+    "bytes": 44854,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-21792059.jpg-left-automatic.png": {
+    "asset": "assets/7319515603f0ed9a0aeb85243f96f3a7fe9dece1b6dedb134062012b5184510d.png",
+    "sha256": "7319515603f0ed9a0aeb85243f96f3a7fe9dece1b6dedb134062012b5184510d",
+    "bytes": 322498,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-21792059.jpg-left-automatic-source160.png": {
+    "asset": "assets/b95f74105782c9577c90e82b55b1c2efe12ac8a2e4abd05ecc311f2978048044.png",
+    "sha256": "b95f74105782c9577c90e82b55b1c2efe12ac8a2e4abd05ecc311f2978048044",
+    "bytes": 26760,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-21792059.jpg-right-automatic.png": {
+    "asset": "assets/9fd48ba0a76f083381f7adabbf225342abd93dff6cc5e8d9a9d151f011169767.png",
+    "sha256": "9fd48ba0a76f083381f7adabbf225342abd93dff6cc5e8d9a9d151f011169767",
+    "bytes": 506576,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-21792059.jpg-right-automatic-source160.png": {
+    "asset": "assets/2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36.png",
+    "sha256": "2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36",
+    "bytes": 33580,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-21792059.jpg-right-F2-217-L1.png": {
+    "asset": "assets/52839370fc1dad79b43e932f7bdd88d3df26ab2d6d9b5fc0931c3fe513fb8205.png",
+    "sha256": "52839370fc1dad79b43e932f7bdd88d3df26ab2d6d9b5fc0931c3fe513fb8205",
+    "bytes": 504554,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-21792059.jpg-right-F2-217-L1-source160.png": {
+    "asset": "assets/0e07b864a99751738ab6068d4e5d2248ced8204bebda50bd0717eb34e330e638.png",
+    "sha256": "0e07b864a99751738ab6068d4e5d2248ced8204bebda50bd0717eb34e330e638",
+    "bytes": 39660,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-21792059.jpg-right-F2-217-L2.png": {
+    "asset": "assets/2c28a9714eca1d7a0d5b1c057ec6ca375f398b92361fce4f337cb2ff233a00f9.png",
+    "sha256": "2c28a9714eca1d7a0d5b1c057ec6ca375f398b92361fce4f337cb2ff233a00f9",
+    "bytes": 504347,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V1-pexels-21792059.jpg-right-F2-217-L2-source160.png": {
+    "asset": "assets/0e07b864a99751738ab6068d4e5d2248ced8204bebda50bd0717eb34e330e638.png",
+    "sha256": "0e07b864a99751738ab6068d4e5d2248ced8204bebda50bd0717eb34e330e638",
+    "bytes": 39660,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-21792059.jpg-left-automatic.png": {
+    "asset": "assets/3054a9c0a8973e453fe666ad6278a13adb6d7da662596b1fd1a42357970ad61d.png",
+    "sha256": "3054a9c0a8973e453fe666ad6278a13adb6d7da662596b1fd1a42357970ad61d",
+    "bytes": 322311,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-21792059.jpg-left-automatic-source160.png": {
+    "asset": "assets/b95f74105782c9577c90e82b55b1c2efe12ac8a2e4abd05ecc311f2978048044.png",
+    "sha256": "b95f74105782c9577c90e82b55b1c2efe12ac8a2e4abd05ecc311f2978048044",
+    "bytes": 26760,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-21792059.jpg-right-automatic.png": {
+    "asset": "assets/c76f0aade02a53db02a636561dfed9d1d96e3a5e4b52e1ae97d75f9e841140c0.png",
+    "sha256": "c76f0aade02a53db02a636561dfed9d1d96e3a5e4b52e1ae97d75f9e841140c0",
+    "bytes": 512817,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-21792059.jpg-right-automatic-source160.png": {
+    "asset": "assets/2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36.png",
+    "sha256": "2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36",
+    "bytes": 33580,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-21792059.jpg-right-F2-217-L1.png": {
+    "asset": "assets/8432b680283b5c27b69b28d79f80611e8bd1f88002f67da71a555de6638ad68a.png",
+    "sha256": "8432b680283b5c27b69b28d79f80611e8bd1f88002f67da71a555de6638ad68a",
+    "bytes": 516033,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-21792059.jpg-right-F2-217-L1-source160.png": {
+    "asset": "assets/2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36.png",
+    "sha256": "2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36",
+    "bytes": 33580,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-21792059.jpg-right-F2-217-L2.png": {
+    "asset": "assets/a71e3c9a83213d48f7823b7d806eeef6a710a109696cb8c77728faf806e2712d.png",
+    "sha256": "a71e3c9a83213d48f7823b7d806eeef6a710a109696cb8c77728faf806e2712d",
+    "bytes": 514930,
+    "gzip": false
+  },
+  "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-21792059.jpg-right-F2-217-L2-source160.png": {
+    "asset": "assets/2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36.png",
+    "sha256": "2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36",
+    "bytes": 33580,
+    "gzip": false
+  },
+  "tests/visual/lash-break-code-critic.json": {
+    "asset": "data/753874ebf9c8a7e8c608eb936804abec9b2eb84a1f348831f21038a3101da427.gz",
+    "sha256": "753874ebf9c8a7e8c608eb936804abec9b2eb84a1f348831f21038a3101da427",
+    "bytes": 6827,
+    "gzip": true
+  },
+  "tests/visual/lash-break-graph.mjs": {
+    "asset": "data/93c564cf8c33cb7408809c82d9c1a8fcf9a8bc34c595d2f40083edd57e859f87.gz",
+    "sha256": "93c564cf8c33cb7408809c82d9c1a8fcf9a8bc34c595d2f40083edd57e859f87",
+    "bytes": 3807,
+    "gzip": true
+  },
+  "tests/visual/lash-break-instrument.cjs": {
+    "asset": "data/fc32584c58dae82c5e48e3ac497efe5eee2b170e513d1143550ae8d66e70bf48.gz",
+    "sha256": "fc32584c58dae82c5e48e3ac497efe5eee2b170e513d1143550ae8d66e70bf48",
+    "bytes": 1732,
+    "gzip": true
+  },
+  "tests/visual/lash-break-prepare.cjs": {
+    "asset": "data/977467973fbe7786895bb5f9a2cb7452ea640541db052311a3403b51aff00746.gz",
+    "sha256": "977467973fbe7786895bb5f9a2cb7452ea640541db052311a3403b51aff00746",
+    "bytes": 2458,
+    "gzip": true
+  },
+  "tests/visual/lash-break-protocol-critic.json": {
+    "asset": "data/57f88b476d7952d7ade890703128319db294a6514dda24ede7eb34b37d36076c.gz",
+    "sha256": "57f88b476d7952d7ade890703128319db294a6514dda24ede7eb34b37d36076c",
+    "bytes": 5114,
+    "gzip": true
+  },
+  "tests/visual/lash-break-protocol.json": {
+    "asset": "data/19d3a58b29d4c7a94ff7d0783815b5c6b37a5a454f45b904ac2766aebf131280.gz",
+    "sha256": "19d3a58b29d4c7a94ff7d0783815b5c6b37a5a454f45b904ac2766aebf131280",
+    "bytes": 2567,
+    "gzip": true
+  },
+  "tests/visual/lash-break-run.cjs": {
+    "asset": "data/08414184826f398a814a15eef8e919e59239687e7524e84b82b3f14c31bc6e80.gz",
+    "sha256": "08414184826f398a814a15eef8e919e59239687e7524e84b82b3f14c31bc6e80",
+    "bytes": 11827,
+    "gzip": true
+  },
+  "tests/visual/lash-break-visual-critic.json": {
+    "asset": "data/e673955b88c54b9973335f60b9fc7162c384b57f3810f77cd6a135f5e16e3970.gz",
+    "sha256": "e673955b88c54b9973335f60b9fc7162c384b57f3810f77cd6a135f5e16e3970",
+    "bytes": 10018,
+    "gzip": true
+  },
+  "tests/visual/lash-break.test.mjs": {
+    "asset": "data/cea1b391a6f88ed3bdbc9d18b5b2dc5414be1e911c45037c45ec464ed01078f2.gz",
+    "sha256": "cea1b391a6f88ed3bdbc9d18b5b2dc5414be1e911c45037c45ec464ed01078f2",
+    "bytes": 3772,
+    "gzip": true
+  },
+  "tests/visual/out/break-01-census.log": {
+    "asset": "data/1e5584fd58ff23ff2f54419fc82f745cda84318e249b7ab1292622b19cc0f51c.gz",
+    "sha256": "1e5584fd58ff23ff2f54419fc82f745cda84318e249b7ab1292622b19cc0f51c",
+    "bytes": 1794,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-census.log": {
+    "asset": "data/1e5584fd58ff23ff2f54419fc82f745cda84318e249b7ab1292622b19cc0f51c.gz",
+    "sha256": "1e5584fd58ff23ff2f54419fc82f745cda84318e249b7ab1292622b19cc0f51c",
+    "bytes": 1794,
+    "gzip": true
+  },
+  "tests/visual/out/break-02-unit.log": {
+    "asset": "data/7b39849b6b4108f6f34c5d4f44bd338a61044a51722ea9d7d25c3a4cd5c87d65.gz",
+    "sha256": "7b39849b6b4108f6f34c5d4f44bd338a61044a51722ea9d7d25c3a4cd5c87d65",
+    "bytes": 1546,
+    "gzip": true
+  },
+  "tests/visual/out/break-03-census.log": {
+    "asset": "data/1e5584fd58ff23ff2f54419fc82f745cda84318e249b7ab1292622b19cc0f51c.gz",
+    "sha256": "1e5584fd58ff23ff2f54419fc82f745cda84318e249b7ab1292622b19cc0f51c",
+    "bytes": 1794,
+    "gzip": true
+  },
+  "tests/visual/out/break-04-plots.log": {
+    "asset": "data/ba01d82dd30db5e05d8e7e1ce4b89c0e2b24ee20b1729a1410fe38c46f9e95cd.gz",
+    "sha256": "ba01d82dd30db5e05d8e7e1ce4b89c0e2b24ee20b1729a1410fe38c46f9e95cd",
+    "bytes": 88,
+    "gzip": true
+  },
+  "tests/visual/out/break-05-plots.log": {
+    "asset": "data/ba01d82dd30db5e05d8e7e1ce4b89c0e2b24ee20b1729a1410fe38c46f9e95cd.gz",
+    "sha256": "ba01d82dd30db5e05d8e7e1ce4b89c0e2b24ee20b1729a1410fe38c46f9e95cd",
+    "bytes": 88,
+    "gzip": true
+  },
+  "tests/visual/out/break-verify-build.log": {
+    "asset": "data/992bb43b5b32f7f3d8850b81f844db63339043ae2d2b3aab6a0b288da868ea0c.gz",
+    "sha256": "992bb43b5b32f7f3d8850b81f844db63339043ae2d2b3aab6a0b288da868ea0c",
+    "bytes": 1568,
+    "gzip": true
+  },
+  "tests/visual/out/break-verify-check-site.log": {
+    "asset": "data/27d03545dd95ebfbd6180414d90c9554ac0a0a57e33704dcc4412b885c475961.gz",
+    "sha256": "27d03545dd95ebfbd6180414d90c9554ac0a0a57e33704dcc4412b885c475961",
+    "bytes": 628,
+    "gzip": true
+  },
+  "tests/visual/out/break-verify-e2e.log": {
+    "asset": "data/75d106e6459a8037bac497d19f406e1e2e12031688cbc5bab80057953e7c2a53.gz",
+    "sha256": "75d106e6459a8037bac497d19f406e1e2e12031688cbc5bab80057953e7c2a53",
+    "bytes": 97850,
+    "gzip": true
+  },
+  "tests/visual/out/break-verify-package-site.log": {
+    "asset": "data/3fb22edde5bd86e3ae9b0566af91d6fdeb994e7f1fc8c946da3203ad5a549486.gz",
+    "sha256": "3fb22edde5bd86e3ae9b0566af91d6fdeb994e7f1fc8c946da3203ad5a549486",
+    "bytes": 202,
+    "gzip": true
+  },
+  "tests/visual/out/break-verify-performance.log": {
+    "asset": "data/3266aadff424431eb0758e2c6baf9526fc9eb763ec4d3decc8338e5b955123c4.gz",
+    "sha256": "3266aadff424431eb0758e2c6baf9526fc9eb763ec4d3decc8338e5b955123c4",
+    "bytes": 7202,
+    "gzip": true
+  },
+  "tests/visual/out/break-verify-unit.log": {
+    "asset": "data/8e396d9d98ca83548021cfe4691e701b5c03ee0f48f207ed4eb11b3a0511901e.gz",
+    "sha256": "8e396d9d98ca83548021cfe4691e701b5c03ee0f48f207ed4eb11b3a0511901e",
+    "bytes": 37558,
+    "gzip": true
+  }
+}

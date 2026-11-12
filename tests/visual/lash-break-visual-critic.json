@@ -1,0 +1,160 @@
+{
+  "schema": "auragram-independent-break-visual-critic-v1",
+  "verdict": "HOLD; no detector/Length adoption or orientation-floor reduction justified",
+  "scope": "Actual scientific04 figures and native160 source crops reviewed against02/03 numerical census.22PNG directly viewed, not all84 manually judged. All84figure+84crop hashes checked. No browser/model inference, source/protocol/label changes or beauty effect rendered.",
+  "references": [
+    {
+      "path": "tests/visual/out/break-03-display-data/census.json",
+      "sha256": "ff4abd58cfad025770e13b87ff6078503dfdf216ba8c8d8821e40daf60df24fa"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/manifest.json",
+      "sha256": "f656a8f3bc3ad3564ed29490852389c248c1d96973da7ebb35951dcd3d405bc2"
+    },
+    {
+      "path": "tests/visual/lash-break-protocol.json",
+      "sha256": "19d3a58b29d4c7a94ff7d0783815b5c6b37a5a454f45b904ac2766aebf131280"
+    },
+    {
+      "path": "tests/visual/lash-break-code-critic.json",
+      "sha256": "753874ebf9c8a7e8c608eb936804abec9b2eb84a1f348831f21038a3101da427"
+    }
+  ],
+  "inspectedImages": [
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V1-pexels-21792059.jpg-right-F2-217-L1.png",
+      "sha256": "79ec5abf53c25135a8bdec332d1cf6e9de4329727393184c78004805096fa024"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V1-pexels-21792059.jpg-right-F2-217-L2.png",
+      "sha256": "a22bdb722ba115dc7cd5ee1a7ae31e189e6181646807a96c8b8f2bfd02102bcf"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V3-pexels-21792059.jpg-right-F2-217-L1.png",
+      "sha256": "40eae3ce7ea33eec0f98fab1f7a7d37e390b09d1538007ce56acd36f35ad9238"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V3-pexels-21792059.jpg-right-F2-217-L2.png",
+      "sha256": "794be217d9d2725a8cb47a8b7113fe6f872c56c729702bc622d84562bf644f0b"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/webkit-V1-pexels-21792059.jpg-right-F2-217-L1.png",
+      "sha256": "32c2c594f30f95ccc4815adc08232b97ac9f05827e8d0bade60d9192b8761301"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/webkit-V1-pexels-21792059.jpg-right-F2-217-L2.png",
+      "sha256": "99565dde5cefdbd551f4ff90c4f581c4df8c817905eabb6a8fef45fd1f714fb5"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/webkit-V3-pexels-21792059.jpg-right-F2-217-L1.png",
+      "sha256": "4fa9e631d2fb9610ed0b91e15c577925f6aedbb3b66d331b66f02253598ecd13"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/webkit-V3-pexels-21792059.jpg-right-F2-217-L2.png",
+      "sha256": "f82d338c0737fa60661252d4e4e4520f96be91c877053150c1ef4ba8cd6f16d3"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V1-pexels-7123010.jpg-left-automatic.png",
+      "sha256": "61d48285496bed3d42b4d6e73f1b3470723e1db04a269ecb352e56f7354f2c9b"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V3-pexels-7123010.jpg-left-automatic.png",
+      "sha256": "3a3e553f19b7e0d2724e4c5d6f65177c129c566fc54209cc2ae80e7615d1d51b"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V3-hair-occlusion.jpg-left-automatic.png",
+      "sha256": "f2fb2f3226585e4b223f3884d6aef9e8746550c590f019448cc37272748a9d08"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V3-pexels-32526448.jpg-right-automatic.png",
+      "sha256": "dea28ca44ffb049025f4a35f0de195187ce5bd5478e93c3626ece2bd9242a91b"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/webkit-V1-pexels-7123010.jpg-right-automatic.png",
+      "sha256": "ac1120ca94f253be05b210a07c8d8d3f0bfed6656cda23232dc640edc622ac6e"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/webkit-V3-pexels-7123010.jpg-right-automatic.png",
+      "sha256": "91909a62af18ca73a3e64a7004708c50a8593018043098bafb36b21e3c427477"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/webkit-V3-hair-occlusion.jpg-left-automatic.png",
+      "sha256": "11bc78a8ee13ca5271e379795d2061ed8cbbc4df111ae304fea84dd3804ff47e"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/webkit-V3-pexels-32526448.jpg-right-automatic.png",
+      "sha256": "dd41aa3e7ec4a50cb59c4d524f9d8b7575adc12d5ed56cc8fecf4b46b75f5e7b"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V1-pexels-21792059.jpg-right-F2-217-L1-source160.png",
+      "sha256": "480f499bd6d4dbe0bb4626cb0a4417d337970dd45cea9eb1df7dbc3bd878d022"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/webkit-V1-pexels-21792059.jpg-right-F2-217-L1-source160.png",
+      "sha256": "0e07b864a99751738ab6068d4e5d2248ced8204bebda50bd0717eb34e330e638"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V3-pexels-21792059.jpg-right-F2-217-L1-source160.png",
+      "sha256": "3c189522cdbd5a1e46cd77c83abd4b82c284e48ad6840b766b5293a2d19c8477"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V3-pexels-7123010.jpg-left-automatic-source160.png",
+      "sha256": "f8f41f5d6b973f3b32ca175b30117ac3e346bbded8043f1c6ec22d73bc9fec22"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V3-hair-occlusion.jpg-left-automatic-source160.png",
+      "sha256": "ce51887c4fd69c9eebba77da6c2547f4478b411aed4e39f1cb3d60f7c7227982"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/chromium-V3-pexels-32526448.jpg-right-automatic-source160.png",
+      "sha256": "34d0a566f9c1583437a552b5151f69f7a4998b95feacbcd28cbd79c6f02f7625"
+    }
+  ],
+  "integrity": "Plot04manifest binds03census SHA. All168PNG hashes match manifest.03metrics equal02 after excluding only harnessSHA256/new plotSHA256 sidecar fields. Extra vectors/sidecars are read-only display data.",
+  "findings": [
+    {
+      "id": "BREAK-V1",
+      "type": "interpretation",
+      "context": "217right V1/V3 C/W, both frozen references",
+      "observation": "Cyan shortest observed routes can run through merged/coated fan neighborhoods and turn across adjacent intensity structures. Source160 root patches do not resolve a unique individual fiber/tangent. C-L2 has no route, C-V3both no route; those panels correctly avoid inventing an edge.",
+      "judgment": "The route is not confirmed same hair. Orientation disagreement is a grid-feature witness, not proof a biologically valid trajectory was wrongly rejected."
+    },
+    {
+      "id": "BREAK-V2",
+      "type": "negative-control comparison",
+      "context": "Automatic white712/hair/325 figures",
+      "observation": "Same.707 first-frontier orientation dot repeats in217andwhite-liner/hair; W325 also has dot0. Hair-source patches visibly contain covering hair;325 paths project across protected opening/reflections.",
+      "judgment": "Relaxing.85 to admit selected217 routes would not be positive-specific evidence. Keep existing protected/ambiguity gates; no false-positive rate or no-lash claim."
+    },
+    {
+      "id": "BREAK-V3",
+      "type": "scientific display limit",
+      "context": "PillowRGB source illustration vs archived browserF32 working/local panels",
+      "observation": "Axes/legends explicitly distinguish source illustration/native coordinates from actual working-grid numeric data. Unresized source160 crops support detail viewing.",
+      "judgment": "Do not use PillowRGB display as proof pixel-identical browser decode, physical subpixel accuracy or exact native terminal tangent. Numeric arrows are actual instrumented working vectors, not independent manual truth."
+    },
+    {
+      "id": "BREAK-V4",
+      "type": "reproducible visualization bug",
+      "context": "Automatic NMS marker lookup in04plot helper",
+      "observation": "Automatic item label is automatic but stored reference IDs are auto-0/auto-1/auto-2. Lookup q.id==label cannot match.26V3eye auto-0 reference routes have nonnull firstRemoval yet automatic plots never retrieve them. Label-specificF2 retrieval works.",
+      "disposition": "Parent notified; preserve04 and correct/qualify visualization in new run. Absence of magenta on automatic04 is not evidence no pixel was removed. Data/detector unchanged.",
+      "suggestion": "Bind local representative explicitly to auto-0 with its V1 route provenance, or state NMS not displayed for automatic cases."
+    },
+    {
+      "id": "BREAK-V5",
+      "type": "visualization locality caveat",
+      "context": "WebKitV3F2L1/L2",
+      "observation": "Local zoom centers new frontier near(141,80), while first removed V1route pixel(154,74) lies outside zoom. Star remains visible in wide source panel/text, but no local NMS contributor detail is shown there. C-V3-L1 NMS-only figure does show its star locally.",
+      "disposition": "Parent notified. Add explicit outside-zoom note or separate NMS detail if claiming local visual confirmation; absence in cropped local panel is not absence of removal."
+    }
+  ],
+  "sourceSpecificNotes": {
+    "217": "Merged/overlapping root fan visible; endpoint circles and observed route do not establish single-fiber continuity. Failure remains graph reach/eligibility, not absent lash.",
+    "white712": "Thick liner and dark merged strands unresolved. Cyan loose routes may traverse liner/folds/hair; these are ambiguity controls, not certified false fibers.",
+    "hair": "Actual covering hair across predicted region confirms geometry alone does not establish visible eyelid attachment.",
+    "325": "Source upper fibers/reflections inside opening remain protected; automatic route pictures cannot authorize product painting there."
+  },
+  "correctRouteInterpretation": "FirstFailure and firstFrontier are distinct data. Chosen-route failure/removal need not be a unique cut. In WebKit217V3, a removed V1route pixel coexists with alternate loose reach; no bridge/restoration or safe same-strand path follows.",
+  "nextDecision": "Maintain explanatory-only census. Resolve display-only ID/locality issues before final gallery claims; do not modify thresholds/prototype or infer a physical first break from these figures. Preserve old PNGs/tools and all controls."
+}

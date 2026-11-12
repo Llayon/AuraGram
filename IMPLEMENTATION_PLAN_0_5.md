@@ -208,3 +208,15 @@ See [domain report](G1C1_DOMAIN_REPORT.md). No source geometry, product guards, 
 - [ ] Useful connected real endings, natural effect and mandatory release gates remain unresolved. Do not adopt prototype or relax guards.
 
 See [downward report](G1C1_DOWNWARD_REPORT.md). Product source/version/production unchanged.
+
+## G1c.1 exact graph-break/gate census (HOLD)
+
+- [x] Freeze read-only instrumentation protocol and recover both graph versions from archived browser Float32 inputs.
+- [x]64original/instrumented replays identical; strict BFS masks/parents exact,34,458frontier predicates checked.
+- [x] Retain simultaneous pixel/edge gates, all unreached-subset components and deterministic diagnostic routes; first failure is not a unique physical cut.
+- [x] Locate21745/90degree gate witnesses and first removed reference-route pixels; raw/pruned reachsets equal on all eyes.
+- [x] Correct no-face availability bookkeeping and automatic-NMS/zoom display; preserve initial outputs/tools/figures.
+- [x]188unitPASS;166browserPASS/2oldLengthFAIL/3dependentNOTRUN; active old-engine performance3PASS+3.8ms and packaged Chromium/WebKit smokePASS.
+- [ ] Image-supported same-strand continuity at these transitions, actual free endings and useful natural Length remain unproven. No threshold relaxation/adoption.
+
+See [break census report](G1C1_BREAK_CENSUS_REPORT.md). Product/prototype source, geometry, guards, models and version unchanged; PR#5 Draft.

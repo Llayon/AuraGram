@@ -4,7 +4,7 @@
   "private": true,
   "description": "AuraGram Studio - local photo editor with face-aware skin and lash retouch.",
   "scripts": {
-    "test": "node --test tests/unit.test.js tests/vision.test.mjs tests/retouch.test.mjs tests/g1b1.test.mjs tests/lashes.test.mjs tests/exportPreparation.test.mjs tests/history-session.test.js tests/styles.test.js tests/visual/native-shaft.test.mjs tests/visual/lash-domain.test.mjs tests/visual/lash-downward.test.mjs",
+    "test": "node --test tests/unit.test.js tests/vision.test.mjs tests/retouch.test.mjs tests/g1b1.test.mjs tests/lashes.test.mjs tests/exportPreparation.test.mjs tests/history-session.test.js tests/styles.test.js tests/visual/native-shaft.test.mjs tests/visual/lash-domain.test.mjs tests/visual/lash-downward.test.mjs tests/visual/lash-break.test.mjs",
     "test:e2e": "node scripts/run-e2e.cjs",
     "build:css": "tailwindcss -c tailwind.config.cjs -i src/utilities.input.css -o src/utilities.css --minify",
     "build": "npm run build:css && node scripts/vendor-ui.cjs",

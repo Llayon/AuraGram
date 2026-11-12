@@ -135,3 +135,17 @@ curate-lash-downward.cjs -text
 replay-lash-downward.cjs -text
 validate-lash-downward.cjs -text
 lash-downward-final-critic.json -text
+lash-break-code-critic.json -text
+lash-break-graph.mjs -text
+lash-break-instrument.cjs -text
+lash-break-plot.py -text
+lash-break-prepare.cjs -text
+lash-break-protocol-critic.json -text
+lash-break-protocol.json -text
+lash-break-run.cjs -text
+lash-break-visual-critic.json -text
+lash-break.test.mjs -text
+curate-lash-break.cjs -text
+validate-lash-break.cjs -text
+replay-lash-break.cjs -text
+lash-break-final-critic.json -text
