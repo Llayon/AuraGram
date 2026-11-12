@@ -196,3 +196,15 @@ See [free-ending dataset report](G1C1_FREEEND_DATASET_REPORT.md). PR#5 remains D
 - [ ] Actual image-only downward upper root/tip evidence, natural effect and original efficacy release gates remain open.
 
 See [domain report](G1C1_DOMAIN_REPORT.md). No source geometry, product guards, renderer, model, version or production change.
+
+## G1c.1 image-only downward connected graph (REJECT ADOPTION / HOLD)
+
+- [x] Freeze parameters before new photo runs; automatic observed upper-arc seeds, no manual endpoints/directions.
+- [x] Implement bounded directional ridge graph, measured root-zone attachment/TLS/width, unknown/border/protected/forward guards.
+- [x] Critic/fixer addresses raster redundancy/root-zone samples and support-boundary localization; preserve V1 and failed V2 analytic gate.
+- [x] V3 analytic8/8 tapered phases qualify, but all real hypotheses abstain:632/773 V1 and532/655 V3 C/W; no naturalness or same-fiber approval.
+- [x] Local217 responses survive while directed root connection fails; observed-only loose diagnostic and mask subset checks isolate additional thinning losses.
+- [x] 181unitPASS;166browserPASS/2originalLengthFAIL/3dependentNOTRUN; active old-engine perf3PASS. Existing assertions/goldens unchanged.
+- [ ] Useful connected real endings, natural effect and mandatory release gates remain unresolved. Do not adopt prototype or relax guards.
+
+See [downward report](G1C1_DOWNWARD_REPORT.md). Product source/version/production unchanged.

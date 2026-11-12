@@ -1,0 +1,156 @@
+{
+  "schema": "auragram-offline-downward-graph-v1",
+  "baseline": "4567bc4777c17891136dd0e543f03b3d24f36821",
+  "meaning": "New image-only observation hypothesis on already-exposed frozen corpus. Not blind generalization, semantic skin, biological ownership or release. Read-only paths may cross predicted opening; terminal observations inside opening cannot qualify. No extension rendering or product guard bypass.",
+  "inputs": {
+    "tests/visual/crossing-evidence/nominal-chromium.json.gz": "5695a3e44bbf2e79e99f6b9f995db86fb4a2f97dc9bc37dc1ad104fc9e65cfdf",
+    "tests/visual/out/freeend-05-analysis/manifest-chromium.json": "4f5d7e942cc50694c52c1c8f7c7b9cf5994a1dc225746327b3f2d115908c0ada",
+    "tests/visual/out/freeend2-05-analysis/manifest-chromium.json": "efa75ef4abb77df4bcafd3ea1c7ae5ec11f041586dea3ce13c45311f22f8c8f9",
+    "tests/visual/crossing-evidence/nominal-webkit.json.gz": "80ca5a4fce5bd1982ea013d66eed7dbb414913175ad80670aec2d450ddec3292",
+    "tests/visual/out/freeend-05-analysis/manifest-webkit.json": "fcbeb89e9fef199a3cd202a78044687b3a842ddbca981860b23122a6444e12e7",
+    "tests/visual/out/freeend2-05-analysis/manifest-webkit.json": "c34a4af45c4d9e308a1ed048101685c07adbf208f7c30e7939f4b9d37ee20da7",
+    "tests/visual/lash-freeend-independent-labels.json": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800",
+    "tests/visual/lash-freeend2-independent-labels.json": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810"
+  },
+  "images": {
+    "tests/visual/crossing-evidence/legacy-sources/light.jpg": "d0776e51a24cda5fa32b73bb1d464c75a3b02281331c88a42967330f5a3942de",
+    "tests/visual/crossing-evidence/legacy-sources/natural.jpg": "abbe280b58a2119c32256e760299fd29337ba46d2291a8c3d60a93f004a0aaf0",
+    "tests/visual/crossing-evidence/legacy-sources/hair-occlusion.jpg": "b6211d89421b0f6dba6dcb3ca06103169c0ca9375767853ec83e6033e481b485",
+    "tests/visual/crossing-evidence/legacy-sources/light-rotated25.jpg": "18a40e2961fca6ce897811a441d2dfea281f216381de61431e2bc379ce24839f",
+    "tests/visual/expanded-evidence/sources/pexels-7123010.jpg": "4234570fa7eb81e3ac0b617b362ae92e0e4ec8ee803c31a6131eb42bb272631c",
+    "tests/visual/freeend-evidence/assets/cc97727d9f549a1bf1354b5ae016c3472ecadd26f16bfe23ba329435d29eb0e3.jpg": "cc97727d9f549a1bf1354b5ae016c3472ecadd26f16bfe23ba329435d29eb0e3",
+    "tests/visual/freeend-evidence/assets/85ffae39a492e774c76080065e11fa4cb3823a8b3539fd2daf6a38847f159364.jpg": "85ffae39a492e774c76080065e11fa4cb3823a8b3539fd2daf6a38847f159364",
+    "tests/visual/freeend-evidence/assets/f1f9fe785f1afed56f504fa3c0c06f22b1cabc95978cd912c999840217e15079.jpg": "f1f9fe785f1afed56f504fa3c0c06f22b1cabc95978cd912c999840217e15079"
+  },
+  "modules": {
+    "src/retouch/eyeGeometry.mjs": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950",
+    "src/retouch/lashAnalysis.mjs": "685d15e8dd63a491b25b7110f06fddb2705fe6d9393a20ceddc328af22af0d8a",
+    "src/retouch/lashEnhancement.mjs": "d1e42d9f5b88b881a43526bccfb7b3ec0551580af2e4213ce0da2e27ef618554",
+    "src/retouch/retouch.mjs": "74cfb992b5da1b09841eac8faee092bf897aa9105062c87c91e5805d2a446083",
+    "src/retouch/skinMask.mjs": "69f49df9d4b6279a1422a701c1ea1081c55834e736ee744bc1e83019c7a721ef",
+    "src/vision/faceDetector.mjs": "85f2a7b61d5d728772a5e1374cd752ec7d162eb60d437903605455bf48e529f6",
+    "src/vision/faceGeometry.mjs": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009",
+    "src/vision/faceOverlay.mjs": "c801f52ef009373a49c6ab2590cde2f8ba3060f827f2e60837230d16c81441f8",
+    "src/vision/faceWorker.js": "4ff023742a523afdf1dd740726fdea602b94cedc0e389b64e5e09cd922f2b795",
+    "src/rendering/canvasFilters.js": "dfe7e11adcf495faccde264e7f7a8e07a43e3bfe5ef63c62256d7080eac0c2d9",
+    "src/rendering/imageRenderer.js": "38593563a1caeeaf983fdf22c7c01de79e7f70084f4b8e8d6ddb982e5ec03a00"
+  },
+  "cases": [
+    {
+      "engine": "chromium",
+      "file": "light.jpg",
+      "sourceKind": "frozen-crossing"
+    },
+    {
+      "engine": "chromium",
+      "file": "natural.jpg",
+      "sourceKind": "frozen-crossing"
+    },
+    {
+      "engine": "chromium",
+      "file": "hair-occlusion.jpg",
+      "sourceKind": "frozen-crossing"
+    },
+    {
+      "engine": "chromium",
+      "file": "light-rotated25.jpg",
+      "sourceKind": "frozen-crossing"
+    },
+    {
+      "engine": "chromium",
+      "file": "pexels-7123010.jpg",
+      "sourceKind": "frozen-crossing"
+    },
+    {
+      "engine": "chromium",
+      "file": "pexels-32526448.jpg",
+      "sourceKind": "frozen-freeend"
+    },
+    {
+      "engine": "chromium",
+      "file": "pexels-4611686.jpg",
+      "sourceKind": "frozen-freeend"
+    },
+    {
+      "engine": "chromium",
+      "file": "pexels-21792059.jpg",
+      "sourceKind": "frozen-freeend"
+    },
+    {
+      "engine": "webkit",
+      "file": "light.jpg",
+      "sourceKind": "frozen-crossing"
+    },
+    {
+      "engine": "webkit",
+      "file": "natural.jpg",
+      "sourceKind": "frozen-crossing"
+    },
+    {
+      "engine": "webkit",
+      "file": "hair-occlusion.jpg",
+      "sourceKind": "frozen-crossing"
+    },
+    {
+      "engine": "webkit",
+      "file": "light-rotated25.jpg",
+      "sourceKind": "frozen-crossing"
+    },
+    {
+      "engine": "webkit",
+      "file": "pexels-7123010.jpg",
+      "sourceKind": "frozen-crossing"
+    },
+    {
+      "engine": "webkit",
+      "file": "pexels-32526448.jpg",
+      "sourceKind": "frozen-freeend"
+    },
+    {
+      "engine": "webkit",
+      "file": "pexels-4611686.jpg",
+      "sourceKind": "frozen-freeend"
+    },
+    {
+      "engine": "webkit",
+      "file": "pexels-21792059.jpg",
+      "sourceKind": "frozen-freeend"
+    }
+  ],
+  "parameters": {
+    "maxSide": 224,
+    "axisRange": [
+      0.1,
+      0.9
+    ],
+    "depthRatio": 0.5,
+    "rootRadius": 2,
+    "rootHeadroom": 2,
+    "responseFloor": 0.006,
+    "radii": [
+      0.75,
+      1.5
+    ],
+    "anisotropyFloor": 0.5,
+    "normalProjection": 0.35,
+    "edgeAlignment": 0.5,
+    "orientationAgreement": 0.85,
+    "depthBacktrack": 0.25,
+    "minPathLength": 4,
+    "rootAmbiguityRadius": 2.5,
+    "distalSamples": 5,
+    "forwardDistances": [
+      0.5,
+      1,
+      2,
+      3
+    ],
+    "maxTraces": 128,
+    "maxSteps": 128,
+    "endpointBorder": 3,
+    "minimumClearance": 2,
+    "relativeClearance": 0.005
+  },
+  "labels": "Eight earlier provisional endings remain posthoc only, three no_face excluded. No label coordinate or angle enters detector. Detector seeds come only from observed oriented ridges near the frozen upper arc. Source paths may be real lashes, folds, liner or foreign hair.",
+  "selection": "Retain every enumerated graph leaf up to declared128 per eye, sorted by measured depth*response then pixel index. Record censored leaf count. No favorable parameter sweep after viewing photos. All traces/abstentions retained; gallery crops first6 per eye by frozen ordering, full-eye overlays include every trace."
+}

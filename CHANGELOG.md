@@ -4,6 +4,7 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- Reject offline downward connected-graph prototype on real photos: local ridge evidence exists but root connectivity fails; V3 thinning worsens some reach. Preserve both versions, failed intermediate analytic gate,64input replays and gate-specific diagnostics.181unitPASS, original Length browser failures remain; no product adoption. See [downward report](G1C1_DOWNWARD_REPORT.md).
 - Audit closed-eye projected domains across32 frozen eyes and exact native path replays. Geometry-only widening admits unresolved liner/hair/lower-lash contexts; no domain or guard change adopted. Fix offline contour self-contact detection with a critic regression;171unitPASS, original Length failures remain. See [domain report](G1C1_DOMAIN_REPORT.md).
 - Add seven licensed original sources with pre-inference independent ending labels, both-engine comparisons and verified replay/debug evidence. Projected-down upper endings reveal a geometry/domain limitation; natural Length remains unproven. New real no-face macro guard passes; full browser166PASS/2originalFAIL/3dependentNOTRUN. Runtime/version unchanged. See [free-ending dataset report](G1C1_FREEEND_DATASET_REPORT.md).
 - Preserve exact12px records and add a separate terminal/ownership observation audit. C104continues to35.75nativepx with forward support; censored side responses and R1crease stops do not establish tips. No endpoint, product-limit or runtime change. See [terminal report](G1C1_TERMINAL_REPORT.md).

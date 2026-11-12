@@ -1,0 +1,96 @@
+{
+  "schema": "auragram-independent-downward-code-critic-v1",
+  "stage": "before real photo results",
+  "decision": "Offline observation experiment may proceed with full abstentions retained; no product adoption or positive-efficacy claim justified. LENGTH HOLD.",
+  "scope": "Frozen protocol, helper and seven mechanism tests reviewed. Only synthetic local calculations executed; no real-photo detector, browser, frozen label/protocol/product edit.",
+  "reviewedFiles": [
+    {
+      "path": "tests/visual/lash-downward-protocol.json",
+      "sha256": "7ff4778a30cc1d7147c34217dc9f04ed3aaa8ebab993e203e4ed7b1cf2661363"
+    },
+    {
+      "path": "tests/visual/lash-downward.mjs",
+      "sha256": "a3343347e63594720796eae0bb66dab8ab4175219870fffef633557717f67c40"
+    },
+    {
+      "path": "tests/visual/lash-downward.test.mjs",
+      "sha256": "8cea47083b20c0ca2b90e6705ac7d4c96584532afdcb07d5e5cc68ea04c6ed54"
+    }
+  ],
+  "frozenProtocolSHA": "7ff4778a30cc1d7147c34217dc9f04ed3aaa8ebab993e203e4ed7b1cf2661363",
+  "strengths": [
+    "Automatic observed-response near-arc seeds; no manual target coordinates or angles.",
+    "Bounded working224 arrays, deterministic 8-connected paths and explicit census/leaf/path budget diagnostics.",
+    "Protected/uncertain tip, image/domain boundary, forward support/unavailable and unresolved width reject observations.",
+    "Read-only graph may inspect predicted opening but terminal hypotheses inside/near opening cannot qualify.",
+    "Terminology explicitly limits attachment to predicted arc neighborhood, not certified biological ownership; product guards/effect renderer unchanged."
+  ],
+  "findings": [
+    {
+      "id": "DOWN-C1",
+      "severity": "reproducible representation/recall concern",
+      "issue": "Reverse root census counts distinct root pixels on one observed fiber as alternative root associations.",
+      "reproduction": "64x64, upper horizontal y16, lower middle y23; Gaussian vertical single strand centerx32,sigma.55 fromy14..35. ExistingrootRadius2/rootHeadroom2 produces rootAssociations5/rootSpan4 on17px path, so multiple-root-associations rejects it. Diagonal providedimage() produces5rootpixels/span3.162 on both long paths.",
+      "interpretation": "These are different pixels along one broad root-neighborhood footprint, not demonstrated multiple biological roots. Do not lower frozen2.5 threshold to hide outcome; record this mechanism and distinguish root-lobe/branch representation in any later separately frozen experiment."
+    },
+    {
+      "id": "DOWN-C2",
+      "severity": "reproducible ambiguity confound",
+      "issue": "Distal branching counts multiple outgoing 8-neighbor graph edges; a raster-thick single ridge can have several parallel neighboring routes.",
+      "reproduction": "Provided diagonal Gaussian image() has branching1 on both long paths although source generator contains one strand.",
+      "interpretation": "Graph-degree ambiguity is conservative evidence, not proof of two fibers. No gap invention occurs, but 8-connectivity does not establish same-fiber ownership at touches/crossings."
+    },
+    {
+      "id": "DOWN-C3",
+      "severity": "test/inference limitation",
+      "issue": "None of seven tests requires a known positive qualifiedObservation.",
+      "reproduction": "Exact provided default image() yields active32/rootSeeds9/connected29/leaves4/qualified0. Long17.657/18.071px paths reject for distal-branch, root-association and forward-support; two zero-length leaves reject.",
+      "interpretation": "Seven passing tests establish listed mechanics/abstention, not an operational endpoint detector or useful positive recall. A declared tapered single-strand terminal control should eventually demonstrate positive qualification, or prototype may honestly remain all-abstaining."
+    },
+    {
+      "id": "DOWN-C4",
+      "severity": "endpoint interpretation limit",
+      "issue": "Observed ridge graph leaves may occur before true image termination when orientation/response gates stop; forward profiles correctly reject remaining support but no terminal refinement is implemented here.",
+      "reproduction": "Provided default Gaussian source has positive forward response at.5/1 from long leaves. Vertical single strand also rejects forward-support.",
+      "interpretation": "Do not treat graph leaf as a free tip, classify every rejected leaf as false hair, or weaken existing response/forward floors to obtain activity."
+    },
+    {
+      "id": "DOWN-C5",
+      "severity": "scope/units",
+      "issue": "All distance/orientation checks and synthetic profiles are working-grid224 observations. Native source footprint can be several pixels per cell. Width at one proximal profile and graph coherence do not certify anatomical width, local exact tangent or native terminal ownership.",
+      "interpretation": "Any native conversion and label association must be posthoc, uncertainty-aware and separately reported. A qualifiedObservation is not approved Length or permission to bypass existing negative guards."
+    }
+  ],
+  "syntheticDiagnostics": {
+    "providedDiagonal": {
+      "activePixels": 32,
+      "rootSeeds": 9,
+      "connectedPixels": 29,
+      "leaves": 4,
+      "qualified": 0,
+      "longLengths": [
+        17.65685424949238,
+        18.07106781186548
+      ],
+      "longRootSpan": 3.1622776601683795,
+      "longRootCount": 5,
+      "longBranching": 1
+    },
+    "verticalSingleStrand": {
+      "longLength": 17,
+      "rootSpan": 4,
+      "rootAssociations": 5,
+      "reasons": [
+        "multiple-root-associations",
+        "forward-support-not-an-ending"
+      ]
+    },
+    "meaning": "Analytic diagnostic cases only, no photographic naturalness or biological groundtruth. First one-line vertical diagnostic had a JS unary/exponent syntax error and was rerun with parentheses; this was not helper failure."
+  },
+  "realReviewRequirements": [
+    "Keep all declared cases/engines and rejected/qualified observations, including censored leaves; never tune frozen parameters after photo outcomes.",
+    "Show original/native source with full-eye graph attachment plus enlarged terminal/forward evidence, not only any-match pixel sums.",
+    "Report root pixel footprint and graph-route ambiguity separately from physical root/strand claims.",
+    "Retain existing white-liner/hair/opening protections; no adopted effect even if new positive graph output appears."
+  ]
+}
