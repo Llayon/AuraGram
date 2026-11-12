@@ -6,6 +6,7 @@ import{inspectLoss}from'./lash-loss-profiles.mjs';
 import{followCurve}from'./lash-curve-probe.mjs';
 import{followCurve as followSubpixel}from'./lash-subpixel-probe.mjs';
 import{measureCentroid}from'./lash-subpixel-center.mjs';
+import{responseBands,auditTerminal}from'./lash-terminal-audit.mjs';
 const protocol=JSON.parse(fs.readFileSync(new URL('./lash-shaft-protocol.json',import.meta.url)));
 function fixture(kind){const w=80,h=80,luma=new Float32Array(w*h);for(let y=0;y<h;y++)for(let x=0;x<w;x++){
  const center=40-Math.tan(Math.PI/12)*(y-20),gauss=d=>Math.exp(-d*d/(2*.35*.35));
@@ -120,4 +121,17 @@ test('a weaker disconnected neighbor cannot pull the dominant subpixel center',(
  const w=80,h=80;
  for(const slope of [0,.002]){const luma=Float32Array.from({length:w*h},(_,i)=>{const x=i%w;return .8+slope*(x-40)-(x===40?.55:x===42?.1:0);});
  const r=measureCentroid(luma,w,h,{x:40,y:34},{x:0,y:-1},2.5,subpixelProtocol);assert.equal(r.accepted,true);assert.ok(Math.abs(r.shift)<1e-5);assert.ok(r.massComponentRange[1]<2);}
+});
+test('off-axis response touching the audit boundary remains censored',()=>{
+ const bands=responseBands([-3,-2,-1,0,1,2,3].map(offset=>({offset,response:[-3,0].includes(offset)?.1:0,supported:[-3,0].includes(offset)})));
+ assert.equal(bands.length,2);assert.equal(bands[0].boundaryCensored,true);assert.equal(bands[1].boundaryCensored,false);assert.equal(bands[1].containsAxis,true);
+});
+test('a continuing audit path at its budget cannot become an endpoint',()=>{
+ const f=curveFixture('straight'),curve=followSubpixel(f.luma,f.w,f.h,{x:40,y:34},vertical,{body:true,association:true},{margin:1.5,protocol:subpixelProtocol});
+ const p=JSON.parse(fs.readFileSync(new URL('./lash-terminal-protocol.json',import.meta.url))),r=auditTerminal(f.luma,f.w,f.h,curve,p);
+ assert.ok(r.forwardSupport>0);assert.equal(r.endpointConfirmed,false);assert.equal(r.outcome,'UNKNOWN');
+});
+test('terminal audit reports unavailable edge kernels rather than interpreting them as empty space',()=>{
+ const p=JSON.parse(fs.readFileSync(new URL('./lash-terminal-protocol.json',import.meta.url))),r=auditTerminal(new Float32Array(16),4,4,{points:[{x:0,y:0,arc:0}],attempts:[],reason:'crop-boundary',bootstrapFit:{tx:0,ty:-1}},p);
+ assert.equal(r.unavailable,true);assert.equal(r.endpointConfirmed,false);
 });

@@ -79,3 +79,8 @@ lash-subpixel-plot.py -text
 curate-subpixel.cjs -text
 lash-subpixel-component-protocol.json -text
 lash-subpixel-raster-plot.py -text
+lash-terminal-protocol.json -text
+lash-terminal-audit.mjs -text
+lash-terminal-audit.cjs -text
+lash-terminal-plot.py -text
+curate-terminal.cjs -text

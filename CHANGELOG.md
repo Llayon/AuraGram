@@ -4,6 +4,7 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- Preserve exact12px records and add a separate terminal/ownership observation audit. C104continues to35.75nativepx with forward support; censored side responses and R1crease stops do not establish tips. No endpoint, product-limit or runtime change. See [terminal report](G1C1_TERMINAL_REPORT.md).
 - Improve offline subpixel centers and measured bootstrap initialization; fix critic-reproduced weaker disconnected-neighbor bias. Frozen analytic budget reach36/192→184/192 and C104sampled arc1.63→11.54px, with all margin failures retained. No endpoint/naturalLength or runtime adoption. See [subpixel report](G1C1_SUBPIXEL_REPORT.md).
 - Reject an offline bounded curve follower: C104 stops on initialization/local-axis mismatch, R1 on search boundary, R2 remains ineligible. Preserve36real configurations plus14initial/192raster controls showing bootstrap and half-pixel plateau limitations. No threshold relaxation or runtime adoption. See [curve report](G1C1_CURVE_REPORT.md).
 - Preserve all-axis transverse native profiles around recorded losses. C104 has strong displaced support, consistent with lateral escape rather than an ending; R1/R2 remain crease/junction ambiguities. No runtime adoption or endpoint approval. See [loss-profile report](G1C1_LOSS_PROFILES_REPORT.md).

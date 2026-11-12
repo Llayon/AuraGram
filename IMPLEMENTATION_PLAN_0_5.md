@@ -162,3 +162,14 @@ See [curve report](G1C1_CURVE_REPORT.md). Runtime/production unchanged; no thres
 - [ ] Same-fiber/free-end/natural-Length, held-out coverage and full release gates remain unresolved.
 
 See [subpixel report](G1C1_SUBPIXEL_REPORT.md). Diagnostic candidate only; runtime/production unchanged.
+
+
+## G1c.1 terminal/ownership observation audit (HOLD)
+
+- [x] Preserve all36original12pxrecords exactly and compare with separate36px observation audit, not product Length.
+- [x] C104continues35.75px with forward support; distinguish censored off-axis runs from complete runs and avoid branch/end claims.
+- [x] Independent critic: endpoint/ownership not confirmed; legend overlap fixed and original views retained.
+- [x] 162unitPASS; original Length failures remain; existing real unresolved-source negative product guards pass separately.
+- [ ] Prototype held-out positive/free-end and independent negative ownership performance NOTCOVERED; naturalness/release gates remain open.
+
+See [terminal report](G1C1_TERMINAL_REPORT.md). Runtime/production unchanged.
