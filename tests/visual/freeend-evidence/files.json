@@ -1,0 +1,2732 @@
+{
+  "tests/visual/lash-freeend-freeze.json": {
+    "asset": "assets/9af5be792b3f7ef6f2a783807c21fee0d9458a293603daf1b15ca167050244e6.gz",
+    "sha256": "9af5be792b3f7ef6f2a783807c21fee0d9458a293603daf1b15ca167050244e6",
+    "bytes": 2197,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend-sources.json": {
+    "asset": "assets/efe5520433428e36031458cb5afb6c5a85a28354d8f74f82d2b75213c0c550de.gz",
+    "sha256": "efe5520433428e36031458cb5afb6c5a85a28354d8f74f82d2b75213c0c550de",
+    "bytes": 2676,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend-crops.json": {
+    "asset": "assets/8551f04da88b0bb8da535fe491343c72638dbb1cb79009e3f57a7c7366197249.gz",
+    "sha256": "8551f04da88b0bb8da535fe491343c72638dbb1cb79009e3f57a7c7366197249",
+    "bytes": 811,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend-primary-screen.json": {
+    "asset": "assets/f5c7af47760000f555f9a633579544ff536cfaf423e22aa21379006a79164e17.gz",
+    "sha256": "f5c7af47760000f555f9a633579544ff536cfaf423e22aa21379006a79164e17",
+    "bytes": 2786,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend-independent-labels.json": {
+    "asset": "assets/97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800.gz",
+    "sha256": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800",
+    "bytes": 19642,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-01-download/manifest.json": {
+    "asset": "assets/5a04532e892865ca44e92cb0be2de4ef8644182ea60612ee178281cfd8479116.gz",
+    "sha256": "5a04532e892865ca44e92cb0be2de4ef8644182ea60612ee178281cfd8479116",
+    "bytes": 3504,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-03-native/manifest.json": {
+    "asset": "assets/c8315d2448308ed4b0e5111c67b9c3f0cb8f45118a6bfabab4e60e98d87858ed.gz",
+    "sha256": "c8315d2448308ed4b0e5111c67b9c3f0cb8f45118a6bfabab4e60e98d87858ed",
+    "bytes": 18755,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-04-additional/manifest.json": {
+    "asset": "assets/15fe2c663f39b5fc14ec5d8ab229b324275fe7e6b99746b2a4e394d3a0b2ea71.gz",
+    "sha256": "15fe2c663f39b5fc14ec5d8ab229b324275fe7e6b99746b2a4e394d3a0b2ea71",
+    "bytes": 278,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-01-download/commons-radic-eyelashes.jpg": {
+    "asset": "assets/5cc74becc6992830b32e1ba49edff8217ecdad5b3b90d5888cf81e5c193c8e69.jpg",
+    "sha256": "5cc74becc6992830b32e1ba49edff8217ecdad5b3b90d5888cf81e5c193c8e69",
+    "bytes": 5772776,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-01-download/pexels-22032198.jpg": {
+    "asset": "assets/0bc6265b86e5354f3b13db63ea67b11a832206a4d924b81cb57dea7c11ebaaa1.jpg",
+    "sha256": "0bc6265b86e5354f3b13db63ea67b11a832206a4d924b81cb57dea7c11ebaaa1",
+    "bytes": 1440415,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-01-download/pexels-31215869.jpg": {
+    "asset": "assets/cbed3fd127d9b7998772ffd95af6073f35ce465d7aefc5d1b81451635712a197.jpg",
+    "sha256": "cbed3fd127d9b7998772ffd95af6073f35ce465d7aefc5d1b81451635712a197",
+    "bytes": 1292773,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-01-download/pexels-32526448.jpg": {
+    "asset": "assets/cc97727d9f549a1bf1354b5ae016c3472ecadd26f16bfe23ba329435d29eb0e3.jpg",
+    "sha256": "cc97727d9f549a1bf1354b5ae016c3472ecadd26f16bfe23ba329435d29eb0e3",
+    "bytes": 878570,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-01-download/pexels-4611686.jpg": {
+    "asset": "assets/85ffae39a492e774c76080065e11fa4cb3823a8b3539fd2daf6a38847f159364.jpg",
+    "sha256": "85ffae39a492e774c76080065e11fa4cb3823a8b3539fd2daf6a38847f159364",
+    "bytes": 4283372,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-03-native/commons-radic-eyelashes-visible-lid.png": {
+    "asset": "assets/cb7035a6f1691e31ce01624c85a5214d451fb20342088ce30f782d753ac8c30b.png",
+    "sha256": "cb7035a6f1691e31ce01624c85a5214d451fb20342088ce30f782d753ac8c30b",
+    "bytes": 5776574,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-03-native/pexels-22032198-visible-eye.png": {
+    "asset": "assets/1049d74bdebc1151113137aa38edc1be84e42bbecc5ca5fc7609a81ee7d5405a.png",
+    "sha256": "1049d74bdebc1151113137aa38edc1be84e42bbecc5ca5fc7609a81ee7d5405a",
+    "bytes": 6277489,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-03-native/pexels-31215869-side-eye.png": {
+    "asset": "assets/3bfd88ca757d804b879e6b4553fc3ecea977f6591a10dfdccfa9a7c0b6a4a7dc.png",
+    "sha256": "3bfd88ca757d804b879e6b4553fc3ecea977f6591a10dfdccfa9a7c0b6a4a7dc",
+    "bytes": 2409159,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-03-native/pexels-32526448-screen-left.png": {
+    "asset": "assets/5c5a2f6b5e5ae11dc34a78f8f611691a34c671459ae985c499dd4ebc8b253b9b.png",
+    "sha256": "5c5a2f6b5e5ae11dc34a78f8f611691a34c671459ae985c499dd4ebc8b253b9b",
+    "bytes": 740654,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-03-native/pexels-32526448-screen-right.png": {
+    "asset": "assets/3c74c92f7ba713a9cbed22b36c7fa24c931993b87e9d06f267d7467618087617.png",
+    "sha256": "3c74c92f7ba713a9cbed22b36c7fa24c931993b87e9d06f267d7467618087617",
+    "bytes": 509703,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-03-native/pexels-4611686-screen-left.png": {
+    "asset": "assets/30eab261e637b84173768c94c90e520a2fd2720a98fc18543f0b7d02d722c444.png",
+    "sha256": "30eab261e637b84173768c94c90e520a2fd2720a98fc18543f0b7d02d722c444",
+    "bytes": 1521284,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-03-native/pexels-4611686-screen-right.png": {
+    "asset": "assets/838ca191ca9e7937dc0d8e7ba008e238d40c2b7102b6a6946ca90ddf8ca4730a.png",
+    "sha256": "838ca191ca9e7937dc0d8e7ba008e238d40c2b7102b6a6946ca90ddf8ca4730a",
+    "bytes": 1002281,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-04-additional/pexels-31215869-upper-outside.png": {
+    "asset": "assets/558e882a40db7ac072afb096bda91c4f28e52bdc94f82821725a3af19947e8f5.png",
+    "sha256": "558e882a40db7ac072afb096bda91c4f28e52bdc94f82821725a3af19947e8f5",
+    "bytes": 1056882,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-independent/pexels-32526448-screen-left-zoom.png": {
+    "asset": "assets/67b7b9d47ce54e4c13d8f533b48c0324becc72aa7338cb3be93f7297e1c6f2fc.png",
+    "sha256": "67b7b9d47ce54e4c13d8f533b48c0324becc72aa7338cb3be93f7297e1c6f2fc",
+    "bytes": 35340,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-independent/pexels-4611686-screen-left-zoom.png": {
+    "asset": "assets/13b6d46162092a6b00d54aff60616351928749415732df60419fdd05d46a7700.png",
+    "sha256": "13b6d46162092a6b00d54aff60616351928749415732df60419fdd05d46a7700",
+    "bytes": 59760,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-independent/pexels-31215869-upper-outside-zoom.png": {
+    "asset": "assets/2822917901a683adc3a212426cfadd22a1ee0b201a47227db64de87b6bf669b6.png",
+    "sha256": "2822917901a683adc3a212426cfadd22a1ee0b201a47227db64de87b6bf669b6",
+    "bytes": 88510,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-05-analysis/manifest-chromium.json": {
+    "asset": "assets/4f5d7e942cc50694c52c1c8f7c7b9cf5994a1dc225746327b3f2d115908c0ada.gz",
+    "sha256": "4f5d7e942cc50694c52c1c8f7c7b9cf5994a1dc225746327b3f2d115908c0ada",
+    "bytes": 995054,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-07-render/manifest-chromium.json": {
+    "asset": "assets/95299305717bd935b939a5b4c1b7b9f7587789ab216b54626319420eeea2fc30.gz",
+    "sha256": "95299305717bd935b939a5b4c1b7b9f7587789ab216b54626319420eeea2fc30",
+    "bytes": 19396,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/candidate-src/retouch/eyeGeometry.mjs": {
+    "asset": "assets/b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950.gz",
+    "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950",
+    "bytes": 5807,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/candidate-src/retouch/lashAnalysis.mjs": {
+    "asset": "assets/685d15e8dd63a491b25b7110f06fddb2705fe6d9393a20ceddc328af22af0d8a.gz",
+    "sha256": "685d15e8dd63a491b25b7110f06fddb2705fe6d9393a20ceddc328af22af0d8a",
+    "bytes": 30388,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/candidate-src/retouch/lashEnhancement.mjs": {
+    "asset": "assets/d1e42d9f5b88b881a43526bccfb7b3ec0551580af2e4213ce0da2e27ef618554.gz",
+    "sha256": "d1e42d9f5b88b881a43526bccfb7b3ec0551580af2e4213ce0da2e27ef618554",
+    "bytes": 16590,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/candidate-src/retouch/retouch.mjs": {
+    "asset": "assets/74cfb992b5da1b09841eac8faee092bf897aa9105062c87c91e5805d2a446083.gz",
+    "sha256": "74cfb992b5da1b09841eac8faee092bf897aa9105062c87c91e5805d2a446083",
+    "bytes": 21430,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/candidate-src/retouch/skinMask.mjs": {
+    "asset": "assets/69f49df9d4b6279a1422a701c1ea1081c55834e736ee744bc1e83019c7a721ef.gz",
+    "sha256": "69f49df9d4b6279a1422a701c1ea1081c55834e736ee744bc1e83019c7a721ef",
+    "bytes": 12627,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/candidate-src/rendering/canvasFilters.js": {
+    "asset": "assets/dfe7e11adcf495faccde264e7f7a8e07a43e3bfe5ef63c62256d7080eac0c2d9.gz",
+    "sha256": "dfe7e11adcf495faccde264e7f7a8e07a43e3bfe5ef63c62256d7080eac0c2d9",
+    "bytes": 7620,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/candidate-src/rendering/imageRenderer.js": {
+    "asset": "assets/38593563a1caeeaf983fdf22c7c01de79e7f70084f4b8e8d6ddb982e5ec03a00.gz",
+    "sha256": "38593563a1caeeaf983fdf22c7c01de79e7f70084f4b8e8d6ddb982e5ec03a00",
+    "bytes": 15765,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/candidate-src/vision/faceDetector.mjs": {
+    "asset": "assets/85f2a7b61d5d728772a5e1374cd752ec7d162eb60d437903605455bf48e529f6.gz",
+    "sha256": "85f2a7b61d5d728772a5e1374cd752ec7d162eb60d437903605455bf48e529f6",
+    "bytes": 16323,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/candidate-src/vision/faceGeometry.mjs": {
+    "asset": "assets/56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009.gz",
+    "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009",
+    "bytes": 5686,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/candidate-src/vision/faceOverlay.mjs": {
+    "asset": "assets/c801f52ef009373a49c6ab2590cde2f8ba3060f827f2e60837230d16c81441f8.gz",
+    "sha256": "c801f52ef009373a49c6ab2590cde2f8ba3060f827f2e60837230d16c81441f8",
+    "bytes": 2031,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/candidate-src/vision/faceWorker.js": {
+    "asset": "assets/4ff023742a523afdf1dd740726fdea602b94cedc0e389b64e5e09cd922f2b795.gz",
+    "sha256": "4ff023742a523afdf1dd740726fdea602b94cedc0e389b64e5e09cd922f2b795",
+    "bytes": 4425,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/chromium-pexels-32526448.jpg-geometry.png": {
+    "asset": "assets/f31135f071b660fa4ef81d4c8fc79a2f4cce07116c5a93c7e42b92c8075a5b61.png",
+    "sha256": "f31135f071b660fa4ef81d4c8fc79a2f4cce07116c5a93c7e42b92c8075a5b61",
+    "bytes": 892224,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-05-analysis/chromium-pexels-4611686.jpg-geometry.png": {
+    "asset": "assets/bc02d710d09ee22c954d711cafa53d936c4d7abda67a75d92c5a0952fbe7bf35.png",
+    "sha256": "bc02d710d09ee22c954d711cafa53d936c4d7abda67a75d92c5a0952fbe7bf35",
+    "bytes": 1431165,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-original-portrait.png": {
+    "asset": "assets/317154d63df711fa851019f873cd4c9e84ca1e3a4a2313597cbb7d4d17d05e5a.png",
+    "sha256": "317154d63df711fa851019f873cd4c9e84ca1e3a4a2313597cbb7d4d17d05e5a",
+    "bytes": 905851,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L1-original-native.png": {
+    "asset": "assets/713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68.png",
+    "sha256": "713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68",
+    "bytes": 48467,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L2-original-native.png": {
+    "asset": "assets/ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d.png",
+    "sha256": "ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d",
+    "bytes": 47558,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-production-density50-portrait.png": {
+    "asset": "assets/591bde9c6bdba49504cdda9497d12028495de926ca96063f54449fd66e1b15b0.png",
+    "sha256": "591bde9c6bdba49504cdda9497d12028495de926ca96063f54449fd66e1b15b0",
+    "bytes": 905916,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L1-production-density50-native.png": {
+    "asset": "assets/713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68.png",
+    "sha256": "713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68",
+    "bytes": 48467,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L2-production-density50-native.png": {
+    "asset": "assets/ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d.png",
+    "sha256": "ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d",
+    "bytes": 47558,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/16945d983074b59acecb0d5e3f89e4b57dade702953be2cf5ca454c04e9df4b2.png",
+    "sha256": "16945d983074b59acecb0d5e3f89e4b57dade702953be2cf5ca454c04e9df4b2",
+    "bytes": 905791,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L1-recovery-density50-native.png": {
+    "asset": "assets/4bf337e68b0393d07b5e6e04ee8795ca4d0803477c755d69627ca85118bb580b.png",
+    "sha256": "4bf337e68b0393d07b5e6e04ee8795ca4d0803477c755d69627ca85118bb580b",
+    "bytes": 48852,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L2-recovery-density50-native.png": {
+    "asset": "assets/204475ce050619652b1aaf54be2b0219586616f77a2cda39a0393fbd8b0edd40.png",
+    "sha256": "204475ce050619652b1aaf54be2b0219586616f77a2cda39a0393fbd8b0edd40",
+    "bytes": 47845,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-production-length50-portrait.png": {
+    "asset": "assets/efee7185126293a7b0dedeec1700a342d3dc6d789f2da9674fbb986b3c496551.png",
+    "sha256": "efee7185126293a7b0dedeec1700a342d3dc6d789f2da9674fbb986b3c496551",
+    "bytes": 905920,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L1-production-length50-native.png": {
+    "asset": "assets/713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68.png",
+    "sha256": "713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68",
+    "bytes": 48467,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L2-production-length50-native.png": {
+    "asset": "assets/a96a390633cf0b20631bbbb6034e679893ae8b2d1c3a6ee5086219d7ce9be2de.png",
+    "sha256": "a96a390633cf0b20631bbbb6034e679893ae8b2d1c3a6ee5086219d7ce9be2de",
+    "bytes": 47557,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/317154d63df711fa851019f873cd4c9e84ca1e3a4a2313597cbb7d4d17d05e5a.png",
+    "sha256": "317154d63df711fa851019f873cd4c9e84ca1e3a4a2313597cbb7d4d17d05e5a",
+    "bytes": 905851,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L1-recovery-length50-native.png": {
+    "asset": "assets/713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68.png",
+    "sha256": "713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68",
+    "bytes": 48467,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L2-recovery-length50-native.png": {
+    "asset": "assets/ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d.png",
+    "sha256": "ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d",
+    "bytes": 47558,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-definition50-portrait.png": {
+    "asset": "assets/c7f34ea53e0fcb632eb89d29f3ff849ff7a7e481de6091250b97284f6021a350.png",
+    "sha256": "c7f34ea53e0fcb632eb89d29f3ff849ff7a7e481de6091250b97284f6021a350",
+    "bytes": 905880,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L1-definition50-native.png": {
+    "asset": "assets/723ececcf9041609ca8d88a947adbb89d6148812710d1fa4353089f52acfb1c0.png",
+    "sha256": "723ececcf9041609ca8d88a947adbb89d6148812710d1fa4353089f52acfb1c0",
+    "bytes": 48861,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L2-definition50-native.png": {
+    "asset": "assets/27b40502f9a171b121d82928ce9705dfa4437e33da293867d9626b95db14c2c8.png",
+    "sha256": "27b40502f9a171b121d82928ce9705dfa4437e33da293867d9626b95db14c2c8",
+    "bytes": 47815,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-combined-natural-portrait.png": {
+    "asset": "assets/5358b52a20b47924970bcee9721529c210284340e4c2c623d1218d54c9955db4.png",
+    "sha256": "5358b52a20b47924970bcee9721529c210284340e4c2c623d1218d54c9955db4",
+    "bytes": 905890,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L1-combined-natural-native.png": {
+    "asset": "assets/6c1c17a7127e8c273bc6d74b70434a4d16aee9eec9933fb96742c61a90bef61b.png",
+    "sha256": "6c1c17a7127e8c273bc6d74b70434a4d16aee9eec9933fb96742c61a90bef61b",
+    "bytes": 48921,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L1-difference8x.png": {
+    "asset": "assets/4d8ff6d445faa5a86a1d65c1e90581d29d90cad874e39ad361c0c1686e07e7d8.png",
+    "sha256": "4d8ff6d445faa5a86a1d65c1e90581d29d90cad874e39ad361c0c1686e07e7d8",
+    "bytes": 2189,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L2-combined-natural-native.png": {
+    "asset": "assets/900cdde4c23fcd594ac6e8334220d74ce465d671f385e0213e2291bdb758bd20.png",
+    "sha256": "900cdde4c23fcd594ac6e8334220d74ce465d671f385e0213e2291bdb758bd20",
+    "bytes": 47860,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-32526448.jpg-F325-L2-difference8x.png": {
+    "asset": "assets/56d311b7c64cad18cce76a1859bf66b67591b7910d824e37293eadea1bd2d934.png",
+    "sha256": "56d311b7c64cad18cce76a1859bf66b67591b7910d824e37293eadea1bd2d934",
+    "bytes": 2024,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-original-portrait.png": {
+    "asset": "assets/a6398022ed1e45c19812bf22bd9f5e0a835500728c9f5ba7200138fccaf14edb.png",
+    "sha256": "a6398022ed1e45c19812bf22bd9f5e0a835500728c9f5ba7200138fccaf14edb",
+    "bytes": 1562417,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-F461-L1-original-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-production-density50-portrait.png": {
+    "asset": "assets/36a4a67d8e487d40549bca937bd956689efa1e3f3ae5698757a11dc9bc50f31e.png",
+    "sha256": "36a4a67d8e487d40549bca937bd956689efa1e3f3ae5698757a11dc9bc50f31e",
+    "bytes": 1562564,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-F461-L1-production-density50-native.png": {
+    "asset": "assets/07f999ce0d891c4eb2eb42577e1cb694a5004171bd1ef76553dd4fceb157141a.png",
+    "sha256": "07f999ce0d891c4eb2eb42577e1cb694a5004171bd1ef76553dd4fceb157141a",
+    "bytes": 50098,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/d898d4377cb10ed3ddda305d8c789f476e038c5222f86f85b5e11256d6c6386e.png",
+    "sha256": "d898d4377cb10ed3ddda305d8c789f476e038c5222f86f85b5e11256d6c6386e",
+    "bytes": 1562630,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-F461-L1-recovery-density50-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-production-length50-portrait.png": {
+    "asset": "assets/5a0b59b4a11e66ec89e2533ed1ea020fcf15dafbe1f55dc9fb33a9ac508aa029.png",
+    "sha256": "5a0b59b4a11e66ec89e2533ed1ea020fcf15dafbe1f55dc9fb33a9ac508aa029",
+    "bytes": 1562426,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-F461-L1-production-length50-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/a6398022ed1e45c19812bf22bd9f5e0a835500728c9f5ba7200138fccaf14edb.png",
+    "sha256": "a6398022ed1e45c19812bf22bd9f5e0a835500728c9f5ba7200138fccaf14edb",
+    "bytes": 1562417,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-F461-L1-recovery-length50-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-definition50-portrait.png": {
+    "asset": "assets/a04ef7151036f62878a56d10fcf638ef0b7ca81d777612b324ad81f41d3d4906.png",
+    "sha256": "a04ef7151036f62878a56d10fcf638ef0b7ca81d777612b324ad81f41d3d4906",
+    "bytes": 1562593,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-F461-L1-definition50-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-combined-natural-portrait.png": {
+    "asset": "assets/d74772949a6dd96b26c894fa89ad63e872f9728b4b7000bcc2d8fe8d148bf981.png",
+    "sha256": "d74772949a6dd96b26c894fa89ad63e872f9728b4b7000bcc2d8fe8d148bf981",
+    "bytes": 1562606,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-F461-L1-combined-natural-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/chromium-pexels-4611686.jpg-F461-L1-difference8x.png": {
+    "asset": "assets/91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d.png",
+    "sha256": "91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d",
+    "bytes": 1186,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/verified-chromium.json": {
+    "asset": "assets/233e70f2f645a786125b52f5ac8c4c464f9419b2a76adae87c2cd2251a1de133.gz",
+    "sha256": "233e70f2f645a786125b52f5ac8c4c464f9419b2a76adae87c2cd2251a1de133",
+    "bytes": 3497,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-12-render-verified/manifest-chromium.json": {
+    "asset": "assets/9c6d2befe3ce96b727d6e30d3d7026635f58aad9bf3480505fd3f34ebdff9851.gz",
+    "sha256": "9c6d2befe3ce96b727d6e30d3d7026635f58aad9bf3480505fd3f34ebdff9851",
+    "bytes": 19381,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-original-portrait.png": {
+    "asset": "assets/317154d63df711fa851019f873cd4c9e84ca1e3a4a2313597cbb7d4d17d05e5a.png",
+    "sha256": "317154d63df711fa851019f873cd4c9e84ca1e3a4a2313597cbb7d4d17d05e5a",
+    "bytes": 905851,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L1-original-native.png": {
+    "asset": "assets/713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68.png",
+    "sha256": "713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68",
+    "bytes": 48467,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L2-original-native.png": {
+    "asset": "assets/ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d.png",
+    "sha256": "ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d",
+    "bytes": 47558,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-production-density50-portrait.png": {
+    "asset": "assets/591bde9c6bdba49504cdda9497d12028495de926ca96063f54449fd66e1b15b0.png",
+    "sha256": "591bde9c6bdba49504cdda9497d12028495de926ca96063f54449fd66e1b15b0",
+    "bytes": 905916,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L1-production-density50-native.png": {
+    "asset": "assets/713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68.png",
+    "sha256": "713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68",
+    "bytes": 48467,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L2-production-density50-native.png": {
+    "asset": "assets/ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d.png",
+    "sha256": "ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d",
+    "bytes": 47558,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/16945d983074b59acecb0d5e3f89e4b57dade702953be2cf5ca454c04e9df4b2.png",
+    "sha256": "16945d983074b59acecb0d5e3f89e4b57dade702953be2cf5ca454c04e9df4b2",
+    "bytes": 905791,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L1-recovery-density50-native.png": {
+    "asset": "assets/4bf337e68b0393d07b5e6e04ee8795ca4d0803477c755d69627ca85118bb580b.png",
+    "sha256": "4bf337e68b0393d07b5e6e04ee8795ca4d0803477c755d69627ca85118bb580b",
+    "bytes": 48852,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L2-recovery-density50-native.png": {
+    "asset": "assets/204475ce050619652b1aaf54be2b0219586616f77a2cda39a0393fbd8b0edd40.png",
+    "sha256": "204475ce050619652b1aaf54be2b0219586616f77a2cda39a0393fbd8b0edd40",
+    "bytes": 47845,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-production-length50-portrait.png": {
+    "asset": "assets/efee7185126293a7b0dedeec1700a342d3dc6d789f2da9674fbb986b3c496551.png",
+    "sha256": "efee7185126293a7b0dedeec1700a342d3dc6d789f2da9674fbb986b3c496551",
+    "bytes": 905920,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L1-production-length50-native.png": {
+    "asset": "assets/713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68.png",
+    "sha256": "713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68",
+    "bytes": 48467,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L2-production-length50-native.png": {
+    "asset": "assets/a96a390633cf0b20631bbbb6034e679893ae8b2d1c3a6ee5086219d7ce9be2de.png",
+    "sha256": "a96a390633cf0b20631bbbb6034e679893ae8b2d1c3a6ee5086219d7ce9be2de",
+    "bytes": 47557,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/317154d63df711fa851019f873cd4c9e84ca1e3a4a2313597cbb7d4d17d05e5a.png",
+    "sha256": "317154d63df711fa851019f873cd4c9e84ca1e3a4a2313597cbb7d4d17d05e5a",
+    "bytes": 905851,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L1-recovery-length50-native.png": {
+    "asset": "assets/713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68.png",
+    "sha256": "713b7c009f9a959594456c95b7feb972a4353a8b1bbd3b4f196a75a5e5192e68",
+    "bytes": 48467,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L2-recovery-length50-native.png": {
+    "asset": "assets/ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d.png",
+    "sha256": "ce44d8e4763155c99fac4636fc71267f90b04eeb8c6a53b81acd7e362cf5a12d",
+    "bytes": 47558,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-definition50-portrait.png": {
+    "asset": "assets/c7f34ea53e0fcb632eb89d29f3ff849ff7a7e481de6091250b97284f6021a350.png",
+    "sha256": "c7f34ea53e0fcb632eb89d29f3ff849ff7a7e481de6091250b97284f6021a350",
+    "bytes": 905880,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L1-definition50-native.png": {
+    "asset": "assets/723ececcf9041609ca8d88a947adbb89d6148812710d1fa4353089f52acfb1c0.png",
+    "sha256": "723ececcf9041609ca8d88a947adbb89d6148812710d1fa4353089f52acfb1c0",
+    "bytes": 48861,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L2-definition50-native.png": {
+    "asset": "assets/27b40502f9a171b121d82928ce9705dfa4437e33da293867d9626b95db14c2c8.png",
+    "sha256": "27b40502f9a171b121d82928ce9705dfa4437e33da293867d9626b95db14c2c8",
+    "bytes": 47815,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-combined-natural-portrait.png": {
+    "asset": "assets/5358b52a20b47924970bcee9721529c210284340e4c2c623d1218d54c9955db4.png",
+    "sha256": "5358b52a20b47924970bcee9721529c210284340e4c2c623d1218d54c9955db4",
+    "bytes": 905890,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L1-combined-natural-native.png": {
+    "asset": "assets/6c1c17a7127e8c273bc6d74b70434a4d16aee9eec9933fb96742c61a90bef61b.png",
+    "sha256": "6c1c17a7127e8c273bc6d74b70434a4d16aee9eec9933fb96742c61a90bef61b",
+    "bytes": 48921,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L1-difference8x.png": {
+    "asset": "assets/4d8ff6d445faa5a86a1d65c1e90581d29d90cad874e39ad361c0c1686e07e7d8.png",
+    "sha256": "4d8ff6d445faa5a86a1d65c1e90581d29d90cad874e39ad361c0c1686e07e7d8",
+    "bytes": 2189,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L2-combined-natural-native.png": {
+    "asset": "assets/900cdde4c23fcd594ac6e8334220d74ce465d671f385e0213e2291bdb758bd20.png",
+    "sha256": "900cdde4c23fcd594ac6e8334220d74ce465d671f385e0213e2291bdb758bd20",
+    "bytes": 47860,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-32526448.jpg-F325-L2-difference8x.png": {
+    "asset": "assets/56d311b7c64cad18cce76a1859bf66b67591b7910d824e37293eadea1bd2d934.png",
+    "sha256": "56d311b7c64cad18cce76a1859bf66b67591b7910d824e37293eadea1bd2d934",
+    "bytes": 2024,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-original-portrait.png": {
+    "asset": "assets/a6398022ed1e45c19812bf22bd9f5e0a835500728c9f5ba7200138fccaf14edb.png",
+    "sha256": "a6398022ed1e45c19812bf22bd9f5e0a835500728c9f5ba7200138fccaf14edb",
+    "bytes": 1562417,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-F461-L1-original-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-production-density50-portrait.png": {
+    "asset": "assets/36a4a67d8e487d40549bca937bd956689efa1e3f3ae5698757a11dc9bc50f31e.png",
+    "sha256": "36a4a67d8e487d40549bca937bd956689efa1e3f3ae5698757a11dc9bc50f31e",
+    "bytes": 1562564,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-F461-L1-production-density50-native.png": {
+    "asset": "assets/07f999ce0d891c4eb2eb42577e1cb694a5004171bd1ef76553dd4fceb157141a.png",
+    "sha256": "07f999ce0d891c4eb2eb42577e1cb694a5004171bd1ef76553dd4fceb157141a",
+    "bytes": 50098,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/d898d4377cb10ed3ddda305d8c789f476e038c5222f86f85b5e11256d6c6386e.png",
+    "sha256": "d898d4377cb10ed3ddda305d8c789f476e038c5222f86f85b5e11256d6c6386e",
+    "bytes": 1562630,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-F461-L1-recovery-density50-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-production-length50-portrait.png": {
+    "asset": "assets/5a0b59b4a11e66ec89e2533ed1ea020fcf15dafbe1f55dc9fb33a9ac508aa029.png",
+    "sha256": "5a0b59b4a11e66ec89e2533ed1ea020fcf15dafbe1f55dc9fb33a9ac508aa029",
+    "bytes": 1562426,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-F461-L1-production-length50-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/a6398022ed1e45c19812bf22bd9f5e0a835500728c9f5ba7200138fccaf14edb.png",
+    "sha256": "a6398022ed1e45c19812bf22bd9f5e0a835500728c9f5ba7200138fccaf14edb",
+    "bytes": 1562417,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-F461-L1-recovery-length50-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-definition50-portrait.png": {
+    "asset": "assets/a04ef7151036f62878a56d10fcf638ef0b7ca81d777612b324ad81f41d3d4906.png",
+    "sha256": "a04ef7151036f62878a56d10fcf638ef0b7ca81d777612b324ad81f41d3d4906",
+    "bytes": 1562593,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-F461-L1-definition50-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-combined-natural-portrait.png": {
+    "asset": "assets/d74772949a6dd96b26c894fa89ad63e872f9728b4b7000bcc2d8fe8d148bf981.png",
+    "sha256": "d74772949a6dd96b26c894fa89ad63e872f9728b4b7000bcc2d8fe8d148bf981",
+    "bytes": 1562606,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-F461-L1-combined-natural-native.png": {
+    "asset": "assets/8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c.png",
+    "sha256": "8c23464f7696969df36ed85d61ca5002819b9b954301cdfbaff6ac13f958362c",
+    "bytes": 50106,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/chromium-pexels-4611686.jpg-F461-L1-difference8x.png": {
+    "asset": "assets/91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d.png",
+    "sha256": "91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d",
+    "bytes": 1186,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-05-analysis/manifest-webkit.json": {
+    "asset": "assets/fcbeb89e9fef199a3cd202a78044687b3a842ddbca981860b23122a6444e12e7.gz",
+    "sha256": "fcbeb89e9fef199a3cd202a78044687b3a842ddbca981860b23122a6444e12e7",
+    "bytes": 1332747,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-07-render/manifest-webkit.json": {
+    "asset": "assets/5c108926257f9322e090d49d589c558c617cc949d4b042339b201495ef3cb171.gz",
+    "sha256": "5c108926257f9322e090d49d589c558c617cc949d4b042339b201495ef3cb171",
+    "bytes": 23950,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-analysis/webkit-pexels-32526448.jpg-geometry.png": {
+    "asset": "assets/397e7549b83a4cdbe1018c8d3a801c2fd758810f16c25b2182bae06f0779a45c.png",
+    "sha256": "397e7549b83a4cdbe1018c8d3a801c2fd758810f16c25b2182bae06f0779a45c",
+    "bytes": 728370,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-05-analysis/webkit-pexels-4611686.jpg-geometry.png": {
+    "asset": "assets/21ee8d0a67338c6719dfd98779fc911c06fcbae747df3770ce7c632c252ca0f9.png",
+    "sha256": "21ee8d0a67338c6719dfd98779fc911c06fcbae747df3770ce7c632c252ca0f9",
+    "bytes": 1294921,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-original-portrait.png": {
+    "asset": "assets/01384cc0afac31726467429bf2e94431eb2f6c6cd49003d144d4b7b3dddc657b.png",
+    "sha256": "01384cc0afac31726467429bf2e94431eb2f6c6cd49003d144d4b7b3dddc657b",
+    "bytes": 722598,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L1-original-native.png": {
+    "asset": "assets/32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69.png",
+    "sha256": "32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69",
+    "bytes": 40565,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L2-original-native.png": {
+    "asset": "assets/97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e.png",
+    "sha256": "97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e",
+    "bytes": 39422,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-0-original-native.png": {
+    "asset": "assets/c3f3a63dea0cdd2104b32b27fafe611d6b7d1c9458a0ebe05310ff628b6a1f8e.png",
+    "sha256": "c3f3a63dea0cdd2104b32b27fafe611d6b7d1c9458a0ebe05310ff628b6a1f8e",
+    "bytes": 28531,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-1-original-native.png": {
+    "asset": "assets/1705d87f8086e552193c37275a6c5bd4f903b3619c79d858de5f6fab618170a5.png",
+    "sha256": "1705d87f8086e552193c37275a6c5bd4f903b3619c79d858de5f6fab618170a5",
+    "bytes": 27550,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-production-density50-portrait.png": {
+    "asset": "assets/2d9cf7aa334992d48ced5a5cc754b268a423d61338c430517282b82f6495bb4f.png",
+    "sha256": "2d9cf7aa334992d48ced5a5cc754b268a423d61338c430517282b82f6495bb4f",
+    "bytes": 722592,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L1-production-density50-native.png": {
+    "asset": "assets/32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69.png",
+    "sha256": "32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69",
+    "bytes": 40565,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L2-production-density50-native.png": {
+    "asset": "assets/a63aaa46c0e76883ac6f716bf6aa80b6742758a5c00251ad2454c43a28b69ef8.png",
+    "sha256": "a63aaa46c0e76883ac6f716bf6aa80b6742758a5c00251ad2454c43a28b69ef8",
+    "bytes": 39424,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-0-production-density50-native.png": {
+    "asset": "assets/0c338758350712a7dc2a2e567b0923bbc06b9f547bd0d96142e52166a16fd269.png",
+    "sha256": "0c338758350712a7dc2a2e567b0923bbc06b9f547bd0d96142e52166a16fd269",
+    "bytes": 28549,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-1-production-density50-native.png": {
+    "asset": "assets/403a46b342c04220cb100162d567932f92c2bd6826219983fb6fb54a76448ea3.png",
+    "sha256": "403a46b342c04220cb100162d567932f92c2bd6826219983fb6fb54a76448ea3",
+    "bytes": 27555,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/e94346d60c4cce508235f6947e740da5ebbcabbf40e15a3c80fef87a4a257db0.png",
+    "sha256": "e94346d60c4cce508235f6947e740da5ebbcabbf40e15a3c80fef87a4a257db0",
+    "bytes": 722650,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L1-recovery-density50-native.png": {
+    "asset": "assets/f6ab12978f8ec62f9368e43cd85204a91e961c46ab05b7f117ec5a08d60ca8ea.png",
+    "sha256": "f6ab12978f8ec62f9368e43cd85204a91e961c46ab05b7f117ec5a08d60ca8ea",
+    "bytes": 40801,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L2-recovery-density50-native.png": {
+    "asset": "assets/83d4bd40631e174f7e48905670fac810eb319605d3d0fca6d91e7b5dd7f5ebaf.png",
+    "sha256": "83d4bd40631e174f7e48905670fac810eb319605d3d0fca6d91e7b5dd7f5ebaf",
+    "bytes": 39626,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-0-recovery-density50-native.png": {
+    "asset": "assets/1cc2bb63eac3bd80efdc57e70d5937283d46f116c7d5f12ed75073252f82f1af.png",
+    "sha256": "1cc2bb63eac3bd80efdc57e70d5937283d46f116c7d5f12ed75073252f82f1af",
+    "bytes": 28843,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-1-recovery-density50-native.png": {
+    "asset": "assets/ce248b8a755c0f658a03deed58610812f0016b7b05c6facacde6d7af675bd582.png",
+    "sha256": "ce248b8a755c0f658a03deed58610812f0016b7b05c6facacde6d7af675bd582",
+    "bytes": 27876,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-production-length50-portrait.png": {
+    "asset": "assets/905104c875d794f00a90ced4f6b9b65f5fa92b97d88c8eecc22186a49d5150d7.png",
+    "sha256": "905104c875d794f00a90ced4f6b9b65f5fa92b97d88c8eecc22186a49d5150d7",
+    "bytes": 722636,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L1-production-length50-native.png": {
+    "asset": "assets/32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69.png",
+    "sha256": "32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69",
+    "bytes": 40565,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L2-production-length50-native.png": {
+    "asset": "assets/97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e.png",
+    "sha256": "97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e",
+    "bytes": 39422,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-0-production-length50-native.png": {
+    "asset": "assets/3ffbf6aa2b0d930411d5f209c280a914b1a3ab1a597e2c7e88fb72e0904c598b.png",
+    "sha256": "3ffbf6aa2b0d930411d5f209c280a914b1a3ab1a597e2c7e88fb72e0904c598b",
+    "bytes": 28746,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-1-production-length50-native.png": {
+    "asset": "assets/ee78714325e496e3e82d8fd3778ab0cb7033b0918439b87bd2c4fe08b538cb9d.png",
+    "sha256": "ee78714325e496e3e82d8fd3778ab0cb7033b0918439b87bd2c4fe08b538cb9d",
+    "bytes": 27770,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/f2f56c5a18fbd297d78ecd7ee2dbcf9b02509caef5893a18f59d194a04573cdb.png",
+    "sha256": "f2f56c5a18fbd297d78ecd7ee2dbcf9b02509caef5893a18f59d194a04573cdb",
+    "bytes": 722597,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L1-recovery-length50-native.png": {
+    "asset": "assets/32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69.png",
+    "sha256": "32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69",
+    "bytes": 40565,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L2-recovery-length50-native.png": {
+    "asset": "assets/97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e.png",
+    "sha256": "97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e",
+    "bytes": 39422,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-0-recovery-length50-native.png": {
+    "asset": "assets/31e2adc4b7bdcdbc5b85107f5021f5b8dc8a3048551059988a1f2660be3a57a4.png",
+    "sha256": "31e2adc4b7bdcdbc5b85107f5021f5b8dc8a3048551059988a1f2660be3a57a4",
+    "bytes": 28542,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-1-recovery-length50-native.png": {
+    "asset": "assets/ed54515e0847daf9100d189a7600f3854937514ade8af540865658864dac7bc7.png",
+    "sha256": "ed54515e0847daf9100d189a7600f3854937514ade8af540865658864dac7bc7",
+    "bytes": 27553,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-definition50-portrait.png": {
+    "asset": "assets/430d6edb455b5513cfbfbfafc091b7f0a87c70d882d68f6d32b5498096a75931.png",
+    "sha256": "430d6edb455b5513cfbfbfafc091b7f0a87c70d882d68f6d32b5498096a75931",
+    "bytes": 722634,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L1-definition50-native.png": {
+    "asset": "assets/6c0c1d656f8cb733f146ede9213fef36a2120ba11f8369dc81c1c4e47b898f98.png",
+    "sha256": "6c0c1d656f8cb733f146ede9213fef36a2120ba11f8369dc81c1c4e47b898f98",
+    "bytes": 40751,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L2-definition50-native.png": {
+    "asset": "assets/a3db4b77d0f7f9951fa47bed1ae9bc9eaefad4a996c83efc1f7b5123a1b3916d.png",
+    "sha256": "a3db4b77d0f7f9951fa47bed1ae9bc9eaefad4a996c83efc1f7b5123a1b3916d",
+    "bytes": 39579,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-0-definition50-native.png": {
+    "asset": "assets/0378bff7e650f2fcc7a67551a6cb07a5b4f7c3b081c8d54a4f5e054e1d7a3fc5.png",
+    "sha256": "0378bff7e650f2fcc7a67551a6cb07a5b4f7c3b081c8d54a4f5e054e1d7a3fc5",
+    "bytes": 28889,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-1-definition50-native.png": {
+    "asset": "assets/236b9d23bb70b5f83b565d0328755f314e0fdf390785606c96c7a7b4a0d29d7e.png",
+    "sha256": "236b9d23bb70b5f83b565d0328755f314e0fdf390785606c96c7a7b4a0d29d7e",
+    "bytes": 27912,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-combined-natural-portrait.png": {
+    "asset": "assets/dd0240fdf81cb1d11b45035d476f767b9e98782e3c86e436b34173ff0b1cc382.png",
+    "sha256": "dd0240fdf81cb1d11b45035d476f767b9e98782e3c86e436b34173ff0b1cc382",
+    "bytes": 722611,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L1-combined-natural-native.png": {
+    "asset": "assets/4a61d346d72ae08ed4c83f7eb813d0adc93bfe08c8b8febe51a2044cd479c988.png",
+    "sha256": "4a61d346d72ae08ed4c83f7eb813d0adc93bfe08c8b8febe51a2044cd479c988",
+    "bytes": 40866,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L1-difference8x.png": {
+    "asset": "assets/9ee9ae1a338b3f0f10ae52a38eb3a5771697bb6a3dd82981c06bde5e542f97ba.png",
+    "sha256": "9ee9ae1a338b3f0f10ae52a38eb3a5771697bb6a3dd82981c06bde5e542f97ba",
+    "bytes": 1366,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L2-combined-natural-native.png": {
+    "asset": "assets/1f0de501f819d5305261c9602b8f981b19c0838633c41c1771d8a2f4ab7dc771.png",
+    "sha256": "1f0de501f819d5305261c9602b8f981b19c0838633c41c1771d8a2f4ab7dc771",
+    "bytes": 39648,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-F325-L2-difference8x.png": {
+    "asset": "assets/50924cb7c6c516b1f10061936349d66074be32813221b537ea32c1c3658643c7.png",
+    "sha256": "50924cb7c6c516b1f10061936349d66074be32813221b537ea32c1c3658643c7",
+    "bytes": 1373,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-0-combined-natural-native.png": {
+    "asset": "assets/b93b7f4126b4f0447991987b16899462c464100935b2115818a03a3f9d16b948.png",
+    "sha256": "b93b7f4126b4f0447991987b16899462c464100935b2115818a03a3f9d16b948",
+    "bytes": 28896,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-0-difference8x.png": {
+    "asset": "assets/cb50911de6c2ceb6927b1a01b3964c2270e31b7e294430b1efa1a85e68ceb5c8.png",
+    "sha256": "cb50911de6c2ceb6927b1a01b3964c2270e31b7e294430b1efa1a85e68ceb5c8",
+    "bytes": 2389,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-1-combined-natural-native.png": {
+    "asset": "assets/2e6f62ce2e37c76a0104b9bee70b5e4b5cff6a83c638477431080f8c955babf5.png",
+    "sha256": "2e6f62ce2e37c76a0104b9bee70b5e4b5cff6a83c638477431080f8c955babf5",
+    "bytes": 28005,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-1-difference8x.png": {
+    "asset": "assets/c11ed12046302ce2cf3f0d44fcdc97721f69ef0a342e729923c9a08e5d82d083.png",
+    "sha256": "c11ed12046302ce2cf3f0d44fcdc97721f69ef0a342e729923c9a08e5d82d083",
+    "bytes": 2546,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-original-portrait.png": {
+    "asset": "assets/498f52c6c463468d1afcc7ecbd5dc5771b46a5d9251904bd52b9a513da814f89.png",
+    "sha256": "498f52c6c463468d1afcc7ecbd5dc5771b46a5d9251904bd52b9a513da814f89",
+    "bytes": 1291389,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-F461-L1-original-native.png": {
+    "asset": "assets/ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4.png",
+    "sha256": "ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4",
+    "bytes": 43330,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-production-density50-portrait.png": {
+    "asset": "assets/57cd035171a4111f534e07563eb5e7c298e3c4488d8860db0c1963773d14a281.png",
+    "sha256": "57cd035171a4111f534e07563eb5e7c298e3c4488d8860db0c1963773d14a281",
+    "bytes": 1291390,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-F461-L1-production-density50-native.png": {
+    "asset": "assets/568555d3cb633b7b7d09612654677fe4893e4178b63228b04774d1ec810f069d.png",
+    "sha256": "568555d3cb633b7b7d09612654677fe4893e4178b63228b04774d1ec810f069d",
+    "bytes": 43541,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/d0a65435f8a3416a35c1d18f1961dfde962dcc7540f9194bb53f4b41c2c5e652.png",
+    "sha256": "d0a65435f8a3416a35c1d18f1961dfde962dcc7540f9194bb53f4b41c2c5e652",
+    "bytes": 1291420,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-F461-L1-recovery-density50-native.png": {
+    "asset": "assets/ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4.png",
+    "sha256": "ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4",
+    "bytes": 43330,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-production-length50-portrait.png": {
+    "asset": "assets/5839e076d245e3e321c2485d4c90e13713ed08090027c7019a236e90d11fb337.png",
+    "sha256": "5839e076d245e3e321c2485d4c90e13713ed08090027c7019a236e90d11fb337",
+    "bytes": 1291463,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-F461-L1-production-length50-native.png": {
+    "asset": "assets/43619cac6bf4c509bcb7fe951079cc92c2d01d58d6e3da7a6bf7b7e39cd75c90.png",
+    "sha256": "43619cac6bf4c509bcb7fe951079cc92c2d01d58d6e3da7a6bf7b7e39cd75c90",
+    "bytes": 43372,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/498f52c6c463468d1afcc7ecbd5dc5771b46a5d9251904bd52b9a513da814f89.png",
+    "sha256": "498f52c6c463468d1afcc7ecbd5dc5771b46a5d9251904bd52b9a513da814f89",
+    "bytes": 1291389,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-F461-L1-recovery-length50-native.png": {
+    "asset": "assets/ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4.png",
+    "sha256": "ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4",
+    "bytes": 43330,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-definition50-portrait.png": {
+    "asset": "assets/0a3aaf9828f3e8be5aa93027cf07812e25e718623777c5f3cb4bab3bc7ab8f3b.png",
+    "sha256": "0a3aaf9828f3e8be5aa93027cf07812e25e718623777c5f3cb4bab3bc7ab8f3b",
+    "bytes": 1291394,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-F461-L1-definition50-native.png": {
+    "asset": "assets/ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4.png",
+    "sha256": "ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4",
+    "bytes": 43330,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-combined-natural-portrait.png": {
+    "asset": "assets/38401ec014b27a06ff5aa8acb6b2c055e7424fbcf559f5475960da58f7c30fcb.png",
+    "sha256": "38401ec014b27a06ff5aa8acb6b2c055e7424fbcf559f5475960da58f7c30fcb",
+    "bytes": 1291401,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-F461-L1-combined-natural-native.png": {
+    "asset": "assets/ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4.png",
+    "sha256": "ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4",
+    "bytes": 43330,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-07-render/webkit-pexels-4611686.jpg-F461-L1-difference8x.png": {
+    "asset": "assets/d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7.png",
+    "sha256": "d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7",
+    "bytes": 515,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/verified-webkit.json": {
+    "asset": "assets/4c51576672b315c3a4ea9fe3d0ae0d2a095742451d110a78ee3826b88c454e1d.gz",
+    "sha256": "4c51576672b315c3a4ea9fe3d0ae0d2a095742451d110a78ee3826b88c454e1d",
+    "bytes": 3497,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-12-render-verified/manifest-webkit.json": {
+    "asset": "assets/2f4f021699e8f0f4a8b487993fa77637c84426141959b9e37e880c84edbbbe5b.gz",
+    "sha256": "2f4f021699e8f0f4a8b487993fa77637c84426141959b9e37e880c84edbbbe5b",
+    "bytes": 23950,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-original-portrait.png": {
+    "asset": "assets/01384cc0afac31726467429bf2e94431eb2f6c6cd49003d144d4b7b3dddc657b.png",
+    "sha256": "01384cc0afac31726467429bf2e94431eb2f6c6cd49003d144d4b7b3dddc657b",
+    "bytes": 722598,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L1-original-native.png": {
+    "asset": "assets/32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69.png",
+    "sha256": "32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69",
+    "bytes": 40565,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L2-original-native.png": {
+    "asset": "assets/97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e.png",
+    "sha256": "97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e",
+    "bytes": 39422,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-0-original-native.png": {
+    "asset": "assets/c3f3a63dea0cdd2104b32b27fafe611d6b7d1c9458a0ebe05310ff628b6a1f8e.png",
+    "sha256": "c3f3a63dea0cdd2104b32b27fafe611d6b7d1c9458a0ebe05310ff628b6a1f8e",
+    "bytes": 28531,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-1-original-native.png": {
+    "asset": "assets/1705d87f8086e552193c37275a6c5bd4f903b3619c79d858de5f6fab618170a5.png",
+    "sha256": "1705d87f8086e552193c37275a6c5bd4f903b3619c79d858de5f6fab618170a5",
+    "bytes": 27550,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-production-density50-portrait.png": {
+    "asset": "assets/2d9cf7aa334992d48ced5a5cc754b268a423d61338c430517282b82f6495bb4f.png",
+    "sha256": "2d9cf7aa334992d48ced5a5cc754b268a423d61338c430517282b82f6495bb4f",
+    "bytes": 722592,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L1-production-density50-native.png": {
+    "asset": "assets/32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69.png",
+    "sha256": "32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69",
+    "bytes": 40565,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L2-production-density50-native.png": {
+    "asset": "assets/a63aaa46c0e76883ac6f716bf6aa80b6742758a5c00251ad2454c43a28b69ef8.png",
+    "sha256": "a63aaa46c0e76883ac6f716bf6aa80b6742758a5c00251ad2454c43a28b69ef8",
+    "bytes": 39424,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-0-production-density50-native.png": {
+    "asset": "assets/0c338758350712a7dc2a2e567b0923bbc06b9f547bd0d96142e52166a16fd269.png",
+    "sha256": "0c338758350712a7dc2a2e567b0923bbc06b9f547bd0d96142e52166a16fd269",
+    "bytes": 28549,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-1-production-density50-native.png": {
+    "asset": "assets/403a46b342c04220cb100162d567932f92c2bd6826219983fb6fb54a76448ea3.png",
+    "sha256": "403a46b342c04220cb100162d567932f92c2bd6826219983fb6fb54a76448ea3",
+    "bytes": 27555,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/e94346d60c4cce508235f6947e740da5ebbcabbf40e15a3c80fef87a4a257db0.png",
+    "sha256": "e94346d60c4cce508235f6947e740da5ebbcabbf40e15a3c80fef87a4a257db0",
+    "bytes": 722650,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L1-recovery-density50-native.png": {
+    "asset": "assets/f6ab12978f8ec62f9368e43cd85204a91e961c46ab05b7f117ec5a08d60ca8ea.png",
+    "sha256": "f6ab12978f8ec62f9368e43cd85204a91e961c46ab05b7f117ec5a08d60ca8ea",
+    "bytes": 40801,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L2-recovery-density50-native.png": {
+    "asset": "assets/83d4bd40631e174f7e48905670fac810eb319605d3d0fca6d91e7b5dd7f5ebaf.png",
+    "sha256": "83d4bd40631e174f7e48905670fac810eb319605d3d0fca6d91e7b5dd7f5ebaf",
+    "bytes": 39626,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-0-recovery-density50-native.png": {
+    "asset": "assets/1cc2bb63eac3bd80efdc57e70d5937283d46f116c7d5f12ed75073252f82f1af.png",
+    "sha256": "1cc2bb63eac3bd80efdc57e70d5937283d46f116c7d5f12ed75073252f82f1af",
+    "bytes": 28843,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-1-recovery-density50-native.png": {
+    "asset": "assets/ce248b8a755c0f658a03deed58610812f0016b7b05c6facacde6d7af675bd582.png",
+    "sha256": "ce248b8a755c0f658a03deed58610812f0016b7b05c6facacde6d7af675bd582",
+    "bytes": 27876,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-production-length50-portrait.png": {
+    "asset": "assets/905104c875d794f00a90ced4f6b9b65f5fa92b97d88c8eecc22186a49d5150d7.png",
+    "sha256": "905104c875d794f00a90ced4f6b9b65f5fa92b97d88c8eecc22186a49d5150d7",
+    "bytes": 722636,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L1-production-length50-native.png": {
+    "asset": "assets/32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69.png",
+    "sha256": "32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69",
+    "bytes": 40565,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L2-production-length50-native.png": {
+    "asset": "assets/97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e.png",
+    "sha256": "97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e",
+    "bytes": 39422,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-0-production-length50-native.png": {
+    "asset": "assets/3ffbf6aa2b0d930411d5f209c280a914b1a3ab1a597e2c7e88fb72e0904c598b.png",
+    "sha256": "3ffbf6aa2b0d930411d5f209c280a914b1a3ab1a597e2c7e88fb72e0904c598b",
+    "bytes": 28746,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-1-production-length50-native.png": {
+    "asset": "assets/ee78714325e496e3e82d8fd3778ab0cb7033b0918439b87bd2c4fe08b538cb9d.png",
+    "sha256": "ee78714325e496e3e82d8fd3778ab0cb7033b0918439b87bd2c4fe08b538cb9d",
+    "bytes": 27770,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/f2f56c5a18fbd297d78ecd7ee2dbcf9b02509caef5893a18f59d194a04573cdb.png",
+    "sha256": "f2f56c5a18fbd297d78ecd7ee2dbcf9b02509caef5893a18f59d194a04573cdb",
+    "bytes": 722597,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L1-recovery-length50-native.png": {
+    "asset": "assets/32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69.png",
+    "sha256": "32e9be77b073e128054be97ff5660e7bf617f54bd0e1dd28d4963e21f336fa69",
+    "bytes": 40565,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L2-recovery-length50-native.png": {
+    "asset": "assets/97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e.png",
+    "sha256": "97cfb74e3ce6e351a9e417fdd6cf3c9e95ba09c8cb54b69d501dc8efc4035a8e",
+    "bytes": 39422,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-0-recovery-length50-native.png": {
+    "asset": "assets/31e2adc4b7bdcdbc5b85107f5021f5b8dc8a3048551059988a1f2660be3a57a4.png",
+    "sha256": "31e2adc4b7bdcdbc5b85107f5021f5b8dc8a3048551059988a1f2660be3a57a4",
+    "bytes": 28542,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-1-recovery-length50-native.png": {
+    "asset": "assets/ed54515e0847daf9100d189a7600f3854937514ade8af540865658864dac7bc7.png",
+    "sha256": "ed54515e0847daf9100d189a7600f3854937514ade8af540865658864dac7bc7",
+    "bytes": 27553,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-definition50-portrait.png": {
+    "asset": "assets/430d6edb455b5513cfbfbfafc091b7f0a87c70d882d68f6d32b5498096a75931.png",
+    "sha256": "430d6edb455b5513cfbfbfafc091b7f0a87c70d882d68f6d32b5498096a75931",
+    "bytes": 722634,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L1-definition50-native.png": {
+    "asset": "assets/6c0c1d656f8cb733f146ede9213fef36a2120ba11f8369dc81c1c4e47b898f98.png",
+    "sha256": "6c0c1d656f8cb733f146ede9213fef36a2120ba11f8369dc81c1c4e47b898f98",
+    "bytes": 40751,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L2-definition50-native.png": {
+    "asset": "assets/a3db4b77d0f7f9951fa47bed1ae9bc9eaefad4a996c83efc1f7b5123a1b3916d.png",
+    "sha256": "a3db4b77d0f7f9951fa47bed1ae9bc9eaefad4a996c83efc1f7b5123a1b3916d",
+    "bytes": 39579,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-0-definition50-native.png": {
+    "asset": "assets/0378bff7e650f2fcc7a67551a6cb07a5b4f7c3b081c8d54a4f5e054e1d7a3fc5.png",
+    "sha256": "0378bff7e650f2fcc7a67551a6cb07a5b4f7c3b081c8d54a4f5e054e1d7a3fc5",
+    "bytes": 28889,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-1-definition50-native.png": {
+    "asset": "assets/236b9d23bb70b5f83b565d0328755f314e0fdf390785606c96c7a7b4a0d29d7e.png",
+    "sha256": "236b9d23bb70b5f83b565d0328755f314e0fdf390785606c96c7a7b4a0d29d7e",
+    "bytes": 27912,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-combined-natural-portrait.png": {
+    "asset": "assets/dd0240fdf81cb1d11b45035d476f767b9e98782e3c86e436b34173ff0b1cc382.png",
+    "sha256": "dd0240fdf81cb1d11b45035d476f767b9e98782e3c86e436b34173ff0b1cc382",
+    "bytes": 722611,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L1-combined-natural-native.png": {
+    "asset": "assets/4a61d346d72ae08ed4c83f7eb813d0adc93bfe08c8b8febe51a2044cd479c988.png",
+    "sha256": "4a61d346d72ae08ed4c83f7eb813d0adc93bfe08c8b8febe51a2044cd479c988",
+    "bytes": 40866,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L1-difference8x.png": {
+    "asset": "assets/9ee9ae1a338b3f0f10ae52a38eb3a5771697bb6a3dd82981c06bde5e542f97ba.png",
+    "sha256": "9ee9ae1a338b3f0f10ae52a38eb3a5771697bb6a3dd82981c06bde5e542f97ba",
+    "bytes": 1366,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L2-combined-natural-native.png": {
+    "asset": "assets/1f0de501f819d5305261c9602b8f981b19c0838633c41c1771d8a2f4ab7dc771.png",
+    "sha256": "1f0de501f819d5305261c9602b8f981b19c0838633c41c1771d8a2f4ab7dc771",
+    "bytes": 39648,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-F325-L2-difference8x.png": {
+    "asset": "assets/50924cb7c6c516b1f10061936349d66074be32813221b537ea32c1c3658643c7.png",
+    "sha256": "50924cb7c6c516b1f10061936349d66074be32813221b537ea32c1c3658643c7",
+    "bytes": 1373,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-0-combined-natural-native.png": {
+    "asset": "assets/b93b7f4126b4f0447991987b16899462c464100935b2115818a03a3f9d16b948.png",
+    "sha256": "b93b7f4126b4f0447991987b16899462c464100935b2115818a03a3f9d16b948",
+    "bytes": 28896,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-0-difference8x.png": {
+    "asset": "assets/cb50911de6c2ceb6927b1a01b3964c2270e31b7e294430b1efa1a85e68ceb5c8.png",
+    "sha256": "cb50911de6c2ceb6927b1a01b3964c2270e31b7e294430b1efa1a85e68ceb5c8",
+    "bytes": 2389,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-1-combined-natural-native.png": {
+    "asset": "assets/2e6f62ce2e37c76a0104b9bee70b5e4b5cff6a83c638477431080f8c955babf5.png",
+    "sha256": "2e6f62ce2e37c76a0104b9bee70b5e4b5cff6a83c638477431080f8c955babf5",
+    "bytes": 28005,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-32526448.jpg-auto-right-1-difference8x.png": {
+    "asset": "assets/c11ed12046302ce2cf3f0d44fcdc97721f69ef0a342e729923c9a08e5d82d083.png",
+    "sha256": "c11ed12046302ce2cf3f0d44fcdc97721f69ef0a342e729923c9a08e5d82d083",
+    "bytes": 2546,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-original-portrait.png": {
+    "asset": "assets/498f52c6c463468d1afcc7ecbd5dc5771b46a5d9251904bd52b9a513da814f89.png",
+    "sha256": "498f52c6c463468d1afcc7ecbd5dc5771b46a5d9251904bd52b9a513da814f89",
+    "bytes": 1291389,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-F461-L1-original-native.png": {
+    "asset": "assets/ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4.png",
+    "sha256": "ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4",
+    "bytes": 43330,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-production-density50-portrait.png": {
+    "asset": "assets/57cd035171a4111f534e07563eb5e7c298e3c4488d8860db0c1963773d14a281.png",
+    "sha256": "57cd035171a4111f534e07563eb5e7c298e3c4488d8860db0c1963773d14a281",
+    "bytes": 1291390,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-F461-L1-production-density50-native.png": {
+    "asset": "assets/568555d3cb633b7b7d09612654677fe4893e4178b63228b04774d1ec810f069d.png",
+    "sha256": "568555d3cb633b7b7d09612654677fe4893e4178b63228b04774d1ec810f069d",
+    "bytes": 43541,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/d0a65435f8a3416a35c1d18f1961dfde962dcc7540f9194bb53f4b41c2c5e652.png",
+    "sha256": "d0a65435f8a3416a35c1d18f1961dfde962dcc7540f9194bb53f4b41c2c5e652",
+    "bytes": 1291420,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-F461-L1-recovery-density50-native.png": {
+    "asset": "assets/ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4.png",
+    "sha256": "ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4",
+    "bytes": 43330,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-production-length50-portrait.png": {
+    "asset": "assets/5839e076d245e3e321c2485d4c90e13713ed08090027c7019a236e90d11fb337.png",
+    "sha256": "5839e076d245e3e321c2485d4c90e13713ed08090027c7019a236e90d11fb337",
+    "bytes": 1291463,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-F461-L1-production-length50-native.png": {
+    "asset": "assets/43619cac6bf4c509bcb7fe951079cc92c2d01d58d6e3da7a6bf7b7e39cd75c90.png",
+    "sha256": "43619cac6bf4c509bcb7fe951079cc92c2d01d58d6e3da7a6bf7b7e39cd75c90",
+    "bytes": 43372,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/498f52c6c463468d1afcc7ecbd5dc5771b46a5d9251904bd52b9a513da814f89.png",
+    "sha256": "498f52c6c463468d1afcc7ecbd5dc5771b46a5d9251904bd52b9a513da814f89",
+    "bytes": 1291389,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-F461-L1-recovery-length50-native.png": {
+    "asset": "assets/ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4.png",
+    "sha256": "ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4",
+    "bytes": 43330,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-definition50-portrait.png": {
+    "asset": "assets/0a3aaf9828f3e8be5aa93027cf07812e25e718623777c5f3cb4bab3bc7ab8f3b.png",
+    "sha256": "0a3aaf9828f3e8be5aa93027cf07812e25e718623777c5f3cb4bab3bc7ab8f3b",
+    "bytes": 1291394,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-F461-L1-definition50-native.png": {
+    "asset": "assets/ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4.png",
+    "sha256": "ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4",
+    "bytes": 43330,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-combined-natural-portrait.png": {
+    "asset": "assets/38401ec014b27a06ff5aa8acb6b2c055e7424fbcf559f5475960da58f7c30fcb.png",
+    "sha256": "38401ec014b27a06ff5aa8acb6b2c055e7424fbcf559f5475960da58f7c30fcb",
+    "bytes": 1291401,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-F461-L1-combined-natural-native.png": {
+    "asset": "assets/ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4.png",
+    "sha256": "ae659b46c6ae032787da8a9cfc576bd0c8f657e80627e3a08c298962b7dd9dd4",
+    "bytes": 43330,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-12-render-verified/webkit-pexels-4611686.jpg-F461-L1-difference8x.png": {
+    "asset": "assets/d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7.png",
+    "sha256": "d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7",
+    "bytes": 515,
+    "gzip": false
+  },
+  "tests/visual/lash-freeend2-freeze.json": {
+    "asset": "assets/a49f35be1b25e545ca7c91ba10e4eb9de73a6ccbe232e5b5a9792c9e7f1028fd.gz",
+    "sha256": "a49f35be1b25e545ca7c91ba10e4eb9de73a6ccbe232e5b5a9792c9e7f1028fd",
+    "bytes": 1386,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend2-sources.json": {
+    "asset": "assets/88ca1a0514cfcb09604aae7ecf52ebf42f4388d407fe4b1c5e3eb5ca93c5a65f.gz",
+    "sha256": "88ca1a0514cfcb09604aae7ecf52ebf42f4388d407fe4b1c5e3eb5ca93c5a65f",
+    "bytes": 1234,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend2-crops.json": {
+    "asset": "assets/04b5bbde8bf8c157ee3fec6ee4f75f140d9bb413b9a51e0d6fc6edefaac92ad5.gz",
+    "sha256": "04b5bbde8bf8c157ee3fec6ee4f75f140d9bb413b9a51e0d6fc6edefaac92ad5",
+    "bytes": 427,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend2-primary-screen.json": {
+    "asset": "assets/081f33824c0b4705303b6736d678adcbb6e4ef3322bd7a3db3f492004761d801.gz",
+    "sha256": "081f33824c0b4705303b6736d678adcbb6e4ef3322bd7a3db3f492004761d801",
+    "bytes": 1549,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend2-independent-labels.json": {
+    "asset": "assets/3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810.gz",
+    "sha256": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810",
+    "bytes": 9593,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-01-download/manifest.json": {
+    "asset": "assets/e2e6ac6b4592bc6934c245ddb367b3058bbddd49808c4adf440f03a9b676bb57.gz",
+    "sha256": "e2e6ac6b4592bc6934c245ddb367b3058bbddd49808c4adf440f03a9b676bb57",
+    "bytes": 1255,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-03-native/manifest.json": {
+    "asset": "assets/76be026f00db10ce6474c85854b8087a896892b0632770f17da72b8bbce0b85a.gz",
+    "sha256": "76be026f00db10ce6474c85854b8087a896892b0632770f17da72b8bbce0b85a",
+    "bytes": 4040,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-01-download/pexels-16720351.jpg": {
+    "asset": "assets/925d272e71b809145f347cd8f6699486600db62dfed49f0188c6dc9d8f114ce8.jpg",
+    "sha256": "925d272e71b809145f347cd8f6699486600db62dfed49f0188c6dc9d8f114ce8",
+    "bytes": 3239025,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-01-download/pexels-21792059.jpg": {
+    "asset": "assets/f1f9fe785f1afed56f504fa3c0c06f22b1cabc95978cd912c999840217e15079.jpg",
+    "sha256": "f1f9fe785f1afed56f504fa3c0c06f22b1cabc95978cd912c999840217e15079",
+    "bytes": 1045359,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-03-native/pexels-16720351-visible-profile-eye.png": {
+    "asset": "assets/da24826af52da837f1a7db0c457bd06e5913b662282028b32f222d7cd102ee29.png",
+    "sha256": "da24826af52da837f1a7db0c457bd06e5913b662282028b32f222d7cd102ee29",
+    "bytes": 876342,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-03-native/pexels-21792059-screen-left.png": {
+    "asset": "assets/b44c4a409d38468bf9e6366565277bf9749276e5ebad357d5602bd9073c493ed.png",
+    "sha256": "b44c4a409d38468bf9e6366565277bf9749276e5ebad357d5602bd9073c493ed",
+    "bytes": 956398,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-03-native/pexels-21792059-screen-right.png": {
+    "asset": "assets/9128e2ab0a6e7b38c1b43d0d3f6c8580d96f929e3c7d6c2d25f37e863e040be4.png",
+    "sha256": "9128e2ab0a6e7b38c1b43d0d3f6c8580d96f929e3c7d6c2d25f37e863e040be4",
+    "bytes": 643555,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-independent/pexels-21792059-screen-left-zoom.png": {
+    "asset": "assets/8579a030f87c9faa3e4897e3faad22664b557bef60ebf39e2a93d5e2dd775d6c.png",
+    "sha256": "8579a030f87c9faa3e4897e3faad22664b557bef60ebf39e2a93d5e2dd775d6c",
+    "bytes": 147310,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-05-analysis/manifest-chromium.json": {
+    "asset": "assets/efa75ef4abb77df4bcafd3ea1c7ae5ec11f041586dea3ce13c45311f22f8c8f9.gz",
+    "sha256": "efa75ef4abb77df4bcafd3ea1c7ae5ec11f041586dea3ce13c45311f22f8c8f9",
+    "bytes": 219459,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-07-render/manifest-chromium.json": {
+    "asset": "assets/360f64f1b7a91a77c68949531f1d1da8bb438b2ae49e38234d367bb308816c6f.gz",
+    "sha256": "360f64f1b7a91a77c68949531f1d1da8bb438b2ae49e38234d367bb308816c6f",
+    "bytes": 10533,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/candidate-src/retouch/eyeGeometry.mjs": {
+    "asset": "assets/b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950.gz",
+    "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950",
+    "bytes": 5807,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/candidate-src/retouch/lashAnalysis.mjs": {
+    "asset": "assets/685d15e8dd63a491b25b7110f06fddb2705fe6d9393a20ceddc328af22af0d8a.gz",
+    "sha256": "685d15e8dd63a491b25b7110f06fddb2705fe6d9393a20ceddc328af22af0d8a",
+    "bytes": 30388,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/candidate-src/retouch/lashEnhancement.mjs": {
+    "asset": "assets/d1e42d9f5b88b881a43526bccfb7b3ec0551580af2e4213ce0da2e27ef618554.gz",
+    "sha256": "d1e42d9f5b88b881a43526bccfb7b3ec0551580af2e4213ce0da2e27ef618554",
+    "bytes": 16590,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/candidate-src/retouch/retouch.mjs": {
+    "asset": "assets/74cfb992b5da1b09841eac8faee092bf897aa9105062c87c91e5805d2a446083.gz",
+    "sha256": "74cfb992b5da1b09841eac8faee092bf897aa9105062c87c91e5805d2a446083",
+    "bytes": 21430,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/candidate-src/retouch/skinMask.mjs": {
+    "asset": "assets/69f49df9d4b6279a1422a701c1ea1081c55834e736ee744bc1e83019c7a721ef.gz",
+    "sha256": "69f49df9d4b6279a1422a701c1ea1081c55834e736ee744bc1e83019c7a721ef",
+    "bytes": 12627,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/candidate-src/rendering/canvasFilters.js": {
+    "asset": "assets/dfe7e11adcf495faccde264e7f7a8e07a43e3bfe5ef63c62256d7080eac0c2d9.gz",
+    "sha256": "dfe7e11adcf495faccde264e7f7a8e07a43e3bfe5ef63c62256d7080eac0c2d9",
+    "bytes": 7620,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/candidate-src/rendering/imageRenderer.js": {
+    "asset": "assets/38593563a1caeeaf983fdf22c7c01de79e7f70084f4b8e8d6ddb982e5ec03a00.gz",
+    "sha256": "38593563a1caeeaf983fdf22c7c01de79e7f70084f4b8e8d6ddb982e5ec03a00",
+    "bytes": 15765,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/candidate-src/vision/faceDetector.mjs": {
+    "asset": "assets/85f2a7b61d5d728772a5e1374cd752ec7d162eb60d437903605455bf48e529f6.gz",
+    "sha256": "85f2a7b61d5d728772a5e1374cd752ec7d162eb60d437903605455bf48e529f6",
+    "bytes": 16323,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/candidate-src/vision/faceGeometry.mjs": {
+    "asset": "assets/56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009.gz",
+    "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009",
+    "bytes": 5686,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/candidate-src/vision/faceOverlay.mjs": {
+    "asset": "assets/c801f52ef009373a49c6ab2590cde2f8ba3060f827f2e60837230d16c81441f8.gz",
+    "sha256": "c801f52ef009373a49c6ab2590cde2f8ba3060f827f2e60837230d16c81441f8",
+    "bytes": 2031,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/candidate-src/vision/faceWorker.js": {
+    "asset": "assets/4ff023742a523afdf1dd740726fdea602b94cedc0e389b64e5e09cd922f2b795.gz",
+    "sha256": "4ff023742a523afdf1dd740726fdea602b94cedc0e389b64e5e09cd922f2b795",
+    "bytes": 4425,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/chromium-pexels-21792059.jpg-geometry.png": {
+    "asset": "assets/c3e1eb5313f37feca8701078229df7f853bde7dbd759887344451cbf6c76389b.png",
+    "sha256": "c3e1eb5313f37feca8701078229df7f853bde7dbd759887344451cbf6c76389b",
+    "bytes": 2878618,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-original-portrait.png": {
+    "asset": "assets/d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2.png",
+    "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+    "bytes": 2964559,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L1-original-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L2-original-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-production-density50-portrait.png": {
+    "asset": "assets/d062d1597f26850becad2359e5b185e79f911fa4a0c0564d291a3f783ebb6faf.png",
+    "sha256": "d062d1597f26850becad2359e5b185e79f911fa4a0c0564d291a3f783ebb6faf",
+    "bytes": 2964815,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L1-production-density50-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L2-production-density50-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2.png",
+    "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+    "bytes": 2964559,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L1-recovery-density50-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L2-recovery-density50-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-production-length50-portrait.png": {
+    "asset": "assets/06c241111d0f783ec8ecb8af9b4b137431a0ce1feb764cdf5046e40706c68312.png",
+    "sha256": "06c241111d0f783ec8ecb8af9b4b137431a0ce1feb764cdf5046e40706c68312",
+    "bytes": 2964579,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L1-production-length50-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L2-production-length50-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2.png",
+    "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+    "bytes": 2964559,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L1-recovery-length50-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L2-recovery-length50-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-definition50-portrait.png": {
+    "asset": "assets/d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2.png",
+    "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+    "bytes": 2964559,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L1-definition50-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L2-definition50-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-combined-natural-portrait.png": {
+    "asset": "assets/d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2.png",
+    "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+    "bytes": 2964559,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L1-combined-natural-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L1-difference8x.png": {
+    "asset": "assets/91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d.png",
+    "sha256": "91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d",
+    "bytes": 1186,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L2-combined-natural-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L2-difference8x.png": {
+    "asset": "assets/91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d.png",
+    "sha256": "91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d",
+    "bytes": 1186,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/verified-chromium.json": {
+    "asset": "assets/2d480f722ae6f972dbf3c599988f892cc06760f336a024b22077b88f93ab5e14.gz",
+    "sha256": "2d480f722ae6f972dbf3c599988f892cc06760f336a024b22077b88f93ab5e14",
+    "bytes": 3004,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-12-render-verified/manifest-chromium.json": {
+    "asset": "assets/42baf2a1f31145bd14e63bc10e2b70fb70fcc66ba1275e63d0e294c1df1d2232.gz",
+    "sha256": "42baf2a1f31145bd14e63bc10e2b70fb70fcc66ba1275e63d0e294c1df1d2232",
+    "bytes": 10534,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-original-portrait.png": {
+    "asset": "assets/d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2.png",
+    "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+    "bytes": 2964559,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L1-original-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L2-original-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-production-density50-portrait.png": {
+    "asset": "assets/d062d1597f26850becad2359e5b185e79f911fa4a0c0564d291a3f783ebb6faf.png",
+    "sha256": "d062d1597f26850becad2359e5b185e79f911fa4a0c0564d291a3f783ebb6faf",
+    "bytes": 2964815,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L1-production-density50-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L2-production-density50-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2.png",
+    "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+    "bytes": 2964559,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L1-recovery-density50-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L2-recovery-density50-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-production-length50-portrait.png": {
+    "asset": "assets/06c241111d0f783ec8ecb8af9b4b137431a0ce1feb764cdf5046e40706c68312.png",
+    "sha256": "06c241111d0f783ec8ecb8af9b4b137431a0ce1feb764cdf5046e40706c68312",
+    "bytes": 2964579,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L1-production-length50-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L2-production-length50-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2.png",
+    "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+    "bytes": 2964559,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L1-recovery-length50-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L2-recovery-length50-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-definition50-portrait.png": {
+    "asset": "assets/d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2.png",
+    "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+    "bytes": 2964559,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L1-definition50-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L2-definition50-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-combined-natural-portrait.png": {
+    "asset": "assets/d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2.png",
+    "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+    "bytes": 2964559,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L1-combined-natural-native.png": {
+    "asset": "assets/dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f.png",
+    "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+    "bytes": 43152,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L1-difference8x.png": {
+    "asset": "assets/91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d.png",
+    "sha256": "91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d",
+    "bytes": 1186,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L2-combined-natural-native.png": {
+    "asset": "assets/0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15.png",
+    "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+    "bytes": 45178,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/chromium-pexels-21792059.jpg-F2-217-L2-difference8x.png": {
+    "asset": "assets/91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d.png",
+    "sha256": "91c984eff46a157a35b96f4019ea4931351c6af31cccb74a4b12d6c077e3580d",
+    "bytes": 1186,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-05-analysis/manifest-webkit.json": {
+    "asset": "assets/c34a4af45c4d9e308a1ed048101685c07adbf208f7c30e7939f4b9d37ee20da7.gz",
+    "sha256": "c34a4af45c4d9e308a1ed048101685c07adbf208f7c30e7939f4b9d37ee20da7",
+    "bytes": 219343,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-07-render/manifest-webkit.json": {
+    "asset": "assets/ad988d3bd7e0a15df4ea09f6a0f8fb61596b65212ca10899e62cc04e16fa8a0d.gz",
+    "sha256": "ad988d3bd7e0a15df4ea09f6a0f8fb61596b65212ca10899e62cc04e16fa8a0d",
+    "bytes": 10380,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-analysis/webkit-pexels-21792059.jpg-geometry.png": {
+    "asset": "assets/40b4adfeb7657a2d9d454786cb088d450ea9db2b278008083065d0c73890fca0.png",
+    "sha256": "40b4adfeb7657a2d9d454786cb088d450ea9db2b278008083065d0c73890fca0",
+    "bytes": 2382367,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-original-portrait.png": {
+    "asset": "assets/480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd.png",
+    "sha256": "480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd",
+    "bytes": 2364489,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L1-original-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L2-original-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-production-density50-portrait.png": {
+    "asset": "assets/108692bb6c571bf8b1ce0787833ebc63b568a7ce7472d537f31cd956e562b039.png",
+    "sha256": "108692bb6c571bf8b1ce0787833ebc63b568a7ce7472d537f31cd956e562b039",
+    "bytes": 2364586,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L1-production-density50-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L2-production-density50-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd.png",
+    "sha256": "480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd",
+    "bytes": 2364489,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L1-recovery-density50-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L2-recovery-density50-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-production-length50-portrait.png": {
+    "asset": "assets/fc993ad8ef7a0538f318a29986327514d3d5324c921661c82e30ec0f0bcb7009.png",
+    "sha256": "fc993ad8ef7a0538f318a29986327514d3d5324c921661c82e30ec0f0bcb7009",
+    "bytes": 2364835,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L1-production-length50-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L2-production-length50-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd.png",
+    "sha256": "480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd",
+    "bytes": 2364489,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L1-recovery-length50-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L2-recovery-length50-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-definition50-portrait.png": {
+    "asset": "assets/480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd.png",
+    "sha256": "480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd",
+    "bytes": 2364489,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L1-definition50-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L2-definition50-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-combined-natural-portrait.png": {
+    "asset": "assets/480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd.png",
+    "sha256": "480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd",
+    "bytes": 2364489,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L1-combined-natural-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L1-difference8x.png": {
+    "asset": "assets/d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7.png",
+    "sha256": "d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7",
+    "bytes": 515,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L2-combined-natural-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L2-difference8x.png": {
+    "asset": "assets/d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7.png",
+    "sha256": "d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7",
+    "bytes": 515,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/verified-webkit.json": {
+    "asset": "assets/bcc069c485699725b71fa5ed5b61462b1c746186d29966eb02040667fefd135e.gz",
+    "sha256": "bcc069c485699725b71fa5ed5b61462b1c746186d29966eb02040667fefd135e",
+    "bytes": 3004,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-12-render-verified/manifest-webkit.json": {
+    "asset": "assets/6b7a8275fe792b614d576ea10167ee95bd41e2e2fdcd458555dd9c9009d8eeb5.gz",
+    "sha256": "6b7a8275fe792b614d576ea10167ee95bd41e2e2fdcd458555dd9c9009d8eeb5",
+    "bytes": 10380,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-original-portrait.png": {
+    "asset": "assets/480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd.png",
+    "sha256": "480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd",
+    "bytes": 2364489,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L1-original-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L2-original-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-production-density50-portrait.png": {
+    "asset": "assets/108692bb6c571bf8b1ce0787833ebc63b568a7ce7472d537f31cd956e562b039.png",
+    "sha256": "108692bb6c571bf8b1ce0787833ebc63b568a7ce7472d537f31cd956e562b039",
+    "bytes": 2364586,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L1-production-density50-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L2-production-density50-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-recovery-density50-portrait.png": {
+    "asset": "assets/480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd.png",
+    "sha256": "480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd",
+    "bytes": 2364489,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L1-recovery-density50-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L2-recovery-density50-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-production-length50-portrait.png": {
+    "asset": "assets/fc993ad8ef7a0538f318a29986327514d3d5324c921661c82e30ec0f0bcb7009.png",
+    "sha256": "fc993ad8ef7a0538f318a29986327514d3d5324c921661c82e30ec0f0bcb7009",
+    "bytes": 2364835,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L1-production-length50-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L2-production-length50-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-recovery-length50-portrait.png": {
+    "asset": "assets/480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd.png",
+    "sha256": "480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd",
+    "bytes": 2364489,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L1-recovery-length50-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L2-recovery-length50-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-definition50-portrait.png": {
+    "asset": "assets/480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd.png",
+    "sha256": "480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd",
+    "bytes": 2364489,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L1-definition50-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L2-definition50-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-combined-natural-portrait.png": {
+    "asset": "assets/480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd.png",
+    "sha256": "480b243ddb29f402a4459c2681f4786ab6deae0d485188b43d8a0a975e7bc3fd",
+    "bytes": 2364489,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L1-combined-natural-native.png": {
+    "asset": "assets/4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1.png",
+    "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+    "bytes": 36169,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L1-difference8x.png": {
+    "asset": "assets/d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7.png",
+    "sha256": "d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7",
+    "bytes": 515,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L2-combined-natural-native.png": {
+    "asset": "assets/e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57.png",
+    "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+    "bytes": 37712,
+    "gzip": false
+  },
+  "tests/visual/out/freeend2-12-render-verified/webkit-pexels-21792059.jpg-F2-217-L2-difference8x.png": {
+    "asset": "assets/d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7.png",
+    "sha256": "d35090841fc95a6f8c1379b0855cd7ad4782c27eb7f7ff0a1ad1a768ff43b8f7",
+    "bytes": 515,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-baseline-src/source-hashes.json": {
+    "asset": "assets/c07aa307aaacd4bc2aa109ac67bd7e85ed2909ec481219582177700340994b60.gz",
+    "sha256": "c07aa307aaacd4bc2aa109ac67bd7e85ed2909ec481219582177700340994b60",
+    "bytes": 1209,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-baseline-src/rendering/canvasFilters.js": {
+    "asset": "assets/b21453b58fd7150b1bc187d8d907181030f46616c264d5207836584ed8912568.gz",
+    "sha256": "b21453b58fd7150b1bc187d8d907181030f46616c264d5207836584ed8912568",
+    "bytes": 7488,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-baseline-src/rendering/imageRenderer.js": {
+    "asset": "assets/6a7d0375cb081b0bcdbbe953a9311075773e20fff91cb21e554324f919b56da6.gz",
+    "sha256": "6a7d0375cb081b0bcdbbe953a9311075773e20fff91cb21e554324f919b56da6",
+    "bytes": 15428,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-baseline-src/retouch/eyeGeometry.mjs": {
+    "asset": "assets/b2f130c65245ef0a9c14e0099f644f0a435cbb3cd456b67674832b9fffd0f725.gz",
+    "sha256": "b2f130c65245ef0a9c14e0099f644f0a435cbb3cd456b67674832b9fffd0f725",
+    "bytes": 5207,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-baseline-src/retouch/lashAnalysis.mjs": {
+    "asset": "assets/3a8d3c55cec53ec388f16203dbcc9cfd68fbf8f0184dcebb29a81c638dc67e21.gz",
+    "sha256": "3a8d3c55cec53ec388f16203dbcc9cfd68fbf8f0184dcebb29a81c638dc67e21",
+    "bytes": 8378,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-baseline-src/retouch/lashEnhancement.mjs": {
+    "asset": "assets/f63b3c4eeaece71411c59041071a22893001d51708fa45d9a2226bbdc31a73d1.gz",
+    "sha256": "f63b3c4eeaece71411c59041071a22893001d51708fa45d9a2226bbdc31a73d1",
+    "bytes": 11249,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-baseline-src/retouch/retouch.mjs": {
+    "asset": "assets/24d29c3db4575ec767e4d534c72df24b172d9d9de74e0fb942ec1b6e7c93156a.gz",
+    "sha256": "24d29c3db4575ec767e4d534c72df24b172d9d9de74e0fb942ec1b6e7c93156a",
+    "bytes": 19886,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-baseline-src/retouch/skinMask.mjs": {
+    "asset": "assets/a4afc05bca77d70d2a0cdd77f813af415faa2f1c6b4f02429d4ec2dd14352b5a.gz",
+    "sha256": "a4afc05bca77d70d2a0cdd77f813af415faa2f1c6b4f02429d4ec2dd14352b5a",
+    "bytes": 12293,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-baseline-src/vision/faceDetector.mjs": {
+    "asset": "assets/cabd5c0122fa5d658981b0e86c07a274f2f1ce9d3b81b2adbe9c07ab1b48e741.gz",
+    "sha256": "cabd5c0122fa5d658981b0e86c07a274f2f1ce9d3b81b2adbe9c07ab1b48e741",
+    "bytes": 15864,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-baseline-src/vision/faceGeometry.mjs": {
+    "asset": "assets/491c94d9b613b1dfcfbffac89b50c15b131f02281d7aad0a92d8e705b5caea7d.gz",
+    "sha256": "491c94d9b613b1dfcfbffac89b50c15b131f02281d7aad0a92d8e705b5caea7d",
+    "bytes": 5531,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-baseline-src/vision/faceOverlay.mjs": {
+    "asset": "assets/67bece45d82a35f1e6fd3be69140042990c9f9a6f838a0d884b61bd4d22ec183.gz",
+    "sha256": "67bece45d82a35f1e6fd3be69140042990c9f9a6f838a0d884b61bd4d22ec183",
+    "bytes": 1969,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-baseline-src/vision/faceWorker.js": {
+    "asset": "assets/0cad9ac8a6d03f505133db86996549ac45b3236aaa547721d22ca7d6817f034e.gz",
+    "sha256": "0cad9ac8a6d03f505133db86996549ac45b3236aaa547721d22ca7d6817f034e",
+    "bytes": 4328,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-10-audit.json": {
+    "asset": "assets/90e3a3d493866d4f8fb3f5c063685955ca1752c0154525b964f1f33af6d8f83c.gz",
+    "sha256": "90e3a3d493866d4f8fb3f5c063685955ca1752c0154525b964f1f33af6d8f83c",
+    "bytes": 36573,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-11-debug/freeend-chromium.json": {
+    "asset": "assets/5ce27de834a0c5a6f6ca66de5bf83d4136b65d2522e2cb1fda52519ece13d861.gz",
+    "sha256": "5ce27de834a0c5a6f6ca66de5bf83d4136b65d2522e2cb1fda52519ece13d861",
+    "bytes": 9027,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-32526448.jpg-left-ridgeResponseMap.png": {
+    "asset": "assets/1cad8261f1d63e74ea9be62121a8dd3a056bb3b5547c6aabea3d2d4c694bb806.png",
+    "sha256": "1cad8261f1d63e74ea9be62121a8dd3a056bb3b5547c6aabea3d2d4c694bb806",
+    "bytes": 4427,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-32526448.jpg-left-densityConfidenceMap.png": {
+    "asset": "assets/9e6593a82385b8466546abe5c8b8a020dec276f1e44439350bc0c05328eff552.png",
+    "sha256": "9e6593a82385b8466546abe5c8b8a020dec276f1e44439350bc0c05328eff552",
+    "bytes": 2074,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-32526448.jpg-left-densityRidge.png": {
+    "asset": "assets/e6373fd673252b628e40d86114fd802e8cc11e28e53813fb5c52ece52a9f1315.png",
+    "sha256": "e6373fd673252b628e40d86114fd802e8cc11e28e53813fb5c52ece52a9f1315",
+    "bytes": 2111,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-32526448.jpg-left-traces.png": {
+    "asset": "assets/31a51a009c7995a74389c740a0148be97c40f0137a0d9dcd3eacb1ecdea7f9c0.png",
+    "sha256": "31a51a009c7995a74389c740a0148be97c40f0137a0d9dcd3eacb1ecdea7f9c0",
+    "bytes": 76454,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-32526448.jpg-right-ridgeResponseMap.png": {
+    "asset": "assets/0d76aa458d675df73078479111662b8047fa105b49d6bbcec355d55ae043d2cc.png",
+    "sha256": "0d76aa458d675df73078479111662b8047fa105b49d6bbcec355d55ae043d2cc",
+    "bytes": 4197,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-32526448.jpg-right-densityConfidenceMap.png": {
+    "asset": "assets/17f6d8bd9e60b33d01fd76a0d26682261a3476b18934de691e6ab44772c47032.png",
+    "sha256": "17f6d8bd9e60b33d01fd76a0d26682261a3476b18934de691e6ab44772c47032",
+    "bytes": 2952,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-32526448.jpg-right-densityRidge.png": {
+    "asset": "assets/94a081e233c9b6be3966db45eaafdd2734de5f94569fd0cbd2087347eda411a4.png",
+    "sha256": "94a081e233c9b6be3966db45eaafdd2734de5f94569fd0cbd2087347eda411a4",
+    "bytes": 2953,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-32526448.jpg-right-traces.png": {
+    "asset": "assets/88654c17e0f14434c1b5fea5ae59a92d6043d74b671270f5d9fee9c8466b33b9.png",
+    "sha256": "88654c17e0f14434c1b5fea5ae59a92d6043d74b671270f5d9fee9c8466b33b9",
+    "bytes": 66121,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-4611686.jpg-left-ridgeResponseMap.png": {
+    "asset": "assets/6bdb393cecce140b6c2e0f465114f5fa7d3aaf2d9c46e9f9cf40fed604d5271e.png",
+    "sha256": "6bdb393cecce140b6c2e0f465114f5fa7d3aaf2d9c46e9f9cf40fed604d5271e",
+    "bytes": 5706,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-4611686.jpg-left-densityConfidenceMap.png": {
+    "asset": "assets/4db96ad0b2f20bc119f0eee89fa32cc404ef3f9eadeddd1e627cd54d5b797d5d.png",
+    "sha256": "4db96ad0b2f20bc119f0eee89fa32cc404ef3f9eadeddd1e627cd54d5b797d5d",
+    "bytes": 2157,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-4611686.jpg-left-densityRidge.png": {
+    "asset": "assets/f09e662a0270a17a0281d6fd7dd0f5645055c5e1aac54a353a51bcf8c37c1769.png",
+    "sha256": "f09e662a0270a17a0281d6fd7dd0f5645055c5e1aac54a353a51bcf8c37c1769",
+    "bytes": 2353,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-4611686.jpg-left-traces.png": {
+    "asset": "assets/29ff7c3bda28cf45d5e747592c8b938b0736fc3b532fec54ae354f56d25ec966.png",
+    "sha256": "29ff7c3bda28cf45d5e747592c8b938b0736fc3b532fec54ae354f56d25ec966",
+    "bytes": 64352,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-4611686.jpg-right-ridgeResponseMap.png": {
+    "asset": "assets/812c6446c38845b3d33c37bed560b217649be4ede96e70cd8f42b21cde33ecf1.png",
+    "sha256": "812c6446c38845b3d33c37bed560b217649be4ede96e70cd8f42b21cde33ecf1",
+    "bytes": 3734,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-4611686.jpg-right-densityConfidenceMap.png": {
+    "asset": "assets/c07814e2bcb1489faef68d07c17ccd7b4110c9aba47301a0f6c6242a25f8812d.png",
+    "sha256": "c07814e2bcb1489faef68d07c17ccd7b4110c9aba47301a0f6c6242a25f8812d",
+    "bytes": 1885,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-4611686.jpg-right-densityRidge.png": {
+    "asset": "assets/d5d8840e5e5e720c0abbbce400174c20a46f9016d91ec68f0a0a97ba8b878437.png",
+    "sha256": "d5d8840e5e5e720c0abbbce400174c20a46f9016d91ec68f0a0a97ba8b878437",
+    "bytes": 1963,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-4611686.jpg-right-traces.png": {
+    "asset": "assets/d5ec678072bc8f42163d4bc7d292f4937584681a3e1946cc125b8612d6b56762.png",
+    "sha256": "d5ec678072bc8f42163d4bc7d292f4937584681a3e1946cc125b8612d6b56762",
+    "bytes": 44397,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/freeend-webkit.json": {
+    "asset": "assets/f69774a6e700bfc018a2e3e63fa6a2b4a86c9e907b050822624e1cb6bcdf9534.gz",
+    "sha256": "f69774a6e700bfc018a2e3e63fa6a2b4a86c9e907b050822624e1cb6bcdf9534",
+    "bytes": 9918,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-32526448.jpg-left-ridgeResponseMap.png": {
+    "asset": "assets/87f768232f617960fb0e21846ba54ad8a037f98a9f6f0ef040e4c4f6d3a0f74d.png",
+    "sha256": "87f768232f617960fb0e21846ba54ad8a037f98a9f6f0ef040e4c4f6d3a0f74d",
+    "bytes": 3077,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-32526448.jpg-left-densityConfidenceMap.png": {
+    "asset": "assets/01cb0cc16df9b4334c3b7e4aa446301ae7519478f4530bed564729aba3fd9fd7.png",
+    "sha256": "01cb0cc16df9b4334c3b7e4aa446301ae7519478f4530bed564729aba3fd9fd7",
+    "bytes": 1250,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-32526448.jpg-left-densityRidge.png": {
+    "asset": "assets/0ac12e0765c0021d91b550505ca3914690104f227ee8c84b4665576983283167.png",
+    "sha256": "0ac12e0765c0021d91b550505ca3914690104f227ee8c84b4665576983283167",
+    "bytes": 1230,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-32526448.jpg-left-traces.png": {
+    "asset": "assets/9af7da854da8f6360fe213e907b77889a0e0fcc650047704f7618042156a0203.png",
+    "sha256": "9af7da854da8f6360fe213e907b77889a0e0fcc650047704f7618042156a0203",
+    "bytes": 61077,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-32526448.jpg-right-ridgeResponseMap.png": {
+    "asset": "assets/7b05a2a66db509bbc2bca729156f7de2f7f121683cc8f41e146721905feb51ce.png",
+    "sha256": "7b05a2a66db509bbc2bca729156f7de2f7f121683cc8f41e146721905feb51ce",
+    "bytes": 3149,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-32526448.jpg-right-densityConfidenceMap.png": {
+    "asset": "assets/00c39c5e837dd8fd76911e1dd116a33567af35fc5b843019934ee08069769442.png",
+    "sha256": "00c39c5e837dd8fd76911e1dd116a33567af35fc5b843019934ee08069769442",
+    "bytes": 2036,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-32526448.jpg-right-densityRidge.png": {
+    "asset": "assets/306aa9104a4fabe31c37a96e6effa5ad0afaf46921b68940f96590ff51913595.png",
+    "sha256": "306aa9104a4fabe31c37a96e6effa5ad0afaf46921b68940f96590ff51913595",
+    "bytes": 2015,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-32526448.jpg-right-traces.png": {
+    "asset": "assets/66fc094b2d3230f99ee477504fa3f2503a5e2d7be29887864f7a070a66082ac7.png",
+    "sha256": "66fc094b2d3230f99ee477504fa3f2503a5e2d7be29887864f7a070a66082ac7",
+    "bytes": 52758,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-4611686.jpg-left-ridgeResponseMap.png": {
+    "asset": "assets/e53de0705dc8d551ff8fb069343d11f0e41be47e96b237c56b0aa6f884ff1403.png",
+    "sha256": "e53de0705dc8d551ff8fb069343d11f0e41be47e96b237c56b0aa6f884ff1403",
+    "bytes": 3865,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-4611686.jpg-left-densityConfidenceMap.png": {
+    "asset": "assets/d0fc40b536bbecd227b9ff3a06e85dc37f4121e54ab7606704e28cd962a33738.png",
+    "sha256": "d0fc40b536bbecd227b9ff3a06e85dc37f4121e54ab7606704e28cd962a33738",
+    "bytes": 1543,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-4611686.jpg-left-densityRidge.png": {
+    "asset": "assets/9124ab1b3ba1b89c2f8f5f4e05c59b514526ef95b421f40a06e29b24e8585c0b.png",
+    "sha256": "9124ab1b3ba1b89c2f8f5f4e05c59b514526ef95b421f40a06e29b24e8585c0b",
+    "bytes": 1482,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-4611686.jpg-left-traces.png": {
+    "asset": "assets/847da971dd459de04cef41db161488b8a9336404ca335651b4d08d5505bbcee8.png",
+    "sha256": "847da971dd459de04cef41db161488b8a9336404ca335651b4d08d5505bbcee8",
+    "bytes": 54236,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-4611686.jpg-right-ridgeResponseMap.png": {
+    "asset": "assets/e79d8469d83ac99aaf8bd1fb143ad7e49c4377aadeb785f60a00a63a48eeacb5.png",
+    "sha256": "e79d8469d83ac99aaf8bd1fb143ad7e49c4377aadeb785f60a00a63a48eeacb5",
+    "bytes": 2670,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-4611686.jpg-right-densityConfidenceMap.png": {
+    "asset": "assets/6856923a6870a8aff45d3118f386a1c5b22cac41385067ea9fef95fe9c8e406b.png",
+    "sha256": "6856923a6870a8aff45d3118f386a1c5b22cac41385067ea9fef95fe9c8e406b",
+    "bytes": 1243,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-4611686.jpg-right-densityRidge.png": {
+    "asset": "assets/4aee0d6aeb7248c9eb993a871774633d52dc694180d0c6543faed75c1d0577c4.png",
+    "sha256": "4aee0d6aeb7248c9eb993a871774633d52dc694180d0c6543faed75c1d0577c4",
+    "bytes": 1306,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-4611686.jpg-right-traces.png": {
+    "asset": "assets/a5fc65a02dc6a6093461a0d366801e884a95ab1cc541a6a4486003e179a56709.png",
+    "sha256": "a5fc65a02dc6a6093461a0d366801e884a95ab1cc541a6a4486003e179a56709",
+    "bytes": 38007,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/freeend2-chromium.json": {
+    "asset": "assets/c0aa971a4d8016c715790872077e4c8b4e26318bb189cf37074b8ab3b0098ad9.gz",
+    "sha256": "c0aa971a4d8016c715790872077e4c8b4e26318bb189cf37074b8ab3b0098ad9",
+    "bytes": 6189,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-21792059.jpg-left-ridgeResponseMap.png": {
+    "asset": "assets/06f3f42d1ef064a5ed21a9d9ea21d5a3f2f7edf9fd43f49731dd3a3effd49411.png",
+    "sha256": "06f3f42d1ef064a5ed21a9d9ea21d5a3f2f7edf9fd43f49731dd3a3effd49411",
+    "bytes": 1043,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-21792059.jpg-left-densityConfidenceMap.png": {
+    "asset": "assets/06f3f42d1ef064a5ed21a9d9ea21d5a3f2f7edf9fd43f49731dd3a3effd49411.png",
+    "sha256": "06f3f42d1ef064a5ed21a9d9ea21d5a3f2f7edf9fd43f49731dd3a3effd49411",
+    "bytes": 1043,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-21792059.jpg-left-densityRidge.png": {
+    "asset": "assets/06f3f42d1ef064a5ed21a9d9ea21d5a3f2f7edf9fd43f49731dd3a3effd49411.png",
+    "sha256": "06f3f42d1ef064a5ed21a9d9ea21d5a3f2f7edf9fd43f49731dd3a3effd49411",
+    "bytes": 1043,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-21792059.jpg-left-traces.png": {
+    "asset": "assets/22631aa684f5c03158741dd94e6d63ac1f4cb95eb9b9a7fd2d0c7b0394c926f6.png",
+    "sha256": "22631aa684f5c03158741dd94e6d63ac1f4cb95eb9b9a7fd2d0c7b0394c926f6",
+    "bytes": 49519,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-21792059.jpg-right-ridgeResponseMap.png": {
+    "asset": "assets/ce182a049d7d581a10a3875be77495448f5bb0c134d3329e685c65f67de82fc8.png",
+    "sha256": "ce182a049d7d581a10a3875be77495448f5bb0c134d3329e685c65f67de82fc8",
+    "bytes": 1356,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-21792059.jpg-right-densityConfidenceMap.png": {
+    "asset": "assets/ce182a049d7d581a10a3875be77495448f5bb0c134d3329e685c65f67de82fc8.png",
+    "sha256": "ce182a049d7d581a10a3875be77495448f5bb0c134d3329e685c65f67de82fc8",
+    "bytes": 1356,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-21792059.jpg-right-densityRidge.png": {
+    "asset": "assets/ce182a049d7d581a10a3875be77495448f5bb0c134d3329e685c65f67de82fc8.png",
+    "sha256": "ce182a049d7d581a10a3875be77495448f5bb0c134d3329e685c65f67de82fc8",
+    "bytes": 1356,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/chromium-pexels-21792059.jpg-right-traces.png": {
+    "asset": "assets/834360b5a64b57773bfc323537feee9ab60a11b0c1a051e980bcb43a648b6429.png",
+    "sha256": "834360b5a64b57773bfc323537feee9ab60a11b0c1a051e980bcb43a648b6429",
+    "bytes": 70526,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/freeend2-webkit.json": {
+    "asset": "assets/b52339e88a652de8ab3b675a60c991174cf671dcc8b8114fa656da04a424e5d3.gz",
+    "sha256": "b52339e88a652de8ab3b675a60c991174cf671dcc8b8114fa656da04a424e5d3",
+    "bytes": 6153,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-21792059.jpg-left-ridgeResponseMap.png": {
+    "asset": "assets/5cd7b8a84c5bad2181898b2799fe05b1011b052eda9406ecd0ba5ed75456fb63.png",
+    "sha256": "5cd7b8a84c5bad2181898b2799fe05b1011b052eda9406ecd0ba5ed75456fb63",
+    "bytes": 449,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-21792059.jpg-left-densityConfidenceMap.png": {
+    "asset": "assets/5cd7b8a84c5bad2181898b2799fe05b1011b052eda9406ecd0ba5ed75456fb63.png",
+    "sha256": "5cd7b8a84c5bad2181898b2799fe05b1011b052eda9406ecd0ba5ed75456fb63",
+    "bytes": 449,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-21792059.jpg-left-densityRidge.png": {
+    "asset": "assets/5cd7b8a84c5bad2181898b2799fe05b1011b052eda9406ecd0ba5ed75456fb63.png",
+    "sha256": "5cd7b8a84c5bad2181898b2799fe05b1011b052eda9406ecd0ba5ed75456fb63",
+    "bytes": 449,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-21792059.jpg-left-traces.png": {
+    "asset": "assets/e40bcd3d3c41fb00178432f8a52efd24bd852e563f8ddf91649ddbdb71feea63.png",
+    "sha256": "e40bcd3d3c41fb00178432f8a52efd24bd852e563f8ddf91649ddbdb71feea63",
+    "bytes": 42065,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-21792059.jpg-right-ridgeResponseMap.png": {
+    "asset": "assets/5bb741eede9750f52540ae0840a7bd8a8a64c532b47b8f40988a02a071642313.png",
+    "sha256": "5bb741eede9750f52540ae0840a7bd8a8a64c532b47b8f40988a02a071642313",
+    "bytes": 539,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-21792059.jpg-right-densityConfidenceMap.png": {
+    "asset": "assets/5bb741eede9750f52540ae0840a7bd8a8a64c532b47b8f40988a02a071642313.png",
+    "sha256": "5bb741eede9750f52540ae0840a7bd8a8a64c532b47b8f40988a02a071642313",
+    "bytes": 539,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-21792059.jpg-right-densityRidge.png": {
+    "asset": "assets/5bb741eede9750f52540ae0840a7bd8a8a64c532b47b8f40988a02a071642313.png",
+    "sha256": "5bb741eede9750f52540ae0840a7bd8a8a64c532b47b8f40988a02a071642313",
+    "bytes": 539,
+    "gzip": false
+  },
+  "tests/visual/out/freeend-11-debug/webkit-pexels-21792059.jpg-right-traces.png": {
+    "asset": "assets/2400e526d70d0013d9e55560d5575d2a4ba60e2b0fb92e6e3a258b6d3d219f67.png",
+    "sha256": "2400e526d70d0013d9e55560d5575d2a4ba60e2b0fb92e6e3a258b6d3d219f67",
+    "bytes": 63460,
+    "gzip": false
+  },
+  "tests/visual/lash-freeend-analysis.cjs": {
+    "asset": "assets/b5c04c8ecc833250bff463bcf9b6db7d3954d2d53c591a1c2643eb26a53175ac.gz",
+    "sha256": "b5c04c8ecc833250bff463bcf9b6db7d3954d2d53c591a1c2643eb26a53175ac",
+    "bytes": 6148,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend-audit.cjs": {
+    "asset": "assets/f09840b41d8992456b100cee5b9134545b71ad04f6cf8e077091474172a23b75.gz",
+    "sha256": "f09840b41d8992456b100cee5b9134545b71ad04f6cf8e077091474172a23b75",
+    "bytes": 3908,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend-code-review.json": {
+    "asset": "assets/73de75bf81f45b961efc6f6fdc5fc6c4e747fdf84216c40885fbcfe94121ccc3.gz",
+    "sha256": "73de75bf81f45b961efc6f6fdc5fc6c4e747fdf84216c40885fbcfe94121ccc3",
+    "bytes": 7802,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend-debug.cjs": {
+    "asset": "assets/035631a26576965fb078816816f1a43135424c89b37895ae67a497ed09e2b89e.gz",
+    "sha256": "035631a26576965fb078816816f1a43135424c89b37895ae67a497ed09e2b89e",
+    "bytes": 5488,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend-inputs.cjs": {
+    "asset": "assets/17898c70cf768bc8d041f0ad0e120351de9faf3040e70fa0ca71f2f72b7554f0.gz",
+    "sha256": "17898c70cf768bc8d041f0ad0e120351de9faf3040e70fa0ca71f2f72b7554f0",
+    "bytes": 1827,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend-posthoc-independent-critic.json": {
+    "asset": "assets/5588cdd60bd2f0feba48356ff76006c9a83bff961b434915c46c1d91fc7d268a.gz",
+    "sha256": "5588cdd60bd2f0feba48356ff76006c9a83bff961b434915c46c1d91fc7d268a",
+    "bytes": 20109,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend-render.cjs": {
+    "asset": "assets/06b98aae917bf8b5980fa87bb64c74857778c2f555d1fc907d946825b0d1632b.gz",
+    "sha256": "06b98aae917bf8b5980fa87bb64c74857778c2f555d1fc907d946825b0d1632b",
+    "bytes": 8348,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend-verified-render.cjs": {
+    "asset": "assets/7704aaa19c24d71af0b2ba91196ea2a2ccf713f2e19b626a9220f8af3b38c365.gz",
+    "sha256": "7704aaa19c24d71af0b2ba91196ea2a2ccf713f2e19b626a9220f8af3b38c365",
+    "bytes": 1299,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend2-analysis.cjs": {
+    "asset": "assets/91f13c2ddcf15fb50cdce7ff93fda1dd27c038ca5e790220fc8e8fb1e23afe95.gz",
+    "sha256": "91f13c2ddcf15fb50cdce7ff93fda1dd27c038ca5e790220fc8e8fb1e23afe95",
+    "bytes": 6153,
+    "gzip": true
+  },
+  "tests/visual/lash-freeend2-render.cjs": {
+    "asset": "assets/7f94c0fb3f07a055746b1d39c5787a84487aa4b3c0ba559f6dfd70ef2df0c318.gz",
+    "sha256": "7f94c0fb3f07a055746b1d39c5787a84487aa4b3c0ba559f6dfd70ef2df0c318",
+    "bytes": 8351,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-05-chromium.log": {
+    "asset": "assets/2350f7229ebd57b7046c87fd64cae14728284d64824696e7b6d24ef972b1a6fd.gz",
+    "sha256": "2350f7229ebd57b7046c87fd64cae14728284d64824696e7b6d24ef972b1a6fd",
+    "bytes": 316,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-06-webkit.log": {
+    "asset": "assets/e80a97600b63582b72ba52d0f0e6b502fcb1b22edda58be63d53901fe1f0cc07.gz",
+    "sha256": "e80a97600b63582b72ba52d0f0e6b502fcb1b22edda58be63d53901fe1f0cc07",
+    "bytes": 296,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-07-render-chromium.log": {
+    "asset": "assets/f7547f0fc8d01b1bfc9ff8f82bcfcee5112551fa68c274fe0f60beff91c207d0.gz",
+    "sha256": "f7547f0fc8d01b1bfc9ff8f82bcfcee5112551fa68c274fe0f60beff91c207d0",
+    "bytes": 120,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-08-render-webkit.log": {
+    "asset": "assets/dd46ed1a3e304bc87be5e953a310be614c20f8a5b756edfb70910dcbdf4292b5.gz",
+    "sha256": "dd46ed1a3e304bc87be5e953a310be614c20f8a5b756edfb70910dcbdf4292b5",
+    "bytes": 112,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-11-debug-chromium.log": {
+    "asset": "assets/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.gz",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-11-debug-webkit.log": {
+    "asset": "assets/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.gz",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-12-render-chromium.log": {
+    "asset": "assets/f7547f0fc8d01b1bfc9ff8f82bcfcee5112551fa68c274fe0f60beff91c207d0.gz",
+    "sha256": "f7547f0fc8d01b1bfc9ff8f82bcfcee5112551fa68c274fe0f60beff91c207d0",
+    "bytes": 120,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-12-render-webkit.log": {
+    "asset": "assets/dd46ed1a3e304bc87be5e953a310be614c20f8a5b756edfb70910dcbdf4292b5.gz",
+    "sha256": "dd46ed1a3e304bc87be5e953a310be614c20f8a5b756edfb70910dcbdf4292b5",
+    "bytes": 112,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-verify-build-completed.log": {
+    "asset": "assets/6bd9461745bddbc98dfef6c5660cca2f7713e1bf218326913ee5e0c511a4c971.gz",
+    "sha256": "6bd9461745bddbc98dfef6c5660cca2f7713e1bf218326913ee5e0c511a4c971",
+    "bytes": 1568,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-verify-build.log": {
+    "asset": "assets/99e09c82984ff21ae9bdb15ce2ea9ed7bbe73b22cb3057ad054f1e37e6328129.gz",
+    "sha256": "99e09c82984ff21ae9bdb15ce2ea9ed7bbe73b22cb3057ad054f1e37e6328129",
+    "bytes": 414,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-verify-check-site-completed.log": {
+    "asset": "assets/27d03545dd95ebfbd6180414d90c9554ac0a0a57e33704dcc4412b885c475961.gz",
+    "sha256": "27d03545dd95ebfbd6180414d90c9554ac0a0a57e33704dcc4412b885c475961",
+    "bytes": 628,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-verify-e2e.log": {
+    "asset": "assets/a22fef5be003a94b08241e1e191b8b6a4b17fec30f1aab8e80bd8cb9043a0c1c.gz",
+    "sha256": "a22fef5be003a94b08241e1e191b8b6a4b17fec30f1aab8e80bd8cb9043a0c1c",
+    "bytes": 98182,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-verify-package-site-completed.log": {
+    "asset": "assets/3fb22edde5bd86e3ae9b0566af91d6fdeb994e7f1fc8c946da3203ad5a549486.gz",
+    "sha256": "3fb22edde5bd86e3ae9b0566af91d6fdeb994e7f1fc8c946da3203ad5a549486",
+    "bytes": 202,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-verify-performance.log": {
+    "asset": "assets/b44008b577a44a75177c05b2f06f8c3ee8c7fb677da23f669158d8375d8829a6.gz",
+    "sha256": "b44008b577a44a75177c05b2f06f8c3ee8c7fb677da23f669158d8375d8829a6",
+    "bytes": 7080,
+    "gzip": true
+  },
+  "tests/visual/out/freeend-verify-unit.log": {
+    "asset": "assets/a3cc034fc9550b53bd8dc1a0f4fd6ebabf365f43b1dcceb35490bbd7ae771af6.gz",
+    "sha256": "a3cc034fc9550b53bd8dc1a0f4fd6ebabf365f43b1dcceb35490bbd7ae771af6",
+    "bytes": 29552,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-05-chromium.log": {
+    "asset": "assets/0c48e14f97e2d6ba62f58648bb6a75f86a5c0da66790b5d3b1957a8788c20115.gz",
+    "sha256": "0c48e14f97e2d6ba62f58648bb6a75f86a5c0da66790b5d3b1957a8788c20115",
+    "bytes": 122,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-06-webkit.log": {
+    "asset": "assets/8757ffcca3865a153dc021be53f3ee60daac89773d7ddcf986e08ea525fcddeb.gz",
+    "sha256": "8757ffcca3865a153dc021be53f3ee60daac89773d7ddcf986e08ea525fcddeb",
+    "bytes": 114,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-07-render-chromium.log": {
+    "asset": "assets/51c94eeb31ef80ddeb2ddfffced06826b0fdc33c38cd861efc74a086a5f98297.gz",
+    "sha256": "51c94eeb31ef80ddeb2ddfffced06826b0fdc33c38cd861efc74a086a5f98297",
+    "bytes": 62,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-08-render-webkit.log": {
+    "asset": "assets/5c553bfdbc9f3347e0c9e71414ca36296f82dde12a2c58aa732bf904fcb95215.gz",
+    "sha256": "5c553bfdbc9f3347e0c9e71414ca36296f82dde12a2c58aa732bf904fcb95215",
+    "bytes": 58,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-11-debug-chromium.log": {
+    "asset": "assets/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.gz",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-11-debug-webkit.log": {
+    "asset": "assets/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.gz",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-12-render-chromium.log": {
+    "asset": "assets/51c94eeb31ef80ddeb2ddfffced06826b0fdc33c38cd861efc74a086a5f98297.gz",
+    "sha256": "51c94eeb31ef80ddeb2ddfffced06826b0fdc33c38cd861efc74a086a5f98297",
+    "bytes": 62,
+    "gzip": true
+  },
+  "tests/visual/out/freeend2-12-render-webkit.log": {
+    "asset": "assets/5c553bfdbc9f3347e0c9e71414ca36296f82dde12a2c58aa732bf904fcb95215.gz",
+    "sha256": "5c553bfdbc9f3347e0c9e71414ca36296f82dde12a2c58aa732bf904fcb95215",
+    "bytes": 58,
+    "gzip": true
+  }
+}

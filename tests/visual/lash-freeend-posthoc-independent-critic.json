@@ -1,0 +1,449 @@
+{
+  "schema": "auragram-independent-posthoc-critic-v1",
+  "verdict": "LENGTH HOLD; useful natural extension not demonstrated by these batches",
+  "scope": "First freeend batch and two supplemental sources; originals were independently annotated and frozen before their own inference. This report is posthoc and may read outputs. No labels, product source, gates or existing reports changed. No browser/inference executed by critic.",
+  "frozenLabels": {
+    "batch1SHA256": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800",
+    "batch2SHA256": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810"
+  },
+  "supplemental": {
+    "eligibility": "16720351 no_face both engines. 21792059 ready; frozen labels belong to subject-right/screen-left closed eye.",
+    "geometryFinding": "Both provisional visible upper endings project far below the canonical upper arc, onto skin outside opening polygon. Current outward upper-band domain cannot include them. This is a domain/pose limitation, not absence of real upper lashes and not simply ridge threshold failure. Five-pixel label uncertainty cannot reverse signed-distance direction. Manual local center ownership remains provisional.",
+    "nativePosthocMeasurements": [
+      {
+        "engine": "chromium",
+        "id": "F2-217-L1",
+        "sourceTipNative": [
+          1240,
+          2088
+        ],
+        "closestUpperPointNative": [
+          1138.1462318845659,
+          1879.7129471102598
+        ],
+        "signedDistanceNativePx": -231.857038885616,
+        "insideCanonicalOpeningPolygon": false,
+        "method": "Independent native-pixel closest-segment projection; outward normal points away from lower-lid centroid. Positive is outward/brow side. Not exact reproduction of anisotropic analysis-grid signed distance."
+      },
+      {
+        "engine": "chromium",
+        "id": "F2-217-L2",
+        "sourceTipNative": [
+          1184,
+          2078
+        ],
+        "closestUpperPointNative": [
+          1096.8995240782222,
+          1899.8828643189704
+        ],
+        "signedDistanceNativePx": -198.27306153135,
+        "insideCanonicalOpeningPolygon": false,
+        "method": "Independent native-pixel closest-segment projection; outward normal points away from lower-lid centroid. Positive is outward/brow side. Not exact reproduction of anisotropic analysis-grid signed distance."
+      },
+      {
+        "engine": "webkit",
+        "id": "F2-217-L1",
+        "sourceTipNative": [
+          1240,
+          2088
+        ],
+        "closestUpperPointNative": [
+          1168.1521816215056,
+          1864.1352046175373
+        ],
+        "signedDistanceNativePx": -235.11179387130076,
+        "insideCanonicalOpeningPolygon": false,
+        "method": "Independent native-pixel closest-segment projection; outward normal points away from lower-lid centroid. Positive is outward/brow side. Not exact reproduction of anisotropic analysis-grid signed distance."
+      },
+      {
+        "engine": "webkit",
+        "id": "F2-217-L2",
+        "sourceTipNative": [
+          1184,
+          2078
+        ],
+        "closestUpperPointNative": [
+          1104.1581555288037,
+          1888.2194522122618
+        ],
+        "signedDistanceNativePx": -205.8916619175645,
+        "insideCanonicalOpeningPolygon": false,
+        "method": "Independent native-pixel closest-segment projection; outward normal points away from lower-lid centroid. Positive is outward/brow side. Not exact reproduction of anisotropic analysis-grid signed distance."
+      }
+    ],
+    "analysisAllBudgets": [
+      {
+        "engine": "chromium",
+        "maxSide": 224,
+        "side": "left",
+        "reason": "crossing-structures",
+        "tips": 0,
+        "crossingPaths": 4,
+        "coveredAxisFraction": 0.44243596779054917,
+        "wholeEyeOccluded": true
+      },
+      {
+        "engine": "chromium",
+        "maxSide": 224,
+        "side": "right",
+        "reason": "crossing-structures",
+        "tips": 0,
+        "crossingPaths": 15,
+        "coveredAxisFraction": 0.7317456026556884,
+        "wholeEyeOccluded": true
+      },
+      {
+        "engine": "chromium",
+        "maxSide": 320,
+        "side": "left",
+        "reason": "crossing-structures",
+        "tips": 0,
+        "crossingPaths": 4,
+        "coveredAxisFraction": 0.4313481653399459,
+        "wholeEyeOccluded": true
+      },
+      {
+        "engine": "chromium",
+        "maxSide": 320,
+        "side": "right",
+        "reason": "crossing-structures",
+        "tips": 0,
+        "crossingPaths": 17,
+        "coveredAxisFraction": 0.48229143643927347,
+        "wholeEyeOccluded": true
+      },
+      {
+        "engine": "chromium",
+        "maxSide": 384,
+        "side": "left",
+        "reason": "crossing-structures",
+        "tips": 0,
+        "crossingPaths": 4,
+        "coveredAxisFraction": 0.4456879568039255,
+        "wholeEyeOccluded": true
+      },
+      {
+        "engine": "chromium",
+        "maxSide": 384,
+        "side": "right",
+        "reason": "crossing-structures",
+        "tips": 0,
+        "crossingPaths": 14,
+        "coveredAxisFraction": 0.48463871977809736,
+        "wholeEyeOccluded": true
+      },
+      {
+        "engine": "webkit",
+        "maxSide": 224,
+        "side": "left",
+        "reason": "crossing-structures",
+        "tips": 0,
+        "crossingPaths": 3,
+        "coveredAxisFraction": 0.38584276683959456,
+        "wholeEyeOccluded": true
+      },
+      {
+        "engine": "webkit",
+        "maxSide": 224,
+        "side": "right",
+        "reason": "crossing-structures",
+        "tips": 0,
+        "crossingPaths": 16,
+        "coveredAxisFraction": 0.7434435667627557,
+        "wholeEyeOccluded": true
+      },
+      {
+        "engine": "webkit",
+        "maxSide": 320,
+        "side": "left",
+        "reason": "ok",
+        "tips": 0,
+        "crossingPaths": 1,
+        "coveredAxisFraction": 0,
+        "wholeEyeOccluded": false
+      },
+      {
+        "engine": "webkit",
+        "maxSide": 320,
+        "side": "right",
+        "reason": "crossing-structures",
+        "tips": 0,
+        "crossingPaths": 13,
+        "coveredAxisFraction": 0.48498425867872785,
+        "wholeEyeOccluded": true
+      },
+      {
+        "engine": "webkit",
+        "maxSide": 384,
+        "side": "left",
+        "reason": "ok",
+        "tips": 0,
+        "crossingPaths": 1,
+        "coveredAxisFraction": 0,
+        "wholeEyeOccluded": false
+      },
+      {
+        "engine": "webkit",
+        "maxSide": 384,
+        "side": "right",
+        "reason": "crossing-structures",
+        "tips": 0,
+        "crossingPaths": 14,
+        "coveredAxisFraction": 0.49014168750616427,
+        "wholeEyeOccluded": true
+      }
+    ],
+    "renderFinding": "At shipping224 both eyes take existing strong whole-eye crossing-structures guard, not merely v6 Length-only abstention. Density/Definition and Length all skip in this case. Thus widening analysis resolution alone or removing only Length-specific veto does not explain/fix efficacy.",
+    "imageFinding": "Native L1/L2 Original, ProductionL50 and RecoveryL50 look unchanged in both engines. Original and Recovery portrait are decoded-identical. No extension benefit; identity introduces no new artifacts. Production alters elsewhere in portrait but not these annotated crops; that is not evidence of correct tip targeting.",
+    "pixelIdentityChecks": [
+      {
+        "engine": "chromium",
+        "comparison": "original portrait vs recovery-length50",
+        "decodedRGBAExact": true
+      },
+      {
+        "engine": "chromium",
+        "comparison": "original portrait vs production-length50",
+        "decodedRGBAExact": false
+      },
+      {
+        "engine": "chromium",
+        "comparison": "original portrait vs recovery-density50",
+        "decodedRGBAExact": true
+      },
+      {
+        "engine": "chromium",
+        "comparison": "F2-217-L1 original native vs recovery-length50",
+        "decodedRGBAExact": true
+      },
+      {
+        "engine": "chromium",
+        "comparison": "F2-217-L1 original native vs production-length50",
+        "decodedRGBAExact": true
+      },
+      {
+        "engine": "chromium",
+        "comparison": "F2-217-L2 original native vs recovery-length50",
+        "decodedRGBAExact": true
+      },
+      {
+        "engine": "chromium",
+        "comparison": "F2-217-L2 original native vs production-length50",
+        "decodedRGBAExact": true
+      },
+      {
+        "engine": "webkit",
+        "comparison": "original portrait vs recovery-length50",
+        "decodedRGBAExact": true
+      },
+      {
+        "engine": "webkit",
+        "comparison": "original portrait vs production-length50",
+        "decodedRGBAExact": false
+      },
+      {
+        "engine": "webkit",
+        "comparison": "original portrait vs recovery-density50",
+        "decodedRGBAExact": true
+      },
+      {
+        "engine": "webkit",
+        "comparison": "F2-217-L1 original native vs recovery-length50",
+        "decodedRGBAExact": true
+      },
+      {
+        "engine": "webkit",
+        "comparison": "F2-217-L1 original native vs production-length50",
+        "decodedRGBAExact": true
+      },
+      {
+        "engine": "webkit",
+        "comparison": "F2-217-L2 original native vs recovery-length50",
+        "decodedRGBAExact": true
+      },
+      {
+        "engine": "webkit",
+        "comparison": "F2-217-L2 original native vs production-length50",
+        "decodedRGBAExact": true
+      }
+    ],
+    "interpretationLimit": "Visible dark upper fan on closed skin can resemble crossing paths to current opening-based guard. Not every observed crossing path has been individually identified; do not rename them all false occluders or remove negative gates. Source makeup/individual hair biology unknown."
+  },
+  "firstBatchPreserved": {
+    "W325Length50": {
+      "nativeChangedPixels": 37,
+      "nativeCropBBoxXYXYInclusive": [
+        79,
+        78,
+        110,
+        90
+      ],
+      "maxAbsoluteRGBChannel": 7,
+      "sumAbsoluteRGB": 275,
+      "sourceCropOrigin": [
+        1553,
+        389
+      ],
+      "meaning": "Two tiny changes in one source neighborhood, shown in overlapping auto-right windows; not two independent positive outcomes.",
+      "visualFinding": "At100percent and portrait no useful natural extension established. Enlarged changes sit among ambiguous dark furrows/highlight ridges near upper-lid edge, not independently resolved free ends. Cannot certify either true extensions or false hairs from these patches. No obvious opaque blocks or long needles observed."
+    },
+    "manualTargetScope": "First-batch upper-lash labels may be real projected biological upper structures while lying below permitted upper band or inside protected opening. Zero matches is not directly permissible-domain recall. Commons macro is lower-only; other macro sources no_face must remain excluded, not fabricated geometry."
+  },
+  "nextMinimalExperiment": {
+    "proposal": "Freeze a geometry/domain-only audit on these existing sources and old closed-white-liner/hair negatives before any detector/render change. Overlay actual source-native upper/lower arcs, current signed lash domain, protected opening and observed crossing paths on the same full eye. Audit provisional sampled shaft segments posthoc against these regions with uncertainty; report supported permissible targets separately from visible but prohibited/projected-down upper structures.",
+    "decision": "If scope remains outward-only, explicitly retain these closed/downward projections as unsupported rather than claiming recall success/failure. If scope is intentionally expanded later, require a separate closure-aware skin-only domain/ownership experiment with unchanged iris/opening protection and mandatory old negative gates; no blind symmetric band widening, manual seeds, or acceptance of all crossing paths.",
+    "notAuthorizedByEvidence": "No immediate source change, threshold lowering, turning off crossing guard, or procedural extension is justified."
+  },
+  "inspectedArtifacts": [
+    {
+      "path": "tests/visual/lash-freeend-independent-labels.json",
+      "sha256": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800",
+      "inspection": "frozen annotation reference; unchanged"
+    },
+    {
+      "path": "tests/visual/lash-freeend2-independent-labels.json",
+      "sha256": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810",
+      "inspection": "frozen annotation reference; unchanged"
+    },
+    {
+      "path": "tests/visual/out/freeend2-05-analysis/manifest-chromium.json",
+      "sha256": "efa75ef4abb77df4bcafd3ea1c7ae5ec11f041586dea3ce13c45311f22f8c8f9",
+      "inspection": "posthoc structured read"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/manifest-chromium.json",
+      "sha256": "360f64f1b7a91a77c68949531f1d1da8bb438b2ae49e38234d367bb308816c6f",
+      "inspection": "posthoc structured read"
+    },
+    {
+      "path": "tests/visual/out/freeend2-05-analysis/chromium-pexels-21792059.jpg-geometry.png",
+      "sha256": "c3e1eb5313f37feca8701078229df7f853bde7dbd759887344451cbf6c76389b",
+      "inspection": "actual geometry PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L1-original-native.png",
+      "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L1-production-length50-native.png",
+      "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L1-recovery-length50-native.png",
+      "sha256": "dcf638a854b81d49250eddbf6db3094dbb7ab8aa27b32db88568b4fca973a58f",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L2-original-native.png",
+      "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L2-production-length50-native.png",
+      "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-F2-217-L2-recovery-length50-native.png",
+      "sha256": "0936b7cfa99e9ae59c8c8ee0a1b83102cbea565570f13dc8025019c5333c5a15",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-05-analysis/manifest-webkit.json",
+      "sha256": "c34a4af45c4d9e308a1ed048101685c07adbf208f7c30e7939f4b9d37ee20da7",
+      "inspection": "posthoc structured read"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/manifest-webkit.json",
+      "sha256": "ad988d3bd7e0a15df4ea09f6a0f8fb61596b65212ca10899e62cc04e16fa8a0d",
+      "inspection": "posthoc structured read"
+    },
+    {
+      "path": "tests/visual/out/freeend2-05-analysis/webkit-pexels-21792059.jpg-geometry.png",
+      "sha256": "40b4adfeb7657a2d9d454786cb088d450ea9db2b278008083065d0c73890fca0",
+      "inspection": "actual geometry PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L1-original-native.png",
+      "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L1-production-length50-native.png",
+      "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L1-recovery-length50-native.png",
+      "sha256": "4da06f51c18a204b94a59f50dbacadfa761b54b1dac8339d0adacb082a951ad1",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L2-original-native.png",
+      "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L2-production-length50-native.png",
+      "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/webkit-pexels-21792059.jpg-F2-217-L2-recovery-length50-native.png",
+      "sha256": "e7a3698d4de05c7031126a9507a7a43039f24cb2c075aeb1105230d0ced7dd57",
+      "inspection": "actual native PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-original-portrait.png",
+      "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+      "inspection": "actual portrait PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend2-07-render/chromium-pexels-21792059.jpg-recovery-length50-portrait.png",
+      "sha256": "d9ece4532bc78f18240b4bd46b15669ba0a194ae9d0a169e032db5d311de99b2",
+      "inspection": "actual portrait PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-0-original-native.png",
+      "sha256": "c3f3a63dea0cdd2104b32b27fafe611d6b7d1c9458a0ebe05310ff628b6a1f8e",
+      "inspection": "actual native PNG visually inspected; window0 also nearest4x and local10x in-memory"
+    },
+    {
+      "path": "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-0-recovery-length50-native.png",
+      "sha256": "31e2adc4b7bdcdbc5b85107f5021f5b8dc8a3048551059988a1f2660be3a57a4",
+      "inspection": "actual native PNG visually inspected; window0 also nearest4x and local10x in-memory"
+    },
+    {
+      "path": "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-0-production-length50-native.png",
+      "sha256": "3ffbf6aa2b0d930411d5f209c280a914b1a3ab1a597e2c7e88fb72e0904c598b",
+      "inspection": "actual native PNG visually inspected; window0 also nearest4x and local10x in-memory"
+    },
+    {
+      "path": "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-1-original-native.png",
+      "sha256": "1705d87f8086e552193c37275a6c5bd4f903b3619c79d858de5f6fab618170a5",
+      "inspection": "actual native PNG visually inspected; window0 also nearest4x and local10x in-memory"
+    },
+    {
+      "path": "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-auto-right-1-recovery-length50-native.png",
+      "sha256": "ed54515e0847daf9100d189a7600f3854937514ade8af540865658864dac7bc7",
+      "inspection": "actual native PNG visually inspected; window0 also nearest4x and local10x in-memory"
+    },
+    {
+      "path": "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-original-portrait.png",
+      "sha256": "01384cc0afac31726467429bf2e94431eb2f6c6cd49003d144d4b7b3dddc657b",
+      "inspection": "actual portrait PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend-07-render/webkit-pexels-32526448.jpg-recovery-length50-portrait.png",
+      "sha256": "f2f56c5a18fbd297d78ecd7ee2dbcf9b02509caef5893a18f59d194a04573cdb",
+      "inspection": "actual portrait PNG visually inspected"
+    },
+    {
+      "path": "tests/visual/out/freeend-07-render/manifest-webkit.json",
+      "sha256": "5c108926257f9322e090d49d589c558c617cc949d4b042339b201495ef3cb171",
+      "inspection": "first-batch posthoc structured read"
+    }
+  ]
+}

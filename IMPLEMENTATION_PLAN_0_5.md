@@ -173,3 +173,15 @@ See [subpixel report](G1C1_SUBPIXEL_REPORT.md). Diagnostic candidate only; runti
 - [ ] Prototype held-out positive/free-end and independent negative ownership performance NOTCOVERED; naturalness/release gates remain open.
 
 See [terminal report](G1C1_TERMINAL_REPORT.md). Runtime/production unchanged.
+
+## G1c.1 source-frozen free-ending dataset audit (HOLD)
+
+- [x] Retain seven new licensed source JPEGs, original-only independent annotations frozen before inference, and sequential-selection disclosure.
+- [x] Run real FaceMesh/native224/320/384 analysis in both engines; four sources remain no_face without fabricated geometry.
+- [x] Preserve production/recovery portraits, native100/200/400% crops, differences, response/confidence maps, paths and actual extension diagnostics.
+- [x] Independent critic identifies projected-down upper endings outside current band; do not reinterpret them as absent hairs or weaken protected regions.
+- [x] Verify source/snapshot/production bytes before/after NEW12 replays and retain initial07 evidence; runtime unchanged.
+- [x] 162unitPASS;166browserPASS/2originalLengthFAIL/3dependentNOTRUN; new real macro abstention passes Chromium/WebKit; isolated active benchmark3PASS, delta+3.9ms.
+- [ ] Useful natural Length, applicable positive/free-end coverage, physical devices and mandatory release gates remain open.
+
+See [free-ending dataset report](G1C1_FREEEND_DATASET_REPORT.md). PR#5 remains Draft; no partial release.

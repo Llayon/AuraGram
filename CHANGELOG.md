@@ -4,6 +4,7 @@
 
 ## Unreleased - G1c.1 experimental candidate (HOLD)
 
+- Add seven licensed original sources with pre-inference independent ending labels, both-engine comparisons and verified replay/debug evidence. Projected-down upper endings reveal a geometry/domain limitation; natural Length remains unproven. New real no-face macro guard passes; full browser166PASS/2originalFAIL/3dependentNOTRUN. Runtime/version unchanged. See [free-ending dataset report](G1C1_FREEEND_DATASET_REPORT.md).
 - Preserve exact12px records and add a separate terminal/ownership observation audit. C104continues to35.75nativepx with forward support; censored side responses and R1crease stops do not establish tips. No endpoint, product-limit or runtime change. See [terminal report](G1C1_TERMINAL_REPORT.md).
 - Improve offline subpixel centers and measured bootstrap initialization; fix critic-reproduced weaker disconnected-neighbor bias. Frozen analytic budget reach36/192→184/192 and C104sampled arc1.63→11.54px, with all margin failures retained. No endpoint/naturalLength or runtime adoption. See [subpixel report](G1C1_SUBPIXEL_REPORT.md).
 - Reject an offline bounded curve follower: C104 stops on initialization/local-axis mismatch, R1 on search boundary, R2 remains ineligible. Preserve36real configurations plus14initial/192raster controls showing bootstrap and half-pixel plateau limitations. No threshold relaxation or runtime adoption. See [curve report](G1C1_CURVE_REPORT.md).

@@ -1,0 +1,291 @@
+{
+  "schema": "auragram-original-only-independent-screening-v1",
+  "stage": "freeend-two-supplemental-sources",
+  "role": "independent engineering annotation, not human-certified ground truth",
+  "exposureDisclosure": "Prior AuraGram algorithms, earlier different-source annotation studies and first freeend batch outcomes are known. This is sequential supplemental selection after those outcomes, not a new untouched benchmark. These two photos were previously unseen by this annotator. Only supplied provenance/download/native manifests and original-only previews/native views/nearest zoom were read during this stage. No batch2 detector output, current primary labels, algorithm source, browser or model inference read/run before this freeze.",
+  "coordinateConvention": {
+    "unit": "decoded source native pixels",
+    "points": "x,y in labelCoordinateFrame native crop; source point equals crop sourceRect origin plus point; y increases down",
+    "uncertainty": "engineering positional radius, not calibrated probability; proximal points ordered tip toward shaft",
+    "regions": "rectangles use same native crop; contextual ambiguity/non-target references, not absence masks"
+  },
+  "restrictions": [
+    "Labels must never become algorithm seeds, tracing directions or fitting constraints.",
+    "FaceMesh and full-face eligibility UNTESTED for both sources.",
+    "No bare biology/coating/makeup history inferred from source titles or appearance.",
+    "No exact derivative, root connection, exhaustive recall or no-lash claim."
+  ],
+  "sources": [
+    {
+      "file": "pexels-16720351.jpg",
+      "sha256": "925d272e71b809145f347cd8f6699486600db62dfed49f0188c6dc9d8f114ce8",
+      "dimensions": [
+        4480,
+        6720
+      ],
+      "provenancePage": "https://www.pexels.com/photo/face-of-a-woman-with-dark-hair-16720351/",
+      "license": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "pexels-21792059.jpg",
+      "sha256": "f1f9fe785f1afed56f504fa3c0c06f22b1cabc95978cd912c999840217e15079",
+      "dimensions": [
+        2832,
+        4256
+      ],
+      "provenancePage": "https://www.pexels.com/photo/a-woman-with-her-eyes-closed-21792059/",
+      "license": "https://www.pexels.com/license/"
+    }
+  ],
+  "views": [
+    {
+      "source": "pexels-16720351.jpg",
+      "view": "visible-profile-eye",
+      "crop": {
+        "path": "tests/visual/out/freeend2-03-native/pexels-16720351-visible-profile-eye.png",
+        "sourceRectXYWH": [
+          1450,
+          1450,
+          1050,
+          900
+        ],
+        "sha256": "da24826af52da837f1a7db0c457bd06e5913b662282028b32f222d7cd102ee29",
+        "nativeUnresized": true
+      },
+      "labelCoordinateFrame": {
+        "path": "tests/visual/out/freeend2-03-native/pexels-16720351-visible-profile-eye.png",
+        "sourceRectXYWH": [
+          1450,
+          1450,
+          1050,
+          900
+        ],
+        "sha256": "da24826af52da837f1a7db0c457bd06e5913b662282028b32f222d7cd102ee29",
+        "nativeUnresized": true
+      },
+      "faceMeshStatus": "UNTESTED",
+      "labels": [],
+      "regionsNotForEndpointScoring": [
+        {
+          "rectNativeXYWH": [
+            130,
+            230,
+            430,
+            210
+          ],
+          "kind": "defocused_upper_fan_and_overlap",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            350,
+            100,
+            300,
+            100
+          ],
+          "kind": "eyelid_crease_reference",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            300,
+            520,
+            300,
+            160
+          ],
+          "kind": "lower_skin_folds_reference",
+          "notPixelNegativeGroundTruth": true
+        }
+      ],
+      "status": "NO_CONFIDENT_UPPER_ENDPOINT_LABEL",
+      "assessment": "Upper outside profile fan is visible but defocus/grain, merged roots and overlapping curls prevent a reliable tip plus proximal-local-axis pair in this screening. A high-resolution source does not resolve all shafts."
+    },
+    {
+      "source": "pexels-21792059.jpg",
+      "view": "screen-left",
+      "crop": {
+        "path": "tests/visual/out/freeend2-03-native/pexels-21792059-screen-left.png",
+        "sourceRectXYWH": [
+          430,
+          1550,
+          1100,
+          900
+        ],
+        "sha256": "b44c4a409d38468bf9e6366565277bf9749276e5ebad357d5602bd9073c493ed",
+        "nativeUnresized": true
+      },
+      "labelCoordinateFrame": {
+        "path": "tests/visual/out/freeend2-03-native/pexels-21792059-screen-left.png",
+        "sourceRectXYWH": [
+          430,
+          1550,
+          1100,
+          900
+        ],
+        "sha256": "b44c4a409d38468bf9e6366565277bf9749276e5ebad357d5602bd9073c493ed",
+        "nativeUnresized": true
+      },
+      "faceMeshStatus": "UNTESTED",
+      "labels": [
+        {
+          "id": "F2-217-L1",
+          "tipNative": [
+            810,
+            538
+          ],
+          "proximalShaftNative": [
+            [
+              800,
+              526
+            ],
+            [
+              789,
+              514
+            ],
+            [
+              777,
+              502
+            ]
+          ],
+          "tipUncertaintyNativePx": 5,
+          "shaftUncertaintyNativePx": 3,
+          "status": "provisional_visible_upper_ending",
+          "rootVisibility": "merged; not annotated",
+          "limitations": "Diagonal thin terminal segment fades into skin texture; endpoint extent has several-pixel uncertainty. Not certified individual biological hair or exact terminal derivative."
+        },
+        {
+          "id": "F2-217-L2",
+          "tipNative": [
+            754,
+            528
+          ],
+          "proximalShaftNative": [
+            [
+              747,
+              516
+            ],
+            [
+              739,
+              503
+            ],
+            [
+              731,
+              491
+            ]
+          ],
+          "tipUncertaintyNativePx": 5,
+          "shaftUncertaintyNativePx": 3,
+          "status": "provisional_visible_upper_ending",
+          "rootVisibility": "merged; not annotated",
+          "limitations": "Nearby parallel shaft and skin creases complicate further-proximal ownership; sampled local segment is separated, fade boundary approximate."
+        }
+      ],
+      "regionsNotForEndpointScoring": [
+        {
+          "rectNativeXYWH": [
+            150,
+            420,
+            350,
+            170
+          ],
+          "kind": "dark_merged_fan_and_crossing_hairs",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            700,
+            330,
+            220,
+            100
+          ],
+          "kind": "crossing_branch_ambiguity",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            800,
+            560,
+            180,
+            180
+          ],
+          "kind": "skin_texture_and_fold_reference",
+          "notPixelNegativeGroundTruth": true
+        }
+      ],
+      "status": "TWO_PROVISIONAL_UPPER_ENDINGS",
+      "assessment": "Closed lid has long dark upper fan. Selected two separated distal fading endings against skin, before proximal merging. Coating, makeup and extension history unknown; visible shafts may be bundles. There is softness even in better-focused eye."
+    },
+    {
+      "source": "pexels-21792059.jpg",
+      "view": "screen-right",
+      "crop": {
+        "path": "tests/visual/out/freeend2-03-native/pexels-21792059-screen-right.png",
+        "sourceRectXYWH": [
+          1550,
+          1100,
+          1050,
+          850
+        ],
+        "sha256": "9128e2ab0a6e7b38c1b43d0d3f6c8580d96f929e3c7d6c2d25f37e863e040be4",
+        "nativeUnresized": true
+      },
+      "labelCoordinateFrame": {
+        "path": "tests/visual/out/freeend2-03-native/pexels-21792059-screen-right.png",
+        "sourceRectXYWH": [
+          1550,
+          1100,
+          1050,
+          850
+        ],
+        "sha256": "9128e2ab0a6e7b38c1b43d0d3f6c8580d96f929e3c7d6c2d25f37e863e040be4",
+        "nativeUnresized": true
+      },
+      "faceMeshStatus": "UNTESTED",
+      "labels": [],
+      "regionsNotForEndpointScoring": [
+        {
+          "rectNativeXYWH": [
+            450,
+            370,
+            560,
+            230
+          ],
+          "kind": "defocused_upper_fan",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            100,
+            120,
+            200,
+            180
+          ],
+          "kind": "skin_background_reference",
+          "notPixelNegativeGroundTruth": true
+        }
+      ],
+      "status": "NO_CONFIDENT_UPPER_ENDPOINT_LABEL",
+      "assessment": "Other closed eye is noticeably defocused. Soft dark fan cannot support reliable individual tip/local-shaft coordinates; no forced positive from the clearer opposite eye."
+    }
+  ],
+  "summary": {
+    "sourceCount": 2,
+    "nativeViewCount": 3,
+    "positiveViewCount": 1,
+    "labelCount": 2,
+    "qualityCaution": "Two sparse approximate upper endings on one closed eye, with 5px endpoint uncertainty. Other two views remain unresolved; no forced positives."
+  },
+  "originalOnlyZoomViews": [
+    {
+      "path": "tests/visual/out/freeend2-independent/pexels-21792059-screen-left-zoom.png",
+      "parentCropRectXYXY": [
+        640,
+        350,
+        950,
+        590
+      ],
+      "scale": 3,
+      "resampling": "nearest; no added detail"
+    }
+  ]
+}

@@ -1,6 +1,31 @@
 ﻿const {test,expect}=require('./app-fixtures.cjs');
 const path=require('node:path');
 
+test('licensed real lower-lash macro with no FaceMesh does not invent upper-lash geometry',async({page})=>{
+ const fs=require('node:fs');
+ const pack=require('./visual/freeend-evidence/files.json');
+ const source='tests/visual/out/freeend-01-download/commons-radic-eyelashes.jpg';
+ const fixture='tests/visual/freeend-evidence/'+pack[source].asset;
+ expect(fs.existsSync(path.resolve(__dirname,'..',fixture))).toBe(true);
+ await page.goto('/index.html');await page.waitForFunction(()=>!!window.AuraGram);
+ await page.setInputFiles('#fileInput',path.resolve(__dirname,'..',fixture));
+ await page.waitForFunction(()=>['ready','no_face','failed','unsupported'].includes(window.AuraGram.face.status()),null,{timeout:100000});
+ expect(await page.evaluate(()=>window.AuraGram.face.status())).toBe('no_face');
+ const result=await page.evaluate(async()=>{
+  const A=window.AuraGram;A.resetAll();
+  const pixels=()=>{A.renderStudioCanvas();return document.getElementById('mainCanvas').toDataURL();};
+  const neutral=pixels();A.state.activePreset='vogue';const preset=pixels();
+  A.state.lashes={density:100,length:100,definition:100};pixels();
+  // Settle the lazy retouch module before the final real app render.
+  await import('/src/retouch/retouch.mjs');
+  const enhanced=pixels();
+  return{presetActive:neutral!==preset,lashIdentity:preset===enhanced,status:A.face.status()};
+ });
+ expect(result.presetActive,'no-face fallback must retain global preset processing').toBe(true);
+ expect(result.lashIdentity,'lower-lash macro must not receive invented upper lashes').toBe(true);
+ expect(result.status).toBe('no_face');
+});
+
 // Conservative abstention requirement for this frozen closed/white-liner
 // photograph: original-only reviewers could not establish upper endpoints.
 // This is not ground truth that eyelashes are absent, or a ban on all closed eyes.
