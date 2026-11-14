@@ -11,7 +11,7 @@ node.exe : (node:36124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: ((node:36124) Wa... env being set.:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
- 
+
 (Use `node --trace-warnings ...` to show where the warning was created)
 I14 perf {"times":{"blush0":{"ms":76,"w":864,"h":1080,"ran":"","maskMs":0,"retouchMs":0},"blush50":{"ms":108.6000000089407,"w":864,"h":1080,"ran":"blush","maskMs":55.79999999701977,"retouchMs":24.69999998807907},"blush100":{"ms":100,"w":864,"h":1080,"ran":"blush","maskMs":55.79999999701977,"retouchMs":20.200000002980232},"glowEyes":{"ms":120.59999999403954,"w":864,"h":1080,"ran":"glow,eyes","maskMs":55.79999999701977,"retouchMs":25.799999997019768},"all":{"ms":190.09999999403954,"w":864,"h":1080,"ran":"smooth,antired,glow,eyes,blush,sculpt","maskMs":55.79999999701977,"retouchMs":80.29999999701977}},"ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36","hw":16}
   ✓  1 [chromium-performance] › tests\e2e-g1b1.spec.js:498:1 › I14 performance: no slider-time inference, bounded render cost (3.2s)

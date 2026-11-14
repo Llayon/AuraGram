@@ -410,3 +410,5 @@ Manifest, environment/browser versions and final test logs are under tests/visua
 Final result: candidate rejected for product adoption; recognition acceptance criteria, independent final cohort and critic requirements remain unmet. No confirmed endings and no new active-Length rendering. Keep PR#5 Draft and LENGTH HOLD; do not merge, deploy, partially release or bump version.
 
 Frozen annotation files explicitly disable Git text conversion; evidence ZIPs stay binary and verification text uses canonical LF, preventing Windows checkout from invalidating their recorded byte hashes. Historic source snapshots inside ZIPs preserve the exact recorded bytes even when the current checkout has newer instrumentation or different line endings.
+
+Verification-log copies use canonical UTF8/LF with trailing whitespace removed for code review; their manifest retains both canonical hashes and the original local raw-log hashes. Test results and original raw logs are unchanged.

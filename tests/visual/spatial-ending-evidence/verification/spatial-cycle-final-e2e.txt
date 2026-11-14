@@ -11,7 +11,7 @@ node.exe : (node:33512) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: ((node:33512) Wa... env being set.:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
- 
+
 (Use `node --trace-warnings ...` to show where the warning was created)
   ✓    1 [chromium] › tests\e2e-colors.spec.js:5:1 › contrast slider changes real preview and exported PNG pixels (1.4s)
   ✓    2 [chromium] › tests\e2e-colors.spec.js:28:1 › every preset and intensity produces processed pixels in this browser (534ms)
@@ -201,7 +201,7 @@ Boundary monochrome protection {"recoveredTips":2,"difference":27,"coloredPixels
   ✓  168 [webkit-mobile] › tests\e2e-styles.spec.js:76:1 › style dialog fits 320px, scrolls long libraries and restores keyboard focus (4.8s)
 
 
-  1) [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+  1) [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry
 
     Error: length
 
@@ -221,7 +221,7 @@ Boundary monochrome protection {"recoveredTips":2,"difference":27,"coloredPixels
 
     Error Context: test-results\e2e-colors-each-Beauty-too-c121f-ls-with-valid-face-geometry-chromium\error-context.md
 
-  2) [webkit-mobile] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+  2) [webkit-mobile] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry
 
     Error: length
 
@@ -242,7 +242,7 @@ Boundary monochrome protection {"recoveredTips":2,"difference":27,"coloredPixels
     Error Context: test-results\e2e-colors-each-Beauty-too-c121f-ls-with-valid-face-geometry-webkit-mobile\error-context.md
 
   2 failed
-    [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
-    [webkit-mobile] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+    [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry
+    [webkit-mobile] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry
   3 did not run
   166 passed (7.0m)
