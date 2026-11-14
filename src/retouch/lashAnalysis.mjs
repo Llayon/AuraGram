@@ -318,6 +318,15 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
   const seeds=[];
   for(let i=0;i<n;i++) if(ridge[i]>60 && distance[i]>Math.max(3,bandH*.18)) seeds.push(i);
   seeds.sort((a,b)=>distance[b]-distance[a] || ridge[b]-ridge[a] || a-b);
+  // Freeze automatic inputs before legacy tracing can reject or consume them.
+  // Experimental audit only; ROI coordinates are deliberately not called native.
+  const structureSeeds=options.structureAudit ? seeds.map((index,rank)=>({
+    rank,index,x:index%w,y:Math.floor(index/w),
+    tangent:{x:dx[index],y:dy[index]},response:responseMap[index],
+    provenance:'automatic-strong-ridge-before-tip-filter',
+    scheduled:rank<128,status:'censored',
+    reason:rank<128?'native-audit-not-run':'seed-budget',
+  })) : undefined;
   function traceSeeds(seedList, searchBandH) {
   for(const strongSeed of seedList) {
     if(tips.length>=48) break;
@@ -492,7 +501,8 @@ export function analyzeLuma(luma, w, h, lid, lower, bandH, inner, brow = [], opt
       tracingEnabled:!crossing.lengthAbstain,lengthAbstention:crossing.lengthAbstain?'observed-crossing-continuation':null,
       boundaryContext:{baselineTipCount,recoveredTips:tips.length-baselineTipCount,clippedSeeds:clippedSeeds.length,measuredContextPixels,baselineDirectionUpdates,referenceBandH:bandH,searchBandH:lengthSearchBandH}},
     typedArrayBytes:n*49, retainedTypedArrayBytes:ridge.byteLength+ridgeResponseMap.byteLength+densityRidge.byteLength+densityConfidenceMap.byteLength+rootConnectionMap.byteLength,
-    ...(options.debug?{debug:{responseMap,anisotropy,dx,dy,distance,valid}}:{})};
+    ...(structureSeeds?{structureAudit:{seeds:structureSeeds,limit:128,coordinateSpace:"analysis-roi",endpointConfirmed:false}}:{}),
+    ...(options.debug?{debug:{responseMap,anisotropy,dx,dy,distance,valid,...(options.structureAudit?{rootSupport,normalsX,normalsY}:{})}}:{})};
 }
 
 /** Browser adapter: original decoded image only, one bounded temporary canvas. */

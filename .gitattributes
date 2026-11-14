@@ -1,0 +1,10 @@
+# Keep the original-only annotation freeze valid across Windows checkouts.
+tests/visual/lash-spatial-original-labels-01.json -text
+tests/visual/lash-spatial-original-labels-01.freeze.json -text
+tests/visual/lash-spatial-original-labels-02.json -text
+tests/visual/lash-spatial-original-labels-02.freeze.json -text
+# Evidence ZIP bytes and canonical verification text must remain hash-stable.
+tests/visual/spatial-ending-evidence/*.zip -text
+tests/visual/spatial-ending-evidence/**/*.txt text eol=lf
+tests/visual/spatial-ending-evidence/**/*.json text eol=lf
+tests/visual/spatial-ending-evidence/*.json text eol=lf

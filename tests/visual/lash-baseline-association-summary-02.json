@@ -1,0 +1,4047 @@
+{
+  "date": "2026-11-14",
+  "kind": "baseline-association-census-not-recognition",
+  "annotationInputToTracing": false,
+  "interpretation": "Coarse root support, native valley tracking, gate units and total arc budgets differ; do not label a coarse route as verified native ownership.",
+  "runnerSHA256": "899e8c7c2f82aa0030cc07a78ec39f5be2de3311d83829e19ee3dbf9a2d05ba6",
+  "helperSHA256": "9fd92e36f827e78a11b12d4d4634963c45796bacca5f088aaae26826415dd082",
+  "labelSHA256": "4d23df2501e30e27aaa5d1bb01f02231b8c62636ca09d465471adfecd1f6ed74",
+  "results": [
+    {
+      "engine": "chromium",
+      "side": "left",
+      "baselineTips": 0,
+      "matches": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "summary": {
+        "directTipRootRange": null,
+        "coarseConnected": 0,
+        "fullPathsExceed36": 0,
+        "distalPrefixesExceed36": 0,
+        "nativeArcRange": null,
+        "afterDistalValleyPrefixRange": null,
+        "sharedSeedRecords": 0,
+        "sharedProcessedRecords": 0
+      },
+      "traces": [],
+      "sourceArtifact": {
+        "file": "tests\\visual\\out\\native-cell-real-01\\chromium.json",
+        "sha256": "36cd3302bae13e43b46de7074fdede2bc83ffd56c6b67a15d72143aee0d2bb12"
+      }
+    },
+    {
+      "engine": "chromium",
+      "side": "right",
+      "baselineTips": 7,
+      "matches": {
+        "matches": [
+          {
+            "label": "right-2",
+            "candidate": "baseline-0"
+          },
+          {
+            "label": "right-5",
+            "candidate": "baseline-4"
+          }
+        ],
+        "unmatchedCandidates": [
+          "baseline-1",
+          "baseline-2",
+          "baseline-3",
+          "baseline-5",
+          "baseline-6"
+        ],
+        "unmatchedLabels": [
+          "right-1",
+          "right-3",
+          "right-4"
+        ]
+      },
+      "summary": {
+        "directTipRootRange": [
+          78.54127931345784,
+          133.68790393577544
+        ],
+        "coarseConnected": 7,
+        "fullPathsExceed36": 7,
+        "distalPrefixesExceed36": 3,
+        "nativeArcRange": [
+          83.13655925565553,
+          145.30279037393245
+        ],
+        "afterDistalValleyPrefixRange": [
+          47.87827167915454,
+          64.07547931777893
+        ],
+        "sharedSeedRecords": 60,
+        "sharedProcessedRecords": 57
+      },
+      "traces": [
+        {
+          "id": "baseline-0",
+          "pointsROI": [
+            {
+              "x": 81,
+              "y": 50
+            },
+            {
+              "x": 81,
+              "y": 51
+            },
+            {
+              "x": 81,
+              "y": 52
+            },
+            {
+              "x": 82,
+              "y": 53
+            },
+            {
+              "x": 82,
+              "y": 54
+            },
+            {
+              "x": 82,
+              "y": 55
+            },
+            {
+              "x": 82,
+              "y": 56
+            },
+            {
+              "x": 82,
+              "y": 57
+            },
+            {
+              "x": 82,
+              "y": 58
+            },
+            {
+              "x": 83,
+              "y": 59
+            },
+            {
+              "x": 83,
+              "y": 60
+            },
+            {
+              "x": 83,
+              "y": 61
+            },
+            {
+              "x": 83,
+              "y": 62
+            },
+            {
+              "x": 83,
+              "y": 63
+            },
+            {
+              "x": 83,
+              "y": 64
+            },
+            {
+              "x": 83,
+              "y": 65
+            },
+            {
+              "x": 84,
+              "y": 66
+            },
+            {
+              "x": 84,
+              "y": 67
+            },
+            {
+              "x": 84,
+              "y": 68
+            },
+            {
+              "x": 85,
+              "y": 69
+            },
+            {
+              "x": 85,
+              "y": 70
+            },
+            {
+              "x": 85,
+              "y": 71
+            },
+            {
+              "x": 84,
+              "y": 72
+            },
+            {
+              "x": 83,
+              "y": 73
+            },
+            {
+              "x": 82,
+              "y": 74
+            },
+            {
+              "x": 82,
+              "y": 75
+            },
+            {
+              "x": 82,
+              "y": 76
+            },
+            {
+              "x": 82,
+              "y": 77
+            },
+            {
+              "x": 82,
+              "y": 78
+            },
+            {
+              "x": 82,
+              "y": 79
+            },
+            {
+              "x": 82,
+              "y": 80
+            },
+            {
+              "x": 82,
+              "y": 81
+            },
+            {
+              "x": 82,
+              "y": 82
+            },
+            {
+              "x": 82,
+              "y": 83
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1574.5716885791676,
+              "y": 1861.7685656514982
+            },
+            {
+              "x": 1574.5716885791676,
+              "y": 1865.8178675611541
+            },
+            {
+              "x": 1574.5716885791676,
+              "y": 1869.8671694708103
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1873.9164713804662
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1877.9657732901223
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1882.0150751997785
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1886.0643771094344
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1890.1136790190906
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1894.1629809287465
+            },
+            {
+              "x": 1582.6439653716259,
+              "y": 1898.2122828384026
+            },
+            {
+              "x": 1582.6439653716259,
+              "y": 1902.2615847480586
+            },
+            {
+              "x": 1582.6439653716259,
+              "y": 1906.3108866577147
+            },
+            {
+              "x": 1582.6439653716259,
+              "y": 1910.3601885673709
+            },
+            {
+              "x": 1582.6439653716259,
+              "y": 1914.4094904770268
+            },
+            {
+              "x": 1582.6439653716259,
+              "y": 1918.458792386683
+            },
+            {
+              "x": 1582.6439653716259,
+              "y": 1922.508094296339
+            },
+            {
+              "x": 1586.680103767855,
+              "y": 1926.557396205995
+            },
+            {
+              "x": 1586.680103767855,
+              "y": 1930.606698115651
+            },
+            {
+              "x": 1586.680103767855,
+              "y": 1934.656000025307
+            },
+            {
+              "x": 1590.716242164084,
+              "y": 1938.7053019349632
+            },
+            {
+              "x": 1590.716242164084,
+              "y": 1942.7546038446192
+            },
+            {
+              "x": 1590.716242164084,
+              "y": 1946.8039057542753
+            },
+            {
+              "x": 1586.680103767855,
+              "y": 1950.8532076639312
+            },
+            {
+              "x": 1582.6439653716259,
+              "y": 1954.9025095735874
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1958.9518114832435
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1963.0011133928995
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1967.0504153025556
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1971.0997172122115
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1975.1490191218677
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1979.1983210315238
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1983.2476229411798
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1987.296924850836
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1991.3462267604918
+            },
+            {
+              "x": 1578.6078269753968,
+              "y": 1995.395528670148
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.8828785419464111,
+          "roiArc": 35.899494936611674,
+          "nativeArc": 145.30279037393245,
+          "distalValleyPrefixNativeArc": 97.42451869477792,
+          "afterDistalValleyPrefixNativeArc": 47.87827167915454,
+          "tipToRootDistanceNative": 133.68790393577544,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": true,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.072276792458128,
+            8.098603819312117
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 1,
+              "index": 11954,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 3,
+              "index": 12178,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-one-sided-edge"
+            },
+            {
+              "rank": 4,
+              "index": 12402,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 6,
+              "index": 12626,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 9,
+              "index": 12850,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "turn-bound"
+            },
+            {
+              "rank": 13,
+              "index": 13074,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 16,
+              "index": 13299,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 18,
+              "index": 13523,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-weak-valley"
+            },
+            {
+              "rank": 26,
+              "index": 13747,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 31,
+              "index": 13971,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-one-sided-edge"
+            },
+            {
+              "rank": 38,
+              "index": 14195,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-dense-link"
+            },
+            {
+              "rank": 46,
+              "index": 14419,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 52,
+              "index": 14643,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 57,
+              "index": 14868,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "turn-bound"
+            },
+            {
+              "rank": 68,
+              "index": 15092,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 81,
+              "index": 15316,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-dense-link"
+            },
+            {
+              "rank": 88,
+              "index": 15541,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 102,
+              "index": 15765,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-one-sided-edge"
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-1",
+          "pointsROI": [
+            {
+              "x": 96,
+              "y": 61
+            },
+            {
+              "x": 96,
+              "y": 62
+            },
+            {
+              "x": 96,
+              "y": 63
+            },
+            {
+              "x": 96,
+              "y": 64
+            },
+            {
+              "x": 97,
+              "y": 65
+            },
+            {
+              "x": 97,
+              "y": 66
+            },
+            {
+              "x": 97,
+              "y": 67
+            },
+            {
+              "x": 98,
+              "y": 68
+            },
+            {
+              "x": 98,
+              "y": 69
+            },
+            {
+              "x": 98,
+              "y": 70
+            },
+            {
+              "x": 98,
+              "y": 71
+            },
+            {
+              "x": 98,
+              "y": 72
+            },
+            {
+              "x": 98,
+              "y": 73
+            },
+            {
+              "x": 98,
+              "y": 74
+            },
+            {
+              "x": 97,
+              "y": 75
+            },
+            {
+              "x": 97,
+              "y": 76
+            },
+            {
+              "x": 97,
+              "y": 77
+            },
+            {
+              "x": 97,
+              "y": 78
+            },
+            {
+              "x": 96,
+              "y": 79
+            },
+            {
+              "x": 96,
+              "y": 80
+            },
+            {
+              "x": 96,
+              "y": 81
+            },
+            {
+              "x": 96,
+              "y": 82
+            },
+            {
+              "x": 96,
+              "y": 83
+            },
+            {
+              "x": 96,
+              "y": 84
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1635.1137645226036,
+              "y": 1906.3108866577147
+            },
+            {
+              "x": 1635.1137645226036,
+              "y": 1910.3601885673709
+            },
+            {
+              "x": 1635.1137645226036,
+              "y": 1914.4094904770268
+            },
+            {
+              "x": 1635.1137645226036,
+              "y": 1918.458792386683
+            },
+            {
+              "x": 1639.1499029188326,
+              "y": 1922.508094296339
+            },
+            {
+              "x": 1639.1499029188326,
+              "y": 1926.557396205995
+            },
+            {
+              "x": 1639.1499029188326,
+              "y": 1930.606698115651
+            },
+            {
+              "x": 1643.1860413150619,
+              "y": 1934.656000025307
+            },
+            {
+              "x": 1643.1860413150619,
+              "y": 1938.7053019349632
+            },
+            {
+              "x": 1643.1860413150619,
+              "y": 1942.7546038446192
+            },
+            {
+              "x": 1643.1860413150619,
+              "y": 1946.8039057542753
+            },
+            {
+              "x": 1643.1860413150619,
+              "y": 1950.8532076639312
+            },
+            {
+              "x": 1643.1860413150619,
+              "y": 1954.9025095735874
+            },
+            {
+              "x": 1643.1860413150619,
+              "y": 1958.9518114832435
+            },
+            {
+              "x": 1639.1499029188326,
+              "y": 1963.0011133928995
+            },
+            {
+              "x": 1639.1499029188326,
+              "y": 1967.0504153025556
+            },
+            {
+              "x": 1639.1499029188326,
+              "y": 1971.0997172122115
+            },
+            {
+              "x": 1639.1499029188326,
+              "y": 1975.1490191218677
+            },
+            {
+              "x": 1635.1137645226036,
+              "y": 1979.1983210315238
+            },
+            {
+              "x": 1635.1137645226036,
+              "y": 1983.2476229411798
+            },
+            {
+              "x": 1635.1137645226036,
+              "y": 1987.296924850836
+            },
+            {
+              "x": 1635.1137645226036,
+              "y": 1991.3462267604918
+            },
+            {
+              "x": 1635.1137645226036,
+              "y": 1995.395528670148
+            },
+            {
+              "x": 1635.1137645226036,
+              "y": 1999.4448305798041
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.385883092880249,
+          "roiArc": 24.65685424949238,
+          "nativeArc": 99.80584526796541,
+          "distalValleyPrefixNativeArc": 35.73036595018648,
+          "afterDistalValleyPrefixNativeArc": 64.07547931777893,
+          "tipToRootDistanceNative": 93.13394392208943,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": false,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.072276792458128,
+            8.098603819312117
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 28,
+              "index": 13984,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "search-boundary"
+            },
+            {
+              "rank": 34,
+              "index": 14208,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 48,
+              "index": 14657,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 56,
+              "index": 14881,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 64,
+              "index": 15105,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 72,
+              "index": 15330,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 84,
+              "index": 15554,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-2",
+          "pointsROI": [
+            {
+              "x": 69,
+              "y": 64
+            },
+            {
+              "x": 70,
+              "y": 65
+            },
+            {
+              "x": 71,
+              "y": 66
+            },
+            {
+              "x": 72,
+              "y": 67
+            },
+            {
+              "x": 73,
+              "y": 68
+            },
+            {
+              "x": 74,
+              "y": 69
+            },
+            {
+              "x": 75,
+              "y": 70
+            },
+            {
+              "x": 76,
+              "y": 71
+            },
+            {
+              "x": 77,
+              "y": 72
+            },
+            {
+              "x": 78,
+              "y": 73
+            },
+            {
+              "x": 78,
+              "y": 74
+            },
+            {
+              "x": 78,
+              "y": 75
+            },
+            {
+              "x": 77,
+              "y": 76
+            },
+            {
+              "x": 76,
+              "y": 77
+            },
+            {
+              "x": 77,
+              "y": 78
+            },
+            {
+              "x": 77,
+              "y": 79
+            },
+            {
+              "x": 77,
+              "y": 80
+            },
+            {
+              "x": 77,
+              "y": 81
+            },
+            {
+              "x": 77,
+              "y": 82
+            },
+            {
+              "x": 77,
+              "y": 83
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1526.138027824419,
+              "y": 1918.458792386683
+            },
+            {
+              "x": 1530.174166220648,
+              "y": 1922.508094296339
+            },
+            {
+              "x": 1534.210304616877,
+              "y": 1926.557396205995
+            },
+            {
+              "x": 1538.246443013106,
+              "y": 1930.606698115651
+            },
+            {
+              "x": 1542.2825814093353,
+              "y": 1934.656000025307
+            },
+            {
+              "x": 1546.3187198055643,
+              "y": 1938.7053019349632
+            },
+            {
+              "x": 1550.3548582017934,
+              "y": 1942.7546038446192
+            },
+            {
+              "x": 1554.3909965980224,
+              "y": 1946.8039057542753
+            },
+            {
+              "x": 1558.4271349942514,
+              "y": 1950.8532076639312
+            },
+            {
+              "x": 1562.4632733904805,
+              "y": 1954.9025095735874
+            },
+            {
+              "x": 1562.4632733904805,
+              "y": 1958.9518114832435
+            },
+            {
+              "x": 1562.4632733904805,
+              "y": 1963.0011133928995
+            },
+            {
+              "x": 1558.4271349942514,
+              "y": 1967.0504153025556
+            },
+            {
+              "x": 1554.3909965980224,
+              "y": 1971.0997172122115
+            },
+            {
+              "x": 1558.4271349942514,
+              "y": 1975.1490191218677
+            },
+            {
+              "x": 1558.4271349942514,
+              "y": 1979.1983210315238
+            },
+            {
+              "x": 1558.4271349942514,
+              "y": 1983.2476229411798
+            },
+            {
+              "x": 1558.4271349942514,
+              "y": 1987.296924850836
+            },
+            {
+              "x": 1558.4271349942514,
+              "y": 1991.3462267604918
+            },
+            {
+              "x": 1558.4271349942514,
+              "y": 1995.395528670148
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.8253885507583618,
+          "roiArc": 23.970562748477146,
+          "nativeArc": 96.95244032109234,
+          "distalValleyPrefixNativeArc": 40.02094072287503,
+          "afterDistalValleyPrefixNativeArc": 56.93149959821731,
+          "tipToRootDistanceNative": 83.43768831754853,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": true,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.072276792458128,
+            8.098603819312117
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 35,
+              "index": 14405,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "arc-budget"
+            },
+            {
+              "rank": 44,
+              "index": 14630,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "arc-budget"
+            },
+            {
+              "rank": 53,
+              "index": 14855,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 61,
+              "index": 15080,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 73,
+              "index": 15305,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 86,
+              "index": 15530,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 105,
+              "index": 15755,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-3",
+          "pointsROI": [
+            {
+              "x": 107,
+              "y": 63
+            },
+            {
+              "x": 107,
+              "y": 64
+            },
+            {
+              "x": 107,
+              "y": 65
+            },
+            {
+              "x": 107,
+              "y": 66
+            },
+            {
+              "x": 107,
+              "y": 67
+            },
+            {
+              "x": 106,
+              "y": 68
+            },
+            {
+              "x": 106,
+              "y": 69
+            },
+            {
+              "x": 106,
+              "y": 70
+            },
+            {
+              "x": 106,
+              "y": 71
+            },
+            {
+              "x": 105,
+              "y": 72
+            },
+            {
+              "x": 105,
+              "y": 73
+            },
+            {
+              "x": 105,
+              "y": 74
+            },
+            {
+              "x": 106,
+              "y": 75
+            },
+            {
+              "x": 106,
+              "y": 76
+            },
+            {
+              "x": 106,
+              "y": 77
+            },
+            {
+              "x": 106,
+              "y": 78
+            },
+            {
+              "x": 106,
+              "y": 79
+            },
+            {
+              "x": 106,
+              "y": 80
+            },
+            {
+              "x": 106,
+              "y": 81
+            },
+            {
+              "x": 106,
+              "y": 82
+            },
+            {
+              "x": 105,
+              "y": 83
+            },
+            {
+              "x": 105,
+              "y": 84
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1679.5112868811234,
+              "y": 1914.4094904770268
+            },
+            {
+              "x": 1679.5112868811234,
+              "y": 1918.458792386683
+            },
+            {
+              "x": 1679.5112868811234,
+              "y": 1922.508094296339
+            },
+            {
+              "x": 1679.5112868811234,
+              "y": 1926.557396205995
+            },
+            {
+              "x": 1679.5112868811234,
+              "y": 1930.606698115651
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1934.656000025307
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1938.7053019349632
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1942.7546038446192
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1946.8039057542753
+            },
+            {
+              "x": 1671.4390100886653,
+              "y": 1950.8532076639312
+            },
+            {
+              "x": 1671.4390100886653,
+              "y": 1954.9025095735874
+            },
+            {
+              "x": 1671.4390100886653,
+              "y": 1958.9518114832435
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1963.0011133928995
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1967.0504153025556
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1971.0997172122115
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1975.1490191218677
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1979.1983210315238
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1983.2476229411798
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1987.296924850836
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1991.3462267604918
+            },
+            {
+              "x": 1671.4390100886653,
+              "y": 1995.395528670148
+            },
+            {
+              "x": 1671.4390100886653,
+              "y": 1999.4448305798041
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.8215177059173584,
+          "roiArc": 22.656854249492383,
+          "nativeArc": 91.70724144865308,
+          "distalValleyPrefixNativeArc": 43.828969769498464,
+          "afterDistalValleyPrefixNativeArc": 47.878271679154615,
+          "tipToRootDistanceNative": 85.41762534166512,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": true,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.072276792458128,
+            8.098603819312117
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 39,
+              "index": 14443,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 47,
+              "index": 14667,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 54,
+              "index": 14891,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 70,
+              "index": 15338,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 83,
+              "index": 15562,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 95,
+              "index": 15786,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 107,
+              "index": 16010,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 120,
+              "index": 16457,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "turn-bound"
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-4",
+          "pointsROI": [
+            {
+              "x": 111,
+              "y": 65
+            },
+            {
+              "x": 111,
+              "y": 66
+            },
+            {
+              "x": 111,
+              "y": 67
+            },
+            {
+              "x": 110,
+              "y": 68
+            },
+            {
+              "x": 110,
+              "y": 69
+            },
+            {
+              "x": 110,
+              "y": 70
+            },
+            {
+              "x": 109,
+              "y": 71
+            },
+            {
+              "x": 109,
+              "y": 72
+            },
+            {
+              "x": 109,
+              "y": 73
+            },
+            {
+              "x": 109,
+              "y": 74
+            },
+            {
+              "x": 108,
+              "y": 75
+            },
+            {
+              "x": 107,
+              "y": 76
+            },
+            {
+              "x": 107,
+              "y": 77
+            },
+            {
+              "x": 107,
+              "y": 78
+            },
+            {
+              "x": 107,
+              "y": 79
+            },
+            {
+              "x": 107,
+              "y": 80
+            },
+            {
+              "x": 106,
+              "y": 81
+            },
+            {
+              "x": 106,
+              "y": 82
+            },
+            {
+              "x": 105,
+              "y": 83
+            },
+            {
+              "x": 105,
+              "y": 84
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1695.6558404660395,
+              "y": 1922.508094296339
+            },
+            {
+              "x": 1695.6558404660395,
+              "y": 1926.557396205995
+            },
+            {
+              "x": 1695.6558404660395,
+              "y": 1930.606698115651
+            },
+            {
+              "x": 1691.6197020698105,
+              "y": 1934.656000025307
+            },
+            {
+              "x": 1691.6197020698105,
+              "y": 1938.7053019349632
+            },
+            {
+              "x": 1691.6197020698105,
+              "y": 1942.7546038446192
+            },
+            {
+              "x": 1687.5835636735815,
+              "y": 1946.8039057542753
+            },
+            {
+              "x": 1687.5835636735815,
+              "y": 1950.8532076639312
+            },
+            {
+              "x": 1687.5835636735815,
+              "y": 1954.9025095735874
+            },
+            {
+              "x": 1687.5835636735815,
+              "y": 1958.9518114832435
+            },
+            {
+              "x": 1683.5474252773524,
+              "y": 1963.0011133928995
+            },
+            {
+              "x": 1679.5112868811234,
+              "y": 1967.0504153025556
+            },
+            {
+              "x": 1679.5112868811234,
+              "y": 1971.0997172122115
+            },
+            {
+              "x": 1679.5112868811234,
+              "y": 1975.1490191218677
+            },
+            {
+              "x": 1679.5112868811234,
+              "y": 1979.1983210315238
+            },
+            {
+              "x": 1679.5112868811234,
+              "y": 1983.2476229411798
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1987.296924850836
+            },
+            {
+              "x": 1675.4751484848944,
+              "y": 1991.3462267604918
+            },
+            {
+              "x": 1671.4390100886653,
+              "y": 1995.395528670148
+            },
+            {
+              "x": 1671.4390100886653,
+              "y": 1999.4448305798041
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.8215177059173584,
+          "roiArc": 21.485281374238575,
+          "nativeArc": 86.9445883022785,
+          "distalValleyPrefixNativeArc": 35.7303659501861,
+          "afterDistalValleyPrefixNativeArc": 51.214222352092406,
+          "tipToRootDistanceNative": 80.65802045350458,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": false,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.072276792458128,
+            8.098603819312117
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 51,
+              "index": 14895,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 58,
+              "index": 15119,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 69,
+              "index": 15342,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 82,
+              "index": 15566,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 92,
+              "index": 15790,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 104,
+              "index": 16013,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 112,
+              "index": 16237,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-multiple-valleys"
+            },
+            {
+              "rank": 119,
+              "index": 16461,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 141,
+              "index": 17579,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 142,
+              "index": 17803,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-5",
+          "pointsROI": [
+            {
+              "x": 66,
+              "y": 68
+            },
+            {
+              "x": 67,
+              "y": 69
+            },
+            {
+              "x": 68,
+              "y": 70
+            },
+            {
+              "x": 68,
+              "y": 71
+            },
+            {
+              "x": 69,
+              "y": 72
+            },
+            {
+              "x": 69,
+              "y": 73
+            },
+            {
+              "x": 70,
+              "y": 74
+            },
+            {
+              "x": 71,
+              "y": 75
+            },
+            {
+              "x": 72,
+              "y": 76
+            },
+            {
+              "x": 72,
+              "y": 77
+            },
+            {
+              "x": 73,
+              "y": 78
+            },
+            {
+              "x": 74,
+              "y": 79
+            },
+            {
+              "x": 75,
+              "y": 80
+            },
+            {
+              "x": 75,
+              "y": 81
+            },
+            {
+              "x": 75,
+              "y": 82
+            },
+            {
+              "x": 76,
+              "y": 83
+            },
+            {
+              "x": 77,
+              "y": 84
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1514.0296126357316,
+              "y": 1934.656000025307
+            },
+            {
+              "x": 1518.0657510319609,
+              "y": 1938.7053019349632
+            },
+            {
+              "x": 1522.10188942819,
+              "y": 1942.7546038446192
+            },
+            {
+              "x": 1522.10188942819,
+              "y": 1946.8039057542753
+            },
+            {
+              "x": 1526.138027824419,
+              "y": 1950.8532076639312
+            },
+            {
+              "x": 1526.138027824419,
+              "y": 1954.9025095735874
+            },
+            {
+              "x": 1530.174166220648,
+              "y": 1958.9518114832435
+            },
+            {
+              "x": 1534.210304616877,
+              "y": 1963.0011133928995
+            },
+            {
+              "x": 1538.246443013106,
+              "y": 1967.0504153025556
+            },
+            {
+              "x": 1538.246443013106,
+              "y": 1971.0997172122115
+            },
+            {
+              "x": 1542.2825814093353,
+              "y": 1975.1490191218677
+            },
+            {
+              "x": 1546.3187198055643,
+              "y": 1979.1983210315238
+            },
+            {
+              "x": 1550.3548582017934,
+              "y": 1983.2476229411798
+            },
+            {
+              "x": 1550.3548582017934,
+              "y": 1987.296924850836
+            },
+            {
+              "x": 1550.3548582017934,
+              "y": 1991.3462267604918
+            },
+            {
+              "x": 1554.3909965980224,
+              "y": 1995.395528670148
+            },
+            {
+              "x": 1558.4271349942514,
+              "y": 1999.4448305798041
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 0.8737608194351196,
+          "roiArc": 20.55634918610405,
+          "nativeArc": 83.13655925565553,
+          "distalValleyPrefixNativeArc": 25.250435557687293,
+          "afterDistalValleyPrefixNativeArc": 57.88612369796823,
+          "tipToRootDistanceNative": 78.54127931345784,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": false,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.072276792458128,
+            8.098603819312117
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 55,
+              "index": 15298,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 65,
+              "index": 15523,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "turn-bound"
+            },
+            {
+              "rank": 80,
+              "index": 15748,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 87,
+              "index": 15972,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-6",
+          "pointsROI": [
+            {
+              "x": 59,
+              "y": 70
+            },
+            {
+              "x": 60,
+              "y": 71
+            },
+            {
+              "x": 61,
+              "y": 72
+            },
+            {
+              "x": 62,
+              "y": 73
+            },
+            {
+              "x": 63,
+              "y": 74
+            },
+            {
+              "x": 64,
+              "y": 75
+            },
+            {
+              "x": 65,
+              "y": 76
+            },
+            {
+              "x": 66,
+              "y": 77
+            },
+            {
+              "x": 67,
+              "y": 78
+            },
+            {
+              "x": 68,
+              "y": 79
+            },
+            {
+              "x": 69,
+              "y": 80
+            },
+            {
+              "x": 69,
+              "y": 81
+            },
+            {
+              "x": 70,
+              "y": 82
+            },
+            {
+              "x": 71,
+              "y": 83
+            },
+            {
+              "x": 72,
+              "y": 84
+            },
+            {
+              "x": 73,
+              "y": 85
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1485.7766438621284,
+              "y": 1942.7546038446192
+            },
+            {
+              "x": 1489.8127822583574,
+              "y": 1946.8039057542753
+            },
+            {
+              "x": 1493.8489206545864,
+              "y": 1950.8532076639312
+            },
+            {
+              "x": 1497.8850590508155,
+              "y": 1954.9025095735874
+            },
+            {
+              "x": 1501.9211974470445,
+              "y": 1958.9518114832435
+            },
+            {
+              "x": 1505.9573358432735,
+              "y": 1963.0011133928995
+            },
+            {
+              "x": 1509.9934742395026,
+              "y": 1967.0504153025556
+            },
+            {
+              "x": 1514.0296126357316,
+              "y": 1971.0997172122115
+            },
+            {
+              "x": 1518.0657510319609,
+              "y": 1975.1490191218677
+            },
+            {
+              "x": 1522.10188942819,
+              "y": 1979.1983210315238
+            },
+            {
+              "x": 1526.138027824419,
+              "y": 1983.2476229411798
+            },
+            {
+              "x": 1526.138027824419,
+              "y": 1987.296924850836
+            },
+            {
+              "x": 1530.174166220648,
+              "y": 1991.3462267604918
+            },
+            {
+              "x": 1534.210304616877,
+              "y": 1995.395528670148
+            },
+            {
+              "x": 1538.246443013106,
+              "y": 1999.4448305798041
+            },
+            {
+              "x": 1542.2825814093353,
+              "y": 2003.49413248946
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.1511461734771729,
+          "roiArc": 20.798989873223338,
+          "nativeArc": 84.0911833554062,
+          "distalValleyPrefixNativeArc": 28.58638623062493,
+          "afterDistalValleyPrefixNativeArc": 55.50479712478127,
+          "tipToRootDistanceNative": 82.9590942458167,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": false,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.072276792458128,
+            8.098603819312117
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 63,
+              "index": 15964,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 75,
+              "index": 16189,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 90,
+              "index": 16414,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 109,
+              "index": 16639,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 117,
+              "index": 16864,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 137,
+              "index": 17539,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        }
+      ],
+      "sourceArtifact": {
+        "file": "tests\\visual\\out\\native-cell-real-01\\chromium.json",
+        "sha256": "36cd3302bae13e43b46de7074fdede2bc83ffd56c6b67a15d72143aee0d2bb12"
+      }
+    },
+    {
+      "engine": "webkit",
+      "side": "left",
+      "baselineTips": 0,
+      "matches": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "summary": {
+        "directTipRootRange": null,
+        "coarseConnected": 0,
+        "fullPathsExceed36": 0,
+        "distalPrefixesExceed36": 0,
+        "nativeArcRange": null,
+        "afterDistalValleyPrefixRange": null,
+        "sharedSeedRecords": 0,
+        "sharedProcessedRecords": 0
+      },
+      "traces": [],
+      "sourceArtifact": {
+        "file": "tests\\visual\\out\\native-cell-real-01\\webkit.json",
+        "sha256": "72130951759e2188a4295cd0aa2664f40d80eb9b474b307dc828c4e70d1a97dc"
+      }
+    },
+    {
+      "engine": "webkit",
+      "side": "right",
+      "baselineTips": 9,
+      "matches": {
+        "matches": [],
+        "unmatchedCandidates": [
+          "baseline-0",
+          "baseline-1",
+          "baseline-2",
+          "baseline-3",
+          "baseline-4",
+          "baseline-5",
+          "baseline-6",
+          "baseline-7",
+          "baseline-8"
+        ],
+        "unmatchedLabels": [
+          "right-1",
+          "right-2",
+          "right-3",
+          "right-4",
+          "right-5"
+        ]
+      },
+      "summary": {
+        "directTipRootRange": [
+          45.2643547620587,
+          98.50719461779782
+        ],
+        "coarseConnected": 9,
+        "fullPathsExceed36": 9,
+        "distalPrefixesExceed36": 3,
+        "nativeArcRange": [
+          51.21589056631915,
+          103.85176073653412
+        ],
+        "afterDistalValleyPrefixRange": [
+          23.583488738151257,
+          61.94265023247159
+        ],
+        "sharedSeedRecords": 61,
+        "sharedProcessedRecords": 22
+      },
+      "traces": [
+        {
+          "id": "baseline-0",
+          "pointsROI": [
+            {
+              "x": 96,
+              "y": 59
+            },
+            {
+              "x": 96,
+              "y": 60
+            },
+            {
+              "x": 96,
+              "y": 61
+            },
+            {
+              "x": 96,
+              "y": 62
+            },
+            {
+              "x": 97,
+              "y": 63
+            },
+            {
+              "x": 97,
+              "y": 64
+            },
+            {
+              "x": 97,
+              "y": 65
+            },
+            {
+              "x": 98,
+              "y": 66
+            },
+            {
+              "x": 98,
+              "y": 67
+            },
+            {
+              "x": 98,
+              "y": 68
+            },
+            {
+              "x": 99,
+              "y": 69
+            },
+            {
+              "x": 99,
+              "y": 70
+            },
+            {
+              "x": 100,
+              "y": 71
+            },
+            {
+              "x": 100,
+              "y": 72
+            },
+            {
+              "x": 100,
+              "y": 73
+            },
+            {
+              "x": 100,
+              "y": 74
+            },
+            {
+              "x": 100,
+              "y": 75
+            },
+            {
+              "x": 100,
+              "y": 76
+            },
+            {
+              "x": 100,
+              "y": 77
+            },
+            {
+              "x": 100,
+              "y": 78
+            },
+            {
+              "x": 100,
+              "y": 79
+            },
+            {
+              "x": 100,
+              "y": 80
+            },
+            {
+              "x": 100,
+              "y": 81
+            },
+            {
+              "x": 100,
+              "y": 82
+            },
+            {
+              "x": 100,
+              "y": 83
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1633.970246667581,
+              "y": 1903.939038969512
+            },
+            {
+              "x": 1633.970246667581,
+              "y": 1907.9879520595284
+            },
+            {
+              "x": 1633.970246667581,
+              "y": 1912.036865149545
+            },
+            {
+              "x": 1633.970246667581,
+              "y": 1916.0857782395617
+            },
+            {
+              "x": 1638.008329429056,
+              "y": 1920.1346913295783
+            },
+            {
+              "x": 1638.008329429056,
+              "y": 1924.1836044195948
+            },
+            {
+              "x": 1638.008329429056,
+              "y": 1928.2325175096114
+            },
+            {
+              "x": 1642.046412190531,
+              "y": 1932.281430599628
+            },
+            {
+              "x": 1642.046412190531,
+              "y": 1936.3303436896445
+            },
+            {
+              "x": 1642.046412190531,
+              "y": 1940.3792567796613
+            },
+            {
+              "x": 1646.084494952006,
+              "y": 1944.4281698696777
+            },
+            {
+              "x": 1646.084494952006,
+              "y": 1948.4770829596944
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1952.525996049711
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1956.5749091397274
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1960.623822229744
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1964.6727353197607
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1968.7216484097771
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1972.770561499794
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1976.8194745898104
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1980.868387679827
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1984.9173007698437
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1988.96621385986
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1993.0151269498767
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1997.0640400398934
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 2001.1129531299098
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.467678427696228,
+          "roiArc": 25.656854249492383,
+          "nativeArc": 103.85176073653412,
+          "distalValleyPrefixNativeArc": 55.26480365633534,
+          "afterDistalValleyPrefixNativeArc": 48.58695708019878,
+          "tipToRootDistanceNative": 98.50719461779782,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": true,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.076165522950038,
+            8.097826180033167
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 34,
+              "index": 13312,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 38,
+              "index": 13536,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 43,
+              "index": 13760,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 53,
+              "index": 13984,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 62,
+              "index": 14209,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 74,
+              "index": 14433,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 86,
+              "index": 14657,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 92,
+              "index": 14882,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 108,
+              "index": 15106,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "one-sided-edge"
+            },
+            {
+              "rank": 126,
+              "index": 15330,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 161,
+              "index": 15779,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 178,
+              "index": 16004,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-1",
+          "pointsROI": [
+            {
+              "x": 107,
+              "y": 61
+            },
+            {
+              "x": 107,
+              "y": 62
+            },
+            {
+              "x": 107,
+              "y": 63
+            },
+            {
+              "x": 107,
+              "y": 64
+            },
+            {
+              "x": 107,
+              "y": 65
+            },
+            {
+              "x": 107,
+              "y": 66
+            },
+            {
+              "x": 106,
+              "y": 67
+            },
+            {
+              "x": 106,
+              "y": 68
+            },
+            {
+              "x": 106,
+              "y": 69
+            },
+            {
+              "x": 106,
+              "y": 70
+            },
+            {
+              "x": 105,
+              "y": 71
+            },
+            {
+              "x": 105,
+              "y": 72
+            },
+            {
+              "x": 105,
+              "y": 73
+            },
+            {
+              "x": 104,
+              "y": 74
+            },
+            {
+              "x": 103,
+              "y": 75
+            },
+            {
+              "x": 102,
+              "y": 76
+            },
+            {
+              "x": 102,
+              "y": 77
+            },
+            {
+              "x": 102,
+              "y": 78
+            },
+            {
+              "x": 101,
+              "y": 79
+            },
+            {
+              "x": 100,
+              "y": 80
+            },
+            {
+              "x": 100,
+              "y": 81
+            },
+            {
+              "x": 100,
+              "y": 82
+            },
+            {
+              "x": 100,
+              "y": 83
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1678.3891570438063,
+              "y": 1912.036865149545
+            },
+            {
+              "x": 1678.3891570438063,
+              "y": 1916.0857782395617
+            },
+            {
+              "x": 1678.3891570438063,
+              "y": 1920.1346913295783
+            },
+            {
+              "x": 1678.3891570438063,
+              "y": 1924.1836044195948
+            },
+            {
+              "x": 1678.3891570438063,
+              "y": 1928.2325175096114
+            },
+            {
+              "x": 1678.3891570438063,
+              "y": 1932.281430599628
+            },
+            {
+              "x": 1674.3510742823312,
+              "y": 1936.3303436896445
+            },
+            {
+              "x": 1674.3510742823312,
+              "y": 1940.3792567796613
+            },
+            {
+              "x": 1674.3510742823312,
+              "y": 1944.4281698696777
+            },
+            {
+              "x": 1674.3510742823312,
+              "y": 1948.4770829596944
+            },
+            {
+              "x": 1670.3129915208563,
+              "y": 1952.525996049711
+            },
+            {
+              "x": 1670.3129915208563,
+              "y": 1956.5749091397274
+            },
+            {
+              "x": 1670.3129915208563,
+              "y": 1960.623822229744
+            },
+            {
+              "x": 1666.274908759381,
+              "y": 1964.6727353197607
+            },
+            {
+              "x": 1662.2368259979062,
+              "y": 1968.7216484097771
+            },
+            {
+              "x": 1658.1987432364313,
+              "y": 1972.770561499794
+            },
+            {
+              "x": 1658.1987432364313,
+              "y": 1976.8194745898104
+            },
+            {
+              "x": 1658.1987432364313,
+              "y": 1980.868387679827
+            },
+            {
+              "x": 1654.160660474956,
+              "y": 1984.9173007698437
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1988.96621385986
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1993.0151269498767
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 1997.0640400398934
+            },
+            {
+              "x": 1650.122577713481,
+              "y": 2001.1129531299098
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.467678427696228,
+          "roiArc": 24.89949493661167,
+          "nativeArc": 100.7623194886037,
+          "distalValleyPrefixNativeArc": 63.36262983636862,
+          "afterDistalValleyPrefixNativeArc": 37.399689652235075,
+          "tipToRootDistanceNative": 93.45345877453255,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": true,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.076165522950038,
+            8.097826180033167
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 50,
+              "index": 13995,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 59,
+              "index": 14219,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 71,
+              "index": 14443,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 81,
+              "index": 14667,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 91,
+              "index": 14891,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 105,
+              "index": 15114,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 122,
+              "index": 15338,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 140,
+              "index": 15562,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 157,
+              "index": 15786,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 176,
+              "index": 16009,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 190,
+              "index": 16233,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 203,
+              "index": 16457,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 213,
+              "index": 16680,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-2",
+          "pointsROI": [
+            {
+              "x": 112,
+              "y": 65
+            },
+            {
+              "x": 111,
+              "y": 66
+            },
+            {
+              "x": 110,
+              "y": 67
+            },
+            {
+              "x": 110,
+              "y": 68
+            },
+            {
+              "x": 110,
+              "y": 69
+            },
+            {
+              "x": 110,
+              "y": 70
+            },
+            {
+              "x": 109,
+              "y": 71
+            },
+            {
+              "x": 109,
+              "y": 72
+            },
+            {
+              "x": 108,
+              "y": 73
+            },
+            {
+              "x": 107,
+              "y": 74
+            },
+            {
+              "x": 108,
+              "y": 75
+            },
+            {
+              "x": 108,
+              "y": 76
+            },
+            {
+              "x": 107,
+              "y": 77
+            },
+            {
+              "x": 107,
+              "y": 78
+            },
+            {
+              "x": 107,
+              "y": 79
+            },
+            {
+              "x": 108,
+              "y": 80
+            },
+            {
+              "x": 109,
+              "y": 81
+            },
+            {
+              "x": 108,
+              "y": 82
+            },
+            {
+              "x": 108,
+              "y": 83
+            },
+            {
+              "x": 107,
+              "y": 84
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1698.5795708511814,
+              "y": 1928.2325175096114
+            },
+            {
+              "x": 1694.5414880897063,
+              "y": 1932.281430599628
+            },
+            {
+              "x": 1690.5034053282313,
+              "y": 1936.3303436896445
+            },
+            {
+              "x": 1690.5034053282313,
+              "y": 1940.3792567796613
+            },
+            {
+              "x": 1690.5034053282313,
+              "y": 1944.4281698696777
+            },
+            {
+              "x": 1690.5034053282313,
+              "y": 1948.4770829596944
+            },
+            {
+              "x": 1686.4653225667562,
+              "y": 1952.525996049711
+            },
+            {
+              "x": 1686.4653225667562,
+              "y": 1956.5749091397274
+            },
+            {
+              "x": 1682.4272398052813,
+              "y": 1960.623822229744
+            },
+            {
+              "x": 1678.3891570438063,
+              "y": 1964.6727353197607
+            },
+            {
+              "x": 1682.4272398052813,
+              "y": 1968.7216484097771
+            },
+            {
+              "x": 1682.4272398052813,
+              "y": 1972.770561499794
+            },
+            {
+              "x": 1678.3891570438063,
+              "y": 1976.8194745898104
+            },
+            {
+              "x": 1678.3891570438063,
+              "y": 1980.868387679827
+            },
+            {
+              "x": 1678.3891570438063,
+              "y": 1984.9173007698437
+            },
+            {
+              "x": 1682.4272398052813,
+              "y": 1988.96621385986
+            },
+            {
+              "x": 1686.4653225667562,
+              "y": 1993.0151269498767
+            },
+            {
+              "x": 1682.4272398052813,
+              "y": 1997.0640400398934
+            },
+            {
+              "x": 1682.4272398052813,
+              "y": 2001.1129531299098
+            },
+            {
+              "x": 1678.3891570438063,
+              "y": 2005.1618662199267
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.4982795715332031,
+          "roiArc": 23.55634918610405,
+          "nativeArc": 95.29342679469009,
+          "distalValleyPrefixNativeArc": 33.3507765622185,
+          "afterDistalValleyPrefixNativeArc": 61.94265023247159,
+          "tipToRootDistanceNative": 79.53475657035938,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": false,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.076165522950038,
+            8.097826180033167
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 88,
+              "index": 14895,
+              "processed": true,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": "unconfirmed-dense-link"
+            },
+            {
+              "rank": 100,
+              "index": 15118,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 118,
+              "index": 15342,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 136,
+              "index": 15566,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 143,
+              "index": 15790,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 173,
+              "index": 16013,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 201,
+              "index": 16460,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 221,
+              "index": 16908,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 223,
+              "index": 17132,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 228,
+              "index": 17355,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 234,
+              "index": 17579,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-3",
+          "pointsROI": [
+            {
+              "x": 117,
+              "y": 65
+            },
+            {
+              "x": 117,
+              "y": 66
+            },
+            {
+              "x": 116,
+              "y": 67
+            },
+            {
+              "x": 116,
+              "y": 68
+            },
+            {
+              "x": 115,
+              "y": 69
+            },
+            {
+              "x": 114,
+              "y": 70
+            },
+            {
+              "x": 114,
+              "y": 71
+            },
+            {
+              "x": 115,
+              "y": 72
+            },
+            {
+              "x": 115,
+              "y": 73
+            },
+            {
+              "x": 115,
+              "y": 74
+            },
+            {
+              "x": 114,
+              "y": 75
+            },
+            {
+              "x": 114,
+              "y": 76
+            },
+            {
+              "x": 113,
+              "y": 77
+            },
+            {
+              "x": 113,
+              "y": 78
+            },
+            {
+              "x": 112,
+              "y": 79
+            },
+            {
+              "x": 112,
+              "y": 80
+            },
+            {
+              "x": 112,
+              "y": 81
+            },
+            {
+              "x": 112,
+              "y": 82
+            },
+            {
+              "x": 112,
+              "y": 83
+            },
+            {
+              "x": 112,
+              "y": 84
+            },
+            {
+              "x": 111,
+              "y": 85
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1718.7699846585565,
+              "y": 1928.2325175096114
+            },
+            {
+              "x": 1718.7699846585565,
+              "y": 1932.281430599628
+            },
+            {
+              "x": 1714.7319018970813,
+              "y": 1936.3303436896445
+            },
+            {
+              "x": 1714.7319018970813,
+              "y": 1940.3792567796613
+            },
+            {
+              "x": 1710.6938191356064,
+              "y": 1944.4281698696777
+            },
+            {
+              "x": 1706.6557363741313,
+              "y": 1948.4770829596944
+            },
+            {
+              "x": 1706.6557363741313,
+              "y": 1952.525996049711
+            },
+            {
+              "x": 1710.6938191356064,
+              "y": 1956.5749091397274
+            },
+            {
+              "x": 1710.6938191356064,
+              "y": 1960.623822229744
+            },
+            {
+              "x": 1710.6938191356064,
+              "y": 1964.6727353197607
+            },
+            {
+              "x": 1706.6557363741313,
+              "y": 1968.7216484097771
+            },
+            {
+              "x": 1706.6557363741313,
+              "y": 1972.770561499794
+            },
+            {
+              "x": 1702.6176536126563,
+              "y": 1976.8194745898104
+            },
+            {
+              "x": 1702.6176536126563,
+              "y": 1980.868387679827
+            },
+            {
+              "x": 1698.5795708511814,
+              "y": 1984.9173007698437
+            },
+            {
+              "x": 1698.5795708511814,
+              "y": 1988.96621385986
+            },
+            {
+              "x": 1698.5795708511814,
+              "y": 1993.0151269498767
+            },
+            {
+              "x": 1698.5795708511814,
+              "y": 1997.0640400398934
+            },
+            {
+              "x": 1698.5795708511814,
+              "y": 2001.1129531299098
+            },
+            {
+              "x": 1698.5795708511814,
+              "y": 2005.1618662199267
+            },
+            {
+              "x": 1694.5414880897063,
+              "y": 2009.210779309943
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.9547383785247803,
+          "roiArc": 23.313708498984763,
+          "nativeArc": 94.3339549526051,
+          "distalValleyPrefixNativeArc": 43.1180643862861,
+          "afterDistalValleyPrefixNativeArc": 51.215890566319,
+          "tipToRootDistanceNative": 84.52513785963228,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": true,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.076165522950038,
+            8.097826180033167
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 84,
+              "index": 15348,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-search-boundary"
+            },
+            {
+              "rank": 131,
+              "index": 16018,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 145,
+              "index": 16243,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 158,
+              "index": 16467,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 177,
+              "index": 16691,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 227,
+              "index": 17808,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 235,
+              "index": 18032,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-4",
+          "pointsROI": [
+            {
+              "x": 67,
+              "y": 69
+            },
+            {
+              "x": 67,
+              "y": 70
+            },
+            {
+              "x": 67,
+              "y": 71
+            },
+            {
+              "x": 67,
+              "y": 72
+            },
+            {
+              "x": 67,
+              "y": 73
+            },
+            {
+              "x": 68,
+              "y": 74
+            },
+            {
+              "x": 69,
+              "y": 75
+            },
+            {
+              "x": 70,
+              "y": 76
+            },
+            {
+              "x": 71,
+              "y": 77
+            },
+            {
+              "x": 72,
+              "y": 78
+            },
+            {
+              "x": 73,
+              "y": 79
+            },
+            {
+              "x": 73,
+              "y": 80
+            },
+            {
+              "x": 72,
+              "y": 81
+            },
+            {
+              "x": 73,
+              "y": 82
+            },
+            {
+              "x": 74,
+              "y": 83
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1516.8658465848055,
+              "y": 1944.4281698696777
+            },
+            {
+              "x": 1516.8658465848055,
+              "y": 1948.4770829596944
+            },
+            {
+              "x": 1516.8658465848055,
+              "y": 1952.525996049711
+            },
+            {
+              "x": 1516.8658465848055,
+              "y": 1956.5749091397274
+            },
+            {
+              "x": 1516.8658465848055,
+              "y": 1960.623822229744
+            },
+            {
+              "x": 1520.9039293462804,
+              "y": 1964.6727353197607
+            },
+            {
+              "x": 1524.9420121077555,
+              "y": 1968.7216484097771
+            },
+            {
+              "x": 1528.9800948692305,
+              "y": 1972.770561499794
+            },
+            {
+              "x": 1533.0181776307054,
+              "y": 1976.8194745898104
+            },
+            {
+              "x": 1537.0562603921805,
+              "y": 1980.868387679827
+            },
+            {
+              "x": 1541.0943431536557,
+              "y": 1984.9173007698437
+            },
+            {
+              "x": 1541.0943431536557,
+              "y": 1988.96621385986
+            },
+            {
+              "x": 1537.0562603921805,
+              "y": 1993.0151269498767
+            },
+            {
+              "x": 1541.0943431536557,
+              "y": 1997.0640400398934
+            },
+            {
+              "x": 1545.1324259151306,
+              "y": 2001.1129531299098
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.6319266557693481,
+          "roiArc": 17.72792206135786,
+          "nativeArc": 71.70993805653924,
+          "distalValleyPrefixNativeArc": 16.195652360066333,
+          "afterDistalValleyPrefixNativeArc": 55.51428569647291,
+          "tipToRootDistanceNative": 63.34164633396459,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": false,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.076165522950038,
+            8.097826180033167
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 113,
+              "index": 15523,
+              "processed": true,
+              "status": "ambiguous",
+              "proximalConnection": false,
+              "proximalStop": "bootstrap-multiple-valleys"
+            },
+            {
+              "rank": 132,
+              "index": 15747,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 150,
+              "index": 15971,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 168,
+              "index": 16195,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 181,
+              "index": 16419,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-5",
+          "pointsROI": [
+            {
+              "x": 54,
+              "y": 73
+            },
+            {
+              "x": 55,
+              "y": 74
+            },
+            {
+              "x": 56,
+              "y": 75
+            },
+            {
+              "x": 57,
+              "y": 75
+            },
+            {
+              "x": 58,
+              "y": 76
+            },
+            {
+              "x": 59,
+              "y": 77
+            },
+            {
+              "x": 60,
+              "y": 78
+            },
+            {
+              "x": 60,
+              "y": 79
+            },
+            {
+              "x": 61,
+              "y": 80
+            },
+            {
+              "x": 62,
+              "y": 81
+            },
+            {
+              "x": 63,
+              "y": 82
+            },
+            {
+              "x": 64,
+              "y": 83
+            },
+            {
+              "x": 64,
+              "y": 84
+            },
+            {
+              "x": 64,
+              "y": 85
+            },
+            {
+              "x": 65,
+              "y": 86
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1464.3707706856303,
+              "y": 1960.623822229744
+            },
+            {
+              "x": 1468.4088534471052,
+              "y": 1964.6727353197607
+            },
+            {
+              "x": 1472.4469362085802,
+              "y": 1968.7216484097771
+            },
+            {
+              "x": 1476.4850189700553,
+              "y": 1968.7216484097771
+            },
+            {
+              "x": 1480.5231017315302,
+              "y": 1972.770561499794
+            },
+            {
+              "x": 1484.5611844930054,
+              "y": 1976.8194745898104
+            },
+            {
+              "x": 1488.5992672544803,
+              "y": 1980.868387679827
+            },
+            {
+              "x": 1488.5992672544803,
+              "y": 1984.9173007698437
+            },
+            {
+              "x": 1492.6373500159552,
+              "y": 1988.96621385986
+            },
+            {
+              "x": 1496.6754327774304,
+              "y": 1993.0151269498767
+            },
+            {
+              "x": 1500.7135155389053,
+              "y": 1997.0640400398934
+            },
+            {
+              "x": 1504.7515983003805,
+              "y": 2001.1129531299098
+            },
+            {
+              "x": 1504.7515983003805,
+              "y": 2005.1618662199267
+            },
+            {
+              "x": 1504.7515983003805,
+              "y": 2009.210779309943
+            },
+            {
+              "x": 1508.7896810618554,
+              "y": 2013.2596923999597
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.3955310583114624,
+          "roiArc": 18.142135623730955,
+          "nativeArc": 73.36856937203176,
+          "distalValleyPrefixNativeArc": 26.911581697677825,
+          "afterDistalValleyPrefixNativeArc": 46.45698767435393,
+          "tipToRootDistanceNative": 68.87361198301504,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": false,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.076165522950038,
+            8.097826180033167
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 141,
+              "index": 16631,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 165,
+              "index": 16856,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 166,
+              "index": 16857,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-6",
+          "pointsROI": [
+            {
+              "x": 90,
+              "y": 69
+            },
+            {
+              "x": 90,
+              "y": 70
+            },
+            {
+              "x": 90,
+              "y": 71
+            },
+            {
+              "x": 89,
+              "y": 72
+            },
+            {
+              "x": 88,
+              "y": 73
+            },
+            {
+              "x": 88,
+              "y": 74
+            },
+            {
+              "x": 88,
+              "y": 75
+            },
+            {
+              "x": 88,
+              "y": 76
+            },
+            {
+              "x": 88,
+              "y": 77
+            },
+            {
+              "x": 87,
+              "y": 78
+            },
+            {
+              "x": 86,
+              "y": 79
+            },
+            {
+              "x": 85,
+              "y": 80
+            },
+            {
+              "x": 85,
+              "y": 81
+            },
+            {
+              "x": 85,
+              "y": 82
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1609.7417500987308,
+              "y": 1944.4281698696777
+            },
+            {
+              "x": 1609.7417500987308,
+              "y": 1948.4770829596944
+            },
+            {
+              "x": 1609.7417500987308,
+              "y": 1952.525996049711
+            },
+            {
+              "x": 1605.7036673372559,
+              "y": 1956.5749091397274
+            },
+            {
+              "x": 1601.665584575781,
+              "y": 1960.623822229744
+            },
+            {
+              "x": 1601.665584575781,
+              "y": 1964.6727353197607
+            },
+            {
+              "x": 1601.665584575781,
+              "y": 1968.7216484097771
+            },
+            {
+              "x": 1601.665584575781,
+              "y": 1972.770561499794
+            },
+            {
+              "x": 1601.665584575781,
+              "y": 1976.8194745898104
+            },
+            {
+              "x": 1597.6275018143058,
+              "y": 1980.868387679827
+            },
+            {
+              "x": 1593.5894190528309,
+              "y": 1984.9173007698437
+            },
+            {
+              "x": 1589.5513362913557,
+              "y": 1988.96621385986
+            },
+            {
+              "x": 1589.5513362913557,
+              "y": 1993.0151269498767
+            },
+            {
+              "x": 1589.5513362913557,
+              "y": 1997.0640400398934
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.8382059335708618,
+          "roiArc": 15.071067811865477,
+          "nativeArc": 60.983178390386236,
+          "distalValleyPrefixNativeArc": 13.816200914083787,
+          "afterDistalValleyPrefixNativeArc": 47.16697747630245,
+          "tipToRootDistanceNative": 56.375416967760316,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": false,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.076165522950038,
+            8.097826180033167
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 151,
+              "index": 15546,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 171,
+              "index": 15770,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 183,
+              "index": 15994,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 199,
+              "index": 16217,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-7",
+          "pointsROI": [
+            {
+              "x": 53,
+              "y": 75
+            },
+            {
+              "x": 53,
+              "y": 76
+            },
+            {
+              "x": 54,
+              "y": 77
+            },
+            {
+              "x": 54,
+              "y": 78
+            },
+            {
+              "x": 54,
+              "y": 79
+            },
+            {
+              "x": 55,
+              "y": 80
+            },
+            {
+              "x": 56,
+              "y": 81
+            },
+            {
+              "x": 56,
+              "y": 82
+            },
+            {
+              "x": 57,
+              "y": 83
+            },
+            {
+              "x": 58,
+              "y": 84
+            },
+            {
+              "x": 59,
+              "y": 85
+            },
+            {
+              "x": 60,
+              "y": 86
+            },
+            {
+              "x": 60,
+              "y": 87
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1460.3326879241552,
+              "y": 1968.7216484097771
+            },
+            {
+              "x": 1460.3326879241552,
+              "y": 1972.770561499794
+            },
+            {
+              "x": 1464.3707706856303,
+              "y": 1976.8194745898104
+            },
+            {
+              "x": 1464.3707706856303,
+              "y": 1980.868387679827
+            },
+            {
+              "x": 1464.3707706856303,
+              "y": 1984.9173007698437
+            },
+            {
+              "x": 1468.4088534471052,
+              "y": 1988.96621385986
+            },
+            {
+              "x": 1472.4469362085802,
+              "y": 1993.0151269498767
+            },
+            {
+              "x": 1472.4469362085802,
+              "y": 1997.0640400398934
+            },
+            {
+              "x": 1476.4850189700553,
+              "y": 2001.1129531299098
+            },
+            {
+              "x": 1480.5231017315302,
+              "y": 2005.1618662199267
+            },
+            {
+              "x": 1484.5611844930054,
+              "y": 2009.210779309943
+            },
+            {
+              "x": 1488.5992672544803,
+              "y": 2013.2596923999597
+            },
+            {
+              "x": 1488.5992672544803,
+              "y": 2017.3086054899763
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.9462546110153198,
+          "roiArc": 14.899494936611667,
+          "nativeArc": 60.27318858843812,
+          "distalValleyPrefixNativeArc": 13.816200914084176,
+          "afterDistalValleyPrefixNativeArc": 46.45698767435394,
+          "tipToRootDistanceNative": 56.21113684449628,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": false,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.076165522950038,
+            8.097826180033167
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 152,
+              "index": 17077,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 189,
+              "index": 17526,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        },
+        {
+          "id": "baseline-8",
+          "pointsROI": [
+            {
+              "x": 76,
+              "y": 71
+            },
+            {
+              "x": 75,
+              "y": 72
+            },
+            {
+              "x": 75,
+              "y": 73
+            },
+            {
+              "x": 75,
+              "y": 74
+            },
+            {
+              "x": 76,
+              "y": 75
+            },
+            {
+              "x": 76,
+              "y": 76
+            },
+            {
+              "x": 76,
+              "y": 77
+            },
+            {
+              "x": 76,
+              "y": 78
+            },
+            {
+              "x": 76,
+              "y": 79
+            },
+            {
+              "x": 77,
+              "y": 80
+            },
+            {
+              "x": 78,
+              "y": 81
+            },
+            {
+              "x": 78,
+              "y": 82
+            }
+          ],
+          "pointsSource": [
+            {
+              "x": 1553.2085914380807,
+              "y": 1952.525996049711
+            },
+            {
+              "x": 1549.1705086766056,
+              "y": 1956.5749091397274
+            },
+            {
+              "x": 1549.1705086766056,
+              "y": 1960.623822229744
+            },
+            {
+              "x": 1549.1705086766056,
+              "y": 1964.6727353197607
+            },
+            {
+              "x": 1553.2085914380807,
+              "y": 1968.7216484097771
+            },
+            {
+              "x": 1553.2085914380807,
+              "y": 1972.770561499794
+            },
+            {
+              "x": 1553.2085914380807,
+              "y": 1976.8194745898104
+            },
+            {
+              "x": 1553.2085914380807,
+              "y": 1980.868387679827
+            },
+            {
+              "x": 1553.2085914380807,
+              "y": 1984.9173007698437
+            },
+            {
+              "x": 1557.2466741995556,
+              "y": 1988.96621385986
+            },
+            {
+              "x": 1561.2847569610308,
+              "y": 1993.0151269498767
+            },
+            {
+              "x": 1561.2847569610308,
+              "y": 1997.0640400398934
+            }
+          ],
+          "connectedAtROIScale": true,
+          "rootDistanceROI": 1.5448620319366455,
+          "roiArc": 12.656854249492381,
+          "nativeArc": 51.21589056631915,
+          "distalValleyPrefixNativeArc": 27.632401828167897,
+          "afterDistalValleyPrefixNativeArc": 23.583488738151257,
+          "tipToRootDistanceNative": 45.2643547620587,
+          "fullPathExceeds36": true,
+          "distalPrefixExceeds36": false,
+          "referenceRootGateROI": 2,
+          "sourceEquivalentRootGateRange": [
+            8.076165522950038,
+            8.097826180033167
+          ],
+          "nativeExperimentalRootGate": 1.5,
+          "sharedAutomaticSeeds": [
+            {
+              "rank": 191,
+              "index": 15980,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 200,
+              "index": 16203,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 209,
+              "index": 16427,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            },
+            {
+              "rank": 218,
+              "index": 16651,
+              "processed": false,
+              "status": "censored",
+              "proximalConnection": false,
+              "proximalStop": null
+            }
+          ],
+          "endpointConfirmed": false,
+          "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+        }
+      ],
+      "sourceArtifact": {
+        "file": "tests\\visual\\out\\native-cell-real-01\\webkit.json",
+        "sha256": "72130951759e2188a4295cd0aa2664f40d80eb9b474b307dc828c4e70d1a97dc"
+      }
+    }
+  ],
+  "decision": "LENGTH HOLD"
+}

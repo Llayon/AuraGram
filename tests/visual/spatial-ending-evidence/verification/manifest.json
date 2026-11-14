@@ -1,0 +1,52 @@
+{
+  "records": [
+    {
+      "file": "spatial-cycle-final-unit.txt",
+      "bytes": 25880,
+      "sha256": "0db653eb95e76afc03a3b6cf6a625f7c555808fe27dc9911cc61bf58eb5cbac1",
+      "rawLocalLog": "spatial-cycle-final-unit.log",
+      "rawLocalSHA256": "08dfd272b8bf7bc36b9edd659a419e7954e976534ed0c4b41785de04698394ba",
+      "transformation": "BOM-aware text decode to UTF8/LF for review; original local log retained"
+    },
+    {
+      "file": "spatial-cycle-final-e2e.txt",
+      "bytes": 49738,
+      "sha256": "a3746be9345127ca12f4ad26dd23b1dbce377e92333bb13cf5d7cc63a05fa742",
+      "rawLocalLog": "spatial-cycle-final-e2e.log",
+      "rawLocalSHA256": "95626c65d34fb1386f35f918cfac4394db9b58bc468b721bb89a4e7cc6f4903e",
+      "transformation": "BOM-aware text decode to UTF8/LF for review; original local log retained"
+    },
+    {
+      "file": "spatial-cycle-final-performance.txt",
+      "bytes": 3568,
+      "sha256": "91043e3dbb2c587943ee46a6f11e52aaf12717e63b5fbc055d4269a35668026c",
+      "rawLocalLog": "spatial-cycle-final-performance.log",
+      "rawLocalSHA256": "9a855458fbea12da029ec11ad54cf57831948794801bbe8629ebb9a8f29a521b",
+      "transformation": "BOM-aware text decode to UTF8/LF for review; original local log retained"
+    },
+    {
+      "file": "spatial-cycle-build.txt",
+      "bytes": 772,
+      "sha256": "727dd61e2ace065ebfad5f5cdb8278c510ce01879a1f39d8e423bd4dbeb53d27",
+      "rawLocalLog": "spatial-cycle-build.log",
+      "rawLocalSHA256": "81929a03624c2721639d35bda6af6db5ed8782749f22b2fc588313acdf19ffcf",
+      "transformation": "BOM-aware text decode to UTF8/LF for review; original local log retained"
+    },
+    {
+      "file": "spatial-cycle-package-restored.txt",
+      "bytes": 95,
+      "sha256": "1da1367bfda82453a298c3c07ad6734e491bc79cdc902f03668a77f4f602898d",
+      "rawLocalLog": "spatial-cycle-package-restored.log",
+      "rawLocalSHA256": "3fb22edde5bd86e3ae9b0566af91d6fdeb994e7f1fc8c946da3203ad5a549486",
+      "transformation": "BOM-aware text decode to UTF8/LF for review; original local log retained"
+    },
+    {
+      "file": "spatial-cycle-site-restored.txt",
+      "bytes": 307,
+      "sha256": "b12f43096006624ce89f22f1d34f2cae3080327c6442e8daa562ea5c1f04b459",
+      "rawLocalLog": "spatial-cycle-site-restored.log",
+      "rawLocalSHA256": "27d03545dd95ebfbd6180414d90c9554ac0a0a57e33704dcc4412b885c475961",
+      "transformation": "BOM-aware text decode to UTF8/LF for review; original local log retained"
+    }
+  ]
+}

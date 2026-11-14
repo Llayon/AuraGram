@@ -1,0 +1,1322 @@
+{
+  "date": "2026-11-14",
+  "kind": "production-mask-geometric-audit-only",
+  "productionSourceModified": false,
+  "detectorExecuted": false,
+  "recognitionCohortQualified": false,
+  "annotationQuality": "provisional original-only engineering labels; independent critique incomplete",
+  "findings": {
+    "labels01": "Right eye: all five frozen uncertainty regions fully alpha255 in baseline and maximum-recovery masks, native and preview, Chromium and WebKit. Left only three labels.",
+    "labels02": "Chromium left: two regions entirely excluded by both masks; third only partly overlaps maximum recovery, native centre alpha0. Last two regions inside. WebKit no_face retained."
+  },
+  "decision": "One five-label eye passes geometric mask scope; not detector or cohort acceptance. LENGTH HOLD",
+  "results": [
+    {
+      "labelRun": "labels-01",
+      "engine": "chromium",
+      "status": "ready",
+      "deterministic": true,
+      "scopes": [
+        {
+          "side": "left",
+          "target": "preview720long",
+          "group": "baselineLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "f0f9933187efc7c1446d0dc8738fedd1c84a35335023fd25752133dce1d06ca5"
+        },
+        {
+          "side": "left",
+          "target": "preview720long",
+          "group": "maximumRecoveryLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "de80843079124e13e4b6744912bf3990dd3db3f491ab5c0288baecc162ae16dc"
+        },
+        {
+          "side": "left",
+          "target": "native",
+          "group": "baselineLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "e54b99934c7f335cd8056581aa238cfd2285cb8c20d5541aab0cd963bb057c5f"
+        },
+        {
+          "side": "left",
+          "target": "native",
+          "group": "maximumRecoveryLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "33546221ad0218860d09dd0ce6b4846450a3d4617aa7f4db6ccebc2fe7bb70e2"
+        },
+        {
+          "side": "right",
+          "target": "preview720long",
+          "group": "baselineLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "right-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 254.92686170212767,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 342
+            },
+            {
+              "id": "right-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-4",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "bf0340912a9f1433ec6e7563cd88587dfb8e8ee0bb6325a20004f197855fa5cb"
+        },
+        {
+          "side": "right",
+          "target": "preview720long",
+          "group": "maximumRecoveryLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "right-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-4",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "42085fd3165554fbc190fcdcc79b18a2176505b287eb2d905b8bdd008992b677"
+        },
+        {
+          "side": "right",
+          "target": "native",
+          "group": "baselineLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "right-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-4",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "c8b1f36479cd0f4e55b999b49b55c70fa4cb55e126d58b5e8d5118669a35b26a"
+        },
+        {
+          "side": "right",
+          "target": "native",
+          "group": "maximumRecoveryLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "right-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-4",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "b49ffe19063c8caa9d0ace3439d5276c7e9f5c129407951f7dba65b78b1afae5"
+        }
+      ],
+      "artifacts": [
+        {
+          "file": "tests/visual/out/mask-scope-01-01/chromium.json",
+          "sha256": "29266493c2967a37fac1922f4455eccb1f02057a7596f873dfd0644bc7082ffa"
+        },
+        {
+          "file": "tests/visual/out/mask-scope-01-02/chromium.json",
+          "sha256": "29266493c2967a37fac1922f4455eccb1f02057a7596f873dfd0644bc7082ffa"
+        }
+      ]
+    },
+    {
+      "labelRun": "labels-01",
+      "engine": "webkit",
+      "status": "ready",
+      "deterministic": true,
+      "scopes": [
+        {
+          "side": "left",
+          "target": "preview720long",
+          "group": "baselineLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "eaa7626187cc66e10a7250f14666984286dd377fe4436636bf402992d9165012"
+        },
+        {
+          "side": "left",
+          "target": "preview720long",
+          "group": "maximumRecoveryLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "122206f907b1b16cf16c3729e3713bfaf9d2372b3983f682c5495987b49a90d7"
+        },
+        {
+          "side": "left",
+          "target": "native",
+          "group": "baselineLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "bd9de27cabf05304eed76b077d0c8b9de22ee3642e22de02ac385894680537c6"
+        },
+        {
+          "side": "left",
+          "target": "native",
+          "group": "maximumRecoveryLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "04a79b3b69abf4cdc0a18b99badbf2523abbf17a6a87a3bdd64f138c00a8e02f"
+        },
+        {
+          "side": "right",
+          "target": "preview720long",
+          "group": "baselineLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "right-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 253.9970346340702,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 342
+            },
+            {
+              "id": "right-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-4",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "60bb51a2f9e1244030b6a75bedf0dfe9604792be65446991f8035794e8388e1c"
+        },
+        {
+          "side": "right",
+          "target": "preview720long",
+          "group": "maximumRecoveryLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "right-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-4",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "932f660ececacf1371bb7907208cc6a30cd0abbdc6ca0b3bbeb6cacb5c166fe7"
+        },
+        {
+          "side": "right",
+          "target": "native",
+          "group": "baselineLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "right-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-4",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "935b85588cfe13616961c88caa3349e40a6209d334b406f3b763ebdd7fe087dd"
+        },
+        {
+          "side": "right",
+          "target": "native",
+          "group": "maximumRecoveryLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "right-1",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-2",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-3",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-4",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            },
+            {
+              "id": "right-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 361,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 361,
+              "fullSamples": 361
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "3c4b96387bd558c9801d63f94033f79f05b151b324b67cdd1984475f087234e9"
+        }
+      ],
+      "artifacts": [
+        {
+          "file": "tests/visual/out/mask-scope-01-01/webkit.json",
+          "sha256": "7c5dceed14670d91980f21e6536d7679b8a6dd1ccbf0f615364bb090c8a3b38a"
+        },
+        {
+          "file": "tests/visual/out/mask-scope-01-02/webkit.json",
+          "sha256": "7c5dceed14670d91980f21e6536d7679b8a6dd1ccbf0f615364bb090c8a3b38a"
+        }
+      ]
+    },
+    {
+      "labelRun": "labels-02",
+      "engine": "chromium",
+      "status": "ready",
+      "deterministic": true,
+      "scopes": [
+        {
+          "side": "left",
+          "target": "preview720long",
+          "group": "baselineLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 0,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 0,
+              "positiveSamples": 0,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 0,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 0,
+              "positiveSamples": 0,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 0,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 0,
+              "positiveSamples": 0,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-4",
+              "centerAlpha": 254.07174744897958,
+              "sourcePixelSamples": 441,
+              "minAlpha": 58.38010204081245,
+              "maxAlpha": 255,
+              "positiveSamples": 441,
+              "fullSamples": 84
+            },
+            {
+              "id": "left-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 441,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 441,
+              "fullSamples": 441
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "6c59a9b198cec40028a73cd9f542724bb2d95bc69f9f1c31c55773c7f018ff31"
+        },
+        {
+          "side": "left",
+          "target": "preview720long",
+          "group": "maximumRecoveryLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 0,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 0,
+              "positiveSamples": 0,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 0,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 0,
+              "positiveSamples": 0,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 0.110012755102072,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 60.95089285714454,
+              "positiveSamples": 168,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-4",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 441,
+              "minAlpha": 254.72735969387753,
+              "maxAlpha": 255,
+              "positiveSamples": 441,
+              "fullSamples": 409
+            },
+            {
+              "id": "left-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 441,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 441,
+              "fullSamples": 441
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "b648b449acc83d88ef47842dcff5a9f785d68589f48a002a8e4935453e7fa90a"
+        },
+        {
+          "side": "left",
+          "target": "native",
+          "group": "baselineLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 0,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 0,
+              "positiveSamples": 0,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 0,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 0,
+              "positiveSamples": 0,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 0,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 0,
+              "positiveSamples": 0,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-4",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 441,
+              "minAlpha": 73.9999999999759,
+              "maxAlpha": 255,
+              "positiveSamples": 441,
+              "fullSamples": 420
+            },
+            {
+              "id": "left-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 441,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 441,
+              "fullSamples": 441
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "10958391244b481f3d095496f7a3e63924019b84fafef8e90417ae005422c356"
+        },
+        {
+          "side": "left",
+          "target": "native",
+          "group": "maximumRecoveryLength",
+          "sourcePixelSampleCoverage": [
+            {
+              "id": "left-1",
+              "centerAlpha": 0,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 0,
+              "positiveSamples": 0,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-2",
+              "centerAlpha": 0,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 0,
+              "positiveSamples": 0,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-3",
+              "centerAlpha": 0,
+              "sourcePixelSamples": 441,
+              "minAlpha": 0,
+              "maxAlpha": 241,
+              "positiveSamples": 12,
+              "fullSamples": 0
+            },
+            {
+              "id": "left-4",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 441,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 441,
+              "fullSamples": 441
+            },
+            {
+              "id": "left-5",
+              "centerAlpha": 255,
+              "sourcePixelSamples": 441,
+              "minAlpha": 255,
+              "maxAlpha": 255,
+              "positiveSamples": 441,
+              "fullSamples": 441
+            }
+          ],
+          "protectedProbes": {
+            "lowerLidAlpha": 0,
+            "innerAlpha": 0,
+            "browAlphas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "maskSHA256": "e15786ab4ed1a6743c246f27f8c5ea1f1f6bb36093783a5533aaa547fef52be2"
+        }
+      ],
+      "artifacts": [
+        {
+          "file": "tests/visual/out/mask-scope-02-03/chromium.json",
+          "sha256": "83604ede27879dcdf3b24d68523d6fa447bd95e80c9f590d1310baca62e01ea2"
+        },
+        {
+          "file": "tests/visual/out/mask-scope-02-04/chromium.json",
+          "sha256": "83604ede27879dcdf3b24d68523d6fa447bd95e80c9f590d1310baca62e01ea2"
+        }
+      ]
+    },
+    {
+      "labelRun": "labels-02",
+      "engine": "webkit",
+      "status": "no_face",
+      "deterministic": true,
+      "scopes": [],
+      "artifacts": [
+        {
+          "file": "tests/visual/out/mask-scope-02-03/webkit.json",
+          "sha256": "88cab11b0cb684939e5bb4ce6f3d3f38bdc0835329307972dc2ae2183ee3d703"
+        },
+        {
+          "file": "tests/visual/out/mask-scope-02-04/webkit.json",
+          "sha256": "88cab11b0cb684939e5bb4ce6f3d3f38bdc0835329307972dc2ae2183ee3d703"
+        }
+      ]
+    }
+  ]
+}

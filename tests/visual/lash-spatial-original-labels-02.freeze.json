@@ -1,0 +1,7 @@
+{
+  "purpose": "Freeze provisional original-only single-eye labels before lash detector execution; not recognition acceptance",
+  "inputs": {
+    "tests/visual/lash-spatial-original-labels-02.json": "562922b1fa34b409d601dbfa23df194669f4c6348a2c5def2b627ad4f0353518"
+  },
+  "sourceSHA256": "720bef5c5cd9b4b19afff6108404358656bf43d2e820f49b9cd5512b9e2472b9"
+}

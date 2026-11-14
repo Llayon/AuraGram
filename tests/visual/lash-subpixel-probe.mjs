@@ -3,7 +3,7 @@ import {fitShaftAxis} from './lash-native-shaft.mjs';
 
 import {measureCentroid as localCenter} from './lash-subpixel-center.mjs';
 
-export function followCurve(luma,w,h,seed,axis,eligibility,{margin,protocol:p}){
+export function followCurve(luma,w,h,seed,axis,eligibility,{margin,protocol:p,stopAtPoint}){
  const base={outcome:'UNKNOWN',endpointConfirmed:false};
  if(!axis.available||!seed||!eligibility.body||!eligibility.association)return{...base,available:false,reason:'unconfirmed-seed-association-or-body',points:[],attempts:[]};
  const prior={x:axis.tx,y:axis.ty},bootstrap=[];
@@ -39,6 +39,8 @@ export function followCurve(luma,w,h,seed,axis,eligibility,{margin,protocol:p}){
    nextU={x:fit.tx,y:fit.ty};
   }
   arc=proposedArc;current=m.center;u=nextU;points.push({...current,arc});record.linkAccepted=true;
+  const stop=stopAtPoint?.(current);
+  if(stop)return{...base,...evidence,available:true,reason:typeof stop==="string"?stop:"observed-proximal-region",points,attempts};
  }
  return{...base,...evidence,available:true,reason:'step-budget',points,attempts};
 }
