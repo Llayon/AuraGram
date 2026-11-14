@@ -1,0 +1,83 @@
+{
+  "schema": "auragram-independent-downward-fixer-critic-v1",
+  "decision": "Code fixes address reproduced raster-representation defects; offline real-image critique still required. No product adoption. LENGTH HOLD.",
+  "exposure": "V1/V2 synthetic failures and parent descriptions known. Reviewed V2/V3 declarations and current helper/tests before reading revised03 real outcomes. No browser/model inference or real-photo analysis executed by critic. Frozen protocol/labels/product source untouched.",
+  "reviewedFiles": [
+    {
+      "path": "tests/visual/lash-downward-protocol.json",
+      "sha256": "7ff4778a30cc1d7147c34217dc9f04ed3aaa8ebab993e203e4ed7b1cf2661363"
+    },
+    {
+      "path": "tests/visual/lash-downward-fixer.json",
+      "sha256": "0ddb2c0a30cc2b10f97b6b1247dd8a00fbe5abcdc6b74654ca7e6a8af6ff8c7c"
+    },
+    {
+      "path": "tests/visual/lash-downward-terminal-refinement.json",
+      "sha256": "3fe1d8b6c799101b5e05ec68d380da176c27cdcb84d18c36c11f5206730f6c6b"
+    },
+    {
+      "path": "tests/visual/lash-downward.mjs",
+      "sha256": "4f62a02b3593ee4b8067f0418cb01d3e39663993ea92403de6a67d1ef2a8c3e8"
+    },
+    {
+      "path": "tests/visual/lash-downward.test.mjs",
+      "sha256": "0d3a11cddd11944d4c2fd1f5590215b892a961ba1b4d41b3c871603be18593d3"
+    },
+    {
+      "path": "tests/visual/lash-downward-code-critic.json",
+      "sha256": "e7997df73c4ab5c1ecfa6de5d977b0858cf65e2440eccd082799ee830bedd537"
+    }
+  ],
+  "fixDispositions": [
+    {
+      "original": "Root census counts sampled pixels of one root zone as different roots",
+      "status": "SPECIFIC_REPRO_ADDRESSSED",
+      "detail": "rootContactSpan now measures projections onto actual upper arc; original root coordinates/count/rootSpan retained. Fixed2.5 threshold unchanged. Regression verifies vertical single strand raw roots>1 yet contactspan0, no multiple-root rejection.",
+      "remaining": "Nearby distinct fibers can share a small projected contact neighborhood, or merge proximally. Projection is not certified same-fiber biological ownership."
+    },
+    {
+      "original": "Multiple raster-neighbor routes treated as distal physical branching",
+      "status": "SPECIFIC_REPRO_ADDRESSED",
+      "detail": "Observed transverse response NMS removes pixels only; redundant directed graph edge removed only when another observed neighbor gives the two-edge path. Vertical single-strand regression has branching0.",
+      "remaining": "NMS can disconnect/shift a curved ridge, quantized orientations and 8-connectivity still cannot identify same fiber at touches. Unchanged graph bookkeeping should not be called anatomical separation."
+    },
+    {
+      "original": "Synthetic mechanisms contain no qualified endpoint positive",
+      "status": "POSITIVE_MECHANISM_NOW_DEMONSTRATED",
+      "detail": "Independently ran node --test tests/visual/lash-downward.test.mjs:9PASS/0FAIL/0SKIPPED/0CANCELLED. Tapered8phase family actually produced one qualified observation in every phase, with unchanged forward.006 floor. Test requires some positive, not universal coverage; full outcomes printed.",
+      "remaining": "Eight variants of one aligned Gaussian/taper family are not photographic naturalness, curve/makeup/branch robustness or generalization."
+    },
+    {
+      "original": "Graph leaf retains positive forward support and is not observed terminal",
+      "status": "BOUNDED_RESPONSE_BOUNDARY_LOCALIZATION_IMPLEMENTED",
+      "detail": "Supported start required along measured distal TLS axis; quarter-pixel scan<=1workingpx, six bisections keep last-supported response. All original forward distances retested; unavailable/unresolved/continuing/budget/protected conditions reject. Raw graphTip and points remain, refined tip/support samples/bracket retained.",
+      "remaining": "This is first local threshold-support loss along one straight axis, not a physical free end. A curved or weak shaft may leave the line/reduce contrast while continuing elsewhere; sampled forward checks cannot establish absence of such continuation."
+    }
+  ],
+  "analyticObservation": {
+    "phaseCount": 8,
+    "qualifiedPhases": 8,
+    "endRange": [
+      32.125,
+      33
+    ],
+    "measuredYRange": [
+      32.75390625,
+      32.96875
+    ],
+    "maxPositiveOffsetFromGeneratorEndWorkingPx": 0.62890625,
+    "meaning": "Bilinearly sampled contrast-support boundary differs from generator physical endpoint. Six bisections provide numerical interpolation precision, not new image detail or subpixel physical accuracy. Working units must be converted/reported natively posthoc with source footprint."
+  },
+  "remainingInterpretationLimits": [
+    "Root attachment is only observed graph connection to predicted upper arc.",
+    "A centerline can switch fibers at unresolved proximal touch/merge without a large rootContactSpan.",
+    "Engineering width from one proximal profile is not certified anatomical width.",
+    "QualifiedObservation is a hypothesis, never permission for product Length or existing guard bypass.",
+    "All prior failed outcomes/tools and fixed exposures must remain available; do not reinterpret V1 abstentions as true-negative accuracy."
+  ],
+  "realVisualReviewRequired": [
+    "Compare actual native original, all graph paths and measured support brackets/forward profiles for qualified and rejected cases.",
+    "Retain existing white-liner/hair negatives and projected-opening protection; inspect low-contrast tails, curved continuation and merged roots.",
+    "Report endpoint/native-direction uncertainty and individual source outcomes, not only candidate count or nonzero pixel delta."
+  ]
+}

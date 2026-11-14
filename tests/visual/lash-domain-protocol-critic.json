@@ -1,0 +1,73 @@
+{
+  "schema": "auragram-independent-domain-protocol-critic-v1",
+  "stage": "before new domain audit results/overlays",
+  "decision": "Suitable as a descriptive offline geometry probe only. No product mask, skin/closure classifier, lash detection or Length adoption justified. LENGTH HOLD.",
+  "scope": "Read frozen protocol and math/input/prepare helpers. No new source labels, detector results, overlays, browser or inference read/run for this review. Pure synthetic mathematical sanity checks were run in memory. Frozen protocol/labels/product untouched.",
+  "reviewedFiles": [
+    {
+      "path": "tests/visual/lash-domain-protocol.json",
+      "sha256": "e0207ae13fdb0072edb52705f3a77c50c81352cd600c0a8f9032d662e40719df"
+    },
+    {
+      "path": "tests/visual/lash-domain.mjs",
+      "sha256": "b6e68764b6f0ad90c8bcb84d90169bc3bb8b6125be31ee8b44f70404b3fc10cc"
+    },
+    {
+      "path": "tests/visual/lash-domain-inputs.cjs",
+      "sha256": "44bc60bccb1b3d74b15d25ac24345e83bce4950ac6764146e508384b8badec11"
+    },
+    {
+      "path": "tests/visual/lash-domain-prepare.cjs",
+      "sha256": "a3bc09ae90c578ed917ae610335fdab62246456a20ffe780e67a2cccfeca16ec"
+    }
+  ],
+  "protocolSHAConfirmed": "e0207ae13fdb0072edb52705f3a77c50c81352cd600c0a8f9032d662e40719df",
+  "strengths": [
+    "Native source-pixel eye axis and closest-segment/polygon distances avoid fixed320 image assumptions.",
+    "Both engines/frozen geometries and all predeclared aperture/depth combinations retained; rotated derivative identified rather than independent source.",
+    "Geometry/image/module hashes and annotation exposure limitations explicitly recorded.",
+    "No semantic skin assertion, manual seed/direction, runtime guard bypass or effect rendering.",
+    "No_face annotations remain excluded from geometric target matching; sparse labels are not exhaustive recall groundtruth."
+  ],
+  "limitations": [
+    {
+      "id": "DOMAIN-C1",
+      "issue": "Aperture is an absolute projected difference of arc positions sampled at equal landmark-index fractions .25/.5/.75, divided by corner width.",
+      "implication": "Not minimum opening, arc-length matching, semantic eyelid closure or validated closed-eye decision. Absolute value can conceal reversed/crossed arcs. Report the profile and descriptive cutoff results without choosing a favorable closure threshold."
+    },
+    {
+      "id": "DOMAIN-C2",
+      "issue": "Uncertainty enlarges polygon-clearance requirement only. belowProbe.contains tests the center against axial interval, depth and sign.",
+      "implication": "Do not describe containment as uncertainty-safe or proof the full positional uncertainty disk belongs to probe. Label-center membership and boundary sensitivity must be distinguished.",
+      "counterexample": "100px horizontal axis, upper y0/lower y1, center(11,20), uncertainty5: contains=true at depth.25/.5 and outside-polygon clearance passes, yet uncertainty disk includes x6 outside allowed axial lower bound10."
+    },
+    {
+      "id": "DOMAIN-C3",
+      "issue": "Outward normal is chosen from lower-lid centroid; predicted arcs can nearly coincide in closed poses.",
+      "implication": "Normal polarity can become numerically fragile; absence of an invalidity flag does not certify geometry. Predicted opening polygon is not semantic iris/sclera/skin segmentation."
+    },
+    {
+      "id": "DOMAIN-C4",
+      "issue": "The so-called slab is nearest-upper Euclidean-distance band with normal sign plus global axial crop, not a rectangular strip or semantic skin mask.",
+      "implication": "Depth.25/.5 times width can include large skin/fold/foreign-hair neighborhoods. Near polyline vertices, closest segment and sign can switch. Probe area or label inclusion is not precision, ownership, safety or rendering permission."
+    },
+    {
+      "id": "DOMAIN-C5",
+      "issue": "Inputs are previously observed cases with sequential supplemental selection, only five ready provisional upper-ending labels and one rotated derivative.",
+      "implication": "Results can expose domain exclusions but cannot quantify generalization, subgroup performance, false-positive rate or causal explanation for all rejected traces. Do not count C/W geometries or rotated derivative as independent real photos."
+    }
+  ],
+  "analyticSanityChecks": {
+    "rigidTransform": "Rotation.731rad plus translation(23,-17) preserves membership in a simple curved-eye fixture; axial error5.55e-17, signed and polygon distance error7.11e-15.",
+    "uncertaintyCounterexample": "Center-only containment caveat reproduced without file/browser output.",
+    "meaning": "Pure math checks validate limited implementation behavior, not real-image semantic correctness or natural Length."
+  },
+  "overlayReviewRequirements": [
+    "Display native source context with upper/lower arcs, predicted opening, probe boundaries/clearance and signed annotation locations; legends must call regions geometric probes.",
+    "Keep both eyes/engines, open/closed/hair/white-liner and rotated control visible, including unfavorable memberships.",
+    "Show uncertainty at label centers and note center-only probe membership near axial/depth boundaries.",
+    "Report all frozen aperture cutoffs and both depths; do not select cutoff because it includes these labels or excludes negatives.",
+    "Existing crossing paths are image evidence, not automatically foreign hairs. No target inclusion should approve Length or relax mandatory negative gates."
+  ],
+  "nextDecision": "Inspect overlays and geometry-validity/center-membership tables before proposing any closure-aware domain. If domain admits negative texture/hair or protected regions, keep it diagnostic; no renderer/guard change."
+}

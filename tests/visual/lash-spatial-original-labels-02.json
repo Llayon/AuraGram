@@ -1,0 +1,268 @@
+{
+  "schema": "spatial-original-annotation-v1",
+  "file": "pexels-9157920.jpg",
+  "sourceSHA256": "720bef5c5cd9b4b19afff6108404358656bf43d2e820f49b9cd5512b9e2472b9",
+  "coordinateSpace": "original-source-pixels",
+  "originalOnly": true,
+  "detectorExecuted": false,
+  "reviewer": "primary-agent-original-only-visual-review",
+  "reviewStatus": "provisional-needs-independent-critique-and-permitted-region-audit",
+  "role": "unqualified-positive-lead",
+  "evaluatedEyes": [
+    "left"
+  ],
+  "excludedEyes": {
+    "right": "Severe defocus and occlusion by nose, observed before any lash detector output"
+  },
+  "engineEligibility": {
+    "chromium": "actual-FaceMesh-ready",
+    "webkit": "no_face-do-not-substitute-Chromium-geometry"
+  },
+  "eyes": {
+    "left": {
+      "cropRect": [
+        2335,
+        1967,
+        846,
+        722
+      ],
+      "tips": [
+        {
+          "id": "left-1",
+          "region": [
+            [
+              2440,
+              2084
+            ],
+            [
+              2460,
+              2084
+            ],
+            [
+              2460,
+              2104
+            ],
+            [
+              2440,
+              2104
+            ]
+          ],
+          "observedPath": [
+            [
+              2509,
+              2230
+            ],
+            [
+              2478,
+              2171
+            ],
+            [
+              2450,
+              2094
+            ]
+          ],
+          "directionRange": [
+            -125,
+            -90
+          ],
+          "uncertainty": "Provisional +/-10 source-pixel terminal region and approximate visible segment; intertwined proximal ownership unresolved. Angle atan2(dy,dx), source y down."
+        },
+        {
+          "id": "left-2",
+          "region": [
+            [
+              2515,
+              2115
+            ],
+            [
+              2535,
+              2115
+            ],
+            [
+              2535,
+              2135
+            ],
+            [
+              2515,
+              2135
+            ]
+          ],
+          "observedPath": [
+            [
+              2557,
+              2236
+            ],
+            [
+              2537,
+              2185
+            ],
+            [
+              2525,
+              2125
+            ]
+          ],
+          "directionRange": [
+            -120,
+            -80
+          ],
+          "uncertainty": "Provisional +/-10 source-pixel terminal region and approximate visible segment; intertwined proximal ownership unresolved. Angle atan2(dy,dx), source y down."
+        },
+        {
+          "id": "left-3",
+          "region": [
+            [
+              2574,
+              2132
+            ],
+            [
+              2594,
+              2132
+            ],
+            [
+              2594,
+              2152
+            ],
+            [
+              2574,
+              2152
+            ]
+          ],
+          "observedPath": [
+            [
+              2594,
+              2244
+            ],
+            [
+              2590,
+              2193
+            ],
+            [
+              2584,
+              2142
+            ]
+          ],
+          "directionRange": [
+            -115,
+            -70
+          ],
+          "uncertainty": "Provisional +/-10 source-pixel terminal region and approximate visible segment; intertwined proximal ownership unresolved. Angle atan2(dy,dx), source y down."
+        },
+        {
+          "id": "left-4",
+          "region": [
+            [
+              2605,
+              2162
+            ],
+            [
+              2625,
+              2162
+            ],
+            [
+              2625,
+              2182
+            ],
+            [
+              2605,
+              2182
+            ]
+          ],
+          "observedPath": [
+            [
+              2620,
+              2245
+            ],
+            [
+              2618,
+              2208
+            ],
+            [
+              2615,
+              2172
+            ]
+          ],
+          "directionRange": [
+            -110,
+            -65
+          ],
+          "uncertainty": "Provisional +/-10 source-pixel terminal region and approximate visible segment; intertwined proximal ownership unresolved. Angle atan2(dy,dx), source y down."
+        },
+        {
+          "id": "left-5",
+          "region": [
+            [
+              2638,
+              2181
+            ],
+            [
+              2658,
+              2181
+            ],
+            [
+              2658,
+              2201
+            ],
+            [
+              2638,
+              2201
+            ]
+          ],
+          "observedPath": [
+            [
+              2638,
+              2254
+            ],
+            [
+              2643,
+              2224
+            ],
+            [
+              2648,
+              2191
+            ]
+          ],
+          "directionRange": [
+            -100,
+            -55
+          ],
+          "uncertainty": "Provisional +/-10 source-pixel terminal region and approximate visible segment; intertwined proximal ownership unresolved. Angle atan2(dy,dx), source y down."
+        }
+      ],
+      "ambiguities": [
+        {
+          "region": [
+            [
+              2410,
+              2147
+            ],
+            [
+              2675,
+              2147
+            ],
+            [
+              2795,
+              2287
+            ],
+            [
+              2400,
+              2272
+            ]
+          ],
+          "reason": "Intertwined upper shafts and proximal dark band; crossing/ownership uncertain",
+          "expected": "abstain"
+        }
+      ]
+    },
+    "right": {
+      "cropRect": [
+        1454,
+        2285,
+        463,
+        554
+      ],
+      "tips": [],
+      "ambiguities": []
+    }
+  },
+  "note": "Not a qualified positive: independent review, permitted-upper-region eligibility and identity grouping pending. WebKit no_face remains excluded. Never use labels as seeds or directions."
+}

@@ -1,0 +1,23 @@
+{
+  "views": 598,
+  "uniquePNGs": 374,
+  "engines": {
+    "chromium": {
+      "ready": 7,
+      "excluded": [],
+      "densityMapIdentities": 42,
+      "densityDefinitionPNGIdentities": 16
+    },
+    "webkit": {
+      "ready": 6,
+      "excluded": [
+        {
+          "file": "pexels-10460940.jpg",
+          "status": "no_face"
+        }
+      ],
+      "densityMapIdentities": 36,
+      "densityDefinitionPNGIdentities": 12
+    }
+  }
+}

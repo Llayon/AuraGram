@@ -1,0 +1,12 @@
+{
+ "meaning":"Manual original-preview crop selection only, before detector use. Native integer crops/tiles, no sharpening/upscale. Screen sides are image locations, not subject side or verified upper-lid topology.",
+ "crops":[
+  {"file":"commons-radic-eyelashes.jpg","view":"visible-lid","rect":[500,850,2700,1450]},
+  {"file":"pexels-22032198.jpg","view":"visible-eye","rect":[1100,1250,3700,1500]},
+  {"file":"pexels-31215869.jpg","view":"side-eye","rect":[450,1700,2350,1150]},
+  {"file":"pexels-32526448.jpg","view":"screen-left","rect":[1150,420,900,700]},
+  {"file":"pexels-32526448.jpg","view":"screen-right","rect":[2200,530,800,650]},
+  {"file":"pexels-4611686.jpg","view":"screen-left","rect":[2600,750,1250,800]},
+  {"file":"pexels-4611686.jpg","view":"screen-right","rect":[3900,900,1100,800]}
+ ]
+}

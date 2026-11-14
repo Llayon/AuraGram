@@ -1,0 +1,1 @@
+{"configurations":36,"rows":140,"accepted":60,"lateral":8,"reasons":{"ok":60,"one-sided-edge":76,"multiple-valleys":4},"endpointApproved":0,"release":"HOLD"}

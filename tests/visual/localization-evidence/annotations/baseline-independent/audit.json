@@ -1,0 +1,1742 @@
+{
+  "labelsPath": "tests/visual/lash-localization-independent-labels.json",
+  "labelsSHA256": "f2b1f6e1a4bbf384192438f2b82f81cef246b7bca27ce954cbabc23d9079c4ac",
+  "manifestPath": "tests/visual/recovery-evidence/manifest-chromium.json",
+  "manifestSHA256": "c49bec7db091ddeb45c46f7765d143179b10adaf071a0be844ee53e42732217f",
+  "sourceHashes": {
+    "retouch/eyeGeometry.mjs": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950",
+    "retouch/lashAnalysis.mjs": "87f964abc6ea6f1124d6e9b5fd1d4e9afede73f68bfd6b7c9c699554ae1b0e61",
+    "retouch/lashEnhancement.mjs": "6c28059e51e8bc88f5b913c5e2d8f49877f1c9e63bf11b9b5b3ca094394b2059",
+    "retouch/retouch.mjs": "4014946ff64e64cef3a5f67f00d2f6c80080a1dfab690fad1873403f579797d4",
+    "retouch/skinMask.mjs": "69f49df9d4b6279a1422a701c1ea1081c55834e736ee744bc1e83019c7a721ef",
+    "rendering/canvasFilters.js": "dfe7e11adcf495faccde264e7f7a8e07a43e3bfe5ef63c62256d7080eac0c2d9",
+    "rendering/imageRenderer.js": "38593563a1caeeaf983fdf22c7c01de79e7f70084f4b8e8d6ddb982e5ec03a00",
+    "vision/faceDetector.mjs": "85f2a7b61d5d728772a5e1374cd752ec7d162eb60d437903605455bf48e529f6",
+    "vision/faceGeometry.mjs": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009",
+    "vision/faceOverlay.mjs": "c801f52ef009373a49c6ab2590cde2f8ba3060f827f2e60837230d16c81441f8",
+    "vision/faceWorker.js": "4ff023742a523afdf1dd740726fdea602b94cedc0e389b64e5e09cd922f2b795"
+  },
+  "tracePointOrderNormalization": "Legacy clipped-tip arrays run seed-to-tip and are reversed before endpoint comparison. Fitted traces already run tip-to-root.",
+  "matching": "Per-label nearest eligible tip. Positional agreement uses declared label uncertainty only. Tangent angles remain raw. Duplicate nearest-candidate assignments are explicitly reported. This sampled annotation does not estimate whole-eye precision or recall.",
+  "eyes": [
+    {
+      "file": "light.jpg",
+      "side": "left",
+      "status": "partial-resolvable",
+      "imageSHA256": "3a99faabf5a011377848b1943b04996f0336c51fe8bb9c3f4570c2ec9f786b6c",
+      "imageWidth": 676,
+      "imageHeight": 400,
+      "eligibleCandidates": 4,
+      "annotatedStrands": 6,
+      "positionalAgreements": 1,
+      "duplicateAssignments": [],
+      "rows": [
+        {
+          "id": "ILL1",
+          "points": [
+            {
+              "x": 56.5,
+              "y": 44.25
+            },
+            {
+              "x": 53.75,
+              "y": 39.75
+            },
+            {
+              "x": 52.75,
+              "y": 35.75
+            }
+          ],
+          "nearestAccepted": {
+            "index": 3,
+            "endpointErrorSourcePx": 2.1740434274376184,
+            "tangentErrorDegrees": 27.979396958141308,
+            "confidence": 0.9340521402868116,
+            "observedLengthSourcePx": 11.272989098377215
+          },
+          "tipUncertaintySourcePx": 2,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 47,
+              "reason": "ok",
+              "confidence": 0.9340521402868116,
+              "endpointErrorSourcePx": 2.174043427437623,
+              "distalPathDistanceSourcePx": 0.5688221647611754,
+              "measuredCount": 11,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 30,
+              "reason": "disconnected",
+              "confidence": 0.46387740591600557,
+              "endpointErrorSourcePx": 8.629845140096347,
+              "distalPathDistanceSourcePx": 7.525629573358483,
+              "measuredCount": 12,
+              "distalCount": 5,
+              "connected": false
+            },
+            {
+              "index": 37,
+              "reason": "disconnected",
+              "confidence": 0.46387740591600557,
+              "endpointErrorSourcePx": 8.629845140096347,
+              "distalPathDistanceSourcePx": 7.525629573358483,
+              "measuredCount": 12,
+              "distalCount": 5,
+              "connected": false
+            }
+          ]
+        },
+        {
+          "id": "ILL2",
+          "points": [
+            {
+              "x": 68,
+              "y": 37.5
+            },
+            {
+              "x": 63,
+              "y": 30.75
+            },
+            {
+              "x": 60.75,
+              "y": 26
+            }
+          ],
+          "nearestAccepted": {
+            "index": 0,
+            "endpointErrorSourcePx": 10.269634301263334,
+            "tangentErrorDegrees": 25.346175941946708,
+            "confidence": 0.9543277025222778,
+            "observedLengthSourcePx": 17.704517204237423
+          },
+          "tipUncertaintySourcePx": 1.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 22,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 2.0879460618360106,
+              "distalPathDistanceSourcePx": 0.30125628198886645
+            },
+            {
+              "index": 19,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 2.0879460618360106,
+              "distalPathDistanceSourcePx": 0.5720703619299665
+            },
+            {
+              "index": 28,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 2.0879460618360106,
+              "distalPathDistanceSourcePx": 0.6138288089168192
+            }
+          ]
+        },
+        {
+          "id": "ILL3",
+          "points": [
+            {
+              "x": 72.75,
+              "y": 36.25
+            },
+            {
+              "x": 70.5,
+              "y": 30.5
+            },
+            {
+              "x": 69.5,
+              "y": 25.75
+            }
+          ],
+          "nearestAccepted": {
+            "index": 0,
+            "endpointErrorSourcePx": 3.839311061288202,
+            "tangentErrorDegrees": 11.888658039627996,
+            "confidence": 0.9543277025222778,
+            "observedLengthSourcePx": 17.704517204237423
+          },
+          "tipUncertaintySourcePx": 1.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 9,
+              "reason": "ok",
+              "confidence": 0.9543277025222778,
+              "endpointErrorSourcePx": 3.839311061288202,
+              "distalPathDistanceSourcePx": 0.6992012023924801,
+              "measuredCount": 17,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 38,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 9.492971260260969,
+              "distalPathDistanceSourcePx": 7.129364657061128
+            },
+            {
+              "index": 46,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 9.492971260260969,
+              "distalPathDistanceSourcePx": 7.129364657061128
+            }
+          ]
+        },
+        {
+          "id": "ILL4",
+          "points": [
+            {
+              "x": 79.5,
+              "y": 36.5
+            },
+            {
+              "x": 77.25,
+              "y": 31.75
+            },
+            {
+              "x": 76.5,
+              "y": 27.25
+            }
+          ],
+          "nearestAccepted": {
+            "index": 2,
+            "endpointErrorSourcePx": 3.333974685610109,
+            "tangentErrorDegrees": 9.462322208025574,
+            "confidence": 0.8578289263262371,
+            "observedLengthSourcePx": 12.44772452026276
+          },
+          "tipUncertaintySourcePx": 1.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 21,
+              "reason": "ok",
+              "confidence": 0.8578289263262371,
+              "endpointErrorSourcePx": 3.333974685610109,
+              "distalPathDistanceSourcePx": 0.375,
+              "measuredCount": 13,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 9,
+              "reason": "ok",
+              "confidence": 0.9543277025222778,
+              "endpointErrorSourcePx": 8.218665117984672,
+              "distalPathDistanceSourcePx": 5.606960469727911,
+              "measuredCount": 17,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 56,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 12.98616654147399,
+              "distalPathDistanceSourcePx": 9.381737458058707
+            }
+          ]
+        },
+        {
+          "id": "ILL5",
+          "points": [
+            {
+              "x": 87,
+              "y": 35
+            },
+            {
+              "x": 86.75,
+              "y": 27.75
+            },
+            {
+              "x": 86.75,
+              "y": 22.25
+            }
+          ],
+          "nearestAccepted": {
+            "index": 2,
+            "endpointErrorSourcePx": 9.691458921198285,
+            "tangentErrorDegrees": 0,
+            "confidence": 0.8578289263262371,
+            "observedLengthSourcePx": 12.44772452026276
+          },
+          "tipUncertaintySourcePx": 1.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 36,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 2.347210190081712,
+              "distalPathDistanceSourcePx": 0.3278497860605277
+            },
+            {
+              "index": 44,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 2.347210190081712,
+              "distalPathDistanceSourcePx": 0.3278497860605277
+            },
+            {
+              "index": 52,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 2.347210190081712,
+              "distalPathDistanceSourcePx": 0.3278497860605277
+            }
+          ]
+        },
+        {
+          "id": "ILL6",
+          "points": [
+            {
+              "x": 98,
+              "y": 36.25
+            },
+            {
+              "x": 100,
+              "y": 31
+            },
+            {
+              "x": 102,
+              "y": 26.5
+            }
+          ],
+          "nearestAccepted": {
+            "index": 1,
+            "endpointErrorSourcePx": 1.9736409988319776,
+            "tangentErrorDegrees": 2.444155083261341,
+            "confidence": 0.9161296273257458,
+            "observedLengthSourcePx": 12.103652481292523
+          },
+          "tipUncertaintySourcePx": 2,
+          "positionAgreesWithinAnnotation": true,
+          "nearbyTraces": [
+            {
+              "index": 13,
+              "reason": "ok",
+              "confidence": 0.9161296273257458,
+              "endpointErrorSourcePx": 1.97364099883198,
+              "distalPathDistanceSourcePx": 0.2627639837095235,
+              "measuredCount": 11,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 34,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 5.682665615430847,
+              "distalPathDistanceSourcePx": 2.798356468243048
+            },
+            {
+              "index": 43,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 5.682665615430847,
+              "distalPathDistanceSourcePx": 2.798356468243048
+            }
+          ]
+        }
+      ],
+      "diagnostics": {
+        "potentialRidgePixels": 124,
+        "densityPixels": 256,
+        "densityWeight": 125.65267859708776,
+        "contextualSamples": 3,
+        "tracingSeeds": 103,
+        "tracedStructures": 64,
+        "rejectionCounts": {
+          "clipped-tip": 38,
+          "short-measured": 1,
+          "ok": 4,
+          "disconnected": 14,
+          "weak-confidence": 7
+        },
+        "crossing": {
+          "paths": [],
+          "testedOpenings": [
+            7.535585682019007,
+            8.72886616399702,
+            10.236814527271884,
+            11.745209421264107,
+            13.253898391029379,
+            14.762791277292555,
+            16.27183135239769,
+            17.780981141422807,
+            19.290214894323736,
+            20.73876847330829,
+            22.005136771171255,
+            23.27154838980149,
+            24.53799662181581,
+            25.80447607641099,
+            27.070982371468187,
+            28.337511908194543,
+            29.60406170359476,
+            30.761848388900688,
+            31.158176763314525,
+            31.554506253302296,
+            31.950836817350073,
+            32.34716841597842,
+            32.74350101161926,
+            33.139834568501556,
+            33.53616905254517,
+            33.932504431262174,
+            33.44498287854535,
+            32.957992085457576,
+            32.47155593214321,
+            31.985699723374115,
+            31.500450293983615,
+            31.015836123566586,
+            30.53188746138162,
+            30.04863646249751,
+            29.0453688149534,
+            27.969207323712457,
+            26.89477307383485,
+            25.82228167156132,
+            24.751985666082422,
+            23.684182691377917,
+            22.619225821395798,
+            21.557536858745014,
+            20.399841154455498,
+            19.20941315808364,
+            18.019021885637944,
+            16.828675130218816,
+            15.638383057336645,
+            14.448159181838534,
+            13.258021870765614,
+            12.067996734912402,
+            10.7277907037267
+          ],
+          "coveredAxisFraction": 0,
+          "occluded": false
+        }
+      },
+      "caveat": "Nearest rejected paths may belong to a neighbouring hair. Their reasons are diagnostic leads, not automatically attributed causes. Stored traces are bounded and may omit later rejections."
+    },
+    {
+      "file": "light.jpg",
+      "side": "right",
+      "status": "partial-resolvable",
+      "imageSHA256": "7122d8b5814c8a8547629cb255337325a54ce8021d3d820934835c23b14b3268",
+      "imageWidth": 588,
+      "imageHeight": 440,
+      "eligibleCandidates": 2,
+      "annotatedStrands": 3,
+      "positionalAgreements": 0,
+      "duplicateAssignments": [],
+      "rows": [
+        {
+          "id": "ILR1",
+          "points": [
+            {
+              "x": 64,
+              "y": 35.75
+            },
+            {
+              "x": 62.25,
+              "y": 31.25
+            },
+            {
+              "x": 61,
+              "y": 27
+            }
+          ],
+          "nearestAccepted": {
+            "index": 1,
+            "endpointErrorSourcePx": 28.86811077434288,
+            "tangentErrorDegrees": 42.9147603204423,
+            "confidence": 0.724552149451679,
+            "observedLengthSourcePx": 7.256110414012483
+          },
+          "tipUncertaintySourcePx": 2,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 9,
+              "reason": "disconnected",
+              "confidence": 0.6829381014666331,
+              "endpointErrorSourcePx": 0.42999480170248944,
+              "distalPathDistanceSourcePx": 0.3737442865697113,
+              "measuredCount": 9,
+              "distalCount": 5,
+              "connected": false
+            },
+            {
+              "index": 15,
+              "reason": "disconnected",
+              "confidence": 0.6829381014666331,
+              "endpointErrorSourcePx": 0.42999480170248944,
+              "distalPathDistanceSourcePx": 0.3737442865697113,
+              "measuredCount": 9,
+              "distalCount": 5,
+              "connected": false
+            },
+            {
+              "index": 25,
+              "reason": "disconnected",
+              "confidence": 0.6829381014666331,
+              "endpointErrorSourcePx": 0.42999480170248944,
+              "distalPathDistanceSourcePx": 0.3737442865697113,
+              "measuredCount": 9,
+              "distalCount": 5,
+              "connected": false
+            }
+          ]
+        },
+        {
+          "id": "ILR2",
+          "points": [
+            {
+              "x": 76.25,
+              "y": 37.25
+            },
+            {
+              "x": 73.75,
+              "y": 32.5
+            },
+            {
+              "x": 72.25,
+              "y": 28
+            }
+          ],
+          "nearestAccepted": {
+            "index": 1,
+            "endpointErrorSourcePx": 18.034922971694584,
+            "tangentErrorDegrees": 44.96016880932952,
+            "confidence": 0.724552149451679,
+            "observedLengthSourcePx": 7.256110414012483
+          },
+          "tipUncertaintySourcePx": 2,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 6,
+              "reason": "disconnected",
+              "confidence": 0.9340521402868116,
+              "endpointErrorSourcePx": 1.6346143976221292,
+              "distalPathDistanceSourcePx": 0.9336419105530069,
+              "measuredCount": 12,
+              "distalCount": 5,
+              "connected": false
+            },
+            {
+              "index": 8,
+              "reason": "disconnected",
+              "confidence": 0.9340521402868116,
+              "endpointErrorSourcePx": 1.6346143976221292,
+              "distalPathDistanceSourcePx": 0.9336419105530069,
+              "measuredCount": 12,
+              "distalCount": 5,
+              "connected": false
+            },
+            {
+              "index": 12,
+              "reason": "disconnected",
+              "confidence": 0.9340521402868116,
+              "endpointErrorSourcePx": 1.6346143976221292,
+              "distalPathDistanceSourcePx": 0.9336419105530069,
+              "measuredCount": 12,
+              "distalCount": 5,
+              "connected": false
+            }
+          ]
+        },
+        {
+          "id": "ILR3",
+          "points": [
+            {
+              "x": 93.25,
+              "y": 46
+            },
+            {
+              "x": 94.25,
+              "y": 41.25
+            },
+            {
+              "x": 94.5,
+              "y": 37
+            }
+          ],
+          "nearestAccepted": {
+            "index": 1,
+            "endpointErrorSourcePx": 6.13801836087919,
+            "tangentErrorDegrees": 23.1587593229777,
+            "confidence": 0.724552149451679,
+            "observedLengthSourcePx": 7.256110414012483
+          },
+          "tipUncertaintySourcePx": 1.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 13,
+              "reason": "disconnected",
+              "confidence": 0.9340521402868116,
+              "endpointErrorSourcePx": 2.3142847359768197,
+              "distalPathDistanceSourcePx": 0.125,
+              "measuredCount": 11,
+              "distalCount": 5,
+              "connected": false
+            },
+            {
+              "index": 21,
+              "reason": "disconnected",
+              "confidence": 0.9340521402868116,
+              "endpointErrorSourcePx": 2.3142847359768197,
+              "distalPathDistanceSourcePx": 0.125,
+              "measuredCount": 11,
+              "distalCount": 5,
+              "connected": false
+            },
+            {
+              "index": 22,
+              "reason": "disconnected",
+              "confidence": 0.9340521402868116,
+              "endpointErrorSourcePx": 2.3142847359768197,
+              "distalPathDistanceSourcePx": 0.125,
+              "measuredCount": 11,
+              "distalCount": 5,
+              "connected": false
+            }
+          ]
+        }
+      ],
+      "diagnostics": {
+        "potentialRidgePixels": 81,
+        "densityPixels": 96,
+        "densityWeight": 23.900352206784312,
+        "contextualSamples": 0,
+        "tracingSeeds": 66,
+        "tracedStructures": 60,
+        "rejectionCounts": {
+          "clipped-tip": 6,
+          "short-measured": 13,
+          "disconnected": 36,
+          "curved-or-branch": 1,
+          "ok": 2,
+          "weak-confidence": 1,
+          "contrast": 1
+        },
+        "crossing": {
+          "paths": [],
+          "testedOpenings": [
+            9.910028297284855,
+            11.258202676175905,
+            12.513892275922958,
+            13.770397391830002,
+            15.02751346046305,
+            16.285098996316922,
+            17.543053037463338,
+            18.80130161639415,
+            20.049825202071773,
+            21.28391574467831,
+            22.52067184978422,
+            23.759677271607153,
+            25.000597590504775,
+            26.243161167434582,
+            27.48714515157411,
+            28.608832895024296,
+            29.196638446986654,
+            29.785993390818362,
+            30.37680754517947,
+            30.968997395476848,
+            31.56248550748838,
+            32.157199999766085,
+            32.75307406831732,
+            32.281398197661176,
+            31.80992932121486,
+            31.33867678123707,
+            30.867650486074428,
+            30.3968609533204,
+            29.926319356946948,
+            29.45603757883777,
+            28.273766087150147,
+            26.927161984002588,
+            25.58056998448557,
+            24.233992106259148,
+            22.887430841794217,
+            21.54088930676291,
+            20.194371447785354,
+            18.678476334470705,
+            17.06094714236276,
+            15.443423640724397,
+            13.825907826777557,
+            12.208402756195824,
+            10.590913351345337,
+            8.973448083607325,
+            7.572809673172627
+          ],
+          "coveredAxisFraction": 0,
+          "occluded": false
+        }
+      },
+      "caveat": "Nearest rejected paths may belong to a neighbouring hair. Their reasons are diagnostic leads, not automatically attributed causes. Stored traces are bounded and may omit later rejections."
+    },
+    {
+      "file": "natural.jpg",
+      "side": "left",
+      "status": "partial-resolvable",
+      "imageSHA256": "c2ddc6fabad50edf816cb8ea230e5196da64ba56900411fecd5d9f5b0e351599",
+      "imageWidth": 776,
+      "imageHeight": 528,
+      "eligibleCandidates": 3,
+      "annotatedStrands": 5,
+      "positionalAgreements": 0,
+      "duplicateAssignments": [],
+      "rows": [
+        {
+          "id": "INL1",
+          "points": [
+            {
+              "x": 126.25,
+              "y": 55.5
+            },
+            {
+              "x": 133.5,
+              "y": 40.75
+            },
+            {
+              "x": 135,
+              "y": 35.75
+            }
+          ],
+          "nearestAccepted": {
+            "index": 0,
+            "endpointErrorSourcePx": 8.307502878130437,
+            "tangentErrorDegrees": 20.073199717164194,
+            "confidence": 0.6512291641849054,
+            "observedLengthSourcePx": 18.210088625007963
+          },
+          "tipUncertaintySourcePx": 2,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 3,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 1.4379675637620837,
+              "distalPathDistanceSourcePx": 0.7943984822174196
+            },
+            {
+              "index": 4,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 1.4379675637620837,
+              "distalPathDistanceSourcePx": 0.7943984822174196
+            },
+            {
+              "index": 6,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 1.4379675637620837,
+              "distalPathDistanceSourcePx": 0.7943984822174196
+            }
+          ]
+        },
+        {
+          "id": "INL2",
+          "points": [
+            {
+              "x": 118,
+              "y": 54.5
+            },
+            {
+              "x": 121.5,
+              "y": 45.25
+            },
+            {
+              "x": 125.5,
+              "y": 39.5
+            }
+          ],
+          "nearestAccepted": {
+            "index": 0,
+            "endpointErrorSourcePx": 2.8438635767166707,
+            "tangentErrorDegrees": 1.947954794201018,
+            "confidence": 0.6512291641849054,
+            "observedLengthSourcePx": 18.210088625007963
+          },
+          "tipUncertaintySourcePx": 2,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 5,
+              "reason": "ok",
+              "confidence": 0.6512291641849054,
+              "endpointErrorSourcePx": 2.8438635767166707,
+              "distalPathDistanceSourcePx": 0.7860875106920024,
+              "measuredCount": 15,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 11,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 9.473569926765778,
+              "distalPathDistanceSourcePx": 9.672915529404397
+            },
+            {
+              "index": 8,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 9.473569926765778,
+              "distalPathDistanceSourcePx": 10.161332958854512
+            }
+          ]
+        },
+        {
+          "id": "INL3",
+          "points": [
+            {
+              "x": 109.5,
+              "y": 54
+            },
+            {
+              "x": 112.5,
+              "y": 48
+            },
+            {
+              "x": 115.5,
+              "y": 43.5
+            }
+          ],
+          "nearestAccepted": {
+            "index": 1,
+            "endpointErrorSourcePx": 5.014471583358061,
+            "tangentErrorDegrees": 3.0823764251781394,
+            "confidence": 0.7777497205597761,
+            "observedLengthSourcePx": 6.2660230594806094
+          },
+          "tipUncertaintySourcePx": 2,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 17,
+              "reason": "ok",
+              "confidence": 0.7777497205597761,
+              "endpointErrorSourcePx": 5.0144715833580635,
+              "distalPathDistanceSourcePx": 4.189069324395353,
+              "measuredCount": 6,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 5,
+              "reason": "ok",
+              "confidence": 0.6512291641849054,
+              "endpointErrorSourcePx": 13.039314109090359,
+              "distalPathDistanceSourcePx": 4.616954811668554,
+              "measuredCount": 15,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 20,
+              "reason": "weak-confidence",
+              "confidence": 0.41942320181328896,
+              "endpointErrorSourcePx": 16.2715825030353,
+              "distalPathDistanceSourcePx": 16.294396860248952,
+              "measuredCount": 7,
+              "distalCount": 5,
+              "connected": true
+            }
+          ]
+        },
+        {
+          "id": "INL4",
+          "points": [
+            {
+              "x": 101.25,
+              "y": 54.25
+            },
+            {
+              "x": 103.75,
+              "y": 48.25
+            },
+            {
+              "x": 105.75,
+              "y": 43.5
+            }
+          ],
+          "nearestAccepted": {
+            "index": 1,
+            "endpointErrorSourcePx": 5.198386611684903,
+            "tangentErrorDegrees": 13.938789773240272,
+            "confidence": 0.7777497205597761,
+            "observedLengthSourcePx": 6.2660230594806094
+          },
+          "tipUncertaintySourcePx": 2.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 17,
+              "reason": "ok",
+              "confidence": 0.7777497205597761,
+              "endpointErrorSourcePx": 5.198386611684904,
+              "distalPathDistanceSourcePx": 4.316973231236116,
+              "measuredCount": 6,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 12,
+              "reason": "weak-confidence",
+              "confidence": 0.13819262670827429,
+              "endpointErrorSourcePx": 10.392350908059543,
+              "distalPathDistanceSourcePx": 7.57924248492791,
+              "measuredCount": 15,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 14,
+              "reason": "weak-confidence",
+              "confidence": 0.13819262670827429,
+              "endpointErrorSourcePx": 10.392350908059543,
+              "distalPathDistanceSourcePx": 7.57924248492791,
+              "measuredCount": 15,
+              "distalCount": 5,
+              "connected": true
+            }
+          ]
+        },
+        {
+          "id": "INL5",
+          "points": [
+            {
+              "x": 134.75,
+              "y": 61.5
+            },
+            {
+              "x": 139.75,
+              "y": 53.25
+            },
+            {
+              "x": 143,
+              "y": 46
+            }
+          ],
+          "nearestAccepted": {
+            "index": 2,
+            "endpointErrorSourcePx": 13.212512929411684,
+            "tangentErrorDegrees": 12.62690199073616,
+            "confidence": 0.6203291892132837,
+            "observedLengthSourcePx": 5.262277469507832
+          },
+          "tipUncertaintySourcePx": 2.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 10,
+              "reason": "weak-confidence",
+              "confidence": 0.22682699908390647,
+              "endpointErrorSourcePx": 0.8453557460709868,
+              "distalPathDistanceSourcePx": 0.7785827601603512,
+              "measuredCount": 12,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 13,
+              "reason": "weak-confidence",
+              "confidence": 0.22682699908390647,
+              "endpointErrorSourcePx": 0.8453557460709868,
+              "distalPathDistanceSourcePx": 0.7785827601603512,
+              "measuredCount": 12,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 19,
+              "reason": "weak-confidence",
+              "confidence": 0.22682699908390647,
+              "endpointErrorSourcePx": 0.8453557460709868,
+              "distalPathDistanceSourcePx": 0.7785827601603512,
+              "measuredCount": 12,
+              "distalCount": 5,
+              "connected": true
+            }
+          ]
+        }
+      ],
+      "diagnostics": {
+        "potentialRidgePixels": 48,
+        "densityPixels": 216,
+        "densityWeight": 68.0382376056667,
+        "contextualSamples": 0,
+        "tracingSeeds": 36,
+        "tracedStructures": 25,
+        "rejectionCounts": {
+          "clipped-tip": 10,
+          "ok": 3,
+          "weak-confidence": 11,
+          "contrast": 1
+        },
+        "crossing": {
+          "paths": [],
+          "testedOpenings": [
+            9.782330996152135,
+            10.998707206266399,
+            12.47847082914993,
+            13.961395565767958,
+            15.446571009090494,
+            16.93340496235282,
+            18.421495845460697,
+            19.910561836240245,
+            21.40039938810248,
+            22.890857851792664,
+            24.38182335873979,
+            25.669606248885934,
+            26.944963135574508,
+            28.221336287078255,
+            29.498593785560633,
+            30.77662552764577,
+            32.05533890724952,
+            33.33465548186418,
+            34.614508371155516,
+            35.89484020726764,
+            36.568015377934294,
+            37.003498456977674,
+            37.43898304793048,
+            37.87446909864042,
+            38.30995655932643,
+            38.74544538244534,
+            39.180935522567594,
+            39.61642693626105,
+            40.05191958198241,
+            40.01373976836199,
+            39.50206804403583,
+            38.99064618656182,
+            38.47948415870755,
+            37.96859245454554,
+            37.45798213496144,
+            36.94766486601522,
+            36.43765296042311,
+            35.927959422456134,
+            35.25837611540856,
+            34.18003969082011,
+            33.10267675654238,
+            32.02638555694189,
+            30.951277896838622,
+            29.877481541529473,
+            28.805143139606315,
+            27.734431804773873,
+            26.665543534414685,
+            25.59007642691584,
+            24.386203457448683,
+            23.182349496837492,
+            21.978517668662548,
+            20.77471182044781,
+            19.570936746265993,
+            18.36719849685268,
+            17.16350482016947,
+            15.959865801250496,
+            14.756294815048257,
+            13.23487937556192
+          ],
+          "coveredAxisFraction": 0,
+          "occluded": false
+        }
+      },
+      "caveat": "Nearest rejected paths may belong to a neighbouring hair. Their reasons are diagnostic leads, not automatically attributed causes. Stored traces are bounded and may omit later rejections."
+    },
+    {
+      "file": "natural.jpg",
+      "side": "right",
+      "status": "partial-resolvable",
+      "imageSHA256": "b4d4650ff4604e354ae28c615a7e8134c8cf1fb81faf9f72671cfffc57e7f720",
+      "imageWidth": 868,
+      "imageHeight": 540,
+      "eligibleCandidates": 7,
+      "annotatedStrands": 7,
+      "positionalAgreements": 1,
+      "duplicateAssignments": [],
+      "rows": [
+        {
+          "id": "INR1",
+          "points": [
+            {
+              "x": 71.5,
+              "y": 65
+            },
+            {
+              "x": 65.25,
+              "y": 51
+            },
+            {
+              "x": 61.5,
+              "y": 43.75
+            }
+          ],
+          "nearestAccepted": {
+            "index": 0,
+            "endpointErrorSourcePx": 1.4475867402540674,
+            "tangentErrorDegrees": 0.8296593054861169,
+            "confidence": 0.9262096826685897,
+            "observedLengthSourcePx": 23.00476563168438
+          },
+          "tipUncertaintySourcePx": 1.5,
+          "positionAgreesWithinAnnotation": true,
+          "nearbyTraces": [
+            {
+              "index": 4,
+              "reason": "ok",
+              "confidence": 0.9262096826685897,
+              "endpointErrorSourcePx": 1.4475867402540672,
+              "distalPathDistanceSourcePx": 0.8468366822040918,
+              "measuredCount": 19,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 8,
+              "reason": "ok",
+              "confidence": 1,
+              "endpointErrorSourcePx": 16.413596945854117,
+              "distalPathDistanceSourcePx": 14.796733498211399,
+              "measuredCount": 16,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 13,
+              "reason": "ok",
+              "confidence": 0.7784695842079684,
+              "endpointErrorSourcePx": 27.60791250027901,
+              "distalPathDistanceSourcePx": 26.21167021798465,
+              "measuredCount": 19,
+              "distalCount": 5,
+              "connected": true
+            }
+          ]
+        },
+        {
+          "id": "INR2",
+          "points": [
+            {
+              "x": 84.25,
+              "y": 63
+            },
+            {
+              "x": 78.25,
+              "y": 48.5
+            },
+            {
+              "x": 76,
+              "y": 40.25
+            }
+          ],
+          "nearestAccepted": {
+            "index": 2,
+            "endpointErrorSourcePx": 1.5466661741037535,
+            "tangentErrorDegrees": 15.255118703057791,
+            "confidence": 1,
+            "observedLengthSourcePx": 13.262358814956919
+          },
+          "tipUncertaintySourcePx": 1.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 8,
+              "reason": "ok",
+              "confidence": 1,
+              "endpointErrorSourcePx": 1.5466661741037535,
+              "distalPathDistanceSourcePx": 1.2954524453588925,
+              "measuredCount": 16,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 13,
+              "reason": "ok",
+              "confidence": 0.7784695842079684,
+              "endpointErrorSourcePx": 12.714540477841776,
+              "distalPathDistanceSourcePx": 12.505747233247536,
+              "measuredCount": 19,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 4,
+              "reason": "ok",
+              "confidence": 0.9262096826685897,
+              "endpointErrorSourcePx": 14.622610120630549,
+              "distalPathDistanceSourcePx": 12.589107069377377,
+              "measuredCount": 19,
+              "distalCount": 5,
+              "connected": true
+            }
+          ]
+        },
+        {
+          "id": "INR3",
+          "points": [
+            {
+              "x": 95.75,
+              "y": 62.5
+            },
+            {
+              "x": 90.75,
+              "y": 49
+            },
+            {
+              "x": 88,
+              "y": 41.25
+            }
+          ],
+          "nearestAccepted": {
+            "index": 3,
+            "endpointErrorSourcePx": 3.014149332664196,
+            "tangentErrorDegrees": 5.526777546317244,
+            "confidence": 0.7784695842079684,
+            "observedLengthSourcePx": 20.93061402551838
+          },
+          "tipUncertaintySourcePx": 1.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 13,
+              "reason": "ok",
+              "confidence": 0.7784695842079684,
+              "endpointErrorSourcePx": 3.014149332664196,
+              "distalPathDistanceSourcePx": 0.6896037896474709,
+              "measuredCount": 19,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 8,
+              "reason": "ok",
+              "confidence": 1,
+              "endpointErrorSourcePx": 10.49747686824692,
+              "distalPathDistanceSourcePx": 10.312388193684908,
+              "measuredCount": 16,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 27,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 16.28307006290686,
+              "distalPathDistanceSourcePx": 13.866680019173778
+            }
+          ]
+        },
+        {
+          "id": "INR4",
+          "points": [
+            {
+              "x": 105.75,
+              "y": 60.5
+            },
+            {
+              "x": 103.25,
+              "y": 41.5
+            },
+            {
+              "x": 102,
+              "y": 32.75
+            }
+          ],
+          "nearestAccepted": {
+            "index": 1,
+            "endpointErrorSourcePx": 12.693024074672977,
+            "tangentErrorDegrees": 5.879775037655055,
+            "confidence": 0.9340521402868116,
+            "observedLengthSourcePx": 22.86241836977149
+          },
+          "tipUncertaintySourcePx": 1.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 16,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 0.6381287229821018,
+              "distalPathDistanceSourcePx": 0.18954709474133385
+            },
+            {
+              "index": 17,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 0.6381287229821018,
+              "distalPathDistanceSourcePx": 0.18954709474133385
+            },
+            {
+              "index": 19,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 0.6381287229821018,
+              "distalPathDistanceSourcePx": 0.18954709474133385
+            }
+          ]
+        },
+        {
+          "id": "INR5",
+          "points": [
+            {
+              "x": 114.75,
+              "y": 62.25
+            },
+            {
+              "x": 115.25,
+              "y": 46.25
+            },
+            {
+              "x": 115,
+              "y": 37.75
+            }
+          ],
+          "nearestAccepted": {
+            "index": 1,
+            "endpointErrorSourcePx": 3.4978488949381195,
+            "tangentErrorDegrees": 12.325193073914821,
+            "confidence": 0.9340521402868116,
+            "observedLengthSourcePx": 22.86241836977149
+          },
+          "tipUncertaintySourcePx": 1.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 6,
+              "reason": "ok",
+              "confidence": 0.9340521402868116,
+              "endpointErrorSourcePx": 3.4978488949381195,
+              "distalPathDistanceSourcePx": 0.5074886504723806,
+              "measuredCount": 23,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 18,
+              "reason": "ok",
+              "confidence": 0.7365608681885916,
+              "endpointErrorSourcePx": 5.6358302567580685,
+              "distalPathDistanceSourcePx": 5.497924084175615,
+              "measuredCount": 18,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 22,
+              "reason": "clipped-tip",
+              "confidence": 0,
+              "endpointErrorSourcePx": 14.494881783088466,
+              "distalPathDistanceSourcePx": 11.091507727183341
+            }
+          ]
+        },
+        {
+          "id": "INR6",
+          "points": [
+            {
+              "x": 122,
+              "y": 65.25
+            },
+            {
+              "x": 125.25,
+              "y": 52
+            },
+            {
+              "x": 127.25,
+              "y": 45.25
+            }
+          ],
+          "nearestAccepted": {
+            "index": 4,
+            "endpointErrorSourcePx": 5.140765817897085,
+            "tangentErrorDegrees": 16.504361381755018,
+            "confidence": 0.9803983893479962,
+            "observedLengthSourcePx": 19.514294716680403
+          },
+          "tipUncertaintySourcePx": 1.5,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 15,
+              "reason": "ok",
+              "confidence": 0.9803983893479962,
+              "endpointErrorSourcePx": 5.140765817897085,
+              "distalPathDistanceSourcePx": 1.289500507084104,
+              "measuredCount": 18,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 18,
+              "reason": "ok",
+              "confidence": 0.7365608681885916,
+              "endpointErrorSourcePx": 9.620185762714494,
+              "distalPathDistanceSourcePx": 5.639982088406839,
+              "measuredCount": 18,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 32,
+              "reason": "contrast",
+              "confidence": 0.061594291638596456,
+              "endpointErrorSourcePx": 8.155046507329685,
+              "distalPathDistanceSourcePx": 8.128406343950246,
+              "measuredCount": 10,
+              "distalCount": 5,
+              "connected": true
+            }
+          ]
+        },
+        {
+          "id": "INR7",
+          "points": [
+            {
+              "x": 132.75,
+              "y": 69.75
+            },
+            {
+              "x": 138.25,
+              "y": 58.75
+            },
+            {
+              "x": 142,
+              "y": 53
+            }
+          ],
+          "nearestAccepted": {
+            "index": 6,
+            "endpointErrorSourcePx": 2.996334359857124,
+            "tangentErrorDegrees": 47.12121935218308,
+            "confidence": 0.8865998037792473,
+            "observedLengthSourcePx": 6.838594568095058
+          },
+          "tipUncertaintySourcePx": 2,
+          "positionAgreesWithinAnnotation": false,
+          "nearbyTraces": [
+            {
+              "index": 21,
+              "reason": "ok",
+              "confidence": 0.8865998037792473,
+              "endpointErrorSourcePx": 2.9963343598571375,
+              "distalPathDistanceSourcePx": 0.1809882504105135,
+              "measuredCount": 8,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 32,
+              "reason": "contrast",
+              "confidence": 0.061594291638596456,
+              "endpointErrorSourcePx": 8.78608196346187,
+              "distalPathDistanceSourcePx": 7.2416113083311435,
+              "measuredCount": 10,
+              "distalCount": 5,
+              "connected": true
+            },
+            {
+              "index": 30,
+              "reason": "weak-confidence",
+              "confidence": 0.24198222805055472,
+              "endpointErrorSourcePx": 9.467991131137989,
+              "distalPathDistanceSourcePx": 7.790294249127759,
+              "measuredCount": 6,
+              "distalCount": 5,
+              "connected": true
+            }
+          ]
+        }
+      ],
+      "diagnostics": {
+        "potentialRidgePixels": 143,
+        "densityPixels": 376,
+        "densityWeight": 178.75950872073594,
+        "contextualSamples": 0,
+        "tracingSeeds": 125,
+        "tracedStructures": 35,
+        "rejectionCounts": {
+          "clipped-tip": 25,
+          "ok": 7,
+          "weak-confidence": 2,
+          "contrast": 1
+        },
+        "crossing": {
+          "paths": [],
+          "testedOpenings": [
+            13.796454382231627,
+            15.268076183002986,
+            16.419964288896484,
+            17.53884398433528,
+            18.657782147213418,
+            19.776768853548898,
+            20.895796304719543,
+            22.014858287478575,
+            23.133949790621617,
+            24.253066727736563,
+            25.372205733299715,
+            26.491364010438105,
+            27.538381410738165,
+            28.493282844032038,
+            29.44902213508924,
+            30.405520274650502,
+            31.362707832832836,
+            32.32052355732074,
+            33.27891320952742,
+            34.237828593113704,
+            35.19722673893291,
+            36.157069217906944,
+            37.11732155909715,
+            37.4637529079973,
+            37.790509826992356,
+            38.11739812814774,
+            38.44441446008277,
+            38.771555583194086,
+            39.09881836508591,
+            39.42619977622033,
+            39.75369688577503,
+            40.081306857697484,
+            40.4090269469449,
+            40.309598079009426,
+            39.78303283548766,
+            39.25659644169647,
+            38.73029415175493,
+            38.20413150793025,
+            37.678114360561004,
+            37.15224888964756,
+            36.626541628273365,
+            36.1009994880403,
+            35.575629786721265,
+            35.02890364365725,
+            33.81464132139244,
+            32.60039911310515,
+            31.386179353253585,
+            30.171984752034227,
+            28.957818474134054,
+            27.743684238153048,
+            26.529586443314823,
+            25.315530332620227,
+            24.10152220528497,
+            22.887569696745942,
+            21.65037157719219,
+            20.395337334068287,
+            19.140720218258235,
+            17.886608005434972,
+            16.633114902801342,
+            15.380392282472739,
+            14.128645091407435,
+            12.878157765705788,
+            11.629336727480021,
+            10.382783247620816,
+            9.17293156217427,
+            8.288793580277954
+          ],
+          "coveredAxisFraction": 0,
+          "occluded": false
+        }
+      },
+      "caveat": "Nearest rejected paths may belong to a neighbouring hair. Their reasons are diagnostic leads, not automatically attributed causes. Stored traces are bounded and may omit later rejections."
+    },
+    {
+      "file": "edge900.jpg",
+      "side": "left",
+      "status": "not-resolvable",
+      "imageSHA256": "1a95afa6c99fa9fbd2f9e61f1334f4c623e5e7087fefc322da67c90958c0a9d0",
+      "imageWidth": 396,
+      "imageHeight": 280,
+      "eligibleCandidates": 0,
+      "annotatedStrands": 0,
+      "positionalAgreements": 0,
+      "duplicateAssignments": [],
+      "rows": [],
+      "diagnostics": {
+        "potentialRidgePixels": 9,
+        "densityPixels": 58,
+        "densityWeight": 6.606429865193713,
+        "contextualSamples": 0,
+        "tracingSeeds": 5,
+        "tracedStructures": 5,
+        "rejectionCounts": {
+          "short-measured": 5
+        },
+        "crossing": {
+          "paths": [],
+          "testedOpenings": [
+            5.84721307708554,
+            7.430289809220633,
+            9.016617175710051,
+            10.604736522033209,
+            12.193947714924587,
+            13.69825205483715,
+            15.061623665141527,
+            16.42685149073503,
+            17.793508275851277,
+            19.161288266260264,
+            19.916705339590994,
+            20.393693236707374,
+            20.870902008905038,
+            21.34831684422145,
+            21.82592422054065,
+            21.257751282471933,
+            20.690066566295357,
+            20.12291139153751,
+            19.556331830106796,
+            18.793050725526907,
+            17.596820728148966,
+            16.402278658948983,
+            15.209822220322861,
+            14.019983596376104,
+            12.775688017465923,
+            11.497485880472198,
+            10.219402004544458,
+            8.941487102049155,
+            7.663825700557766
+          ],
+          "coveredAxisFraction": 0,
+          "occluded": false
+        }
+      },
+      "caveat": "Nearest rejected paths may belong to a neighbouring hair. Their reasons are diagnostic leads, not automatically attributed causes. Stored traces are bounded and may omit later rejections."
+    },
+    {
+      "file": "edge900.jpg",
+      "side": "right",
+      "status": "not-resolvable",
+      "imageSHA256": "4d29643b6bcd42d4c9aeabec855d0e8734009a7b22cc308e120f45187642de4c",
+      "imageWidth": 456,
+      "imageHeight": 272,
+      "eligibleCandidates": 0,
+      "annotatedStrands": 0,
+      "positionalAgreements": 0,
+      "duplicateAssignments": [],
+      "rows": [],
+      "diagnostics": {
+        "potentialRidgePixels": 27,
+        "densityPixels": 65,
+        "densityWeight": 15.683338838708423,
+        "contextualSamples": 0,
+        "tracingSeeds": 23,
+        "tracedStructures": 23,
+        "rejectionCounts": {
+          "disconnected": 4,
+          "short-measured": 16,
+          "eyeliner": 3
+        },
+        "crossing": {
+          "paths": [
+            {
+              "root": {
+                "x": 79.5245108298356,
+                "y": 38.15670588132695
+              },
+              "dx": -0.30063934068206516,
+              "dy": 0.9537379025886793,
+              "points": [
+                {
+                  "x": 79.5245108298356,
+                  "y": 38.15670588132695
+                },
+                {
+                  "x": 80.17760939174222,
+                  "y": 39.411083124597695
+                },
+                {
+                  "x": 80.83070795364884,
+                  "y": 40.66546036786844
+                },
+                {
+                  "x": 81.48380651555546,
+                  "y": 41.91983761113919
+                },
+                {
+                  "x": 81.18316717487339,
+                  "y": 42.873575513727864
+                },
+                {
+                  "x": 81.83626573678,
+                  "y": 44.12795275699861
+                },
+                {
+                  "x": 82.48936429868662,
+                  "y": 45.382330000269356
+                },
+                {
+                  "x": 81.23498705541587,
+                  "y": 46.035428562175966
+                },
+                {
+                  "x": 79.98060981214512,
+                  "y": 46.688527124082576
+                },
+                {
+                  "x": 79.67997047146305,
+                  "y": 47.642265026671254
+                },
+                {
+                  "x": 79.37933113078098,
+                  "y": 48.59600292925993
+                },
+                {
+                  "x": 79.07869179009892,
+                  "y": 49.54974083184861
+                },
+                {
+                  "x": 79.73179035200553,
+                  "y": 50.804118075119355
+                },
+                {
+                  "x": 80.38488891391215,
+                  "y": 52.0584953183901
+                }
+              ]
+            }
+          ],
+          "testedOpenings": [
+            7.339187758864041,
+            8.445777512329604,
+            9.52614381434446,
+            10.606918679313187,
+            11.687988769747438,
+            12.769279102913782,
+            13.805625343526717,
+            14.785720649161416,
+            15.767834189292252,
+            16.75161099249121,
+            17.73677430039788,
+            18.72310525098657,
+            19.178067365470145,
+            19.616543272664785,
+            20.055657603785537,
+            20.495369324078148,
+            20.93564079264301,
+            20.945282638240652,
+            20.523897152060137,
+            20.10251203691153,
+            19.681127316626924,
+            19.25974301712404,
+            18.81443888165112,
+            17.627764706087902,
+            16.441443137894296,
+            15.255556436971563,
+            14.070214560135106,
+            12.88556786317359,
+            11.620613128355147,
+            10.293317377679303,
+            8.967081196624406,
+            7.642456223398443,
+            6.32045555769159,
+            5.038478082071443
+          ],
+          "coveredAxisFraction": 0,
+          "occluded": false
+        }
+      },
+      "caveat": "Nearest rejected paths may belong to a neighbouring hair. Their reasons are diagnostic leads, not automatically attributed causes. Stored traces are bounded and may omit later rejections."
+    }
+  ]
+}

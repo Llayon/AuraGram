@@ -1,0 +1,389 @@
+{
+  "note": "Native 1x PNG crops decoded in their original engine. No added diagnostic pixels. Metrics are not visual acceptance.",
+  "rows": [
+    {
+      "engine": "chromium",
+      "photo": "light",
+      "side": "left",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 185,
+          "changedPixels": 29,
+          "maxRGBsum": 18
+        },
+        "context-length50": {
+          "RGBsum": 173,
+          "changedPixels": 27,
+          "maxRGBsum": 16
+        },
+        "context-length100": {
+          "RGBsum": 223,
+          "changedPixels": 35,
+          "maxRGBsum": 18
+        },
+        "recovery-only50": {
+          "RGBsum": 25,
+          "changedPixels": 4,
+          "maxRGBsum": 7
+        },
+        "recovery-only100": {
+          "RGBsum": 38,
+          "changedPixels": 6,
+          "maxRGBsum": 11
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "photo": "light",
+      "side": "right",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 94,
+          "changedPixels": 14,
+          "maxRGBsum": 18
+        },
+        "context-length50": {
+          "RGBsum": 73,
+          "changedPixels": 12,
+          "maxRGBsum": 15
+        },
+        "context-length100": {
+          "RGBsum": 94,
+          "changedPixels": 14,
+          "maxRGBsum": 18
+        },
+        "recovery-only50": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "recovery-only100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "photo": "natural",
+      "side": "left",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 118,
+          "changedPixels": 15,
+          "maxRGBsum": 31
+        },
+        "context-length50": {
+          "RGBsum": 89,
+          "changedPixels": 16,
+          "maxRGBsum": 12
+        },
+        "context-length100": {
+          "RGBsum": 158,
+          "changedPixels": 21,
+          "maxRGBsum": 31
+        },
+        "recovery-only50": {
+          "RGBsum": 19,
+          "changedPixels": 4,
+          "maxRGBsum": 11
+        },
+        "recovery-only100": {
+          "RGBsum": 40,
+          "changedPixels": 6,
+          "maxRGBsum": 14
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "photo": "natural",
+      "side": "right",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 387,
+          "changedPixels": 38,
+          "maxRGBsum": 38
+        },
+        "context-length50": {
+          "RGBsum": 221,
+          "changedPixels": 32,
+          "maxRGBsum": 21
+        },
+        "context-length100": {
+          "RGBsum": 439,
+          "changedPixels": 46,
+          "maxRGBsum": 38
+        },
+        "recovery-only50": {
+          "RGBsum": 22,
+          "changedPixels": 4,
+          "maxRGBsum": 9
+        },
+        "recovery-only100": {
+          "RGBsum": 52,
+          "changedPixels": 8,
+          "maxRGBsum": 15
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "photo": "edge900",
+      "side": "left",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "context-length50": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "context-length100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "recovery-only50": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "recovery-only100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "photo": "edge900",
+      "side": "right",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "context-length50": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "context-length100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "recovery-only50": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "recovery-only100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "photo": "light",
+      "side": "left",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 85,
+          "changedPixels": 22,
+          "maxRGBsum": 16
+        },
+        "context-length50": {
+          "RGBsum": 53,
+          "changedPixels": 19,
+          "maxRGBsum": 10
+        },
+        "context-length100": {
+          "RGBsum": 85,
+          "changedPixels": 22,
+          "maxRGBsum": 16
+        },
+        "recovery-only50": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "recovery-only100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "photo": "light",
+      "side": "right",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 40,
+          "changedPixels": 10,
+          "maxRGBsum": 11
+        },
+        "context-length50": {
+          "RGBsum": 34,
+          "changedPixels": 9,
+          "maxRGBsum": 6
+        },
+        "context-length100": {
+          "RGBsum": 40,
+          "changedPixels": 10,
+          "maxRGBsum": 11
+        },
+        "recovery-only50": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "recovery-only100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "photo": "natural",
+      "side": "left",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 40,
+          "changedPixels": 12,
+          "maxRGBsum": 10
+        },
+        "context-length50": {
+          "RGBsum": 26,
+          "changedPixels": 12,
+          "maxRGBsum": 5
+        },
+        "context-length100": {
+          "RGBsum": 61,
+          "changedPixels": 17,
+          "maxRGBsum": 10
+        },
+        "recovery-only50": {
+          "RGBsum": 6,
+          "changedPixels": 3,
+          "maxRGBsum": 4
+        },
+        "recovery-only100": {
+          "RGBsum": 21,
+          "changedPixels": 5,
+          "maxRGBsum": 10
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "photo": "natural",
+      "side": "right",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 151,
+          "changedPixels": 32,
+          "maxRGBsum": 28
+        },
+        "context-length50": {
+          "RGBsum": 74,
+          "changedPixels": 23,
+          "maxRGBsum": 9
+        },
+        "context-length100": {
+          "RGBsum": 168,
+          "changedPixels": 36,
+          "maxRGBsum": 28
+        },
+        "recovery-only50": {
+          "RGBsum": 9,
+          "changedPixels": 4,
+          "maxRGBsum": 3
+        },
+        "recovery-only100": {
+          "RGBsum": 17,
+          "changedPixels": 4,
+          "maxRGBsum": 7
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "photo": "edge900",
+      "side": "left",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "context-length50": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "context-length100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "recovery-only50": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "recovery-only100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "photo": "edge900",
+      "side": "right",
+      "metrics": {
+        "reference-length100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "context-length50": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "context-length100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "recovery-only50": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        },
+        "recovery-only100": {
+          "RGBsum": 0,
+          "changedPixels": 0,
+          "maxRGBsum": 0
+        }
+      }
+    }
+  ]
+}

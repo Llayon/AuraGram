@@ -1,0 +1,437 @@
+{
+  "schema": "auragram-independent-distal-tangent-labels-v1",
+  "provenance": {
+    "annotator": "independent critic agent /root/recovery_critic",
+    "method": "Manual visual inspection of the two specified original 4x PNGs only in this annotation pass. No detector, current source, prior annotation file or results read before freezing.",
+    "historicalExposure": "Annotator previously inspected detector results, paths, old manual annotations and these images during earlier criticism. This is NOT strictly memory-blind, human-certified or calibrated ground truth.",
+    "coordinateConvention": "Coordinates are pixels in the exact 4x PNG. Native/source uncertainty is display uncertainty divided by 4. Angles use image x-right/y-down, atan2(dy,dx), outward toward tip; negative angles point upward.",
+    "uncertaintyConvention": "Visual engineering bounds, not statistical confidence intervals. Samples separated by nominal inward distances are approximate visible center estimates; those distances are labels, not exact arclength measurements. Local shaft axis over 2-8 source pixels is not necessarily the instantaneous tangent at a blurred terminal pixel.",
+    "scope": "Sparse selected structures only. No whole-eye recall or precision estimate. Biological roots are not annotated.",
+    "images": {
+      "left": {
+        "path": "tests/visual/localization-evidence/images/chromium-natural-original-left-4x.png",
+        "sha256": "c2ddc6fabad50edf816cb8ea230e5196da64ba56900411fecd5d9f5b0e351599",
+        "dimensions4x": [
+          776,
+          528
+        ]
+      },
+      "right": {
+        "path": "tests/visual/localization-evidence/images/chromium-natural-original-right-4x.png",
+        "sha256": "b4d4650ff4604e354ae28c615a7e8134c8cf1fb81faf9f72671cfffc57e7f720",
+        "dimensions4x": [
+          868,
+          540
+        ]
+      }
+    }
+  },
+  "eyes": {
+    "left": {
+      "labels": [
+        {
+          "id": "ITL1",
+          "tip4x": [
+            540,
+            143
+          ],
+          "tipUncertaintySourcePx": 2,
+          "proximalCenterSamples4x": [
+            {
+              "nominalInwardSourcePx": 2,
+              "point4x": [
+                542,
+                151
+              ],
+              "positionUncertaintySourcePx": 1.75
+            },
+            {
+              "nominalInwardSourcePx": 4,
+              "point4x": [
+                541,
+                159
+              ],
+              "positionUncertaintySourcePx": 1.75
+            },
+            {
+              "nominalInwardSourcePx": 6,
+              "point4x": [
+                537,
+                167
+              ],
+              "positionUncertaintySourcePx": 1.75
+            },
+            {
+              "nominalInwardSourcePx": 8,
+              "point4x": [
+                533,
+                175
+              ],
+              "positionUncertaintySourcePx": 1.75
+            }
+          ],
+          "outwardAngleIntervalDegrees": [
+            -135,
+            -60
+          ],
+          "status": "AMBIGUOUS_LOCAL_TANGENT",
+          "branchStatus": "no separate branch confidently resolved in sampled distal segment",
+          "notes": "Target anchor. Blurred rounded terminal region and apparent local curvature: the first 2 source pixels do not support a unique terminal tangent. Samples are provisional center estimates and MUST NOT be used as hard directional ground truth."
+        },
+        {
+          "id": "ITL2",
+          "tip4x": [
+            502,
+            158
+          ],
+          "tipUncertaintySourcePx": 2,
+          "proximalCenterSamples4x": [
+            {
+              "nominalInwardSourcePx": 2,
+              "point4x": [
+                498,
+                166
+              ],
+              "positionUncertaintySourcePx": 1.5
+            },
+            {
+              "nominalInwardSourcePx": 4,
+              "point4x": [
+                494,
+                174
+              ],
+              "positionUncertaintySourcePx": 1.5
+            },
+            {
+              "nominalInwardSourcePx": 6,
+              "point4x": [
+                490,
+                182
+              ],
+              "positionUncertaintySourcePx": 1.5
+            },
+            {
+              "nominalInwardSourcePx": 8,
+              "point4x": [
+                486,
+                190
+              ],
+              "positionUncertaintySourcePx": 1.5
+            }
+          ],
+          "outwardAngleIntervalDegrees": [
+            -100,
+            -40
+          ],
+          "status": "LOCAL_AXIS_ONLY",
+          "branchStatus": "no separate branch confidently resolved in sampled distal segment",
+          "notes": "A short separated oblique distal shaft can be followed. Terminal attenuation makes the exact endpoint and instantaneous first-2px tangent uncertain; interval describes the 2-8px local axis."
+        },
+        {
+          "id": "ITL3",
+          "tip4x": [
+            572,
+            184
+          ],
+          "tipUncertaintySourcePx": 2.5,
+          "proximalCenterSamples4x": [
+            {
+              "nominalInwardSourcePx": 2,
+              "point4x": [
+                568,
+                192
+              ],
+              "positionUncertaintySourcePx": 2
+            },
+            {
+              "nominalInwardSourcePx": 4,
+              "point4x": [
+                564,
+                200
+              ],
+              "positionUncertaintySourcePx": 2
+            },
+            {
+              "nominalInwardSourcePx": 6,
+              "point4x": [
+                560,
+                208
+              ],
+              "positionUncertaintySourcePx": 2
+            },
+            {
+              "nominalInwardSourcePx": 8,
+              "point4x": [
+                557,
+                216
+              ],
+              "positionUncertaintySourcePx": 2
+            }
+          ],
+          "outwardAngleIntervalDegrees": [
+            -105,
+            -35
+          ],
+          "status": "AMBIGUOUS_STRUCTURE",
+          "branchStatus": "no separate branch confidently resolved in sampled distal segment",
+          "notes": "Thin outer structure is suggested but overlaps nearby fan/shadow. Individual center and endpoint identity are insufficiently resolved. Exclude from hard matching and tangent acceptance."
+        }
+      ],
+      "unlabelled": "Other short upper structures, including approximately (462,174), blend into the dark lid/shaft bundle. No additional reliable local tangent labels added to reach a quota.",
+      "usableForHardTerminalTangentCount": 0,
+      "usableForProvisionalLocalAxisCount": 1
+    },
+    "right": {
+      "labels": [
+        {
+          "id": "ITR1",
+          "tip4x": [
+            304,
+            161
+          ],
+          "tipUncertaintySourcePx": 1.5,
+          "proximalCenterSamples4x": [
+            {
+              "nominalInwardSourcePx": 2,
+              "point4x": [
+                306,
+                169
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 4,
+              "point4x": [
+                308,
+                177
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 6,
+              "point4x": [
+                311,
+                185
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 8,
+              "point4x": [
+                314,
+                193
+              ],
+              "positionUncertaintySourcePx": 1.25
+            }
+          ],
+          "outwardAngleIntervalDegrees": [
+            -130,
+            -80
+          ],
+          "status": "LOCAL_AXIS_RESOLVABLE",
+          "branchStatus": "no separate branch confidently resolved in sampled distal segment",
+          "notes": "Separated central distal shaft. The tip fades gradually; do not interpret the central angle of this interval as subpixel terminal truth."
+        },
+        {
+          "id": "ITR2",
+          "tip4x": [
+            352,
+            165
+          ],
+          "tipUncertaintySourcePx": 1.5,
+          "proximalCenterSamples4x": [
+            {
+              "nominalInwardSourcePx": 2,
+              "point4x": [
+                355,
+                173
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 4,
+              "point4x": [
+                358,
+                181
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 6,
+              "point4x": [
+                361,
+                189
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 8,
+              "point4x": [
+                364,
+                197
+              ],
+              "positionUncertaintySourcePx": 1.25
+            }
+          ],
+          "outwardAngleIntervalDegrees": [
+            -140,
+            -85
+          ],
+          "status": "LOCAL_AXIS_RESOLVABLE",
+          "branchStatus": "no separate branch confidently resolved in sampled distal segment",
+          "notes": "Separated distal shaft with moderate oblique slope; terminal blur still prevents a precise first-2px derivative."
+        },
+        {
+          "id": "ITR3",
+          "tip4x": [
+            408,
+            131
+          ],
+          "tipUncertaintySourcePx": 1.75,
+          "proximalCenterSamples4x": [
+            {
+              "nominalInwardSourcePx": 2,
+              "point4x": [
+                408,
+                139
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 4,
+              "point4x": [
+                409,
+                147
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 6,
+              "point4x": [
+                410,
+                155
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 8,
+              "point4x": [
+                412,
+                163
+              ],
+              "positionUncertaintySourcePx": 1.25
+            }
+          ],
+          "outwardAngleIntervalDegrees": [
+            -120,
+            -75
+          ],
+          "status": "LOCAL_AXIS_RESOLVABLE",
+          "branchStatus": "no separate branch confidently resolved in sampled distal segment",
+          "notes": "Target anchor. Near-vertical distal axis is visible over 2-8 source pixels. Topmost fade/nearby crease means the exact endpoint and instantaneous tangent within the first 2px are not independently precise."
+        },
+        {
+          "id": "ITR4",
+          "tip4x": [
+            460,
+            151
+          ],
+          "tipUncertaintySourcePx": 1.5,
+          "proximalCenterSamples4x": [
+            {
+              "nominalInwardSourcePx": 2,
+              "point4x": [
+                460,
+                159
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 4,
+              "point4x": [
+                460,
+                167
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 6,
+              "point4x": [
+                460,
+                175
+              ],
+              "positionUncertaintySourcePx": 1.25
+            },
+            {
+              "nominalInwardSourcePx": 8,
+              "point4x": [
+                461,
+                183
+              ],
+              "positionUncertaintySourcePx": 1.25
+            }
+          ],
+          "outwardAngleIntervalDegrees": [
+            -115,
+            -65
+          ],
+          "status": "LOCAL_AXIS_RESOLVABLE",
+          "branchStatus": "no separate branch confidently resolved in sampled distal segment",
+          "notes": "Separated nearly vertical central shaft. Rounded fading terminal region; broad interval intentionally retains positional uncertainty."
+        },
+        {
+          "id": "ITR5",
+          "tip4x": [
+            509,
+            181
+          ],
+          "tipUncertaintySourcePx": 1.75,
+          "proximalCenterSamples4x": [
+            {
+              "nominalInwardSourcePx": 2,
+              "point4x": [
+                506,
+                189
+              ],
+              "positionUncertaintySourcePx": 1.5
+            },
+            {
+              "nominalInwardSourcePx": 4,
+              "point4x": [
+                504,
+                197
+              ],
+              "positionUncertaintySourcePx": 1.5
+            },
+            {
+              "nominalInwardSourcePx": 6,
+              "point4x": [
+                501,
+                205
+              ],
+              "positionUncertaintySourcePx": 1.5
+            },
+            {
+              "nominalInwardSourcePx": 8,
+              "point4x": [
+                498,
+                213
+              ],
+              "positionUncertaintySourcePx": 1.5
+            }
+          ],
+          "outwardAngleIntervalDegrees": [
+            -100,
+            -45
+          ],
+          "status": "LOCAL_AXIS_RESOLVABLE",
+          "branchStatus": "no separate branch confidently resolved in sampled distal segment",
+          "notes": "Separated outer oblique shaft; weaker terminal contrast and curvature widen the angle interval."
+        }
+      ],
+      "usableForHardTerminalTangentCount": 0,
+      "usableForProvisionalLocalAxisCount": 5
+    }
+  },
+  "freezePolicy": "This file is an original-only provisional annotation snapshot. Do not edit it after reading detector outputs; record any later disagreement or correction in a separate artifact."
+}

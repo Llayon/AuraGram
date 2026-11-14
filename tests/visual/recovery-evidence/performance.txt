@@ -1,0 +1,24 @@
+
+> auragram@0.5.1 test:e2e
+> node scripts/run-e2e.cjs --project=chromium-performance --no-deps
+
+
+Running 3 tests using 1 worker
+
+node.exe : (node:240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+строка:1 знак:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:240) Warn... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+I14 perf {"times":{"blush0":{"ms":73.69999999925494,"w":864,"h":1080,"ran":"","maskMs":0,"retouchMs":0},"blush50":{"ms":96.40000000223517,"w":864,"h":1080,"ran":"blush","maskMs":26.100000001490116,"retouchMs":23.799999997019768},"blush100":{"ms":98.5,"w":864,"h":1080,"ran":"blush","maskMs":26.100000001490116,"retouchMs":22.099999997764826},"glowEyes":{"ms":104.30000000074506,"w":864,"h":1080,"ran":"glow,eyes","maskMs":26.100000001490116,"retouchMs":22.399999998509884},"all":{"ms":174.5,"w":864,"h":1080,"ran":"smooth,antired,glow,eyes,blush,sculpt","maskMs":26.100000001490116,"retouchMs":67.69999999925494}},"ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36","hw":16}
+  ✓  1 [chromium-performance] › tests\e2e-g1b1.spec.js:498:1 › I14 performance: no slider-time inference, bounded render cost (2.4s)
+L20 perf {"base":{"median":70.5,"samples":[68.70000000298023,70.19999999925494,70.5,72.40000000223517,75.09999999776483],"w":864,"h":1080,"analyseMs":0,"enhanceMs":0,"ran":""},"lashed":{"median":73.39999999850988,"samples":[71.89999999850988,73.20000000298023,73.39999999850988,73.5,74.5],"w":864,"h":1080,"analyseMs":41,"enhanceMs":21.600000001490116,"ran":"definition,density,lashes"},"full":{"median":72.89999999850988,"samples":[71.5,72.19999999925494,72.89999999850988,74.30000000074506,79],"w":864,"h":1080,"analyseMs":41,"enhanceMs":20.699999999254942,"ran":"definition,density,lashes"},"ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36","hw":16}
+  ✓  2 [chromium-performance] › tests\e2e-lashes.spec.js:686:1 › L20 performance: lash warm cost within budget (2.9s)
+Recovery active perf {"fixture":"natural-full-original.jpg","strengths":{"density":35,"length":100,"definition":25},"width":720,"height":1080,"coldAnalysisMs":103.40000000223517,"off":{"median":16,"times":[15.199999999254942,15.5,15.699999999254942,15.699999999254942,16,16.299999997019768,16.300000000745058,18.100000001490116,19.100000001490116],"ran":""},"active":{"median":17.700000002980232,"times":[17.100000001490116,17.300000000745058,17.400000002235174,17.599999997764826,17.700000002980232,18.199999999254942,18.599999997764826,19.899999998509884,22.699999999254942],"ran":"definition,density,length,lashes"},"delta":1.7000000029802322,"lengthDifference":200,"densityDifference":206,"lengthRan":"length,lashes","keyStable":true,"analysisMsStable":true}
+Recovery full export {"renderMs":184.69999999925494,"encodeMs":348.3999999985099,"buttonToBlobMs":613.4000000022352,"width":2400,"height":3600,"bytes":9225147,"ran":"definition,density,length,lashes"}
+  ✓  3 [chromium-performance] › tests\e2e-lashes.spec.js:735:1 › L20 performance: active Density and connected Length on real natural portrait (2.6s)
+
+  3 passed (9.6s)

@@ -1,0 +1,130 @@
+{
+  "schema": "auragram-independent-code-review-v1",
+  "scope": "Free-ending dataset/report/test infrastructure only. Source-only labels and prior critic immutable; product source unchanged. No browser or inference launched by critic. New helper input verification was run read-only for both batches and engines.",
+  "decision": "LENGTH HOLD; no useful natural Length proven. Infrastructure fixes do not create visual acceptance.",
+  "reviewedFiles": [
+    {
+      "path": "G1C1_FREEEND_DATASET_REPORT.md",
+      "sha256": "9cbe4c829b43f2790fba26623f763632014a5455d3ed4fbb9827111bd37327ef"
+    },
+    {
+      "path": "tests/e2e-fidelity.spec.js",
+      "sha256": "f5144695493eb3fe67b075f4648b70b3eac108773f1984d148aa2151b3f10751"
+    },
+    {
+      "path": "tests/visual/lash-freeend-analysis.cjs",
+      "sha256": "b5c04c8ecc833250bff463bcf9b6db7d3954d2d53c591a1c2643eb26a53175ac"
+    },
+    {
+      "path": "tests/visual/lash-freeend2-analysis.cjs",
+      "sha256": "91f13c2ddcf15fb50cdce7ff93fda1dd27c038ca5e790220fc8e8fb1e23afe95"
+    },
+    {
+      "path": "tests/visual/lash-freeend-render.cjs",
+      "sha256": "06b98aae917bf8b5980fa87bb64c74857778c2f555d1fc907d946825b0d1632b"
+    },
+    {
+      "path": "tests/visual/lash-freeend2-render.cjs",
+      "sha256": "7f94c0fb3f07a055746b1d39c5787a84487aa4b3c0ba559f6dfd70ef2df0c318"
+    },
+    {
+      "path": "tests/visual/lash-freeend-inputs.cjs",
+      "sha256": "17898c70cf768bc8d041f0ad0e120351de9faf3040e70fa0ca71f2f72b7554f0"
+    },
+    {
+      "path": "tests/visual/lash-freeend-verified-render.cjs",
+      "sha256": "7704aaa19c24d71af0b2ba91196ea2a2ccf713f2e19b626a9220f8af3b38c365"
+    },
+    {
+      "path": "tests/visual/lash-freeend-debug.cjs",
+      "sha256": "035631a26576965fb078816816f1a43135424c89b37895ae67a497ed09e2b89e"
+    },
+    {
+      "path": "tests/visual/lash-freeend-audit.cjs",
+      "sha256": "f09840b41d8992456b100cee5b9134545b71ad04f6cf8e077091474172a23b75"
+    },
+    {
+      "path": "tests/visual/curate-freeend.cjs",
+      "sha256": "90bc02dd32a46c7f86180a6d6116ffcd6c7454030f456d580f747330f6564a32"
+    },
+    {
+      "path": "tests/visual/replay-freeend.cjs",
+      "sha256": "e4a359aa4fc71639dfe204ad2e7502f758c188b893a538d5f7ad1edfe3fc9db6"
+    }
+  ],
+  "findings": [
+    {
+      "id": "FCR1",
+      "severity": "evidence completeness",
+      "finding": "Original curator omitted debug JSON/PNG and gallery map legends.",
+      "disposition": "CODE_FIXED_RUNTIME_PENDING",
+      "verifiedChange": "Curator now requires four batch/engine freeend-11-debug JSONs, verifies reference/harness hashes and collects all maps, plus gallery legend/links.",
+      "remaining": "Debug jobs and final pack generation pending at review. Do not claim final archive completeness yet."
+    },
+    {
+      "id": "FCR2",
+      "severity": "reproducibility",
+      "finding": "Original render entry points validated labels/tips but not pre-execution image/module/baseline provenance; empty tips could conceal replay drift.",
+      "disposition": "CODE_FIXED_VERIFIED_RENDERS_PENDING",
+      "verifiedChange": "New lash-freeend-inputs.cjs checks reference engine, freeze/input hashes, source dimensions metadata/SHA, snapshot hashes and production b883 bytes against git show. Verified wrapper compares before/after checks and writes a manifest-bound verification companion. Debug also uses before/after helper.",
+      "localVerification": "Read-only helper checks PASS all four first/supplemental Chromium/WebKit manifests: 5/5/2/2 source hashes, 11 snapshot modules and 11 production modules each.",
+      "remaining": "Existing07 runs are historical/unverified by new wrapper. NEW12 wrapper runs not yet executed. Bare render scripts remain callable; final report/pack should distinguish verified wrapper execution. Pre/post local hashes detect persistent drift, not a cryptographic guarantee against transient change-and-restore while serving; no such current drift is observed."
+    },
+    {
+      "id": "FCR3",
+      "severity": "diagnostic provenance",
+      "finding": "Audit used live lidFrame without recording implementation/harness hash; nearest confidence used wrong field.",
+      "disposition": "VERIFIED_FIXED_IN_NEW10",
+      "verifiedChange": "NEW10 records harnessSHA256 and geometryHelperSHA256; both match current bytes. Nearest confidence reads t.c. Geometry coordinates unchanged.09 preserved."
+    },
+    {
+      "id": "FCR4",
+      "severity": "gallery readability",
+      "finding": "Curator strings contained actual Unicode mojibake, not merely PowerShell display.",
+      "disposition": "CODE_FIXED_FINAL_GALLERY_PENDING",
+      "verifiedChange": "UTF-8 source now contains actual U+2014; previous U+0432 U+0402 U+201D sequence absent.",
+      "remaining": "Final regeneration must use corrected source; preliminary gallery is historical."
+    },
+    {
+      "id": "FCR5",
+      "severity": "pending integration",
+      "finding": "At inspected revision curator still selects only07 render manifests/PNGs. New verified12 outputs/verification companions are not collected.",
+      "disposition": "PENDING_PARENT_FIX_OR_FOLLOWUP",
+      "required": "Retain07 historical matrix and archive NEW12 outputs plus verified-engine companions, binding their manifests to input/helper/wrapper hashes. Clearly label historical vs verified replay; regenerate into a NEW evidence directory."
+    }
+  ],
+  "testReview": {
+    "existingAssertions": "git diff tests/e2e-fidelity.spec.js contained only added25-line real no_face regression at top; no prior assertions, thresholds or golden files weakened.",
+    "newRegression": "Actual licensed lower-lash macro uploaded through app, requires actual no_face, all lash values100 preserve rendered pixels, global vogue preset must still alter pixels. Appropriate negative fallback check; not positive efficacy/naturalness proof.",
+    "testExecution": "Not run by critic. Parent full E2E still running sequentially at review. Verification in progress wording is honest; no dependent NOT RUN treated as PASS."
+  },
+  "reportReview": {
+    "overclaims": "No unsupported useful Length, calibrated confidence, independent generalization benchmark, physical-mobile verification or release-success claim found. Report correctly distinguishes sparse provisional biological-upper appearance from permissible target recall.",
+    "preservedVisualVerdict": "First W325 changes are tiny/ambiguous near upper lid, not proven terminal extensions. Supplemental217 endpoints project below current domain on skin; zero change does not imply absent lashes. HOLD and domain-only next experiment remain appropriate."
+  },
+  "integrityChecks": {
+    "preliminaryArchive": "240 logical raw-byte entries validated SHA256, zero mismatch.",
+    "analysisSnapshots": "Both analysis dirs match all manifest sourceHashes for both engines.",
+    "currentCorruptionEvidence": "None found; replay findings concern missing checks/ownership rather than proof existing PNG corruption."
+  },
+  "pendingNotPassed": [
+    "Final debug11 execution four batch/engine jobs",
+    "NEW12 verified render execution and verification companions",
+    "Final curator archive integration/completeness",
+    "Full browser result and isolated performance/test packaging verification"
+  ],
+  "immutableReferences": [
+    {
+      "path": "tests/visual/lash-freeend-independent-labels.json",
+      "sha256": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800"
+    },
+    {
+      "path": "tests/visual/lash-freeend2-independent-labels.json",
+      "sha256": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810"
+    },
+    {
+      "path": "tests/visual/lash-freeend-posthoc-independent-critic.json",
+      "sha256": "5588cdd60bd2f0feba48356ff76006c9a83bff961b434915c46c1d91fc7d268a"
+    }
+  ]
+}

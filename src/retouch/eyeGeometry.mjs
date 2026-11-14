@@ -10,7 +10,7 @@
  *
  * Side convention (matches skinMask.mjs): regions.leftEye is the SUBJECT's
  * left eye, which appears on the IMAGE right. Outer/inner corners are
- * derived per eye from its own bbox extremes — the two eyes are never
+ * derived per eye from its canonical FaceMesh corner indices — the two eyes are never
  * mirrored onto each other and keep their individual asymmetry (L2).
  */
 import { clampPoint } from '../vision/faceGeometry.mjs';
@@ -49,7 +49,7 @@ function bboxOf(points) {
 
 /**
  * Describe one eye from its 16-pt ring + brow (both normalized arrays).
- * @param {Array} eyePoints ring around the eye (any order)
+ * @param {Array} eyePoints ring in FACE_REGIONS order (16 points)
  * @param {Array} browPoints brow polyline (may be empty)
  * @param {number} faceW face width (normalized) for face-relative margins
  * @param {boolean} isSubjectLeft true for regions.leftEye
@@ -58,25 +58,23 @@ export function describeEye(eyePoints, browPoints, faceW, isSubjectLeft) {
   const pts = eyePoints.map(clampPoint);
   const c = mean(pts);
   const bb = bboxOf(pts);
-  // Split ring into lids by vertical position relative to centroid. Robust
-  // to ring order and in-plane roll (roll just tilts both lids together).
-  const upper = pts.filter((p) => p.y <= c.y + bb.h * 0.08).sort((a, b) => a.x - b.x);
-  const lower = pts.filter((p) => p.y > c.y + bb.h * 0.08).sort((a, b) => a.x - b.x);
-  const upperLid = upper.length >= 3 ? upper : [...pts].sort((a, b) => a.x - b.x).slice(0, Math.max(3, Math.ceil(pts.length / 2)));
-  const lowerLid = lower.length >= 2 ? lower : [...pts].sort((a, b) => a.x - b.x).slice(Math.floor(pts.length / 2));
-  // Corners: outer points at the ear side. Subject-left eye sits on the
-  // image right, so its outer corner is the max-x extreme (and vice versa).
-  const outer = isSubjectLeft
-    ? { ...upperLid[upperLid.length - 1] }
-    : { ...upperLid[0] };
-  const inner = isSubjectLeft
-    ? { ...upperLid[0] }
-    : { ...upperLid[upperLid.length - 1] };
+  // Canonical MediaPipe edges, verified against face_mesh_connections.py.
+  // FACE_REGIONS rightEye has corner 133 at position 8; its upper arc
+  // starts at 33 (position 0), NOT at that corner. Never classify by y.
+  const upperIndices = isSubjectLeft
+    ? [0, 15, 14, 13, 12, 11, 10, 9, 8]
+    : [0, 9, 10, 11, 12, 13, 14, 15, 8];
+  const upperArc = upperIndices.map(i => pts[i]).filter(Boolean);
+  const lowerArc = pts.slice(0, 9);
+  const upperLid = upperArc;
+  const lowerLid = lowerArc;
+  const outer = { ...pts[isSubjectLeft ? 8 : 0] };
+  const inner = { ...pts[isSubjectLeft ? 0 : 8] };
   const axis = Math.atan2(inner.y - outer.y, inner.x - outer.x);
-  // Lid normal points AWAY from the eye interior (up-ish for upper lids):
-  // perpendicular of the axis, flipped to negative-y.
+  // Away from the lower arc, independent of screen vertical / head roll.
+  const up = mean(upperArc), low = mean(lowerArc);
   let nx = Math.sin(axis), ny = -Math.cos(axis);
-  if (ny > 0) { nx = -nx; ny = -ny; }
+  if (nx * (up.x - low.x) + ny * (up.y - low.y) < 0) { nx = -nx; ny = -ny; }
   const w = Math.max(1e-4, bb.w), h = Math.max(1e-4, bb.h);
   // Eye ROI: tight bbox + face-relative margins. Room above the lid for
   // lash length (0.9 eye-heights up), modest margins elsewhere. Eyebrow
@@ -90,12 +88,13 @@ export function describeEye(eyePoints, browPoints, faceW, isSubjectLeft) {
     x1: Math.min(1, bb.x1 + mSide),
     y1: Math.min(1, bb.y1 + mDown)
   };
-  const usable = bb.w >= LASH_MIN_EYE_W && (roi.x1 - roi.x0) > 0.01 && (roi.y1 - roi.y0) > 0.01;
+  const usable = pts.length === 16 && bb.w >= LASH_MIN_EYE_W && (roi.x1 - roi.x0) > 0.01 && (roi.y1 - roi.y0) > 0.01;
   return {
     cx: c.x, cy: c.y, w, h, angle: axis,
     outer, inner, upperLid, lowerLid,
     lidNormal: { x: nx, y: ny },
     roi, usable,
+    browPoints: (browPoints || []).map(clampPoint),
     // Brow centroid (for protection); null when unknown.
     brow: browPoints && browPoints.length ? mean(browPoints.map(clampPoint)) : null
   };
@@ -110,10 +109,20 @@ export function describeEyes(regions, faceW) {
   };
 }
 
-/** ROI working bitmap size (long side capped, aspect kept, tiny by design). */
-export function lashRoiSize(roi) {
-  const w = roi.x1 - roi.x0, h = roi.y1 - roi.y0;
-  const refW = w * 320, refH = h * 320; // reference pixels at 320px-wide photo
-  const k = Math.min(1, LASH_ROI_MAX_DIM / Math.max(refW, refH));
-  return { w: Math.max(24, Math.round(refW * k)), h: Math.max(16, Math.round(refH * k)) };
+/** Native decoded pixels, capped on both axes and area. Never upscale.
+ * Rounding down introduces <1px aspect error; scaleX/Y report that error.
+ * Invalid/tiny ROIs are explicit skips, never padded to a fictitious minimum.
+ */
+export function lashRoiSize(roi, sourceWidth, sourceHeight, budget = {}) {
+  const rawW = Math.max(0, roi.x1 - roi.x0) * sourceWidth;
+  const rawH = Math.max(0, roi.y1 - roi.y0) * sourceHeight;
+  if (![rawW, rawH].every(v => Number.isFinite(v) && v > 0)) {
+    return { w: 0, h: 0, rawW: 0, rawH: 0, scale: 0, scaleX: 0, scaleY: 0, status: 'low-resolution' };
+  }
+  const maxSide = Math.max(1, Math.min(384, budget.maxSide || LASH_ROI_MAX_DIM));
+  const maxPixels = Math.max(1, Math.min(384 * 384, budget.maxPixels || maxSide * maxSide));
+  const scale = Math.min(1, maxSide / Math.max(rawW, rawH), Math.sqrt(maxPixels / (rawW * rawH)));
+  const w = Math.floor(rawW * scale), h = Math.floor(rawH * scale);
+  return { w, h, rawW, rawH, scale, scaleX: w / rawW, scaleY: h / rawH,
+    status: w < 32 || h < 12 ? 'low-resolution' : 'ok' };
 }

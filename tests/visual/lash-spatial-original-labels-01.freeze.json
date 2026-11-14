@@ -1,0 +1,7 @@
+{
+  "purpose": "Freeze preliminary original-only labels before any lash detector use. Not benchmark acceptance.",
+  "inputs": {
+    "tests/visual/lash-spatial-original-labels-01.json": "4d23df2501e30e27aaa5d1bb01f02231b8c62636ca09d465471adfecd1f6ed74"
+  },
+  "sourceSHA256": "237333fc947c0e4abe0ce0355fbc7f439e8bc3a5b05e6f1a5a8526c93318f948"
+}

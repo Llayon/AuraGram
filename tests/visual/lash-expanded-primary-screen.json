@@ -1,0 +1,15 @@
+{
+  "method":"Original-only native crop visual screening before any new detector output. These new sources were not used in earlier experiments. Historical exposure to older datasets is disclosed. Sparse source assessment, not certified ground truth.",
+  "baseline":"6975652ec6277b523973b8d4a02bd5e2b72d905b",
+  "observations":[
+    {"file":"pexels-8727422.jpg","status":"useful-pale-detail","screenRight":"Sharp light strands and loops, many projecting into the eye opening. Endpoint identity at crossings remains uncertain; do not treat as Length-positive by default.","screenLeft":"Defocused compared with screen-right.","makeup":"No obvious heavy makeup; absence of mascara is not certified."},
+    {"file":"pexels-12367370.jpg","status":"makeup-negative-control","notes":"Strong smoky eye and eyeliner; noisy image; individual outer structures may be cosmetic/applied. Cannot certify biological strand identity or natural Length-positive."},
+    {"file":"pexels-7479551.jpg","status":"sharp-closed-structure-control","notes":"Many resolved coated/clumped distal structures, specular spots, crossing strands. Sharpness improved over prior dataset. Closed side-view eye is not an open-eye continuation ground truth; roots merged."},
+    {"file":"pexels-7123010.jpg","status":"liner-hair-closed-control","notes":"White eyeliner, dark lash band, closed eyes and foreground hair. Endpoints insufficiently resolved; preserve as adversarial case."},
+    {"file":"unsplash-purejulia.jpg","status":"partial-resolvable","notes":"Visible open eye has separated distal dark hairs but blurred transition near several tips. Other eye is partly outside frame. Source tags include no makeup and natural makeup; neither is a controlled label."},
+    {"file":"unsplash-andrey-eye.jpg","status":"closed-distal-structure-control","notes":"Closed cropped eye with separated fine and bundled shafts. Distal paths visible, precise endpoint derivative still uncertain. Full-face eligibility untested."},
+    {"file":"pexels-18485027.jpg","status":"rejected-sharpness-lead","notes":"Large source dimensions, but native upper lash region soft/blurred; overlying hair and partial second eye. Keep failure, not a sharp positive."},
+    {"file":"pexels-7859838.jpg","status":"dark-skin-open-control","notes":"Both eyes present, natural-looking dark overlapping short upper strands, many inside opening. Precise terminal identity not certified. No inference of ethnicity or makeup absence."}
+  ],
+  "policy":"Do not force accepted tip labels, makeup categories or positive efficacy from file dimensions. Original F1 fixture and thresholds remain untouched. Source selection precedes model results."
+}

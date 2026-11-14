@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "b46b2855f3b8cbd4e0fd990c420bfbdf15151557",
+  "annotationMethod": "Assistant visual annotation of original 400% nearest-neighbour crops, with detector overlays hidden during this pass. Annotator has historical exposure to earlier audits. Independent second review is recorded separately. These are provisional visual measurements, not human-certified ground truth.",
+  "coordinateSystem": "Displayed 4x PNG pixel coordinates. Polyline order is visible proximal attachment, distal shaft, tip. Each coordinate divides by four into native source-crop pixels.",
+  "rootMeaning": "Attachment to the visible merged dark lash line. Individual biological roots are not resolved.",
+  "eyes": [
+    {
+      "file": "light.jpg", "side": "left", "status": "partial-resolvable",
+      "tipUncertaintySourcePx": 1.5, "rootUncertaintySourcePx": 3,
+      "rootVisibility": "merged-dark-line",
+      "strands": [
+        {"id": "LL1", "points4x": [[257,150],[244,116],[234,89]]},
+        {"id": "LL2", "points4x": [[288,142],[284,108],[275,80]]},
+        {"id": "LL3", "points4x": [[307,136],[309,104],[307,75]]},
+        {"id": "LL4", "points4x": [[336,140],[340,111],[343,77]]},
+        {"id": "LL5", "points4x": [[359,149],[366,121],[377,91]]},
+        {"id": "LL6", "points4x": [[389,164],[400,141],[414,106]]}
+      ],
+      "notes": "Selected separated central upper shafts. Thick outer clumps and fine crossing textures remain unlabelled. This is a sampled subset, not exhaustive coverage."
+    },
+    {
+      "file": "light.jpg", "side": "right", "status": "partial-resolvable",
+      "tipUncertaintySourcePx": 2, "rootUncertaintySourcePx": 3,
+      "rootVisibility": "merged-dark-line",
+      "strands": [
+        {"id": "LR1", "points4x": [[121,197],[100,163],[82,132]]},
+        {"id": "LR2", "points4x": [[149,180],[129,143],[113,112]]},
+        {"id": "LR3", "points4x": [[173,164],[159,123],[147,88]]},
+        {"id": "LR4", "points4x": [[207,147],[194,109],[183,76]]},
+        {"id": "LR5", "points4x": [[249,147],[245,113],[236,88]]},
+        {"id": "LR6", "points4x": [[300,156],[293,130],[284,107]]},
+        {"id": "LR7", "points4x": [[370,192],[376,166],[375,141]]}
+      ],
+      "notes": "Outer mascara-like clumps make individual root identity uncertain. Labels follow visible separated distal shafts only."
+    },
+    {
+      "file": "natural.jpg", "side": "left", "status": "partial-resolvable",
+      "tipUncertaintySourcePx": 2, "rootUncertaintySourcePx": 3,
+      "rootVisibility": "merged-dark-line",
+      "strands": [
+        {"id": "NL1", "points4x": [[380,232],[372,202],[367,177]]},
+        {"id": "NL2", "points4x": [[401,229],[396,197],[398,169]]},
+        {"id": "NL3", "points4x": [[426,226],[429,183],[439,155]]},
+        {"id": "NL4", "points4x": [[456,230],[463,190],[482,163]]},
+        {"id": "NL5", "points4x": [[502,230],[521,178],[539,145]]},
+        {"id": "NL6", "points4x": [[547,255],[565,208],[584,175]]},
+        {"id": "NL7", "points4x": [[581,268],[591,231],[604,208]]}
+      ],
+      "notes": "Several distal ends are soft. Root positions are visible merged-line attachments. Background scalp hair on the outer side is excluded."
+    },
+    {
+      "file": "natural.jpg", "side": "right", "status": "partial-resolvable",
+      "tipUncertaintySourcePx": 1.5, "rootUncertaintySourcePx": 3,
+      "rootVisibility": "merged-dark-line",
+      "strands": [
+        {"id": "NR1", "points4x": [[274,240],[259,201],[246,170]]},
+        {"id": "NR2", "points4x": [[335,231],[319,195],[307,156]]},
+        {"id": "NR3", "points4x": [[372,234],[359,203],[344,175]]},
+        {"id": "NR4", "points4x": [[412,223],[411,176],[405,134]]},
+        {"id": "NR5", "points4x": [[455,230],[459,194],[465,158]]},
+        {"id": "NR6", "points4x": [[489,240],[499,215],[507,191]]},
+        {"id": "NR7", "points4x": [[517,253],[526,238],[535,215]]}
+      ],
+      "notes": "Separated upper shafts are visible but their exact root boundaries merge. Fine inner-corner and overlapping outer hairs are not exhaustively labelled."
+    },
+    {
+      "file": "edge900.jpg", "side": "left", "status": "not-resolvable",
+      "strands": [],
+      "notes": "At native crop resolution the upper lash line blends with blue makeup and blur. Cannot confidently place distinct root-to-tip paths from this crop. Zero labels is not proof that no lashes exist."
+    },
+    {
+      "file": "edge900.jpg", "side": "right", "status": "not-resolvable",
+      "strands": [],
+      "notes": "Short dark marks near the upper line cannot be reliably separated from makeup/compression in this source. No invented positive structures."
+    }
+  ]
+}

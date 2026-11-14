@@ -1,0 +1,1536 @@
+{
+  "date": "2026-11-14",
+  "kind": "posthoc-local-ending-diagnostic-not-recognition",
+  "labelsInputToDetection": false,
+  "annotationSHA256": "4d23df2501e30e27aaa5d1bb01f02231b8c62636ca09d465471adfecd1f6ed74",
+  "results": [
+    {
+      "engine": "chromium",
+      "side": "left",
+      "deterministic": true,
+      "records": 33,
+      "statuses": {
+        "not-inspected": 28,
+        "ambiguous": 5
+      },
+      "reasons": {
+        "no-native-local-record": 28,
+        "no-observed-native-path-or-tangent": 5
+      },
+      "closureProfileCounts": {},
+      "accepted": 0,
+      "locallyConsistentRecords": [],
+      "unacceptedStopMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "tipRegionIntersections": [],
+      "artifacts": [
+        {
+          "file": "tests\\visual\\out\\distal-body-ending-01\\chromium.json",
+          "sha256": "abc51345f5067467c36a744f21f4f6c5a1f082279cd0df53331b2af71f47be43"
+        },
+        {
+          "file": "tests\\visual\\out\\distal-body-ending-02\\chromium.json",
+          "sha256": "abc51345f5067467c36a744f21f4f6c5a1f082279cd0df53331b2af71f47be43"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "side": "right",
+      "deterministic": true,
+      "records": 144,
+      "statuses": {
+        "not-inspected": 92,
+        "continuing": 29,
+        "ambiguous": 23
+      },
+      "reasons": {
+        "no-native-local-record": 76,
+        "spatial-continuation": 29,
+        "no-observed-native-path-or-tangent": 23,
+        "original-seed-budget": 16
+      },
+      "closureProfileCounts": {
+        "censored": 58
+      },
+      "accepted": 0,
+      "locallyConsistentRecords": [],
+      "unacceptedStopMatching": {
+        "matches": [],
+        "unmatchedCandidates": [
+          "2",
+          "5",
+          "7",
+          "11",
+          "15",
+          "19",
+          "34",
+          "41",
+          "47",
+          "48",
+          "53",
+          "54",
+          "56",
+          "60",
+          "61",
+          "64",
+          "70",
+          "72",
+          "73",
+          "79",
+          "83",
+          "84",
+          "86",
+          "93",
+          "95",
+          "105",
+          "107",
+          "110",
+          "121"
+        ],
+        "unmatchedLabels": [
+          "right-1",
+          "right-2",
+          "right-3",
+          "right-4",
+          "right-5"
+        ]
+      },
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "right-1",
+          "right-2",
+          "right-3",
+          "right-4",
+          "right-5"
+        ]
+      },
+      "tipRegionIntersections": [
+        {
+          "rank": 47,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.527211740327,
+            "y": 1911.5405922662915,
+            "arc": 7.065380431139765
+          },
+          "tangent": {
+            "x": -0.022252770226940995,
+            "y": -0.9997523764499022
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 54,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.527211740327,
+            "y": 1911.5405922662915,
+            "arc": 7.065380431139765
+          },
+          "tangent": {
+            "x": -0.022252770226940995,
+            "y": -0.9997523764499022
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 60,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.527211740327,
+            "y": 1911.5405922662915,
+            "arc": 7.065380431139765
+          },
+          "tangent": {
+            "x": -0.022252770226940995,
+            "y": -0.9997523764499022
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 70,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.527211740327,
+            "y": 1911.5405922662915,
+            "arc": 7.065380431139765
+          },
+          "tangent": {
+            "x": -0.022252770226940995,
+            "y": -0.9997523764499022
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 83,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.527211740327,
+            "y": 1911.5405922662915,
+            "arc": 7.065380431139765
+          },
+          "tangent": {
+            "x": -0.022252770226940995,
+            "y": -0.9997523764499022
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 95,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.527211740327,
+            "y": 1911.5405922662915,
+            "arc": 7.065380431139765
+          },
+          "tangent": {
+            "x": -0.022252770226940995,
+            "y": -0.9997523764499022
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 107,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.527211740327,
+            "y": 1911.5405922662915,
+            "arc": 7.065380431139765
+          },
+          "tangent": {
+            "x": -0.022252770226940995,
+            "y": -0.9997523764499022
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "file": "tests\\visual\\out\\distal-body-ending-01\\chromium.json",
+          "sha256": "abc51345f5067467c36a744f21f4f6c5a1f082279cd0df53331b2af71f47be43"
+        },
+        {
+          "file": "tests\\visual\\out\\distal-body-ending-02\\chromium.json",
+          "sha256": "abc51345f5067467c36a744f21f4f6c5a1f082279cd0df53331b2af71f47be43"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "left",
+      "deterministic": true,
+      "records": 70,
+      "statuses": {
+        "not-inspected": 49,
+        "ambiguous": 17,
+        "censored": 4
+      },
+      "reasons": {
+        "no-native-local-record": 49,
+        "no-observed-native-path-or-tangent": 17,
+        "unavailable-or-side-boundary": 4
+      },
+      "closureProfileCounts": {
+        "ambiguous": 8
+      },
+      "accepted": 0,
+      "locallyConsistentRecords": [],
+      "unacceptedStopMatching": {
+        "matches": [],
+        "unmatchedCandidates": [
+          "17",
+          "19",
+          "22",
+          "32"
+        ],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "tipRegionIntersections": [],
+      "artifacts": [
+        {
+          "file": "tests\\visual\\out\\distal-body-ending-01\\webkit.json",
+          "sha256": "5fdff1ffd28a43aa952587b1055842891fa24903880b4e8a729b2a3d56d4c8a8"
+        },
+        {
+          "file": "tests\\visual\\out\\distal-body-ending-02\\webkit.json",
+          "sha256": "5fdff1ffd28a43aa952587b1055842891fa24903880b4e8a729b2a3d56d4c8a8"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "right",
+      "deterministic": true,
+      "records": 236,
+      "statuses": {
+        "not-inspected": 170,
+        "ambiguous": 49,
+        "continuing": 13,
+        "censored": 4
+      },
+      "reasons": {
+        "no-native-local-record": 62,
+        "profile-disagreement": 26,
+        "spatial-continuation": 13,
+        "no-observed-native-path-or-tangent": 21,
+        "unavailable-or-side-boundary": 4,
+        "multiple-supported-bands": 2,
+        "original-seed-budget": 108
+      },
+      "closureProfileCounts": {
+        "censored": 88,
+        "continuing": 2
+      },
+      "accepted": 0,
+      "locallyConsistentRecords": [
+        {
+          "rank": 2,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 3,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 6,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 8,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 11,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 16,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 24,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 26,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 30,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 35,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 36,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 40,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 41,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 49,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 51,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 58,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 59,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        },
+        {
+          "rank": 60,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 69,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 71,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        },
+        {
+          "rank": 72,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 80,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 81,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        },
+        {
+          "rank": 82,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 90,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 91,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        },
+        {
+          "rank": 103,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 105,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        },
+        {
+          "rank": 119,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 120,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 122,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        }
+      ],
+      "unacceptedStopMatching": {
+        "matches": [
+          {
+            "label": "right-2",
+            "candidate": "2"
+          }
+        ],
+        "unmatchedCandidates": [
+          "3",
+          "4",
+          "6",
+          "7",
+          "8",
+          "9",
+          "11",
+          "12",
+          "16",
+          "18",
+          "22",
+          "24",
+          "25",
+          "26",
+          "30",
+          "31",
+          "35",
+          "36",
+          "40",
+          "41",
+          "49",
+          "51",
+          "58",
+          "59",
+          "60",
+          "69",
+          "71",
+          "72",
+          "73",
+          "80",
+          "81",
+          "82",
+          "85",
+          "90",
+          "91",
+          "94",
+          "100",
+          "103",
+          "105",
+          "116",
+          "118",
+          "119",
+          "120",
+          "122"
+        ],
+        "unmatchedLabels": [
+          "right-1",
+          "right-3",
+          "right-4",
+          "right-5"
+        ]
+      },
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "right-1",
+          "right-2",
+          "right-3",
+          "right-4",
+          "right-5"
+        ]
+      },
+      "tipRegionIntersections": [
+        {
+          "rank": 2,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 8,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 11,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 16,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 24,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 26,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 30,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 35,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 36,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 40,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 41,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 49,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 51,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 58,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 59,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1679.391046131203,
+            "y": 1911.305308242401,
+            "arc": 5.1409243986958
+          },
+          "tangent": {
+            "x": -0.10099041239634084,
+            "y": -0.9948873989572976
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 60,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 69,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 71,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1679.391046131203,
+            "y": 1911.305308242401,
+            "arc": 5.1409243986958
+          },
+          "tangent": {
+            "x": -0.10099041239634084,
+            "y": -0.9948873989572976
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 72,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 80,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 81,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1679.391046131203,
+            "y": 1911.305308242401,
+            "arc": 5.1409243986958
+          },
+          "tangent": {
+            "x": -0.10099041239634084,
+            "y": -0.9948873989572976
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 82,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 90,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 91,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1679.391046131203,
+            "y": 1911.305308242401,
+            "arc": 5.1409243986958
+          },
+          "tangent": {
+            "x": -0.10099041239634084,
+            "y": -0.9948873989572976
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 103,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 105,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1679.391046131203,
+            "y": 1911.305308242401,
+            "arc": 5.1409243986958
+          },
+          "tangent": {
+            "x": -0.10099041239634084,
+            "y": -0.9948873989572976
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 119,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 120,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 122,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1679.391046131203,
+            "y": 1911.305308242401,
+            "arc": 5.1409243986958
+          },
+          "tangent": {
+            "x": -0.10099041239634084,
+            "y": -0.9948873989572976
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "file": "tests\\visual\\out\\distal-body-ending-01\\webkit.json",
+          "sha256": "5fdff1ffd28a43aa952587b1055842891fa24903880b4e8a729b2a3d56d4c8a8"
+        },
+        {
+          "file": "tests\\visual\\out\\distal-body-ending-02\\webkit.json",
+          "sha256": "5fdff1ffd28a43aa952587b1055842891fa24903880b4e8a729b2a3d56d4c8a8"
+        }
+      ]
+    }
+  ],
+  "decision": "No closure candidates or approved endings; LENGTH HOLD"
+}

@@ -1,0 +1,14 @@
+chromium C104-right-old16
+chromium PI729R1
+node : page.evaluate: TypeError: Cannot read properties of undefined (reading 'points')
+строка:2 знак:1
++ node tests/visual/lash-endpoint-probe.cjs tipcase-02-profiles > tests ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (page.evaluate: ...ading 'points'):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    at eval (eval at evaluate (:370:30), <anonymous>:10:52)
+    at async <anonymous>:396:30
+    at main (D:\Programms\alisagram\tests\visual\lash-endpoint-probe.cjs:14:86) {
+  log: []
+}

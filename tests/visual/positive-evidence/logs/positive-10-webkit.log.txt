@@ -1,0 +1,23 @@
+node : Error: EEXIST: file already exists, open 
+'D:\Programms\alisagram\tests\visual\out\positive-10-render\chromium.started'
+строка:2 знак:1
++ node tests/visual/lash-expanded-render.cjs tests/visual/out/positive- ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error: EEXIST: ...romium.started':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    at Object.openSync (node:fs:560:18)
+    at Object.writeFileSync (node:fs:2427:35)
+    at main (D:\Programms\alisagram\tests\visual\lash-expanded-render.cjs:10:40)
+    at Object.<anonymous> (D:\Programms\alisagram\tests\visual\lash-expanded-render.cjs:66:1)
+    at Module._compile (node:internal/modules/cjs/loader:1812:14)
+    at Object..js (node:internal/modules/cjs/loader:1943:10)
+    at Module.load (node:internal/modules/cjs/loader:1533:32)
+    at Module._load (node:internal/modules/cjs/loader:1335:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  errno: -4075,
+  code: 'EEXIST',
+  syscall: 'open',
+  path: 'D:\\Programms\\alisagram\\tests\\visual\\out\\positive-10-render\\chromium.started'
+}

@@ -1,0 +1,94 @@
+{
+  "license": "https://unsplash.com/license",
+  "newSources": [
+    {
+      "author": "Kateryna Hliznitsova",
+      "imageUrl": "https://images.unsplash.com/photo-1772615492602-9ca30b030217?w=2400&q=95",
+      "license": "https://unsplash.com/license",
+      "sha256": "2023A7613E9BF04DE46BC95CB52C64E7872FFA9E47E2D87A98CCF3A7D87AE613",
+      "page": "https://unsplash.com/photos/a-young-woman-with-blonde-hair-and-freckles-BxcLsxRvFIg",
+      "categories": "Pending visual inspection; do not infer eyelash colour or makeup from filename",
+      "file": "freckles-blonde.jpg"
+    },
+    {
+      "author": "Kirill Balobanov",
+      "imageUrl": "https://images.unsplash.com/photo-1532442312344-38696bc5294d?w=2400&q=95",
+      "license": "https://unsplash.com/license",
+      "sha256": "646C3B14D6EBD3FD5D3E2C88521FC1B93D92688CF8CD733AE4D5F479E8E2C8DE",
+      "page": "https://unsplash.com/photos/portrait-photo-of-woman-wearing-eyeglasses-Arq71XxDVGI",
+      "categories": "Pending visual inspection; do not infer eyelash colour or makeup from filename",
+      "file": "eyeglasses.jpg"
+    },
+    {
+      "author": "Juli Kosolapova",
+      "imageUrl": "https://images.unsplash.com/photo-1565470921607-2fabedd2dd86?w=2400&q=95",
+      "license": "https://unsplash.com/license",
+      "sha256": "B6211D89421B0F6DBA6DCB3CA06103169C0CA9375767853EC83E6033E481B485",
+      "page": "https://unsplash.com/photos/womans-hair-covering-her-left-eye-AU8LGUIhDD4",
+      "categories": "Pending visual inspection; do not infer eyelash colour or makeup from filename",
+      "file": "hair-occlusion.jpg"
+    }
+  ],
+  "previousSources": {
+    "license": "https://unsplash.com/license",
+    "baseline": "b02fac3c684f2a7e3178933cb66ded925ab8bce8",
+    "photos": {
+      "beauty": [
+        "photo-1534528741775-53994a69daeb",
+        3000
+      ],
+      "natural": [
+        "photo-1524504388940-b1c1722653e1",
+        2400
+      ],
+      "mascara": [
+        "photo-1517841905240-472988babdf9",
+        2400
+      ],
+      "glasses": [
+        "photo-1524250502761-1ac6f2e30d43",
+        2400
+      ],
+      "light": [
+        "photo-1508214751196-bcfd4ca60f91",
+        2400
+      ]
+    },
+    "note": "Names are historical audit identifiers, NOT verified categories. Do not count glasses as eyeglasses or light as pale eyelashes.",
+    "sha256": {
+      "beauty.jpg": "658f4028a1ae27b4cca24fc75539ed73ab72257f0fcacbd2c34c9888eb4809fc",
+      "glasses.jpg": "35d947096bba8054e4ea19d315ce86f50214970b137e367d9e3cb1b96dc3fc9c",
+      "light.jpg": "d0776e51a24cda5fa32b73bb1d464c75a3b02281331c88a42967330f5a3942de",
+      "mascara.jpg": "c0f1b8811d485c926c4db213d5d98fb839fafee8a9c902b71954f65760b64a3f",
+      "natural.jpg": "abbe280b58a2119c32256e760299fd29337ba46d2291a8c3d60a93f004a0aaf0"
+    }
+  },
+  "derived": {
+    "low256.jpg": {
+      "source": "portrait.jpg / photo-1534528741775-53994a69daeb",
+      "operation": "existing256px downscale; low-resolution guard, not a new independent photo"
+    },
+    "edge900.jpg": {
+      "source": "edge-source.jpg / photo-1534528741775-53994a69daeb",
+      "operation": "existing900px downscale"
+    },
+    "light-rotated25.jpg": {
+      "source": "light.jpg / photo-1508214751196-bcfd4ca60f91",
+      "operation": "25degree in-plane canvas rotation; JPEGq95; derived real photograph, not an independent source"
+    }
+  },
+  "sha256": {
+    "beauty.jpg": "658f4028a1ae27b4cca24fc75539ed73ab72257f0fcacbd2c34c9888eb4809fc",
+    "edge900.jpg": "c43db5cf32c49064e30cabc8eb80a109159d7dc43d1e7b50ae9d74aa2587a0f0",
+    "eyeglasses.jpg": "646c3b14d6ebd3fd5d3e2c88521fc1b93d92688cf8cd733ae4d5f479e8e2c8de",
+    "freckles-blonde.jpg": "2023a7613e9bf04de46bc95cb52c64e7872ffa9e47e2d87a98ccf3a7d87ae613",
+    "glasses.jpg": "35d947096bba8054e4ea19d315ce86f50214970b137e367d9e3cb1b96dc3fc9c",
+    "hair-occlusion.jpg": "b6211d89421b0f6dba6dcb3ca06103169c0ca9375767853ec83e6033e481b485",
+    "light-rotated25.jpg": "18a40e2961fca6ce897811a441d2dfea281f216381de61431e2bc379ce24839f",
+    "light.jpg": "d0776e51a24cda5fa32b73bb1d464c75a3b02281331c88a42967330f5a3942de",
+    "low256.jpg": "f61475d72f68f4a2b5d8842ad6701fb390e78416bb7f26bca4b1c1ee0fd4fae3",
+    "mascara.jpg": "c0f1b8811d485c926c4db213d5d98fb839fafee8a9c902b71954f65760b64a3f",
+    "natural.jpg": "abbe280b58a2119c32256e760299fd29337ba46d2291a8c3d60a93f004a0aaf0"
+  },
+  "note": "Eight independent public sources plus three derived real-photo scenarios; filename is not an eyelash/makeup ground-truth label."
+}

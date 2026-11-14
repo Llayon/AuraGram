@@ -1,0 +1,15 @@
+✔ profile center follows a measured shifted dark ridge and keeps tip fixed (4.8762ms)
+✔ flat background and one-sided step cannot supply an observed center (1.6988ms)
+✔ missing center evidence remains explicit even when a window angle exists (0.5437ms)
+✔ an unsupported fixed tip cannot validate any distal window (0.3804ms)
+✔ diagnostic fit preserves observed straight direction through rotation (3.9479ms)
+✔ diagnostic cannot infer a quadratic from repeated or insufficient observations (0.3044ms)
+✔ distal fit ignores a diverging merged root beyond its observed window (1.2371ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 149.8011

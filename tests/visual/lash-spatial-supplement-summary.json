@@ -1,0 +1,258 @@
+{
+  "date": "2026-11-13",
+  "detectorExecuted": false,
+  "validationOpened": false,
+  "batches": [
+    {
+      "batch": "01",
+      "inputs": {
+        "chromium": "af571cfa33f938e5ae96c987d00ac2d64e431a8416d337af163bbefefbae046b",
+        "webkit": "5499ff0fbbb462dd81a932ede49c600a03184de5f8ce8a30b26a7cb6a25a9f0d"
+      },
+      "sources": [
+        {
+          "file": "pexels-24735911.jpg",
+          "sha256": "f7309c571bd298fc3299c1860e22d34bf676a6856df19f5f243e344f61137cca",
+          "width": 4000,
+          "height": 6000,
+          "faceMesh": {
+            "chromium": "ready",
+            "webkit": "ready"
+          },
+          "split": "development",
+          "author": "ahmed akeri",
+          "page": "https://www.pexels.com/photo/woman-with-freckles-on-face-24735911/",
+          "views": [
+            {
+              "name": "portrait",
+              "file": "pexels-24735911-portrait.png"
+            },
+            {
+              "name": "left",
+              "rect": [
+                1969,
+                2531,
+                878,
+                608
+              ],
+              "file": "pexels-24735911-left.png"
+            },
+            {
+              "name": "right",
+              "rect": [
+                931,
+                2647,
+                757,
+                581
+              ],
+              "file": "pexels-24735911-right.png"
+            }
+          ]
+        },
+        {
+          "file": "pexels-13673830.jpg",
+          "sha256": "7752e72bcdc3dd75f2207bbbb1d141e8e77f19954c1674eba79b66eb55f1131e",
+          "width": 4000,
+          "height": 3000,
+          "faceMesh": {
+            "chromium": "no_face",
+            "webkit": "no_face"
+          },
+          "split": "development",
+          "author": null,
+          "page": "https://www.pexels.com/photo/womans-face-with-black-hair-13673830/",
+          "views": [
+            {
+              "name": "portrait",
+              "file": "pexels-13673830-portrait.png"
+            }
+          ]
+        },
+        {
+          "file": "pexels-2212718.jpg",
+          "sha256": "0caa35499182b6877b63b62bd5555e305a550722fd050423a3dd68f52793edc0",
+          "width": 5616,
+          "height": 3744,
+          "faceMesh": {
+            "chromium": "ready",
+            "webkit": "ready"
+          },
+          "split": "development",
+          "author": null,
+          "page": "https://www.pexels.com/photo/portrait-of-woman-wearing-teal-eyelashes-2212718/",
+          "views": [
+            {
+              "name": "portrait",
+              "file": "pexels-2212718-portrait.png"
+            },
+            {
+              "name": "left",
+              "rect": [
+                2726,
+                1655,
+                655,
+                343
+              ],
+              "file": "pexels-2212718-left.png"
+            },
+            {
+              "name": "right",
+              "rect": [
+                1920,
+                1736,
+                590,
+                368
+              ],
+              "file": "pexels-2212718-right.png"
+            }
+          ]
+        },
+        {
+          "file": "pexels-3762757.jpg",
+          "sha256": "041939a5c54486db6c8cfb9ef62a7403b0a162c262a2a051ba351447f30b0382",
+          "width": 4493,
+          "height": 7360,
+          "faceMesh": {
+            "chromium": "no_face",
+            "webkit": "no_face"
+          },
+          "split": "development",
+          "author": "Shiny Diamond",
+          "page": "https://www.pexels.com/photo/woman-applying-black-mascara-3762757/",
+          "views": [
+            {
+              "name": "portrait",
+              "file": "pexels-3762757-portrait.png"
+            }
+          ]
+        },
+        {
+          "file": "pexels-8990738.jpg",
+          "sha256": "3c903e0fadbe38bf2523b4996f128a30f0849ffc64422933020e882cdbc708d5",
+          "width": 3360,
+          "height": 5040,
+          "faceMesh": {
+            "chromium": "ready",
+            "webkit": "ready"
+          },
+          "split": "development",
+          "author": "Alena Darmel",
+          "page": "https://www.pexels.com/photo/woman-applying-mascara-on-her-lashes-8990738/",
+          "views": [
+            {
+              "name": "portrait",
+              "file": "pexels-8990738-portrait.png"
+            },
+            {
+              "name": "left",
+              "rect": [
+                1523,
+                1100,
+                586,
+                593
+              ],
+              "file": "pexels-8990738-left.png"
+            },
+            {
+              "name": "right",
+              "rect": [
+                976,
+                546,
+                381,
+                701
+              ],
+              "file": "pexels-8990738-right.png"
+            }
+          ]
+        },
+        {
+          "file": "pexels-5240254.jpg",
+          "sha256": "3dca5e797b7dba4bd76a23e467ab6f3dc582c71d40779a3af5459df0c4a56204",
+          "width": 6720,
+          "height": 4480,
+          "faceMesh": {
+            "chromium": "no_face",
+            "webkit": "no_face"
+          },
+          "split": "development",
+          "author": "kaboompics.com",
+          "page": "https://www.pexels.com/photo/woman-applying-mascara-5240254/",
+          "views": [
+            {
+              "name": "portrait",
+              "file": "pexels-5240254-portrait.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "02",
+      "inputs": {
+        "chromium": "88c7b44b0f63cdd2708d5464d33d0bc5483e27b36a0a29c0d8802878d89a1028",
+        "webkit": "5788a4f68b91c07c9a8437707457f11dcaa001424818235a5d06a472fa7e359d"
+      },
+      "sources": [
+        {
+          "file": "pexels-14297936.jpg",
+          "sha256": "237333fc947c0e4abe0ce0355fbc7f439e8bc3a5b05e6f1a5a8526c93318f948",
+          "width": 4016,
+          "height": 6016,
+          "faceMesh": {
+            "chromium": "ready",
+            "webkit": "ready"
+          },
+          "split": "development",
+          "author": "Connor Scott McManus",
+          "page": "https://www.pexels.com/photo/close-up-of-the-face-of-a-beautiful-woman-14297936/",
+          "views": [
+            {
+              "name": "portrait",
+              "file": "pexels-14297936-portrait.png"
+            },
+            {
+              "name": "left",
+              "rect": [
+                2455,
+                1995,
+                957,
+                677
+              ],
+              "file": "pexels-14297936-left.png"
+            },
+            {
+              "name": "right",
+              "rect": [
+                1246,
+                1657,
+                905,
+                831
+              ],
+              "file": "pexels-14297936-right.png"
+            }
+          ]
+        },
+        {
+          "file": "pexels-34460007.jpg",
+          "sha256": "9556ec1c861e410e82e1ce49c3ebcd78a3b1d33110677824449a96e7e38358aa",
+          "width": 4672,
+          "height": 7008,
+          "faceMesh": {
+            "chromium": "no_face",
+            "webkit": "no_face"
+          },
+          "split": "development",
+          "author": "Shahin Mren",
+          "page": "https://www.pexels.com/photo/close-up-portrait-of-woman-with-blue-eyes-34460007/",
+          "views": [
+            {
+              "name": "portrait",
+              "file": "pexels-34460007-portrait.png"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "decision": "DATA-INSUFFICIENT / LENGTH HOLD"
+}

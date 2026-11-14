@@ -1,0 +1,16 @@
+
+> auragram@0.5.1 test:e2e
+> node scripts/run-e2e.cjs --project=chromium-performance --no-deps --workers=1
+
+
+Running 3 tests using 1 worker
+
+I14 perf {"times":{"blush0":{"ms":86.89999999850988,"w":864,"h":1080,"ran":"","maskMs":0,"retouchMs":0},"blush50":{"ms":124.5,"w":864,"h":1080,"ran":"blush","maskMs":30.5,"retouchMs":28.100000001490116},"blush100":{"ms":98.89999999850988,"w":864,"h":1080,"ran":"blush","maskMs":30.5,"retouchMs":21.600000001490116},"glowEyes":{"ms":113.40000000596046,"w":864,"h":1080,"ran":"glow,eyes","maskMs":30.5,"retouchMs":24.899999998509884},"all":{"ms":164.79999999701977,"w":864,"h":1080,"ran":"smooth,antired,glow,eyes,blush,sculpt","maskMs":30.5,"retouchMs":62}},"ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36","hw":16}
+  ok 1 [chromium-performance] › tests\e2e-g1b1.spec.js:498:1 › I14 performance: no slider-time inference, bounded render cost (2.7s)
+L20 perf {"base":{"median":62.20000000298023,"samples":[49.399999998509884,53.899999998509884,62.20000000298023,82.69999999552965,87.5],"w":864,"h":1080,"analyseMs":0,"enhanceMs":0,"ran":""},"lashed":{"median":55.79999999701977,"samples":[53.70000000298023,55.399999998509884,55.79999999701977,61,61.79999999701977],"w":864,"h":1080,"analyseMs":25.69999999552965,"enhanceMs":16.100000001490116,"ran":"definition,density,lashes"},"full":{"median":49.69999999552965,"samples":[48.29999999701977,49.400000005960464,49.69999999552965,51.20000000298023,52.79999999701977],"w":864,"h":1080,"analyseMs":25.69999999552965,"enhanceMs":14.199999995529652,"ran":"definition,density,lashes"},"ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36","hw":16}
+  ok 2 [chromium-performance] › tests\e2e-lashes.spec.js:686:1 › L20 performance: lash warm cost within budget (2.6s)
+Recovery active perf {"fixture":"natural-full-original.jpg","strengths":{"density":35,"length":100,"definition":25},"width":720,"height":1080,"coldAnalysisMs":107.29999999701977,"off":{"median":17.299999997019768,"times":[15.699999995529652,15.800000004470348,16.399999998509884,16.700000002980232,17.299999997019768,17.399999998509884,17.600000001490116,17.600000001490116,17.899999998509884],"ran":""},"active":{"median":21.69999999552965,"times":[18.30000000447035,18.799999997019768,20.100000001490116,21.600000001490116,21.69999999552965,22.899999998509884,23.100000001490116,23.900000005960464,24.799999997019768],"ran":"definition,density,length,lashes"},"delta":4.399999998509884,"lengthDifference":227,"densityDifference":206,"lengthRan":"length,lashes","recoveredTips":2,"keyStable":true,"analysisMsStable":true}
+Recovery full export {"renderMs":240.10000000149012,"encodeMs":362.6000000014901,"buttonToBlobMs":689.7999999970198,"width":2400,"height":3600,"bytes":9225180,"ran":"definition,density,length,lashes"}
+  ok 3 [chromium-performance] › tests\e2e-lashes.spec.js:735:1 › L20 performance: active Density and connected Length on real natural portrait (2.6s)
+
+  3 passed (10.1s)

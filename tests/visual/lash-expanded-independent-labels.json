@@ -1,0 +1,530 @@
+{
+  "schema": "auragram-expanded-independent-original-labels-v1",
+  "method": "Independent original-only manual visual screening of six new real-photo sources and ten native manual crops before detector/result/source-code exposure in this stage. No sharpening, tracing overlay, inferred geometry or artificial positives used.",
+  "exposureDisclosure": "Previous work exposed this annotator to a different photo dataset and the product algorithm. These six newly selected photos were not viewed before this screening stage.",
+  "coordinateConvention": "tipNative and localProximalNativePoints are x-right/y-down pixels relative to the unscaled source-crop PNG, not the full photo; sourceRectNative supplies full-photo origin. tipSourceNative is the summed full-photo coordinate. Angles are outward towards tip, atan2(dy,dx), in degrees.",
+  "uncertainty": "Manual engineering uncertainty, not calibrated confidence or human-certified ground truth. Larger native support samples describe local shaft axes; none certify the instantaneous terminal tangent. Labels are sparse samples, not a whole-eye precision/recall dataset.",
+  "classificationLimits": "A licensed photograph does not establish whether the lashes are bare, mascara-coated, extensions or false lashes. Coated and ambiguous sources are challenge cases, not proof of naturally grown bare-lash quality. Closed-eye samples are not assertions of suitability for the current upper-lid applicator.",
+  "provenanceFile": "tests/visual/lash-expanded-sources.json",
+  "cropManifestSHA256": "d1f041ecbb2d874c3b493b70ecf05f18c60d686b18d4b611bc890c41a3dd4d68",
+  "views": [
+    {
+      "file": "pexels-8727422.jpg",
+      "sourceSHA256": "ad949e502d6ff35c6b9801b82d67f0d484532f65b8ee77fdc792548231127ecd",
+      "view": "screen-right",
+      "originalCrop": "tests/visual/out/expanded-04-screening/pexels-8727422-screen-right-1x.png",
+      "originalCropSHA256": "239f2016ec714db85e58af429343feb02f31437ef477ca715a3094ee7f40580e",
+      "sourceRectNative": [
+        1650,
+        700,
+        750,
+        430
+      ],
+      "assessmentStatus": "PALE_LASH_DETAIL_PRESENT_ENDPOINTS_UNRESOLVED",
+      "assessment": "Open eye, pale ginger upper and lower hairs. Many upper shafts project over iris/sclera; exact distal endpoints and loops are ambiguous. No makeup/clumping obvious, but bare/natural status unverified.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "artificialLashOrMakeupHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": []
+    },
+    {
+      "file": "pexels-8727422.jpg",
+      "sourceSHA256": "ad949e502d6ff35c6b9801b82d67f0d484532f65b8ee77fdc792548231127ecd",
+      "view": "screen-left",
+      "originalCrop": "tests/visual/out/expanded-04-screening/pexels-8727422-screen-left-1x.png",
+      "originalCropSHA256": "b6cc5bc18fe4e191c4e699beb1200a764ae6caa7364df244b1008807b1e9735e",
+      "sourceRectNative": [
+        800,
+        830,
+        600,
+        380
+      ],
+      "assessmentStatus": "BLURRED_NOT_RESOLVABLE",
+      "assessment": "Open eye is softer than the other eye. Pale shafts are not separable enough for reliable sampled endpoint labels.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "artificialLashOrMakeupHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": []
+    },
+    {
+      "file": "pexels-12367370.jpg",
+      "sourceSHA256": "edd057654203bb4adbb6851cc5aee0e82929364e87319619026ef49452f65954",
+      "view": "screen-right",
+      "originalCrop": "tests/visual/out/expanded-04-screening/pexels-12367370-screen-right-1x.png",
+      "originalCropSHA256": "1e3c33392c44efe0a08910eb562e73e3be1dfbbdf7a748a075cc963ec9fe2f4d",
+      "sourceRectNative": [
+        2250,
+        1650,
+        700,
+        600
+      ],
+      "assessmentStatus": "MAKEUP_ARTIFICIAL_LASH_UNCERTAINTY",
+      "assessment": "Strong makeup and conspicuous outer fan. Visible structures exist, but applied false lashes/extensions versus coated natural hairs cannot be determined; no natural-positive labels assigned.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "artificialLashOrMakeupHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": []
+    },
+    {
+      "file": "pexels-12367370.jpg",
+      "sourceSHA256": "edd057654203bb4adbb6851cc5aee0e82929364e87319619026ef49452f65954",
+      "view": "screen-left",
+      "originalCrop": "tests/visual/out/expanded-04-screening/pexels-12367370-screen-left-1x.png",
+      "originalCropSHA256": "600139e744afcd550e54d708726d2bc82ec67cc8c509cbcfec0ca01b6b1a6fa6",
+      "sourceRectNative": [
+        1580,
+        1450,
+        650,
+        600
+      ],
+      "assessmentStatus": "MAKEUP_NOISE_ENDPOINTS_NOT_CONFIDENT",
+      "assessment": "Strong dark eyeliner/smoky shadow and grain. Broad merged lash line; no selected fine endpoints sufficiently unambiguous for this independent pass.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "artificialLashOrMakeupHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": []
+    },
+    {
+      "file": "pexels-7479551.jpg",
+      "sourceSHA256": "6da08a21618f2b240bca1f8d690ae3159eadd073e09c1f5ebb58a68537ff27fd",
+      "view": "visible-closed-eye",
+      "originalCrop": "tests/visual/out/expanded-04-screening/pexels-7479551-visible-closed-eye-1x.png",
+      "originalCropSHA256": "19d5781cbb7a2a6010e96455ed0c910e150b199995d281e0fd44c44c2f2cdc99",
+      "sourceRectNative": [
+        1650,
+        2400,
+        1300,
+        900
+      ],
+      "assessmentStatus": "SHARP_CLOSED_COATED_STRUCTURES",
+      "assessment": "High native detail; closed upper lashes project downward/right. Dark coating, clumps and bright specular material are visible. Useful coated/closed challenge, not certified bare natural-lash evidence.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "artificialLashOrMakeupHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": [
+        {
+          "id": "E747-1",
+          "tipNative": [
+            944,
+            548
+          ],
+          "tipUncertaintyNativePx": 6,
+          "localProximalNativePoints": [
+            [
+              931,
+              545
+            ],
+            [
+              918,
+              541
+            ],
+            [
+              905,
+              537
+            ]
+          ],
+          "proximalPointUncertaintyNativePx": 3,
+          "outwardAngleIntervalDegrees": [
+            0,
+            45
+          ],
+          "structureKind": "coated-strand-or-clump",
+          "status": "PROVISIONAL_VISIBLE_ENDPOINT_AND_LOCAL_AXIS",
+          "biologicalRoot": "not independently resolved; merged/overlapped near lid",
+          "individualHairIdentity": "uncertain if coated or bundled",
+          "notes": "A visible coated taper against skin. Do not equate the end of the dark coating with a bare biological hair tip.",
+          "tipSourceNative": [
+            2594,
+            2948
+          ]
+        },
+        {
+          "id": "E747-2",
+          "tipNative": [
+            1067,
+            527
+          ],
+          "tipUncertaintyNativePx": 6,
+          "localProximalNativePoints": [
+            [
+              1055,
+              518
+            ],
+            [
+              1043,
+              509
+            ],
+            [
+              1031,
+              500
+            ]
+          ],
+          "proximalPointUncertaintyNativePx": 3,
+          "outwardAngleIntervalDegrees": [
+            15,
+            65
+          ],
+          "structureKind": "coated-strand-or-clump",
+          "status": "PROVISIONAL_VISIBLE_ENDPOINT_AND_LOCAL_AXIS",
+          "biologicalRoot": "not independently resolved; merged/overlapped near lid",
+          "individualHairIdentity": "uncertain if coated or bundled",
+          "notes": "Distinct outer coated terminal silhouette; nearby crossing lashes prevent confident individual-root assignment.",
+          "tipSourceNative": [
+            2717,
+            2927
+          ]
+        },
+        {
+          "id": "E747-3",
+          "tipNative": [
+            1163,
+            466
+          ],
+          "tipUncertaintyNativePx": 6,
+          "localProximalNativePoints": [
+            [
+              1149,
+              462
+            ],
+            [
+              1135,
+              458
+            ],
+            [
+              1121,
+              453
+            ]
+          ],
+          "proximalPointUncertaintyNativePx": 3,
+          "outwardAngleIntervalDegrees": [
+            -5,
+            40
+          ],
+          "structureKind": "coated-strand-or-clump",
+          "status": "PROVISIONAL_VISIBLE_ENDPOINT_AND_LOCAL_AXIS",
+          "biologicalRoot": "not independently resolved; merged/overlapped near lid",
+          "individualHairIdentity": "uncertain if coated or bundled",
+          "notes": "Separated visible coated terminal segment. Specular highlights/coating may bias the exact dark endpoint.",
+          "tipSourceNative": [
+            2813,
+            2866
+          ]
+        }
+      ]
+    },
+    {
+      "file": "pexels-7123010.jpg",
+      "sourceSHA256": "4234570fa7eb81e3ac0b617b362ae92e0e4ec8ee803c31a6131eb42bb272631c",
+      "view": "screen-right",
+      "originalCrop": "tests/visual/out/expanded-04-screening/pexels-7123010-screen-right-1x.png",
+      "originalCropSHA256": "b7a34744f9e2793c79e6811e3ed1978de2781f503bbf5d1d576f16c4a3832d9e",
+      "sourceRectNative": [
+        1600,
+        1800,
+        800,
+        500
+      ],
+      "assessmentStatus": "CLOSED_LINER_ENDPOINTS_NOT_RESOLVABLE",
+      "assessment": "Closed eye, prominent white eyeliner and dark merged lash band. Individual distal ends are insufficiently separated.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "artificialLashOrMakeupHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": []
+    },
+    {
+      "file": "pexels-7123010.jpg",
+      "sourceSHA256": "4234570fa7eb81e3ac0b617b362ae92e0e4ec8ee803c31a6131eb42bb272631c",
+      "view": "screen-left",
+      "originalCrop": "tests/visual/out/expanded-04-screening/pexels-7123010-screen-left-1x.png",
+      "originalCropSHA256": "e85e70f517f23de2b808f01945c727886912ccb20d6870b0851f42e1c109fdd2",
+      "sourceRectNative": [
+        800,
+        1750,
+        750,
+        500
+      ],
+      "assessmentStatus": "CLOSED_LINER_HAIR_ENDPOINTS_NOT_RESOLVABLE",
+      "assessment": "Closed eye with thick white liner, grain/softness and crossing scalp hair. No trustworthy fine lash endpoint selected.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "artificialLashOrMakeupHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": []
+    },
+    {
+      "file": "unsplash-purejulia.jpg",
+      "sourceSHA256": "c6ea2f5d44810141dcb9f09437933bbfb2ae675ada8bba3752d1efd43a2c2f00",
+      "view": "screen-right",
+      "originalCrop": "tests/visual/out/expanded-04-screening/unsplash-purejulia-screen-right-1x.png",
+      "originalCropSHA256": "75d6a3befb5411ea48bdb399756a775ff0440f8470ea00b28f47ce5a3ecb8b32",
+      "sourceRectNative": [
+        1450,
+        2250,
+        1000,
+        750
+      ],
+      "assessmentStatus": "VISIBLE_UPPER_DISTAL_STRUCTURES",
+      "assessment": "Open eye with dark upper shafts visible above lid. Fine detail is softer than coated closed-eye macro sources. Bare lash versus light mascara cannot be certified from this photo.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "artificialLashOrMakeupHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": [
+        {
+          "id": "EPJ-1",
+          "tipNative": [
+            486,
+            252
+          ],
+          "tipUncertaintyNativePx": 5,
+          "localProximalNativePoints": [
+            [
+              491,
+              265
+            ],
+            [
+              495,
+              278
+            ],
+            [
+              499,
+              291
+            ]
+          ],
+          "proximalPointUncertaintyNativePx": 3,
+          "outwardAngleIntervalDegrees": [
+            -135,
+            -75
+          ],
+          "structureKind": "visible-strand",
+          "status": "PROVISIONAL_VISIBLE_ENDPOINT_AND_LOCAL_AXIS",
+          "biologicalRoot": "not independently resolved; merged/overlapped near lid",
+          "individualHairIdentity": "uncertain if coated or bundled",
+          "notes": "Short upper distal shaft over skin. Tip fades; this is an approximate local axis, not a precise endpoint derivative.",
+          "tipSourceNative": [
+            1936,
+            2502
+          ]
+        },
+        {
+          "id": "EPJ-2",
+          "tipNative": [
+            541,
+            255
+          ],
+          "tipUncertaintyNativePx": 5,
+          "localProximalNativePoints": [
+            [
+              547,
+              268
+            ],
+            [
+              552,
+              281
+            ],
+            [
+              557,
+              294
+            ]
+          ],
+          "proximalPointUncertaintyNativePx": 3,
+          "outwardAngleIntervalDegrees": [
+            -140,
+            -80
+          ],
+          "structureKind": "visible-strand",
+          "status": "PROVISIONAL_VISIBLE_ENDPOINT_AND_LOCAL_AXIS",
+          "biologicalRoot": "not independently resolved; merged/overlapped near lid",
+          "individualHairIdentity": "uncertain if coated or bundled",
+          "notes": "Separated upper distal structure, with surrounding hairs approaching the merged lid line. Makeup/extension history cannot be inferred.",
+          "tipSourceNative": [
+            1991,
+            2505
+          ]
+        },
+        {
+          "id": "EPJ-3",
+          "tipNative": [
+            690,
+            295
+          ],
+          "tipUncertaintyNativePx": 5,
+          "localProximalNativePoints": [
+            [
+              696,
+              309
+            ],
+            [
+              703,
+              323
+            ],
+            [
+              709,
+              337
+            ]
+          ],
+          "proximalPointUncertaintyNativePx": 3,
+          "outwardAngleIntervalDegrees": [
+            -140,
+            -75
+          ],
+          "structureKind": "visible-strand",
+          "status": "PROVISIONAL_VISIBLE_ENDPOINT_AND_LOCAL_AXIS",
+          "biologicalRoot": "not independently resolved; merged/overlapped near lid",
+          "individualHairIdentity": "uncertain if coated or bundled",
+          "notes": "Longer oblique upper structure with visible distal center. The support points span roughly15-45 native pixels, so do not claim a first-2px tangent.",
+          "tipSourceNative": [
+            2140,
+            2545
+          ]
+        }
+      ]
+    },
+    {
+      "file": "unsplash-purejulia.jpg",
+      "sourceSHA256": "c6ea2f5d44810141dcb9f09437933bbfb2ae675ada8bba3752d1efd43a2c2f00",
+      "view": "screen-left-partial",
+      "originalCrop": "tests/visual/out/expanded-04-screening/unsplash-purejulia-screen-left-partial-1x.png",
+      "originalCropSHA256": "f3564823922ba53dbbae9fe8ff758ab4594ab2631e90b2aed02b5c25b3717ed8",
+      "sourceRectNative": [
+        0,
+        1750,
+        600,
+        650
+      ],
+      "assessmentStatus": "PARTIAL_CROP_NOT_RESOLVABLE",
+      "assessment": "Only a partial eye/corner plus blurred lid is visible; do not manufacture endpoints or full-eye geometry.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "artificialLashOrMakeupHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": []
+    },
+    {
+      "file": "unsplash-andrey-eye.jpg",
+      "sourceSHA256": "e8019ddab5ae3e8e3b2d91185b0cbcabbe05b6dd716cc4f99d9f032d7b608005",
+      "view": "visible-closed-eye",
+      "originalCrop": "tests/visual/out/expanded-04-screening/unsplash-andrey-eye-visible-closed-eye-1x.png",
+      "originalCropSHA256": "3e41195ddebe38c1daebb5820df72485297a321aa30debdca854f5a212a24a01",
+      "sourceRectNative": [
+        600,
+        1600,
+        1100,
+        800
+      ],
+      "assessmentStatus": "CLOSED_DISTAL_STRUCTURES_PRESENT",
+      "assessment": "Closed upper-lash fan with several visible separated terminal silhouettes and many overlaps. Long lash appearance does not prove absence of mascara/extensions. Useful geometric closed-eye source; no general naturalness certification.",
+      "faceMeshStatus": "UNTESTED",
+      "analysisStatus": "UNSEEN_BEFORE_FREEZE",
+      "artificialLashOrMakeupHistory": "UNVERIFIED_FROM_PHOTOGRAPH",
+      "labels": [
+        {
+          "id": "EAK-1",
+          "tipNative": [
+            155,
+            512
+          ],
+          "tipUncertaintyNativePx": 6,
+          "localProximalNativePoints": [
+            [
+              164,
+              502
+            ],
+            [
+              174,
+              491
+            ],
+            [
+              184,
+              480
+            ]
+          ],
+          "proximalPointUncertaintyNativePx": 3,
+          "outwardAngleIntervalDegrees": [
+            105,
+            160
+          ],
+          "structureKind": "visible-strand",
+          "status": "PROVISIONAL_VISIBLE_ENDPOINT_AND_LOCAL_AXIS",
+          "biologicalRoot": "not independently resolved; merged/overlapped near lid",
+          "individualHairIdentity": "uncertain if coated or bundled",
+          "notes": "Thin lower-left projected distal end from the closed upper-lash fan. Nearby crossed hairs make root identity ambiguous.",
+          "tipSourceNative": [
+            755,
+            2112
+          ]
+        },
+        {
+          "id": "EAK-2",
+          "tipNative": [
+            507,
+            655
+          ],
+          "tipUncertaintyNativePx": 6,
+          "localProximalNativePoints": [
+            [
+              506,
+              641
+            ],
+            [
+              507,
+              627
+            ],
+            [
+              509,
+              613
+            ]
+          ],
+          "proximalPointUncertaintyNativePx": 3,
+          "outwardAngleIntervalDegrees": [
+            65,
+            115
+          ],
+          "structureKind": "visible-strand-or-small-bundle",
+          "status": "PROVISIONAL_VISIBLE_ENDPOINT_AND_LOCAL_AXIS",
+          "biologicalRoot": "not independently resolved; merged/overlapped near lid",
+          "individualHairIdentity": "uncertain if coated or bundled",
+          "notes": "Long narrow downward terminal taper; neighboring bundled strands make the exact single-hair tip uncertain.",
+          "tipSourceNative": [
+            1107,
+            2255
+          ]
+        },
+        {
+          "id": "EAK-3",
+          "tipNative": [
+            780,
+            657
+          ],
+          "tipUncertaintyNativePx": 7,
+          "localProximalNativePoints": [
+            [
+              770,
+              646
+            ],
+            [
+              760,
+              636
+            ],
+            [
+              750,
+              626
+            ]
+          ],
+          "proximalPointUncertaintyNativePx": 3,
+          "outwardAngleIntervalDegrees": [
+            20,
+            70
+          ],
+          "structureKind": "visible-strand-or-small-bundle",
+          "status": "PROVISIONAL_VISIBLE_ENDPOINT_AND_LOCAL_AXIS",
+          "biologicalRoot": "not independently resolved; merged/overlapped near lid",
+          "individualHairIdentity": "uncertain if coated or bundled",
+          "notes": "Separated diagonal distal silhouette; faint continuation and overlapping fan widen positional uncertainty.",
+          "tipSourceNative": [
+            1380,
+            2257
+          ]
+        }
+      ]
+    }
+  ],
+  "freezePolicy": "Do not revise these labels after detector exposure. Record subsequent disagreements or corrections separately."
+}

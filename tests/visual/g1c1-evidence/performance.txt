@@ -1,0 +1,19 @@
+
+> auragram@0.5.1 test:e2e
+> node scripts/run-e2e.cjs --project=chromium-performance --no-deps --grep L20 performance:
+
+
+Running 1 test using 1 worker
+
+node.exe : (node:33516) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+строка:1 знак:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:33516) Wa... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+L20 perf {"base":{"median":75.10000000149012,"samples":[70.5,73.5,75.10000000149012,80.70000000298023,87.39999999850988],"w":864,"h":1080,"analyseMs":0,"enhanceMs":0,"ran":""},"lashed":{"median":87.60000000149012,"samples":[82.09999999776483,83.70000000298023,87.60000000149012,87.69999999925494,88.69999999925494],"w":864,"h":1080,"analyseMs":22.5,"enhanceMs":24.5,"ran":"definition,density,lashes"},"full":{"median":88.30000000074506,"samples":[82.69999999925494,85.19999999925494,88.30000000074506,93.19999999925494,97.10000000149012],"w":864,"h":1080,"analyseMs":22.5,"enhanceMs":25.100000001490116,"ran":"definition,density,lashes"},"ua":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36","hw":16}
+  ✓  1 [chromium-performance] › tests\e2e-lashes.spec.js:686:1 › L20 performance: lash warm cost within budget (3.2s)
+
+  1 passed (4.7s)

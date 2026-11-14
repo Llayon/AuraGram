@@ -1,0 +1,5 @@
+*.json -text
+*.gz -text
+*.csv -text
+assets/*.svg binary
+*.txt -whitespace

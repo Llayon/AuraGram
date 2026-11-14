@@ -1,0 +1,50 @@
+{
+  "baseline": "b75bbb254b06113cc09fad83169b8ed9cdc5530a",
+  "meaning": "Both original-only source assessments frozen before any inference on these5photos. Manual coordinates and labels must never enter geometry/analysis jobs. Only posthoc comparison. No certified biological/root/makeup groundtruth.",
+  "inputs": {
+    "tests/visual/lash-freeend-sources.json": "efe5520433428e36031458cb5afb6c5a85a28354d8f74f82d2b75213c0c550de",
+    "tests/visual/lash-freeend-crops.json": "8551f04da88b0bb8da535fe491343c72638dbb1cb79009e3f57a7c7366197249",
+    "tests/visual/lash-freeend-primary-screen.json": "f5c7af47760000f555f9a633579544ff536cfaf423e22aa21379006a79164e17",
+    "tests/visual/lash-freeend-independent-labels.json": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800",
+    "tests/visual/out/freeend-01-download/manifest.json": "5a04532e892865ca44e92cb0be2de4ef8644182ea60612ee178281cfd8479116",
+    "tests/visual/out/freeend-03-native/manifest.json": "c8315d2448308ed4b0e5111c67b9c3f0cb8f45118a6bfabab4e60e98d87858ed",
+    "tests/visual/out/freeend-04-additional/manifest.json": "15fe2c663f39b5fc14ec5d8ab229b324275fe7e6b99746b2a4e394d3a0b2ea71"
+  },
+  "sources": [
+    {
+      "file": "commons-radic-eyelashes.jpg",
+      "width": 3688,
+      "height": 2459,
+      "sha256": "5cc74becc6992830b32e1ba49edff8217ecdad5b3b90d5888cf81e5c193c8e69",
+      "bytes": 5772776
+    },
+    {
+      "file": "pexels-22032198.jpg",
+      "width": 5660,
+      "height": 3698,
+      "sha256": "0bc6265b86e5354f3b13db63ea67b11a832206a4d924b81cb57dea7c11ebaaa1",
+      "bytes": 1440415
+    },
+    {
+      "file": "pexels-31215869.jpg",
+      "width": 3024,
+      "height": 4032,
+      "sha256": "cbed3fd127d9b7998772ffd95af6073f35ce465d7aefc5d1b81451635712a197",
+      "bytes": 1292773
+    },
+    {
+      "file": "pexels-32526448.jpg",
+      "width": 4240,
+      "height": 2384,
+      "sha256": "cc97727d9f549a1bf1354b5ae016c3472ecadd26f16bfe23ba329435d29eb0e3",
+      "bytes": 878570
+    },
+    {
+      "file": "pexels-4611686.jpg",
+      "width": 6240,
+      "height": 4160,
+      "sha256": "85ffae39a492e774c76080065e11fa4cb3823a8b3539fd2daf6a38847f159364",
+      "bytes": 4283372
+    }
+  ]
+}

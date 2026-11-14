@@ -1,0 +1,6 @@
+*.json -text
+*.csv -text
+*.html -text
+*.gz -text
+*.png -text
+logs/*.txt -text -whitespace

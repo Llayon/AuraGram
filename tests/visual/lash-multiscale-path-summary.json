@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-14",
+  "kind": "separate-coarse-observation-and-local-native-refinement",
+  "terminalApproval": false,
+  "recognitionAcceptance": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "side": "left",
+      "deterministic": true,
+      "originalSeedsAndBaselineTipsUnchanged": true,
+      "seeds": 33,
+      "statusCounts": {
+        "ambiguous": 33
+      },
+      "reasons": {
+        "unobserved-coarse-link": 22,
+        "native-cell-multiple-valleys": 4,
+        "native-cell-one-sided-edge": 3,
+        "multiple-coarse-continuations": 4
+      },
+      "coarseConnected": 0,
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 0,
+      "baselineIdentical": true,
+      "coarseConnectedBroad": 0,
+      "coarseConnectedWithLocalPath": 0,
+      "nativeLocalRecords": 26,
+      "maxNativeLocalArc": 2.504786774061426,
+      "nativeLocalReasons": {
+        "bootstrap-search-boundary": 12,
+        "unconfirmed-dense-link": 4,
+        "bootstrap-one-sided-edge": 8,
+        "bootstrap-dense-link": 1,
+        "bootstrap-multiple-valleys": 1
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/multiscale-native-real-02/chromium.json",
+          "sha256": "6efbbbea578631725068c0648fbc77fe5e07f65a9d183def93eb9159e0d872d4"
+        },
+        {
+          "file": "tests/visual/out/multiscale-native-real-03/chromium.json",
+          "sha256": "267dbadbbf7b7cc4488dc83264ea0231a9b6c1ffa44c1d94ea41f37802c9830f"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "side": "right",
+      "deterministic": true,
+      "originalSeedsAndBaselineTipsUnchanged": true,
+      "seeds": 144,
+      "statusCounts": {
+        "ambiguous": 126,
+        "censored": 18
+      },
+      "reasons": {
+        "multiple-coarse-continuations": 47,
+        "unobserved-coarse-link": 23,
+        "native-cell-multiple-valleys": 3,
+        "native-cell-multiple-supported-cell-lobes": 5,
+        "native-cell-one-sided-edge": 8,
+        "native-cell-search-boundary": 11,
+        "coarse-connection-native-ownership-unverified": 31,
+        "seed-budget": 16
+      },
+      "coarseConnected": 37,
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 7,
+      "baselineIdentical": true,
+      "coarseConnectedBroad": 37,
+      "coarseConnectedWithLocalPath": 23,
+      "nativeLocalRecords": 101,
+      "maxNativeLocalArc": 35.87688666459851,
+      "nativeLocalReasons": {
+        "bootstrap-search-boundary": 25,
+        "unconfirmed-dense-link": 24,
+        "bootstrap-one-sided-edge": 11,
+        "one-sided-edge": 7,
+        "bootstrap-weak-valley": 6,
+        "turn-bound": 16,
+        "bootstrap-dense-link": 2,
+        "search-boundary": 3,
+        "multiple-valleys": 3,
+        "bootstrap-multiple-valleys": 2,
+        "arc-budget": 2
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/multiscale-native-real-02/chromium.json",
+          "sha256": "6efbbbea578631725068c0648fbc77fe5e07f65a9d183def93eb9159e0d872d4"
+        },
+        {
+          "file": "tests/visual/out/multiscale-native-real-03/chromium.json",
+          "sha256": "267dbadbbf7b7cc4488dc83264ea0231a9b6c1ffa44c1d94ea41f37802c9830f"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "left",
+      "deterministic": true,
+      "originalSeedsAndBaselineTipsUnchanged": true,
+      "seeds": 70,
+      "statusCounts": {
+        "ambiguous": 70
+      },
+      "reasons": {
+        "unobserved-coarse-link": 54,
+        "native-cell-one-sided-edge": 6,
+        "native-cell-multiple-valleys": 5,
+        "multiple-coarse-continuations": 5
+      },
+      "coarseConnected": 0,
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 0,
+      "baselineIdentical": true,
+      "coarseConnectedBroad": 0,
+      "coarseConnectedWithLocalPath": 0,
+      "nativeLocalRecords": 59,
+      "maxNativeLocalArc": 8.812967110776224,
+      "nativeLocalReasons": {
+        "bootstrap-search-boundary": 17,
+        "bootstrap-one-sided-edge": 10,
+        "one-sided-edge": 5,
+        "bootstrap-dense-link": 7,
+        "bootstrap-weak-valley": 6,
+        "unconfirmed-dense-link": 8,
+        "bootstrap-multiple-valleys": 3,
+        "turn-bound": 1,
+        "search-boundary": 2
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/multiscale-native-real-02/webkit.json",
+          "sha256": "35c68334e96917bf751636b58614a4be487e7de3d98a15c0b716a6687112dbd3"
+        },
+        {
+          "file": "tests/visual/out/multiscale-native-real-03/webkit.json",
+          "sha256": "4bed6ba0c52b7f0a89d948b22bc48e44ac4fc4b5730a75f08068ec3120cc30cc"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "right",
+      "deterministic": true,
+      "originalSeedsAndBaselineTipsUnchanged": true,
+      "seeds": 236,
+      "statusCounts": {
+        "ambiguous": 128,
+        "censored": 108
+      },
+      "reasons": {
+        "multiple-coarse-continuations": 24,
+        "unobserved-coarse-link": 61,
+        "native-cell-multiple-valleys": 11,
+        "native-cell-one-sided-edge": 8,
+        "coarse-connection-native-ownership-unverified": 21,
+        "native-cell-multiple-supported-cell-lobes": 2,
+        "native-cell-search-boundary": 1,
+        "seed-budget": 108
+      },
+      "coarseConnected": 23,
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 9,
+      "baselineIdentical": true,
+      "coarseConnectedBroad": 23,
+      "coarseConnectedWithLocalPath": 13,
+      "nativeLocalRecords": 106,
+      "maxNativeLocalArc": 33.799211879796,
+      "nativeLocalReasons": {
+        "unconfirmed-dense-link": 33,
+        "turn-bound": 10,
+        "bootstrap-search-boundary": 39,
+        "bootstrap-dense-link": 5,
+        "bootstrap-weak-valley": 2,
+        "bootstrap-one-sided-edge": 10,
+        "search-boundary": 3,
+        "multiple-valleys": 2,
+        "bootstrap-multiple-valleys": 2
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/multiscale-native-real-02/webkit.json",
+          "sha256": "35c68334e96917bf751636b58614a4be487e7de3d98a15c0b716a6687112dbd3"
+        },
+        {
+          "file": "tests/visual/out/multiscale-native-real-03/webkit.json",
+          "sha256": "4bed6ba0c52b7f0a89d948b22bc48e44ac4fc4b5730a75f08068ec3120cc30cc"
+        }
+      ]
+    }
+  ],
+  "decision": "Representation/budget mismatch corrected, broad-root ownership unresolved; LENGTH HOLD"
+}

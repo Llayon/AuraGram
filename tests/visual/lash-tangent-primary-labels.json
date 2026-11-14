@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "method": "Original-only local distal visual measurements in this pass, with historical exposure to detector results and previous annotations. Provisional measurements, not certified ground truth. Points do not identify biological roots.",
+  "coordinates": "4x original crop PNG pixels, proximal-to-tip order. Angle uses image y-down and degrees atan2(dy,dx); negative angles point up.",
+  "intervalMeaning": "Conservative visual direction interval over the stated native support window, not statistical confidence. No claim about the unresolved mathematical tangent exactly at the endpoint.",
+  "eyes": [
+    {"file":"natural.jpg","side":"left","strands":[
+      {"id":"PL1","tip4x":[539,143],"tipUncertaintySourcePx":2,"localPoints4x":[[536,170],[540,160],[541,152],[539,143]],"supportSourcePx":[2,7],"angleIntervalDegrees":[-125,-70],"status":"curved-blurred-endpoint","notes":"Upper dark tip is rounded/blurred; longer shaft rises to the right, terminal hook may turn left. Do not treat longer chord as endpoint ground truth."},
+      {"id":"PL2","tip4x":[502,158],"tipUncertaintySourcePx":2,"localPoints4x":[[484,184],[493,171],[502,158]],"supportSourcePx":[3,8],"angleIntervalDegrees":[-73,-40],"status":"partial-resolvable"},
+      {"id":"PL3","tip4x":[463,174],"tipUncertaintySourcePx":2,"localPoints4x":[[449,194],[456,184],[463,174]],"supportSourcePx":[2,6],"angleIntervalDegrees":[-77,-37],"status":"partial-resolvable"}
+    ]},
+    {"file":"natural.jpg","side":"right","strands":[
+      {"id":"PR1","tip4x":[406,131],"tipUncertaintySourcePx":1.5,"localPoints4x":[[413,160],[410,146],[406,131]],"supportSourcePx":[3,8],"angleIntervalDegrees":[-116,-92],"status":"partial-resolvable"},
+      {"id":"PR2","tip4x":[460,151],"tipUncertaintySourcePx":2,"localPoints4x":[[460,180],[460,165],[460,151]],"supportSourcePx":[3,8],"angleIntervalDegrees":[-104,-76],"status":"partial-resolvable"},
+      {"id":"PR3","tip4x":[352,165],"tipUncertaintySourcePx":2,"localPoints4x":[[361,192],[356,178],[352,165]],"supportSourcePx":[3,7],"angleIntervalDegrees":[-123,-94],"status":"partial-resolvable"}
+    ]}
+  ]
+}

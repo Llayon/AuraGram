@@ -95,3 +95,140 @@ WebKit mobile: версия файлов совпадает, контраст pr
 - Проверена фактически [опубликованная 0.5.1](https://llayon.github.io/AuraGram/?v=0.5.1): HTML/runtime совпадают; PNG, контраст 80/80, история, стили и сохранённая сессия работают в Chromium и WebKit.
 - Отдельный аудит каждого ползунка 0/25/50/100 и PNG повторён на опубликованной версии. Числа изменённых пикселей совпали с локальным аудитом; вне ROI и в защитных контрольных точках разница равна нулю. Нарушений ограничения густоты не обнаружено.
 - Экспорт 900×1125: Chromium 1 486 256 байт; WebKit 927 354 байта. Ошибок JavaScript и отправок фото на сервер нет.
+
+
+## G1c.1 follow-up - HOLD
+
+Native ROI / structure-tracing experiment is on `feat/g1c1-lash-fidelity`. It is not a release or a closed gauntlet. See [G1C1_REPORT.md](G1C1_REPORT.md) for artifacts, independent critique and red gates.
+
+Recovery results: [G1C1_RECOVERY_REPORT.md](G1C1_RECOVERY_REPORT.md). Density efficacy and crossing-hair safety improved; Length visual usefulness remains HOLD. PR#5 stays Draft and production0.5.1 is unchanged.
+
+Boundary-context localization follow-up: [G1C1_LOCALIZATION_REPORT.md](G1C1_LOCALIZATION_REPORT.md). Provisional original-only annotations, independent critic, both-engine frozen controls and active performance are preserved. Selected endpoint localization improves; useful Length and original F1 remain HOLD. No production publication.
+
+Local tangent step: [G1C1_TANGENT_REPORT.md](G1C1_TANGENT_REPORT.md). Original-only short-window annotation cannot certify the left exact terminal tangent. Offline quadratic correction rejected; product unchanged, PR#5 Draft/HOLD. Next: source-luminance center refinement at fixed tips and renderer.
+
+Native source profiles: [G1C1_SOURCE_CENTERS_REPORT.md](G1C1_SOURCE_CENTERS_REPORT.md). Fixed/free-anchor sensitivity explains short-window bias; no accurate unique terminal tangent established. Product unchanged; Draft/HOLD. Independent sharper real-photo endpoint/axis evidence is needed before adopting a continuation fit.
+
+Real-photo expansion: [G1C1_EXPANDED_DATASET_REPORT.md](G1C1_EXPANDED_DATASET_REPORT.md). Eight new sources and independently frozen screening add challenge coverage;4ready/4no_face. Active natural Length still unverified. A new closed-white-liner abstention gate fails Chromium and passes WebKit; preserve it and study crossing-guard perturbations next. Draft/HOLD; production unchanged.
+
+Crossing stability: [G1C1_CROSSING_REPORT.md](G1C1_CROSSING_REPORT.md). V6 fixes the closed-white-liner abstention gate with a conservative Length-only observed-crossing veto. Density/Definition remain exact; possible false vetoes in geometry-jitter controls are retained and material. Original F1 failures/useful Length remain HOLD. No production release.
+
+Candidate-specific proximal continuation: [G1C1_ROOT_CONTINUATION_REPORT.md](G1C1_ROOT_CONTINUATION_REPORT.md). Offline Chromium/WebKit test rejected: all 70 repeated candidate observations unresolved, including closed/hair negatives. Last connected root-support pixels do not certify thin-fiber direction. Product v6 unchanged; next evidence must validate thin-ridge samples before merging with the lid and preserve negative cases while recovering a confirmed positive. Draft/HOLD.
+
+Original-only positives and endpoint gate: [G1C1_POSITIVE_ENDPOINT_REPORT.md](G1C1_POSITIVE_ENDPOINT_REPORT.md). Three new licensed sources;10 independently frozen provisional coated-structure labels, no bare/light certification. C7ready/W6ready+1no_face including controls. Preterminal dark additions confirmed. Fixed old-set endpoint filtering partially suppresses artifacts but loses an old supported candidate; full rerun opens new seeds. Neither adopted. Product v6, F1 assertions and cap224 unchanged, Draft/HOLD. Next inspect fixed named residual artifact and PI729R1/R2 against native and downsampled profiles.
+
+Three fixed endpoint cases: [G1C1_ENDPOINT_CASE_REPORT.md](G1C1_ENDPOINT_CASE_REPORT.md). Old C104-right-old16 and PI729R1/R2 stay fixed; native/coarse operators show direction-dependent continuation and unresolved bilateral support at a crease junction. Native RGBA equal across engines does not make coarse response identical. Anchor-offset sensitivity is not pure grid phase. No product adoption; next establish native pre-tip centers and same-structure axis support without new seeds or favorable phase selection. Draft/HOLD.
+
+Native pre-tip centers: [G1C1_NATIVE_SHAFT_REPORT.md](G1C1_NATIVE_SHAFT_REPORT.md). Image-only bounded transverse centers and unanchored TLS measure R1 body direction and limited C104 support; R2 is window-dependent and fails dense contrast probes. Every available automatic axis tested forward: C104/R1 continue, R2 weak. Sparse/dense support is not endpoint/biological ownership proof;0→2association remains untested. Five analytic checks added to npm test; runtime, old assertions and cap unchanged. Next bounded endpoint/continuing/UNKNOWN experiment, Draft/HOLD.
+
+
+## G1c.1 fixed-anchor association diagnostic (HOLD)
+
+- [x] Continue same three frozen identities/all automatic axes; no manual direction, new candidate, recentering or product rendering.
+- [x] Measure anchor-to-first-center sampled association and forward 0?12 native px; preserve losses/reentries and both decoders.
+- [x] Independent source-pixel critic: C104 lateral departure likely; R1/R2 crease junction ambiguity. No endpoint approval or runtime adoption.
+- [ ] Image-supported endpoint localization, useful natural Length, mandatory efficacy failures and full release gates remain unresolved.
+
+See [anchor-association report](G1C1_ANCHOR_ASSOCIATION_REPORT.md) and retained gallery. Production unchanged.
+
+
+## G1c.1 loss-neighborhood transverse profiles (HOLD)
+
+- [x] Preserve fixed identities/all axes and measure loss +/-1 native px without manual direction or product tip moves.
+- [x] C104 displaced support explains fixed-axis loss; R1/R2 retain edge/junction ambiguity. Preserve all 140 profiles and36figures.
+- [x] Independent critic: margin counts use different distance neighborhoods and are correlated; no endpoint or same-fiber approval.
+- [ ] Useful natural endpoint localization, mandatory Length efficacy and release gates remain unresolved.
+
+See [loss-profile report](G1C1_LOSS_PROFILES_REPORT.md). Runtime/production unchanged.
+
+
+## G1c.1 bounded curve following (prototype rejected, HOLD)
+
+- [x] Same fixed identities/all axes; bounded local centers and dense links; no product tip move.
+- [x] Preserve36real configurations,14initial analytic controls and192width/phase/sampling controls.
+- [x] Independent critic identifies initialization mismatch, short first-fit support and half-pixel plateau; no endpoint/one-fiber approval.
+- [x] Preserve initial L20 +17.1ms FAIL and isolated repeat PASS; no stable-performance claim.
+- [ ] Subpixel center/initialization consistency, useful natural Length, mandatory efficacy and release gates remain unresolved.
+
+See [curve report](G1C1_CURVE_REPORT.md). Runtime/production unchanged; no threshold relaxation.
+
+
+## G1c.1 subpixel center and measured initialization (HOLD)
+
+- [x] Bound observed center and bootstrap orientation; preserve .5search/15subsequent-turn/12arc budgets.
+- [x] Independent critic reproduces disconnected-neighbor bias; V2restricts mass to connected contrast component and adds regression.
+- [x] Retain all36real configurations, V0/V1/V2records and unchanged14/192analytic controls; budget reach36/192 to184/192 is not endpoint approval.
+- [x] 159unitPASS; mandatory Length failures remain explicit; no existing assertions/goldens weakened.
+- [ ] Same-fiber/free-end/natural-Length, held-out coverage and full release gates remain unresolved.
+
+See [subpixel report](G1C1_SUBPIXEL_REPORT.md). Diagnostic candidate only; runtime/production unchanged.
+
+
+## G1c.1 terminal/ownership observation audit (HOLD)
+
+- [x] Preserve all36original12pxrecords exactly and compare with separate36px observation audit, not product Length.
+- [x] C104continues35.75px with forward support; distinguish censored off-axis runs from complete runs and avoid branch/end claims.
+- [x] Independent critic: endpoint/ownership not confirmed; legend overlap fixed and original views retained.
+- [x] 162unitPASS; original Length failures remain; existing real unresolved-source negative product guards pass separately.
+- [ ] Prototype held-out positive/free-end and independent negative ownership performance NOTCOVERED; naturalness/release gates remain open.
+
+See [terminal report](G1C1_TERMINAL_REPORT.md). Runtime/production unchanged.
+
+## G1c.1 source-frozen free-ending dataset audit (HOLD)
+
+- [x] Retain seven new licensed source JPEGs, original-only independent annotations frozen before inference, and sequential-selection disclosure.
+- [x] Run real FaceMesh/native224/320/384 analysis in both engines; four sources remain no_face without fabricated geometry.
+- [x] Preserve production/recovery portraits, native100/200/400% crops, differences, response/confidence maps, paths and actual extension diagnostics.
+- [x] Independent critic identifies projected-down upper endings outside current band; do not reinterpret them as absent hairs or weaken protected regions.
+- [x] Verify source/snapshot/production bytes before/after NEW12 replays and retain initial07 evidence; runtime unchanged.
+- [x] 162unitPASS;166browserPASS/2originalLengthFAIL/3dependentNOTRUN; new real macro abstention passes Chromium/WebKit; isolated active benchmark3PASS, delta+3.9ms.
+- [ ] Useful natural Length, applicable positive/free-end coverage, physical devices and mandatory release gates remain open.
+
+See [free-ending dataset report](G1C1_FREEEND_DATASET_REPORT.md). PR#5 remains Draft; no partial release.
+
+## G1c.1 closed-eye geometry/domain audit (HOLD)
+
+- [x] Freeze32eyes/16engine-source cases and reuse original-only labels without seeding analysis.
+- [x] Measure opening clearance, signed upper distance, axial membership, aperture and fixed below-arc probes; retain all cutoffs and failures.
+- [x] Replay native v6 crossing paths/flags/grids exactly in Chromium/WebKit without MediaPipe inference.
+- [x] Critic/fixer: reject retracing/touching contours; preserve initial audit/helper and identical real-case measurements.
+- [x] 171unitPASS, original166browserPASS/2LengthFAIL/3dependentNOTRUN; geometry is not a semantic upper-lash/skin mask.
+- [ ] Actual image-only downward upper root/tip evidence, natural effect and original efficacy release gates remain open.
+
+See [domain report](G1C1_DOMAIN_REPORT.md). No source geometry, product guards, renderer, model, version or production change.
+
+## G1c.1 image-only downward connected graph (REJECT ADOPTION / HOLD)
+
+- [x] Freeze parameters before new photo runs; automatic observed upper-arc seeds, no manual endpoints/directions.
+- [x] Implement bounded directional ridge graph, measured root-zone attachment/TLS/width, unknown/border/protected/forward guards.
+- [x] Critic/fixer addresses raster redundancy/root-zone samples and support-boundary localization; preserve V1 and failed V2 analytic gate.
+- [x] V3 analytic8/8 tapered phases qualify, but all real hypotheses abstain:632/773 V1 and532/655 V3 C/W; no naturalness or same-fiber approval.
+- [x] Local217 responses survive while directed root connection fails; observed-only loose diagnostic and mask subset checks isolate additional thinning losses.
+- [x] 181unitPASS;166browserPASS/2originalLengthFAIL/3dependentNOTRUN; active old-engine perf3PASS. Existing assertions/goldens unchanged.
+- [ ] Useful connected real endings, natural effect and mandatory release gates remain unresolved. Do not adopt prototype or relax guards.
+
+See [downward report](G1C1_DOWNWARD_REPORT.md). Product source/version/production unchanged.
+
+## G1c.1 exact graph-break/gate census (HOLD)
+
+- [x] Freeze read-only instrumentation protocol and recover both graph versions from archived browser Float32 inputs.
+- [x]64original/instrumented replays identical; strict BFS masks/parents exact,34,458frontier predicates checked.
+- [x] Retain simultaneous pixel/edge gates, all unreached-subset components and deterministic diagnostic routes; first failure is not a unique physical cut.
+- [x] Locate21745/90degree gate witnesses and first removed reference-route pixels; raw/pruned reachsets equal on all eyes.
+- [x] Correct no-face availability bookkeeping and automatic-NMS/zoom display; preserve initial outputs/tools/figures.
+- [x]188unitPASS;166browserPASS/2oldLengthFAIL/3dependentNOTRUN; active old-engine performance3PASS+3.8ms and packaged Chromium/WebKit smokePASS.
+- [x] Preserve first pushed build187PASS/1FAIL; fix metadata unit's CRLF/LF dependency with identical assertions and frozen records. Windows188PASS/LF dependency fixture7PASS; new GitHub build requires separate verification, never inferred.
+- [ ] Image-supported same-strand continuity at these transitions, actual free endings and useful natural Length remain unproven. No threshold relaxation/adoption.
+
+See [break census report](G1C1_BREAK_CENSUS_REPORT.md). Product/prototype source, geometry, guards, models and version unchanged; PR#5 Draft.
+
+## G1c.1 bounded full-direction-spectrum experiment (HOLD)
+
+- [x] Freeze the existing nodes, automatic roots, numeric floors and source references before measuring all eight directional responses.
+- [x] Retain state-consistent paths and separate pairwise, four-distinct-pixel and root-state evidence; do not teleport direction within a pixel.
+- [x] Replay all 64 eye records; verify 167,932 winning-edge predicates and original/expanded/observed-loose reach containment.
+- [x] One Chromium reference route restored, but alternative witnesses and hair/liner control expansion prevent strand ownership or naturalness approval.
+- [x] Independent code critic agrees: REJECT ADOPTION; renderer admission condition not met. No new Length or effect difference map.
+- [ ] Mandatory Length efficacy, credible free endings and natural visual benefit remain unresolved. PR#5 Draft; no merge/deploy.
+
+See [spectrum report](G1C1_SPECTRUM_REPORT.md). This is an expanded offline hypothesis space, not a product safety-equivalent refactor.

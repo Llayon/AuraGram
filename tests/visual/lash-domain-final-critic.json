@@ -1,0 +1,125 @@
+{
+  "schema": "auragram-independent-domain-final-critic-v1",
+  "releaseVerdict": "LENGTH HOLD; G1c.1 NOT CLOSED",
+  "scope": "Independent read-only verification of final domain pack, stored logs, report and code changes. Local validator/math/file hashes executed, stored screenshot viewed; no browser, model inference, new source or annotation edit.",
+  "packReferences": [
+    {
+      "path": "tests/visual/domain-evidence/protocol.json",
+      "sha256": "e0207ae13fdb0072edb52705f3a77c50c81352cd600c0a8f9032d662e40719df"
+    },
+    {
+      "path": "tests/visual/domain-evidence/audit.json.gz",
+      "sha256": "34cdc351dd61a27c13264f842a0c426820ed231dc1ac11119ac6051ff0620f4d"
+    },
+    {
+      "path": "tests/visual/domain-evidence/initial-audit.json.gz",
+      "sha256": "017d1a8165460d1bd5b1d44da420a510992c6405a6be43a853ee019fa668505c"
+    },
+    {
+      "path": "tests/visual/domain-evidence/initial-helper.mjs.gz",
+      "sha256": "18739be953de19d172825f1ad3cc65a07962093920f4fa2e84714cfa3f778b18"
+    },
+    {
+      "path": "tests/visual/domain-evidence/images.json",
+      "sha256": "7d936055d417f493da014b8440766708a8f6dd107d73981103f82785484a651b"
+    },
+    {
+      "path": "tests/visual/domain-evidence/tools.json.gz",
+      "sha256": "edf6e0b3890b15d8156654cd71c4ca4b2284e41d9b25f67af3d480857111f1bd"
+    },
+    {
+      "path": "tests/visual/domain-evidence/overlays-chromium.json.gz",
+      "sha256": "0e5e28d93bf0bf3b765d42fde77ab11f44102bf1779f58da65ff54ae296c1a62"
+    },
+    {
+      "path": "tests/visual/domain-evidence/overlays-webkit.json.gz",
+      "sha256": "445a917af241b391ce946c755bb03118e144237dfaed0a2fc5536bda6cf5e966"
+    },
+    {
+      "path": "tests/visual/domain-evidence/index.html",
+      "sha256": "8218ee8923561d82425e57bd13cd663abea20c40cea5e4cd40efcbffae7b9681"
+    },
+    {
+      "path": "tests/visual/domain-evidence/validation.json",
+      "sha256": "b60b48aa61dce6cf96e906ff092f3d3bd58e23885cb450057884c22ae4c2cd2b"
+    }
+  ],
+  "priorIndependentCritics": [
+    {
+      "path": "tests/visual/lash-domain-protocol-critic.json",
+      "sha256": "d293ceca3dd43ea9a40af6cb17f2bec18c74b640d9af0f1c5938685c6f262de0"
+    },
+    {
+      "path": "tests/visual/lash-domain-visual-critic.json",
+      "sha256": "250f1619a88bb22edd4015b1b0570d0bbfbb86a03a3334855be0d466c886bda0"
+    }
+  ],
+  "verification": {
+    "validator": "node tests/visual/validate-lash-domain.cjs PASS independently rerun: protocol/source/tool hashes,32eyes,16 exact recorded actual native crossing replays, initial/fixed preservation.",
+    "imageReferences": 112,
+    "imageSHAResults": "All112 raw PNG SHA checks PASS, zero mismatch.",
+    "galleryLocalLinks": 135,
+    "missingLinks": 0,
+    "actualNativeReplays": "Both archived engine manifests8cases each,16total; paths/flags/224 working grids match recorded actual analyses, no model requests. This is crossing replay, not new groundtruth detection accuracy.",
+    "initialVsFixed": "Initial01/helper preserved; fixed03 metrics deep equivalent stripping only new selfContact/helperSHA. Real32eye measurements unchanged. Collinear retracing synthetic case now rejected; ninth test preserves exact counterexample coordinates.",
+    "galleryScreenshot": {
+      "path": "tests/visual/out/domain-gallery-400.png",
+      "sha256": "4427e0a5041b9cd75be984b8530bbbaa905c4059f97f3986875e2aac1bc8c1b0",
+      "visualJudgment": "Readable legends/caveats and actual-source crops. 169native-pixel eye displayed676CSSpx at400%; enlargement creates no new detail. Coarse96-column maps explicitly diagnostic."
+    }
+  },
+  "codeAndTests": {
+    "productAndExistingGates": "git diff HEAD for src, existing E2E/lash unit tests, golden paths and package-lock empty at review. Protocol/module hashes validated against frozen stage. No existing test threshold or source geometry changed.",
+    "packageJson": "Only npm test command adds tests/visual/lash-domain.test.mjs. Version0.5.1 and dependencies unchanged. Nine new geometry tests exercise protected polygon/clearance, native rigid/scale covariance, corners, degeneracy/crossing and preserved collinear retracing defect. They do not establish photographic naturalness.",
+    "finalUnitLog": "171PASS,0FAIL,0SKIPPED,0CANCELLED. Earlier170PASS log retained before ninth regression.",
+    "fullBrowserLog": "166PASS/2originalLengthF1FAIL/3dependentNOTRUN. Mandatory suite remains RED; separate performance success does not close dependent NOTRUN.",
+    "isolatedPerformanceLog": "3PASS on unchanged v6. Active natural720x1080 D35/L100/Def25:14.7ms off/18.9ms active,delta+4.2ms; actual LengthRGB227/DensityRGB206,2tips, cache/analysis timestamp stable.",
+    "coldAnalysisMs": 140.2,
+    "activeExport": {
+      "size": [
+        2400,
+        3600
+      ],
+      "renderMs": 196.8,
+      "encodeMs": 323.8,
+      "buttonToBlobMs": 586.3
+    },
+    "buildPackageSiteLogs": "Completed success logs inspected: build UI resources prepared, static dist prepared, packaged Chromium native and WebKit software real face/retouch/PNG smoke passed. Logs decoded as their preserved UTF16 bytes; no browser rerun by critic."
+  },
+  "visualAndInferenceVerdict": {
+    "unchanged": "Actual C/W native visual critique remains applicable and archived; no new effect was rendered in this domain audit.",
+    "217": "Provisional upper endings project onto skin below canonical arcs; depth.5 geometrically reaches their centers, depth.25 does not. This is domain inclusion only, not endpoint/root ownership or rendering permission.",
+    "whiteLiner712": "The same aperture/depth choices overlap unresolved thick-liner/merged-shaft/crossing regions,8C/11W observed paths. These are not certified false hairs or no-lash groundtruth.",
+    "hair": "Numerically valid polygon and broader probe can lie over external hair. Semantic skin/opening cannot be inferred from numerical validity.",
+    "325": "Frozen projected upper-ending centers remain inside protected predicted opening. Below-probe can include lower-lash rows; not intrinsically upper-lash-only.",
+    "policy": "Simple widening/scalar aperture cutoffs cannot establish a safe useful Length rule. Keep all current product guards and opening protection."
+  },
+  "reportReview": {
+    "path": "G1C1_DOMAIN_REPORT.md",
+    "reviewedSHA256": "f62ba2a9f68d703d1d22f38bbaa7fcca23ec820302ba2da9fa7c0c291bf5a71a",
+    "judgment": "Completed171unit/nine-tests and selfContact preservation corrections reflected. Full mandatory failures/NOTRUN, limited geometry semantics, sequential existing-data exposure and physical-device UNVERIFIED status stated accurately. No unsupported green CI, visual acceptance, calibrated classifier or semantic skin claim found.",
+    "nextExperiment": "Any future image-only projected-down ridge/trace hypothesis must remain separate/offline, with no manual seeds, product applicator change, confidence reduction or guard bypass. Native source structure/root/terminal evidence and retained white-liner/hair controls are still required."
+  },
+  "remainingRisks": [
+    "No useful natural Length established; original F1 remains0RGB difference in both mandatory engines.",
+    "Predicted opening is not semantic skin or guaranteed eyelid localization.",
+    "Aperture uses landmark-index projected gaps, not validated closure.",
+    "Probe membership is center-only; uncertainty clears opening but not every probe boundary.",
+    "Sparse labels/coated or merged structures do not certify individual biological lash ownership.",
+    "Physical iPhone/Android and new semantic closed-eye behavior remain unverified."
+  ],
+  "immutableReferences": [
+    {
+      "path": "tests/visual/lash-domain-protocol.json",
+      "sha256": "e0207ae13fdb0072edb52705f3a77c50c81352cd600c0a8f9032d662e40719df"
+    },
+    {
+      "path": "tests/visual/lash-freeend-independent-labels.json",
+      "sha256": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800"
+    },
+    {
+      "path": "tests/visual/lash-freeend2-independent-labels.json",
+      "sha256": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810"
+    }
+  ]
+}

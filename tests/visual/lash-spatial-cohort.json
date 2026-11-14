@@ -1,0 +1,147 @@
+{
+  "schema": "spatial-cohort-v1",
+  "status": "provisional-source-leads-not-qualified",
+  "date": "2026-11-13",
+  "license": "https://www.pexels.com/license/",
+  "policy": "No lash detector before independent annotations. Validation detector outputs remain sealed until algorithm freeze. Identity overlap review pending: do not treat provisional split as independent.",
+  "excluded": [
+    {
+      "id": "3763152",
+      "reason": "already used in lash-positive-sources.json"
+    }
+  ],
+  "sources": [
+    {
+      "id": "7298463",
+      "file": "pexels-7298463.jpg",
+      "page": "https://www.pexels.com/photo/man-s-face-in-close-up-7298463/",
+      "url": "https://images.pexels.com/photos/7298463/pexels-photo-7298463.jpeg?cs=srgb&fm=jpg",
+      "author": "Kindel Media",
+      "split": "development",
+      "role": "positive-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    },
+    {
+      "id": "11971337",
+      "file": "pexels-11971337.jpg",
+      "page": "https://www.pexels.com/photo/man-s-face-in-close-up-photography-11971337/",
+      "url": "https://images.pexels.com/photos/11971337/pexels-photo-11971337.jpeg?cs=srgb&fm=jpg",
+      "author": "Yusuf Celik",
+      "split": "development",
+      "role": "positive-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    },
+    {
+      "id": "2817080",
+      "file": "pexels-2817080.jpg",
+      "page": "https://www.pexels.com/photo/portrait-shot-of-a-woman-2817080/",
+      "url": "https://images.pexels.com/photos/2817080/pexels-photo-2817080.jpeg?cs=srgb&fm=jpg",
+      "author": null,
+      "split": "development",
+      "role": "positive-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    },
+    {
+      "id": "5253967",
+      "file": "pexels-5253967.jpg",
+      "page": "https://www.pexels.com/photo/stunning-woman-with-freckles-on-her-face-5253967/",
+      "url": "https://images.pexels.com/photos/5253967/pexels-photo-5253967.jpeg?cs=srgb&fm=jpg",
+      "author": null,
+      "split": "development",
+      "role": "positive-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    },
+    {
+      "id": "6705392",
+      "file": "pexels-6705392.jpg",
+      "page": "https://www.pexels.com/photo/a-woman-s-face-covered-with-hair-6705392/",
+      "url": "https://images.pexels.com/photos/6705392/pexels-photo-6705392.jpeg?cs=srgb&fm=jpg",
+      "author": null,
+      "split": "development",
+      "role": "hard-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    },
+    {
+      "id": "6896644",
+      "file": "pexels-6896644.jpg",
+      "page": "https://www.pexels.com/photo/woman-with-lashes-make-up-6896644/",
+      "url": "https://images.pexels.com/photos/6896644/pexels-photo-6896644.jpeg?cs=srgb&fm=jpg",
+      "author": "Alexander Krivitskiy",
+      "split": "development",
+      "role": "hard-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    },
+    {
+      "id": "14476546",
+      "file": "pexels-14476546.jpg",
+      "page": "https://www.pexels.com/photo/close-up-portrait-of-a-man-14476546/",
+      "url": "https://images.pexels.com/photos/14476546/pexels-photo-14476546.jpeg?cs=srgb&fm=jpg",
+      "author": "WeStarMoney Rec",
+      "split": "validation",
+      "role": "positive-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    },
+    {
+      "id": "20765765",
+      "file": "pexels-20765765.jpg",
+      "page": "https://www.pexels.com/photo/close-up-of-woman-face-and-eye-20765765/",
+      "url": "https://images.pexels.com/photos/20765765/pexels-photo-20765765.jpeg?cs=srgb&fm=jpg",
+      "author": "mehrab zahedbeigi",
+      "split": "validation",
+      "role": "positive-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    },
+    {
+      "id": "8058707",
+      "file": "pexels-8058707.jpg",
+      "page": "https://www.pexels.com/photo/a-woman-freckled-face-in-close-up-shot-8058707/",
+      "url": "https://images.pexels.com/photos/8058707/pexels-photo-8058707.jpeg?cs=srgb&fm=jpg",
+      "author": null,
+      "split": "validation",
+      "role": "positive-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    },
+    {
+      "id": "24916633",
+      "file": "pexels-24916633.jpg",
+      "page": "https://www.pexels.com/photo/freckles-on-woman-face-24916633/",
+      "url": "https://images.pexels.com/photos/24916633/pexels-photo-24916633.jpeg?cs=srgb&fm=jpg",
+      "author": null,
+      "split": "validation",
+      "role": "positive-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    },
+    {
+      "id": "9305437",
+      "file": "pexels-9305437.jpg",
+      "page": "https://www.pexels.com/photo/woman-covering-her-face-with-her-hair-9305437/",
+      "url": "https://images.pexels.com/photos/9305437/pexels-photo-9305437.jpeg?cs=srgb&fm=jpg",
+      "author": null,
+      "split": "validation",
+      "role": "hard-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    },
+    {
+      "id": "9750",
+      "file": "pexels-9750.jpg",
+      "page": "https://www.pexels.com/photo/woman-covered-her-face-with-hair-9750/",
+      "url": "https://images.pexels.com/photos/9750/pexels-photo-9750.jpeg?cs=srgb&fm=jpg",
+      "author": null,
+      "split": "validation",
+      "role": "hard-lead",
+      "eligibility": "pending-original-review-and-real-facemesh",
+      "identityGroup": null
+    }
+  ]
+}

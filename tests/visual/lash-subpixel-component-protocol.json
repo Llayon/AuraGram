@@ -1,0 +1,30 @@
+{
+  "baseline": "112e415e25751c6163e9a1bcb1af37e25d416576",
+  "meaning": "V2 declared after independent critique of whole-window moment, before connected-component measurements. Keep all former numeric budgets. Restrict moment to the contiguous region at or above inherited contrast floor containing the dominant peak; preserve V1 evidence.",
+  "stepNative": 0.5,
+  "maximumArcNative": 12,
+  "maximumSteps": 48,
+  "searchHalfNative": 0.5,
+  "profileStepNative": 0.25,
+  "minimumValley": 0.006,
+  "competingPeakRatio": 0.9,
+  "competingPeakSeparationNative": 0.75,
+  "radiiNative": [
+    0.75,
+    1.5
+  ],
+  "observationFloor": 0.006,
+  "denseStepNative": 0.25,
+  "directionWindowNative": 2,
+  "maximumTurnDegrees": 15,
+  "bootstrapDistancesNative": [
+    1,
+    0.5,
+    0,
+    -0.5,
+    -1
+  ],
+  "maximumBootstrapResidualNative": 0.25,
+  "policy": "Keep .5search,15degree actual-turn,12arc/48steps and inherited contrast/link floors. Reject multiple separated dominant lobes, one-sided/weak profiles and centers outside the existing search. A connected flat maximum is one plateau, not arbitrarily its first pixel; intensity-deficit centroid is bounded, not a calibrated probability. Measure five fixed-axis profiles spanning nominal2native pixels around the existing body seed, reject any failure or unconfirmed dense link, fit TLS with residual<=.25native. Align to that observed bootstrap axis; record initial-prior discrepancy separately, never call it physical curvature. Refine only the offline body seed within .5native; old product tip stays fixed. Then use observed history from the bootstrap to enforce15degree turns from the first forward update. No missing-step bridging, chosen phase/margin, endpoint-approval path or product adoption. V2: deficit>=massSupportFloor defines the connected mass component around the sole dominant band. Weaker disconnected components never contribute. Connected shoulders/asymmetric contamination remain unresolved; this is not ownership or endpoint approval.",
+  "massSupportFloor": 0.006
+}

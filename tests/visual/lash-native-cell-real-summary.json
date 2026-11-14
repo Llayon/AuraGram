@@ -1,0 +1,1211 @@
+{
+  "kind": "provisional-development-diagnostic-not-acceptance",
+  "annotationSHA256": "4d23df2501e30e27aaa5d1bb01f02231b8c62636ca09d465471adfecd1f6ed74",
+  "annotationInputToDetector": false,
+  "eligiblePositiveEyes": 0,
+  "independentCritic": "not-completed",
+  "browserParity": false,
+  "decision": "LENGTH HOLD; no candidate adoption",
+  "results": [
+    {
+      "engine": "chromium",
+      "side": "left",
+      "deterministic": true,
+      "seeds": 33,
+      "statusCounts": {
+        "ambiguous": 33
+      },
+      "reasons": {
+        "bootstrap-search-boundary": 24,
+        "unconfirmed-proximal-path": 26,
+        "no-observed-path": 22,
+        "one-sided-edge": 1,
+        "unconfirmed-dense-link": 6,
+        "unavailable-or-side-boundary": 4,
+        "bootstrap-one-sided-edge": 14,
+        "native-cell-multiple-valleys": 4,
+        "bootstrap-dense-link": 2,
+        "multiple-valleys": 1,
+        "bootstrap-multiple-valleys": 1,
+        "native-cell-one-sided-edge": 3,
+        "bootstrap-weak-valley": 3
+      },
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 0,
+      "baselineIdentical": true,
+      "mapping": {
+        "x": 2455.6511100997927,
+        "y": 1995.7513900146485,
+        "scaleX": 4.26526534622056,
+        "scaleY": 4.273744224838063
+      },
+      "annotatedTips": 3,
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "baselineRawCandidateMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "automaticSeedRanksInsideAnnotatedTipUncertainty": [
+        19,
+        21,
+        23
+      ],
+      "ambiguousRegionPathRecords": [
+        {
+          "rank": 9,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        }
+      ],
+      "sourceArtifacts": [
+        {
+          "file": "tests/visual/out/native-cell-real-01/chromium.json",
+          "sha256": "36cd3302bae13e43b46de7074fdede2bc83ffd56c6b67a15d72143aee0d2bb12"
+        },
+        {
+          "file": "tests/visual/out/native-cell-real-02/chromium.json",
+          "sha256": "a796a5ee43009aa74e51604a1c1460a670355991001c00de250161525a77ff06"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "side": "right",
+      "deterministic": true,
+      "seeds": 144,
+      "statusCounts": {
+        "ambiguous": 92,
+        "censored": 52
+      },
+      "reasons": {
+        "bootstrap-search-boundary": 52,
+        "unconfirmed-proximal-path": 101,
+        "no-observed-path": 46,
+        "turn-bound": 22,
+        "unconfirmed-dense-link": 47,
+        "profile-disagreement": 4,
+        "bootstrap-one-sided-edge": 22,
+        "search-boundary": 6,
+        "multiple-supported-bands": 41,
+        "branch-probe-censored": 32,
+        "roi-boundary": 23,
+        "native-cell-multiple-valleys": 3,
+        "one-sided-edge": 18,
+        "unavailable-or-side-boundary": 8,
+        "bootstrap-weak-valley": 11,
+        "spatial-continuation": 5,
+        "native-cell-multiple-supported-cell-lobes": 5,
+        "native-cell-one-sided-edge": 8,
+        "native-cell-search-boundary": 11,
+        "arc-budget": 6,
+        "step-budget": 9,
+        "path-budget": 13,
+        "bootstrap-dense-link": 4,
+        "multiple-valleys": 2,
+        "bootstrap-multiple-valleys": 3,
+        "seed-budget": 16
+      },
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 7,
+      "baselineIdentical": true,
+      "mapping": {
+        "x": 1246.126409286499,
+        "y": 1657.778819213867,
+        "scaleX": 4.036138396229064,
+        "scaleY": 4.049301909656059
+      },
+      "annotatedTips": 5,
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "right-1",
+          "right-2",
+          "right-3",
+          "right-4",
+          "right-5"
+        ]
+      },
+      "baselineRawCandidateMatching": {
+        "matches": [
+          {
+            "label": "right-2",
+            "candidate": "baseline-0"
+          },
+          {
+            "label": "right-5",
+            "candidate": "baseline-4"
+          }
+        ],
+        "unmatchedCandidates": [
+          "baseline-1",
+          "baseline-2",
+          "baseline-3",
+          "baseline-5",
+          "baseline-6"
+        ],
+        "unmatchedLabels": [
+          "right-1",
+          "right-3",
+          "right-4"
+        ]
+      },
+      "automaticSeedRanksInsideAnnotatedTipUncertainty": [
+        0,
+        1,
+        8,
+        51
+      ],
+      "ambiguousRegionPathRecords": [
+        {
+          "rank": 42,
+          "status": "censored",
+          "reasons": [
+            "turn-bound",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 44,
+          "status": "censored",
+          "reasons": [
+            "arc-budget",
+            "step-budget",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 47,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 48,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 49,
+          "status": "censored",
+          "reasons": [
+            "turn-bound",
+            "turn-bound",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 50,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        },
+        {
+          "rank": 53,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "step-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 56,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 57,
+          "status": "ambiguous",
+          "reasons": [
+            "turn-bound",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "unconfirmed-proximal-path",
+            "spatial-continuation"
+          ]
+        },
+        {
+          "rank": 60,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 61,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "step-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 62,
+          "status": "censored",
+          "reasons": [
+            "turn-bound",
+            "turn-bound",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 64,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 65,
+          "status": "ambiguous",
+          "reasons": [
+            "turn-bound",
+            "search-boundary",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        },
+        {
+          "rank": 66,
+          "status": "ambiguous",
+          "reasons": [
+            "turn-bound",
+            "unconfirmed-dense-link",
+            "unconfirmed-proximal-path",
+            "spatial-continuation"
+          ]
+        },
+        {
+          "rank": 67,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "arc-budget",
+            "multiple-supported-bands",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 70,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 72,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 73,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "step-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 75,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "search-boundary",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 76,
+          "status": "ambiguous",
+          "reasons": [
+            "turn-bound",
+            "one-sided-edge",
+            "unconfirmed-proximal-path",
+            "spatial-continuation"
+          ]
+        },
+        {
+          "rank": 78,
+          "status": "censored",
+          "reasons": [
+            "turn-bound",
+            "arc-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 79,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "step-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 83,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 84,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "one-sided-edge",
+            "unconfirmed-proximal-path",
+            "profile-disagreement"
+          ]
+        },
+        {
+          "rank": 85,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "search-boundary",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 86,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "step-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 90,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "turn-bound",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 93,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "step-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 96,
+          "status": "ambiguous",
+          "reasons": [
+            "search-boundary",
+            "one-sided-edge",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        },
+        {
+          "rank": 108,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "one-sided-edge",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        },
+        {
+          "rank": 109,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "turn-bound",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 110,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "step-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 111,
+          "status": "censored",
+          "reasons": [
+            "turn-bound",
+            "arc-budget",
+            "multiple-supported-bands",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 115,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "one-sided-edge",
+            "multiple-supported-bands",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        },
+        {
+          "rank": 116,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "unconfirmed-proximal-path",
+            "spatial-continuation"
+          ]
+        },
+        {
+          "rank": 117,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "turn-bound",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 120,
+          "status": "ambiguous",
+          "reasons": [
+            "turn-bound",
+            "turn-bound",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        },
+        {
+          "rank": 121,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "multiple-valleys",
+            "unconfirmed-proximal-path",
+            "profile-disagreement"
+          ]
+        },
+        {
+          "rank": 122,
+          "status": "ambiguous",
+          "reasons": [
+            "one-sided-edge",
+            "unconfirmed-dense-link",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        }
+      ],
+      "sourceArtifacts": [
+        {
+          "file": "tests/visual/out/native-cell-real-01/chromium.json",
+          "sha256": "36cd3302bae13e43b46de7074fdede2bc83ffd56c6b67a15d72143aee0d2bb12"
+        },
+        {
+          "file": "tests/visual/out/native-cell-real-02/chromium.json",
+          "sha256": "a796a5ee43009aa74e51604a1c1460a670355991001c00de250161525a77ff06"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "left",
+      "deterministic": true,
+      "seeds": 70,
+      "statusCounts": {
+        "ambiguous": 68,
+        "censored": 2
+      },
+      "reasons": {
+        "bootstrap-search-boundary": 37,
+        "unconfirmed-proximal-path": 58,
+        "no-observed-path": 42,
+        "bootstrap-one-sided-edge": 19,
+        "native-cell-one-sided-edge": 6,
+        "turn-bound": 4,
+        "one-sided-edge": 6,
+        "multiple-supported-bands": 6,
+        "bootstrap-dense-link": 14,
+        "bootstrap-weak-valley": 10,
+        "unavailable-or-side-boundary": 6,
+        "no-distinct-shaft-outside-proximal-region": 1,
+        "unconfirmed-dense-link": 18,
+        "profile-disagreement": 4,
+        "bootstrap-multiple-valleys": 4,
+        "search-boundary": 3,
+        "native-cell-multiple-valleys": 5,
+        "multiple-valleys": 1,
+        "spatial-continuation": 1,
+        "branch-probe-censored": 2,
+        "roi-boundary": 2
+      },
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 0,
+      "baselineIdentical": true,
+      "mapping": {
+        "x": 2453.469883102417,
+        "y": 2003.07287210083,
+        "scaleX": 4.273025238990785,
+        "scaleY": 4.275910328526651
+      },
+      "annotatedTips": 3,
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "baselineRawCandidateMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "automaticSeedRanksInsideAnnotatedTipUncertainty": [
+        0,
+        29,
+        41,
+        42,
+        48,
+        49
+      ],
+      "ambiguousRegionPathRecords": [
+        {
+          "rank": 4,
+          "status": "ambiguous",
+          "reasons": [
+            "turn-bound",
+            "one-sided-edge",
+            "unconfirmed-proximal-path",
+            "multiple-supported-bands"
+          ]
+        },
+        {
+          "rank": 22,
+          "status": "ambiguous",
+          "reasons": [
+            "one-sided-edge",
+            "unconfirmed-dense-link",
+            "unconfirmed-proximal-path",
+            "profile-disagreement"
+          ]
+        },
+        {
+          "rank": 28,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        },
+        {
+          "rank": 32,
+          "status": "ambiguous",
+          "reasons": [
+            "multiple-valleys",
+            "search-boundary",
+            "unconfirmed-proximal-path",
+            "profile-disagreement"
+          ]
+        },
+        {
+          "rank": 39,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        },
+        {
+          "rank": 43,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "search-boundary",
+            "unconfirmed-proximal-path",
+            "spatial-continuation"
+          ]
+        },
+        {
+          "rank": 56,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "one-sided-edge",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 59,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "unconfirmed-proximal-path",
+            "profile-disagreement"
+          ]
+        },
+        {
+          "rank": 65,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        }
+      ],
+      "sourceArtifacts": [
+        {
+          "file": "tests/visual/out/native-cell-real-01/webkit.json",
+          "sha256": "72130951759e2188a4295cd0aa2664f40d80eb9b474b307dc828c4e70d1a97dc"
+        },
+        {
+          "file": "tests/visual/out/native-cell-real-02/webkit.json",
+          "sha256": "b9019264c2afdc6bead6bfd1d8e7714a20186ac9c618dfc00340d8061e3b8160"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "right",
+      "deterministic": true,
+      "seeds": 236,
+      "statusCounts": {
+        "ambiguous": 94,
+        "censored": 142
+      },
+      "reasons": {
+        "turn-bound": 12,
+        "unconfirmed-dense-link": 51,
+        "unconfirmed-proximal-path": 106,
+        "profile-disagreement": 4,
+        "spatial-continuation": 7,
+        "bootstrap-search-boundary": 78,
+        "no-observed-path": 58,
+        "bootstrap-dense-link": 10,
+        "search-boundary": 4,
+        "multiple-supported-bands": 35,
+        "branch-probe-censored": 29,
+        "roi-boundary": 24,
+        "bootstrap-weak-valley": 3,
+        "one-sided-edge": 11,
+        "bootstrap-one-sided-edge": 21,
+        "native-cell-multiple-valleys": 11,
+        "bootstrap-multiple-valleys": 4,
+        "native-cell-one-sided-edge": 8,
+        "arc-budget": 6,
+        "step-budget": 6,
+        "path-budget": 10,
+        "native-cell-multiple-supported-cell-lobes": 2,
+        "multiple-valleys": 6,
+        "native-cell-search-boundary": 1,
+        "unavailable-or-side-boundary": 2,
+        "seed-budget": 108
+      },
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 9,
+      "baselineIdentical": true,
+      "mapping": {
+        "x": 1244.7952601852417,
+        "y": 1663.5287101135252,
+        "scaleX": 4.038082761475019,
+        "scaleY": 4.048913090016583
+      },
+      "annotatedTips": 5,
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "right-1",
+          "right-2",
+          "right-3",
+          "right-4",
+          "right-5"
+        ]
+      },
+      "baselineRawCandidateMatching": {
+        "matches": [],
+        "unmatchedCandidates": [
+          "baseline-0",
+          "baseline-1",
+          "baseline-2",
+          "baseline-3",
+          "baseline-4",
+          "baseline-5",
+          "baseline-6",
+          "baseline-7",
+          "baseline-8"
+        ],
+        "unmatchedLabels": [
+          "right-1",
+          "right-2",
+          "right-3",
+          "right-4",
+          "right-5"
+        ]
+      },
+      "automaticSeedRanksInsideAnnotatedTipUncertainty": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        10,
+        48
+      ],
+      "ambiguousRegionPathRecords": [
+        {
+          "rank": 63,
+          "status": "ambiguous",
+          "reasons": [
+            "one-sided-edge",
+            "unconfirmed-dense-link",
+            "unconfirmed-proximal-path",
+            "multiple-supported-bands"
+          ]
+        },
+        {
+          "rank": 68,
+          "status": "censored",
+          "reasons": [
+            "multiple-valleys",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 71,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 74,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 76,
+          "status": "censored",
+          "reasons": [
+            "turn-bound",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 79,
+          "status": "censored",
+          "reasons": [
+            "multiple-valleys",
+            "arc-budget",
+            "multiple-supported-bands",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 80,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "unconfirmed-proximal-path",
+            "profile-disagreement"
+          ]
+        },
+        {
+          "rank": 81,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 82,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 85,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "step-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 86,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 88,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "multiple-valleys",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 90,
+          "status": "censored",
+          "reasons": [
+            "search-boundary",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 92,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "arc-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 94,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "step-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 99,
+          "status": "censored",
+          "reasons": [
+            "multiple-valleys",
+            "arc-budget",
+            "multiple-supported-bands",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 101,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "turn-bound",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 105,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 108,
+          "status": "censored",
+          "reasons": [
+            "one-sided-edge",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 115,
+          "status": "censored",
+          "reasons": [
+            "multiple-valleys",
+            "step-budget",
+            "multiple-supported-bands",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 116,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "step-budget",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "path-budget"
+          ]
+        },
+        {
+          "rank": 117,
+          "status": "ambiguous",
+          "reasons": [
+            "turn-bound",
+            "turn-bound",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        },
+        {
+          "rank": 122,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "unconfirmed-dense-link",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 123,
+          "status": "censored",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "turn-bound",
+            "multiple-supported-bands",
+            "branch-probe-censored",
+            "unconfirmed-proximal-path",
+            "roi-boundary"
+          ]
+        },
+        {
+          "rank": 127,
+          "status": "ambiguous",
+          "reasons": [
+            "unconfirmed-dense-link",
+            "search-boundary",
+            "unconfirmed-proximal-path",
+            "unavailable-or-side-boundary"
+          ]
+        }
+      ],
+      "sourceArtifacts": [
+        {
+          "file": "tests/visual/out/native-cell-real-01/webkit.json",
+          "sha256": "72130951759e2188a4295cd0aa2664f40d80eb9b474b307dc828c4e70d1a97dc"
+        },
+        {
+          "file": "tests/visual/out/native-cell-real-02/webkit.json",
+          "sha256": "b9019264c2afdc6bead6bfd1d8e7714a20186ac9c618dfc00340d8061e3b8160"
+        }
+      ]
+    }
+  ]
+}

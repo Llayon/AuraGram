@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-13",
+  "license": "https://www.pexels.com/license/",
+  "status": "original-only-source-leads",
+  "policy": "New development leads before lash detector. Do not move into validation.",
+  "sources": [
+    {
+      "id": "14297936",
+      "file": "pexels-14297936.jpg",
+      "page": "https://www.pexels.com/photo/close-up-of-the-face-of-a-beautiful-woman-14297936/",
+      "url": "https://images.pexels.com/photos/14297936/pexels-photo-14297936.jpeg?cs=srgb&fm=jpg",
+      "author": "Connor Scott McManus",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "34460007",
+      "file": "pexels-34460007.jpg",
+      "page": "https://www.pexels.com/photo/close-up-portrait-of-woman-with-blue-eyes-34460007/",
+      "url": "https://images.pexels.com/photos/34460007/pexels-photo-34460007.jpeg?cs=srgb&fm=jpg",
+      "author": "Shahin Mren",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    }
+  ]
+}

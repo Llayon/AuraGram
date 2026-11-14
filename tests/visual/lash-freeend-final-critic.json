@@ -1,0 +1,114 @@
+{
+  "schema": "auragram-independent-final-critic-v1",
+  "stage": "freeend dataset expansion final verification",
+  "releaseVerdict": "LENGTH HOLD; G1c.1 NOT CLOSED",
+  "scope": "Read-only verification of final archived evidence, NEW12 verified reruns, debug maps and written report. No browser/model inference launched by this critic; only local hashes, stored PNGs, JSON and logs inspected. No product or frozen annotation edits.",
+  "priorArtifacts": [
+    {
+      "path": "tests/visual/lash-freeend-code-review.json",
+      "sha256": "73de75bf81f45b961efc6f6fdc5fc6c4e747fdf84216c40885fbcfe94121ccc3"
+    },
+    {
+      "path": "tests/visual/lash-freeend-posthoc-independent-critic.json",
+      "sha256": "5588cdd60bd2f0feba48356ff76006c9a83bff961b434915c46c1d91fc7d268a"
+    },
+    {
+      "path": "tests/visual/lash-freeend-independent-labels.json",
+      "sha256": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800"
+    },
+    {
+      "path": "tests/visual/lash-freeend2-independent-labels.json",
+      "sha256": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810"
+    }
+  ],
+  "finalPack": {
+    "filesMapSHA256": "369622c3210afbe924703870867159b4bb5564bb4db56fdb2d09d1861c2eb236",
+    "indexSHA256": "387d239d9e70eb60a9fc6a015b76e3f30ecfa8afe9f9c6d4414b0dbf909df479",
+    "logicalMappings": 455,
+    "rawByteHashValidation": "PASS all455 entries after decompression; zero mismatch",
+    "localGalleryLinks": 293,
+    "localGalleryMissingLinks": 0,
+    "galleryEncoding": "Actual UTF-8 em dash present; former mojibake marker absent.",
+    "nativeZoom": "CSS uses native160px times zoom and400% selector; stored400% screenshot visually inspected. No new image detail inferred.",
+    "screenshot": {
+      "path": "tests/visual/out/freeend-gallery-400.png",
+      "sha256": "7eaec8bd9d6f3094fd6d8da4dbca67cd2d1a4b3951617b6c00dfa7393c3a4322"
+    },
+    "new12PNGComparison": {
+      "freeendChromium": 38,
+      "freeendWebKit": 54,
+      "freeend2Chromium": 23,
+      "freeend2WebKit": 23,
+      "total": 138,
+      "result": "All138 NEW12 PNG bytes equal original07 counterparts; all NEW12 PNG logical paths and verification sidecars present in final pack."
+    },
+    "verificationOwnership": "All four verification sidecars manifest hashes and beforeAfterIdentical true checked. Current input-helper recomputation equals sidecar pre/post provenance and debug verifiedInputs in both batches/engines. JPEG source/freeze metadata, snapshot modules and b883 production modules pass local checks.",
+    "debug": "Four batch/engine debug JSONs and48 referenced map PNGs archived; current debug harness hashes match. Legend explicitly states unexamined black maps are NOT ANALYZED, not absent hair.",
+    "audit": "NEW10 own harness/live geometry helper hash matches reviewed implementation; old09 remains retained. t.c confidence correction does not change geometric coordinates."
+  },
+  "findingDispositions": [
+    {
+      "id": "FCR1",
+      "final": "RESOLVED_VERIFIED",
+      "detail": "Debug JSON/maps collected and gallery legends/links present."
+    },
+    {
+      "id": "FCR2",
+      "final": "RESOLVED_WITH_STATED_SCOPE",
+      "detail": "NEW12 wrapper pre/post input bindings executed, sidecars archived and all PNGs equal07. Historical07 lack these runtime preconditions but are explicitly retained and reproducibly matched; no current drift found. Pre/post checks are local byte-consistency checks, not adversarial immutable serving guarantees."
+    },
+    {
+      "id": "FCR3",
+      "final": "RESOLVED_VERIFIED",
+      "detail": "NEW10 records and matches harness/helper hashes and corrected nearest confidence field."
+    },
+    {
+      "id": "FCR4",
+      "final": "RESOLVED_VERIFIED",
+      "detail": "Corrected Unicode propagated into final gallery; screenshot readable."
+    },
+    {
+      "id": "FCR5",
+      "final": "RESOLVED_VERIFIED",
+      "detail": "Final curator collects NEW12 manifests/sidecars/PNGs while retaining07. Verified138 PNG byte identities and455 logical archive entries independently."
+    }
+  ],
+  "visualJudgment": {
+    "unchangedFromPosthoc": "Useful natural Length not established in these new sources. No acceptance from nonzero pixel sums or high confidence.",
+    "W325": "Actual two Length50 additions remain ambiguous upper-lid texture/crease neighborhoods,37 changed native pixels/maxchannel7. Debug diagnostics extension lengths1.2958264 and1.2591299 nativepx; these are rendered distances, not evidence of correct free ends. Overlapping windows are not independent positives. No obvious long needles or opaque blocks found in the inspected patches.",
+    "supplemental217": "Visible provisional upper endings lie on skin far below outward-domain upper arc, outside predicted opening. Actual224 guard bypasses whole eye, yielding identity. This indicates pose/domain limitation, not absence of real lashes or proof every crossing path is a false occluder.",
+    "ownershipLimit": "Sparse original-only labels, unknown coating/extensions and approximate local shafts do not certify single-fiber terminal ownership. Macros lacking usable FaceMesh retain no_face; no fabricated geometry."
+  },
+  "testsAndPerformance": {
+    "evidence": "Stored raw logs inspected; tests not rerun by critic.",
+    "unit": "162PASS/0FAIL/0SKIPPED/0CANCELLED in unit log.",
+    "fullBrowser": "166PASS/2FAIL/3dependentNOTRUN. Both original F1 Length failures remain RGBdifference0 vs required>10. Therefore mandatory full suite is RED.",
+    "newNegativeRegression": "Real lower-lash no_face fixture passed both engines. Existing assertions/thresholds unchanged by added25-line test. This negative test does not replace positive efficacy.",
+    "isolatedPerformance": "3PASS; active natural720x1080 D35/L100/Def25: off15.2ms/active19.1ms/delta+3.9ms, actual Length227 and Density206 RGB differences,2 tips, stable cache/analysis timestamp. This establishes active cost in that fixture, not natural visual benefit or physical mobile performance.",
+    "coldAnalysisMs": 104.2,
+    "activeFullExport": {
+      "width": 2400,
+      "height": 3600,
+      "renderMs": 185,
+      "encodeMs": 425.6,
+      "buttonToBlobMs": 675.2
+    },
+    "buildPackageSite": "Completed logs show build/package/check:site success, including packaged Chromium and WebKit software filters/real face/PNG smoke. Initial interrupted build log retained.",
+    "physicalDevices": "UNVERIFIED"
+  },
+  "reportReview": {
+    "path": "G1C1_FREEEND_DATASET_REPORT.md",
+    "reviewedSHA256": "cd485c2d9b3676e9c5d0e5eade7674a4be514a3837d85d1cfbbd1f9675fe7d2f",
+    "judgment": "Report accurately distinguishes sequential dataset selection from untouched benchmark, provisional sparse matching from permissible-target recall, predicted opening from semantic segmentation, and isolated perf success from full mandatory suite failure. HOLD/no partial release and bounded domain-only next experiment are appropriate. No unsupported naturalness or complete CI claim found.",
+    "nextExperiment": "Frozen geometry/domain-only comparison across projected-down upper endings and existing closed-white-liner/hair negatives. Do not widen symmetrically, lower confidence, use manual seeds or remove occlusion guards to produce activity."
+  },
+  "remainingRisks": [
+    "No newly demonstrated permissible-domain useful terminal extension on the seven-source expansion.",
+    "FaceMesh eligibility excludes four real sources in both engines.",
+    "Closed/downward projected upper lashes can sit outside outward band while opening geometry is only predicted.",
+    "High confidence and tiny nonzero rendering do not establish correct terminal ownership.",
+    "Pale/bare/coated/eyeliner/JPEG subgroups incompletely covered; rates not quantified.",
+    "Physical iPhone/Android behavior unverified; no new production release justified."
+  ],
+  "productState": "git diff --name-only -- src produced no changes at review. Remote PR/deployment status not independently queried here; report says Draft/no merge/no deploy."
+}

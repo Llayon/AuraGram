@@ -1,0 +1,16 @@
+{
+  "baseline":"0bb38cb928bdc6f90ded0af93f87931421439b3b",
+  "casesSHA256":"33def6ce269c88d071e7e0aec89ca6eff567c785f45b53f4a7de8c5eba41d3bf",
+  "meaning":"Native pre-tip centers on the exact old observed prefix. No manual axis/labels enter the estimator, no new seeds, no tip relocation or product effect. An available center/axis does not certify same-fiber identity or a true endpoint.",
+  "prefixDistancesNative":[2,4,6,8,10,12],
+  "fitWindowsNative":[6,8,12],
+  "profileMarginsNative":[1.5,2.5],
+  "profileStepNative":0.25,
+  "minimumValley":0.006,
+  "competingPeakRatio":0.9,
+  "competingPeakSeparationNative":0.75,
+  "maximumParabolicAdjustmentNative":0.125,
+  "searchBound":"Normal projection of a half analysis-pixel box: .5*(abs(nx)*sourcePerAnalysisX+abs(ny)*sourcePerAnalysisY); round DOWN to the .25px search lattice. Reject a maximum on its boundary. A sampling-cell bound is not a calibrated uncertainty interval.",
+  "fitPolicy":"Unweighted total least-squares on every accepted pre-tip sample in each window. No tip anchor in the fit. At least3samples and no missing/rejected sample; otherwise no axis. Both margins and all windows reported; never select a favorable configuration. Coherence/residual/axis disagreement remain diagnostics, not calibrated acceptance probabilities.",
+  "inheritedChecks":"Valley floor, competing-peak ratio/separation and bounded parabolic interpolation follow the preceding native-center experiment. No per-case threshold or interval fitting after observation."
+}

@@ -9,13 +9,14 @@
  *                progressively revealed (stable order, existing tips never
  *                move). Auto-skipped on low confidence — never faked by
  *                darkening the lid line (that would be dishonest).
- *   definition — masked local contrast (contrast-filtered copy, overlay) of
- *                the lash band only. Never a raw rect brightness/contrast.
+ *   definition — ridge-weighted local contrast (contrast-filtered copy, overlay)
+ *                inside the lash band only. Never a raw rect brightness/contrast.
  *
  * Protected BY CONSTRUCTION: every layer is clipped to its Eye ROI rect and
  * masked to the upper-lash band (above the upper lid). Iris, pupil, sclera
- * (below the lid), inner corner, brow, cheek, hair, background cannot be
- * touched — the pixels are never drawn there.
+ * (below the lid), inner corner, brow, cheek and background outside that
+ * band are excluded geometrically. In-band occluders require image evidence
+ * rejection in analysis; FaceMesh alone does not identify a visible eye.
  */
 
 /** Nonlinear conservative strength curves (0..100 → factor). Monotonic. */
@@ -72,46 +73,71 @@ function sizeCanvas(c, w, h) {
   return c;
 }
 
+/** Measured candidate geometry; shared with diagnostics, independent of density. */
+export function lengthGeometry(tip, an, rw, rh, eyeHeight, strength, sourceRect=null) {
+  const width=sourceRect?.width??rw,height=sourceRect?.height??rh;
+  const vx=tip.dx*width/an.rw,vy=tip.dy*height/an.rh,vl=Math.hypot(vx,vy);
+  if(!vl)return null;
+  const maximum=Math.min(3*(sourceRect?vl:rw/an.rw),eyeHeight*.12);
+  const length=Math.min(maximum,tip.length*vl*.12)*lashLengthCurve(strength);
+  const x=tip.x*width+(sourceRect?.x??0),y=tip.y*height+(sourceRect?.y??0);
+  return {x,y,ex:x+vx/vl*length,ey:y+vy/vl*length,
+    length,analysisLength:length/vl,width:tip.width*vl*.65,confidence:tip.c};
+}
+
+/** Observed body colour after the user's grade and existing lash controls.
+ * Bilinear sampling uses the same normalized measured sample in preview and
+ * export. This keeps recovered tips inside a monochrome or tinted grade.
+ */
+export function sampleObservedTipColor(rgba, width, height, analysis, tip, sourceRect=null) {
+  const points=tip.evidence.points;
+  const point=points[Math.min(2,points.length-1)];
+  const x=Math.max(0,Math.min(width-1,(point.x+.5)*(sourceRect?.width??width)/analysis.rw+(sourceRect?.x??0)-.5));
+  const y=Math.max(0,Math.min(height-1,(point.y+.5)*(sourceRect?.height??height)/analysis.rh+(sourceRect?.y??0)-.5));
+  const x0=Math.floor(x),y0=Math.floor(y),x1=Math.min(width-1,x0+1),y1=Math.min(height-1,y0+1);
+  const fx=x-x0,fy=y-y0;
+  return [0,1,2].map(channel=>{
+    const top=rgba[(y0*width+x0)*4+channel]*(1-fx)+rgba[(y0*width+x1)*4+channel]*fx;
+    const bottom=rgba[(y1*width+x0)*4+channel]*(1-fx)+rgba[(y1*width+x1)*4+channel]*fx;
+    return Math.round(top*(1-fy)+bottom*fy);
+  });
+}
+
 /**
  * Build the applicator mask (white band on transparent) for one eye.
  * lidPts: lid polyline in ROI-output px; bandUpPx: band height px;
  * browY: brow y in ROI-output px (null when unknown).
  */
-function buildBandMask(mctx, mw, mh, lidPts, bandUpPx, browY, innerIsLeft, scale) {
-  mctx.clearRect(0, 0, mw, mh);
-  if (lidPts.length < 2) return false;
-  // Skip the inner-corner 10% (caruncle guard).
-  const pts = lidPts;
+function buildBandMask(mctx, mw, mh, lidPts, bandUpPx, browPts, innerPoint, lowerPts, scale) {
+  mctx.clearRect(0,0,mw,mh);
+  if(lidPts.length<2||lowerPts.length<2) return false;
+  const low=lowerPts.reduce((a,p)=>({x:a.x+p.x/lowerPts.length,y:a.y+p.y/lowerPts.length}),{x:0,y:0});
+  const eyeW=Math.hypot(lidPts.at(-1).x-lidPts[0].x,lidPts.at(-1).y-lidPts[0].y);
+  const path=()=>{
+    mctx.beginPath();
+    lidPts.forEach((p,i)=>{
+      const a=lidPts[Math.max(0,i-1)],b=lidPts[Math.min(lidPts.length-1,i+1)];
+      const len=Math.hypot(b.x-a.x,b.y-a.y)||1;
+      let nx=-(b.y-a.y)/len,ny=(b.x-a.x)/len;
+      if(nx*(low.x-p.x)+ny*(low.y-p.y)>0){nx=-nx;ny=-ny;}
+      if(i===0)mctx.moveTo(p.x+nx*bandUpPx,p.y+ny*bandUpPx);
+      else mctx.lineTo(p.x+nx*bandUpPx,p.y+ny*bandUpPx);
+    });
+    for(let i=lidPts.length-1;i>=0;i--)mctx.lineTo(lidPts[i].x,lidPts[i].y);
+    mctx.closePath();
+  };
   mctx.save();
-  const minX = Math.min(...pts.map(p => p.x)), maxX = Math.max(...pts.map(p => p.x));
-  const guard = (maxX - minX) * 0.10;
-  mctx.beginPath();
-  mctx.rect(innerIsLeft ? minX + guard : minX, 0, maxX - minX - guard, mh);
-  mctx.clip();
-  mctx.filter = `blur(${scale}px)`;
-  mctx.fillStyle = '#fff';
-  mctx.beginPath();
-  pts.forEach((p, i) => {
-    const y = Math.max(0, Math.min(p.y, browY != null ? Math.max(p.y - bandUpPx, browY + 2 * scale) : p.y - bandUpPx));
-    if (i === 0) mctx.moveTo(p.x, y);
-    else mctx.lineTo(p.x, y);
-  });
-  for (let i = pts.length - 1; i >= 0; i--) {
-    mctx.lineTo(pts[i].x, Math.min(mh, pts[i].y + 1.5 * scale));
+  mctx.fillStyle='#fff';path();mctx.fill();
+  // Feather only inside the allowed polygon: never blur into iris/sclera.
+  applyPixelsFilter(mctx,`blur(${Math.min(1,scale*.5)}px)`);
+  mctx.globalCompositeOperation='destination-in';path();mctx.fill();
+  mctx.globalCompositeOperation='destination-out';
+  mctx.beginPath();mctx.arc(innerPoint.x,innerPoint.y,eyeW*.12,0,Math.PI*2);mctx.fill();
+  if(browPts.length){
+    mctx.lineWidth=Math.max(2*scale,bandUpPx*.65);mctx.lineCap='round';mctx.beginPath();
+    browPts.forEach((p,i)=>i?mctx.lineTo(p.x,p.y):mctx.moveTo(p.x,p.y));mctx.stroke();
   }
-  mctx.closePath();
-  mctx.fill();
-  mctx.filter = 'none';
-  mctx.restore();
-  if (!nativeSupported()) {
-    applyPixelsFilter(mctx, `blur(${scale}px)`);
-    // putImageData ignores Canvas clipping: enforce the inner-corner guard again.
-    const left = innerIsLeft ? Math.ceil(minX + guard) : Math.ceil(minX);
-    const right = innerIsLeft ? Math.floor(maxX) : Math.floor(maxX - guard);
-    mctx.clearRect(0, 0, left, mh);
-    mctx.clearRect(right, 0, mw - right, mh);
-  }
-  return true;
+  mctx.restore();return true;
 }
 
 /**
@@ -133,8 +159,9 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
     { desc: eyeDescs.left, an: analyses && analyses.left, innerIsLeft: true },
     { desc: eyeDescs.right, an: analyses && analyses.right, innerIsLeft: false }
   ];
-  for (const { desc, an, innerIsLeft } of eyes) {
-    if (!desc || !desc.usable || !an || an.confidence <= 0) {
+  if(!Array.isArray(scratch.bandCache))scratch.bandCache=new Array(4);
+  for (const [eyeIndex,{ desc, an, innerIsLeft }] of eyes.entries()) {
+    if (!desc || !desc.usable || !desc.inner || !desc.lowerLid?.length || !an || an.confidence <= 0) {
       perEye.push({ usable: !!(desc && desc.usable), confidence: an ? an.confidence : 0, reason: an ? an.reason : 'eye-unusable', ran: [] });
       continue;
     }
@@ -148,12 +175,16 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
       continue;
     }
     const eyeRan = [];
+    let lengthAttempts=0;
+    const extensions=scratch.diagnostics?[]:null;
     const toOut = (p) => ({
       x: (p.x - desc.roi.x0) / (desc.roi.x1 - desc.roi.x0) * rw,
       y: (p.y - desc.roi.y0) / (desc.roi.y1 - desc.roi.y0) * rh
     });
     const lidOut = desc.upperLid.map(toOut);
-    const browOut = desc.brow ? toOut(desc.brow).y : null;
+    const browOut = (desc.browPoints || []).map(toOut);
+    const lowerOut = (desc.lowerLid || []).map(toOut);
+    const innerOut = toOut(desc.inner);
     const pxPerAnPx = rw / Math.max(1, an.rw);
     scratch.c1 = sizeCanvas(scratch.c1, rw, rh);
     scratch.c2 = sizeCanvas(scratch.c2, rw, rh);
@@ -161,25 +192,52 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
     const c1x = scratch.c1.getContext('2d');
     const c2x = scratch.c2.getContext('2d');
     const mx = scratch.mask.getContext('2d');
-    const bandUpPx = Math.min(rh * 0.5, Math.max(3 * scale, (desc.h * H) * 0.35));
+    // The analysis zone is the source of truth for the applicator too.
+    // A narrower legacy 0.35-eye-height band clipped genuine distal ridges
+    // and could erase an otherwise valid measured Length candidate.
+    const bandUpPx = an.bandH > 0 ? an.bandH * rh
+      : Math.min(rh * .5, Math.max(3 * scale, desc.h * H * .35));
     tctx.save();
     tctx.beginPath();
     tctx.rect(rx0, ry0, rw, rh);
     tctx.clip();
+    const getBand=(height,kind)=>{
+      // Fixed four slots; only small masks are cached (<=1MiB total).
+      // Geometry, render size and feather scale all participate in identity.
+      const index=kind===undefined?null:eyeIndex*2+kind,key=JSON.stringify([rw,rh,height,lidOut,lowerOut,browOut,innerOut,scale]);
+      const cached=index===null?null:scratch.bandCache[index];
+      if(cached?.key===key){mx.putImageData(cached.image,0,0);return true;}
+      const ready=buildBandMask(mx,rw,rh,lidOut,height,browOut,innerOut,lowerOut,scale);
+      if(ready&&index!==null&&rw*rh<=65536)scratch.bandCache[index]={key,image:mx.getImageData(0,0,rw,rh)};
+      return ready;
+    };
+    const bandReady = getBand(bandUpPx,0);
     // Snapshot the graded ROI once (all layers derive from the same base).
     c1x.clearRect(0, 0, rw, rh);
     c1x.drawImage(tctx.canvas, rx0, ry0, rw, rh, 0, 0, rw, rh);
     // --- Definition: masked local contrast, overlay. ---
-    if (defK > 0) {
+    if (defK > 0 && an.ridge?.length) {
       c2x.clearRect(0, 0, rw, rh);
-      drawFiltered(c2x, scratch.c1, 'contrast(135%) brightness(103%)', 0, 0);
-      if (buildBandMask(mx, rw, rh, lidOut, bandUpPx, browOut, innerIsLeft, scale)) {
+      drawFiltered(c2x, scratch.c1, 'contrast(115%)', 0, 0);
+      // Definition follows observed fine ridges too, rather than increasing
+      // contrast over an entire strip of skin/makeup. Independent of sliders.
+      const detailMask = c1x.createImageData(rw,rh);
+      fillDensityRGBA(detailMask.data,rw,rh,an.densityRidge || an.ridge,an.rw,an.rh,100,1);
+      for(let i=0;i<detailMask.data.length;i+=4) {
+        const alpha=Math.min(255,(255-detailMask.data[i])*255/89);
+        detailMask.data[i]=detailMask.data[i+1]=detailMask.data[i+2]=255;
+        detailMask.data[i+3]=alpha;
+      }
+      c1x.putImageData(detailMask,0,0);
+      c2x.globalCompositeOperation='destination-in';c2x.drawImage(scratch.c1,0,0);
+      c2x.globalCompositeOperation='source-over';
+      if (bandReady) {
         c2x.globalCompositeOperation = 'destination-in';
         c2x.drawImage(scratch.mask, 0, 0);
         c2x.globalCompositeOperation = 'source-over';
         tctx.save();
         tctx.globalCompositeOperation = 'overlay';
-        tctx.globalAlpha = defK;
+        tctx.globalAlpha = defK * (an.densityConfidence ?? an.confidence);
         tctx.drawImage(scratch.c2, rx0, ry0);
         tctx.restore();
         eyeRan.push('definition');
@@ -189,9 +247,9 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
     if (densK > 0 && an.ridge && an.ridge.length) {
       c2x.clearRect(0, 0, rw, rh);
       const density = c2x.createImageData(rw, rh);
-      fillDensityRGBA(density.data, rw, rh, an.ridge, an.rw, an.rh, lashes.density, an.confidence);
+      fillDensityRGBA(density.data, rw, rh, an.densityRidge || an.ridge, an.rw, an.rh, lashes.density, an.densityConfidence ?? an.confidence);
       c2x.putImageData(density, 0, 0);
-      if (buildBandMask(mx, rw, rh, lidOut, bandUpPx, browOut, innerIsLeft, scale)) {
+      if (bandReady) {
         c2x.globalCompositeOperation = 'destination-in';
         c2x.drawImage(scratch.mask, 0, 0);
         c2x.globalCompositeOperation = 'source-over';
@@ -203,48 +261,64 @@ export function applyLashPass(tctx, W, H, eyeDescs, analyses, lashes, scratch) {
       }
     }
     // --- Length: extend confident tips with fading tapers (source-over). ---
-    if (lenK > 0 && an.tips && an.tips.length) {
-      const n = Math.max(1, Math.round(an.tips.length * (0.25 + 0.75 * lenK)));
-      const maxLen = Math.min(10 * scale, Math.max(2 * scale, (desc.h * H) * 0.5));
-      c2x.clearRect(0, 0, rw, rh);
-      c2x.lineCap = 'round';
-      let drew = false;
-      for (let i = 0; i < Math.min(n, an.tips.length); i++) {
-        const tip = an.tips[i];
-        const tx = tip.x * rw, ty = tip.y * rh;
-        // Direction stored in analysis-ROI space; ROI aspect is preserved
-        // (uniform scale), so reuse directly, adjusted for output scale.
-        const L = maxLen * (0.35 + 0.65 * tip.c) * (0.3 + 0.7 * lenK);
-        if (L < 0.75 * scale) continue;
-        const ex = tx + tip.dx * L, ey = ty + tip.dy * L;
-        const alpha = Math.min(0.6, 0.28 * tip.c * (0.4 + 0.6 * lenK) + 0.08);
-        const g = c2x.createLinearGradient(tx, ty, ex, ey);
-        g.addColorStop(0, `rgba(26,19,24,${alpha.toFixed(3)})`);
-        g.addColorStop(1, 'rgba(26,19,24,0)');
-        c2x.strokeStyle = g;
-        c2x.lineWidth = Math.min(1.6 * scale, Math.max(scale, pxPerAnPx * 0.8));
-        c2x.beginPath();
-        c2x.moveTo(tx, ty);
-        c2x.lineTo(ex, ey);
-        c2x.stroke();
-        drew = true;
+    if (lenK > 0 && (an.lengthConfidence ?? an.confidence) >= .25 && an.tips && an.tips.length) {
+      const maxLen = Math.min(3 * pxPerAnPx, (desc.h * H) * .12);
+      // The scratch bitmap is integer-clipped, but measured positions belong
+      // to the exact normalized source ROI. Keep its fractional origin/scale.
+      const sourceRect={x:desc.roi.x0*W-rx0,y:desc.roi.y0*H-ry0,
+        width:(desc.roi.x1-desc.roi.x0)*W,height:(desc.roi.y1-desc.roi.y0)*H};
+      const groups=[
+        {tips:an.tips.filter(tip=>!tip.evidence?.boundaryRecovery),height:bandUpPx+maxLen,cacheKind:1,confidence:an.baselineLengthConfidence??an.lengthConfidence??an.confidence,composite:'source-over',recovered:false},
+        {tips:an.tips.filter(tip=>tip.evidence?.boundaryRecovery),height:Math.max(bandUpPx,(an.lengthBandH??an.bandH)*rh)+maxLen,cacheKind:undefined,confidence:an.boundaryLengthConfidence??0,composite:'darken',recovered:true}
+      ];
+      let gradedPixels=null;
+      if(groups[1].tips.length && groups[1].confidence>=.25){
+        // Read the reusable ROI scratch, before either Length cohort draws.
+        // Colour then stays independent of Length strength and its strokes.
+        c1x.clearRect(0,0,rw,rh);c1x.drawImage(tctx.canvas,rx0,ry0,rw,rh,0,0,rw,rh);
+        gradedPixels=c1x.getImageData(0,0,rw,rh).data;
+      }
+      for(const group of groups){
+      if(!group.tips.length||group.confidence<.25)continue;
+      c2x.clearRect(0,0,rw,rh);c2x.lineCap='round';
+      let drew=false;
+      for(const tip of group.tips) {
+        if(!tip.evidence?.connected || tip.c<.6 || !tip.color) continue;
+        const geometry=lengthGeometry(tip,an,rw,rh,desc.h*H,lashes.length,group.recovered?sourceRect:null);
+        if(!geometry||geometry.length<=0) continue;
+        const {x:tx,y:ty,ex,ey}=geometry;
+        const [r,g,b]=group.recovered?sampleObservedTipColor(gradedPixels,rw,rh,an,tip,sourceRect):tip.color;
+        // Fixed candidate set; continuous geometry, width and opacity. No
+        // slider-dependent seed count or fan, no minimum visible jump.
+        for(let k=0;k<6;k++) {
+          const a=k/6,beta=(k+1)/6;
+          c2x.strokeStyle=`rgba(${r},${g},${b},${.26*tip.c*lenK*(1-a)**2})`;
+          c2x.lineWidth=Math.max(.08,geometry.width*(1-a));
+          c2x.beginPath();c2x.moveTo(tx+(ex-tx)*a,ty+(ey-ty)*a);
+          c2x.lineTo(tx+(ex-tx)*beta,ty+(ey-ty)*beta);c2x.stroke();
+        }
+        drew=true;
+        lengthAttempts++;
+        if(extensions)extensions.push({...geometry,boundaryRecovery:!!tip.evidence.boundaryRecovery,x:tx+rx0,y:ty+ry0,ex:ex+rx0,ey:ey+ry0});
       }
       if (drew) {
         // Extension may reach slightly above the band — allow headroom.
-        if (buildBandMask(mx, rw, rh, lidOut, bandUpPx + maxLen, browOut, innerIsLeft, scale)) {
+        if (getBand(group.height,group.cacheKind)) {
           c2x.globalCompositeOperation = 'destination-in';
           c2x.drawImage(scratch.mask, 0, 0);
           c2x.globalCompositeOperation = 'source-over';
           tctx.save();
-          tctx.globalCompositeOperation = 'source-over';
+          tctx.globalCompositeOperation = group.composite;
           tctx.drawImage(scratch.c2, rx0, ry0);
           tctx.restore();
-          eyeRan.push('length');
+          if(!eyeRan.includes('length'))eyeRan.push('length');
         }
+      }
       }
     }
     tctx.restore(); // un-clip ROI
-    perEye.push({ usable: true, confidence: an.confidence, reason: an.reason, ran: eyeRan });
+    perEye.push({ usable: true, confidence: an.confidence, reason: an.reason, ran: eyeRan,lengthAttempts,
+      ...(extensions?{extensions}:{}),side:an.side });
     eyeRan.forEach((r) => { if (!ran.includes(r)) ran.push(r); });
   }
   const ms = (typeof performance !== 'undefined') ? performance.now() - t0 : 0;

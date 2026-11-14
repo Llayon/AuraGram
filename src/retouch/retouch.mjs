@@ -43,7 +43,7 @@ import {
   buildEyeAlpha
 } from './skinMask.mjs';
 import { describeEyes } from './eyeGeometry.mjs';
-import { analyzeEye } from './lashAnalysis.mjs';
+import { analyzeEye, LASH_ANALYSIS_VERSION } from './lashAnalysis.mjs';
 import { applyLashPass, isNeutralLashes } from './lashEnhancement.mjs';
 
 /** Nonlinear intensity curves (0..100 → 0..maxK). Monotonic by construction. */
@@ -88,6 +88,7 @@ export function createRetouchSession() {
     lashEyes: null,  // {left,right} eye descriptions (normalized)
     lashAn: null,    // {left,right} serializable analysis results
     lashC1: null, lashC2: null, lashMask: null,
+    lashBandCache: null, // fixed four small alpha-mask slots, <=1MiB total
     lastMaskMs: 0,
     lastRetouchMs: 0,
     lastDeredMs: 0,
@@ -188,13 +189,13 @@ export function createRetouchSession() {
 
   /**
    * G1c: lash analysis, once per photo. Grade- and resolution-independent by
-   * design (normalized geometry + fixed-size ROI bitmaps from the ORIGINAL),
+   * design (normalized geometry + native-resolution capped ROI from the ORIGINAL),
    * so slider moves and Preview/Export never re-run it. Returns true when
    * fresh analysis ran, false on warm cache hit.
    */
   function ensureLashAnalysis(face, src) {
-    const key = `${face.imageId}`;
-    if (S.lashKey === key && S.lashAn) return false;
+    const key = `${face.imageId}:${src.naturalWidth || src.width}x${src.naturalHeight || src.height}:${LASH_ANALYSIS_VERSION}:${JSON.stringify([face.regions.leftEye, face.regions.rightEye, face.regions.leftEyebrow, face.regions.rightEyebrow])}`;
+    if (S.lashKey === key && S.lashSource?.deref() === src && S.lashAn) return false;
     const t0 = performance.now();
     const m = faceMetrics(face.regions);
     const eyes = describeEyes(face.regions, m.w);
@@ -210,6 +211,7 @@ export function createRetouchSession() {
     S.lashEyes = eyes;
     S.lashAn = an;
     S.lashKey = key;
+    S.lashSource = new WeakRef(src);
     S.lastLashAnalyseMs = performance.now() - t0;
     return true;
   }
@@ -358,9 +360,10 @@ export function createRetouchSession() {
       if (S.lashEyes && S.lashAn) {
         const t1 = performance.now();
         // Three small ROI scratch buffers, reused across renders (L21).
-        const scratch = { c1: S.lashC1, c2: S.lashC2, mask: S.lashMask };
+        const scratch = { c1: S.lashC1, c2: S.lashC2, mask: S.lashMask,bandCache:S.lashBandCache };
         const res = applyLashPass(tctx, W, H, S.lashEyes, S.lashAn, lashes, scratch);
         S.lashC1 = scratch.c1; S.lashC2 = scratch.c2; S.lashMask = scratch.mask;
+        S.lashBandCache=scratch.bandCache;
         S.lastLashEnhanceMs = performance.now() - t1;
         res.ran.forEach((r) => { if (!ran.includes(r)) ran.push(r); });
         if (!ran.includes('lashes') && res.ran.length) ran.push('lashes');
@@ -454,7 +457,9 @@ export function createRetouchSession() {
     const canvases = [S.maskSkin, S.maskEyes, S.low, S.lowMasked, S.temp, S.dered, S.lashC1, S.lashC2, S.lashMask].filter(Boolean);
     let bytes = 0;
     for (const c of canvases) bytes += (c.width || 0) * (c.height || 0) * 4;
-    return { count: canvases.length, bytes };
+    const maskCacheBytes=(S.lashBandCache||[]).reduce((sum,e)=>sum+(e?.image?.data.byteLength||0),0);
+    const analysisBytes=Object.values(S.lashAn||{}).reduce((sum,a)=>sum+(a.retainedTypedArrayBytes||0),0);
+    return { count: canvases.length, bytes:bytes+maskCacheBytes+analysisBytes,maskCacheBytes,analysisBytes };
   }
 
   return {
@@ -463,8 +468,12 @@ export function createRetouchSession() {
     ensureLashAnalysis,
     lashInfo: () => (S.lashAn ? {
       key: S.lashKey,
-      left: { confidence: S.lashAn.left.confidence, reason: S.lashAn.left.reason, tips: S.lashAn.left.tips.length },
-      right: { confidence: S.lashAn.right.confidence, reason: S.lashAn.right.reason, tips: S.lashAn.right.tips.length }
+      left: { confidence: S.lashAn.left.confidence, reason: S.lashAn.left.reason, tips: S.lashAn.left.tips.length,
+        recoveredTips: S.lashAn.left.diagnostics?.boundaryContext?.recoveredTips || 0,
+        lengthAbstention: S.lashAn.left.diagnostics?.lengthAbstention || null },
+      right: { confidence: S.lashAn.right.confidence, reason: S.lashAn.right.reason, tips: S.lashAn.right.tips.length,
+        recoveredTips: S.lashAn.right.diagnostics?.boundaryContext?.recoveredTips || 0,
+        lengthAbstention: S.lashAn.right.diagnostics?.lengthAbstention || null }
     } : null),
     curves: { smoothCurve, antiredCurve, glowCurve, eyesCurve, blushCurve, sculptCurve },
     timings: () => ({ maskBuildMs: S.lastMaskMs, retouchMs: S.lastRetouchMs, deredMs: S.lastDeredMs, lashAnalyseMs: S.lastLashAnalyseMs, lashEnhanceMs: S.lastLashEnhanceMs }),

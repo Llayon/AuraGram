@@ -1,0 +1,17 @@
+{
+ "baseline":"b75bbb254b06113cc09fad83169b8ed9cdc5530a",
+ "method":"Primary original-only viewing of five full-photo previews, seven native eye views and extra native upper-outside context for31215869, before any detector/inference on these sources. Existing algorithms/older datasets known. Independent labels are not read for this primary screen.",
+ "limits":"No bare-lash/makeup/biological single-hair certification. Native image coordinates are source pixels, x-right/y-down; rectangles are viewing regions, never algorithm seeds or directions. No FaceMesh eligibility asserted from visual inspection.",
+ "faceMeshStatus":"UNTESTED","analysisStatus":"UNSEEN_BEFORE_FREEZE",
+ "views":[
+  {"file":"commons-radic-eyelashes.jpg","view":"visible-lid","status":"LOWER_LID_ORIENTATION_REFERENCE_NOT_UPPER_POSITIVE","assessment":"Clearly visible fine distal structures on the visible lower-lid side; many tips fade/out-of-focus. Useful local hair/reference challenge, not certification of upper-lid applicability."},
+  {"file":"pexels-22032198.jpg","view":"visible-eye","status":"UPPER_PROTECTED_OVERLAP_LOWER_CLEARER","assessment":"Upper fan is mainly projected across the eye opening or overlapping at the outer corner; lower hairs are clearer. Individual upper endpoint ownership and protected-region applicability require separate checks."},
+  {"file":"pexels-31215869.jpg","view":"side-eye-plus-upper-outside","status":"PROVISIONAL_VISIBLE_UPPER_DISTAL_ENDINGS","assessment":"Additional native context shows upper fan endings against skin. Several distal sections appear separated locally; proximal crossings/coating and bare/extension history remain unresolved. Source-only independent sparse labels may provide provisional endpoint controls; no coordinates forced here."},
+  {"file":"pexels-32526448.jpg","view":"both-eyes","status":"UPPER_ENDINGS_AMBIGUOUS_LOWER_DETAILS_NOT_UPPER_LABELS","assessment":"Upper shafts project into the eye opening under a merged dark margin; lower details more separable. Do not turn valid face geometry into guaranteed usable upper-ending evidence."},
+  {"file":"pexels-4611686.jpg","view":"both-eyes","status":"DOWNWARD_GAZE_OVERLAP_CHALLENGE","assessment":"Upper-lid fan is visible, but upper/lower overlap and the dark eye opening complicate exact tip assignment. Some outer skin-projected sections may be locally separable; need independent review and protection checks."}
+ ],
+ "negativeViewingRegions":[
+  {"file":"pexels-31215869.jpg","rect":[1650,1280,260,180],"role":"skin-texture/control, no resolved upper-lash endpoint asserted; not a claim of absence of fine body hairs"},
+  {"file":"pexels-31215869.jpg","rect":[2250,1250,300,120],"role":"brow/skin context; thin structures there do not by themselves establish eyelash ownership"}
+ ]
+}

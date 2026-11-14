@@ -1,0 +1,86 @@
+[
+  {
+    "file": "shaft-01-math.log.txt",
+    "sha256": "a07061ff25a9bb0ae6b65d3f766a0957af8925f35b9ac78217474cc1de1cb448"
+  },
+  {
+    "file": "shaft-02-chromium.log.txt",
+    "sha256": "dae1774b6870d7c982286457ae63f493d2bc6d1ef9ead918fe80c1a240db6fac"
+  },
+  {
+    "file": "shaft-02-webkit.log.txt",
+    "sha256": "caf2c27ee4f8369752f3f64cc605c1d0f2a00c541d282fb35e5ae73ad4c0c372"
+  },
+  {
+    "file": "shaft-03-unit.log.txt",
+    "sha256": "81e0093f1e4627d27ce60f7f81f644ee5d771f522e4eff53f620b9caa5a982c8"
+  },
+  {
+    "file": "shaft-04-browser.log.txt",
+    "sha256": "0937f63afa74d5d74d73e6d792b75218c9073a1b76bc798ad7e8eb0f63cf87b1"
+  },
+  {
+    "file": "shaft-05-math-continuity.log.txt",
+    "sha256": "8c95ddd4df1d0d932b1915863a7bd361ada3cec8edcc894dd7a77d1941d48c70"
+  },
+  {
+    "file": "shaft-06-unit-final.log.txt",
+    "sha256": "847b0aa3739b07e677aaf83f186cf08b40274674759e474c935753c6e0985f37"
+  },
+  {
+    "file": "shaft-07-chromium.log.txt",
+    "sha256": "dae1774b6870d7c982286457ae63f493d2bc6d1ef9ead918fe80c1a240db6fac"
+  },
+  {
+    "file": "shaft-07-webkit.log.txt",
+    "sha256": "caf2c27ee4f8369752f3f64cc605c1d0f2a00c541d282fb35e5ae73ad4c0c372"
+  },
+  {
+    "file": "shaft-08-plots.log.txt",
+    "sha256": "4fe8d5208faae5955f0f1748bdbe61462caf39fc568637cbb818ab1e4aab9afa"
+  },
+  {
+    "file": "shaft-09-curation.log.txt",
+    "sha256": "556d277e553d5a2941dccb5efb602a39f4e3626615782acec4fb2b39a5dec570"
+  },
+  {
+    "file": "shaft-10-chromium.log.txt",
+    "sha256": "dae1774b6870d7c982286457ae63f493d2bc6d1ef9ead918fe80c1a240db6fac"
+  },
+  {
+    "file": "shaft-10-webkit.log.txt",
+    "sha256": "caf2c27ee4f8369752f3f64cc605c1d0f2a00c541d282fb35e5ae73ad4c0c372"
+  },
+  {
+    "file": "shaft-11-chromium.log.txt",
+    "sha256": "dae1774b6870d7c982286457ae63f493d2bc6d1ef9ead918fe80c1a240db6fac"
+  },
+  {
+    "file": "shaft-11-webkit.log.txt",
+    "sha256": "caf2c27ee4f8369752f3f64cc605c1d0f2a00c541d282fb35e5ae73ad4c0c372"
+  },
+  {
+    "file": "shaft-12-performance.log.txt",
+    "sha256": "bc911bdb7990bfe29515fe3a95a6764bf9a098b2138fa3255cf1a7378c8823c7"
+  },
+  {
+    "file": "shaft-13-build.log.txt",
+    "sha256": "2c892444339519ac0011ab26ddd554121044d77781c9a615adc9ee8d3a4b9295"
+  },
+  {
+    "file": "shaft-13-checksite.log.txt",
+    "sha256": "bf8845d07dbf47c2c9bd59eaf5726740bfce33e55343cbb926fc1610caeadb7e"
+  },
+  {
+    "file": "shaft-13-package.log.txt",
+    "sha256": "02f65488c4539214059d054bf7608045810e54ff484ed1eece4ac0fd4a39d4ce"
+  },
+  {
+    "file": "shaft-14-format.log.txt",
+    "sha256": "2a599ac88c0165620b77056768bd77028730721e3f0d916511526dd7f0bad7ca"
+  },
+  {
+    "file": "shaft-15-format.log.txt",
+    "sha256": "979cfee03fd09427fee630f777d1ebb19eccc43eb6b50cd27a83b446cf876136"
+  }
+]

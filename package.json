@@ -4,7 +4,7 @@
   "private": true,
   "description": "AuraGram Studio - local photo editor with face-aware skin and lash retouch.",
   "scripts": {
-    "test": "node --test tests/unit.test.js tests/vision.test.mjs tests/retouch.test.mjs tests/g1b1.test.mjs tests/lashes.test.mjs tests/exportPreparation.test.mjs tests/history-session.test.js tests/styles.test.js",
+    "test": "node --test tests/unit.test.js tests/vision.test.mjs tests/retouch.test.mjs tests/g1b1.test.mjs tests/lashes.test.mjs tests/exportPreparation.test.mjs tests/history-session.test.js tests/styles.test.js tests/visual/lash-spectrum.test.mjs tests/visual/native-shaft.test.mjs tests/visual/lash-domain.test.mjs tests/visual/lash-downward.test.mjs tests/visual/lash-break.test.mjs tests/visual/lash-spatial-ending.test.mjs tests/visual/lash-spatial-cohort-gate.test.mjs tests/visual/lash-native-path.test.mjs tests/visual/lash-side-closure.test.mjs tests/visual/lash-spatial-match.test.mjs tests/visual/lash-native-cell.test.mjs tests/visual/lash-proximal-diagnosis.test.mjs tests/visual/lash-proximal-corridor.test.mjs tests/visual/lash-baseline-association.test.mjs tests/visual/lash-multiscale-path.test.mjs tests/visual/lash-scale-correspondence.test.mjs tests/visual/lash-distal-body-start.test.mjs",
     "test:e2e": "node scripts/run-e2e.cjs",
     "build:css": "tailwindcss -c tailwind.config.cjs -i src/utilities.input.css -o src/utilities.css --minify",
     "build": "npm run build:css && node scripts/vendor-ui.cjs",

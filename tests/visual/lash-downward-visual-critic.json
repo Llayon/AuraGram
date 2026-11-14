@@ -1,0 +1,533 @@
+{
+  "schema": "auragram-independent-downward-visual-critic-v1",
+  "decision": "REJECT PRODUCT ADOPTION; LENGTH HOLD; G1c.1 NOT CLOSED",
+  "scope": "Actual V1/V3 C/W native overlays, working response/connectivity maps and selected unannotated160px original crops reviewed. No effect was rendered by prototype; diagnostic strokes are overlays, not drawn product eyelashes. No browser/inference run or label/protocol/product edit by critic.",
+  "references": [
+    {
+      "path": "tests/visual/out/downward-04-audit.json",
+      "sha256": "350000e94444a97dc1c6b6cc26deb12d48f78db4e3199d30921c112e56fccee2"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/manifest-chromium.json",
+      "sha256": "ed119ee6cf4478027cd7f87ae257b1cba7381573e2d5aed2eb896cf8eb25022b"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/manifest-webkit.json",
+      "sha256": "65897688eb1f469edb7036c44bc8826cadae76b872889438be67cdd8fdb859f9"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/manifest-chromium.json",
+      "sha256": "ce317789f4452ad5fdbd1b5e655a4381a8383e1682abfa48e849fffa60daaab6"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/manifest-webkit.json",
+      "sha256": "84b2f337ea183820b2c42ad7f0d2a8ae6d71b01c3defc14aa45d4e3443160bf1"
+    }
+  ],
+  "inspectedImages": [
+    {
+      "path": "tests/visual/out/downward-01-observations/chromium-pexels-21792059.jpg-right-all-hypotheses-native.png",
+      "sha256": "3d18c8e62a7656a632e8899a6313eb752c67086611627aa0173d78f049bad42e"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/chromium-pexels-21792059.jpg-right-ridge.png",
+      "sha256": "d631f26bce3d5405b9b2b53b162f075c819e13a391625e585e750a6d52fd9c14"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/chromium-pexels-21792059.jpg-right-observed-connected.png",
+      "sha256": "92d340355b11b68e5df1a9e9a56b92814c8946ad3ef7315d1aab3491b07c79fc"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/webkit-pexels-21792059.jpg-right-all-hypotheses-native.png",
+      "sha256": "adfb3638db967cfab73bfcf038defe8ffb3f19d4e8880424eb76f924d83aef77"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/webkit-pexels-21792059.jpg-right-ridge.png",
+      "sha256": "6aa65c76a95d947034073c0765e269b74d508e93672cfa398bd241ddeee8ee86"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/webkit-pexels-21792059.jpg-right-observed-connected.png",
+      "sha256": "cf9a6271ba298777fab297582d0e226e36d7c59c7249c43fa8fc15933a101d0a"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/webkit-pexels-21792059.jpg-right-trace0-original160.png",
+      "sha256": "eae22dc675081f9cd023787dc87f7be0319f9d5b658a1834657622acd5f0ed6d"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/chromium-pexels-7123010.jpg-left-all-hypotheses-native.png",
+      "sha256": "d9c5f35a4c5de9ad9b2726fc2f43c5475dbe37aaa2f2d370327dae089ca81ed0"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/chromium-pexels-7123010.jpg-right-all-hypotheses-native.png",
+      "sha256": "6f53a4f1bc4680d0e85e32f08ff52d88bdf58998d5000ea2681e1a9332a67608"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/chromium-hair-occlusion.jpg-left-all-hypotheses-native.png",
+      "sha256": "0304290ac5f15362382f6860d34f80c2b36469af05b92c8373740215a3659998"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/chromium-pexels-32526448.jpg-right-all-hypotheses-native.png",
+      "sha256": "3787841aacb67fed56d2be2b1d9e26a244f657c2ec812d755bf5c4f94593e0eb"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/webkit-pexels-7123010.jpg-left-all-hypotheses-native.png",
+      "sha256": "7fb8cd9c7bdb95362047f5383c4063ce8585683b360b56a578a96cf5f2aeee28"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/webkit-pexels-7123010.jpg-right-all-hypotheses-native.png",
+      "sha256": "390b745d09a1ed5906d160de408751a58240e62aec216d70593c63aad508fb76"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/webkit-hair-occlusion.jpg-left-all-hypotheses-native.png",
+      "sha256": "70ba97bb4e8d2bbf103c160c841b3b54ff0c4f8f61f29abdb2a1a7075a52b530"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/webkit-pexels-32526448.jpg-right-all-hypotheses-native.png",
+      "sha256": "a6b620115d6480e990021d63c22e8225615b76cfb6d0cf957bf3b0ede13cb80e"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/chromium-pexels-7123010.jpg-left-observed-connected.png",
+      "sha256": "91add75a61f9f9ac268bf006e3bccc45074be0d98434ee8dd3e936464fe29b92"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/chromium-hair-occlusion.jpg-left-observed-connected.png",
+      "sha256": "140329b702fbedf7e20b95c38386b091704d814a9a0c4dc79d017d2f649fa55b"
+    },
+    {
+      "path": "tests/visual/out/downward-01-observations/chromium-pexels-32526448.jpg-right-observed-connected.png",
+      "sha256": "68a5841ef70f5506b7bda50b6874052e1b70932c198e3872ef332daf5899ac3a"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-pexels-21792059.jpg-right-all-hypotheses-native.png",
+      "sha256": "e3d453b5c0779c118624bf7176c798bd53680fcaefbfcbc322b64507684da08b"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-pexels-21792059.jpg-right-ridge.png",
+      "sha256": "d631f26bce3d5405b9b2b53b162f075c819e13a391625e585e750a6d52fd9c14"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-pexels-21792059.jpg-right-observed-connected.png",
+      "sha256": "4c092afbbefba99c1436d5cb82571b81a496a21f8d477c3024a0162ab3766f0b"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/webkit-pexels-21792059.jpg-right-all-hypotheses-native.png",
+      "sha256": "9c65a58cb1cb0074b48f87c19c17bcd608540198ea54b483d53956910cf3d34e"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/webkit-pexels-21792059.jpg-right-ridge.png",
+      "sha256": "6aa65c76a95d947034073c0765e269b74d508e93672cfa398bd241ddeee8ee86"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/webkit-pexels-21792059.jpg-right-observed-connected.png",
+      "sha256": "966da7ac1b2964524617dcb60450a8fdd9d4eec71dfbffe7fd9c0d87f7bd59dc"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/webkit-pexels-21792059.jpg-right-trace0-original160.png",
+      "sha256": "eae22dc675081f9cd023787dc87f7be0319f9d5b658a1834657622acd5f0ed6d"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-pexels-7123010.jpg-left-all-hypotheses-native.png",
+      "sha256": "fe28de3e51de5d90d1cf150c1067c8121ca560d3328f322ff0084356f5d0780e"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-pexels-7123010.jpg-right-all-hypotheses-native.png",
+      "sha256": "89b0ed89d524fda40897ba4a1b175f1ea37a94241b18b178946f824f392e705f"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-hair-occlusion.jpg-left-all-hypotheses-native.png",
+      "sha256": "ff0feab43cd03772bc5dc0f096d92b67fc094af9e3cd435d039962b92c3d379b"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-pexels-32526448.jpg-right-all-hypotheses-native.png",
+      "sha256": "6b60ee3d38bcdb8be063d0dc0c22f05e888feb018202e08da283b638c03a2492"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/webkit-pexels-7123010.jpg-left-all-hypotheses-native.png",
+      "sha256": "89fb6fdeec23ce4584580d75e29d25a50e9e222032e30949a10cf647c93abcb1"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/webkit-pexels-7123010.jpg-right-all-hypotheses-native.png",
+      "sha256": "f77ed07d0aa91e3acbddec5ed04508f61b604f4b70cc89621733ab7310064baa"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/webkit-hair-occlusion.jpg-left-all-hypotheses-native.png",
+      "sha256": "0b1a54ecee9583814fd04d17e2a45bebb69eb1500d879e1f4500d5bd7033711a"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/webkit-pexels-32526448.jpg-right-all-hypotheses-native.png",
+      "sha256": "0f28feccd710740e6df5f858a55bcaf1fd808eba15f36d309f885701aaa4fd25"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-pexels-7123010.jpg-left-observed-connected.png",
+      "sha256": "28c7a0eaf44928e500590b71936ba74bcde98bd381203466ba81efac70769ac8"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-hair-occlusion.jpg-left-observed-connected.png",
+      "sha256": "5f29ed0b8cc6352f457ff12739aab90c46d709bd53e67a05a324b9b39f694b91"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-pexels-32526448.jpg-right-observed-connected.png",
+      "sha256": "00ad0ebe0ff95ccb9aa12cb04a886277dd6a5b63eb7950e5357cb8a8b635a48d"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-pexels-21792059.jpg-right-trace0-original160.png",
+      "sha256": "28a7221c52ff817cc98a6702c462907e01d17497c758ad65b4ee810bbb8c2d60"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-pexels-7123010.jpg-left-trace0-original160.png",
+      "sha256": "32f73c10b6bc7b9f19aebb3ca832e23bef46bd046183e95ca4256a7344e738c4"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-hair-occlusion.jpg-left-trace0-original160.png",
+      "sha256": "20af98a7cf8cf520418b4c37e84a6702a540a5c3eda25233a9b82935a1d5f0a0"
+    },
+    {
+      "path": "tests/visual/out/downward-03-observations/chromium-pexels-32526448.jpg-right-trace0-original160.png",
+      "sha256": "6f2892a5ce4ee8bf216da0699142a5aa548528ae625ce695bcdc5cd48b5122b6"
+    }
+  ],
+  "correctPalette": "Native overlay cyan squares=terminal-hypothesis tipNative (including root stubs), green=qualified path, orange=protected/uncertain rejected path, red=other rejected path; white circles=provisional source labels. Working observed-connected map blue=root pixels,green=root-connected,gray=active observed evidence. Earlier shorthand cyan root seeds for native overlays was corrected before this artifact.",
+  "rawResults": [
+    {
+      "version": "V1",
+      "engine": "chromium",
+      "traces": 632,
+      "qualified": 0
+    },
+    {
+      "version": "V1",
+      "engine": "webkit",
+      "traces": 773,
+      "qualified": 0
+    },
+    {
+      "version": "V3",
+      "engine": "chromium",
+      "traces": 532,
+      "qualified": 0
+    },
+    {
+      "version": "V3",
+      "engine": "webkit",
+      "traces": 655,
+      "qualified": 0
+    }
+  ],
+  "auditReplay": {
+    "recorded": {
+      "eyes": 64,
+      "tolerance": 1e-09,
+      "maxNumericDifference": 4.496403249731884e-15,
+      "structuralAgreement": true
+    },
+    "independentInputValidation": "All64 frozen Float32 luma buffers match saved SHA256 and working dimension byte lengths. Structural replay values are reported by frozen audit; numeric tolerance1e-9/max4.4964e-15 is not byte-identical arithmetic.",
+    "interpretation": "Reproducibility is not positive real-image terminal accuracy."
+  },
+  "posthoc217Associations": [
+    {
+      "version": "V1",
+      "engine": "chromium",
+      "labels": [
+        {
+          "id": "F2-217-L1",
+          "side": "right",
+          "tip": {
+            "x": 1240,
+            "y": 2088
+          },
+          "uncertainty": 5,
+          "workingPoint": {
+            "x": 179.76175605817613,
+            "y": 115.6910109552295
+          },
+          "nearestAny": {
+            "id": 6,
+            "distance": 156.9165356252554,
+            "lengthNative": 99.76040655999967,
+            "reasons": [
+              "distal-branch-ambiguity",
+              "multiple-root-associations"
+            ],
+            "qualified": false
+          },
+          "nearestQualified": null,
+          "localRoundedResponse": 0.021195005625486374,
+          "localActive": true,
+          "localRootConnected": false,
+          "closestConnectedNative": 156.9165356252554
+        },
+        {
+          "id": "F2-217-L2",
+          "side": "right",
+          "tip": {
+            "x": 1184,
+            "y": 2078
+          },
+          "uncertainty": 5,
+          "workingPoint": {
+            "x": 168.0952233163935,
+            "y": 113.61696561120581
+          },
+          "nearestAny": {
+            "id": 6,
+            "distance": 108.0238005660364,
+            "lengthNative": 99.76040655999967,
+            "reasons": [
+              "distal-branch-ambiguity",
+              "multiple-root-associations"
+            ],
+            "qualified": false
+          },
+          "nearestQualified": null,
+          "localRoundedResponse": 0.03967255353927612,
+          "localActive": true,
+          "localRootConnected": false,
+          "closestConnectedNative": 108.0238005660364
+        }
+      ]
+    },
+    {
+      "version": "V1",
+      "engine": "webkit",
+      "labels": [
+        {
+          "id": "F2-217-L1",
+          "side": "right",
+          "tip": {
+            "x": 1240,
+            "y": 2088
+          },
+          "uncertainty": 5,
+          "workingPoint": {
+            "x": 179.77346649367936,
+            "y": 115.20146566429057
+          },
+          "nearestAny": {
+            "id": 5,
+            "distance": 220.6485844821723,
+            "lengthNative": 11.42625111037302,
+            "reasons": [
+              "short-observed-path",
+              "protected-or-uncertain-tip",
+              "distal-branch-ambiguity",
+              "width-unresolved"
+            ],
+            "qualified": false
+          },
+          "nearestQualified": null,
+          "localRoundedResponse": 0.05748375132679939,
+          "localActive": true,
+          "localRootConnected": false,
+          "closestConnectedNative": 220.6485844821723
+        },
+        {
+          "id": "F2-217-L2",
+          "side": "right",
+          "tip": {
+            "x": 1184,
+            "y": 2078
+          },
+          "uncertainty": 5,
+          "workingPoint": {
+            "x": 167.89508948261548,
+            "y": 113.09200107425211
+          },
+          "nearestAny": {
+            "id": 3,
+            "distance": 181.24171549087896,
+            "lengthNative": 23.70269699530172,
+            "reasons": [
+              "protected-or-uncertain-tip"
+            ],
+            "qualified": false
+          },
+          "nearestQualified": null,
+          "localRoundedResponse": 0.04163607954978943,
+          "localActive": true,
+          "localRootConnected": false,
+          "closestConnectedNative": 181.24171549087896
+        }
+      ]
+    },
+    {
+      "version": "V3",
+      "engine": "chromium",
+      "labels": [
+        {
+          "id": "F2-217-L1",
+          "side": "right",
+          "tip": {
+            "x": 1240,
+            "y": 2088
+          },
+          "uncertainty": 5,
+          "workingPoint": {
+            "x": 179.76175605817613,
+            "y": 115.6910109552295
+          },
+          "nearestAny": {
+            "id": 0,
+            "distance": 184.2932925182828,
+            "lengthNative": 46.499903303941636,
+            "reasons": [
+              "terminal-localization-unresolved",
+              "forward-support-not-an-ending"
+            ],
+            "qualified": false
+          },
+          "nearestQualified": null,
+          "localRoundedResponse": 0.021195005625486374,
+          "localActive": true,
+          "localRootConnected": false,
+          "closestConnectedNative": 184.2932925182828
+        },
+        {
+          "id": "F2-217-L2",
+          "side": "right",
+          "tip": {
+            "x": 1184,
+            "y": 2078
+          },
+          "uncertainty": 5,
+          "workingPoint": {
+            "x": 168.0952233163935,
+            "y": 113.61696561120581
+          },
+          "nearestAny": {
+            "id": 0,
+            "distance": 166.96203285615056,
+            "lengthNative": 46.499903303941636,
+            "reasons": [
+              "terminal-localization-unresolved",
+              "forward-support-not-an-ending"
+            ],
+            "qualified": false
+          },
+          "nearestQualified": null,
+          "localRoundedResponse": 0.03967255353927612,
+          "localActive": true,
+          "localRootConnected": false,
+          "closestConnectedNative": 166.96203285615056
+        }
+      ]
+    },
+    {
+      "version": "V3",
+      "engine": "webkit",
+      "labels": [
+        {
+          "id": "F2-217-L1",
+          "side": "right",
+          "tip": {
+            "x": 1240,
+            "y": 2088
+          },
+          "uncertainty": 5,
+          "workingPoint": {
+            "x": 179.77346649367936,
+            "y": 115.20146566429057
+          },
+          "nearestAny": {
+            "id": 9,
+            "distance": 219.93633066865428,
+            "lengthNative": 4.740539399060253,
+            "reasons": [
+              "short-observed-path",
+              "protected-or-uncertain-tip"
+            ],
+            "qualified": false
+          },
+          "nearestQualified": null,
+          "localRoundedResponse": 0.05748375132679939,
+          "localActive": true,
+          "localRootConnected": false,
+          "closestConnectedNative": 222.3429553386617
+        },
+        {
+          "id": "F2-217-L2",
+          "side": "right",
+          "tip": {
+            "x": 1184,
+            "y": 2078
+          },
+          "uncertainty": 5,
+          "workingPoint": {
+            "x": 167.89508948261548,
+            "y": 113.09200107425211
+          },
+          "nearestAny": {
+            "id": 2,
+            "distance": 189.8130050414769,
+            "lengthNative": 11.426251110373181,
+            "reasons": [
+              "short-observed-path",
+              "protected-or-uncertain-tip"
+            ],
+            "qualified": false
+          },
+          "nearestQualified": null,
+          "localRoundedResponse": 0.04163607954978943,
+          "localActive": true,
+          "localRootConnected": false,
+          "closestConnectedNative": 190.53539795543745
+        }
+      ]
+    }
+  ],
+  "visualFindings": [
+    {
+      "context": "217right both engines, V1 vs V3",
+      "observation": "Real original distal fan and marked visible-ending neighborhoods remain present. Root-neighborhood hypotheses predominantly end near lid as short stubs; even longer C paths stop well before the two white circles. Maps contain distal observed evidence without root connection. V3 has less useful root reach to these sparse labels.",
+      "meaning": "Not missing local response/no-lash evidence. Image response alone and graph-neighborhood attachment are distinct. Local rounded responses exceed.006 at both labels in both versions; active=true/rootConnected=false. Neither synthetic positive success nor fewer traces supplies useful real terminal localization."
+    },
+    {
+      "context": "V1/V3 revised graph comparison",
+      "observation": "Nearest root-connected distances to217 labels: C157/108?184/167nativepx; W221/181?222/191nativepx (rounded).",
+      "meaning": "V3 combined graph revisions worsen this sparse connection measure. Do not assign causality solely to NMS without separating thinning, edge reduction and seed changes. Large miss distances exceed5px provisional annotation uncertainty, but no exhaustive recall rate is implied."
+    },
+    {
+      "context": "White712 both eyes, C/W",
+      "observation": "Near-arc hypotheses lie on/near thick white liner, dark merged fan and crossing structures. Selected unannotated crop remains ambiguous, and paths are mostly short/protected rejects.",
+      "meaning": "Universal abstention does not certify true-negative precision, no-lash absence or identification of foreign hair. Do not weaken guards based on these rejected stubs."
+    },
+    {
+      "context": "hairleft C/W",
+      "observation": "Predicted upper-arc neighborhood overlays actual covering hair; working image contains abundant active ridge evidence. Native root stubs on hair do not provide visible eye/root ownership.",
+      "meaning": "Geometric neighborhood seeds cannot identify anatomical attachment; existing product occlusion guard must remain."
+    },
+    {
+      "context": "325right C/W",
+      "observation": "Observed upper fan projects over iris/sclera and frozen visible endings remain inside protected opening. Automatic hypotheses cluster near upper arc/reflections, predominantly protected or short.",
+      "meaning": "No safe target established; neither graph activity nor original visible lashes permit painting within protected opening."
+    },
+    {
+      "context": "Selected original160 crops",
+      "observation": "Originals show real coated/merged/overlapping shafts and hair/reflection/liner texture beneath graph stubs. No new image detail or natural extension is demonstrated.",
+      "meaning": "First6 crops are predetermined ordering views, not exhaustive detail review; full-eye overlays retain other traces, including longer unqualified C217 paths."
+    }
+  ],
+  "safetyAndBenefit": "No qualified observation in any source/eye/version; no visual naturalness acceptance. No artificial new product eyelashes or effect artifacts can be assessed from an observation-only no-render prototype. Protecting all candidates by abstention is conservative but not efficacy recovery.",
+  "nextMinimalExperiment": "If continuing research, freeze a graph-break census linking automatic root-reachable components and distal observed components: identify where observed-neighbor evidence loses eligibility, with gate-specific orientation/normal/NMS/connection diagnostics and original source patches. Do not invent gap segments, feed labels as graph seeds, lower thresholds or render effects. Preserve all V1/V2/V3 failures and adversarial controls.",
+  "immutableReferences": [
+    {
+      "path": "tests/visual/lash-downward-protocol.json",
+      "sha256": "7ff4778a30cc1d7147c34217dc9f04ed3aaa8ebab993e203e4ed7b1cf2661363"
+    },
+    {
+      "path": "tests/visual/lash-freeend-independent-labels.json",
+      "sha256": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800"
+    },
+    {
+      "path": "tests/visual/lash-freeend2-independent-labels.json",
+      "sha256": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810"
+    },
+    {
+      "path": "tests/visual/lash-downward-code-critic.json",
+      "sha256": "e7997df73c4ab5c1ecfa6de5d977b0858cf65e2440eccd082799ee830bedd537"
+    },
+    {
+      "path": "tests/visual/lash-downward-fixer-critic.json",
+      "sha256": "38e73464eaef77e03bcd7fd6d9ac31315a808d2933a03386c760fca5f4a12135"
+    }
+  ]
+}
