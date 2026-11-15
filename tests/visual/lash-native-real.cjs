@@ -25,11 +25,15 @@ async function main(){
  if(!Object.hasOwn(frozen.inputs,input.labels))throw Error('Labels not covered by freeze');
  const labels=JSON.parse(fs.readFileSync(input.labels));
  const sourcePath=path.join(input.sourceDirectory,labels.file),source=fs.readFileSync(sourcePath);
- if(hash(source)!==frozen.sourceSHA256||hash(source)!==labels.sourceSHA256)throw Error('Source changed');
+ const sourceDigest=frozen.sourceSHA256??frozen.sourceHashes?.[labels.file];
+ if(frozen.sourceSHA256&&frozen.sourceHashes?.[labels.file]&&frozen.sourceSHA256!==frozen.sourceHashes[labels.file])throw Error('Conflicting frozen source digests');
+ if(hash(source)!==sourceDigest||hash(source)!==labels.sourceSHA256)throw Error('Source changed');
  const modules=['src/retouch/lashAnalysis.mjs','src/retouch/eyeGeometry.mjs','src/vision/faceGeometry.mjs','tests/visual/lash-native-path.mjs','tests/visual/lash-coarse-route.mjs','tests/visual/lash-multiscale-path.mjs','tests/visual/lash-scale-correspondence.mjs','tests/visual/lash-distal-body-start.mjs','tests/visual/lash-native-cell.mjs','tests/visual/lash-subpixel-probe.mjs','tests/visual/lash-subpixel-center.mjs','tests/visual/lash-native-shaft.mjs','tests/visual/lash-spatial-ending.mjs','tests/visual/lash-side-closure.mjs','tests/visual/lash-endpoint-profile.mjs'];
  fs.mkdirSync(output,{recursive:true});
  const protocol={distalBodyStart,multiscale,initializeCell,kind:'development-diagnostic-not-acceptance',baseline:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceSHA256:hash(source),labelInputs:frozen.inputs,moduleSHA256:Object.fromEntries(modules.map(f=>[f,hash(fs.readFileSync(f))])),runnerSHA256:hash(fs.readFileSync(__filename)),maxSide:224,seedLimit:128,annotationsUsedAsTraceInput:false,independentCritique:'not-completed',eligibility:'unqualified-positive-lead; not held out'};
  protocol.caseManifest=caseFile;protocol.caseManifestSHA256=caseBytes?hash(caseBytes):null;
+ protocol.sourceRole=labels.role;
+ protocol.eligibility='unqualified-development-diagnostic; not held out';
  fs.writeFileSync(path.join(output,'protocol.json'),JSON.stringify(protocol,null,2)+'\n',{flag:'wx'});
  const server=spawn(process.execPath,['tests/static-server.cjs','0'],{windowsHide:true,stdio:['ignore','pipe','inherit']});
  try{

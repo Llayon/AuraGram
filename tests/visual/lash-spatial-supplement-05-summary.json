@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-16",
+  "stage": "original-only-development-screening",
+  "detectorExecuted": false,
+  "validationViewsOpened": false,
+  "identityReview": "pending; no face identity matching performed",
+  "qualifiedPositiveCount": 0,
+  "inputs": {
+    "acquisition": {
+      "path": "tests/visual/out/spatial-supplement-05/downloads.json",
+      "sha256": "fab8eb60b284882b756a7266f1fbb5ff933f727083692613ccf86b94644e07c3"
+    },
+    "chromium": {
+      "path": "tests/visual/out/spatial-supplement-05-chromium/screening.json",
+      "sha256": "c4e838d2868eaeb93713bb41d79b81590e8328277411bf2ad9af23cd9616696f"
+    },
+    "webkit": {
+      "path": "tests/visual/out/spatial-supplement-05-webkit/screening.json",
+      "sha256": "ba0e4ed6ce1842136f2d016fbbebd927dbb6548105efdf26ca92e29acb0d0156"
+    }
+  },
+  "sources": [
+    {
+      "id": "37686910",
+      "file": "pexels-37686910.jpg",
+      "page": "https://www.pexels.com/photo/close-up-portrait-of-a-young-woman-with-flowing-hair-37686910/",
+      "author": "Alina Degli",
+      "split": "development",
+      "sourceSHA256": "76660e803157994d2677a02fdcb412c0a405f3f0eb390fddf7b97d84fef2a4b2",
+      "downloadStatus": "downloaded",
+      "downloadError": null,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "positiveQualified": false,
+      "qualification": "unqualified-positive-lead",
+      "note": "Open eyes. Left crop has sparse separated projections, right crop is dim and grainy; five unambiguous upper endings on each evaluated eye not established."
+    },
+    {
+      "id": "18574102",
+      "file": "pexels-18574102.jpg",
+      "page": "https://www.pexels.com/photo/head-shot-18574102/",
+      "author": "Eden Kefale",
+      "split": "development",
+      "sourceSHA256": null,
+      "downloadStatus": "download-failed",
+      "downloadError": "HTTP 404",
+      "faceMesh": {
+        "chromium": "download-failed",
+        "webkit": "download-failed"
+      },
+      "positiveQualified": false,
+      "qualification": "download-failed",
+      "note": "HTTP404. No original pixels, FaceMesh, substitute geometry or annotation."
+    },
+    {
+      "id": "29117992",
+      "file": "pexels-29117992.jpg",
+      "page": "https://www.pexels.com/photo/portrait-of-woman-with-curly-hair-in-soft-light-29117992/",
+      "author": "Gisele Seidel",
+      "split": "development",
+      "sourceSHA256": "aa8fa316fb9db9a671778224185ac56e3c9eb8852ae3d8c5839d623708118a79",
+      "downloadStatus": "downloaded",
+      "downloadError": null,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "positiveQualified": false,
+      "qualification": "hard-control-lead",
+      "note": "Hair crosses the left eye and its upper-lid region; right upper projections are visible but shadowed. No positive quota claim."
+    },
+    {
+      "id": "14818485",
+      "file": "pexels-14818485.jpg",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-woman-s-face-14818485/",
+      "author": "Alexander Krivitskiy",
+      "split": "development",
+      "sourceSHA256": "491f631d2cbe453c9ea6fca37ebf7410b21763687f9dbfbf271d7a6baf536965",
+      "downloadStatus": "downloaded",
+      "downloadError": null,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "positiveQualified": false,
+      "qualification": "hard-control-lead",
+      "note": "Left-eye ROI is substantially occupied by overlying hair. Right eye is noisy/soft with dense upper band. FaceMesh ready does not establish visible upper tips."
+    },
+    {
+      "id": "20053159",
+      "file": "pexels-20053159.jpg",
+      "page": "https://www.pexels.com/photo/eye-and-face-of-woman-20053159/",
+      "author": "juliane Monari",
+      "split": "development",
+      "sourceSHA256": "b09e0ef4b14ed30401a9ac0bc4df85180139d6eaee584e20d72fe64ff576a0eb",
+      "downloadStatus": "downloaded",
+      "downloadError": null,
+      "faceMesh": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      },
+      "positiveQualified": false,
+      "qualification": "facemesh-ineligible-hard-lead",
+      "note": "Tightly cropped makeup portrait; no_face in both actual engines. Keep failure without manual geometry."
+    },
+    {
+      "id": "13722239",
+      "file": "pexels-13722239.jpg",
+      "page": "https://www.pexels.com/photo/grayscale-photo-of-a-woman-s-eyes-13722239/",
+      "author": "Leticia Rodrigues",
+      "split": "development",
+      "sourceSHA256": "c2d001d753cce02a0b2e8ec137a6f4f24528308aa62bcd51d6fd30a6780623b1",
+      "downloadStatus": "downloaded",
+      "downloadError": null,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "positiveQualified": false,
+      "qualification": "hard-control-lead",
+      "note": "Dense, strongly grouped upper structures and high-contrast makeup context; partial clothing/arm framing. No assertion of biological ownership, natural lashes or five-tip positive qualification."
+    }
+  ],
+  "decision": "DATA-INSUFFICIENT / LENGTH HOLD"
+}

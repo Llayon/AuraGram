@@ -1,0 +1,493 @@
+{
+  "kind": "development-control-diagnostic-not-detector-acceptance",
+  "algorithm": "unchanged-fixed-multiscale-distal-body",
+  "limitations": [
+    "Prototype never grants terminal status; zero approvals verifies refusal plumbing, not useful recognition or specificity.",
+    "Provisional uncertainty regions are not exhaustive biological ground truth.",
+    "Repeated seeds and closure profiles are not distinct structures."
+  ],
+  "cases": {
+    "14818485": {
+      "labelSHA256": "c7139ac722af4e14859748fa1942f957719b1d4ce3c9869ca5da0de16dd65e93",
+      "engines": {
+        "chromium": {
+          "nativeSHA256": "37abc4df872b694f883b2b5cabfc2bc06171cfd9d981f52a437b7b11071ef268",
+          "repeatSHA256": "0b5ccd6dfcf8b325d49f0aa7b4b11ee8cbd0ce31ce81cbc0af2e25d148619307",
+          "endingSHA256": "d3f29266e5b8497f6a33b07ecec43563e483f1918068e4ad3dd79e9d5a0310fc",
+          "deterministicExcludingTiming": true,
+          "nativeStats": {
+            "left": {
+              "seeds": 0,
+              "statusCounts": {},
+              "reasons": {},
+              "coarseConnected": 0,
+              "proximalConnected": 0,
+              "accepted": 0,
+              "baselineTips": 0,
+              "baselineIdentical": null
+            },
+            "right": {
+              "seeds": 142,
+              "statusCounts": {
+                "ambiguous": 128,
+                "censored": 14
+              },
+              "reasons": {
+                "distal-start-insufficient-distal-body-cells": 52,
+                "distal-start-coarse-distal-stop-unresolved": 9,
+                "native-cell-one-sided-edge": 13,
+                "unobserved-coarse-link": 23,
+                "native-cell-multiple-supported-cell-lobes": 13,
+                "multiple-coarse-continuations": 1,
+                "native-cell-multiple-valleys": 1,
+                "native-cell-search-boundary": 7,
+                "native-cell-weak-valley": 4,
+                "coarse-connection-native-ownership-unverified": 5,
+                "seed-budget": 14
+              },
+              "coarseConnected": 9,
+              "proximalConnected": 0,
+              "accepted": 0,
+              "baselineTips": 0,
+              "baselineIdentical": true,
+              "analysisMs": 210.7000000178814
+            }
+          },
+          "endingStats": {
+            "left": {
+              "records": 1,
+              "statuses": {
+                "not-inspected": 1
+              },
+              "reasons": {
+                "source-analysis-refused:crossing-structures": 1
+              },
+              "closureProfileCounts": {},
+              "accepted": 0
+            },
+            "right": {
+              "records": 142,
+              "statuses": {
+                "not-inspected": 113,
+                "ambiguous": 26,
+                "censored": 3
+              },
+              "reasons": {
+                "no-native-local-record": 99,
+                "no-observed-native-path-or-tangent": 20,
+                "profile-disagreement": 6,
+                "unavailable-or-side-boundary": 3,
+                "original-seed-budget": 14
+              },
+              "closureProfileCounts": {
+                "ambiguous": 4,
+                "censored": 8,
+                "continuing": 6
+              },
+              "accepted": 0
+            }
+          },
+          "regions": {
+            "left": {
+              "sourceStatus": "censored",
+              "sourceReason": "crossing-structures",
+              "automaticSeeds": 0,
+              "seedsInUncertainty": 0,
+              "scheduledSeedsInUncertainty": 0,
+              "closureCandidateRecords": [],
+              "approved": 0
+            },
+            "right": {
+              "sourceStatus": "audited",
+              "sourceReason": null,
+              "automaticSeeds": 142,
+              "seedsInUncertainty": 0,
+              "scheduledSeedsInUncertainty": 0,
+              "closureCandidateRecords": [],
+              "approved": 0
+            }
+          }
+        },
+        "webkit": {
+          "nativeSHA256": "db36196c65366438ac6ff4a09b05ec79ccafed9b37a6997e452e036129b4e8bb",
+          "repeatSHA256": "3022c9897656697e0436fc7cfbf834714abc15cbc6ea81efa8dff6bd4a6ee4a0",
+          "endingSHA256": "5f3c84a09a314235f9be87c6b9e73803743c6b8f872ca9a70621c1bf3a183471",
+          "deterministicExcludingTiming": true,
+          "nativeStats": {
+            "left": {
+              "seeds": 564,
+              "statusCounts": {
+                "ambiguous": 128,
+                "censored": 436
+              },
+              "reasons": {
+                "distal-start-insufficient-distal-body-cells": 56,
+                "distal-start-coarse-distal-stop-unresolved": 14,
+                "native-cell-multiple-valleys": 6,
+                "native-cell-one-sided-edge": 16,
+                "unobserved-coarse-link": 23,
+                "native-cell-search-boundary": 3,
+                "coarse-connection-native-ownership-unverified": 4,
+                "multiple-coarse-continuations": 6,
+                "seed-budget": 436
+              },
+              "coarseConnected": 10,
+              "proximalConnected": 0,
+              "accepted": 0,
+              "baselineTips": 0,
+              "baselineIdentical": true,
+              "analysisMs": 224
+            },
+            "right": {
+              "seeds": 378,
+              "statusCounts": {
+                "ambiguous": 128,
+                "censored": 250
+              },
+              "reasons": {
+                "distal-start-insufficient-distal-body-cells": 64,
+                "native-cell-one-sided-edge": 8,
+                "native-cell-search-boundary": 11,
+                "distal-start-coarse-distal-stop-unresolved": 8,
+                "native-cell-multiple-valleys": 3,
+                "unobserved-coarse-link": 30,
+                "multiple-coarse-continuations": 4,
+                "seed-budget": 250
+              },
+              "coarseConnected": 0,
+              "proximalConnected": 0,
+              "accepted": 0,
+              "baselineTips": 0,
+              "baselineIdentical": true,
+              "analysisMs": 146
+            }
+          },
+          "endingStats": {
+            "left": {
+              "records": 564,
+              "statuses": {
+                "not-inspected": 531,
+                "ambiguous": 32,
+                "censored": 1
+              },
+              "reasons": {
+                "no-native-local-record": 95,
+                "no-observed-native-path-or-tangent": 30,
+                "multiple-supported-bands": 1,
+                "unavailable-or-side-boundary": 1,
+                "profile-disagreement": 1,
+                "original-seed-budget": 436
+              },
+              "closureProfileCounts": {
+                "censored": 4,
+                "closure-candidate": 2
+              },
+              "accepted": 0
+            },
+            "right": {
+              "records": 378,
+              "statuses": {
+                "not-inspected": 344,
+                "ambiguous": 27,
+                "censored": 7
+              },
+              "reasons": {
+                "no-native-local-record": 94,
+                "profile-disagreement": 5,
+                "unavailable-or-side-boundary": 7,
+                "no-observed-native-path-or-tangent": 22,
+                "original-seed-budget": 250
+              },
+              "closureProfileCounts": {
+                "censored": 18,
+                "ambiguous": 2,
+                "closure-candidate": 4
+              },
+              "accepted": 0
+            }
+          },
+          "regions": {
+            "left": {
+              "sourceStatus": "audited",
+              "sourceReason": null,
+              "automaticSeeds": 564,
+              "seedsInUncertainty": 564,
+              "scheduledSeedsInUncertainty": 128,
+              "closureCandidateRecords": [
+                {
+                  "rank": 108,
+                  "status": "censored",
+                  "reasons": [
+                    "unavailable-or-side-boundary"
+                  ],
+                  "lastPointInUncertainty": true,
+                  "capProfilesInUncertainty": [
+                    true,
+                    true
+                  ]
+                }
+              ],
+              "approved": 0
+            },
+            "right": {
+              "sourceStatus": "audited",
+              "sourceReason": null,
+              "automaticSeeds": 378,
+              "seedsInUncertainty": 0,
+              "scheduledSeedsInUncertainty": 0,
+              "closureCandidateRecords": [
+                {
+                  "rank": 44,
+                  "status": "censored",
+                  "reasons": [
+                    "unavailable-or-side-boundary"
+                  ],
+                  "lastPointInUncertainty": false,
+                  "capProfilesInUncertainty": [
+                    false,
+                    false
+                  ]
+                },
+                {
+                  "rank": 61,
+                  "status": "censored",
+                  "reasons": [
+                    "unavailable-or-side-boundary"
+                  ],
+                  "lastPointInUncertainty": false,
+                  "capProfilesInUncertainty": [
+                    false,
+                    false
+                  ]
+                }
+              ],
+              "approved": 0
+            }
+          }
+        }
+      }
+    },
+    "29117992": {
+      "labelSHA256": "aebe247878d9a1079b7ded0ffb53699da0610bf0f65a5c0516998c629ec579a9",
+      "engines": {
+        "chromium": {
+          "nativeSHA256": "1b54c58efd3d98beee5b7d571a6883eeaca3732c5c0ba9f6042f524931084cc9",
+          "repeatSHA256": "e0f5cbbac0005f7a3d628e65f9b7c83c80f10ca7ac0e45f9d0cfbdc191e04f50",
+          "endingSHA256": "5f560b07dd0331327ebdc85a02e5a950bc9843d1ac95a12d66d1057ad26af673",
+          "deterministicExcludingTiming": true,
+          "nativeStats": {
+            "left": {
+              "seeds": 150,
+              "statusCounts": {
+                "ambiguous": 128,
+                "censored": 22
+              },
+              "reasons": {
+                "distal-start-insufficient-distal-body-cells": 51,
+                "native-cell-search-boundary": 7,
+                "distal-start-coarse-distal-stop-unresolved": 3,
+                "unobserved-coarse-link": 44,
+                "native-cell-multiple-supported-cell-lobes": 2,
+                "native-cell-multiple-valleys": 11,
+                "multiple-coarse-continuations": 9,
+                "native-cell-weak-valley": 1,
+                "seed-budget": 22
+              },
+              "coarseConnected": 15,
+              "proximalConnected": 0,
+              "accepted": 0,
+              "baselineTips": 0,
+              "baselineIdentical": true,
+              "analysisMs": 210.5
+            },
+            "right": {
+              "seeds": 87,
+              "statusCounts": {
+                "ambiguous": 87
+              },
+              "reasons": {
+                "distal-start-insufficient-distal-body-cells": 29,
+                "unobserved-coarse-link": 15,
+                "native-cell-multiple-valleys": 3,
+                "distal-start-coarse-distal-stop-unresolved": 6,
+                "native-cell-multiple-supported-cell-lobes": 15,
+                "native-cell-search-boundary": 10,
+                "coarse-connection-native-ownership-unverified": 9
+              },
+              "coarseConnected": 20,
+              "proximalConnected": 0,
+              "accepted": 0,
+              "baselineTips": 3,
+              "baselineIdentical": true,
+              "analysisMs": 135.19999998807907
+            }
+          },
+          "endingStats": {
+            "left": {
+              "records": 150,
+              "statuses": {
+                "not-inspected": 97,
+                "ambiguous": 53
+              },
+              "reasons": {
+                "no-native-local-record": 75,
+                "no-observed-native-path-or-tangent": 53,
+                "original-seed-budget": 22
+              },
+              "closureProfileCounts": {},
+              "accepted": 0
+            },
+            "right": {
+              "records": 87,
+              "statuses": {
+                "not-inspected": 63,
+                "ambiguous": 23,
+                "censored": 1
+              },
+              "reasons": {
+                "no-native-local-record": 63,
+                "no-observed-native-path-or-tangent": 23,
+                "unavailable-or-side-boundary": 1
+              },
+              "closureProfileCounts": {
+                "ambiguous": 2
+              },
+              "accepted": 0
+            }
+          },
+          "regions": {
+            "left": {
+              "sourceStatus": "audited",
+              "sourceReason": null,
+              "automaticSeeds": 150,
+              "seedsInUncertainty": 23,
+              "scheduledSeedsInUncertainty": 17,
+              "closureCandidateRecords": [],
+              "approved": 0
+            },
+            "right": {
+              "sourceStatus": "audited",
+              "sourceReason": null,
+              "automaticSeeds": 87,
+              "seedsInUncertainty": 0,
+              "scheduledSeedsInUncertainty": 0,
+              "closureCandidateRecords": [],
+              "approved": 0
+            }
+          }
+        },
+        "webkit": {
+          "nativeSHA256": "2dddf8509ec72e0bcd0815a8a8971fd95e80e4e7ba0293f899533e346e73b6d7",
+          "repeatSHA256": "c64588140473b1318d9325055aab823b12cc56156b8b79d04dc66c6f05d94abf",
+          "endingSHA256": "2bd08de705f1817bfd8d051026c49f9290e961c044279e339497983ca78c1640",
+          "deterministicExcludingTiming": true,
+          "nativeStats": {
+            "left": {
+              "seeds": 354,
+              "statusCounts": {
+                "ambiguous": 128,
+                "censored": 226
+              },
+              "reasons": {
+                "distal-start-insufficient-distal-body-cells": 65,
+                "distal-start-coarse-distal-stop-unresolved": 19,
+                "unobserved-coarse-link": 22,
+                "native-cell-multiple-valleys": 4,
+                "native-cell-weak-valley": 2,
+                "multiple-coarse-continuations": 10,
+                "native-cell-one-sided-edge": 6,
+                "seed-budget": 226
+              },
+              "coarseConnected": 0,
+              "proximalConnected": 0,
+              "accepted": 0,
+              "baselineTips": 0,
+              "baselineIdentical": true,
+              "analysisMs": 142
+            },
+            "right": {
+              "seeds": 209,
+              "statusCounts": {
+                "ambiguous": 128,
+                "censored": 81
+              },
+              "reasons": {
+                "distal-start-insufficient-distal-body-cells": 58,
+                "distal-start-coarse-distal-stop-unresolved": 10,
+                "unobserved-coarse-link": 19,
+                "native-cell-search-boundary": 19,
+                "multiple-coarse-continuations": 2,
+                "native-cell-weak-valley": 5,
+                "native-cell-multiple-valleys": 2,
+                "native-cell-multiple-supported-cell-lobes": 9,
+                "native-cell-one-sided-edge": 4,
+                "seed-budget": 81
+              },
+              "coarseConnected": 2,
+              "proximalConnected": 0,
+              "accepted": 0,
+              "baselineTips": 0,
+              "baselineIdentical": true,
+              "analysisMs": 146
+            }
+          },
+          "endingStats": {
+            "left": {
+              "records": 354,
+              "statuses": {
+                "not-inspected": 322,
+                "ambiguous": 26,
+                "censored": 6
+              },
+              "reasons": {
+                "no-native-local-record": 96,
+                "no-observed-native-path-or-tangent": 26,
+                "unavailable-or-side-boundary": 6,
+                "original-seed-budget": 226
+              },
+              "closureProfileCounts": {
+                "ambiguous": 12
+              },
+              "accepted": 0
+            },
+            "right": {
+              "records": 209,
+              "statuses": {
+                "not-inspected": 188,
+                "ambiguous": 21
+              },
+              "reasons": {
+                "no-native-local-record": 107,
+                "no-observed-native-path-or-tangent": 21,
+                "original-seed-budget": 81
+              },
+              "closureProfileCounts": {},
+              "accepted": 0
+            }
+          },
+          "regions": {
+            "left": {
+              "sourceStatus": "audited",
+              "sourceReason": null,
+              "automaticSeeds": 354,
+              "seedsInUncertainty": 97,
+              "scheduledSeedsInUncertainty": 29,
+              "closureCandidateRecords": [],
+              "approved": 0
+            },
+            "right": {
+              "sourceStatus": "audited",
+              "sourceReason": null,
+              "automaticSeeds": 209,
+              "seedsInUncertainty": 0,
+              "scheduledSeedsInUncertainty": 0,
+              "closureCandidateRecords": [],
+              "approved": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "decision": "LENGTH HOLD"
+}

@@ -4,6 +4,7 @@ Original JPEGs, root user files and image crops are never included.
 import hashlib
 import json
 import zipfile
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,12 +44,43 @@ def sha(data):
 
 
 def main():
-    target = DEST / 'followup-20261115-01.zip'
-    manifest = DEST / 'followup-20261115-01.json'
+    if sys.argv[1:] not in ([], ['--controls05']):
+        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05]')
+    controls = sys.argv[1:] == ['--controls05']
+    date = '2026-11-16' if controls else '2026-11-15'
+    stem = 'followup-' + date.replace('-', '') + '-01'
+    entries = ENTRIES
+    selected_snapshots = SNAPSHOTS
+    dependencies = ['native-real-11383300-bootstrap-01',
+                    'bootstrap-diagnosis-11383300-dense-01']
+    if controls:
+        entries = ['spatial-supplement-05', 'spatial-supplement-05-chromium',
+                   'spatial-supplement-05-webkit', 'closure-control-14818485-01',
+                   'native-real-11383300-control-runner-01']
+        for identifier in ['29117992', '14818485']:
+            entries += ['spatial-control-review-' + identifier,
+                        'native-control-' + identifier + '-01',
+                        'native-control-' + identifier + '-repeat-01',
+                        'ending-control-' + identifier + '-01']
+        entries.append('ending-control-14818485-02')
+        selected_snapshots = ['scripts/package-lash-followup-evidence.py',
+                              'tests/visual/lash-native-real.cjs',
+                              'tests/visual/lash-local-ending-run.cjs',
+                              'tests/visual/lash-local-ending-views.cjs',
+                              'tests/visual/lash-spatial-supplement-05.json',
+                              'tests/visual/lash-spatial-supplement-05-summary.json',
+                              'tests/visual/lash-spatial-controls-05.freeze.json',
+                              'tests/visual/lash-spatial-controls-05-results.json']
+        for identifier in ['29117992', '14818485']:
+            selected_snapshots += ['tests/visual/lash-spatial-case-' + identifier + '.json',
+                                   'tests/visual/lash-spatial-control-' + identifier + '.json']
+        dependencies = ['native-control-29117992-01', 'native-control-14818485-01']
+    target = DEST / (stem + '.zip')
+    manifest = DEST / (stem + '.json')
     if target.exists() or manifest.exists():
         raise RuntimeError('Refusing to overwrite existing evidence')
     files, omitted = {}, []
-    for name in ENTRIES:
+    for name in entries:
         entry = OUT / name
         if not entry.exists():
             raise RuntimeError('Missing evidence: ' + name)
@@ -61,9 +93,8 @@ def main():
             else:
                 omitted.append({'path': file.relative_to(OUT).as_posix(),
                                 'bytes': len(data), 'sha256': sha(data)})
-    snapshots = set(SNAPSHOTS)
-    for directory in ['native-real-11383300-bootstrap-01',
-                      'bootstrap-diagnosis-11383300-dense-01']:
+    snapshots = set(selected_snapshots)
+    for directory in dependencies:
         protocol = json.loads((OUT / directory / 'protocol.json').read_bytes())
         for name, digest in protocol['moduleSHA256'].items():
             if sha((ROOT / name).read_bytes()) != digest:
@@ -74,7 +105,7 @@ def main():
     rows = []
     with zipfile.ZipFile(target, 'x', zipfile.ZIP_DEFLATED) as archive:
         for name, data in sorted(files.items()):
-            info = zipfile.ZipInfo(name, date_time=(2026, 11, 15, 0, 0, 0))
+            info = zipfile.ZipInfo(name, date_time=(2026, 11, 16 if controls else 15, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             archive.writestr(info, data, compresslevel=9)
             rows.append({'path': name, 'bytes': len(data), 'sha256': sha(data)})
@@ -82,7 +113,7 @@ def main():
         for row in rows:
             if sha(archive.read(row['path'])) != row['sha256']:
                 raise RuntimeError('Archive member mismatch: ' + row['path'])
-    result = {'date': '2026-11-15', 'restoreDirectory': 'tests/visual/out',
+    result = {'date': date, 'restoreDirectory': 'tests/visual/out',
               'policy': 'Explicit public-source numeric evidence only; JPEGs and PNGs omitted. Source snapshots are for review, not automatic overwrite.',
               'archive': target.name, 'bytes': target.stat().st_size,
               'sha256': sha(target.read_bytes()), 'members': rows, 'omitted': omitted}

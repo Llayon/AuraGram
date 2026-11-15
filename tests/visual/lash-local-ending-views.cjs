@@ -2,11 +2,12 @@
 const fs=require('fs'),path=require('path'),crypto=require('crypto'),{chromium,webkit}=require('@playwright/test');
 async function main(){
  const [runDir,sourceFile,out]=process.argv.slice(2);if(!out||fs.existsSync(out))throw Error('Supply ending run, original JPEG and NEW output');
+ const closureCandidates=process.argv.includes('--closure-candidates');
  const source=fs.readFileSync(sourceFile),p=JSON.parse(fs.readFileSync(path.join(runDir,'protocol.json')));
  if(crypto.createHash('sha256').update(source).digest('hex')!==p.sourceSHA256)throw Error('Source changed');
  fs.mkdirSync(out,{recursive:true});const views=[];
  for(const engine of [chromium,webkit]){
- const saved=JSON.parse(fs.readFileSync(path.join(runDir,engine.name()+'.json'))),selected=Object.entries(saved.results).flatMap(([side,records])=>records.filter(r=>r.coarseConnected&&r.correspondence==='consistent-local-evidence').map(r=>({side,...r})));
+ const saved=JSON.parse(fs.readFileSync(path.join(runDir,engine.name()+'.json'))),selected=Object.entries(saved.results).flatMap(([side,records])=>records.filter(r=>closureCandidates?r.profiles?.some(p=>p.sideClosure.status==='closure-candidate'):r.coarseConnected&&r.correspondence==='consistent-local-evidence').map(r=>({side,...r})));
  const browser=await engine.launch();try{const page=await browser.newPage();
  for(const r of selected){
  const images=await page.evaluate(async({data,r})=>{
@@ -27,6 +28,6 @@ async function main(){
  }finally{await browser.close();}
  }
  fs.writeFileSync(path.join(out,'views.json'),JSON.stringify(views,null,2)+'\n',{flag:'wx'});
- fs.writeFileSync(path.join(out,'index.html'),'<!doctype html><meta charset="utf-8"><title>Unapproved ending probes</title><style>body{font:16px sans-serif;background:#222;color:#eee}img{margin:8px;image-rendering:pixelated}</style><h1>Unapproved ending probes</h1><p>All records with coarse root reach plus local correspondence, without biological ownership approval. Each original is decoded by its recorded engine. Raw1x / raw4x / measured overlay4x. No rendered lash or inferred missing segment.</p>'+views.map(v=>`<section><h2>${v.stem}: ${v.status}</h2><p>${v.reasons.join(', ')}</p>${['one','four','overlay'].map(type=>`<img src="${v.stem}-${type}.png">`).join('')}</section>`).join(''),{flag:'wx'});
+ fs.writeFileSync(path.join(out,'index.html'),'<!doctype html><meta charset="utf-8"><title>Unapproved ending probes</title><style>body{font:16px sans-serif;background:#222;color:#eee}img{margin:8px;image-rendering:pixelated}</style><h1>Unapproved ending probes</h1><p>'+(closureCandidates?'All contrast-closure candidate records, without ownership or endpoint approval.':'All records with coarse root reach plus local correspondence, without biological ownership approval.')+' Each original is decoded by its recorded engine. Raw1x / raw4x / measured overlay4x. No rendered lash or inferred missing segment.</p>'+views.map(v=>`<section><h2>${v.stem}: ${v.status}</h2><p>${v.reasons.join(', ')}</p>${['one','four','overlay'].map(type=>`<img src="${v.stem}-${type}.png">`).join('')}</section>`).join(''),{flag:'wx'});
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

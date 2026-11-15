@@ -24,7 +24,12 @@ async function main(){
  const {createNativePatchReader}=await import('/tests/visual/lash-native-path.mjs');const {auditSpatialEnding}=await import('/tests/visual/lash-spatial-ending.mjs');
  const image=new Image();image.src=data;await image.decode();const reader=createNativePatchReader(image),buffer=new Float32Array(256*256),results={};
  try{for(const side of ['left','right']){
- const input=saved.run[side],eye=geometry.eyes[side],roi={x:eye.roi.x0*geometry.width,y:eye.roi.y0*geometry.height,w:input.size.rawW,h:input.size.rawH};
+ const input=saved.run[side],eye=geometry.eyes[side];
+ if(!Array.isArray(input.results)){
+ results[side]=[{rank:null,index:null,status:'not-inspected',reasons:['source-analysis-refused:'+(input.reason||'unavailable')],endpointConfirmed:false,sourceStatus:input.status}];
+ continue;
+ }
+ const roi={x:eye.roi.x0*geometry.width,y:eye.roi.y0*geometry.height,w:input.size.rawW,h:input.size.rawH};
  results[side]=input.results.map(r=>{
  const base={rank:r.rank,index:r.index,originalStatus:r.status,coarseConnected:r.coarse.connected,broadRoot:r.coarse.broadSupport,correspondence:r.correspondence.status,proximalConnection:r.proximalConnection,endpointConfirmed:false};
  if(!r.local)return{...base,status:'not-inspected',reasons:[r.reasons.includes('seed-budget')?'original-seed-budget':'no-native-local-record']};
