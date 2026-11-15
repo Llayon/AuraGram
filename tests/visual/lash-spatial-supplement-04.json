@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-15",
+  "license": "https://www.pexels.com/license/",
+  "licenseVerified": "2026-11-15",
+  "status": "source-leads-not-qualified",
+  "policy": "Development only; source review and actual FaceMesh before any lash detector. No identity independence claim. Never transfer viewed leads to validation.",
+  "excludedPreviouslyUsed": [
+    "32526448"
+  ],
+  "sources": [
+    {
+      "id": "10598787",
+      "file": "pexels-10598787.jpg",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-beautiful-woman-10598787/",
+      "url": "https://images.pexels.com/photos/10598787/pexels-photo-10598787.jpeg?cs=srgb&fm=jpg",
+      "author": "cottonbro studio",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "9854230",
+      "file": "pexels-9854230.jpg",
+      "page": "https://www.pexels.com/photo/a-portrait-of-a-woman-9854230/",
+      "url": "https://images.pexels.com/photos/9854230/pexels-photo-9854230.jpeg?cs=srgb&fm=jpg",
+      "author": "Francesca Zama",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "11383300",
+      "file": "pexels-11383300.jpg",
+      "page": "https://www.pexels.com/photo/woman-s-face-in-close-up-photography-11383300/",
+      "url": "https://images.pexels.com/photos/11383300/pexels-photo-11383300.jpeg?cs=srgb&fm=jpg",
+      "author": "behrouz sasani",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    }
+  ]
+}

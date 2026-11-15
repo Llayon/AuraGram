@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initializeNativeCell} from './lash-native-cell.mjs';
 import {auditNativeSeeds,NATIVE_PATH_PROTOCOL} from './lash-native-path.mjs';
+import {followCurve} from './lash-subpixel-probe.mjs';
 const w=80,h=80,point={x:40,y:40},axis={x:0,y:-1};
 const image=f=>Float32Array.from({length:w*h},(_,i)=>f(i%w,Math.floor(i/w)));
 const init=(a,cell={w:4,h:4},p=point,u=axis)=>initializeNativeCell(a,w,h,p,u,cell,NATIVE_PATH_PROTOCOL);
@@ -33,4 +34,15 @@ test('cell initialization changes only opt-in start, keeps seed identity and roo
  const old=auditNativeSeeds(args).results[0],next=auditNativeSeeds({...args,initializeCell:true}).results[0];
  assert.equal(old.proximalConnection,false);assert.equal(next.proximalConnection,true);assert.equal(next.endpointConfirmed,false);assert.equal(next.index,99);assert.deepEqual(next.seed,{x:40,y:40});
  assert.ok(next.proximal.points.at(-1).arc+next.distal.points.at(-1).arc<=36);
+});
+
+test('a broad cell center cannot bypass missing narrow native shaft evidence',()=>{
+ const pixels=image(x=>.8-.04*Math.exp(-((x-40)**2)/50));
+ const center=init(pixels,{w:8,h:8});
+ assert.equal(center.accepted,true);
+ const curve=followCurve(pixels,w,h,center.center,{available:true,tx:axis.x,ty:axis.y},
+  {body:true,association:true},{margin:1.5,protocol:NATIVE_PATH_PROTOCOL});
+ assert.equal(curve.reason,'bootstrap-weak-valley');
+ assert.equal(curve.points.length,0);assert.equal(curve.endpointConfirmed,false);
+ assert.equal(curve.bootstrap[0].accepted,false);
 });

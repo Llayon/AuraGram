@@ -10,20 +10,32 @@ async function main(){
  if(distalBodyStart&&!multiscale)throw Error('Distal-body requires multiscale stage');
  const initializeCell=process.argv.includes('--initialize-cell');
  const output=process.argv[2];if(!output||fs.existsSync(output))throw Error('Supply NEW output directory');
- const frozen=JSON.parse(fs.readFileSync('tests/visual/lash-spatial-original-labels-01.freeze.json'));
+ const caseIndex=process.argv.indexOf('--case');
+ if(caseIndex!==-1&&!process.argv[caseIndex+1])throw Error('Missing --case manifest');
+ const caseFile=caseIndex===-1?null:process.argv[caseIndex+1];
+ const caseBytes=caseFile?fs.readFileSync(caseFile):null;
+ const input=caseBytes?JSON.parse(caseBytes):{
+  freeze:'tests/visual/lash-spatial-original-labels-01.freeze.json',
+  labels:'tests/visual/lash-spatial-original-labels-01.json',
+  sourceDirectory:'tests/visual/out/spatial-supplement-02',
+  screeningDirectory:'tests/visual/out/spatial-supplement-screen-{engine}-02'
+ };
+ const frozen=JSON.parse(fs.readFileSync(input.freeze));
  for(const [file,digest]of Object.entries(frozen.inputs))if(hash(fs.readFileSync(file))!==digest)throw Error('Frozen labels changed');
- const labels=JSON.parse(fs.readFileSync('tests/visual/lash-spatial-original-labels-01.json'));
- const sourcePath='tests/visual/out/spatial-supplement-02/'+labels.file,source=fs.readFileSync(sourcePath);
+ if(!Object.hasOwn(frozen.inputs,input.labels))throw Error('Labels not covered by freeze');
+ const labels=JSON.parse(fs.readFileSync(input.labels));
+ const sourcePath=path.join(input.sourceDirectory,labels.file),source=fs.readFileSync(sourcePath);
  if(hash(source)!==frozen.sourceSHA256||hash(source)!==labels.sourceSHA256)throw Error('Source changed');
  const modules=['src/retouch/lashAnalysis.mjs','src/retouch/eyeGeometry.mjs','src/vision/faceGeometry.mjs','tests/visual/lash-native-path.mjs','tests/visual/lash-coarse-route.mjs','tests/visual/lash-multiscale-path.mjs','tests/visual/lash-scale-correspondence.mjs','tests/visual/lash-distal-body-start.mjs','tests/visual/lash-native-cell.mjs','tests/visual/lash-subpixel-probe.mjs','tests/visual/lash-subpixel-center.mjs','tests/visual/lash-native-shaft.mjs','tests/visual/lash-spatial-ending.mjs','tests/visual/lash-side-closure.mjs','tests/visual/lash-endpoint-profile.mjs'];
  fs.mkdirSync(output,{recursive:true});
  const protocol={distalBodyStart,multiscale,initializeCell,kind:'development-diagnostic-not-acceptance',baseline:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceSHA256:hash(source),labelInputs:frozen.inputs,moduleSHA256:Object.fromEntries(modules.map(f=>[f,hash(fs.readFileSync(f))])),runnerSHA256:hash(fs.readFileSync(__filename)),maxSide:224,seedLimit:128,annotationsUsedAsTraceInput:false,independentCritique:'not-completed',eligibility:'unqualified-positive-lead; not held out'};
+ protocol.caseManifest=caseFile;protocol.caseManifestSHA256=caseBytes?hash(caseBytes):null;
  fs.writeFileSync(path.join(output,'protocol.json'),JSON.stringify(protocol,null,2)+'\n',{flag:'wx'});
  const server=spawn(process.execPath,['tests/static-server.cjs','0'],{windowsHide:true,stdio:['ignore','pipe','inherit']});
  try{
  const url=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Server timeout')),15000);server.once('error',reject);server.stdout.on('data',b=>{const m=String(b).match(/http:\/\/127\.0\.0\.1:\d+/);if(m){clearTimeout(timer);resolve(m[0]);}});});
  for(const engine of [chromium,webkit]){
- const screenPath='tests/visual/out/spatial-supplement-screen-'+engine.name()+'-02/screening.json';
+ const screenPath=path.join(input.screeningDirectory.replace('{engine}',engine.name()),'screening.json');
  const screened=JSON.parse(fs.readFileSync(screenPath)).results.find(r=>r.file===labels.file);
  if(screened.status!=='ready'||screened.sha256!==hash(source)||screened.split!=='development')throw Error('Ineligible geometry');
  const browser=await engine.launch();try{
@@ -36,7 +48,7 @@ async function main(){
  const {auditNativeSeeds,projectAutomaticSeeds,createNativePatchReader}=await import('/tests/visual/lash-native-path.mjs');
  const image=new Image();image.src=data;await image.decode();if(image.width!==W||image.height!==H)throw Error('Source dimensions');
  const reader=createNativePatchReader(image),results={};
- const simplify=c=>({reason:c.reason,points:c.points,bootstrapFit:c.bootstrapFit,attempts:c.attempts.map(a=>({reason:a.reason,accepted:a.accepted,shift:a.shift,variance:a.variance,center:a.center,tangent:a.tangent,directionFit:a.directionFit,linkAccepted:a.linkAccepted,denseSupported:a.dense?.every(s=>s.supported)}))});
+ const simplify=c=>({reason:c.reason,points:c.points,bootstrap:c.bootstrap,bootstrapLinks:c.bootstrapLinks,bootstrapFit:c.bootstrapFit,initializationCorrectionDegrees:c.initializationCorrectionDegrees,originalSeed:c.originalSeed,refinedSeed:c.refinedSeed,attempts:c.attempts.map(a=>({reason:a.reason,accepted:a.accepted,shift:a.shift,variance:a.variance,center:a.center,tangent:a.tangent,directionFit:a.directionFit,linkAccepted:a.linkAccepted,denseSupported:a.dense?.every(s=>s.supported)}))});
  try{for(const side of ['left','right']){
  const eye=eyes[side],roi=eye.roi,size=lashRoiSize(roi,W,H,{maxSide:224});
  if(!eye.usable||size.status!=='ok'){results[side]={status:'censored',reason:'unusable-or-small-native-roi',size};continue;}

@@ -1,0 +1,71 @@
+{
+  "stage": "original-only-development-screening",
+  "date": "2026-11-15",
+  "detectorExecuted": false,
+  "validationViewsOpened": false,
+  "identityReview": "pending; no face identity comparison performed",
+  "qualifiedPositiveCount": 0,
+  "inputs": {
+    "chromium": {
+      "path": "tests/visual/out/spatial-supplement-04-chromium/screening.json",
+      "sha256": "0479b15d09136824994bf98e0f752950de3b977a083c9a9ee02a74e363265b4a"
+    },
+    "webkit": {
+      "path": "tests/visual/out/spatial-supplement-04-webkit/screening.json",
+      "sha256": "d4d362a62959422ca05a47be78f7a031910d79cd84c844c59d96eb5669f5297a"
+    }
+  },
+  "sources": [
+    {
+      "id": "10598787",
+      "file": "pexels-10598787.jpg",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-beautiful-woman-10598787/",
+      "author": "cottonbro studio",
+      "sha256": "c9414e588ac2bdea54b1dcbdd94bf719e35820ba76775104bd3787d8313a8527",
+      "width": 3648,
+      "height": 5472,
+      "split": "development",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "positiveQualified": false,
+      "observation": "Open eyes with resolved upper shafts, but loops, crossings and projected ends require cautious separate annotation; no five-tip qualification yet."
+    },
+    {
+      "id": "9854230",
+      "file": "pexels-9854230.jpg",
+      "page": "https://www.pexels.com/photo/a-portrait-of-a-woman-9854230/",
+      "author": "Francesca Zama",
+      "sha256": "d3edf93ac65746cc7da562ffb33be524c992cd3b08c8a45928f7aeb03d1cf43a",
+      "width": 2688,
+      "height": 3810,
+      "split": "development",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "positiveQualified": false,
+      "observation": "Both upper bands are soft/defocused in native crops; five distinct upper endings not established."
+    },
+    {
+      "id": "11383300",
+      "file": "pexels-11383300.jpg",
+      "page": "https://www.pexels.com/photo/woman-s-face-in-close-up-photography-11383300/",
+      "author": "behrouz sasani",
+      "sha256": "1a3f74d3dde1d50fe923cb55e303c4507b58f0d2986284eaf9a873e01245c2d6",
+      "width": 6800,
+      "height": 8500,
+      "split": "development",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "positiveQualified": false,
+      "observation": "Right-eye crop has individually visible upper segments and provisional ending candidates; left eye is defocused. Right roots overlap and hair enters the lateral region; independent critique required.",
+      "provisionalRightTips": 3
+    }
+  ],
+  "decision": "DATA-INSUFFICIENT / LENGTH HOLD",
+  "annotationFreeze": "tests/visual/lash-spatial-labels-11383300.freeze.json"
+}

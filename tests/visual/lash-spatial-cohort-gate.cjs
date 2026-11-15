@@ -31,4 +31,36 @@ function validateCohort(sources, annotations){
  }
  return{eligible:errors.length===0,errors};
 }
-module.exports={validateCohort};
+// Separate byte-integrity gate. Artifacts are caller-supplied local bytes; this
+// function performs no filesystem/network access and never initializes tracing.
+// Each annotation artifact contains exactly the annotation record without its
+// frozenSHA256 field (the digest belongs in the external manifest).
+function verifyCohortArtifacts(sources, annotations, artifacts){
+ const {createHash}=require('node:crypto');
+ const {isDeepStrictEqual}=require('node:util');
+ const errors=[], verified=[];
+ const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
+ const validHash=value=>typeof value==='string'&&/^[a-f0-9]{64}$/.test(value);
+ const counts=new Map();
+ for(const a of annotations)counts.set(a.file,(counts.get(a.file)||0)+1);
+ for(const s of sources){
+  const before=errors.length,a=annotations.find(a=>a.file===s.file),artifact=artifacts?.get(s.file);
+  if(counts.get(s.file)!==1)errors.push('annotation-not-unique:'+s.file);
+  if(!Buffer.isBuffer(artifact?.sourceBytes))errors.push('source-bytes-missing:'+s.file);
+  else if(!validHash(s.sha256)||digest(artifact.sourceBytes)!==s.sha256)errors.push('source-digest-mismatch:'+s.file);
+  if(!Buffer.isBuffer(artifact?.annotationBytes))errors.push('annotation-bytes-missing:'+s.file);
+  else {
+   if(!validHash(a?.frozenSHA256)||digest(artifact.annotationBytes)!==a.frozenSHA256)errors.push('annotation-digest-mismatch:'+s.file);
+   try {
+    const stored=JSON.parse(artifact.annotationBytes.toString('utf8'));
+    const {frozenSHA256,...record}=a||{};
+    if(!isDeepStrictEqual(stored,record))errors.push('annotation-record-mismatch:'+s.file);
+   }catch{errors.push('annotation-json-invalid:'+s.file);}
+  }
+  if(errors.length===before)verified.push(s.file);
+ }
+ const metadata=validateCohort(sources,annotations);
+ return{integrityVerified:errors.length===0&&sources.length>0,
+  eligible:errors.length===0&&metadata.eligible,errors,metadataErrors:metadata.errors,verified};
+}
+module.exports={validateCohort,verifyCohortArtifacts};
