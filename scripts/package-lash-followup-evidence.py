@@ -44,13 +44,14 @@ def sha(data):
 
 
 def main():
-    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges'], ['--observability']):
-        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges|--observability]')
+    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges'], ['--observability'], ['--label-coverage']):
+        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges|--observability|--label-coverage]')
     controls = sys.argv[1:] == ['--controls05']
     resolved = sys.argv[1:] == ['--resolved-edges']
     observability = sys.argv[1:] == ['--observability']
-    date = '2026-11-17' if resolved or observability else '2026-11-16' if controls else '2026-11-15'
-    stem = 'followup-' + date.replace('-', '') + ('-02' if observability else '-01')
+    coverage = sys.argv[1:] == ['--label-coverage']
+    date = '2026-11-17' if resolved or observability or coverage else '2026-11-16' if controls else '2026-11-15'
+    stem = 'followup-' + date.replace('-', '') + ('-03' if coverage else '-02' if observability else '-01')
     entries = ENTRIES
     selected_snapshots = SNAPSHOTS
     dependencies = ['native-real-11383300-bootstrap-01',
@@ -105,6 +106,21 @@ def main():
         selected_snapshots += ['tests/visual/lash-resolved-observability' + suffix for suffix in
                                ['.mjs', '.cjs', '.test.mjs', '-protocol.json']]
         dependencies = ['resolved-observability-01', 'resolved-observability-browser-02']
+    if coverage:
+        entries = ['resolved-edges-14297936-replay-01.json',
+                   'resolved-coverage-14297936-01.json', 'resolved-coverage-14297936-02.json',
+                   'resolved-coverage-unit-sequential-01.txt']
+        selected_snapshots = ['scripts/package-lash-followup-evidence.py', 'package.json',
+                              'tests/visual/lash-label-coverage.mjs',
+                              'tests/visual/lash-label-window.mjs',
+                              'tests/visual/lash-label-window.test.mjs',
+                              'tests/visual/lash-spatial-match.mjs',
+                              'tests/visual/lash-resolved-edges.mjs',
+                              'tests/visual/lash-resolved-edges-replay.cjs',
+                              'tests/visual/lash-spatial-original-labels-01.json',
+                              'tests/visual/lash-spatial-original-labels-01.freeze.json',
+                              'tests/visual/spatial-ending-evidence/manifest.json']
+        dependencies = []  # Historical measurements are verified against their archived hashes by the coverage tool.
     target = DEST / (stem + '.zip')
     manifest = DEST / (stem + '.json')
     if target.exists() or manifest.exists():
@@ -118,7 +134,7 @@ def main():
             if not file.is_file():
                 continue
             data = file.read_bytes()
-            if file.suffix == '.json' or ((resolved or observability) and file.suffix == '.txt'):
+            if file.suffix == '.json' or ((resolved or observability or coverage) and file.suffix == '.txt'):
                 files[file.relative_to(OUT).as_posix()] = data
             else:
                 omitted.append({'path': file.relative_to(OUT).as_posix(),
