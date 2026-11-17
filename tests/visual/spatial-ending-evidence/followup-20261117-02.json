@@ -1,0 +1,136 @@
+{
+  "date": "2026-11-17",
+  "restoreDirectory": "tests/visual/out",
+  "policy": "Explicit public-source numeric evidence only; JPEGs and PNGs omitted. Source snapshots are for review, not automatic overwrite.",
+  "archive": "followup-20261117-02.zip",
+  "bytes": 9251544,
+  "sha256": "e4678241789da14dc04081a80218b4e2d7794957daed1c787eb160f11df0db40",
+  "members": [
+    {
+      "path": "resolved-observability-01/inputs.json",
+      "bytes": 26811024,
+      "sha256": "4580fd9529bbe2e06dc14309644c77be745bbddeea2d863e22b4d28ac553064f"
+    },
+    {
+      "path": "resolved-observability-01/protocol.json",
+      "bytes": 2167,
+      "sha256": "a4f5ceed5519da985111d9d91749f57c120c1f7c461d6cbb3b3b8144f0dd927e"
+    },
+    {
+      "path": "resolved-observability-01/results.json",
+      "bytes": 9231383,
+      "sha256": "c20a7b0e3f2f1d008f047fd1d240e366ad6264b3ac006c2e37a2ee0e839f416f"
+    },
+    {
+      "path": "resolved-observability-01/summary.json",
+      "bytes": 2324,
+      "sha256": "a5aca1653c810adcd789b78b2f5a8addb181327ae7d65a5950ac3983de4ee13f"
+    },
+    {
+      "path": "resolved-observability-browser-01/chromium.json",
+      "bytes": 10423136,
+      "sha256": "e0fae9a094ca51a216438d6881d31277d16d29ed62cc2b0b1bea65be2c3bdda1"
+    },
+    {
+      "path": "resolved-observability-browser-01/failure.json",
+      "bytes": 224,
+      "sha256": "95bf2c8d54cc0e9e0df153180abeb006cfb5d0bec58bd1739edff997a731ace4"
+    },
+    {
+      "path": "resolved-observability-browser-01/inputs.json",
+      "bytes": 19766694,
+      "sha256": "7ca6910a5d9d415ba57029c25332a94d832f48a040ab53a4fa1f2f213009951f"
+    },
+    {
+      "path": "resolved-observability-browser-01/node.json",
+      "bytes": 5211567,
+      "sha256": "b99357ace43842b45d019b31c1dee54fbf50dab5f2c7395d16ea3d8bd385f099"
+    },
+    {
+      "path": "resolved-observability-browser-01/protocol.json",
+      "bytes": 820,
+      "sha256": "1dcd35d7e4244c063aab54c2d23911fc8d2320605f599d3cda8d877b0b405278"
+    },
+    {
+      "path": "resolved-observability-browser-02/chromium.json",
+      "bytes": 10423136,
+      "sha256": "e0fae9a094ca51a216438d6881d31277d16d29ed62cc2b0b1bea65be2c3bdda1"
+    },
+    {
+      "path": "resolved-observability-browser-02/inputs.json",
+      "bytes": 19766694,
+      "sha256": "7ca6910a5d9d415ba57029c25332a94d832f48a040ab53a4fa1f2f213009951f"
+    },
+    {
+      "path": "resolved-observability-browser-02/node.json",
+      "bytes": 5211567,
+      "sha256": "b99357ace43842b45d019b31c1dee54fbf50dab5f2c7395d16ea3d8bd385f099"
+    },
+    {
+      "path": "resolved-observability-browser-02/protocol.json",
+      "bytes": 879,
+      "sha256": "320fc814e90898626eca36a4c0d7c017cab8d7b4c920696d2cf960df2d0a6e31"
+    },
+    {
+      "path": "resolved-observability-browser-02/webkit.json",
+      "bytes": 10423136,
+      "sha256": "e0fae9a094ca51a216438d6881d31277d16d29ed62cc2b0b1bea65be2c3bdda1"
+    },
+    {
+      "path": "resolved-observability-unit-sequential-01.txt",
+      "bytes": 26754,
+      "sha256": "97486406bef8d206a570939db853bf5ecb2c75ab5287a725309330a1a93f0809"
+    },
+    {
+      "path": "source-snapshots/package.json",
+      "bytes": 1824,
+      "sha256": "d9c4c5382f0f09c7e3d4949e744af50030e3af30903a9beec82b378ffc3afcb5"
+    },
+    {
+      "path": "source-snapshots/scripts/package-lash-followup-evidence.py",
+      "bytes": 8718,
+      "sha256": "1d85b7496797cd0d06a43101ee6de535cfb3aaf22eea9b1d1330ce4b9799b685"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-resolved-edges-browser.cjs",
+      "bytes": 5612,
+      "sha256": "17a0027bf5ea93036cfa85d3adedbe3f637d04637cae6a6974472ce808990adf"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-resolved-edges-protocol.json",
+      "bytes": 1025,
+      "sha256": "091d90b0d7564d9ce434e07f4fce4855b9f53dced0afe1463fe066b3184fe9d8"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-resolved-edges.mjs",
+      "bytes": 3655,
+      "sha256": "4fee3235a98c1aae76b205fed486b04cacffdee7d8989e8386671b1c3bfa7076"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-resolved-observability-protocol.json",
+      "bytes": 1371,
+      "sha256": "f832df2a235cf7b9cf9f9524a1b55ce57cd612dbea7e2159aae063ecd033ffc9"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-resolved-observability.cjs",
+      "bytes": 2468,
+      "sha256": "b5da3ebaf647f00f9b17c1a39b1e8bc95ae22fde8176380bb65972fc1d58d780"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-resolved-observability.mjs",
+      "bytes": 1936,
+      "sha256": "ac1d9ead2c6d59b4509ed875c3fb016f61be522e4af34c919be54c8a85ba78b2"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-resolved-observability.test.mjs",
+      "bytes": 1931,
+      "sha256": "3ec7229d6214cac7758b8763abb0b2f4addafc8e8560bc769ec530748b63af0c"
+    }
+  ],
+  "omitted": []
+}

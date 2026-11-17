@@ -44,12 +44,13 @@ def sha(data):
 
 
 def main():
-    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges']):
-        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges]')
+    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges'], ['--observability']):
+        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges|--observability]')
     controls = sys.argv[1:] == ['--controls05']
     resolved = sys.argv[1:] == ['--resolved-edges']
-    date = '2026-11-17' if resolved else '2026-11-16' if controls else '2026-11-15'
-    stem = 'followup-' + date.replace('-', '') + '-01'
+    observability = sys.argv[1:] == ['--observability']
+    date = '2026-11-17' if resolved or observability else '2026-11-16' if controls else '2026-11-15'
+    stem = 'followup-' + date.replace('-', '') + ('-02' if observability else '-01')
     entries = ENTRIES
     selected_snapshots = SNAPSHOTS
     dependencies = ['native-real-11383300-bootstrap-01',
@@ -94,6 +95,16 @@ def main():
                                ['.mjs', '.test.mjs', '-protocol.json', '-replay.cjs', '-browser.cjs']]
         dependencies = ['native-real-10598787-01', 'resolved-ending-10598787-01',
                         'resolved-edges-browser-01']
+    if observability:
+        entries = ['resolved-observability-01', 'resolved-observability-browser-01',
+                   'resolved-observability-browser-02', 'resolved-observability-unit-sequential-01.txt']
+        selected_snapshots = ['scripts/package-lash-followup-evidence.py', 'package.json',
+                              'tests/visual/lash-resolved-edges.mjs',
+                              'tests/visual/lash-resolved-edges-browser.cjs',
+                              'tests/visual/lash-resolved-edges-protocol.json']
+        selected_snapshots += ['tests/visual/lash-resolved-observability' + suffix for suffix in
+                               ['.mjs', '.cjs', '.test.mjs', '-protocol.json']]
+        dependencies = ['resolved-observability-01', 'resolved-observability-browser-02']
     target = DEST / (stem + '.zip')
     manifest = DEST / (stem + '.json')
     if target.exists() or manifest.exists():
@@ -107,7 +118,7 @@ def main():
             if not file.is_file():
                 continue
             data = file.read_bytes()
-            if file.suffix == '.json' or (resolved and file.suffix == '.txt'):
+            if file.suffix == '.json' or ((resolved or observability) and file.suffix == '.txt'):
                 files[file.relative_to(OUT).as_posix()] = data
             else:
                 omitted.append({'path': file.relative_to(OUT).as_posix(),
