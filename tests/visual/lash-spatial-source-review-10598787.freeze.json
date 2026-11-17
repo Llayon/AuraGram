@@ -1,0 +1,7 @@
+{
+  "inputs": {
+    "tests/visual/lash-spatial-source-review-10598787.json": "c5d0e235b04f95262c6df081bf3010965c0215c08953ce184aa467689dd63116"
+  },
+  "sourceSHA256": "c9414e588ac2bdea54b1dcbdd94bf719e35820ba76775104bd3787d8313a8527",
+  "purpose": "Freeze existing source-only review before detector use; not independent tip annotation"
+}

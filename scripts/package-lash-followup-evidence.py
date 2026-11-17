@@ -44,10 +44,11 @@ def sha(data):
 
 
 def main():
-    if sys.argv[1:] not in ([], ['--controls05']):
-        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05]')
+    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges']):
+        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges]')
     controls = sys.argv[1:] == ['--controls05']
-    date = '2026-11-16' if controls else '2026-11-15'
+    resolved = sys.argv[1:] == ['--resolved-edges']
+    date = '2026-11-17' if resolved else '2026-11-16' if controls else '2026-11-15'
     stem = 'followup-' + date.replace('-', '') + '-01'
     entries = ENTRIES
     selected_snapshots = SNAPSHOTS
@@ -75,6 +76,24 @@ def main():
             selected_snapshots += ['tests/visual/lash-spatial-case-' + identifier + '.json',
                                    'tests/visual/lash-spatial-control-' + identifier + '.json']
         dependencies = ['native-control-29117992-01', 'native-control-14818485-01']
+    if resolved:
+        entries = ['resolved-edges-browser-01', 'native-real-10598787-01',
+                   'resolved-ending-10598787-01', 'legacy-ending-10598787-01',
+                   'resolved-edges-native-summary-01.json',
+                   'resolved-edges-development-replay-01.json',
+                   'resolved-edges-development-replay-02.json',
+                   'resolved-edges-unit-sequential-01.txt',
+                   'resolved-edges-unit-sequential-02.txt']
+        selected_snapshots = ['scripts/package-lash-followup-evidence.py', 'package.json',
+                              'tests/visual/lash-local-ending-run.cjs',
+                              'tests/visual/lash-native-real.cjs',
+                              'tests/visual/lash-spatial-case-10598787.json',
+                              'tests/visual/lash-spatial-source-review-10598787.json',
+                              'tests/visual/lash-spatial-source-review-10598787.freeze.json']
+        selected_snapshots += ['tests/visual/lash-resolved-edges' + suffix for suffix in
+                               ['.mjs', '.test.mjs', '-protocol.json', '-replay.cjs', '-browser.cjs']]
+        dependencies = ['native-real-10598787-01', 'resolved-ending-10598787-01',
+                        'resolved-edges-browser-01']
     target = DEST / (stem + '.zip')
     manifest = DEST / (stem + '.json')
     if target.exists() or manifest.exists():
@@ -88,7 +107,7 @@ def main():
             if not file.is_file():
                 continue
             data = file.read_bytes()
-            if file.suffix == '.json':
+            if file.suffix == '.json' or (resolved and file.suffix == '.txt'):
                 files[file.relative_to(OUT).as_posix()] = data
             else:
                 omitted.append({'path': file.relative_to(OUT).as_posix(),
@@ -105,7 +124,7 @@ def main():
     rows = []
     with zipfile.ZipFile(target, 'x', zipfile.ZIP_DEFLATED) as archive:
         for name, data in sorted(files.items()):
-            info = zipfile.ZipInfo(name, date_time=(2026, 11, 16 if controls else 15, 0, 0, 0))
+            info = zipfile.ZipInfo(name, date_time=(2026, 11, int(date[-2:]), 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             archive.writestr(info, data, compresslevel=9)
             rows.append({'path': name, 'bytes': len(data), 'sha256': sha(data)})

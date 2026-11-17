@@ -1,0 +1,15 @@
+{
+  "file": "pexels-10598787.jpg",
+  "sourceSHA256": "c9414e588ac2bdea54b1dcbdd94bf719e35820ba76775104bd3787d8313a8527",
+  "originalOnly": true,
+  "detectorExecuted": false,
+  "reviewer": "primary-agent-source-review-record",
+  "reviewStatus": "unqualified-no-independent-tip-labels",
+  "role": "unqualified-positive-lead",
+  "priorSourceOnlyReview": {
+    "path": "tests/visual/lash-spatial-supplement-04-summary.json",
+    "sha256": "02951582c3a4ca508d1dfe7dfb9cc650bdb354c26b77fed66f0f1eb80875b3d8",
+    "observation": "Open eyes with resolved upper shafts, but loops, crossings and projected ends require cautious separate annotation; no five-tip qualification yet."
+  },
+  "policy": "No tip/path/direction annotations; source-only record frozen before automatic trace. No recall or acceptance claim."
+}
