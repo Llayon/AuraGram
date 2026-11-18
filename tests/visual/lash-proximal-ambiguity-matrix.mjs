@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {followCurve} from './lash-subpixel-probe.mjs';
 import {NATIVE_PATH_PROTOCOL} from './lash-native-path.mjs';
 import {auditSharedArcProximal} from './lash-shared-arc-proximal.mjs';
+import {auditProximalBands} from './lash-proximal-band-audit.mjs';
 
 // Fixed analytic luminance fixtures. Integrate before quantizing to native pixels.
 const patch = {x:0, y:0, w:72, h:64};
@@ -17,6 +18,7 @@ const cases = [
   ...[1.5,2.5,3.5].flatMap(separation => [.5,1].map(strength => ({kind:'parallel',separation,strength})))
 ];
 const axis = {x:0,y:-1};
+const auditBands = process.argv.includes('--audit-bands');
 const gaussian = dx => Math.exp(-(dx * dx) / .45);
 function signal(dx, y, fixture) {
   const main = gaussian(dx);
@@ -45,7 +47,11 @@ function run(fixture, phase) {
   const reverse = auditSharedArcProximal(luma, patch, start, axis, distal, geometry);
   assert.ok((reverse.distalArc ?? 0) + (reverse.proximalArc ?? 0) <= 36 + 1e-8);
   assert.equal(reverse.endpointConfirmed, undefined);
-  return {...fixture,phase,distalReason:distal.reason,distalPoints:distal.points,reverse};
+  const row = {...fixture,phase,distalReason:distal.reason,distalPoints:distal.points,reverse};
+  if (auditBands && reverse.status === 'gate-observed') {
+    row.bandAudit = auditProximalBands(luma,patch.w,patch.h,reverse.points);
+  }
+  return row;
 }
 
 const output = process.argv[2];
@@ -58,11 +64,16 @@ for (const {kind,reverse} of rows) {
   if (reverse.status === 'gate-observed') summary[kind].gateArrivals++;
   summary[kind].reasons[reverse.reason] = (summary[kind].reasons[reverse.reason] ?? 0) + 1;
 }
+if (auditBands) for (const {kind,bandAudit} of rows.filter(row => row.bandAudit)) {
+  const counts = summary[kind].bandAudit ??= {};
+  counts[bandAudit.reason] = (counts[bandAudit.reason] ?? 0) + 1;
+}
 const hash = file => createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const sources = ['lash-proximal-ambiguity-matrix.mjs','lash-shared-arc-proximal.mjs','lash-proximal-budget-bound.mjs',
   'lash-native-path.mjs','lash-subpixel-probe.mjs','lash-subpixel-center.mjs','lash-endpoint-profile.mjs','lash-native-shaft.mjs']
   .map(file => 'tests/visual/' + file);
 sources.push('src/retouch/lashAnalysis.mjs');
+if (auditBands) sources.push('tests/visual/lash-proximal-band-audit.mjs');
 const inputs = Object.fromEntries(sources.map(file => [file,hash(file)]));
 fs.writeFileSync(output, JSON.stringify({patch,geometry,inputs,summary,rows},null,2) + '\n', {flag:'wx'});
 console.log(JSON.stringify(summary));
