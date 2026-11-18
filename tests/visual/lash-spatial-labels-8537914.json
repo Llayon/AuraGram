@@ -1,0 +1,287 @@
+{
+  "schema": "spatial-original-annotation-v1",
+  "file": "pexels-8537914.jpg",
+  "sourceSHA256": "e95443ea48ff678e4023e813e3d64e011e87b3082ba9006548edd0e87bf5d54b",
+  "coordinateSpace": "original-source-pixels",
+  "originalOnly": true,
+  "detectorExecuted": false,
+  "reviewer": "primary-agent-source-only-visual-review-before-detector",
+  "reviewStatus": "provisional-needs-independent-critique",
+  "role": "unqualified-positive-lead",
+  "evaluatedEyes": [
+    "left"
+  ],
+  "excludedEyes": {
+    "right": "Hair crosses the upper structures and the eye is shadowed; same-fiber paths and independent tips cannot be qualified."
+  },
+  "eyes": {
+    "left": {
+      "cropRect": [
+        4348,
+        1107,
+        696,
+        448
+      ],
+      "qualification": "five-provisional-regions-awaiting-independent-review",
+      "annotationExhaustive": false,
+      "tips": [
+        {
+          "id": "left-1",
+          "region": [
+            [
+              4541,
+              1160
+            ],
+            [
+              4551,
+              1160
+            ],
+            [
+              4551,
+              1174
+            ],
+            [
+              4541,
+              1174
+            ]
+          ],
+          "observedPath": [
+            [
+              4583,
+              1275
+            ],
+            [
+              4561,
+              1225
+            ],
+            [
+              4546,
+              1167
+            ]
+          ],
+          "directionRange": [
+            -115,
+            -95
+          ],
+          "uncertainty": "Engineering source-only estimate. Terminal location and local direction provisional; approximate segment may cross other structures. No confirmed proximal same-fiber ownership."
+        },
+        {
+          "id": "left-2",
+          "region": [
+            [
+              4599,
+              1133
+            ],
+            [
+              4611,
+              1133
+            ],
+            [
+              4611,
+              1149
+            ],
+            [
+              4599,
+              1149
+            ]
+          ],
+          "observedPath": [
+            [
+              4655,
+              1265
+            ],
+            [
+              4625,
+              1196
+            ],
+            [
+              4605,
+              1141
+            ]
+          ],
+          "directionRange": [
+            -125,
+            -100
+          ],
+          "uncertainty": "Engineering source-only estimate. Terminal location and local direction provisional; approximate segment may cross other structures. No confirmed proximal same-fiber ownership."
+        },
+        {
+          "id": "left-3",
+          "region": [
+            [
+              4838,
+              1183
+            ],
+            [
+              4850,
+              1183
+            ],
+            [
+              4850,
+              1197
+            ],
+            [
+              4838,
+              1197
+            ]
+          ],
+          "observedPath": [
+            [
+              4794,
+              1272
+            ],
+            [
+              4823,
+              1228
+            ],
+            [
+              4844,
+              1190
+            ]
+          ],
+          "directionRange": [
+            -75,
+            -40
+          ],
+          "uncertainty": "Engineering source-only estimate. Terminal location and local direction provisional; approximate segment may cross other structures. No confirmed proximal same-fiber ownership."
+        },
+        {
+          "id": "left-4",
+          "region": [
+            [
+              4893,
+              1205
+            ],
+            [
+              4905,
+              1205
+            ],
+            [
+              4905,
+              1219
+            ],
+            [
+              4893,
+              1219
+            ]
+          ],
+          "observedPath": [
+            [
+              4839,
+              1289
+            ],
+            [
+              4870,
+              1248
+            ],
+            [
+              4899,
+              1212
+            ]
+          ],
+          "directionRange": [
+            -70,
+            -35
+          ],
+          "uncertainty": "Engineering source-only estimate. Terminal location and local direction provisional; approximate segment may cross other structures. No confirmed proximal same-fiber ownership."
+        },
+        {
+          "id": "left-5",
+          "region": [
+            [
+              4967,
+              1257
+            ],
+            [
+              4979,
+              1257
+            ],
+            [
+              4979,
+              1271
+            ],
+            [
+              4967,
+              1271
+            ]
+          ],
+          "observedPath": [
+            [
+              4922,
+              1339
+            ],
+            [
+              4952,
+              1295
+            ],
+            [
+              4973,
+              1264
+            ]
+          ],
+          "directionRange": [
+            -75,
+            -35
+          ],
+          "uncertainty": "Engineering source-only estimate. Terminal location and local direction provisional; approximate segment may cross other structures. No confirmed proximal same-fiber ownership."
+        }
+      ],
+      "ambiguities": [
+        {
+          "region": [
+            [
+              4458,
+              1252
+            ],
+            [
+              5018,
+              1252
+            ],
+            [
+              5018,
+              1422
+            ],
+            [
+              4458,
+              1422
+            ]
+          ],
+          "reason": "Overlapping curved/clumped proximal structures; do not infer same-fiber ownership through crossings."
+        },
+        {
+          "region": [
+            [
+              4548,
+              1107
+            ],
+            [
+              4868,
+              1107
+            ],
+            [
+              4868,
+              1119
+            ],
+            [
+              4548,
+              1119
+            ]
+          ],
+          "reason": "Some upper structures leave the source-review crop; no tip labels assigned at this crop boundary."
+        }
+      ]
+    },
+    "right": {
+      "cropRect": [
+        3182,
+        1092,
+        734,
+        366
+      ],
+      "qualification": "excluded-hair-shadow",
+      "annotationExhaustive": false,
+      "tips": [],
+      "ambiguities": []
+    }
+  }
+}

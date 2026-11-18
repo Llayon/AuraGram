@@ -10,6 +10,9 @@ tests/visual/lash-spatial-control-14818485.json -text
 tests/visual/lash-spatial-controls-05.freeze.json -text
 tests/visual/lash-spatial-source-review-10598787.json -text
 tests/visual/lash-spatial-source-review-10598787.freeze.json -text
+tests/visual/lash-spatial-labels-8537914.json -text
+tests/visual/lash-spatial-labels-8537914.freeze.json -text
+tests/visual/lash-spatial-supplement-06-summary.json -text
 # Evidence ZIP bytes and canonical verification text must remain hash-stable.
 tests/visual/spatial-ending-evidence/*.zip -text
 tests/visual/spatial-ending-evidence/**/*.txt text eol=lf

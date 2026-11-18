@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-18",
+  "stage": "post-freeze-existing-mask-scope",
+  "photoAnalysisExecuted": false,
+  "detectorExecuted": false,
+  "sourceSHA256": "e95443ea48ff678e4023e813e3d64e011e87b3082ba9006548edd0e87bf5d54b",
+  "labelFreeze": "tests/visual/lash-spatial-labels-8537914.freeze.json",
+  "freezeSHA256": "3cd11fdac4ef7f19d0df1efc97fb6587ab89e80423e274d36ab3430f44525290",
+  "inputs": {
+    "tests/visual/out/mask-scope-8537914-02/chromium.json": "8eaafda9ecd3eff7b431d56611fef827abba16ad49baf611510ff0fb18eab8b4",
+    "tests/visual/out/mask-scope-8537914-02/webkit.json": "7265f90cb773c048b70277d649dbe97523177902d4d2c755968a9293f2a06214"
+  },
+  "results": [
+    {
+      "engine": "chromium",
+      "target": "preview720long",
+      "group": "baselineLength",
+      "evaluatedRegions": 5,
+      "regionsWithAnyPositiveMaskSample": 0,
+      "protectedProbes": "all-zero"
+    },
+    {
+      "engine": "chromium",
+      "target": "preview720long",
+      "group": "maximumRecoveryLength",
+      "evaluatedRegions": 5,
+      "regionsWithAnyPositiveMaskSample": 0,
+      "protectedProbes": "all-zero"
+    },
+    {
+      "engine": "chromium",
+      "target": "native",
+      "group": "baselineLength",
+      "evaluatedRegions": 5,
+      "regionsWithAnyPositiveMaskSample": 0,
+      "protectedProbes": "all-zero"
+    },
+    {
+      "engine": "chromium",
+      "target": "native",
+      "group": "maximumRecoveryLength",
+      "evaluatedRegions": 5,
+      "regionsWithAnyPositiveMaskSample": 0,
+      "protectedProbes": "all-zero"
+    },
+    {
+      "engine": "webkit",
+      "target": "preview720long",
+      "group": "baselineLength",
+      "evaluatedRegions": 5,
+      "regionsWithAnyPositiveMaskSample": 0,
+      "protectedProbes": "all-zero"
+    },
+    {
+      "engine": "webkit",
+      "target": "preview720long",
+      "group": "maximumRecoveryLength",
+      "evaluatedRegions": 5,
+      "regionsWithAnyPositiveMaskSample": 0,
+      "protectedProbes": "all-zero"
+    },
+    {
+      "engine": "webkit",
+      "target": "native",
+      "group": "baselineLength",
+      "evaluatedRegions": 5,
+      "regionsWithAnyPositiveMaskSample": 0,
+      "protectedProbes": "all-zero"
+    },
+    {
+      "engine": "webkit",
+      "target": "native",
+      "group": "maximumRecoveryLength",
+      "evaluatedRegions": 5,
+      "regionsWithAnyPositiveMaskSample": 0,
+      "protectedProbes": "all-zero"
+    }
+  ],
+  "failedAttempt": {
+    "directory": "tests/visual/out/mask-scope-8537914-01",
+    "reason": "PowerShell unquoted {engine} path was parsed incorrectly; no engine evaluation completed. Preserved protocol; corrected quoting only in successful02 invocation."
+  },
+  "metadataNote": "Historical unchanged mask helper embeds date2026-11-14 in protocol; actual execution date is2026-11-18 as recorded here.",
+  "qualifiedPositiveCount": 0,
+  "decision": "All five provisional endpoint regions have zero sampled alpha even in maximum recovery envelope. This source does not provide an in-scope positive eye for this cycle. Do not expand masks, relabel regions, run recognition to claim recall, or transfer viewed source to final split.",
+  "limitations": [
+    "Provisional primary-agent engineering annotation; independent critique missing.",
+    "Mask samples are geometric scope evidence, not biological endpoint verification or detector recall.",
+    "No cohort identity independence established."
+  ],
+  "length": "HOLD"
+}

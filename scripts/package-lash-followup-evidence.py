@@ -44,16 +44,17 @@ def sha(data):
 
 
 def main():
-    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges'], ['--observability'], ['--label-coverage'], ['--cell-boundary'], ['--dense-axis']):
-        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges|--observability|--label-coverage|--cell-boundary|--dense-axis]')
+    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges'], ['--observability'], ['--label-coverage'], ['--cell-boundary'], ['--dense-axis'], ['--supplement06']):
+        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges|--observability|--label-coverage|--cell-boundary|--dense-axis|--supplement06]')
     controls = sys.argv[1:] == ['--controls05']
     resolved = sys.argv[1:] == ['--resolved-edges']
     observability = sys.argv[1:] == ['--observability']
     coverage = sys.argv[1:] == ['--label-coverage']
     boundary = sys.argv[1:] == ['--cell-boundary']
     dense_axis = sys.argv[1:] == ['--dense-axis']
-    date = '2026-11-18' if boundary or dense_axis else '2026-11-17' if resolved or observability or coverage else '2026-11-16' if controls else '2026-11-15'
-    stem = 'followup-' + date.replace('-', '') + ('-03' if coverage else '-02' if observability or dense_axis else '-01')
+    supplement06 = sys.argv[1:] == ['--supplement06']
+    date = '2026-11-18' if boundary or dense_axis or supplement06 else '2026-11-17' if resolved or observability or coverage else '2026-11-16' if controls else '2026-11-15'
+    stem = 'followup-' + date.replace('-', '') + ('-03' if coverage or supplement06 else '-02' if observability or dense_axis else '-01')
     entries = ENTRIES
     selected_snapshots = SNAPSHOTS
     dependencies = ['native-real-11383300-bootstrap-01',
@@ -156,6 +157,28 @@ def main():
                               'tests/visual/lash-native-real.cjs']
         dependencies = ['dense-axis-14297936-chromium-02', 'dense-axis-14297936-webkit-02',
                         'native-dense-axis-default-14297936-01', 'native-dense-axis-measured-14297936-01']
+    if supplement06:
+        entries = ['spatial-supplement-06', 'spatial-supplement-06-chromium',
+                   'spatial-supplement-06-webkit', 'spatial-label-review-8537914-01',
+                   'mask-scope-8537914-01', 'mask-scope-8537914-02']
+        selected_snapshots = ['scripts/package-lash-followup-evidence.py',
+                              'tests/visual/lash-spatial-download.cjs',
+                              'tests/visual/lash-spatial-screen.cjs',
+                              'tests/visual/lash-spatial-label-views.cjs',
+                              'tests/visual/lash-mask-scope.cjs',
+                              'tests/visual/lash-spatial-supplement-06.json',
+                              'tests/visual/lash-spatial-supplement-06-summary.json',
+                              'tests/visual/lash-spatial-labels-8537914.json',
+                              'tests/visual/lash-spatial-labels-8537914.freeze.json',
+                              'tests/visual/lash-spatial-case-8537914.json',
+                              'tests/visual/lash-spatial-supplement-06-scope.json']
+        # Scope helper records renderer dependencies separately from native tracing.
+        protocol = json.loads((OUT / 'mask-scope-8537914-02/protocol.json').read_bytes())
+        for name, digest in protocol['dependencies'].items():
+            if sha((ROOT / name).read_bytes()) != digest:
+                raise RuntimeError('Changed scope dependency: ' + name)
+            selected_snapshots.append(name)
+        dependencies = []
     target = DEST / (stem + '.zip')
     manifest = DEST / (stem + '.json')
     if target.exists() or manifest.exists():
