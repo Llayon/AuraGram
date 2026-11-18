@@ -34,6 +34,12 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-18: browser agreement for the proximal band audit
+
+Replayed the 31 gate-arriving cases from the 60-case mechanism matrix, including the missed fork and the parallel cases. The regenerated Node matrix has identical rows and decisions to the archived baseline. Chromium and WebKit received the same serialized luma samples and observed points. Each browser repeated its results exactly. Both browsers match Node on all statuses, reasons, witness indices, profile radii, offsets and support flags. Chromium measurements match exactly. WebKit differs by at most 2.22e-15, within the 1e-12 comparison tolerance. The initial exact WebKit comparison failed, and its measurements and failure are preserved.
+
+The missed phase-zero fork remains missed in both engines. The other two fork phases and the nine crossing cases are flagged. Nine arriving parallel cases are flagged and seven clear. Three isolated single-shaft paths clear. This checks runtime agreement on fixed samples. Real-image utility, decoder equivalence and performance are outside this check. The current method remains an offline veto with insufficient evidence for ownership. Three focused unit tests passed. The previous complete unit result is 307 passes. The input matrix, both browser attempts and exact measurement digests are preserved in `followup-proximal-band-browser-20261118.zip`. **LENGTH HOLD.**
+
 ### 2026-11-18: transverse band veto on saved mechanism cases
 
 Added an offline post-hoc scan of each observed reverse-trajectory point. The local secant between neighboring observed points supplies the axis. Sampled offsets from -3 to +3 px in 0.25 px steps with the existing radii 0.75 and 1.5 and original 0.006 response floor. Multiple contiguous support bands at either radius yield an ambiguous result. Missing samples and support cut by the scan boundary censor a path. A scan with no veto does not establish strand ownership. The scan never chooses or extends a trace.

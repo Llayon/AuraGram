@@ -19,6 +19,11 @@ const cases = [
 ];
 const axis = {x:0,y:-1};
 const auditBands = process.argv.includes('--audit-bands');
+const browserInputIndex = process.argv.indexOf('--browser-inputs');
+const browserInputFile = browserInputIndex < 0 ? null : process.argv[browserInputIndex + 1];
+if (browserInputIndex >= 0 && (!auditBands || !browserInputFile || fs.existsSync(browserInputFile)))
+  throw Error('Supply --audit-bands and a NEW browser input JSON');
+const browserInputs = [];
 const gaussian = dx => Math.exp(-(dx * dx) / .45);
 function signal(dx, y, fixture) {
   const main = gaussian(dx);
@@ -50,6 +55,7 @@ function run(fixture, phase) {
   const row = {...fixture,phase,distalReason:distal.reason,distalPoints:distal.points,reverse};
   if (auditBands && reverse.status === 'gate-observed') {
     row.bandAudit = auditProximalBands(luma,patch.w,patch.h,reverse.points);
+    if (browserInputFile) browserInputs.push({kind: fixture.kind, luma: Array.from(luma), points: reverse.points, expected: row.bandAudit});
   }
   return row;
 }
@@ -76,4 +82,5 @@ sources.push('src/retouch/lashAnalysis.mjs');
 if (auditBands) sources.push('tests/visual/lash-proximal-band-audit.mjs');
 const inputs = Object.fromEntries(sources.map(file => [file,hash(file)]));
 fs.writeFileSync(output, JSON.stringify({patch,geometry,inputs,summary,rows},null,2) + '\n', {flag:'wx'});
+if (browserInputFile) fs.writeFileSync(browserInputFile, JSON.stringify({width: patch.w, height: patch.h, inputs, cases: browserInputs}) + '\n', {flag:'wx'});
 console.log(JSON.stringify(summary));
