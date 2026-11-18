@@ -34,6 +34,14 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-18: proximal gate arrivals in bounded ambiguity controls
+
+The real-photo reverse probe rarely operated within its budget. A fixed 60-case analytic luminance matrix placed crossings, forks, and parallel signals inside a reachable proximal span. It uses 4?4 pixel integration, 8-bit quantization, three transverse phases, the existing V2 trace and shared arc budget. This is a mechanism check with known geometry on Node, without generated assets or portrait-based accuracy claims.
+
+The single shaft reaches the gate in 3/3 cases. A four-pixel gap stops all 3 variants. The existing diagnostic still reaches the gate in 9/18 crossing cases, 3/18 asymmetric forks and 16/18 parallel cases. All three arriving forks have slope 0.35 and secondary strength 0.5. Their traces end about 4.47?4.49 px from the original trunk center on the stronger branch. The two arriving equal-strength 1.5 px parallel cases have center displacements as large as 0.86 px. This is center bias in the analytic signal. No neighbor-switch rate is inferred from it. Gate arrival alone fails as an ownership criterion even before testing real images.
+
+The second complete matrix is byte-identical. Archived all point records, refusals and input digests in `followup-proximal-ambiguity-20261118.zip`. Focused mechanism regressions pass 14 tests. Detector behavior, thresholds and acceptance are unchanged. Separate Chromium and WebKit checks for these new synthetic fixtures were not run. The current probe remains diagnostic, and the final group stays sealed. **LENGTH HOLD.**
+
 ### 2026-11-18: fixed shared-arc probe on two further development sources
 
 Ran the same segment-axis, exact-cell, distal-body policy on the previously frozen development source 11383300 and hair-overlap control 29117992. Ran baseline, probe and repeat separately in each browser. The comparator checks protocol identity except for the probe flag, frozen labels, original source and actual engine geometry digests. Every baseline record equals its probe counterpart after removing the added audit and timings. Probe repeats match after excluding timings. Labels are used only for post-hoc ambiguity checks and the separate geometric bound.
