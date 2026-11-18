@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-18",
+  "purpose": "Metadata census only; do not decode sources, open held-out views, run detectors or infer cohort eligibility. Retain every acquisition failure and engine observation.",
+  "acquisitions": [
+    "tests/visual/out/spatial-cohort-01/downloads.json",
+    "tests/visual/out/spatial-cohort-02/downloads.json",
+    "tests/visual/out/spatial-supplement-01/downloads.json",
+    "tests/visual/out/spatial-supplement-02/downloads.json",
+    "tests/visual/out/spatial-supplement-03/downloads.json",
+    "tests/visual/out/spatial-supplement-04/downloads.json",
+    "tests/visual/out/spatial-supplement-05/downloads.json",
+    "tests/visual/out/spatial-supplement-06/downloads.json",
+    "tests/visual/out/spatial-supplement-07/downloads.json",
+    "tests/visual/out/spatial-supplement-08/downloads.json",
+    "tests/visual/out/spatial-supplement-04-network/downloads.json"
+  ],
+  "screenings": [
+    "tests/visual/out/spatial-screen-chromium-01/screening.json",
+    "tests/visual/out/spatial-screen-webkit-01/screening.json",
+    "tests/visual/out/spatial-supplement-screen-chromium-01/screening.json",
+    "tests/visual/out/spatial-supplement-screen-webkit-01/screening.json",
+    "tests/visual/out/spatial-supplement-screen-chromium-02/screening.json",
+    "tests/visual/out/spatial-supplement-screen-webkit-02/screening.json",
+    "tests/visual/out/spatial-supplement-screen-chromium-03/screening.json",
+    "tests/visual/out/spatial-supplement-screen-webkit-03/screening.json",
+    "tests/visual/out/spatial-supplement-04-chromium/screening.json",
+    "tests/visual/out/spatial-supplement-04-webkit/screening.json",
+    "tests/visual/out/spatial-supplement-05-chromium/screening.json",
+    "tests/visual/out/spatial-supplement-05-webkit/screening.json",
+    "tests/visual/out/spatial-supplement-06-chromium/screening.json",
+    "tests/visual/out/spatial-supplement-06-webkit/screening.json",
+    "tests/visual/out/spatial-supplement-07-chromium/screening.json",
+    "tests/visual/out/spatial-supplement-07-webkit/screening.json",
+    "tests/visual/out/spatial-supplement-08-chromium/screening.json",
+    "tests/visual/out/spatial-supplement-08-webkit/screening.json"
+  ]
+}

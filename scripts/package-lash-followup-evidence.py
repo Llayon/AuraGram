@@ -44,8 +44,8 @@ def sha(data):
 
 
 def main():
-    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges'], ['--observability'], ['--label-coverage'], ['--cell-boundary'], ['--dense-axis'], ['--supplement06'], ['--supplements07-08']):
-        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges|--observability|--label-coverage|--cell-boundary|--dense-axis|--supplement06|--supplements07-08]')
+    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges'], ['--observability'], ['--label-coverage'], ['--cell-boundary'], ['--dense-axis'], ['--supplement06'], ['--supplements07-08'], ['--screening-census']):
+        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges|--observability|--label-coverage|--cell-boundary|--dense-axis|--supplement06|--supplements07-08|--screening-census]')
     controls = sys.argv[1:] == ['--controls05']
     resolved = sys.argv[1:] == ['--resolved-edges']
     observability = sys.argv[1:] == ['--observability']
@@ -54,8 +54,9 @@ def main():
     dense_axis = sys.argv[1:] == ['--dense-axis']
     supplement06 = sys.argv[1:] == ['--supplement06']
     supplements07_08 = sys.argv[1:] == ['--supplements07-08']
-    date = '2026-11-18' if boundary or dense_axis or supplement06 or supplements07_08 else '2026-11-17' if resolved or observability or coverage else '2026-11-16' if controls else '2026-11-15'
-    stem = 'followup-' + date.replace('-', '') + ('-04' if supplements07_08 else '-03' if coverage or supplement06 else '-02' if observability or dense_axis else '-01')
+    census = sys.argv[1:] == ['--screening-census']
+    date = '2026-11-18' if boundary or dense_axis or supplement06 or supplements07_08 or census else '2026-11-17' if resolved or observability or coverage else '2026-11-16' if controls else '2026-11-15'
+    stem = 'followup-' + date.replace('-', '') + ('-05' if census else '-04' if supplements07_08 else '-03' if coverage or supplement06 else '-02' if observability or dense_axis else '-01')
     entries = ENTRIES
     selected_snapshots = SNAPSHOTS
     dependencies = ['native-real-11383300-bootstrap-01',
@@ -210,6 +211,28 @@ def main():
             if sha(source_path.read_bytes()) != freeze['sourceHashes'][source['file']]:
                 raise RuntimeError('Changed source original: ' + source['file'])
         dependencies = []
+    if census:
+        config_file = 'tests/visual/lash-screening-census-inputs.json'
+        config = json.loads((ROOT / config_file).read_bytes())
+        result = json.loads((OUT / 'spatial-screening-census-03.json').read_bytes())
+        if not result['consistent'] or result['configSHA256'] != sha((ROOT / config_file).read_bytes()):
+            raise RuntimeError('Census is inconsistent or config changed')
+        for name, digest in result['inputs'].items():
+            if sha((ROOT / name).read_bytes()) != digest:
+                raise RuntimeError('Changed census input: ' + name)
+        for name, field in [('tests/visual/lash-screening-census.mjs', 'moduleSHA256'),
+                            ('tests/visual/lash-screening-census.cjs', 'runnerSHA256')]:
+            if sha((ROOT / name).read_bytes()) != result[field]:
+                raise RuntimeError('Changed census implementation: ' + name)
+        entries = ['spatial-screening-census-01.json', 'spatial-screening-census-02.json',
+                   'spatial-screening-census-03.json', 'screening-census-unit-sequential-01.txt']
+        entries += [(ROOT / name).relative_to(OUT).as_posix()
+                    for name in config['acquisitions'] + config['screenings']]
+        selected_snapshots = ['scripts/package-lash-followup-evidence.py', 'package.json', config_file,
+                              'tests/visual/lash-screening-census.cjs',
+                              'tests/visual/lash-screening-census.mjs',
+                              'tests/visual/lash-screening-census.test.mjs']
+        dependencies = []
     target = DEST / (stem + '.zip')
     manifest = DEST / (stem + '.json')
     if target.exists() or manifest.exists():
@@ -223,7 +246,7 @@ def main():
             if not file.is_file():
                 continue
             data = file.read_bytes()
-            if file.suffix == '.json' or ((resolved or observability or coverage or boundary or dense_axis) and file.suffix == '.txt') or ((boundary or dense_axis) and 'verified-source' in file.parts and file.suffix in {'.mjs', '.cjs', '.js'}):
+            if file.suffix == '.json' or ((resolved or observability or coverage or boundary or dense_axis or census) and file.suffix == '.txt') or ((boundary or dense_axis) and 'verified-source' in file.parts and file.suffix in {'.mjs', '.cjs', '.js'}):
                 files[file.relative_to(OUT).as_posix()] = data
             else:
                 omitted.append({'path': file.relative_to(OUT).as_posix(),
