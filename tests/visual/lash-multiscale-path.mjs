@@ -5,11 +5,12 @@ import {followCurve} from './lash-subpixel-probe.mjs';
 import {NATIVE_PATH_PROTOCOL} from './lash-native-path.mjs';
 import {traceCoarseSeeds,coarseRouteToSource} from './lash-coarse-route.mjs';
 import {projectAutomaticSeeds} from './lash-native-path.mjs';
+import {auditSharedArcProximal} from './lash-shared-arc-proximal.mjs';
 
 /** Separates full coarse evidence from bounded forward native refinement.
- * No rootward native retry, label inputs, tip substitution or Length adapter.
+ * Optional reverse diagnostic uses the same start and remaining arc budget.
  */
-export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,distalBodyStart=false,geometricCenterBound=false,denseAxis='segment'}) {
+export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,distalBodyStart=false,geometricCenterBound=false,denseAxis='segment',proximalGeometry}) {
  const routes=traceCoarseSeeds(coarse),distalRoutes=traceCoarseSeeds(coarse,'distal'),seeds=projectAutomaticSeeds({coordinateSpace:'analysis-roi',seeds:coarse.seeds},mapping);
  const work=new Float32Array(256*256),results=[];
  for(let rank=0;rank<seeds.length;rank++){
@@ -43,7 +44,9 @@ export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,dist
   const localROICensored=c.points.some(p=>[-3,3].some(x=>[-3,3].some(y=>!inROI({x:p.x+x,y:p.y+y}))));
   const local={...c,roiCensored:localROICensored,points:c.points.map(p=>({...p,x:p.x+rect.x,y:p.y+rect.y})),coordinateSpace:'original-source-pixels',attemptCoordinateSpace:'patch-local-pixels',maximumArcNative:36};
   const localBoundary=c.reason.includes('crop-boundary')||c.reason==='local-roi-boundary';
+  const proximalAudit=proximalGeometry ? auditSharedArcProximal(luma,rect,initialization.center,axis,c,proximalGeometry) : undefined;
   finish({status:route.status==='censored'||localROICensored||localBoundary||['arc-budget','step-budget'].includes(c.reason)?'censored':'ambiguous',reason:localBoundary?'native-local-crop-boundary':route.connected?'coarse-connection-native-ownership-unverified':route.reason,patch:rect,initialization,local,correspondence:auditScaleCorrespondence(base.coarseDistal,local.points,{startCellIndex:localStart.routeCellIndex}),
+   ...(proximalAudit ? {proximalAudit} : {}),
    broadRootAmbiguity:route.broadSupport,coarseProximalConnection:route.connected});
  }
  return{results,seedLimit:128,workingBufferBytes:work.byteLength,localRefinementLimit:36};

@@ -1,0 +1,66 @@
+{
+  "source": "pexels-14297936.jpg",
+  "originalRecordsPreserved": true,
+  "repeatIdenticalExcludingTiming": true,
+  "inputs": {
+    "tests/visual/out/native-roi-contained-14297936-01/protocol.json": "3b8022049b5232006fcf184b92c48539a9cbde663ba863aee9c60344e1d27198",
+    "tests/visual/out/native-shared-arc-14297936-01/protocol.json": "b2e1ba32ff0a818d60933db90690445ca9047103b4afba7514248cd6b5b19816",
+    "tests/visual/out/native-shared-arc-14297936-repeat-01/protocol.json": "b2e1ba32ff0a818d60933db90690445ca9047103b4afba7514248cd6b5b19816",
+    "tests/visual/out/native-roi-contained-14297936-01/chromium.json": "7d86ce792319d0a1c2a9f7c0fa9b57f16fb88e4030122fc59cb7658ff2ff7b92",
+    "tests/visual/out/native-shared-arc-14297936-01/chromium.json": "b319edb695a712a3541327cb366063e99d7222592477117a10463e7fceb58212",
+    "tests/visual/out/native-shared-arc-14297936-repeat-01/chromium.json": "96cafb9c5405323d868d05f6d874d06c77ab30ba8ba3d6798b6f060fffcf6e5b",
+    "tests/visual/out/native-roi-contained-14297936-01/webkit.json": "193f268266ffd83140e3e7477bc432633f7bb1b239f23d2e37fd858a3e13ada0",
+    "tests/visual/out/native-shared-arc-14297936-01/webkit.json": "f542c1fd3766211d7b5fa21aaf2d4f62b6aa1477e53b298b72c374538a28568f",
+    "tests/visual/out/native-shared-arc-14297936-repeat-01/webkit.json": "057e807fcb3f83cbf3597d36fd3905b16f6a22b84d463f3e1b8c500fea5aa7a7"
+  },
+  "engines": {
+    "chromium": {
+      "left": {
+        "observedDistalStarts": 0,
+        "reasons": {},
+        "tracesAttempted": []
+      },
+      "right": {
+        "observedDistalStarts": 52,
+        "reasons": {
+          "proximal-gate-beyond-budget": 51,
+          "unconfirmed-dense-link": 1
+        },
+        "tracesAttempted": [
+          {
+            "rank": 121,
+            "distalArc": 1.5712011786720816,
+            "remaining": 34.428798821327916,
+            "lowerBound": 24.44488456228652,
+            "status": "ambiguous",
+            "reason": "unconfirmed-dense-link",
+            "proximalArc": 0,
+            "points": [
+              {
+                "x": 1647.8919469773082,
+                "y": 1950.185617684418,
+                "arc": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "webkit": {
+      "left": {
+        "observedDistalStarts": 4,
+        "reasons": {
+          "proximal-gate-beyond-budget": 4
+        },
+        "tracesAttempted": []
+      },
+      "right": {
+        "observedDistalStarts": 45,
+        "reasons": {
+          "proximal-gate-beyond-budget": 45
+        },
+        "tracesAttempted": []
+      }
+    }
+  }
+}

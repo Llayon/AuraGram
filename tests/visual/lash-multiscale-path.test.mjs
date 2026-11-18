@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {traceCoarseSeeds,coarseRouteToSource} from './lash-coarse-route.mjs';
 import {auditMultiscaleSeeds} from './lash-multiscale-path.mjs';
+import {auditSharedArcProximal} from './lash-shared-arc-proximal.mjs';
 function fixture(broad=false){
  const w=48,h=64,n=w*h,arrays={ridge:new Uint8Array(n),responseMap:new Float32Array(n),anisotropy:new Float32Array(n),dx:new Float32Array(n),dy:new Float32Array(n),distance:new Float32Array(n),valid:new Uint8Array(n),rootSupport:new Uint8Array(n),normalsX:new Float32Array(n),normalsY:new Float32Array(n)};
  for(let y=10;y<=50;y++){const i=y*w+24;arrays.ridge[i]=200;arrays.responseMap[i]=.1;arrays.anisotropy[i]=1;arrays.dy[i]=-1;arrays.distance[i]=50-y;arrays.valid[i]=1;arrays.normalsY[i]=-1;if(broad&&y>40){arrays.responseMap[i]=0;arrays.dy[i]=0;arrays.rootSupport[i]=1;}}
@@ -68,4 +69,22 @@ test('bootstrap dense link with an unavailable along-axis sample is censored',()
  assert.deepEqual(result.local.points,[]);
  assert.equal(result.status,'censored');
  assert.equal(result.reason,'native-local-crop-boundary');
+});
+
+test('reverse diagnostic reaches the lid only through observed samples within the shared arc',()=>{
+ const patch={x:100,y:50,w:40,h:48}, start={x:20,y:18,arc:0}, axis={x:0,y:-1};
+ const geometry={lid:[{x:110,y:82},{x:130,y:82}],lower:[{x:120,y:90}]};
+ const luma=new Float32Array(patch.w*patch.h);
+ for(let y=0;y<patch.h;y++)for(let x=0;x<patch.w;x++)luma[y*patch.w+x]=.8-.5*Math.exp(-((x-20)**2)/.35);
+ const probe=arc=>auditSharedArcProximal(luma,patch,start,axis,{points:[start,{x:20,y:18-arc,arc}]},geometry);
+ const reachable=probe(8);
+ assert.equal(reachable.status,'gate-observed');
+ assert.equal(reachable.points[0].y,68);
+ assert.ok(reachable.proximalArc+reachable.distalArc<=36);
+ assert.equal(reachable.endpointConfirmed,undefined);
+ assert.equal(probe(28).reason,'proximal-gate-beyond-budget');
+ luma.fill(.8,24*patch.w,27*patch.w);
+ const broken=probe(8);
+ assert.equal(broken.status,'ambiguous');
+ assert.ok(broken.points.at(-1).y<74);
 });
