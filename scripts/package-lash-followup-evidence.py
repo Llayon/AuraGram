@@ -44,8 +44,8 @@ def sha(data):
 
 
 def main():
-    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges'], ['--observability'], ['--label-coverage'], ['--cell-boundary'], ['--dense-axis'], ['--supplement06']):
-        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges|--observability|--label-coverage|--cell-boundary|--dense-axis|--supplement06]')
+    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges'], ['--observability'], ['--label-coverage'], ['--cell-boundary'], ['--dense-axis'], ['--supplement06'], ['--supplements07-08']):
+        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges|--observability|--label-coverage|--cell-boundary|--dense-axis|--supplement06|--supplements07-08]')
     controls = sys.argv[1:] == ['--controls05']
     resolved = sys.argv[1:] == ['--resolved-edges']
     observability = sys.argv[1:] == ['--observability']
@@ -53,8 +53,9 @@ def main():
     boundary = sys.argv[1:] == ['--cell-boundary']
     dense_axis = sys.argv[1:] == ['--dense-axis']
     supplement06 = sys.argv[1:] == ['--supplement06']
-    date = '2026-11-18' if boundary or dense_axis or supplement06 else '2026-11-17' if resolved or observability or coverage else '2026-11-16' if controls else '2026-11-15'
-    stem = 'followup-' + date.replace('-', '') + ('-03' if coverage or supplement06 else '-02' if observability or dense_axis else '-01')
+    supplements07_08 = sys.argv[1:] == ['--supplements07-08']
+    date = '2026-11-18' if boundary or dense_axis or supplement06 or supplements07_08 else '2026-11-17' if resolved or observability or coverage else '2026-11-16' if controls else '2026-11-15'
+    stem = 'followup-' + date.replace('-', '') + ('-04' if supplements07_08 else '-03' if coverage or supplement06 else '-02' if observability or dense_axis else '-01')
     entries = ENTRIES
     selected_snapshots = SNAPSHOTS
     dependencies = ['native-real-11383300-bootstrap-01',
@@ -178,6 +179,36 @@ def main():
             if sha((ROOT / name).read_bytes()) != digest:
                 raise RuntimeError('Changed scope dependency: ' + name)
             selected_snapshots.append(name)
+        dependencies = []
+    if supplements07_08:
+        entries = ['spatial-control-review-4995558-01', 'spatial-control-review-20669039-01']
+        for group in ['07', '08']:
+            entries += ['spatial-supplement-' + group,
+                        'spatial-supplement-' + group + '-chromium',
+                        'spatial-supplement-' + group + '-webkit',
+                        'spatial-supplement-' + group + '-qualification-input.json',
+                        'spatial-supplement-' + group + '-qualification.json']
+        selected_snapshots = ['scripts/package-lash-followup-evidence.py',
+                              'tests/visual/lash-spatial-download.cjs',
+                              'tests/visual/lash-spatial-screen.cjs',
+                              'tests/visual/lash-spatial-label-views.cjs',
+                              'tests/visual/lash-spatial-qualify.cjs',
+                              'tests/visual/lash-spatial-cohort-gate.cjs',
+                              'tests/visual/lash-spatial-supplement-07.json',
+                              'tests/visual/lash-spatial-supplement-08.json',
+                              'tests/visual/lash-spatial-supplements-07-08-summary.json',
+                              'tests/visual/lash-spatial-control-4995558.json',
+                              'tests/visual/lash-spatial-control-20669039.json',
+                              'tests/visual/lash-spatial-controls-07-08.freeze.json']
+        freeze = json.loads((ROOT / selected_snapshots[-1]).read_bytes())
+        summary = json.loads((ROOT / selected_snapshots[-4]).read_bytes())
+        for name, digest in {**freeze['inputs'], **summary['inputs']}.items():
+            if sha((ROOT / name).read_bytes()) != digest:
+                raise RuntimeError('Changed source-only input: ' + name)
+        for source in summary['sources']:
+            source_path = OUT / ('spatial-supplement-' + source['group']) / source['file']
+            if sha(source_path.read_bytes()) != freeze['sourceHashes'][source['file']]:
+                raise RuntimeError('Changed source original: ' + source['file'])
         dependencies = []
     target = DEST / (stem + '.zip')
     manifest = DEST / (stem + '.json')
