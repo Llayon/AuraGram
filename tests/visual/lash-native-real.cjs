@@ -7,6 +7,8 @@ const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 async function main(){
  const distalBodyStart=process.argv.includes('--distal-body');
  const multiscale=process.argv.includes('--multiscale');
+ const geometricCenterBound=process.argv.includes('--geometric-center-bound');
+ if(geometricCenterBound&&!multiscale)throw Error('Geometric center bound requires multiscale stage');
  if(distalBodyStart&&!multiscale)throw Error('Distal-body requires multiscale stage');
  const initializeCell=process.argv.includes('--initialize-cell');
  const output=process.argv[2];if(!output||fs.existsSync(output))throw Error('Supply NEW output directory');
@@ -32,6 +34,8 @@ async function main(){
  fs.mkdirSync(output,{recursive:true});
  const protocol={distalBodyStart,multiscale,initializeCell,kind:'development-diagnostic-not-acceptance',baseline:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceSHA256:hash(source),labelInputs:frozen.inputs,moduleSHA256:Object.fromEntries(modules.map(f=>[f,hash(fs.readFileSync(f))])),runnerSHA256:hash(fs.readFileSync(__filename)),maxSide:224,seedLimit:128,annotationsUsedAsTraceInput:false,independentCritique:'not-completed',eligibility:'unqualified-positive-lead; not held out'};
  protocol.caseManifest=caseFile;protocol.caseManifestSHA256=caseBytes?hash(caseBytes):null;
+ protocol.geometricCenterBound=geometricCenterBound;
+ if(geometricCenterBound)protocol.boundaryProtocolSHA256=hash(fs.readFileSync('tests/visual/lash-cell-boundary-protocol.json'));
  protocol.sourceRole=labels.role;
  protocol.eligibility='unqualified-development-diagnostic; not held out';
  fs.writeFileSync(path.join(output,'protocol.json'),JSON.stringify(protocol,null,2)+'\n',{flag:'wx'});
@@ -45,7 +49,7 @@ async function main(){
  const browser=await engine.launch();try{
  const page=await browser.newPage();await page.route('https://**/*',r=>r.abort());
  await page.route('**/__native_real__',r=>r.fulfill({body:'<!doctype html>',contentType:'text/html'}));await page.goto(url+'/__native_real__');
- const run=await page.evaluate(async({data,eyes,W,H,initializeCell,multiscale,distalBodyStart})=>{
+ const run=await page.evaluate(async({data,eyes,W,H,initializeCell,multiscale,distalBodyStart,geometricCenterBound})=>{
  const {auditMultiscaleSeeds}=await import('/tests/visual/lash-multiscale-path.mjs');
  const {analyzeLuma,lumaOf}=await import('/src/retouch/lashAnalysis.mjs');
  const {lashRoiSize}=await import('/src/retouch/eyeGeometry.mjs');
@@ -68,12 +72,12 @@ async function main(){
  if(!a.structureAudit){results[side]={status:'censored',reason:a.reason,diagnostics:a.diagnostics,seeds:[],baselineTips:baseline.tips};c.width=c.height=0;continue;}
  const mapping={x:roi.x0*W,y:roi.y0*H,scaleX:size.rawW/size.w,scaleY:size.rawH/size.h};
  const seeds=projectAutomaticSeeds(a.structureAudit,mapping),start=performance.now();
- const native=multiscale?auditMultiscaleSeeds({...reader,coarse:{seeds:a.structureAudit.seeds,w:size.w,h:size.h,bandH,ridge:a.ridge,...a.debug},mapping,distalBodyStart}):auditNativeSeeds({...reader,seeds,initializeCell,roi:{x:roi.x0*W,y:roi.y0*H,w:size.rawW,h:size.rawH},lid:eye.upperLid.map(p=>({x:p.x*W-.5,y:p.y*H-.5})),lower:eye.lowerLid.map(p=>({x:p.x*W-.5,y:p.y*H-.5}))});
+ const native=multiscale?auditMultiscaleSeeds({...reader,coarse:{seeds:a.structureAudit.seeds,w:size.w,h:size.h,bandH,ridge:a.ridge,...a.debug},mapping,distalBodyStart,geometricCenterBound}):auditNativeSeeds({...reader,seeds,initializeCell,roi:{x:roi.x0*W,y:roi.y0*H,w:size.rawW,h:size.rawH},lid:eye.upperLid.map(p=>({x:p.x*W-.5,y:p.y*H-.5})),lower:eye.lowerLid.map(p=>({x:p.x*W-.5,y:p.y*H-.5}))});
  results[side]={size,mapping,baselineIdentical:true,baselineTips:baseline.tips,automaticSeeds:seeds,analysisMs:performance.now()-start,...native,results:native.results.map(r=>({...r,...(r.local?{local:{...simplify(r.local),maximumArcNative:r.local.maximumArcNative}}:{}),...(r.proximal?{proximal:simplify(r.proximal),distal:simplify(r.distal)}:{})}))};
  c.width=c.height=0;
  }}finally{reader.dispose();}
  return results;
- },{data:'data:image/jpeg;base64,'+source.toString('base64'),eyes:screened.eyes,W:screened.width,H:screened.height,initializeCell,multiscale,distalBodyStart});
+ },{data:'data:image/jpeg;base64,'+source.toString('base64'),eyes:screened.eyes,W:screened.width,H:screened.height,initializeCell,multiscale,distalBodyStart,geometricCenterBound});
  const stats={};for(const [side,r]of Object.entries(run)){const records=r.results||[];stats[side]={seeds:r.automaticSeeds?.length||0,statusCounts:{},reasons:{},coarseConnected:records.filter(r=>r.coarseProximalConnection).length,proximalConnected:records.filter(r=>r.proximalConnection).length,accepted:records.filter(r=>r.endpointConfirmed).length,baselineTips:r.baselineTips?.length||0,baselineIdentical:r.baselineIdentical??null,analysisMs:r.analysisMs};for(const record of records){stats[side].statusCounts[record.status]=(stats[side].statusCounts[record.status]||0)+1;for(const reason of record.reasons)stats[side].reasons[reason]=(stats[side].reasons[reason]||0)+1;}}
  fs.writeFileSync(path.join(output,engine.name()+'.json'),JSON.stringify({engine:engine.name(),geometryPath:screenPath,geometrySHA256:hash(fs.readFileSync(screenPath)),sourceSHA256:hash(source),stats,run},null,2)+'\n',{flag:'wx'});
  console.log(engine.name(),JSON.stringify(stats));

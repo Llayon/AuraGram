@@ -9,7 +9,7 @@ import {projectAutomaticSeeds} from './lash-native-path.mjs';
 /** Separates full coarse evidence from bounded forward native refinement.
  * No rootward native retry, label inputs, tip substitution or Length adapter.
  */
-export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,distalBodyStart=false}) {
+export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,distalBodyStart=false,geometricCenterBound=false}) {
  const routes=traceCoarseSeeds(coarse),distalRoutes=traceCoarseSeeds(coarse,'distal'),seeds=projectAutomaticSeeds({coordinateSpace:'analysis-roi',seeds:coarse.seeds},mapping);
  const work=new Float32Array(256*256),results=[];
  for(let rank=0;rank<seeds.length;rank++){
@@ -28,7 +28,7 @@ export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,dist
   // ROI operator measures an outward axis; preserve it under native scaling.
   const norm=Math.hypot(axis.x,axis.y);if(!Number.isFinite(norm)||norm<1e-8){finish({status:'ambiguous',reason:'unmeasured-seed-axis'});continue;}
   axis={x:axis.x/norm,y:axis.y/norm};
-  const point={x:localStart.sourcePoint.x-rect.x,y:localStart.sourcePoint.y-rect.y},initialization=initializeNativeCell(luma,rect.w,rect.h,point,axis,localStart.nativeCell,NATIVE_PATH_PROTOCOL);
+  const point={x:localStart.sourcePoint.x-rect.x,y:localStart.sourcePoint.y-rect.y},initialization=initializeNativeCell(luma,rect.w,rect.h,point,axis,localStart.nativeCell,NATIVE_PATH_PROTOCOL,{geometricCenterBound});
   if(!initialization.accepted){finish({status:initialization.reason==='crop-boundary'?'censored':'ambiguous',reason:'native-cell-'+initialization.reason,patch:rect,initialization});continue;}
   const inROI=p=>{const x=p.x+rect.x,y=p.y+rect.y;return x>=mapping.x&&y>=mapping.y&&x<=mapping.x+coarse.w*mapping.scaleX-1&&y<=mapping.y+coarse.h*mapping.scaleY-1;};
   const c=followCurve(luma,rect.w,rect.h,initialization.center,{available:true,tx:axis.x,ty:axis.y},{body:true,association:true},{margin:1.5,protocol:NATIVE_PATH_PROTOCOL,stopAtPoint:p=>!inROI(p)?'local-roi-boundary':false});

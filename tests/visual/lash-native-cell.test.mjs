@@ -46,3 +46,35 @@ test('a broad cell center cannot bypass missing narrow native shaft evidence',()
  assert.equal(curve.points.length,0);assert.equal(curve.endpointConfirmed,false);
  assert.equal(curve.bootstrap[0].accepted,false);
 });
+
+test('opt-in exact cell bound does not discard an interior center by grid rounding',()=>{
+ const pixels=line(2.05),cell={w:4.2,h:4};
+ const old=init(pixels,cell),next=initializeNativeCell(pixels,w,h,point,axis,cell,NATIVE_PATH_PROTOCOL,{geometricCenterBound:true});
+ assert.equal(old.accepted,false);assert.equal(old.reason,'search-boundary');
+ assert.equal(next.accepted,true);assert.ok(next.center.x>42&&next.center.x<42.1);
+ assert.deepEqual(next.profile,old.profile);assert.equal(next.shift,old.shift);
+ assert.equal(next.searchHalfNative,2);assert.equal(next.centerBoundNative,2.1);
+});
+test('exact geometric bound still rejects an observed center outside the original cell',()=>{
+ for(const shift of [2.5,-2.5]){
+ const r=initializeNativeCell(line(shift),w,h,point,axis,{w:4.2,h:4},NATIVE_PATH_PROTOCOL,{geometricCenterBound:true});
+ assert.equal(r.accepted,false);assert.equal(r.reason,'search-boundary');
+ }
+});
+test('opt-in exact bound retains multiple-lobe and one-sided edge refusals',()=>{
+ for(const pixels of [image(x=>x<40?.3:.8),image(x=>.8-.5*Math.exp(-((x-39)**2)/.1)-.1*Math.exp(-((x-41)**2)/.1))]){
+ const r=initializeNativeCell(pixels,w,h,point,axis,{w:4.2,h:4},NATIVE_PATH_PROTOCOL,{geometricCenterBound:true});
+ assert.equal(r.accepted,false);
+ }
+});
+test('anisotropic exact bounds preserve sample positions and keep accepted centers in the rectangle',()=>{
+ let accepted=0;
+ for(const angle of [-Math.PI/2,-Math.PI/4,0])for(const shift of [-2,-1,0,1,2]){
+ const u={x:Math.cos(angle),y:Math.sin(angle)},cell={w:2.1,h:6};
+ const pixels=image((x,y)=>.8-.5*Math.exp(-((-(x-40)*u.y+(y-40)*u.x-shift)**2)/.3));
+ const old=init(pixels,cell,point,u),next=initializeNativeCell(pixels,w,h,point,u,cell,NATIVE_PATH_PROTOCOL,{geometricCenterBound:true});
+ assert.deepEqual(old.profile,next.profile);
+ if(next.accepted){accepted++;assert.ok(Math.abs(next.center.x-40)<cell.w/2);assert.ok(Math.abs(next.center.y-40)<cell.h/2);}
+ }
+ assert.ok(accepted>0);
+});

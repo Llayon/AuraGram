@@ -5,6 +5,8 @@ const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 async function main(){
  const [inputDir,sourceFile,out]=process.argv.slice(2);if(!out||fs.existsSync(out))throw Error('Supply saved run, original and NEW output');
  const resolvedEdges=process.argv.includes('--resolved-edges');
+ const engineIndex=process.argv.indexOf('--engine'),onlyEngine=engineIndex<0?null:process.argv[engineIndex+1];
+ if(engineIndex>=0&&!['chromium','webkit'].includes(onlyEngine))throw Error('Supply --engine chromium|webkit');
  const source=fs.readFileSync(sourceFile),oldProtocol=JSON.parse(fs.readFileSync(path.join(inputDir,'protocol.json')));
  if(hash(source)!==oldProtocol.sourceSHA256)throw Error('Source changed');
  const modules=['tests/visual/lash-native-path.mjs','tests/visual/lash-native-cell.mjs','tests/visual/lash-subpixel-probe.mjs','tests/visual/lash-subpixel-center.mjs','tests/visual/lash-native-shaft.mjs','tests/visual/lash-spatial-ending.mjs','tests/visual/lash-side-closure.mjs','tests/visual/lash-endpoint-profile.mjs','src/retouch/lashAnalysis.mjs','src/retouch/eyeGeometry.mjs','src/vision/faceGeometry.mjs'];
@@ -15,7 +17,7 @@ async function main(){
  const server=spawn(process.execPath,['tests/static-server.cjs','0'],{windowsHide:true,stdio:['ignore','pipe','inherit']});
  try{
  const url=await new Promise((resolve,reject)=>{const t=setTimeout(()=>reject(Error('Server timeout')),15000);server.once('error',reject);server.stdout.on('data',b=>{const m=String(b).match(/http:\/\/127\.0\.0\.1:\d+/);if(m){clearTimeout(t);resolve(m[0]);}});});
- for(const engine of [chromium,webkit]){
+ for(const engine of [chromium,webkit].filter(e=>!onlyEngine||e.name()===onlyEngine)){
  const inputFile=path.join(inputDir,engine.name()+'.json'),saved=JSON.parse(fs.readFileSync(inputFile));
  if(hash(fs.readFileSync(saved.geometryPath))!==saved.geometrySHA256)throw Error('Geometry changed');
  const geometry=JSON.parse(fs.readFileSync(saved.geometryPath)).results.find(r=>r.sha256===hash(source));
