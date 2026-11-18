@@ -34,3 +34,38 @@ test('native ROI or source boundary preserves explicit censoring',()=>{
  const coarse=fixture(),a=auditMultiscaleSeeds({coarse,width:48,height:64,mapping:{x:0,y:0,scaleX:1,scaleY:1},readPatch:(r,t)=>{for(let y=0;y<r.h;y++)for(let x=0;x<r.w;x++)t[y*r.w+x]=.8-.5*Math.exp(-((x+r.x-24)**2)/.35);}}).results[0];
  assert.equal(a.status,'censored');assert.equal(a.endpointConfirmed,false);
 });
+
+test('fractional ROI excludes outside interpolation pixels even when the seed center is inside',()=>{
+ const coarse=fixture();
+ coarse.seeds=[{...coarse.seeds[0],x:1,index:10*coarse.w+1}];
+ const mapping={x:10.25,y:12.5,scaleX:1,scaleY:1};
+ const patches=[];
+ const {results:[result]}=auditMultiscaleSeeds({coarse,width:100,height:100,mapping,
+  readPatch(rect,target){
+   patches.push(rect);
+   for(let y=0;y<rect.h;y++)for(let x=0;x<rect.w;x++)
+    target[y*rect.w+x]=.8-.5*Math.exp(-((x+rect.x-11.25)**2)/.35);
+  }});
+ assert.deepEqual(patches,[{x:11,y:13,w:47,h:63}]);
+ assert.equal(result.seed.x,11.25);
+ assert.equal(result.status,'censored');
+ assert.equal(result.reason,'native-cell-crop-boundary');
+ assert.equal(result.local,undefined);
+ assert.equal(result.endpointConfirmed,false);
+});
+
+test('bootstrap dense link with an unavailable along-axis sample is censored',()=>{
+ const coarse=fixture();
+ coarse.seeds=[{...coarse.seeds[0],x:2,index:10*coarse.w+2,tangent:{x:1,y:0}}];
+ const {results:[result]}=auditMultiscaleSeeds({coarse,width:100,height:100,
+  mapping:{x:.5,y:10,scaleX:1,scaleY:1},
+  readPatch(rect,target){
+   for(let y=0;y<rect.h;y++)for(let x=0;x<rect.w;x++)
+    target[y*rect.w+x]=.8-.5*Math.exp(-((y+rect.y-20)**2)/.35);
+  }});
+ assert.equal(result.initialization.accepted,true);
+ assert.equal(result.local.reason,'bootstrap-crop-boundary');
+ assert.deepEqual(result.local.points,[]);
+ assert.equal(result.status,'censored');
+ assert.equal(result.reason,'native-local-crop-boundary');
+});

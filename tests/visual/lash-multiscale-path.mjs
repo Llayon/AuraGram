@@ -19,8 +19,16 @@ export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,dist
   const localStart=distalBodyStart?deriveDistalBodyStart(distalRoutes[rank],coarse,mapping):{accepted:true,policy:'original-automatic-seed-cell',sourcePoint:{x:seed.x,y:seed.y},tangent:seed.tangent,nativeCell:seed.nativeCell,routeCellIndex:0};
   base.localStart=localStart;
   if(!localStart.accepted){finish({status:localStart.status,reason:'distal-start-'+localStart.reason});continue;}
-  const rect={x:Math.max(0,Math.floor(localStart.sourcePoint.x)-128),y:Math.max(0,Math.floor(localStart.sourcePoint.y)-128)};rect.w=Math.min(256,width-rect.x);rect.h=Math.min(256,height-rect.y);
-  if(rect.w<1||rect.h<1){finish({status:'censored',reason:'source-boundary'});continue;}
+  const patchX=Math.max(0,Math.floor(localStart.sourcePoint.x)-128);
+  const patchY=Math.max(0,Math.floor(localStart.sourcePoint.y)-128);
+  // Intersect the existing window with integer pixel centers in the ROI.
+  // This also confines every bilinear interpolation neighbor to the ROI.
+  const x=Math.max(patchX,Math.ceil(mapping.x));
+  const y=Math.max(patchY,Math.ceil(mapping.y));
+  const right=Math.min(width-1,patchX+255,Math.floor(mapping.x+coarse.w*mapping.scaleX-1));
+  const bottom=Math.min(height-1,patchY+255,Math.floor(mapping.y+coarse.h*mapping.scaleY-1));
+  const rect={x,y,w:right-x+1,h:bottom-y+1};
+  if(rect.w<1||rect.h<1){finish({status:'censored',reason:'local-roi-boundary'});continue;}
   work.fill(NaN);const luma=work.subarray(0,rect.w*rect.h);
   try{readPatch(rect,luma);}catch(e){finish({status:'censored',reason:'source-read-failed'});continue;}
   if(luma.some(v=>!Number.isFinite(v)||v<0||v>1)){finish({status:'censored',reason:'unavailable-native-pixels'});continue;}
@@ -34,7 +42,8 @@ export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,dist
   const c=followCurve(luma,rect.w,rect.h,initialization.center,{available:true,tx:axis.x,ty:axis.y},{body:true,association:true},{margin:1.5,protocol:NATIVE_PATH_PROTOCOL,denseAxis,stopAtPoint:p=>!inROI(p)?'local-roi-boundary':false});
   const localROICensored=c.points.some(p=>[-3,3].some(x=>[-3,3].some(y=>!inROI({x:p.x+x,y:p.y+y}))));
   const local={...c,roiCensored:localROICensored,points:c.points.map(p=>({...p,x:p.x+rect.x,y:p.y+rect.y})),coordinateSpace:'original-source-pixels',attemptCoordinateSpace:'patch-local-pixels',maximumArcNative:36};
-  finish({status:route.status==='censored'||localROICensored||c.reason.includes('crop-boundary')||['arc-budget','step-budget','local-roi-boundary'].includes(c.reason)?'censored':'ambiguous',reason:route.connected?'coarse-connection-native-ownership-unverified':route.reason,patch:rect,initialization,local,correspondence:auditScaleCorrespondence(base.coarseDistal,local.points,{startCellIndex:localStart.routeCellIndex}),
+  const localBoundary=c.reason.includes('crop-boundary')||c.reason==='local-roi-boundary';
+  finish({status:route.status==='censored'||localROICensored||localBoundary||['arc-budget','step-budget'].includes(c.reason)?'censored':'ambiguous',reason:localBoundary?'native-local-crop-boundary':route.connected?'coarse-connection-native-ownership-unverified':route.reason,patch:rect,initialization,local,correspondence:auditScaleCorrespondence(base.coarseDistal,local.points,{startCellIndex:localStart.routeCellIndex}),
    broadRootAmbiguity:route.broadSupport,coarseProximalConnection:route.connected});
  }
  return{results,seedLimit:128,workingBufferBytes:work.byteLength,localRefinementLimit:36};
