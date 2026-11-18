@@ -7,6 +7,8 @@ const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 async function main(){
  const distalBodyStart=process.argv.includes('--distal-body');
  const multiscale=process.argv.includes('--multiscale');
+ const compareDistalBands=process.argv.includes('--compare-distal-bands');
+ if(compareDistalBands&&!multiscale)throw Error('Distal band comparison requires multiscale stage');
  const sharedArcProximal=process.argv.includes('--shared-arc-proximal');
  if(sharedArcProximal&&!multiscale)throw Error('Shared arc probe requires multiscale stage');
  const geometricCenterBound=process.argv.includes('--geometric-center-bound');
@@ -34,9 +36,10 @@ async function main(){
  const sourceDigest=frozen.sourceSHA256??frozen.sourceHashes?.[labels.file];
  if(frozen.sourceSHA256&&frozen.sourceHashes?.[labels.file]&&frozen.sourceSHA256!==frozen.sourceHashes[labels.file])throw Error('Conflicting frozen source digests');
  if(hash(source)!==sourceDigest||hash(source)!==labels.sourceSHA256)throw Error('Source changed');
- const modules=['tests/visual/lash-shared-arc-proximal.mjs','tests/visual/lash-proximal-budget-bound.mjs','src/retouch/lashAnalysis.mjs','src/retouch/eyeGeometry.mjs','src/vision/faceGeometry.mjs','tests/visual/lash-native-path.mjs','tests/visual/lash-coarse-route.mjs','tests/visual/lash-multiscale-path.mjs','tests/visual/lash-scale-correspondence.mjs','tests/visual/lash-distal-body-start.mjs','tests/visual/lash-native-cell.mjs','tests/visual/lash-subpixel-probe.mjs','tests/visual/lash-subpixel-center.mjs','tests/visual/lash-native-shaft.mjs','tests/visual/lash-spatial-ending.mjs','tests/visual/lash-side-closure.mjs','tests/visual/lash-endpoint-profile.mjs'];
+ const modules=['tests/visual/lash-proximal-band-audit.mjs','tests/visual/lash-shared-arc-proximal.mjs','tests/visual/lash-proximal-budget-bound.mjs','src/retouch/lashAnalysis.mjs','src/retouch/eyeGeometry.mjs','src/vision/faceGeometry.mjs','tests/visual/lash-native-path.mjs','tests/visual/lash-coarse-route.mjs','tests/visual/lash-multiscale-path.mjs','tests/visual/lash-scale-correspondence.mjs','tests/visual/lash-distal-body-start.mjs','tests/visual/lash-native-cell.mjs','tests/visual/lash-subpixel-probe.mjs','tests/visual/lash-subpixel-center.mjs','tests/visual/lash-native-shaft.mjs','tests/visual/lash-spatial-ending.mjs','tests/visual/lash-side-closure.mjs','tests/visual/lash-endpoint-profile.mjs'];
  fs.mkdirSync(output,{recursive:true});
  const protocol={distalBodyStart,multiscale,initializeCell,kind:'development-diagnostic-not-acceptance',baseline:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceSHA256:hash(source),labelInputs:frozen.inputs,moduleSHA256:Object.fromEntries(modules.map(f=>[f,hash(fs.readFileSync(f))])),runnerSHA256:hash(fs.readFileSync(__filename)),maxSide:224,seedLimit:128,annotationsUsedAsTraceInput:false,independentCritique:'not-completed',eligibility:'unqualified-positive-lead; not held out'};
+ protocol.compareDistalBands=compareDistalBands;
  protocol.sharedArcProximal=sharedArcProximal;
  protocol.caseManifest=caseFile;protocol.caseManifestSHA256=caseBytes?hash(caseBytes):null;
  protocol.geometricCenterBound=geometricCenterBound;
@@ -56,7 +59,7 @@ async function main(){
  const browser=await engine.launch();try{
  const page=await browser.newPage();await page.route('https://**/*',r=>r.abort());
  await page.route('**/__native_real__',r=>r.fulfill({body:'<!doctype html>',contentType:'text/html'}));await page.goto(url+'/__native_real__');
- const run=await page.evaluate(async({data,eyes,W,H,initializeCell,multiscale,distalBodyStart,geometricCenterBound,measuredDenseAxis,sharedArcProximal})=>{
+ const run=await page.evaluate(async({data,eyes,W,H,initializeCell,multiscale,distalBodyStart,geometricCenterBound,measuredDenseAxis,sharedArcProximal,compareDistalBands})=>{
  const {auditMultiscaleSeeds}=await import('/tests/visual/lash-multiscale-path.mjs');
  const {analyzeLuma,lumaOf}=await import('/src/retouch/lashAnalysis.mjs');
  const {lashRoiSize}=await import('/src/retouch/eyeGeometry.mjs');
@@ -81,12 +84,12 @@ async function main(){
  const seeds=projectAutomaticSeeds(a.structureAudit,mapping),start=performance.now();
  const toNative=p=>({x:p.x*W-.5,y:p.y*H-.5});
  const proximalGeometry=sharedArcProximal?{lid:eye.upperLid.map(toNative),lower:eye.lowerLid.map(toNative)}:undefined;
- const native=multiscale?auditMultiscaleSeeds({...reader,coarse:{seeds:a.structureAudit.seeds,w:size.w,h:size.h,bandH,ridge:a.ridge,...a.debug},mapping,distalBodyStart,geometricCenterBound,proximalGeometry,denseAxis:measuredDenseAxis?'measured-tangent':'segment'}):auditNativeSeeds({...reader,seeds,initializeCell,roi:{x:roi.x0*W,y:roi.y0*H,w:size.rawW,h:size.rawH},lid:eye.upperLid.map(p=>({x:p.x*W-.5,y:p.y*H-.5})),lower:eye.lowerLid.map(p=>({x:p.x*W-.5,y:p.y*H-.5}))});
+ const native=multiscale?auditMultiscaleSeeds({...reader,coarse:{seeds:a.structureAudit.seeds,w:size.w,h:size.h,bandH,ridge:a.ridge,...a.debug},mapping,distalBodyStart,geometricCenterBound,proximalGeometry,compareDistalBands,denseAxis:measuredDenseAxis?'measured-tangent':'segment'}):auditNativeSeeds({...reader,seeds,initializeCell,roi:{x:roi.x0*W,y:roi.y0*H,w:size.rawW,h:size.rawH},lid:eye.upperLid.map(p=>({x:p.x*W-.5,y:p.y*H-.5})),lower:eye.lowerLid.map(p=>({x:p.x*W-.5,y:p.y*H-.5}))});
  results[side]={size,mapping,baselineIdentical:true,baselineTips:baseline.tips,automaticSeeds:seeds,analysisMs:performance.now()-start,...native,results:native.results.map(r=>({...r,...(r.local?{local:{...simplify(r.local),maximumArcNative:r.local.maximumArcNative}}:{}),...(r.proximal?{proximal:simplify(r.proximal),distal:simplify(r.distal)}:{})}))};
  c.width=c.height=0;
  }}finally{reader.dispose();}
  return results;
- },{data:'data:image/jpeg;base64,'+source.toString('base64'),eyes:screened.eyes,W:screened.width,H:screened.height,initializeCell,multiscale,distalBodyStart,geometricCenterBound,measuredDenseAxis,sharedArcProximal});
+ },{data:'data:image/jpeg;base64,'+source.toString('base64'),eyes:screened.eyes,W:screened.width,H:screened.height,initializeCell,multiscale,distalBodyStart,geometricCenterBound,measuredDenseAxis,sharedArcProximal,compareDistalBands});
  const stats={};for(const [side,r]of Object.entries(run)){const records=r.results||[];stats[side]={seeds:r.automaticSeeds?.length||0,statusCounts:{},reasons:{},coarseConnected:records.filter(r=>r.coarseProximalConnection).length,proximalConnected:records.filter(r=>r.proximalConnection).length,accepted:records.filter(r=>r.endpointConfirmed).length,baselineTips:r.baselineTips?.length||0,baselineIdentical:r.baselineIdentical??null,analysisMs:r.analysisMs};for(const record of records){stats[side].statusCounts[record.status]=(stats[side].statusCounts[record.status]||0)+1;for(const reason of record.reasons)stats[side].reasons[reason]=(stats[side].reasons[reason]||0)+1;}}
  fs.writeFileSync(path.join(output,engine.name()+'.json'),JSON.stringify({engine:engine.name(),geometryPath:screenPath,geometrySHA256:hash(fs.readFileSync(screenPath)),sourceSHA256:hash(source),stats,run},null,2)+'\n',{flag:'wx'});
  console.log(engine.name(),JSON.stringify(stats));

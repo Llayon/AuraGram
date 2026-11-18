@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-19",
+  "archive": "followup-distal-band-20261119.zip",
+  "bytes": 3178853,
+  "sha256": "3871086f7df61d48192d699c0910926b833f787a406f7b68143d2c4d1700c95b",
+  "restoreDirectory": "tests/visual/out",
+  "members": {
+    "distal-band-14297936-audit-01/chromium.json": "4a78222a7891fad70fd0444d9d7cde28ff56e331005eff88e33f65109f994eac",
+    "distal-band-14297936-audit-01/webkit.json": "7896bddbfc515203c6e0b8f156a0a446645ee77f8025679afb54cf7c2c32587d",
+    "distal-band-14297936-audit-01/protocol.json": "566ae6c83629885f116984a383577e924703650683c6f191808724af4da5089d",
+    "distal-band-14297936-repeat-01/chromium.json": "e3468f202bab93b2069aecf92e7867848b1465a4cbb13ce2848e6d02d468c702",
+    "distal-band-14297936-repeat-01/webkit.json": "c2082e31432579d1d16a77c21fa64b7c89100a32db2432e8288699cf0565b5c9",
+    "distal-band-14297936-repeat-01/protocol.json": "566ae6c83629885f116984a383577e924703650683c6f191808724af4da5089d",
+    "distal-band-29117992-audit-01/chromium.json": "4c7bc773aeccce82a2740e51a6714f7989080717165f0e516a65fabb4bdee06e",
+    "distal-band-29117992-audit-01/webkit.json": "c11bf56a5cba2150f1091e15a4ee03198de8ea5e15aea6da892f1f90ccbd47ce",
+    "distal-band-29117992-audit-01/protocol.json": "7765bd308a97ddc5a0f1d0aa2b3efc2443da440be4d46412f152d0d4ecaf48bc",
+    "distal-band-29117992-repeat-01/chromium.json": "4ddf536f54b7790b4f1159d7119c5fa743e05686a37b93c9f582d92088b05fe4",
+    "distal-band-29117992-repeat-01/webkit.json": "9a8a540eb1642cfaa45bbd7d0f3042df3d6669b5366d3a716f19ad53d4a28537",
+    "distal-band-29117992-repeat-01/protocol.json": "7765bd308a97ddc5a0f1d0aa2b3efc2443da440be4d46412f152d0d4ecaf48bc"
+  }
+}

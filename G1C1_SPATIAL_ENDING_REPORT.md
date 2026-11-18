@@ -1,6 +1,6 @@
 # Spatial ending experiment - LENGTH HOLD
 
-## Current decision (2026-11-18)
+## Current decision (2026-11-19)
 
 **No detector candidate is accepted. Keep Draft PR #5; no Length adapter, merge, deployment, partial release or version bump.** The measured paths and refusal diagnostics are retained for review. The recognition plan is not fully completed: the independent 6+6 cohort, reviewed identity separation and final critic/held-out evaluation remain incomplete. This is an engineering rejection for adoption, not a proof that all image-based endpoint hypotheses are false.
 
@@ -33,6 +33,14 @@ This cycle delivers a documented engineering rejection for integration and retai
 A subsequent recognition experiment needs both (1) source-only acquisition/independent review sufficient to fill the unchanged development and sealed final quotas, and (2) a predeclared mechanism that distinguishes an actual ending from image-contrast loss while establishing observed same-fiber proximal ownership. Any new operator or scale policy must first survive the retained gap, crossing, fading-shaft and hair-control counterexamples. Freeze code and protocol before opening new final detector outputs. Existing provisional development labels cannot be relabelled as held-out cases. Only after passing the original recognition gates should the existing tips adapter and render/performance validation proceed. Canvas/SDF comparison remains a separate later cycle. No release, merge or version bump is warranted by this cycle.
 
 ## Chronological experiment record
+
+### 2026-11-19: transverse contrast on observed real-image sections
+
+Added an opt-in development-only scan of already traced distal sections, using the same native patch, path points, score settings and sampling radii. Both response modes run on each nonempty path. These are distal sections rather than completed proximal arrivals, which remained unavailable on the two photos under the 36 px budget. The scan contributes diagnostic records only. Frozen annotations stay in Node and are used after tracing for point-in-region counts.
+
+On development source 14297936, Chromium right has 52 observed records and the contrast scan flags 15, up from 7. WebKit right has 45 observed records and flags 6, up from 2. WebKit left flags all four observed records under both scores. The 12 additional right-eye refusals are all no-veto to ambiguous. All eight changed Chromium records intersect a provisional ambiguity region by at least one path point. None of the four changed WebKit records or the 12 changed records overall hits a labelled tip region by a path point. The WebKit cases lack a match to a marked ambiguity region. The provisional labels are non-exhaustive. The counts are repeated seed records and cannot establish specificity or recall.
+
+On hair-overlap control 29117992, both scores flag all seven observed records. One WebKit left record has a point in the frozen hair-ambiguity region. The experiment adds no refusal on that control and does not establish general hair-overlap rejection. No path is promoted to a proximal connection or endpoint. Both browsers reproduce all baseline fields after omitting the new diagnostic and timing. Audit repeats match within each engine after omitting timing. Full sequential suite passes 307 tests. The two per-source summaries and 12-member `followup-distal-band-20261119.zip` preserve the run data and measurement hashes. The final group stays sealed. **LENGTH HOLD.**
 
 ### 2026-11-18: transverse contrast on new synthetic inputs
 
