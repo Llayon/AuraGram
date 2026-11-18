@@ -55,10 +55,14 @@ try {
       const page = await browser.newPage();
       await page.goto(`http://127.0.0.1:${server.address().port}/`,{timeout:15000});
       const runs = [];
-      for (let i=0;i<2;i++) runs.push(await page.evaluate(async ({width,height,cases,score}) => {
-        const {auditProximalBands} = await import('/lash-proximal-band-audit.mjs');
-        return cases.map(c => auditProximalBands(Float32Array.from(c.luma),width,height,c.points,score));
-      },{width,height,cases:measurements,score}));
+      for (let i=0;i<2;i++) {
+        const run = [];
+        for (let start=0;start<measurements.length;start+=16) run.push(...await page.evaluate(async ({width,height,cases,score}) => {
+          const {auditProximalBands} = await import('/lash-proximal-band-audit.mjs');
+          return cases.map(c => auditProximalBands(Float32Array.from(c.luma),width,height,c.points,score));
+        },{width,height,cases:measurements.slice(start,start+16),score}));
+        runs.push(run);
+      }
       save(engine.name()+'.json', runs);
       assert.deepEqual(runs[0],runs[1],`${engine.name()}: repeated output`);
       const maxNumericDifference = compareNumeric(runs[0],expected);

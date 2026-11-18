@@ -9,16 +9,25 @@ import {auditProximalBands} from './lash-proximal-band-audit.mjs';
 // Fixed analytic luminance fixtures. Integrate before quantizing to native pixels.
 const patch = {x:0, y:0, w:72, h:64};
 const geometry = {lid:[{x:12,y:46},{x:60,y:46}], lower:[{x:36,y:52}]};
-const phases = [-.25,0,.25];
-const cases = [
+const stress = process.argv.includes('--stress-contrast');
+const phases = stress ? [-.4,-.125,.125,.4] : [-.25,0,.25];
+const originalCases = [
   {kind:'single'}, {kind:'gap'},
   ...[.35,.65,1].flatMap(slope => [.5,1].flatMap(strength => [
     {kind:'crossing',slope,strength}, {kind:'fork',slope,strength}
   ])),
   ...[1.5,2.5,3.5].flatMap(separation => [.5,1].map(strength => ({kind:'parallel',separation,strength})))
 ];
+const stressCases = [
+  {kind:'single'}, {kind:'gap'},
+  ...[.25,.45,.8].flatMap(slope => [.25,.65,.85].flatMap(strength => [
+    {kind:'crossing',slope,strength}, {kind:'fork',slope,strength}
+  ])),
+  ...[1.75,2.75,4.25].flatMap(separation => [.25,.65,.85].map(strength => ({kind:'parallel',separation,strength})))
+];
+const cases = stress ? stressCases : originalCases;
 const axis = {x:0,y:-1};
-const auditBands = process.argv.includes('--audit-bands');
+const auditBands = stress || process.argv.includes('--audit-bands');
 const browserInputIndex = process.argv.indexOf('--browser-inputs');
 const browserInputFile = browserInputIndex < 0 ? null : process.argv[browserInputIndex + 1];
 if (browserInputIndex >= 0 && (!auditBands || !browserInputFile || fs.existsSync(browserInputFile)))
@@ -55,7 +64,9 @@ function run(fixture, phase) {
   const row = {...fixture,phase,distalReason:distal.reason,distalPoints:distal.points,reverse};
   if (auditBands && reverse.status === 'gate-observed') {
     row.bandAudit = auditProximalBands(luma,patch.w,patch.h,reverse.points);
-    if (browserInputFile) browserInputs.push({kind: fixture.kind, luma: Array.from(luma), points: reverse.points, expected: row.bandAudit});
+    if (stress) row.contrastAudit = auditProximalBands(luma,patch.w,patch.h,reverse.points,'transverseContrast');
+    if (browserInputFile) browserInputs.push({kind: fixture.kind, luma: Array.from(luma), points: reverse.points,
+      expected: stress ? row.contrastAudit : row.bandAudit});
   }
   return row;
 }
@@ -74,6 +85,14 @@ if (auditBands) for (const {kind,bandAudit} of rows.filter(row => row.bandAudit)
   const counts = summary[kind].bandAudit ??= {};
   counts[bandAudit.reason] = (counts[bandAudit.reason] ?? 0) + 1;
 }
+if (stress) for (const {kind,bandAudit,contrastAudit} of rows.filter(row => row.contrastAudit)) {
+  const group = summary[kind];
+  const counts = group.contrastAudit ??= {refusals:0,newRefusals:0,lostRefusals:0};
+  const oldVeto = bandAudit.status !== 'no-veto', newVeto = contrastAudit.status !== 'no-veto';
+  counts.refusals += Number(newVeto);
+  counts.newRefusals += Number(!oldVeto && newVeto);
+  counts.lostRefusals += Number(oldVeto && !newVeto);
+}
 const hash = file => createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const sources = ['lash-proximal-ambiguity-matrix.mjs','lash-shared-arc-proximal.mjs','lash-proximal-budget-bound.mjs',
   'lash-native-path.mjs','lash-subpixel-probe.mjs','lash-subpixel-center.mjs','lash-endpoint-profile.mjs','lash-native-shaft.mjs']
@@ -81,6 +100,8 @@ const sources = ['lash-proximal-ambiguity-matrix.mjs','lash-shared-arc-proximal.
 sources.push('src/retouch/lashAnalysis.mjs');
 if (auditBands) sources.push('tests/visual/lash-proximal-band-audit.mjs');
 const inputs = Object.fromEntries(sources.map(file => [file,hash(file)]));
-fs.writeFileSync(output, JSON.stringify({patch,geometry,inputs,summary,rows},null,2) + '\n', {flag:'wx'});
-if (browserInputFile) fs.writeFileSync(browserInputFile, JSON.stringify({width: patch.w, height: patch.h, inputs, cases: browserInputs}) + '\n', {flag:'wx'});
+const protocol = stress ? {phases,cases,policy:'Compare saved response and transverse contrast with all other parameters fixed. Count lost refusals, no-veto crossings and forks, and isolated cases separately.'} : undefined;
+fs.writeFileSync(output, JSON.stringify({patch,geometry,inputs,summary,rows,...(protocol ? {protocol} : {})},null,2) + '\n', {flag:'wx'});
+if (browserInputFile) fs.writeFileSync(browserInputFile, JSON.stringify({width: patch.w, height: patch.h, inputs,
+  ...(stress ? {score:'transverseContrast'} : {}),cases: browserInputs}) + '\n', {flag:'wx'});
 console.log(JSON.stringify(summary));

@@ -34,6 +34,14 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-18: transverse contrast on new synthetic inputs
+
+Ran a fixed second series of 116 cases. The four phases were -0.4, -0.125, 0.125 and 0.4 px. Crossings and forks combined slopes 0.25, 0.45 and 0.8 with secondary strengths 0.25, 0.65 and 0.85. Parallel cases used spacing 1.75, 2.75 and 4.25 px at the same strengths. The trace and both score policies were fixed before this run. The archived first matrix reproduces every original row.
+
+Of 116 cases, 70 reach the lid gate and enter the audit. The contrast veto flags 18/18 crossings and 11/14 forks, versus 18/18 and 8/14 with the original response. It preserves all earlier refusals and all four isolated passes. Both audit scores flag the same 16/34 arriving parallel cases. All four gap trials stop before the gate. The three remaining fork misses use slope 0.8, strength 0.25, and phases -0.4, -0.125 and 0.125. Each reaches the gate along one branch. The new series confirms the partial benefit and also supplies counterexamples to treating it as ownership confirmation.
+
+Node outputs repeat byte for byte. On the same 70 serialized arrivals, Chromium and WebKit match Node decisions and repeat exactly within each engine. Chromium also matches the numeric output exactly. WebKit differs by at most 1.78e-15. Three focused tests pass. The previous complete unit run remains 307 passes. The experiment uses analytic luminance and supplies no real-photo accuracy or held-out recognition result. Complete records and browser inputs are retained in `followup-proximal-band-stress-20261118.zip`. **LENGTH HOLD.**
+
 ### 2026-11-18: transverse contrast recovers the missed synthetic fork
 
 Compared one fixed alternative on the exact 31 serialized gate-arrival inputs from the prior browser archive. The veto uses transverse contrast in place of the response that includes the along-axis penalty. It preserves the sampled points, measured tangent, grid, both radii and 0.006 floor. The ordinary response remains the default. This experiment only vetoes ambiguity. It grants no positive strand association or endpoint.
