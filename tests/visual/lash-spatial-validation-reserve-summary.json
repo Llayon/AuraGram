@@ -1,0 +1,189 @@
+{
+  "date": "2026-11-18",
+  "stage": "held-out reserve FaceMesh metadata",
+  "censusSHA256": "ab9e4b8630b7f9905ae6a94ff73ae62e4155e1e5035ae2521ab98f70309ee0a4",
+  "censusRepeatByteIdentical": true,
+  "inputs": {
+    "tests/visual/lash-spatial-validation-reserve-01.json": "d65e181ffd78a2d6513bded392cf614559db60f153de69242913dd00b17fb81f",
+    "tests/visual/out/spatial-validation-reserve-01/downloads.json": "0cfa554f6090b220f72f5ff040dc9381246727cc10edbb0986e9ffd22a759652",
+    "tests/visual/out/spatial-validation-reserve-01-chromium/screening.json": "1a899de78f5aaa1bf052efc90b5c17829bfe74a2130afcfecfdf45ee8cf3be3f",
+    "tests/visual/out/spatial-validation-reserve-01-webkit/screening.json": "547da83991c17b31d16a38c3d5aeccbe367719fdabc1d0c52e6bb3e66f989d7f",
+    "tests/visual/lash-spatial-validation-reserve-02.json": "e707056daba49c2f9805156786332f07991aea06b0a3ff6c111fd380d96ecf43",
+    "tests/visual/out/spatial-validation-reserve-02/downloads.json": "8d6628d959e02c0d03c8eb20c2fb02c5448784deb83750746be976cc9eb9b9a2",
+    "tests/visual/out/spatial-validation-reserve-02-chromium/screening.json": "d7bd6a07064827ba1c92ca9deeff83de1de9787acf1456139b84d75ed88285bd",
+    "tests/visual/out/spatial-validation-reserve-02-webkit/screening.json": "f25ed3660e375d9e8f96e25b33af625ab2506e8e3e826d8cb91112b3be148077"
+  },
+  "validationViewsEmitted": 0,
+  "lashDetectorExecuted": false,
+  "downloadedOriginals": 54,
+  "priorSplitCounts": {
+    "development": {
+      "planned": 37,
+      "downloaded": 36,
+      "bothEnginesReady": 22,
+      "positiveLeadsBothReady": 17,
+      "hardLeadsBothReady": 1
+    },
+    "validation": {
+      "planned": 6,
+      "downloaded": 5,
+      "bothEnginesReady": 2,
+      "positiveLeadsBothReady": 1,
+      "hardLeadsBothReady": 1
+    }
+  },
+  "updatedSplitCounts": {
+    "development": {
+      "planned": 37,
+      "downloaded": 36,
+      "bothEnginesReady": 22,
+      "positiveLeadsBothReady": 17,
+      "hardLeadsBothReady": 1
+    },
+    "validation": {
+      "planned": 19,
+      "downloaded": 18,
+      "bothEnginesReady": 11,
+      "positiveLeadsBothReady": 7,
+      "hardLeadsBothReady": 4
+    }
+  },
+  "reserveResults": [
+    {
+      "file": "pexels-8639179.jpg",
+      "role": "positive-lead",
+      "sourceSHA256": "cba3873e1064c552f48db491b9215f8b1f55644d74d7d9c3079de8c38be6afdf",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "bothEnginesReady": true
+    },
+    {
+      "file": "pexels-12577594.jpg",
+      "role": "positive-lead",
+      "sourceSHA256": "3c97de6a80887521d02c4339d9347a945e24d30137d2626be1b12d0ec8119186",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "bothEnginesReady": true
+    },
+    {
+      "file": "pexels-5197865.jpg",
+      "role": "positive-lead",
+      "sourceSHA256": "7cbbfcfd9451fd6503f3ee5ec87fb7781b12187aefec12cc1925bddeded0a2cb",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "bothEnginesReady": true
+    },
+    {
+      "file": "pexels-8668086.jpg",
+      "role": "positive-lead",
+      "sourceSHA256": "d40f8065bc7323c0b8024c554273963c5668d657645f6a6e4b2207c9057f7ec1",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "bothEnginesReady": true
+    },
+    {
+      "file": "pexels-6454924.jpg",
+      "role": "positive-lead",
+      "sourceSHA256": "adb48f31235a5d3d015fbdf42a4d1690238eab3f0387b8627b29e696194e24c0",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "bothEnginesReady": true
+    },
+    {
+      "file": "pexels-10260778.jpg",
+      "role": "positive-lead",
+      "sourceSHA256": "abe995cdb53b5874a0768e193b00ba5f12a6c0bcd3bfe8786cffaef3488278e3",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "bothEnginesReady": true
+    },
+    {
+      "file": "pexels-8062780.jpg",
+      "role": "hard-lead",
+      "sourceSHA256": "5426ac5a8c9717193f2a60ae302e454d6d4eabcb8875ccfaca7f1b6a3f8832b5",
+      "faceMesh": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      },
+      "bothEnginesReady": false
+    },
+    {
+      "file": "pexels-6314116.jpg",
+      "role": "hard-lead",
+      "sourceSHA256": "b87ddf810d91cc6d1f6bb6f97f2551499fcaa9eb95db79571b3c864b03b8f221",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "no_face"
+      },
+      "bothEnginesReady": false
+    },
+    {
+      "file": "pexels-3598852.jpg",
+      "role": "hard-lead",
+      "sourceSHA256": "bea69de9e88238ed63143f2e78e384838041b6da772dd16920e5280ff9f8ff2b",
+      "faceMesh": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      },
+      "bothEnginesReady": false
+    },
+    {
+      "file": "pexels-19814806.jpg",
+      "role": "hard-lead",
+      "sourceSHA256": "5c800474395f2cfa62221888c1a26bd001bca517324d9243c95a5013685b8ee2",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "bothEnginesReady": true
+    },
+    {
+      "file": "pexels-32963979.jpg",
+      "role": "hard-lead",
+      "sourceSHA256": "e9768cdd3470d6665a0cb6d917580763430732518e7c0d3ba3c898b93edb7760",
+      "faceMesh": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      },
+      "bothEnginesReady": false
+    },
+    {
+      "file": "pexels-14526034.jpg",
+      "role": "hard-lead",
+      "sourceSHA256": "986552f0a9b025859a8c8bf558f7b7c30d1b9f4f8681b23d960668d58defe465",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "bothEnginesReady": true
+    },
+    {
+      "file": "pexels-18004624.jpg",
+      "role": "hard-lead",
+      "sourceSHA256": "d7ad01eb6e8b18d86f3b9f8438a8343c2b97bcf5e152ff381e827f10314dbfd0",
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "bothEnginesReady": true
+    }
+  ],
+  "qualifiedFinalCohort": false,
+  "unresolved": [
+    "Independent identity grouping across splits",
+    "Source-only qualification and frozen annotations from an independent reviewer",
+    "Algorithm freeze and held-out detector evaluation"
+  ]
+}
