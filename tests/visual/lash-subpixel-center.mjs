@@ -8,6 +8,7 @@ export function measureCentroid(luma,w,h,point,u,margin,p){
  let left,right;
  try{left=sample(-radius);right=sample(radius);for(let d=-radius;d<=radius+1e-9;d+=p.profileStepNative){const value=sample(d);profile.push({offset:d,value,deficit:left+(right-left)*(d+radius)/(2*radius)-value});}}
  catch(e){if(e.message!=='Profile outside measured bitmap')throw e;return{accepted:false,reason:'crop-boundary',profile};}
+ if(!Number.isFinite(left)||!Number.isFinite(right)||profile.some(r=>!Number.isFinite(r.value)||!Number.isFinite(r.deficit)))return{accepted:false,reason:'unavailable-profile',profile};
  const peak=Math.max(...profile.map(r=>r.deficit)),groups=[];
  for(const r of profile){if(r.deficit>=peak*p.competingPeakRatio){if(!groups.length||groups.at(-1).at(-1)!==profile[profile.indexOf(r)-1])groups.push([]);groups.at(-1).push(r);}}
  let reason='ok';

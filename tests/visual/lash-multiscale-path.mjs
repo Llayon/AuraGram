@@ -9,7 +9,7 @@ import {projectAutomaticSeeds} from './lash-native-path.mjs';
 /** Separates full coarse evidence from bounded forward native refinement.
  * No rootward native retry, label inputs, tip substitution or Length adapter.
  */
-export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,distalBodyStart=false,geometricCenterBound=false}) {
+export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,distalBodyStart=false,geometricCenterBound=false,denseAxis='segment'}) {
  const routes=traceCoarseSeeds(coarse),distalRoutes=traceCoarseSeeds(coarse,'distal'),seeds=projectAutomaticSeeds({coordinateSpace:'analysis-roi',seeds:coarse.seeds},mapping);
  const work=new Float32Array(256*256),results=[];
  for(let rank=0;rank<seeds.length;rank++){
@@ -31,7 +31,7 @@ export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,dist
   const point={x:localStart.sourcePoint.x-rect.x,y:localStart.sourcePoint.y-rect.y},initialization=initializeNativeCell(luma,rect.w,rect.h,point,axis,localStart.nativeCell,NATIVE_PATH_PROTOCOL,{geometricCenterBound});
   if(!initialization.accepted){finish({status:initialization.reason==='crop-boundary'?'censored':'ambiguous',reason:'native-cell-'+initialization.reason,patch:rect,initialization});continue;}
   const inROI=p=>{const x=p.x+rect.x,y=p.y+rect.y;return x>=mapping.x&&y>=mapping.y&&x<=mapping.x+coarse.w*mapping.scaleX-1&&y<=mapping.y+coarse.h*mapping.scaleY-1;};
-  const c=followCurve(luma,rect.w,rect.h,initialization.center,{available:true,tx:axis.x,ty:axis.y},{body:true,association:true},{margin:1.5,protocol:NATIVE_PATH_PROTOCOL,stopAtPoint:p=>!inROI(p)?'local-roi-boundary':false});
+  const c=followCurve(luma,rect.w,rect.h,initialization.center,{available:true,tx:axis.x,ty:axis.y},{body:true,association:true},{margin:1.5,protocol:NATIVE_PATH_PROTOCOL,denseAxis,stopAtPoint:p=>!inROI(p)?'local-roi-boundary':false});
   const localROICensored=c.points.some(p=>[-3,3].some(x=>[-3,3].some(y=>!inROI({x:p.x+x,y:p.y+y}))));
   const local={...c,roiCensored:localROICensored,points:c.points.map(p=>({...p,x:p.x+rect.x,y:p.y+rect.y})),coordinateSpace:'original-source-pixels',attemptCoordinateSpace:'patch-local-pixels',maximumArcNative:36};
   finish({status:route.status==='censored'||localROICensored||c.reason.includes('crop-boundary')||['arc-budget','step-budget','local-roi-boundary'].includes(c.reason)?'censored':'ambiguous',reason:route.connected?'coarse-connection-native-ownership-unverified':route.reason,patch:rect,initialization,local,correspondence:auditScaleCorrespondence(base.coarseDistal,local.points,{startCellIndex:localStart.routeCellIndex}),

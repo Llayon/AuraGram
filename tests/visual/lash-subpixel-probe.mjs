@@ -3,14 +3,15 @@ import {fitShaftAxis} from './lash-native-shaft.mjs';
 
 import {measureCentroid as localCenter} from './lash-subpixel-center.mjs';
 
-export function followCurve(luma,w,h,seed,axis,eligibility,{margin,protocol:p,stopAtPoint}){
+export function followCurve(luma,w,h,seed,axis,eligibility,{margin,protocol:p,stopAtPoint,denseAxis='segment'}){
+ if(!['segment','measured-tangent'].includes(denseAxis))throw Error('Unknown dense-link axis policy');
  const base={outcome:'UNKNOWN',endpointConfirmed:false};
  if(!axis.available||!seed||!eligibility.body||!eligibility.association)return{...base,available:false,reason:'unconfirmed-seed-association-or-body',points:[],attempts:[]};
  const prior={x:axis.tx,y:axis.ty},bootstrap=[];
  for(const d of p.bootstrapDistancesNative){const point={x:seed.x+prior.x*d,y:seed.y+prior.y*d},m=localCenter(luma,w,h,point,prior,margin,p);bootstrap.push({distance:d,...m});if(!m.accepted)return{...base,available:true,reason:'bootstrap-'+m.reason,points:[],attempts:[],bootstrap};}
  const bootstrapFit=fitShaftAxis(bootstrap.map(r=>({accepted:true,center:r.center})));
  if(!bootstrapFit.available||bootstrapFit.maxOrthogonalResidual>p.maximumBootstrapResidualNative)return{...base,available:true,reason:'bootstrap-direction',points:[],attempts:[],bootstrap,bootstrapFit};
- const verifyLink=(a,b)=>{const dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy),u={x:dx/len,y:dy/len},normal={x:-u.y,y:u.x},samples=[];for(let k=0,n=Math.ceil(len/p.denseStepNative);k<=n;k++){const t=k/n,point={x:a.x+dx*t,y:a.y+dy*t};let response;try{response=measureAt(luma,w,h,point,u,normal,p.radiiNative).response;}catch(e){if(e.message!=='Profile outside measured bitmap')throw e;return{supported:false,samples,reason:'crop-boundary'};}samples.push({point,response,supported:response>=p.observationFloor});}return{supported:samples.every(s=>s.supported),samples};};
+ const verifyLink=(a,b)=>{const dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy),u=denseAxis==='measured-tangent'?{x:bootstrapFit.tx,y:bootstrapFit.ty}:{x:dx/len,y:dy/len},normal={x:-u.y,y:u.x},samples=[];for(let k=0,n=Math.ceil(len/p.denseStepNative);k<=n;k++){const t=k/n,point={x:a.x+dx*t,y:a.y+dy*t};let response;try{response=measureAt(luma,w,h,point,u,normal,p.radiiNative).response;}catch(e){if(e.message!=='Profile outside measured bitmap')throw e;return{supported:false,samples,reason:'crop-boundary'};}samples.push({point,response,supported:response>=p.observationFloor});}return{supported:samples.every(s=>s.supported),samples};};
  const bootstrapLinks=[];for(let i=1;i<bootstrap.length;i++){const link=verifyLink(bootstrap[i-1].center,bootstrap[i].center);bootstrapLinks.push(link);if(!link.supported)return{...base,available:true,reason:'bootstrap-dense-link',points:[],attempts:[],bootstrap,bootstrapFit,bootstrapLinks};}
  const initializationCorrectionDegrees=Math.acos(Math.max(-1,Math.min(1,prior.x*bootstrapFit.tx+prior.y*bootstrapFit.ty)))*180/Math.PI;
  let u={x:bootstrapFit.tx,y:bootstrapFit.ty},current={...bootstrap.find(r=>r.distance===0).center},arc=0;
@@ -21,7 +22,7 @@ export function followCurve(luma,w,h,seed,axis,eligibility,{margin,protocol:p,st
   if(arc+p.stepNative>p.maximumArcNative+1e-9)return{...base,...evidence,available:true,reason:'arc-budget',points,attempts};
   const reference={x:current.x+u.x*p.stepNative,y:current.y+u.y*p.stepNative},m=localCenter(luma,w,h,reference,u,margin,p),record={step:i,arcBefore:arc,tangent:{...u},...m};attempts.push(record);
   if(!m.accepted)return{...base,...evidence,available:true,reason:m.reason,points,attempts};
-  const dx=m.center.x-current.x,dy=m.center.y-current.y,len=Math.hypot(dx,dy),segment={x:dx/len,y:dy/len},normal={x:-segment.y,y:segment.x},dense=[];
+  const dx=m.center.x-current.x,dy=m.center.y-current.y,len=Math.hypot(dx,dy),segment=denseAxis==='measured-tangent'?u:{x:dx/len,y:dy/len},normal={x:-segment.y,y:segment.x},dense=[];
   if(arc+len>p.maximumArcNative)return{...base,...evidence,available:true,reason:'arc-budget',points,attempts};
   const count=Math.ceil(len/p.denseStepNative);
   try{

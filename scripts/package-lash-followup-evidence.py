@@ -44,15 +44,16 @@ def sha(data):
 
 
 def main():
-    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges'], ['--observability'], ['--label-coverage'], ['--cell-boundary']):
-        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges|--observability|--label-coverage|--cell-boundary]')
+    if sys.argv[1:] not in ([], ['--controls05'], ['--resolved-edges'], ['--observability'], ['--label-coverage'], ['--cell-boundary'], ['--dense-axis']):
+        raise RuntimeError('Usage: package-lash-followup-evidence.py [--controls05|--resolved-edges|--observability|--label-coverage|--cell-boundary|--dense-axis]')
     controls = sys.argv[1:] == ['--controls05']
     resolved = sys.argv[1:] == ['--resolved-edges']
     observability = sys.argv[1:] == ['--observability']
     coverage = sys.argv[1:] == ['--label-coverage']
     boundary = sys.argv[1:] == ['--cell-boundary']
-    date = '2026-11-18' if boundary else '2026-11-17' if resolved or observability or coverage else '2026-11-16' if controls else '2026-11-15'
-    stem = 'followup-' + date.replace('-', '') + ('-03' if coverage else '-02' if observability else '-01')
+    dense_axis = sys.argv[1:] == ['--dense-axis']
+    date = '2026-11-18' if boundary or dense_axis else '2026-11-17' if resolved or observability or coverage else '2026-11-16' if controls else '2026-11-15'
+    stem = 'followup-' + date.replace('-', '') + ('-03' if coverage else '-02' if observability or dense_axis else '-01')
     entries = ENTRIES
     selected_snapshots = SNAPSHOTS
     dependencies = ['native-real-11383300-bootstrap-01',
@@ -140,6 +141,21 @@ def main():
                         'native-boundary-default-14297936-01',
                         'native-boundary-exact-14297936-01',
                         'native-boundary-ending-webkit-01']
+    if dense_axis:
+        entries = ['dense-axis-14297936-chromium-01', 'dense-axis-14297936-chromium-02',
+                   'dense-axis-14297936-webkit-01', 'dense-axis-14297936-webkit-02',
+                   'native-dense-axis-default-14297936-01', 'native-dense-axis-measured-14297936-01',
+                   'native-dense-axis-measured-14297936-repeat-01', 'native-dense-axis-comparison-01.json',
+                   'measured-dense-axis-unit-sequential-01.txt']
+        selected_snapshots = ['scripts/package-lash-followup-evidence.py', 'package.json',
+                              'tests/visual/lash-dense-link-protocol.json',
+                              'tests/visual/lash-dense-link-diagnosis.cjs',
+                              'tests/visual/lash-measured-dense-axis-protocol.json',
+                              'tests/visual/lash-measured-dense-axis.test.mjs',
+                              'tests/visual/lash-dense-axis-compare.mjs',
+                              'tests/visual/lash-native-real.cjs']
+        dependencies = ['dense-axis-14297936-chromium-02', 'dense-axis-14297936-webkit-02',
+                        'native-dense-axis-default-14297936-01', 'native-dense-axis-measured-14297936-01']
     target = DEST / (stem + '.zip')
     manifest = DEST / (stem + '.json')
     if target.exists() or manifest.exists():
@@ -153,7 +169,7 @@ def main():
             if not file.is_file():
                 continue
             data = file.read_bytes()
-            if file.suffix == '.json' or ((resolved or observability or coverage or boundary) and file.suffix == '.txt') or (boundary and 'verified-source' in file.parts and file.suffix in {'.mjs', '.cjs', '.js'}):
+            if file.suffix == '.json' or ((resolved or observability or coverage or boundary or dense_axis) and file.suffix == '.txt') or ((boundary or dense_axis) and 'verified-source' in file.parts and file.suffix in {'.mjs', '.cjs', '.js'}):
                 files[file.relative_to(OUT).as_posix()] = data
             else:
                 omitted.append({'path': file.relative_to(OUT).as_posix(),
@@ -163,7 +179,7 @@ def main():
         protocol = json.loads((OUT / directory / 'protocol.json').read_bytes())
         for name, digest in protocol['moduleSHA256'].items():
             archived_source = OUT / directory / 'verified-source' / name
-            check_source = archived_source if boundary and archived_source.exists() else ROOT / name
+            check_source = archived_source if (boundary or dense_axis) and archived_source.exists() else ROOT / name
             if sha(check_source.read_bytes()) != digest:
                 raise RuntimeError('Changed algorithm dependency: ' + name)
             snapshots.add(name)
