@@ -10,7 +10,7 @@ const [inputFile, output] = process.argv.slice(2);
 if (!output || fs.existsSync(output)) throw Error('Supply serialized inputs and a NEW output directory');
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const inputBytes = fs.readFileSync(inputFile);
-const {width,height,inputs,cases} = JSON.parse(inputBytes);
+const {width,height,inputs,cases,score = 'response'} = JSON.parse(inputBytes);
 assert.ok(cases.length > 0);
 const modules = new Map(['lash-proximal-band-audit.mjs','lash-endpoint-profile.mjs'].map(name => {
   const file = `tests/visual/${name}`;
@@ -20,7 +20,7 @@ const modules = new Map(['lash-proximal-band-audit.mjs','lash-endpoint-profile.m
 }));
 const measurements = cases.map(({luma,points}) => ({luma,points}));
 const expected = cases.map(c => c.expected);
-assert.deepEqual(measurements.map(c => auditProximalBands(Float32Array.from(c.luma),width,height,c.points)), expected);
+assert.deepEqual(measurements.map(c => auditProximalBands(Float32Array.from(c.luma),width,height,c.points,score)), expected);
 const tolerance = 1e-12;
 function compareNumeric(actual, reference, field = 'result') {
   if (typeof reference === 'number' && !Number.isInteger(reference)) {
@@ -40,7 +40,7 @@ function compareNumeric(actual, reference, field = 'result') {
 fs.mkdirSync(output,{recursive:true});
 const save = (file,value) => fs.writeFileSync(path.join(output,file),JSON.stringify(value,null,2)+'\n',{flag:'wx'});
 const protocol = {kind:'serialized-input-runtime-parity', inputSHA256:hash(inputBytes), cases:cases.length,
-  repeatsPerEngine:2, tolerance, inputs, engines:{}};
+  repeatsPerEngine:2, tolerance, inputs, score, engines:{}};
 const server = http.createServer((request,response) => {
   if (request.url === '/') return response.writeHead(200,{'Content-Type':'text/html'}).end('<!doctype html><title>Band audit</title>');
   const module = modules.get(request.url);
@@ -55,10 +55,10 @@ try {
       const page = await browser.newPage();
       await page.goto(`http://127.0.0.1:${server.address().port}/`,{timeout:15000});
       const runs = [];
-      for (let i=0;i<2;i++) runs.push(await page.evaluate(async ({width,height,cases}) => {
+      for (let i=0;i<2;i++) runs.push(await page.evaluate(async ({width,height,cases,score}) => {
         const {auditProximalBands} = await import('/lash-proximal-band-audit.mjs');
-        return cases.map(c => auditProximalBands(Float32Array.from(c.luma),width,height,c.points));
-      },{width,height,cases:measurements}));
+        return cases.map(c => auditProximalBands(Float32Array.from(c.luma),width,height,c.points,score));
+      },{width,height,cases:measurements,score}));
       save(engine.name()+'.json', runs);
       assert.deepEqual(runs[0],runs[1],`${engine.name()}: repeated output`);
       const maxNumericDifference = compareNumeric(runs[0],expected);

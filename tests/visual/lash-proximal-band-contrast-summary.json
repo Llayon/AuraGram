@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-18",
+  "archive": "followup-proximal-band-contrast-20261118.zip",
+  "archiveSHA256": "3c1db7c515063ffa0913f520d0b2211144e89352abdadf259cb424b398c294fd",
+  "members": {
+    "proximal-band-contrast-01.json": "60c9f17339337e9fcccc839f8971eb546343d70a25d477029240abe517154d4c",
+    "proximal-band-contrast-inputs-01.json": "71dad874045e82fef87f3ce9df754aa3f0ed2aa088e8ef353e3b044f53810206",
+    "proximal-band-contrast-browser-01/chromium.json": "9098ebc9364c0c2634c105476a78bdc54f0fdeb7ed93d2ba6cbadadd2a0a14ec",
+    "proximal-band-contrast-browser-01/webkit.json": "757f235105566be50fba04493163e4b29fef4a7dd12feb66bf5f27cd614861a8",
+    "proximal-band-contrast-browser-01/protocol.json": "f9c7ce7c4b1ea0c4ebc2add497ca831f336d7cc8eaedea5806cad4007a20f692"
+  },
+  "nodeRepeatByteIdentical": true,
+  "comparison": {
+    "baselineInputSHA256": "6f42c1b63bee2cb0369ac214cc9e41279c413a7136a2875936e864f5a6a39e40",
+    "score": "transverseContrast",
+    "inputs": {
+      "tests/visual/lash-proximal-band-audit.mjs": "dc9758af04799339e75cf187dfcec485cb56b2f3ab645496e3aea7c497327c6f",
+      "tests/visual/lash-endpoint-profile.mjs": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    "hypothesis": "Replace penalized response with transverse contrast for the veto only. Keep the grid, tangent, radii, floor and status rules fixed.",
+    "decisionRule": "The variant must flag the previously missed fork and preserve all isolated paths and previous refusals to warrant further study."
+  },
+  "counts": {
+    "single": {
+      "cases": 3,
+      "baselineRefusals": 0,
+      "contrastRefusals": 0,
+      "newRefusals": 0,
+      "lostRefusals": 0
+    },
+    "crossing": {
+      "cases": 9,
+      "baselineRefusals": 9,
+      "contrastRefusals": 9,
+      "newRefusals": 0,
+      "lostRefusals": 0
+    },
+    "fork": {
+      "cases": 3,
+      "baselineRefusals": 2,
+      "contrastRefusals": 3,
+      "newRefusals": 1,
+      "lostRefusals": 0
+    },
+    "parallel": {
+      "cases": 16,
+      "baselineRefusals": 9,
+      "contrastRefusals": 9,
+      "newRefusals": 0,
+      "lostRefusals": 0
+    }
+  },
+  "browser": {
+    "kind": "serialized-input-runtime-parity",
+    "inputSHA256": "71dad874045e82fef87f3ce9df754aa3f0ed2aa088e8ef353e3b044f53810206",
+    "cases": 31,
+    "repeatsPerEngine": 2,
+    "tolerance": 1e-12,
+    "inputs": {
+      "tests/visual/lash-proximal-band-audit.mjs": "dc9758af04799339e75cf187dfcec485cb56b2f3ab645496e3aea7c497327c6f",
+      "tests/visual/lash-endpoint-profile.mjs": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    "score": "transverseContrast",
+    "engines": {
+      "chromium": {
+        "version": "156.0.8078.4",
+        "exactRepeat": true,
+        "exactDecisions": true,
+        "exactNodeParity": true,
+        "maxNumericDifference": 0
+      },
+      "webkit": {
+        "version": "27.2",
+        "exactRepeat": true,
+        "exactDecisions": true,
+        "exactNodeParity": false,
+        "maxNumericDifference": 1.3322676295501878e-15
+      }
+    }
+  }
+}

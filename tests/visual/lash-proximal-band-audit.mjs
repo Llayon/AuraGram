@@ -1,7 +1,8 @@
 import {measureAt} from './lash-endpoint-profile.mjs';
 
 // One fixed cross-section at each observed point. A clear scan leaves ownership open.
-export function auditProximalBands(luma, width, height, points) {
+export function auditProximalBands(luma, width, height, points, score = 'response') {
+  if (!['response','transverseContrast'].includes(score)) throw Error('Unknown band score');
   if (points.length < 2) return {status:'unavailable', reason:'no-measured-direction'};
   let edgeWitness = null;
   for (let index = 0; index < points.length; index++) {
@@ -17,7 +18,7 @@ export function auditProximalBands(luma, width, height, points) {
         const offset = i * .25;
         const point = {x:center.x + normal.x * offset,y:center.y + normal.y * offset};
         let response;
-        try { response = measureAt(luma,width,height,point,tangent,normal,[radius]).response; }
+        try { response = measureAt(luma,width,height,point,tangent,normal,[radius])[score]; }
         catch (error) {
           if (error.message !== 'Profile outside measured bitmap') throw error;
           return {status:'censored',reason:'unavailable-band-sample',index,radius,offset};

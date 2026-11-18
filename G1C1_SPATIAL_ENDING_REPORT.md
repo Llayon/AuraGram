@@ -34,6 +34,14 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-18: transverse contrast recovers the missed synthetic fork
+
+Compared one fixed alternative on the exact 31 serialized gate-arrival inputs from the prior browser archive. The veto uses transverse contrast in place of the response that includes the along-axis penalty. It preserves the sampled points, measured tangent, grid, both radii and 0.006 floor. The ordinary response remains the default. This experiment only vetoes ambiguity. It grants no positive strand association or endpoint.
+
+The original audit reproduces all 31 saved outputs exactly. The alternative adds one refusal, the previously missed phase-zero fork. It keeps the 9 crossing, 2 other fork and 9 parallel refusals, as well as all 3 isolated passes and 7 parallel passes. The decisive profile at path index 33 and radius 0.75 contains off-center samples at -2.25 and -2 px with transverse contrast 0.01882 and 0.02839. Their respective along-axis penalties of 0.03782 and 0.03998 reduce both old responses to zero. This explains the difference for that observed synthetic case.
+
+Node replay is byte-identical. Chromium and WebKit match Node on all 31 decisions and run deterministically on repeat. Chromium matches numerically exactly. WebKit's maximum numeric difference is 1.33e-15. The full sequential unit suite passes 307 tests. The comparison, browser inputs, measured witnesses and browser results are preserved in `followup-proximal-band-contrast-20261118.zip`. The variant merits checking on further inputs. This matrix was already used to identify the failure, and it contains no photographs. The held-out group remains sealed. **LENGTH HOLD.**
+
 ### 2026-11-18: browser agreement for the proximal band audit
 
 Replayed the 31 gate-arriving cases from the 60-case mechanism matrix, including the missed fork and the parallel cases. The regenerated Node matrix has identical rows and decisions to the archived baseline. Chromium and WebKit received the same serialized luma samples and observed points. Each browser repeated its results exactly. Both browsers match Node on all statuses, reasons, witness indices, profile radii, offsets and support flags. Chromium measurements match exactly. WebKit differs by at most 2.22e-15, within the 1e-12 comparison tolerance. The initial exact WebKit comparison failed, and its measurements and failure are preserved.
