@@ -34,6 +34,16 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-18: fixed shared-arc probe on two further development sources
+
+Ran the same segment-axis, exact-cell, distal-body policy on the previously frozen development source 11383300 and hair-overlap control 29117992. Ran baseline, probe and repeat separately in each browser. The comparator checks protocol identity except for the probe flag, frozen labels, original source and actual engine geometry digests. Every baseline record equals its probe counterpart after removing the added audit and timings. Probe repeats match after excluding timings. Labels are used only for post-hoc ambiguity checks and the separate geometric bound.
+
+On 11383300, Chromium has five observed right-eye starts and WebKit has zero observed starts. On 29117992, Chromium has one observed right-eye start and WebKit has six observed left-eye starts. All 12 records are excluded by the remaining arc bound before a reverse step. One WebKit start lies inside the frozen hair-overlap region. With no reverse step in that region, this run does not test the probe's ability to reject a traced crossing. Across these two sources and the earlier 14297936 run, 112 of 113 observed records were excluded by the shared budget. The only exercised reverse trace failed its first link. No case reached the lid using this policy.
+
+The separate post-hoc bound on the three provisional right-eye regions of 11383300 ranges from 93.77 to 113.25 px in Chromium and 85.69 to 115.54 px in WebKit. Each whole uncertainty region exceeds the 36 px budget in both engines. This rules out one complete native arc for these development annotations under the given bound, with no claim that they are independently qualified eyes. A coarse connection through broad support still leaves strand ownership unresolved.
+
+Saved per-engine summaries and exact hashes. The archive `followup-shared-arc-20261118` retains 19 verified JSON records and protocols (2,922,363 bytes). Focused regressions pass 12 tests. The latest complete unit list remains 304 passes from the preceding stage. The current reverse probe is rejected for integration. The final cohort remains sealed and the E2E Length blockers are open. **LENGTH HOLD.**
+
 ### 2026-11-18: reverse trace within the remaining native arc
 
 Added the offline opt-in `--shared-arc-proximal` probe. It charges the accepted distal arc first, checks the conservative lower bound against the remaining budget, then makes one proximal trace from the same initialization with the original axis reversed and the segment link policy. It uses the same ROI-contained patch and V2 measurement constraints. A reverse bootstrap with a different observed starting point is ambiguous. A trace entering the signed lid gate is recorded as gate evidence. Same-fiber ownership and ending approval require separate evidence.

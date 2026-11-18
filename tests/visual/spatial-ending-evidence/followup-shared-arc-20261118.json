@@ -1,0 +1,104 @@
+{
+  "date": "2026-11-18",
+  "archive": "followup-shared-arc-20261118.zip",
+  "bytes": 2922363,
+  "sha256": "78dae86f0f67cf56deeb876ad4470008fa57f95d0a340f081431e830090a3ddb",
+  "restoreDirectory": "tests/visual/out",
+  "members": [
+    {
+      "path": "shared-arc-11383300-baseline-01/chromium.json",
+      "bytes": 2749082,
+      "sha256": "789307af62c395c13b18e070adcc6e6f83d4fbc0c8f19328dfa84c808a5b2829"
+    },
+    {
+      "path": "shared-arc-11383300-baseline-01/protocol.json",
+      "bytes": 2996,
+      "sha256": "5613f7f82e2c351a232e497c2a621716002625bd3e0b971f9198a98595afcae9"
+    },
+    {
+      "path": "shared-arc-11383300-baseline-01/webkit.json",
+      "bytes": 3292333,
+      "sha256": "62c3f7013842e41669b502ebd6f303c61ec75071f6d1a81f92e2e92cf678d557"
+    },
+    {
+      "path": "shared-arc-11383300-label-bounds-01.json",
+      "bytes": 5619,
+      "sha256": "31c11e0fc1a4be894a252fd732226e87a2440f70212b4874bb90de0924189433"
+    },
+    {
+      "path": "shared-arc-11383300-probe-01/chromium.json",
+      "bytes": 2755900,
+      "sha256": "138decf77427385ae6c617dac0fed63550028559074ce86718f50d586a6263ce"
+    },
+    {
+      "path": "shared-arc-11383300-probe-01/protocol.json",
+      "bytes": 2995,
+      "sha256": "6a5c7b3a84f22bce83e2bd33ea466ca989fb6bac5b43f825871f6a6562dbacb1"
+    },
+    {
+      "path": "shared-arc-11383300-probe-01/webkit.json",
+      "bytes": 3299501,
+      "sha256": "c2a374fc66a32d2986cde80dd7db3965f4d84b8b176841c8323b8841b75f61b7"
+    },
+    {
+      "path": "shared-arc-11383300-repeat-01/chromium.json",
+      "bytes": 2755868,
+      "sha256": "30d1cf3ccb4fa2fbcab5c2e65c373b1ab613bf392019584d1a353dc33a6f1a63"
+    },
+    {
+      "path": "shared-arc-11383300-repeat-01/protocol.json",
+      "bytes": 2995,
+      "sha256": "6a5c7b3a84f22bce83e2bd33ea466ca989fb6bac5b43f825871f6a6562dbacb1"
+    },
+    {
+      "path": "shared-arc-11383300-repeat-01/webkit.json",
+      "bytes": 3299501,
+      "sha256": "9c4b54b857944d6f63fdcd7f38a016e52eb24ea374f1daa06f0031fbcf011dc4"
+    },
+    {
+      "path": "shared-arc-29117992-baseline-01/chromium.json",
+      "bytes": 2844109,
+      "sha256": "9a6123b296e106f20f119561cdf03c05d33c931f7b29ceaf599a0e97a8f5390f"
+    },
+    {
+      "path": "shared-arc-29117992-baseline-01/protocol.json",
+      "bytes": 3112,
+      "sha256": "6b287771e85faa055b5f59b16346762f6a145dc097965fc1bfe69afc4bf75f06"
+    },
+    {
+      "path": "shared-arc-29117992-baseline-01/webkit.json",
+      "bytes": 3412842,
+      "sha256": "c51d3e3dcd2054f6b73f5355f13264fc648670e48a9e7c4bcb48d07fd5cc3855"
+    },
+    {
+      "path": "shared-arc-29117992-probe-01/chromium.json",
+      "bytes": 2854202,
+      "sha256": "f8b79a673360e462076a535bbdd9340379c0c22e3338e34b7f81c5fb4aeb8d48"
+    },
+    {
+      "path": "shared-arc-29117992-probe-01/protocol.json",
+      "bytes": 3111,
+      "sha256": "6d31048fcf553be2d4f9d2d8e618d383381aa31dadd6db3a83d44c60ed17937c"
+    },
+    {
+      "path": "shared-arc-29117992-probe-01/webkit.json",
+      "bytes": 3420421,
+      "sha256": "8c24c10404747ec6f2e6cdc34a7746cc442066b9f3083950b02d26c35785981a"
+    },
+    {
+      "path": "shared-arc-29117992-repeat-01/chromium.json",
+      "bytes": 2854230,
+      "sha256": "d6bbb5452870a8beb2e8816d8d7763b8cbbb5d93e09d5f36f0478d69b16e3b41"
+    },
+    {
+      "path": "shared-arc-29117992-repeat-01/protocol.json",
+      "bytes": 3111,
+      "sha256": "6d31048fcf553be2d4f9d2d8e618d383381aa31dadd6db3a83d44c60ed17937c"
+    },
+    {
+      "path": "shared-arc-29117992-repeat-01/webkit.json",
+      "bytes": 3420421,
+      "sha256": "74eab08ece19be8fae38af4deb4a85041f300e523087248738abcaff5a0553f2"
+    }
+  ]
+}
