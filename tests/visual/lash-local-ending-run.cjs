@@ -2,6 +2,11 @@
 // Independent endpoint measurements on saved paths. No labels enter browser.
 const fs=require('fs'),path=require('path'),crypto=require('crypto'),{spawn}=require('child_process'),{chromium,webkit}=require('@playwright/test');
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+async function within(promise,ms,phase){
+ let timer;
+ try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error(phase+' timed out')),ms);})]);}
+ finally{clearTimeout(timer);}
+}
 async function main(){
  const [inputDir,sourceFile,out]=process.argv.slice(2);if(!out||fs.existsSync(out))throw Error('Supply saved run, original and NEW output');
  const resolvedEdges=process.argv.includes('--resolved-edges');
@@ -22,9 +27,14 @@ async function main(){
  if(hash(fs.readFileSync(saved.geometryPath))!==saved.geometrySHA256)throw Error('Geometry changed');
  const geometry=JSON.parse(fs.readFileSync(saved.geometryPath)).results.find(r=>r.sha256===hash(source));
  if(geometry?.status!=='ready'||geometry.split!=='development')throw Error('No actual development FaceMesh');
- const browser=await engine.launch();try{
- const page=await browser.newPage();await page.route('https://**/*',r=>r.abort());await page.route('**/__ending_audit__',r=>r.fulfill({body:'<!doctype html>',contentType:'text/html'}));await page.goto(url+'/__ending_audit__');
- const results=await page.evaluate(async({data,saved,geometry,resolvedEdges})=>{
+ const browser=await engine.launch({timeout:15000});try{
+ const page=await within(browser.newPage(),15000,engine.name()+' new page');await page.route('https://**/*',r=>r.abort());await page.route('**/__ending_audit__',r=>r.fulfill({body:'<!doctype html>',contentType:'text/html'}));await page.goto(url+'/__ending_audit__',{timeout:15000});
+ const run=Object.fromEntries(Object.entries(saved.run).map(([side,eye])=>[side,{status:eye.status,reason:eye.reason,size:eye.size,
+  results:eye.results?.map(r=>({rank:r.rank,index:r.index,status:r.status,reasons:r.reasons,proximalConnection:r.proximalConnection,
+   coarse:{connected:r.coarse.connected,broadSupport:r.coarse.broadSupport},correspondence:{status:r.correspondence.status},patch:r.patch,
+   local:r.local&&{points:r.local.points,reason:r.local.reason,bootstrapFit:r.local.bootstrapFit,
+    attempts:r.local.attempts.filter(a=>a.linkAccepted).map(a=>({linkAccepted:true,directionFit:a.directionFit}))}}))}]));
+ const results=await within(page.evaluate(async({data,saved,geometry,resolvedEdges})=>{
  const {createNativePatchReader}=await import('/tests/visual/lash-native-path.mjs');const {auditSpatialEnding}=await import('/tests/visual/lash-spatial-ending.mjs');
  const edgeOperator=resolvedEdges?await import('/tests/visual/lash-resolved-edges.mjs'):null;
  const image=new Image();image.src=data;await image.decode();const reader=createNativePatchReader(image),buffer=new Float32Array(256*256),results={};
@@ -43,16 +53,18 @@ async function main(){
  const budget=['arc-budget','step-budget'].includes(curve.reason),outside=[-8,8].some(dx=>[-8,8].some(dy=>last.x+dx<roi.x||last.y+dy<roi.y||last.x+dx>roi.x+roi.w-1||last.y+dy>roi.y+roi.h-1));
  const rect=r.patch,luma=buffer.subarray(0,rect.w*rect.h);reader.readPatch(rect,luma);
  const points=curve.points.map(p=>({...p,x:p.x-rect.x,y:p.y-rect.y})),tangent={x:fit.tx,y:fit.ty};
- const ending=auditSpatialEnding(luma,rect.w,rect.h,points,tangent,{proximalConnection:r.proximalConnection,budgetExhausted:budget,roiClipped:outside||curve.reason==='local-roi-boundary'});
+ const clipped=outside||curve.reason==='local-roi-boundary'||curve.reason.includes('crop-boundary');
+ const ending=auditSpatialEnding(luma,rect.w,rect.h,points,tangent,{proximalConnection:r.proximalConnection,budgetExhausted:budget,roiClipped:clipped});
  if(edgeOperator)ending.resolvedEdges=ending.profiles.length===2?edgeOperator.inspectResolvedTaper(ending.profiles[0].rows):{status:'censored',reason:'spatial-grid-unavailable',endpointConfirmed:false};
  if(ending.endpointConfirmed||ending.status==='terminal')throw Error('Unexpected terminal authorization');
  return{...base,...ending,patch:rect,coordinateSpace:'patch-local-source-pixels',localStop:curve.reason,lastSourcePoint:last,measuredTangent:tangent,localAcceptedArc:last.arc};
  });
  }}finally{reader.dispose();}return results;
- },{data:'data:image/jpeg;base64,'+source.toString('base64'),saved,geometry,resolvedEdges});
+ },{data:'data:image/jpeg;base64,'+source.toString('base64'),saved:{run},geometry,resolvedEdges}),45000,engine.name()+' endpoint measurement');
  const stats={};for(const [side,records]of Object.entries(results)){const statuses={},reasons={},closure={};for(const r of records){statuses[r.status]=(statuses[r.status]||0)+1;for(const reason of r.reasons)reasons[reason]=(reasons[reason]||0)+1;for(const p of r.profiles||[]){const k=p.sideClosure.status;closure[k]=(closure[k]||0)+1;}}stats[side]={records:records.length,statuses,reasons,closureProfileCounts:closure,accepted:records.filter(r=>r.endpointConfirmed).length};}
  fs.writeFileSync(path.join(out,engine.name()+'.json'),JSON.stringify({engine:engine.name(),inputSHA256:hash(fs.readFileSync(inputFile)),stats,results},null,2)+'\n',{flag:'wx'});console.log(engine.name(),JSON.stringify(stats));
- }finally{await browser.close();}
+ }catch(error){fs.writeFileSync(path.join(out,engine.name()+'-failure.json'),JSON.stringify({engine:engine.name(),reason:error.message},null,2)+'\n',{flag:'wx'});throw error;}
+ finally{await within(browser.close(),10000,engine.name()+' browser close');}
  }
  for(const [f,digest]of Object.entries(moduleSHA256))if(hash(fs.readFileSync(f))!==digest)throw Error('Module changed during run');
  }finally{server.kill();}

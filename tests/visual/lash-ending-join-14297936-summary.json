@@ -1,0 +1,1610 @@
+{
+  "source": "pexels-14297936.jpg",
+  "kind": "posthoc development evidence join",
+  "inputs": {
+    "tests/visual/lash-proximal-band-bounded-summary.json": "4b4d3cdacd6227cdab3dd901244e29fb04c9a852303ccd56dc616a544a7db0cc",
+    "tests/visual/lash-spatial-original-labels-01.json": "4d23df2501e30e27aaa5d1bb01f02231b8c62636ca09d465471adfecd1f6ed74",
+    "tests/visual/lash-spatial-original-labels-01.freeze.json": "94bebf8c481c35619e8c2a569d4c1fb3cd40eacc20ec4e2e990a5c0fa507da89",
+    "tests\\visual\\out\\distal-band-bounded-14297936-audit-01\\protocol.json": "977b5e7cefea9deab502696170f030796a5a5b1467ea06ea4f0c5684b0fbef65",
+    "tests\\visual\\out\\distal-band-bounded-14297936-audit-01\\chromium.json": "17ed02c7844dacabd539bbde5e307ecabf7831e203652d1d27f79f8f22309d59",
+    "tests\\visual\\out\\bounded-ending-14297936-chromium-02\\protocol.json": "298eec438911b9cd8be2a9520fc53ca0c6e5f07ab329568ef3539170e76fcf17",
+    "tests\\visual\\out\\bounded-ending-14297936-chromium-02\\chromium.json": "38db6c2f17ec81fb95ea8859663632218909b5565789ab882e448687a395232d",
+    "tests\\visual\\out\\distal-band-bounded-14297936-audit-01\\webkit.json": "b740330f277fb425c76f37619f84097d4763a861ca097eca625fd23e7fa95b3e",
+    "tests\\visual\\out\\bounded-ending-14297936-webkit-02\\protocol.json": "298eec438911b9cd8be2a9520fc53ca0c6e5f07ab329568ef3539170e76fcf17",
+    "tests\\visual\\out\\bounded-ending-14297936-webkit-02\\webkit.json": "75de1eb0631df640d9011a0ed307789dcd77d2b5b2ecb29d092dda9eed9bdb39"
+  },
+  "engines": {
+    "chromium": {
+      "left": {
+        "observed": 0,
+        "noVeto": 0,
+        "measuredWindows": 0,
+        "taperEvidence": 0,
+        "taperEvidenceAll": 0,
+        "regionsWithNoVetoMeasuredWindow": [],
+        "endings": {},
+        "rows": []
+      },
+      "right": {
+        "observed": 52,
+        "noVeto": 37,
+        "measuredWindows": 37,
+        "taperEvidence": 0,
+        "taperEvidenceAll": 0,
+        "regionsWithNoVetoMeasuredWindow": [
+          "right-2",
+          "right-1",
+          "right-4"
+        ],
+        "endings": {
+          "ambiguous": 23,
+          "continuing": 14
+        },
+        "rows": [
+          {
+            "rank": 0,
+            "index": 11730,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 1,
+            "index": 11954,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 2,
+            "index": 12607,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 3,
+            "index": 12178,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 4,
+            "index": 12402,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 5,
+            "index": 13056,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 6,
+            "index": 12626,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 7,
+            "index": 13281,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 9,
+            "index": 12850,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 11,
+            "index": 13506,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 12,
+            "index": 13075,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 13,
+            "index": 13074,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 15,
+            "index": 13730,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 16,
+            "index": 13299,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 18,
+            "index": 13523,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 19,
+            "index": 13955,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 26,
+            "index": 13747,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 30,
+            "index": 13972,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 31,
+            "index": 13971,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 34,
+            "index": 14208,
+            "bandStatus": "ambiguous",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": []
+          },
+          {
+            "rank": 38,
+            "index": 14195,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 41,
+            "index": 14433,
+            "bandStatus": "ambiguous",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": []
+          },
+          {
+            "rank": 46,
+            "index": 14419,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 47,
+            "index": 14667,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 48,
+            "index": 14657,
+            "bandStatus": "ambiguous",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": []
+          },
+          {
+            "rank": 52,
+            "index": 14643,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 53,
+            "index": 14855,
+            "bandStatus": "censored",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 54,
+            "index": 14891,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 56,
+            "index": 14881,
+            "bandStatus": "ambiguous",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": []
+          },
+          {
+            "rank": 57,
+            "index": 14868,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 60,
+            "index": 15114,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 61,
+            "index": 15080,
+            "bandStatus": "censored",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 64,
+            "index": 15105,
+            "bandStatus": "ambiguous",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": []
+          },
+          {
+            "rank": 68,
+            "index": 15092,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 70,
+            "index": 15338,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 72,
+            "index": 15330,
+            "bandStatus": "ambiguous",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": []
+          },
+          {
+            "rank": 73,
+            "index": 15305,
+            "bandStatus": "censored",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 79,
+            "index": 15306,
+            "bandStatus": "censored",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 81,
+            "index": 15316,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 83,
+            "index": 15562,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 84,
+            "index": 15554,
+            "bandStatus": "ambiguous",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": []
+          },
+          {
+            "rank": 86,
+            "index": 15530,
+            "bandStatus": "censored",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 88,
+            "index": 15541,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 91,
+            "index": 15540,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 93,
+            "index": 15531,
+            "bandStatus": "censored",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 95,
+            "index": 15786,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 102,
+            "index": 15765,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 103,
+            "index": 15764,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 105,
+            "index": 15755,
+            "bandStatus": "censored",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 107,
+            "index": 16010,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 110,
+            "index": 15756,
+            "bandStatus": "censored",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 121,
+            "index": 16452,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          }
+        ]
+      }
+    },
+    "webkit": {
+      "left": {
+        "observed": 4,
+        "noVeto": 0,
+        "measuredWindows": 0,
+        "taperEvidence": 0,
+        "taperEvidenceAll": 0,
+        "regionsWithNoVetoMeasuredWindow": [],
+        "endings": {},
+        "rows": [
+          {
+            "rank": 17,
+            "index": 11352,
+            "bandStatus": "ambiguous",
+            "endingStatus": "censored",
+            "reasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": []
+          },
+          {
+            "rank": 19,
+            "index": 11351,
+            "bandStatus": "ambiguous",
+            "endingStatus": "censored",
+            "reasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": []
+          },
+          {
+            "rank": 22,
+            "index": 11575,
+            "bandStatus": "ambiguous",
+            "endingStatus": "censored",
+            "reasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": []
+          },
+          {
+            "rank": 32,
+            "index": 11797,
+            "bandStatus": "ambiguous",
+            "endingStatus": "censored",
+            "reasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": []
+          }
+        ]
+      },
+      "right": {
+        "observed": 45,
+        "noVeto": 39,
+        "measuredWindows": 39,
+        "taperEvidence": 0,
+        "taperEvidenceAll": 0,
+        "regionsWithNoVetoMeasuredWindow": [
+          "right-2",
+          "right-1",
+          "right-4"
+        ],
+        "endings": {
+          "ambiguous": 26,
+          "continuing": 13
+        },
+        "rows": [
+          {
+            "rank": 2,
+            "index": 11282,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 3,
+            "index": 11506,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 4,
+            "index": 12159,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 6,
+            "index": 11730,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 7,
+            "index": 11956,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 8,
+            "index": 11954,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 9,
+            "index": 12608,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 11,
+            "index": 12178,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 12,
+            "index": 12833,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 16,
+            "index": 12402,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 18,
+            "index": 13057,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 22,
+            "index": 13058,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 24,
+            "index": 12627,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 25,
+            "index": 13282,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 26,
+            "index": 12851,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 30,
+            "index": 13075,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 31,
+            "index": 13507,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-1"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 35,
+            "index": 13300,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 36,
+            "index": 13299,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 40,
+            "index": 13524,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 41,
+            "index": 13523,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 49,
+            "index": 13748,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 51,
+            "index": 13747,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 58,
+            "index": 13972,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 59,
+            "index": 14219,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 60,
+            "index": 13971,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 69,
+            "index": 14196,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 71,
+            "index": 14443,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 72,
+            "index": 14194,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 73,
+            "index": 14407,
+            "bandStatus": "censored",
+            "endingStatus": "censored",
+            "reasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 80,
+            "index": 14420,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 81,
+            "index": 14667,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 82,
+            "index": 14418,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 85,
+            "index": 14632,
+            "bandStatus": "censored",
+            "endingStatus": "censored",
+            "reasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 90,
+            "index": 14644,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 91,
+            "index": 14891,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 94,
+            "index": 14857,
+            "bandStatus": "censored",
+            "endingStatus": "censored",
+            "reasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 100,
+            "index": 15118,
+            "bandStatus": "ambiguous",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 103,
+            "index": 14868,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 105,
+            "index": 15114,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 116,
+            "index": 15082,
+            "bandStatus": "censored",
+            "endingStatus": "censored",
+            "reasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [],
+            "responseNoVeto": true
+          },
+          {
+            "rank": 118,
+            "index": 15342,
+            "bandStatus": "ambiguous",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 119,
+            "index": 15093,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 120,
+            "index": 15092,
+            "bandStatus": "no-veto",
+            "endingStatus": "ambiguous",
+            "reasons": [
+              "profile-disagreement"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-2"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          },
+          {
+            "rank": 122,
+            "index": 15338,
+            "bandStatus": "no-veto",
+            "endingStatus": "continuing",
+            "reasons": [
+              "spatial-continuation"
+            ],
+            "measuredWindow": true,
+            "taperStatus": "ambiguous",
+            "overlaps": [
+              "right-4"
+            ],
+            "responseNoVeto": true,
+            "transverseContrastNoVeto": true
+          }
+        ]
+      }
+    }
+  },
+  "meaning": "Window overlap and taper evidence are diagnostic. No same-fiber or terminal approval."
+}

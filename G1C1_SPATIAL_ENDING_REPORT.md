@@ -34,6 +34,14 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-19: join transverse refusals to measured endpoint windows
+
+Re-measured the fixed 2D stop window on saved development paths from 14297936 and 29117992. Joined by engine and automatic seed identity, verifying the archived native records and frozen annotations by digest. The labels enter only the post-hoc polygon overlap check. Endpoint output continues to mark crop-boundary stops censored. The first Chromium attempt was stopped after failing to produce measurements in a reasonable time. The replacement passes only required path fields into the browser and bounds the launch, page setup, measurement and shutdown waits. The exact cause of the initial stall is unknown. The four per-engine replacement runs completed. All measurement records and stats for 14297936 equal the previous complete endpoint measurements in both browsers.
+
+On 14297936, 37 Chromium and 39 WebKit right-eye records clear the updated contrast veto and have a measured stop window. Of those 76 records, 27 are continuing and 49 are ambiguous. In both engines, clear measured windows overlap three provisional right-eye regions, right-1, right-2 and right-4. No observed window yields resolved taper evidence, before or after applying the band veto. On the 29117992 hair-overlap control the band audit refuses all seven observed records. The endpoint audit yields no resolved taper there either. These are repeated seed records and provisional geometric overlaps. No case demonstrates a native lid connection or a terminal.
+
+The join for 14297936 repeats byte for byte, and 12 focused tests pass. The complete earlier unit result remains 308 passes. Per-source summaries and the nine-entry `followup-ending-join-20261119.zip` retain the measurements, protocols and the incomplete first attempt. The held-out cohort remains sealed. **LENGTH HOLD.**
+
 ### 2026-11-19: distinguish a clipped second band from enclosed bands
 
 The 12 added photo refusals from the contrast scan collapse to one repeated witness in each browser on 14297936. The exact centers are (1526.280, 1918.601) in Chromium and (1525.889, 1917.825) in WebKit, 0.87 source pixels apart. In each case the off-center band reaches the -3 px scan edge. The repeated records do not establish 12 distinct overlaps.
