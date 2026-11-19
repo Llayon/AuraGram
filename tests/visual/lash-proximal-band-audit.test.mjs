@@ -26,3 +26,11 @@ test('an incomplete cross section is censored rather than cleared',()=>{
  assert.equal(r.status,'censored');
  assert.equal(r.reason,'unavailable-band-sample');
 });
+
+test('a second band clipped by the scan edge is censored',()=>{
+ const r=audit(image(x=>.8-Math.max(shaft(x,10),shaft(x,13))));
+ assert.equal(r.status,'censored');
+ assert.equal(r.reason,'supported-band-at-side-boundary');
+ assert.equal(r.bands,2);
+ assert.ok(r.samples[0].supported || r.samples.at(-1).supported);
+});

@@ -28,8 +28,10 @@ export function auditProximalBands(luma, width, height, points, score = 'respons
       }
       const bands = samples.filter((s,j) => s.supported && !samples[j-1]?.supported).length;
       const witness = {index,center,tangent,radius,bands,samples};
-      if (bands > 1) return {status:'ambiguous',reason:'multiple-supported-bands',...witness};
-      if (!edgeWitness && (samples[0].supported || samples.at(-1).supported)) edgeWitness = witness;
+      const touchesEdge = samples[0].supported || samples.at(-1).supported;
+      // A clipped band cannot serve as the independent second witness.
+      if (bands > 1 && !touchesEdge) return {status:'ambiguous',reason:'multiple-supported-bands',...witness};
+      if (touchesEdge && (!edgeWitness || bands > edgeWitness.bands)) edgeWitness = witness;
     }
   }
   if (edgeWitness) return {status:'censored',reason:'supported-band-at-side-boundary',...edgeWitness};
