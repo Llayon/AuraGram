@@ -1,0 +1,787 @@
+{
+  "source": "pexels-14297936.jpg",
+  "inputs": {
+    "tests/visual/lash-ending-join-14297936-summary.json": "dff8d456fcf9e17d47c49bc7d79705d6cadd86eb9594d2f851b310217f0783c1",
+    "tests/visual/out/bounded-ending-14297936-chromium-02/chromium.json": "38db6c2f17ec81fb95ea8859663632218909b5565789ab882e448687a395232d",
+    "tests/visual/out/bounded-ending-14297936-webkit-02/webkit.json": "75de1eb0631df640d9011a0ed307789dcd77d2b5b2ecb29d092dda9eed9bdb39"
+  },
+  "results": {
+    "chromium": {
+      "left": [],
+      "right": [
+        {
+          "point": {
+            "x": 1576.8667381208384,
+            "y": 1861.6411595189734,
+            "arc": 1.0034276511075895
+          },
+          "tangent": {
+            "x": 0.2924214377259728,
+            "y": -0.9562895496439742
+          },
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "ranks": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            9,
+            12,
+            13,
+            16,
+            18,
+            26,
+            30,
+            31,
+            38,
+            46,
+            52,
+            57,
+            68,
+            81,
+            88,
+            91,
+            102,
+            103
+          ],
+          "individual": [
+            {
+              "radius": 0.75,
+              "observed": false,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 7,
+                  "behindCenter": true,
+                  "stopCenter": false,
+                  "forward": false,
+                  "forwardCenter": false
+                },
+                {
+                  "samples": 2,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                }
+              ],
+              "forward": true,
+              "backToForward": false,
+              "backToForwardCenter": false
+            },
+            {
+              "radius": 1.5,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 57,
+                  "behindCenter": true,
+                  "stopCenter": true,
+                  "forward": true,
+                  "forwardCenter": true
+                },
+                {
+                  "samples": 18,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                }
+              ],
+              "forward": true,
+              "backToForward": true,
+              "backToForwardCenter": true
+            }
+          ],
+          "both": {
+            "components": [
+              {
+                "samples": 7,
+                "behindCenter": true,
+                "stopCenter": false,
+                "forward": false,
+                "forwardCenter": false
+              },
+              {
+                "samples": 2,
+                "behindCenter": false,
+                "stopCenter": false,
+                "forward": true,
+                "forwardCenter": false
+              }
+            ],
+            "forward": true,
+            "backToForward": false,
+            "backToForwardCenter": false
+          }
+        },
+        {
+          "point": {
+            "x": 1493.706361782388,
+            "y": 1877.123084151989,
+            "arc": 6.6812632596866885
+          },
+          "tangent": {
+            "x": -0.7765843630522858,
+            "y": -0.6300132753066998
+          },
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "ranks": [
+            2,
+            5,
+            7,
+            11,
+            15,
+            19
+          ],
+          "individual": [
+            {
+              "radius": 0.75,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 11,
+                  "behindCenter": true,
+                  "stopCenter": false,
+                  "forward": false,
+                  "forwardCenter": false
+                },
+                {
+                  "samples": 6,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                }
+              ],
+              "forward": true,
+              "backToForward": false,
+              "backToForwardCenter": false
+            },
+            {
+              "radius": 1.5,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 51,
+                  "behindCenter": true,
+                  "stopCenter": true,
+                  "forward": true,
+                  "forwardCenter": true
+                },
+                {
+                  "samples": 56,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                }
+              ],
+              "forward": true,
+              "backToForward": true,
+              "backToForwardCenter": true
+            }
+          ],
+          "both": {
+            "components": [
+              {
+                "samples": 11,
+                "behindCenter": true,
+                "stopCenter": false,
+                "forward": false,
+                "forwardCenter": false
+              },
+              {
+                "samples": 6,
+                "behindCenter": false,
+                "stopCenter": false,
+                "forward": true,
+                "forwardCenter": false
+              }
+            ],
+            "forward": true,
+            "backToForward": false,
+            "backToForwardCenter": false
+          }
+        },
+        {
+          "point": {
+            "x": 1679.527211740327,
+            "y": 1911.5405922662915,
+            "arc": 7.065380431139765
+          },
+          "tangent": {
+            "x": -0.022252770226940995,
+            "y": -0.9997523764499022
+          },
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "ranks": [
+            47,
+            54,
+            60,
+            70,
+            83,
+            95,
+            107
+          ],
+          "individual": [
+            {
+              "radius": 0.75,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 33,
+                  "behindCenter": true,
+                  "stopCenter": true,
+                  "forward": true,
+                  "forwardCenter": true
+                },
+                {
+                  "samples": 2,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                }
+              ],
+              "forward": true,
+              "backToForward": true,
+              "backToForwardCenter": true
+            },
+            {
+              "radius": 1.5,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 118,
+                  "behindCenter": true,
+                  "stopCenter": true,
+                  "forward": true,
+                  "forwardCenter": true
+                }
+              ],
+              "forward": true,
+              "backToForward": true,
+              "backToForwardCenter": true
+            }
+          ],
+          "both": {
+            "components": [
+              {
+                "samples": 33,
+                "behindCenter": true,
+                "stopCenter": true,
+                "forward": true,
+                "forwardCenter": true
+              },
+              {
+                "samples": 2,
+                "behindCenter": false,
+                "stopCenter": false,
+                "forward": true,
+                "forwardCenter": false
+              }
+            ],
+            "forward": true,
+            "backToForward": true,
+            "backToForwardCenter": true
+          }
+        },
+        {
+          "point": {
+            "x": 1647.2718407510063,
+            "y": 1948.742016522911,
+            "arc": 1.5712011786720816
+          },
+          "tangent": {
+            "x": -0.39556101493742113,
+            "y": -0.9184397005038911
+          },
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "ranks": [
+            121
+          ],
+          "individual": [
+            {
+              "radius": 0.75,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 11,
+                  "behindCenter": true,
+                  "stopCenter": false,
+                  "forward": false,
+                  "forwardCenter": false
+                },
+                {
+                  "samples": 35,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": true
+                }
+              ],
+              "forward": true,
+              "backToForward": false,
+              "backToForwardCenter": false
+            },
+            {
+              "radius": 1.5,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 135,
+                  "behindCenter": true,
+                  "stopCenter": true,
+                  "forward": true,
+                  "forwardCenter": true
+                }
+              ],
+              "forward": true,
+              "backToForward": true,
+              "backToForwardCenter": true
+            }
+          ],
+          "both": {
+            "components": [
+              {
+                "samples": 11,
+                "behindCenter": true,
+                "stopCenter": false,
+                "forward": false,
+                "forwardCenter": false
+              },
+              {
+                "samples": 35,
+                "behindCenter": false,
+                "stopCenter": false,
+                "forward": true,
+                "forwardCenter": true
+              }
+            ],
+            "forward": true,
+            "backToForward": false,
+            "backToForwardCenter": false
+          }
+        }
+      ]
+    },
+    "webkit": {
+      "left": [],
+      "right": [
+        {
+          "point": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "ranks": [
+            2,
+            3,
+            6,
+            8,
+            11,
+            16,
+            24,
+            26,
+            30,
+            35,
+            36,
+            40,
+            41,
+            49,
+            51,
+            58,
+            60,
+            69,
+            72,
+            80,
+            82,
+            90,
+            103,
+            119,
+            120
+          ],
+          "individual": [
+            {
+              "radius": 0.75,
+              "observed": false,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 7,
+                  "behindCenter": true,
+                  "stopCenter": false,
+                  "forward": false,
+                  "forwardCenter": false
+                },
+                {
+                  "samples": 5,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                }
+              ],
+              "forward": true,
+              "backToForward": false,
+              "backToForwardCenter": false
+            },
+            {
+              "radius": 1.5,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 51,
+                  "behindCenter": true,
+                  "stopCenter": true,
+                  "forward": true,
+                  "forwardCenter": true
+                },
+                {
+                  "samples": 36,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                }
+              ],
+              "forward": true,
+              "backToForward": true,
+              "backToForwardCenter": true
+            }
+          ],
+          "both": {
+            "components": [
+              {
+                "samples": 7,
+                "behindCenter": true,
+                "stopCenter": false,
+                "forward": false,
+                "forwardCenter": false
+              },
+              {
+                "samples": 5,
+                "behindCenter": false,
+                "stopCenter": false,
+                "forward": true,
+                "forwardCenter": false
+              }
+            ],
+            "forward": true,
+            "backToForward": false,
+            "backToForwardCenter": false
+          }
+        },
+        {
+          "point": {
+            "x": 1493.666759124767,
+            "y": 1877.0177276952943,
+            "arc": 4.071658305725553
+          },
+          "tangent": {
+            "x": -0.7609885034360674,
+            "y": -0.6487653640863811
+          },
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "ranks": [
+            4,
+            9,
+            12,
+            18,
+            22,
+            25,
+            31
+          ],
+          "individual": [
+            {
+              "radius": 0.75,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 12,
+                  "behindCenter": true,
+                  "stopCenter": false,
+                  "forward": false,
+                  "forwardCenter": false
+                },
+                {
+                  "samples": 2,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                },
+                {
+                  "samples": 3,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                },
+                {
+                  "samples": 2,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                }
+              ],
+              "forward": true,
+              "backToForward": false,
+              "backToForwardCenter": false
+            },
+            {
+              "radius": 1.5,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 51,
+                  "behindCenter": true,
+                  "stopCenter": true,
+                  "forward": true,
+                  "forwardCenter": true
+                },
+                {
+                  "samples": 62,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                }
+              ],
+              "forward": true,
+              "backToForward": true,
+              "backToForwardCenter": true
+            }
+          ],
+          "both": {
+            "components": [
+              {
+                "samples": 12,
+                "behindCenter": true,
+                "stopCenter": false,
+                "forward": false,
+                "forwardCenter": false
+              },
+              {
+                "samples": 2,
+                "behindCenter": false,
+                "stopCenter": false,
+                "forward": true,
+                "forwardCenter": false
+              },
+              {
+                "samples": 3,
+                "behindCenter": false,
+                "stopCenter": false,
+                "forward": true,
+                "forwardCenter": false
+              },
+              {
+                "samples": 2,
+                "behindCenter": false,
+                "stopCenter": false,
+                "forward": true,
+                "forwardCenter": false
+              }
+            ],
+            "forward": true,
+            "backToForward": false,
+            "backToForwardCenter": false
+          }
+        },
+        {
+          "point": {
+            "x": 1586.0266434422244,
+            "y": 1866.4998053073125,
+            "arc": 1.0083146465107178
+          },
+          "tangent": {
+            "x": -0.09243478826326444,
+            "y": -0.9957187403673416
+          },
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "ranks": [
+            7
+          ],
+          "individual": [
+            {
+              "radius": 0.75,
+              "observed": false,
+              "recordedForward": false,
+              "components": [
+                {
+                  "samples": 9,
+                  "behindCenter": true,
+                  "stopCenter": false,
+                  "forward": false,
+                  "forwardCenter": false
+                }
+              ],
+              "forward": false,
+              "backToForward": false,
+              "backToForwardCenter": false
+            },
+            {
+              "radius": 1.5,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 101,
+                  "behindCenter": true,
+                  "stopCenter": true,
+                  "forward": true,
+                  "forwardCenter": true
+                }
+              ],
+              "forward": true,
+              "backToForward": true,
+              "backToForwardCenter": true
+            }
+          ],
+          "both": {
+            "components": [
+              {
+                "samples": 9,
+                "behindCenter": true,
+                "stopCenter": false,
+                "forward": false,
+                "forwardCenter": false
+              }
+            ],
+            "forward": false,
+            "backToForward": false,
+            "backToForwardCenter": false
+          }
+        },
+        {
+          "point": {
+            "x": 1679.391046131203,
+            "y": 1911.305308242401,
+            "arc": 5.1409243986958
+          },
+          "tangent": {
+            "x": -0.10099041239634084,
+            "y": -0.9948873989572976
+          },
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "ranks": [
+            59,
+            71,
+            81,
+            91,
+            105,
+            122
+          ],
+          "individual": [
+            {
+              "radius": 0.75,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 31,
+                  "behindCenter": true,
+                  "stopCenter": true,
+                  "forward": true,
+                  "forwardCenter": true
+                },
+                {
+                  "samples": 3,
+                  "behindCenter": false,
+                  "stopCenter": false,
+                  "forward": true,
+                  "forwardCenter": false
+                }
+              ],
+              "forward": true,
+              "backToForward": true,
+              "backToForwardCenter": true
+            },
+            {
+              "radius": 1.5,
+              "observed": true,
+              "recordedForward": true,
+              "components": [
+                {
+                  "samples": 109,
+                  "behindCenter": true,
+                  "stopCenter": true,
+                  "forward": true,
+                  "forwardCenter": true
+                }
+              ],
+              "forward": true,
+              "backToForward": true,
+              "backToForwardCenter": true
+            }
+          ],
+          "both": {
+            "components": [
+              {
+                "samples": 31,
+                "behindCenter": true,
+                "stopCenter": true,
+                "forward": true,
+                "forwardCenter": true
+              },
+              {
+                "samples": 3,
+                "behindCenter": false,
+                "stopCenter": false,
+                "forward": true,
+                "forwardCenter": false
+              }
+            ],
+            "forward": true,
+            "backToForward": true,
+            "backToForwardCenter": true
+          }
+        }
+      ]
+    }
+  },
+  "meaning": "Exact position and tangent deduplication within each engine. Four-neighbor grid connectivity is diagnostic and does not establish strand identity."
+}
