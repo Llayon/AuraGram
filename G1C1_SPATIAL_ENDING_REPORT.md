@@ -34,6 +34,14 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-21: source-only packet for independent development annotation
+
+Prepared six existing development originals for an independent source-only pass. The selection includes 14297936, 11383300, 10598787, 4672290, 29117992 and 14818485. They all have ready FaceMesh in both engines in the frozen census. This is a review shortlist. None is promoted to a qualified positive or hard case by inclusion. Roles and evaluated eyes are blank so the reviewer can record what is visible, including a deficit.
+
+The local packet `tests/visual/out/lash-development-review-01.zip` contains only six untouched JPEGs, six empty annotation templates, source attributions and instructions for native pixel coordinates, directions, uncertainty and exclusions. Source bytes match the frozen census and acquisition records. The builder refuses a validation source and preserves existing archives. Verified all 14 member names and contents, including empty label arrays. The archive is 22,869,587 bytes with SHA256 `ffe11a961f62f5153b449f61fc9dddd7fb5b518aca9aa12fb16737eb37642d67`. It stays in the ignored output directory. Only the builder, selection and instructions are tracked.
+
+Rebuild with `python scripts/package-lash-development-review.py tests/visual/lash-development-review-selection.json tests/visual/out/NEW-review.zip`. The independent annotation pass is still outstanding. The existing preliminary labels and detector results are excluded from the packet, and the held-out group stays closed. The latest complete unit result remains 323 passes. **LENGTH HOLD.**
+
 ### 2026-11-21: local evaluation of frozen cohort evidence
 
 Added `node tests/visual/lash-spatial-evaluate.mjs config.json NEW-output.json`. The config names `sources`, `annotations`, `sourceDirectory`, `freeze` and `runs`. Paths are relative to the config directory. Source and annotation manifests use the existing qualification format. The freeze carries `sourcesSHA256` and `annotationsSHA256`, plus `candidate` and `baseline` objects with `file` and `sha256` for their frozen artifacts. The tool checks qualified photo and annotation bytes and the frozen artifacts before reading evaluation runs.
