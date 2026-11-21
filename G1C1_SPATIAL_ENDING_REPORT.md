@@ -34,6 +34,14 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-22: native-scale source review and browser provenance correction
+
+Ranked the existing development pool by the larger of the two FaceMesh upper-lid polyline lengths in original pixels. This is a triage proxy. It gives no guarantee of a short lash path or eligible mask coverage. The 41 development originals have 28 pairs with ready FaceMesh, 12 pairs with no face and one Chromium-ready / WebKit-no-face pair. Inspected the 12 most compact eyes up to 400 px at native resolution. Source 2507723 remains the only one in that shortlist with five previously frozen provisional tips, and zero of those regions were fully covered across all required Length masks. The other eyes show closed or downcast lids, occlusion, defocus, dense dark bands or bright interlaced structures. Added zero qualified eyes. No final images were opened.
+
+Two archived files in WebKit-named directories for supplements07/08 declare Chromium internally. The original archive digests confirm the mismatch was already present in the historical artifacts. Re-ran explicit WebKit FaceMesh on all five development originals. The new logs confirm the same three no-face and two ready outcomes. They supersede the earlier evidence for WebKit provenance in those two batches. The frozen annotations and historic archive remain intact. The native audit and mask-scope runners now reject geometry from the wrong engine even when its directory name matches. Fresh native output for 2507723 reproduces the previous result in both engines after excluding timing.
+
+The full per-eye ranking and source-only decisions are in `tests/visual/lash-development-scale-review-summary.json`. The two corrected screening logs and their hashes are in `followup-development-scale-review-20261122.zip`. Both runners rejected the copied Chromium metadata in the WebKit position in live tests. Complete unit suite: 328 PASS. Independent qualification and accepted recognition remain incomplete. **LENGTH HOLD.**
+
 ### 2026-11-22: comparison across four development sources
 
 Repeated the stop measurement on development sources 14297936 and 11383300 and on the 29117992 hair-overlap control. Compared them with the earlier 2507723 run. Each run used its stored, browser-specific FaceMesh and the existing shared 36 native px limit. Repeat records match exactly after omitting timing. For all eight source/engine pairs, omitting the new stop evidence and timing also reproduces the respective historical native run. The comparison counts exact observed starts separately from seed records and groups exact rejected step geometries within each eye and engine.
@@ -276,6 +284,8 @@ Added8 mechanism tests for retry counting, per-engine refusal, conflicting obser
 Packaged all29 raw metadata logs, initial/refined/repeated census outputs, implementation/config/test/package snapshots and full unit log via --screening-census: `followup-20261118-05.{zip,json}`,39 verified members,329241 bytes. No original image or user-root file is included; original pixels were not read during this census. This narrows the acquisition requirement without opening final images or treating browser readiness as recognition success.
 
 ### 2026-11-18: supplements07/08 source-only screening and frozen ambiguity controls
+
+Provenance correction (2026-11-22). The original WebKit-named logs report Chromium internally. Use the corrected explicit WebKit runs above to verify the five per-engine outcomes.
 
 Reviewed official Pexels source pages and the license, then acquired5 previously unused originals:28354416,4356958,4995558,30390002 and20669039. Previously used2817080 was excluded before downloading. All5 remain development-only. Actual FaceMesh independently reports no_face on28354416,4356958 and30390002 in both engines; no manual geometry, favorable orientation retry or Chromium-to-WebKit geometry substitution was used. The raw30390002 portrait is strongly rotated, but this is only a visual observation, not a proven cause of FaceMesh failure.
 

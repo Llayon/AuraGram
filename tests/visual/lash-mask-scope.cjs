@@ -23,7 +23,8 @@ async function main(){
  const screenRecord=screenPair?.[engine.name()];
  const screenFile=screenRecord?.file??path.join(screenDir.replace('{engine}',engine.name()),'screening.json');
  const screenBytes=fs.readFileSync(screenFile),screen=JSON.parse(screenBytes);
- if(screenPair&&(!screenRecord||hash(screenBytes)!==screenRecord.sha256||screen.engine!==engine.name()))throw Error('Screening provenance differs');
+ if(screen.engine!==engine.name())throw Error('Screening engine mismatch: '+screenFile);
+ if(screenPair&&(!screenRecord||hash(screenBytes)!==screenRecord.sha256))throw Error('Screening provenance differs');
  const r=screen.results.find(r=>r.file===labels.file);if(!r||r.sha256!==frozen.sourceSHA256)throw Error('Source geometry identity differs');
  if(r.status!=='ready'){
  fs.writeFileSync(path.join(out,engine.name()+'.json'),JSON.stringify({engine:engine.name(),status:r.status,reason:'No actual FaceMesh; no geometry substitution',screenSHA256:hash(fs.readFileSync(screenFile))},null,2)+'\n',{flag:'wx'});console.log(engine.name(),r.status);continue;}

@@ -57,8 +57,10 @@ async function main(){
  const url=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Server timeout')),15000);server.once('error',reject);server.stdout.on('data',b=>{const m=String(b).match(/http:\/\/127\.0\.0\.1:\d+/);if(m){clearTimeout(timer);resolve(m[0]);}});});
  for(const engine of [chromium,webkit]){
  const screenPath=path.join(input.screeningDirectory.replace('{engine}',engine.name()),'screening.json');
- const screened=JSON.parse(fs.readFileSync(screenPath)).results.find(r=>r.file===labels.file);
- if(screened.status!=='ready'||screened.sha256!==hash(source)||screened.split!=='development')throw Error('Ineligible geometry');
+ const screenBytes=fs.readFileSync(screenPath),screen=JSON.parse(screenBytes);
+ if(screen.engine!==engine.name())throw Error('Screening engine mismatch: '+screenPath);
+ const screened=screen.results.find(r=>r.file===labels.file);
+ if(screened?.status!=='ready'||screened.sha256!==hash(source)||screened.split!=='development')throw Error('Ineligible geometry');
  const browser=await engine.launch();try{
  const page=await browser.newPage();await page.route('https://**/*',r=>r.abort());
  await page.route('**/__native_real__',r=>r.fulfill({body:'<!doctype html>',contentType:'text/html'}));await page.goto(url+'/__native_real__');
@@ -94,7 +96,7 @@ async function main(){
  return results;
  },{data:'data:image/jpeg;base64,'+source.toString('base64'),eyes:screened.eyes,W:screened.width,H:screened.height,initializeCell,multiscale,distalBodyStart,geometricCenterBound,measuredDenseAxis,sharedArcProximal,compareDistalBands,recordProximalStop});
  const stats={};for(const [side,r]of Object.entries(run)){const records=r.results||[];stats[side]={seeds:r.automaticSeeds?.length||0,statusCounts:{},reasons:{},coarseConnected:records.filter(r=>r.coarseProximalConnection).length,proximalConnected:records.filter(r=>r.proximalConnection).length,accepted:records.filter(r=>r.endpointConfirmed).length,baselineTips:r.baselineTips?.length||0,baselineIdentical:r.baselineIdentical??null,analysisMs:r.analysisMs};for(const record of records){stats[side].statusCounts[record.status]=(stats[side].statusCounts[record.status]||0)+1;for(const reason of record.reasons)stats[side].reasons[reason]=(stats[side].reasons[reason]||0)+1;}}
- fs.writeFileSync(path.join(output,engine.name()+'.json'),JSON.stringify({engine:engine.name(),geometryPath:screenPath,geometrySHA256:hash(fs.readFileSync(screenPath)),sourceSHA256:hash(source),stats,run},null,2)+'\n',{flag:'wx'});
+ fs.writeFileSync(path.join(output,engine.name()+'.json'),JSON.stringify({engine:engine.name(),geometryPath:screenPath,geometrySHA256:hash(screenBytes),sourceSHA256:hash(source),stats,run},null,2)+'\n',{flag:'wx'});
  console.log(engine.name(),JSON.stringify(stats));
  }finally{await browser.close();}
  }
