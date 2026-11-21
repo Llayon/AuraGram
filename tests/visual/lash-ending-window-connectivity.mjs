@@ -32,3 +32,33 @@ export function inspectWindowConnectivity(rows) {
     backToForward:components.some(c=>c.behindCenter&&c.stopCenter&&c.forward),
     backToForwardCenter:components.some(c=>c.behindCenter&&c.stopCenter&&c.forwardCenter)};
 }
+
+export function intersectWindowSupport(narrow, wide) {
+  if (!Array.isArray(narrow) || !Array.isArray(wide) || narrow.length !== wide.length || !narrow.length) return null;
+  const paired = [];
+  for (let i=0;i<narrow.length;i++) {
+    const a=narrow[i], b=wide[i];
+    if (a.ahead!==b.ahead || !Array.isArray(a.samples) || !Array.isArray(b.samples) || a.samples.length!==b.samples.length) return null;
+    const samples=[];
+    for (let j=0;j<a.samples.length;j++) {
+      const x=a.samples[j], y=b.samples[j];
+      if (x.offset!==y.offset || x.unavailable || y.unavailable || typeof x.supported!=='boolean' || typeof y.supported!=='boolean') return null;
+      samples.push({...x,supported:x.supported && y.supported});
+    }
+    paired.push({ahead:a.ahead,samples});
+  }
+  return paired;
+}
+
+/** Experimental restriction on a continuation claim. Other outcomes are retained. */
+export function requireConnectedContinuation(ending) {
+  if (ending.status !== 'continuing') return ending;
+  const [narrow,wide] = ending.profiles ?? [];
+  const paired = intersectWindowSupport(narrow?.rows,wide?.rows);
+  if (!paired || paired.length!==25 || paired.some((row,i)=>row.ahead!==-2+i*.25 || row.samples.length!==25 ||
+      row.samples.some((sample,j)=>sample.offset!==-3+j*.25))) {
+    return {...ending,status:'censored',reasons:['unavailable-paired-continuation-grid']};
+  }
+  if (inspectWindowConnectivity(paired).backToForwardCenter) return ending;
+  return {...ending,status:'ambiguous',reasons:['unconfirmed-connected-continuation']};
+}

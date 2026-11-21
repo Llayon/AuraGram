@@ -10,15 +10,17 @@ async function within(promise,ms,phase){
 async function main(){
  const [inputDir,sourceFile,out]=process.argv.slice(2);if(!out||fs.existsSync(out))throw Error('Supply saved run, original and NEW output');
  const resolvedEdges=process.argv.includes('--resolved-edges');
+ const connectedContinuation=process.argv.includes('--connected-continuation');
  const engineIndex=process.argv.indexOf('--engine'),onlyEngine=engineIndex<0?null:process.argv[engineIndex+1];
  if(engineIndex>=0&&!['chromium','webkit'].includes(onlyEngine))throw Error('Supply --engine chromium|webkit');
  const source=fs.readFileSync(sourceFile),oldProtocol=JSON.parse(fs.readFileSync(path.join(inputDir,'protocol.json')));
  if(hash(source)!==oldProtocol.sourceSHA256)throw Error('Source changed');
  const modules=['tests/visual/lash-native-path.mjs','tests/visual/lash-native-cell.mjs','tests/visual/lash-subpixel-probe.mjs','tests/visual/lash-subpixel-center.mjs','tests/visual/lash-native-shaft.mjs','tests/visual/lash-spatial-ending.mjs','tests/visual/lash-side-closure.mjs','tests/visual/lash-endpoint-profile.mjs','src/retouch/lashAnalysis.mjs','src/retouch/eyeGeometry.mjs','src/vision/faceGeometry.mjs'];
  if(resolvedEdges)modules.push('tests/visual/lash-resolved-edges.mjs','tests/visual/lash-resolved-edges-protocol.json');
+ if(connectedContinuation)modules.push('tests/visual/lash-ending-window-connectivity.mjs');
  const moduleSHA256=Object.fromEntries(modules.map(f=>[f,hash(fs.readFileSync(f))]));
  for(const f of modules)if(oldProtocol.moduleSHA256[f]&&oldProtocol.moduleSHA256[f]!==moduleSHA256[f])throw Error('Old path dependency changed '+f);
- fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'protocol.json'),JSON.stringify({kind:'saved-path-spatial-ending-audit',resolvedEdges,edgeGridPolicy:'One raw-intensity grid; radius copies are not independent width evidence',inputDir,sourceSHA256:hash(source),moduleSHA256,runnerSHA256:hash(fs.readFileSync(__filename)),annotationInput:false,grantsTerminal:false,window:{along:[-2,4],across:[-3,3],step:.25},wholeROI:'End kernels conservatively require +/-8px of available source ROI',maxLocalArcNative:36},null,2)+'\n',{flag:'wx'});
+ fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'protocol.json'),JSON.stringify({kind:'saved-path-spatial-ending-audit',resolvedEdges,connectedContinuation,edgeGridPolicy:'One raw-intensity grid; radius copies are not independent width evidence',inputDir,sourceSHA256:hash(source),moduleSHA256,runnerSHA256:hash(fs.readFileSync(__filename)),annotationInput:false,grantsTerminal:false,window:{along:[-2,4],across:[-3,3],step:.25},wholeROI:'End kernels conservatively require +/-8px of available source ROI',maxLocalArcNative:36},null,2)+'\n',{flag:'wx'});
  const server=spawn(process.execPath,['tests/static-server.cjs','0'],{windowsHide:true,stdio:['ignore','pipe','inherit']});
  try{
  const url=await new Promise((resolve,reject)=>{const t=setTimeout(()=>reject(Error('Server timeout')),15000);server.once('error',reject);server.stdout.on('data',b=>{const m=String(b).match(/http:\/\/127\.0\.0\.1:\d+/);if(m){clearTimeout(t);resolve(m[0]);}});});
@@ -34,9 +36,10 @@ async function main(){
    coarse:{connected:r.coarse.connected,broadSupport:r.coarse.broadSupport},correspondence:{status:r.correspondence.status},patch:r.patch,
    local:r.local&&{points:r.local.points,reason:r.local.reason,bootstrapFit:r.local.bootstrapFit,
     attempts:r.local.attempts.filter(a=>a.linkAccepted).map(a=>({linkAccepted:true,directionFit:a.directionFit}))}}))}]));
- const results=await within(page.evaluate(async({data,saved,geometry,resolvedEdges})=>{
+ const results=await within(page.evaluate(async({data,saved,geometry,resolvedEdges,connectedContinuation})=>{
  const {createNativePatchReader}=await import('/tests/visual/lash-native-path.mjs');const {auditSpatialEnding}=await import('/tests/visual/lash-spatial-ending.mjs');
  const edgeOperator=resolvedEdges?await import('/tests/visual/lash-resolved-edges.mjs'):null;
+ const continuationPolicy=connectedContinuation?(await import('/tests/visual/lash-ending-window-connectivity.mjs')).requireConnectedContinuation:null;
  const image=new Image();image.src=data;await image.decode();const reader=createNativePatchReader(image),buffer=new Float32Array(256*256),results={};
  try{for(const side of ['left','right']){
  const input=saved.run[side],eye=geometry.eyes[side];
@@ -54,13 +57,14 @@ async function main(){
  const rect=r.patch,luma=buffer.subarray(0,rect.w*rect.h);reader.readPatch(rect,luma);
  const points=curve.points.map(p=>({...p,x:p.x-rect.x,y:p.y-rect.y})),tangent={x:fit.tx,y:fit.ty};
  const clipped=outside||curve.reason==='local-roi-boundary'||curve.reason.includes('crop-boundary');
- const ending=auditSpatialEnding(luma,rect.w,rect.h,points,tangent,{proximalConnection:r.proximalConnection,budgetExhausted:budget,roiClipped:clipped});
+ const measured=auditSpatialEnding(luma,rect.w,rect.h,points,tangent,{proximalConnection:r.proximalConnection,budgetExhausted:budget,roiClipped:clipped});
+ const ending=continuationPolicy?continuationPolicy(measured):measured;
  if(edgeOperator)ending.resolvedEdges=ending.profiles.length===2?edgeOperator.inspectResolvedTaper(ending.profiles[0].rows):{status:'censored',reason:'spatial-grid-unavailable',endpointConfirmed:false};
  if(ending.endpointConfirmed||ending.status==='terminal')throw Error('Unexpected terminal authorization');
  return{...base,...ending,patch:rect,coordinateSpace:'patch-local-source-pixels',localStop:curve.reason,lastSourcePoint:last,measuredTangent:tangent,localAcceptedArc:last.arc};
  });
  }}finally{reader.dispose();}return results;
- },{data:'data:image/jpeg;base64,'+source.toString('base64'),saved:{run},geometry,resolvedEdges}),45000,engine.name()+' endpoint measurement');
+ },{data:'data:image/jpeg;base64,'+source.toString('base64'),saved:{run},geometry,resolvedEdges,connectedContinuation}),45000,engine.name()+' endpoint measurement');
  const stats={};for(const [side,records]of Object.entries(results)){const statuses={},reasons={},closure={};for(const r of records){statuses[r.status]=(statuses[r.status]||0)+1;for(const reason of r.reasons)reasons[reason]=(reasons[reason]||0)+1;for(const p of r.profiles||[]){const k=p.sideClosure.status;closure[k]=(closure[k]||0)+1;}}stats[side]={records:records.length,statuses,reasons,closureProfileCounts:closure,accepted:records.filter(r=>r.endpointConfirmed).length};}
  fs.writeFileSync(path.join(out,engine.name()+'.json'),JSON.stringify({engine:engine.name(),inputSHA256:hash(fs.readFileSync(inputFile)),stats,results},null,2)+'\n',{flag:'wx'});console.log(engine.name(),JSON.stringify(stats));
  }catch(error){fs.writeFileSync(path.join(out,engine.name()+'-failure.json'),JSON.stringify({engine:engine.name(),reason:error.message},null,2)+'\n',{flag:'wx'});throw error;}

@@ -1,0 +1,79 @@
+{
+  "source": "29117992",
+  "inputs": {
+    "bounded-ending-29117992-chromium-02/chromium.json": "4545a958726a6d4342f0537877095b0dc4a58af8e2ae4303bd21cd420ed2b9eb",
+    "connected-ending-29117992-chromium-01/chromium.json": "4545a958726a6d4342f0537877095b0dc4a58af8e2ae4303bd21cd420ed2b9eb",
+    "connected-ending-29117992-chromium-01/protocol.json": "b685757058b31528510769cde5e3e86ff3559defcee0553cfb939b294e2e6502",
+    "bounded-ending-29117992-webkit-02/webkit.json": "016684bc425d5699d1bb7c5b436699eb9d9735d72f731a29fb38116ec6b66a79",
+    "connected-ending-29117992-webkit-01/webkit.json": "b388eb39510b3757fe42aa04c5ff4b095ddb4da8d18e68d6d43085f7e5311af0",
+    "connected-ending-29117992-webkit-01/protocol.json": "b685757058b31528510769cde5e3e86ff3559defcee0553cfb939b294e2e6502",
+    "connected-ending-29117992-webkit-control-02/protocol.json": "0493176e1bda93e2f4a3333c61739469aa5eaf3f8d817ed5af8afbcbe91a5b62",
+    "connected-ending-29117992-webkit-control-02/webkit.json": "b388eb39510b3757fe42aa04c5ff4b095ddb4da8d18e68d6d43085f7e5311af0"
+  },
+  "engines": {
+    "chromium": {
+      "left": {
+        "records": 150,
+        "priorContinuing": 0,
+        "connectedContinuing": 0,
+        "changes": [],
+        "changedSinceArchive": []
+      },
+      "right": {
+        "records": 87,
+        "priorContinuing": 0,
+        "connectedContinuing": 0,
+        "changes": [],
+        "changedSinceArchive": []
+      }
+    },
+    "webkit": {
+      "left": {
+        "records": 354,
+        "priorContinuing": 0,
+        "connectedContinuing": 0,
+        "changes": [],
+        "changedSinceArchive": [
+          {
+            "rank": 68,
+            "before": "ambiguous",
+            "after": "censored"
+          },
+          {
+            "rank": 97,
+            "before": "ambiguous",
+            "after": "censored"
+          },
+          {
+            "rank": 100,
+            "before": "ambiguous",
+            "after": "censored"
+          },
+          {
+            "rank": 115,
+            "before": "ambiguous",
+            "after": "censored"
+          },
+          {
+            "rank": 118,
+            "before": "ambiguous",
+            "after": "censored"
+          },
+          {
+            "rank": 125,
+            "before": "ambiguous",
+            "after": "censored"
+          }
+        ]
+      },
+      "right": {
+        "records": 209,
+        "priorContinuing": 0,
+        "connectedContinuing": 0,
+        "changes": [],
+        "changedSinceArchive": []
+      }
+    }
+  },
+  "meaning": "Observed grid connectivity restricts continuation claims. Existing refusals survive and no terminal is evaluated."
+}

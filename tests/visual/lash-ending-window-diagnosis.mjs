@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import {inspectWindowConnectivity} from './lash-ending-window-connectivity.mjs';
+import {inspectWindowConnectivity,intersectWindowSupport} from './lash-ending-window-connectivity.mjs';
 
 const [joinFile,endingPrefix,output] = process.argv.slice(2);
 if (!output || fs.existsSync(output)) throw Error('Supply joined summary, ending prefix and NEW output');
@@ -38,13 +38,8 @@ for (const engine of ['chromium','webkit']) {
     }
     results[engine][side] = [...groups.values()].map(({record,ranks}) => {
       const [narrow,wide] = record.profiles;
-      const paired = narrow.rows.map((row,i) => {
-        assert.equal(row.ahead,wide.rows[i].ahead);
-        return {ahead:row.ahead,samples:row.samples.map((sample,j) => {
-          assert.equal(sample.offset,wide.rows[i].samples[j].offset);
-          return {...sample,supported:sample.supported && wide.rows[i].samples[j].supported};
-        })};
-      });
+      const paired = intersectWindowSupport(narrow.rows,wide.rows);
+      assert.ok(paired);
       return {point:record.lastSourcePoint,tangent:record.measuredTangent,status:record.status,reasons:record.reasons,ranks,
         individual:record.profiles.map(profile => ({radius:profile.radius,observed:profile.observed,recordedForward:profile.forward,
           ...inspectWindowConnectivity(profile.rows)})),both:inspectWindowConnectivity(paired)};
