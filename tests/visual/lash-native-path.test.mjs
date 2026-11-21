@@ -1,10 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {auditNativeSeeds,projectAutomaticSeeds} from './lash-native-path.mjs';
+import {auditNativeSeeds,projectAutomaticSeeds,writeNativePatchLuma} from './lash-native-path.mjs';
 const w=96,h=96;
 const seed={rank:0,index:4848,x:48,y:50,tangent:{x:0,y:-1},provenance:'automatic-strong-ridge-before-tip-filter'};
 const image=f=>Float32Array.from({length:w*h},(_,i)=>f(i%w,Math.floor(i/w)));
 const line=image(x=>.8-.5*Math.exp(-((x-48)**2)/.35));
+
+test('opaque patch conversion preserves black and rejects incomplete pixels before writing',()=>{
+ const target=new Float32Array([.5,.5]);
+ writeNativePatchLuma(Uint8ClampedArray.of(0,0,0,255,255,255,255,255),target,{requireOpaque:true});
+ assert.deepEqual([...target],[0,1]);
+ for(const alpha of [0,254]){
+  assert.throws(()=>writeNativePatchLuma(Uint8ClampedArray.of(255,0,0,255,0,0,0,alpha),target,{requireOpaque:true}),
+   {code:'unavailable-native-pixels'});
+  assert.deepEqual([...target],[0,1]);
+ }
+});
 function run(pixels,seeds=[seed],extra={}){
  const buffers=[];let reads=0;
  const a=auditNativeSeeds({width:w,height:h,seeds,roi:{x:0,y:0,w,h},lid:[{x:8,y:70},{x:88,y:70}],lower:[{x:8,y:84},{x:88,y:84}],readPatch:(r,target)=>{reads++;buffers.push(target.buffer);for(let y=0;y<r.h;y++)for(let x=0;x<r.w;x++)target[y*r.w+x]=pixels[(y+r.y)*w+x+r.x];},...extra});

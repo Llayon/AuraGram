@@ -65,7 +65,7 @@ async function main(){
  const {lashRoiSize}=await import('/src/retouch/eyeGeometry.mjs');
  const {auditNativeSeeds,projectAutomaticSeeds,createNativePatchReader}=await import('/tests/visual/lash-native-path.mjs');
  const image=new Image();image.src=data;await image.decode();if(image.width!==W||image.height!==H)throw Error('Source dimensions');
- const reader=createNativePatchReader(image),results={};
+ const reader=createNativePatchReader(image,{requireOpaque:true}),results={};
  const simplify=c=>({reason:c.reason,points:c.points,bootstrap:c.bootstrap,bootstrapLinks:c.bootstrapLinks,bootstrapFit:c.bootstrapFit,initializationCorrectionDegrees:c.initializationCorrectionDegrees,originalSeed:c.originalSeed,refinedSeed:c.refinedSeed,attempts:c.attempts.map(a=>({reason:a.reason,accepted:a.accepted,shift:a.shift,variance:a.variance,center:a.center,tangent:a.tangent,directionFit:a.directionFit,linkAccepted:a.linkAccepted,denseSupported:a.dense?.every(s=>s.supported)}))});
  try{for(const side of ['left','right']){
  const eye=eyes[side],roi=eye.roi,size=lashRoiSize(roi,W,H,{maxSide:224});

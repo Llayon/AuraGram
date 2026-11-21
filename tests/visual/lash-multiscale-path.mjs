@@ -32,7 +32,7 @@ export function auditMultiscaleSeeds({coarse,mapping,width,height,readPatch,dist
   const rect={x,y,w:right-x+1,h:bottom-y+1};
   if(rect.w<1||rect.h<1){finish({status:'censored',reason:'local-roi-boundary'});continue;}
   work.fill(NaN);const luma=work.subarray(0,rect.w*rect.h);
-  try{readPatch(rect,luma);}catch(e){finish({status:'censored',reason:'source-read-failed'});continue;}
+  try{readPatch(rect,luma);}catch(e){finish({status:'censored',reason:e.code==='unavailable-native-pixels'?e.code:'source-read-failed'});continue;}
   if(luma.some(v=>!Number.isFinite(v)||v<0||v>1)){finish({status:'censored',reason:'unavailable-native-pixels'});continue;}
   let axis=localStart.tangent;
   // ROI operator measures an outward axis; preserve it under native scaling.

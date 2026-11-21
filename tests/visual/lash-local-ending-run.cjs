@@ -40,7 +40,7 @@ async function main(){
  const {createNativePatchReader}=await import('/tests/visual/lash-native-path.mjs');const {auditSpatialEnding}=await import('/tests/visual/lash-spatial-ending.mjs');
  const edgeOperator=resolvedEdges?await import('/tests/visual/lash-resolved-edges.mjs'):null;
  const continuationPolicy=connectedContinuation?(await import('/tests/visual/lash-ending-window-connectivity.mjs')).requireConnectedContinuation:null;
- const image=new Image();image.src=data;await image.decode();const reader=createNativePatchReader(image),buffer=new Float32Array(256*256),results={};
+ const image=new Image();image.src=data;await image.decode();const reader=createNativePatchReader(image,{requireOpaque:true}),buffer=new Float32Array(256*256),results={};
  try{for(const side of ['left','right']){
  const input=saved.run[side],eye=geometry.eyes[side];
  if(!Array.isArray(input.results)){
@@ -54,7 +54,12 @@ async function main(){
  const curve=r.local,last=curve.points.at(-1),fit=curve.attempts.filter(a=>a.linkAccepted).at(-1)?.directionFit??curve.bootstrapFit;
  if(!last||!fit?.available)return{...base,status:'ambiguous',reasons:['no-observed-native-path-or-tangent'],localStop:curve.reason};
  const budget=['arc-budget','step-budget'].includes(curve.reason),outside=[-8,8].some(dx=>[-8,8].some(dy=>last.x+dx<roi.x||last.y+dy<roi.y||last.x+dx>roi.x+roi.w-1||last.y+dy>roi.y+roi.h-1));
- const rect=r.patch,luma=buffer.subarray(0,rect.w*rect.h);reader.readPatch(rect,luma);
+ const rect=r.patch,luma=buffer.subarray(0,rect.w*rect.h);
+ try{reader.readPatch(rect,luma);}catch(error){
+  if(error.code!=='unavailable-native-pixels')throw error;
+  return {...base,status:'censored',reasons:[error.code],profiles:[],patch:rect,localStop:curve.reason,
+   lastSourcePoint:last,measuredTangent:{x:fit.tx,y:fit.ty},localAcceptedArc:last.arc};
+ }
  const points=curve.points.map(p=>({...p,x:p.x-rect.x,y:p.y-rect.y})),tangent={x:fit.tx,y:fit.ty};
  const clipped=outside||curve.reason==='local-roi-boundary'||curve.reason.includes('crop-boundary');
  const measured=auditSpatialEnding(luma,rect.w,rect.h,points,tangent,{proximalConnection:r.proximalConnection,budgetExhausted:budget,roiClipped:clipped});

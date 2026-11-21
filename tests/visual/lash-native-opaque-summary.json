@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-21",
+  "archive": "followup-opaque-native-20261121.zip",
+  "archiveSHA256": "35639e572555e1639f7b79ee0a8ba34623bc0f25682e545a9217fd936e48810d",
+  "members": {
+    "opaque-native-mechanisms-01.json": "c58f36eb273465b4e514247ed7eee634af2c4cc595f1f4fa3ee99c57bf6588dc",
+    "opaque-native-29117992-01/protocol.json": "4dc937a12fea597db205be29f59e23fd116ad6e63cfa37d19b0827cf1bc09eba",
+    "opaque-native-29117992-01/chromium.json": "197cf2b050230c6326da06ee45027052e8f75b48702939fd3c1d712cc31f2e0b",
+    "opaque-native-29117992-01/webkit.json": "1769dbf89346793f4b222f414612a606254127422c5a60b4311a8cc49be649c8",
+    "opaque-ending-29117992-chromium-01/protocol.json": "d2fedd54e260fd09c915280e241f9897b65bfa676d6228e39f9d9da8f80f126e",
+    "opaque-ending-29117992-chromium-01/chromium.json": "0d694699401a61344ec3a839f5d00139cdb9af46c5c8897ab6e6335c937f5296",
+    "opaque-ending-29117992-webkit-01/protocol.json": "d2fedd54e260fd09c915280e241f9897b65bfa676d6228e39f9d9da8f80f126e",
+    "opaque-ending-29117992-webkit-01/webkit.json": "1e670b7ed9db43b1102ef65a2ccd5f8cd6a50e476f49591221baf2611fd95cb9"
+  },
+  "inputs": {
+    "tests/visual/out/distal-band-bounded-29117992-audit-01/chromium.json": "a32985a6c912a12cf5c47f2d0170c9587f776edca674dd9ebdad82cdd2c543eb",
+    "tests/visual/out/opaque-native-29117992-01/chromium.json": "197cf2b050230c6326da06ee45027052e8f75b48702939fd3c1d712cc31f2e0b",
+    "tests/visual/out/bounded-ending-29117992-chromium-02/chromium.json": "4545a958726a6d4342f0537877095b0dc4a58af8e2ae4303bd21cd420ed2b9eb",
+    "tests/visual/out/opaque-ending-29117992-chromium-01/chromium.json": "0d694699401a61344ec3a839f5d00139cdb9af46c5c8897ab6e6335c937f5296",
+    "tests/visual/out/distal-band-bounded-29117992-audit-01/webkit.json": "b0bab9f77526e54601a81bd18e7e54af9e72391131338cf0da76dacede578391",
+    "tests/visual/out/opaque-native-29117992-01/webkit.json": "1769dbf89346793f4b222f414612a606254127422c5a60b4311a8cc49be649c8",
+    "tests/visual/out/connected-ending-29117992-webkit-control-02/webkit.json": "b388eb39510b3757fe42aa04c5ff4b095ddb4da8d18e68d6d43085f7e5311af0",
+    "tests/visual/out/opaque-ending-29117992-webkit-01/webkit.json": "1e670b7ed9db43b1102ef65a2ccd5f8cd6a50e476f49591221baf2611fd95cb9",
+    "tests/visual/out/bounded-ending-29117992-webkit-02/webkit.json": "016684bc425d5699d1bb7c5b436699eb9d9735d72f731a29fb38116ec6b66a79",
+    "tests/visual/out/opaque-native-mechanisms-01.json": "c58f36eb273465b4e514247ed7eee634af2c4cc595f1f4fa3ee99c57bf6588dc"
+  },
+  "syntheticBothEnginesPassed": true,
+  "realRuns": {
+    "chromium": {
+      "nativeMatchesExcludingTiming": true,
+      "endingMatchesRecentControl": true,
+      "refusedReads": 0
+    },
+    "webkit": {
+      "nativeMatchesExcludingTiming": true,
+      "endingMatchesRecentControl": true,
+      "refusedReads": 0
+    }
+  },
+  "archivedZeroWindows": [
+    {
+      "rank": 68,
+      "oldExactlyZero": 625,
+      "newLumaMin": 0.06218041012230424,
+      "newLumaMax": 0.27635872978310877,
+      "patch": {
+        "x": 2493,
+        "y": 1965,
+        "w": 256,
+        "h": 246
+      },
+      "center": {
+        "x": 2621.310789343379,
+        "y": 2083.0402170142816,
+        "arc": 0.5143490224376829
+      }
+    },
+    {
+      "rank": 97,
+      "oldExactlyZero": 625,
+      "newLumaMin": 0.041796031654166704,
+      "newLumaMax": 0.2485889898119905,
+      "patch": {
+        "x": 2443,
+        "y": 1990,
+        "w": 256,
+        "h": 256
+      },
+      "center": {
+        "x": 2570.398546945653,
+        "y": 2117.747925686962,
+        "arc": 1.053203413686553
+      }
+    },
+    {
+      "rank": 100,
+      "oldExactlyZero": 625,
+      "newLumaMin": 0.041796031654166704,
+      "newLumaMax": 0.2485889898119905,
+      "patch": {
+        "x": 2443,
+        "y": 1990,
+        "w": 256,
+        "h": 256
+      },
+      "center": {
+        "x": 2570.398546945653,
+        "y": 2117.747925686962,
+        "arc": 1.053203413686553
+      }
+    },
+    {
+      "rank": 115,
+      "oldExactlyZero": 625,
+      "newLumaMin": 0.041796031654166704,
+      "newLumaMax": 0.2485889898119905,
+      "patch": {
+        "x": 2443,
+        "y": 1990,
+        "w": 256,
+        "h": 256
+      },
+      "center": {
+        "x": 2570.398546945653,
+        "y": 2117.747925686962,
+        "arc": 1.053203413686553
+      }
+    },
+    {
+      "rank": 118,
+      "oldExactlyZero": 625,
+      "newLumaMin": 0.041796031654166704,
+      "newLumaMax": 0.2485889898119905,
+      "patch": {
+        "x": 2443,
+        "y": 1990,
+        "w": 256,
+        "h": 256
+      },
+      "center": {
+        "x": 2570.398546945653,
+        "y": 2117.747925686962,
+        "arc": 1.053203413686553
+      }
+    },
+    {
+      "rank": 125,
+      "oldExactlyZero": 625,
+      "newLumaMin": 0.041796031654166704,
+      "newLumaMax": 0.2485889898119905,
+      "patch": {
+        "x": 2443,
+        "y": 1990,
+        "w": 256,
+        "h": 256
+      },
+      "center": {
+        "x": 2570.398546945653,
+        "y": 2117.747925686962,
+        "arc": 1.053203413686553
+      }
+    }
+  ],
+  "limitations": "Old windows did not store alpha. The original all-zero read cause remains unverified."
+}

@@ -11,13 +11,19 @@ async function main(){
  const {auditNativeSeeds,createNativePatchReader}=await import('/tests/visual/lash-native-path.mjs');
  const c=document.createElement('canvas');c.width=c.height=96;const cx=c.getContext('2d'),rgba=cx.createImageData(96,96);
  for(let y=0;y<96;y++)for(let x=0;x<96;x++){const i=(y*96+x)*4,v=Math.round(255*(.8-.5*Math.exp(-((x-48)**2)/.35)));rgba.data.set([v,v,v,255],i);}cx.putImageData(rgba,0,0);
- const reader=createNativePatchReader(c);try{
+ const reader=createNativePatchReader(c,{requireOpaque:true});try{
  const a=auditNativeSeeds({...reader,seeds:[{rank:0,index:4848,x:48,y:50,tangent:{x:0,y:-1},provenance:'automatic-strong-ridge-before-tip-filter'}],roi:{x:0,y:0,w:96,h:96},lid:[{x:8,y:70},{x:88,y:70}],lower:[{x:8,y:84},{x:88,y:84}]});
  const r=a.results[0];if(!r.proximalConnection||r.status!=='censored'||r.endpointConfirmed)throw Error('Native mechanism invariant');
  const luma=Float32Array.from({length:96*96},(_,i)=>{const x=i%96-48,y=48-Math.floor(i/96);return .8-.5*Math.exp(-(x*x+Math.max(0,y)**2)/.35);});
  const cap=auditSpatialEnding(luma,96,96,[{x:48,y:52},{x:48,y:50},{x:48,y:48}],{x:0,y:-1},{proximalConnection:true});
  if(cap.endpointConfirmed||!cap.profiles.every(p=>p.sideClosure.status==='closure-candidate'))throw Error('Unsafe closure promotion or missing cap');
- return{capClosures:cap.profiles.map(p=>p.sideClosure),capStatus:cap.status,status:r.status,proximalConnection:r.proximalConnection,path:r.path,tangent:r.tangent,reasons:r.reasons,workingBufferBytes:a.workingBufferBytes};
+ cx.fillStyle='#000';cx.fillRect(0,0,1,1);cx.clearRect(1,0,1,1);
+ const check=new Float32Array([.5]);reader.readPatch({x:0,y:0,w:1,h:1},check);
+ if(check[0]!==0)throw Error('Opaque black patch should be measurable');
+ let rejected;
+ try{reader.readPatch({x:1,y:0,w:1,h:1},check);}catch(error){rejected=error.code;}
+ if(rejected!=='unavailable-native-pixels')throw Error('Transparent read was not rejected');
+ return{capClosures:cap.profiles.map(p=>p.sideClosure),capStatus:cap.status,status:r.status,proximalConnection:r.proximalConnection,path:r.path,tangent:r.tangent,reasons:r.reasons,workingBufferBytes:a.workingBufferBytes,opaqueBlack:check[0],transparentRead:rejected};
  }finally{reader.dispose();c.width=c.height=0;}
  });results.push({engine:engine.name(),result});
  }finally{await b.close();}}

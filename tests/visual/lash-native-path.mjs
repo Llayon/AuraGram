@@ -32,7 +32,7 @@ export function auditNativeSeeds({width,height,readPatch,seeds,roi,lid,lower,ini
   const x0=Math.max(0,Math.floor(seed.x)-128),y0=Math.max(0,Math.floor(seed.y)-128);
   const rect={x:x0,y:y0,w:Math.min(256,width-x0),h:Math.min(256,height-y0)};
   if(rect.w<1||rect.h<1){finish(censored('source-boundary'));continue;}
-  work.fill(NaN);const luma=work.subarray(0,rect.w*rect.h);try{readPatch(rect,luma);}catch(e){finish({...censored('source-read-failed'),readError:String(e.message||e)});continue;}
+  work.fill(NaN);const luma=work.subarray(0,rect.w*rect.h);try{readPatch(rect,luma);}catch(e){finish({...censored(e.code==='unavailable-native-pixels'?e.code:'source-read-failed'),readError:String(e.message||e)});continue;}
   if(luma.some(v=>!Number.isFinite(v)||v<0||v>1)){finish(censored('unavailable-native-pixels'));continue;}
   let local={x:seed.x-rect.x,y:seed.y-rect.y};
   const frame=lidFrame(lid,lower,seed.x,seed.y);
@@ -104,10 +104,19 @@ export function projectAutomaticSeeds(audit,{x,y,scaleX,scaleY}) {
   nativeCell:{w:scaleX,h:scaleY},tangent:{x:s.tangent.x*scaleX,y:s.tangent.y*scaleY}}));
 }
 
-/** Browser source-pixel adapter. One canvas and the caller-owned luma buffer.
- * getImageData creates a temporary RGBA view per patch; no full-image readback.
- */
-export function createNativePatchReader(source) {
+export function writeNativePatchLuma(bytes,target,{requireOpaque=false}={}) {
+ if(bytes.length!==target.length*4)throw Error('Native patch byte count differs');
+ if(requireOpaque)for(let i=3;i<bytes.length;i+=4){
+  if(bytes[i]===255)continue;
+  const error=Error('Opaque source patch returned a non-opaque pixel');
+  error.code='unavailable-native-pixels';
+  throw error;
+ }
+ for(let i=0;i<target.length;i++)target[i]=(.2126*bytes[4*i]+.7152*bytes[4*i+1]+.0722*bytes[4*i+2])/255;
+}
+
+/** Browser source-pixel adapter. One canvas and the caller-owned luma buffer. */
+export function createNativePatchReader(source,{requireOpaque=false}={}) {
  const width=source.naturalWidth||source.width,height=source.naturalHeight||source.height;
  const canvas=document.createElement('canvas');canvas.width=canvas.height=256;
  const ctx=canvas.getContext('2d',{willReadFrequently:true});let closed=false;
@@ -117,6 +126,6 @@ export function createNativePatchReader(source) {
   if(![rect.x,rect.y,rect.w,rect.h].every(Number.isInteger)||rect.x<0||rect.y<0||rect.w<1||rect.h<1||rect.w>256||rect.h>256||rect.x+rect.w>width||rect.y+rect.h>height||target.length!==rect.w*rect.h)throw Error('Invalid native patch');
   ctx.clearRect(0,0,256,256);ctx.drawImage(source,rect.x,rect.y,rect.w,rect.h,0,0,rect.w,rect.h);
   const bytes=ctx.getImageData(0,0,rect.w,rect.h).data;
-  for(let i=0;i<target.length;i++)target[i]=(.2126*bytes[4*i]+.7152*bytes[4*i+1]+.0722*bytes[4*i+2])/255;
+  writeNativePatchLuma(bytes,target,{requireOpaque});
  },dispose(){closed=true;canvas.width=canvas.height=0;}};
 }
