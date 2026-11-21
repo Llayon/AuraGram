@@ -34,6 +34,14 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-22: fixed native tracing on the shorter-scale development frame
+
+Ran the existing fixed multiscale detector on 2507723 using frozen labels, true per-engine FaceMesh and the same 36 px shared budget. This is a development diagnostic because the mask check found zero universally covered provisional regions. The labels are checked before opening the original. They never seed browser tracing or supply its direction. Ran the regular exact-cell and distal-body options, the paired band diagnostic and the shared-arc reverse probe, then the existing resolved-edge and connected-continuation audits. Native repeats match exactly after excluding timing. Baseline detector outputs remain equal with and without the seed ledger.
+
+The right eye yields 21 observed Chromium records at three distinct starts and 29 WebKit records at two. The reverse probes all run within the budget. The longest measured proximal arcs are 19.78 px in Chromium and 15.30 px in WebKit. Chromium stops all 21 on unsupported dense links. WebKit stops 19 at the local center search boundary and 10 on unsupported dense links. Neither engine reaches the signed lid gate. The smaller native scale moves the failure beyond the budget bound to actual tracing evidence for this photo. The excluded left eye is retained as diagnostic data.
+
+No observed right-eye path point enters a provisional tip region. A measured stop window overlaps region right-5 in both engines. No window yields resolved taper or a terminal. Chromium right has 14 ambiguous and seven censored observed stops. WebKit right has 19 ambiguous and ten continuing. Counts include repeated automatic seed records and are not distinct lashes or benchmark recall. The input protocol, per-engine main and repeat native runs and stop-window measurements are preserved in the 12-entry `followup-native-short-2507723-20261122.zip`. Fourteen focused tests pass. The latest complete suite remains 328 passes. The final group stays closed. **LENGTH HOLD.**
+
 ### 2026-11-22: shorter projected lashes on a further development source
 
 Acquired five new original source leads from the official Pexels pages. Four pass FaceMesh in both engines. Source 13871690 returns no_face in both, and no replacement geometry is used. Contralateral defocus, shadows, occlusion or bright lash structures limit the other screened examples. No lash detector or final image was opened for these acquisitions.

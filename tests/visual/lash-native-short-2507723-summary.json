@@ -1,0 +1,1113 @@
+{
+  "date": "2026-11-22",
+  "source": "pexels-2507723.jpg",
+  "inputs": {
+    "tests/visual/out/native-short-2507723-main-01/protocol.json": "70e0f91a7861cafb921ee80f1ed6f63fbdf34bbf838b4a0355d84ae2e570e884",
+    "tests/visual/out/native-short-2507723-repeat-01/protocol.json": "70e0f91a7861cafb921ee80f1ed6f63fbdf34bbf838b4a0355d84ae2e570e884",
+    "tests/visual/lash-spatial-labels-2507723.json": "59b8991577d87cd270f37b8474c44ec8bee1b5b6f012c9320edf05825ab2da2f",
+    "tests/visual/lash-spatial-labels-2507723.freeze.json": "ce40d17fb8cf5f4f8331bbcb168c1b2ce367e86a851e78a78edf78b318f86d93",
+    "tests/visual/out/native-short-2507723-main-01/chromium.json": "ef19e4ae3e67d8a7691ffcf1416ab7948c525121a0c44e87becac26f2cefe3fd",
+    "tests/visual/out/native-short-2507723-repeat-01/chromium.json": "f50a86f591dc7627c8fdaf60ba35ee81c12c21a76069cae21dc927c40128239f",
+    "tests/visual/out/ending-short-2507723-chromium-01/protocol.json": "da7371201c808ec76247d34123497fa11fd90a9c9a7f5be631ed0f9a6bb991a4",
+    "tests/visual/out/ending-short-2507723-chromium-01/chromium.json": "3ca66f03e3f25497c44ed56529e8d62e80ac18f8464f7e7e3fbcfdd51086047a",
+    "tests/visual/out/native-short-2507723-main-01/webkit.json": "eaabc7456a07cfdf3de9e2d1598dca9fba87a4500a5d21b4dec6e3096b12af30",
+    "tests/visual/out/native-short-2507723-repeat-01/webkit.json": "903a2c62696fb91ff58034935d9f49725e640cddc5da43e333f1dd939c4c0a09",
+    "tests/visual/out/ending-short-2507723-webkit-01/protocol.json": "da7371201c808ec76247d34123497fa11fd90a9c9a7f5be631ed0f9a6bb991a4",
+    "tests/visual/out/ending-short-2507723-webkit-01/webkit.json": "f130b233af668b2ca293bf83efd94bbd38737fc3a1a329f1ba4fe91191372309"
+  },
+  "repeatEqualExcludingTiming": true,
+  "engines": {
+    "chromium": {
+      "left": {
+        "seeds": 16,
+        "observed": 2,
+        "distinctDistalStarts": 1,
+        "longestProximalArc": 4.566844176814311,
+        "proximalReasons": {
+          "unconfirmed-dense-link": 2
+        },
+        "endingStatuses": {
+          "ambiguous": 2
+        },
+        "taperEvidence": 0,
+        "pointRegions": [],
+        "windowRegions": [],
+        "witnesses": [
+          {
+            "rank": 9,
+            "distalStart": {
+              "x": 1199.2807223953996,
+              "y": 1150.6811734764246,
+              "arc": 0
+            },
+            "distalArc": 1.5015752421606252,
+            "proximalArc": 4.566844176814311,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 13,
+            "distalStart": {
+              "x": 1199.2807223953996,
+              "y": 1150.6811734764246,
+              "arc": 0
+            },
+            "distalArc": 1.5015752421606252,
+            "proximalArc": 4.566844176814311,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          }
+        ]
+      },
+      "right": {
+        "seeds": 29,
+        "observed": 21,
+        "distinctDistalStarts": 3,
+        "longestProximalArc": 19.780301987069862,
+        "proximalReasons": {
+          "unconfirmed-dense-link": 21
+        },
+        "endingStatuses": {
+          "ambiguous": 14,
+          "censored": 7
+        },
+        "taperEvidence": 0,
+        "pointRegions": [],
+        "windowRegions": [
+          "right-5"
+        ],
+        "witnesses": [
+          {
+            "rank": 5,
+            "distalStart": {
+              "x": 838.4831035498696,
+              "y": 1034.2403421179254,
+              "arc": 0
+            },
+            "distalArc": 1.6011612471070993,
+            "proximalArc": 15.184347865381204,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 7,
+            "distalStart": {
+              "x": 838.4831035498696,
+              "y": 1034.2403421179254,
+              "arc": 0
+            },
+            "distalArc": 1.6011612471070993,
+            "proximalArc": 15.184347865381204,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 8,
+            "distalStart": {
+              "x": 838.4831035498696,
+              "y": 1034.2403421179254,
+              "arc": 0
+            },
+            "distalArc": 1.6011612471070993,
+            "proximalArc": 15.184347865381204,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 10,
+            "distalStart": {
+              "x": 838.4831035498696,
+              "y": 1034.2403421179254,
+              "arc": 0
+            },
+            "distalArc": 1.6011612471070993,
+            "proximalArc": 15.184347865381204,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 12,
+            "distalStart": {
+              "x": 838.4831035498696,
+              "y": 1034.2403421179254,
+              "arc": 0
+            },
+            "distalArc": 1.6011612471070993,
+            "proximalArc": 15.184347865381204,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 13,
+            "distalStart": {
+              "x": 838.4831035498696,
+              "y": 1034.2403421179254,
+              "arc": 0
+            },
+            "distalArc": 1.6011612471070993,
+            "proximalArc": 15.184347865381204,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 14,
+            "distalStart": {
+              "x": 812.571277534352,
+              "y": 1032.8276946755698,
+              "arc": 0
+            },
+            "distalArc": 1.518940899454745,
+            "proximalArc": 19.780301987069862,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "censored",
+            "endingStatus": "censored",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 15,
+            "distalStart": {
+              "x": 815.921936283558,
+              "y": 1031.3598400672186,
+              "arc": 0
+            },
+            "distalArc": 7.099176594885411,
+            "proximalArc": 9.239047400506163,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "ambiguous",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 16,
+            "distalStart": {
+              "x": 838.4831035498696,
+              "y": 1034.2403421179254,
+              "arc": 0
+            },
+            "distalArc": 1.6011612471070993,
+            "proximalArc": 15.184347865381204,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 17,
+            "distalStart": {
+              "x": 812.571277534352,
+              "y": 1032.8276946755698,
+              "arc": 0
+            },
+            "distalArc": 1.518940899454745,
+            "proximalArc": 19.780301987069862,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "censored",
+            "endingStatus": "censored",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 18,
+            "distalStart": {
+              "x": 815.921936283558,
+              "y": 1031.3598400672186,
+              "arc": 0
+            },
+            "distalArc": 7.099176594885411,
+            "proximalArc": 9.239047400506163,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "ambiguous",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 19,
+            "distalStart": {
+              "x": 838.4831035498696,
+              "y": 1034.2403421179254,
+              "arc": 0
+            },
+            "distalArc": 1.6011612471070993,
+            "proximalArc": 15.184347865381204,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 20,
+            "distalStart": {
+              "x": 812.571277534352,
+              "y": 1032.8276946755698,
+              "arc": 0
+            },
+            "distalArc": 1.518940899454745,
+            "proximalArc": 19.780301987069862,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "censored",
+            "endingStatus": "censored",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 21,
+            "distalStart": {
+              "x": 815.921936283558,
+              "y": 1031.3598400672186,
+              "arc": 0
+            },
+            "distalArc": 7.099176594885411,
+            "proximalArc": 9.239047400506163,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "ambiguous",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 22,
+            "distalStart": {
+              "x": 838.4831035498696,
+              "y": 1034.2403421179254,
+              "arc": 0
+            },
+            "distalArc": 1.6011612471070993,
+            "proximalArc": 15.184347865381204,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 23,
+            "distalStart": {
+              "x": 812.571277534352,
+              "y": 1032.8276946755698,
+              "arc": 0
+            },
+            "distalArc": 1.518940899454745,
+            "proximalArc": 19.780301987069862,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "censored",
+            "endingStatus": "censored",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 24,
+            "distalStart": {
+              "x": 815.921936283558,
+              "y": 1031.3598400672186,
+              "arc": 0
+            },
+            "distalArc": 7.099176594885411,
+            "proximalArc": 9.239047400506163,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "ambiguous",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 25,
+            "distalStart": {
+              "x": 812.571277534352,
+              "y": 1032.8276946755698,
+              "arc": 0
+            },
+            "distalArc": 1.518940899454745,
+            "proximalArc": 19.780301987069862,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "censored",
+            "endingStatus": "censored",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 26,
+            "distalStart": {
+              "x": 812.571277534352,
+              "y": 1032.8276946755698,
+              "arc": 0
+            },
+            "distalArc": 1.518940899454745,
+            "proximalArc": 19.780301987069862,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "censored",
+            "endingStatus": "censored",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 27,
+            "distalStart": {
+              "x": 812.571277534352,
+              "y": 1032.8276946755698,
+              "arc": 0
+            },
+            "distalArc": 1.518940899454745,
+            "proximalArc": 19.780301987069862,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "censored",
+            "endingStatus": "censored",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 28,
+            "distalStart": {
+              "x": 838.4831035498696,
+              "y": 1034.2403421179254,
+              "arc": 0
+            },
+            "distalArc": 1.6011612471070993,
+            "proximalArc": 15.184347865381204,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          }
+        ]
+      }
+    },
+    "webkit": {
+      "left": {
+        "seeds": 14,
+        "observed": 4,
+        "distinctDistalStarts": 2,
+        "longestProximalArc": 5.094744275638768,
+        "proximalReasons": {
+          "unconfirmed-dense-link": 4
+        },
+        "endingStatuses": {
+          "ambiguous": 4
+        },
+        "taperEvidence": 0,
+        "pointRegions": [],
+        "windowRegions": [],
+        "witnesses": [
+          {
+            "rank": 0,
+            "distalStart": {
+              "x": 1224.0245579905145,
+              "y": 1143.463883547413,
+              "arc": 0
+            },
+            "distalArc": 0,
+            "proximalArc": 4.1094095275296185,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "unavailable",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 1,
+            "distalStart": {
+              "x": 1224.0245579905145,
+              "y": 1143.463883547413,
+              "arc": 0
+            },
+            "distalArc": 0,
+            "proximalArc": 4.1094095275296185,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "unavailable",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 7,
+            "distalStart": {
+              "x": 1199.4399974376845,
+              "y": 1150.3690687510057,
+              "arc": 0
+            },
+            "distalArc": 1.0010228567088055,
+            "proximalArc": 5.094744275638768,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 11,
+            "distalStart": {
+              "x": 1199.4399974376845,
+              "y": 1150.3690687510057,
+              "arc": 0
+            },
+            "distalArc": 1.0010228567088055,
+            "proximalArc": 5.094744275638768,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          }
+        ]
+      },
+      "right": {
+        "seeds": 33,
+        "observed": 29,
+        "distinctDistalStarts": 2,
+        "longestProximalArc": 15.300835272959889,
+        "proximalReasons": {
+          "search-boundary": 19,
+          "unconfirmed-dense-link": 10
+        },
+        "endingStatuses": {
+          "ambiguous": 19,
+          "continuing": 10
+        },
+        "taperEvidence": 0,
+        "pointRegions": [],
+        "windowRegions": [
+          "right-5"
+        ],
+        "witnesses": [
+          {
+            "rank": 0,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 1,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 3,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 6,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 7,
+            "distalStart": {
+              "x": 839.1694143085265,
+              "y": 1034.4065823375124,
+              "arc": 0
+            },
+            "distalArc": 0.6409944519557742,
+            "proximalArc": 15.300835272959889,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "continuing",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 8,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 9,
+            "distalStart": {
+              "x": 839.1694143085265,
+              "y": 1034.4065823375124,
+              "arc": 0
+            },
+            "distalArc": 0.6409944519557742,
+            "proximalArc": 15.300835272959889,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "continuing",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 10,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 11,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 12,
+            "distalStart": {
+              "x": 839.1694143085265,
+              "y": 1034.4065823375124,
+              "arc": 0
+            },
+            "distalArc": 0.6409944519557742,
+            "proximalArc": 15.300835272959889,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "continuing",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 13,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 14,
+            "distalStart": {
+              "x": 839.1694143085265,
+              "y": 1034.4065823375124,
+              "arc": 0
+            },
+            "distalArc": 0.6409944519557742,
+            "proximalArc": 15.300835272959889,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "continuing",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 15,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 16,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 17,
+            "distalStart": {
+              "x": 839.1694143085265,
+              "y": 1034.4065823375124,
+              "arc": 0
+            },
+            "distalArc": 0.6409944519557742,
+            "proximalArc": 15.300835272959889,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "continuing",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 18,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 19,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 20,
+            "distalStart": {
+              "x": 839.1694143085265,
+              "y": 1034.4065823375124,
+              "arc": 0
+            },
+            "distalArc": 0.6409944519557742,
+            "proximalArc": 15.300835272959889,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "continuing",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 21,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 22,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 23,
+            "distalStart": {
+              "x": 839.1694143085265,
+              "y": 1034.4065823375124,
+              "arc": 0
+            },
+            "distalArc": 0.6409944519557742,
+            "proximalArc": 15.300835272959889,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "continuing",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 24,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 25,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 26,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 27,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 28,
+            "distalStart": {
+              "x": 839.1694143085265,
+              "y": 1034.4065823375124,
+              "arc": 0
+            },
+            "distalArc": 0.6409944519557742,
+            "proximalArc": 15.300835272959889,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "continuing",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 29,
+            "distalStart": {
+              "x": 814.8295846630216,
+              "y": 1024.8115685775965,
+              "arc": 0
+            },
+            "distalArc": 1.5388528375706811,
+            "proximalArc": 6.060328015879172,
+            "proximalStatus": "censored",
+            "proximalReason": "search-boundary",
+            "band": "no-veto",
+            "endingStatus": "ambiguous",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": [
+              "right-5"
+            ]
+          },
+          {
+            "rank": 30,
+            "distalStart": {
+              "x": 839.1694143085265,
+              "y": 1034.4065823375124,
+              "arc": 0
+            },
+            "distalArc": 0.6409944519557742,
+            "proximalArc": 15.300835272959889,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "continuing",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          },
+          {
+            "rank": 31,
+            "distalStart": {
+              "x": 839.1694143085265,
+              "y": 1034.4065823375124,
+              "arc": 0
+            },
+            "distalArc": 0.6409944519557742,
+            "proximalArc": 15.300835272959889,
+            "proximalStatus": "ambiguous",
+            "proximalReason": "unconfirmed-dense-link",
+            "band": "no-veto",
+            "endingStatus": "continuing",
+            "taperStatus": "ambiguous",
+            "pointHits": [],
+            "windowHits": []
+          }
+        ]
+      }
+    }
+  },
+  "limitations": "Unqualified development frame. Repeated seeds and provisional region overlaps do not establish recall or terminal accuracy."
+}
