@@ -1,0 +1,9 @@
+# CI availability-fixture compatibility follow-up
+
+The original559-entry evidence packet, test source and final critic remain unchanged. The initial feature [build job](https://github.com/Llayon/AuraGram/actions/runs/43246135530/job/131279157071) failed187PASS/1FAIL because the newly added availability unit called `loadInputs()`. That replay utility checks raw live application bytes against Windows-authored snapshots. Linux checkout uses LF, while the authored `eyeGeometry.mjs` had128CRLF lines; canonical content is identical.
+
+The unit now reads the **same frozen real FaceMesh manifests and annotations**, verifying their packet/entry/label hashes directly. It does not compare live application checkout bytes to decide whether a photo previously had FaceMesh. Existing5ready/3no_face and ID assertions, plus every earlier unit, are byte-identical. No real-portrait browser test was replaced, skipped or weakened; no CV source normalization/fallback was introduced. Legacy `loadInputs()` and strict CV module/source replay checks remain unchanged.
+
+`attestation.json` binds the original and revised unit SHA, new reader SHA, identical assertion suffix, equal fixture identities/order, CRLF/LF proof and raw logs. The packet validator/replay adapter accepts only this exact declared test-source revision; every original raw hash is still checked. It never overwrites the revised test with the historical copy or permits arbitrary source drift.
+
+Windows `npm test`:188PASS. An isolated dependency fixture using exact LF Git blobs:7PASS (Node on Windows, not a physical Linux claim). The first isolated probe lacked a dependency; its failure is retained alongside the completed probe. New GitHub CI must be checked separately. Original Length F1 failures remain release blockers; no overall CI or naturalness PASS.

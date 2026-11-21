@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-18",
+  "license": "https://www.pexels.com/license/",
+  "licenseVerified": "2026-11-18",
+  "status": "source-leads-not-qualified",
+  "policy": "Source-only development screening before detector use; frontal views selected before any results. Metadata does not certify visible tips, makeup absence or identity independence. Viewed sources never enter final validation.",
+  "sources": [
+    {
+      "id": "28354416",
+      "file": "pexels-28354416.jpg",
+      "page": "https://www.pexels.com/photo/a-close-up-of-a-woman-with-freckles-28354416/",
+      "url": "https://images.pexels.com/photos/28354416/pexels-photo-28354416.jpeg?cs=srgb&fm=jpg",
+      "author": "B\u00fc\u015franur Ayd\u0131n",
+      "metadataStatus": "official-page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "4356958",
+      "file": "pexels-4356958.jpg",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-woman-s-face-4356958/",
+      "url": "https://images.pexels.com/photos/4356958/pexels-photo-4356958.jpeg?cs=srgb&fm=jpg",
+      "author": "Eliza Maria de Souza",
+      "metadataStatus": "official-page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "4995558",
+      "file": "pexels-4995558.jpg",
+      "page": "https://www.pexels.com/photo/woman-with-freckles-on-her-face-seriously-looking-at-the-camera-4995558/",
+      "url": "https://images.pexels.com/photos/4995558/pexels-photo-4995558.jpeg?cs=srgb&fm=jpg",
+      "author": "Hamid Tajik",
+      "metadataStatus": "official-page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    }
+  ]
+}

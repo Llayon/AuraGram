@@ -1,0 +1,2187 @@
+{
+  "meaning": "Image-only local centers/axes; no endpoint, same-fiber or naturalness approval. Every margin/window reported. Annotation audit is posthoc and never input to the estimator.",
+  "engines": {
+    "chromium": {
+      "cases": [
+        {
+          "id": "C104-right-old16",
+          "nativeRGBA_SHA256": "5ea2b0b9d0a5495c659a4fcf43487a8dbde2489aec8e6447a06ce6e0e07b9fc2",
+          "posthocAnnotationAudit": {
+            "angleDegrees": -70.70995378081128,
+            "interval": [
+              -85,
+              -50
+            ],
+            "fits": [
+              {
+                "margin": 1.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -64.0831713189956,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 1.5,
+                "window": 8,
+                "available": false,
+                "angleDegrees": null,
+                "withinAnnotatedInterval": null
+              },
+              {
+                "margin": 1.5,
+                "window": 12,
+                "available": false,
+                "angleDegrees": null,
+                "withinAnnotatedInterval": null
+              },
+              {
+                "margin": 2.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -63.80474336124883,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 8,
+                "available": false,
+                "angleDegrees": null,
+                "withinAnnotatedInterval": null
+              },
+              {
+                "margin": 2.5,
+                "window": 12,
+                "available": false,
+                "angleDegrees": null,
+                "withinAnnotatedInterval": null
+              }
+            ]
+          }
+        },
+        {
+          "id": "PI729R1",
+          "nativeRGBA_SHA256": "e55d627e28e60a78ef8f23d93a48f60d4bab5d5f925742fd8514bf9be51cd19d",
+          "posthocAnnotationAudit": {
+            "angleDegrees": -88.09084756700362,
+            "interval": [
+              -115,
+              -65
+            ],
+            "fits": [
+              {
+                "margin": 1.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -89.29605589272408,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 1.5,
+                "window": 8,
+                "available": true,
+                "angleDegrees": -86.72293497998794,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 1.5,
+                "window": 12,
+                "available": true,
+                "angleDegrees": -87.5106293871527,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -88.99248342087493,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 8,
+                "available": true,
+                "angleDegrees": -86.53225668148308,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 12,
+                "available": true,
+                "angleDegrees": -87.45611328368221,
+                "withinAnnotatedInterval": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "PI729R2",
+          "nativeRGBA_SHA256": "ea5eb38c6cd64ef3b1f224cb591ac96168635cbfd93b08519074d7b7069e8983",
+          "posthocAnnotationAudit": {
+            "angleDegrees": -59.03624346792648,
+            "interval": [
+              -85,
+              -35
+            ],
+            "fits": [
+              {
+                "margin": 1.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -59.28442887528308,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 1.5,
+                "window": 8,
+                "available": true,
+                "angleDegrees": -44.142479716156714,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 1.5,
+                "window": 12,
+                "available": true,
+                "angleDegrees": -47.800847466362626,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -59.1182343138429,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 8,
+                "available": true,
+                "angleDegrees": -44.22051767887305,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 12,
+                "available": true,
+                "angleDegrees": -49.752419521208765,
+                "withinAnnotatedInterval": true
+              }
+            ]
+          }
+        }
+      ],
+      "configs": [
+        {
+          "id": "C104-right-old16",
+          "margin": 1.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.4370659839383877,
+            "ty": -0.8994294445280124,
+            "angleDegrees": -64.0831713189956,
+            "center": {
+              "x": 126.95516314423016,
+              "y": 132.49391374344214
+            },
+            "coherence": 0.9998144283301278,
+            "maxOrthogonalResidual": 0.024733395154359916,
+            "rmsOrthogonalResidual": 0.017489343045407363,
+            "span": 4.447166343398383,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 12,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.17712471710086095,
+            "maxResponseOffsets1to2": 0.19489661484499674
+          }
+        },
+        {
+          "id": "C104-right-old16",
+          "margin": 1.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": false,
+            "reason": "incomplete-observed-centers"
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": false,
+              "reason": "search-boundary"
+            }
+          ],
+          "denseAvailable": false,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 0,
+          "denseUnsupported": 0,
+          "forward": null
+        },
+        {
+          "id": "C104-right-old16",
+          "margin": 1.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": false,
+            "reason": "incomplete-observed-centers"
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": false,
+              "reason": "search-boundary"
+            },
+            {
+              "distance": 10,
+              "accepted": false,
+              "reason": "search-boundary"
+            },
+            {
+              "distance": 12,
+              "accepted": false,
+              "reason": "weak-valley"
+            }
+          ],
+          "denseAvailable": false,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 0,
+          "denseUnsupported": 0,
+          "forward": null
+        },
+        {
+          "id": "C104-right-old16",
+          "margin": 2.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.4414315697066793,
+            "ty": -0.8972949176643636,
+            "angleDegrees": -63.80474336124883,
+            "center": {
+              "x": 126.96038484921961,
+              "y": 132.49391374344214
+            },
+            "coherence": 0.9996939573015335,
+            "maxOrthogonalResidual": 0.031838845693078495,
+            "rmsOrthogonalResidual": 0.022513880643938926,
+            "span": 4.457678033636885,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 12,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.17629429483625464,
+            "maxResponseOffsets1to2": 0.18649597104694
+          }
+        },
+        {
+          "id": "C104-right-old16",
+          "margin": 2.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": false,
+            "reason": "incomplete-observed-centers"
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": false,
+              "reason": "search-boundary"
+            }
+          ],
+          "denseAvailable": false,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 0,
+          "denseUnsupported": 0,
+          "forward": null
+        },
+        {
+          "id": "C104-right-old16",
+          "margin": 2.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": false,
+            "reason": "incomplete-observed-centers"
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": false,
+              "reason": "search-boundary"
+            },
+            {
+              "distance": 10,
+              "accepted": false,
+              "reason": "search-boundary"
+            },
+            {
+              "distance": 12,
+              "accepted": false,
+              "reason": "search-boundary"
+            }
+          ],
+          "denseAvailable": false,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 0,
+          "denseUnsupported": 0,
+          "forward": null
+        },
+        {
+          "id": "PI729R1",
+          "margin": 1.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.012285833326885785,
+            "ty": -0.9999245263015925,
+            "angleDegrees": -89.29605589272408,
+            "center": {
+              "x": 128.3602989651279,
+              "y": 131.91802552672732
+            },
+            "coherence": 0.8929892191711206,
+            "maxOrthogonalResidual": 0.549121101433658,
+            "rmsOrthogonalResidual": 0.3882889113404742,
+            "span": 4.000267779173361,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 12,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.012080889864118372,
+            "maxResponseOffsets1to2": 0.01022305159153257
+          }
+        },
+        {
+          "id": "PI729R1",
+          "margin": 1.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.05716439519949225,
+            "ty": -0.9983647789868573,
+            "angleDegrees": -86.72293497998794,
+            "center": {
+              "x": 128.2748730364474,
+              "y": 132.91802552672732
+            },
+            "coherence": 0.9535554038949654,
+            "maxOrthogonalResidual": 0.5763863898302426,
+            "rmsOrthogonalResidual": 0.34532940092036385,
+            "span": 5.995350997312178,
+            "count": 4
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 18,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.009339990947096782,
+            "maxResponseOffsets1to2": 0.009772024220630796
+          }
+        },
+        {
+          "id": "PI729R1",
+          "margin": 1.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.04343404538433574,
+            "ty": -0.9990562965626869,
+            "angleDegrees": -87.5106293871527,
+            "center": {
+              "x": 128.19403213987684,
+              "y": 134.91802552672732
+            },
+            "coherence": 0.9861596021524284,
+            "maxOrthogonalResidual": 0.5844520847008787,
+            "rmsOrthogonalResidual": 0.28539593862998847,
+            "span": 9.993105644237765,
+            "count": 6
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 10,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 12,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 30,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.010176259946590244,
+            "maxResponseOffsets1to2": 0.009897299449706465
+          }
+        },
+        {
+          "id": "PI729R1",
+          "margin": 2.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.01758357536021532,
+            "ty": -0.9998453969877301,
+            "angleDegrees": -88.99248342087493,
+            "center": {
+              "x": 128.36796159658198,
+              "y": 131.91802552672732
+            },
+            "coherence": 0.8953950720334121,
+            "maxOrthogonalResidual": 0.542606882870038,
+            "rmsOrthogonalResidual": 0.38368428085460926,
+            "span": 4.000550223382624,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 12,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.011756132437288042,
+            "maxResponseOffsets1to2": 0.010163186980683026
+          }
+        },
+        {
+          "id": "PI729R1",
+          "margin": 2.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.06048659467321878,
+            "ty": -0.9981690096696239,
+            "angleDegrees": -86.53225668148308,
+            "center": {
+              "x": 128.28038713009047,
+              "y": 132.91802552672732
+            },
+            "coherence": 0.9547844448708052,
+            "maxOrthogonalResidual": 0.5686246467381996,
+            "rmsOrthogonalResidual": 0.34068810709096153,
+            "span": 5.995799647176862,
+            "count": 4
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 18,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.009137910706888297,
+            "maxResponseOffsets1to2": 0.00974320064887814
+          }
+        },
+        {
+          "id": "PI729R1",
+          "margin": 2.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.04438461316072942,
+            "ty": -0.9990145174693771,
+            "angleDegrees": -87.45611328368221,
+            "center": {
+              "x": 128.19909584149764,
+              "y": 134.91802552672732
+            },
+            "coherence": 0.9864295995130952,
+            "maxOrthogonalResidual": 0.5777014735628938,
+            "rmsOrthogonalResidual": 0.2825910549302818,
+            "span": 9.993264517616357,
+            "count": 6
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 10,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 12,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 30,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.010118304679202939,
+            "maxResponseOffsets1to2": 0.009888293350222899
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 1.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.5107765788665621,
+            "ty": -0.8597134909266986,
+            "angleDegrees": -59.28442887528308,
+            "center": {
+              "x": 125.36450794902511,
+              "y": 130.57753127735342
+            },
+            "coherence": 0.8711453638311331,
+            "maxOrthogonalResidual": 0.6221360868361376,
+            "rmsOrthogonalResidual": 0.4408701667274294,
+            "span": 4.106291347815503,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 12,
+          "denseUnsupported": 1,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 1.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.7176101430956284,
+            "ty": -0.6964450319488765,
+            "angleDegrees": -44.142479716156714,
+            "center": {
+              "x": 124.52959706950469,
+              "y": 131.15769737022868
+            },
+            "coherence": 0.8649891794057063,
+            "maxOrthogonalResidual": 0.806468408504731,
+            "rmsOrthogonalResidual": 0.6017259933845694,
+            "span": 5.998035593400792,
+            "count": 4
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 18,
+          "denseUnsupported": 4,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 1.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.6717096319507032,
+            "ty": -0.7408145316775656,
+            "angleDegrees": -47.800847466362626,
+            "center": {
+              "x": 123.20129028819498,
+              "y": 132.65725858588996
+            },
+            "coherence": 0.9521645908533269,
+            "maxOrthogonalResidual": 0.8463452371762314,
+            "rmsOrthogonalResidual": 0.5352160163546615,
+            "span": 10.04874025965628,
+            "count": 6
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 10,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 12,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 30,
+          "denseUnsupported": 4,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 2.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.5132681479183914,
+            "ty": -0.8582282961615891,
+            "angleDegrees": -59.1182343138429,
+            "center": {
+              "x": 125.35489667229785,
+              "y": 130.56798433419428
+            },
+            "coherence": 0.8652755326432223,
+            "maxOrthogonalResidual": 0.6366239023469616,
+            "rmsOrthogonalResidual": 0.4511594696844823,
+            "span": 4.102908453727056,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 12,
+          "denseUnsupported": 2,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 2.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.7166609061326213,
+            "ty": -0.6974217845903368,
+            "angleDegrees": -44.22051767887305,
+            "center": {
+              "x": 124.52323039181621,
+              "y": 131.15137330822012
+            },
+            "coherence": 0.8653799737530269,
+            "maxOrthogonalResidual": 0.8177378893460523,
+            "rmsOrthogonalResidual": 0.6007781857786393,
+            "span": 5.997943824486566,
+            "count": 4
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 18,
+          "denseUnsupported": 5,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 2.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.6460917488194857,
+            "ty": -0.7632597540204635,
+            "angleDegrees": -49.752419521208765,
+            "center": {
+              "x": 123.24835756094762,
+              "y": 132.70401081146585
+            },
+            "coherence": 0.9410536731241139,
+            "maxOrthogonalResidual": 0.8815933839599783,
+            "rmsOrthogonalResidual": 0.5970599652946657,
+            "span": 10.108541799589398,
+            "count": 6
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 10,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 12,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 30,
+          "denseUnsupported": 5,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        }
+      ]
+    },
+    "webkit": {
+      "cases": [
+        {
+          "id": "C104-right-old16",
+          "nativeRGBA_SHA256": "5ea2b0b9d0a5495c659a4fcf43487a8dbde2489aec8e6447a06ce6e0e07b9fc2",
+          "posthocAnnotationAudit": {
+            "angleDegrees": -70.70995378081128,
+            "interval": [
+              -85,
+              -50
+            ],
+            "fits": [
+              {
+                "margin": 1.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -64.0831713189956,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 1.5,
+                "window": 8,
+                "available": false,
+                "angleDegrees": null,
+                "withinAnnotatedInterval": null
+              },
+              {
+                "margin": 1.5,
+                "window": 12,
+                "available": false,
+                "angleDegrees": null,
+                "withinAnnotatedInterval": null
+              },
+              {
+                "margin": 2.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -63.80474336124883,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 8,
+                "available": false,
+                "angleDegrees": null,
+                "withinAnnotatedInterval": null
+              },
+              {
+                "margin": 2.5,
+                "window": 12,
+                "available": false,
+                "angleDegrees": null,
+                "withinAnnotatedInterval": null
+              }
+            ]
+          }
+        },
+        {
+          "id": "PI729R1",
+          "nativeRGBA_SHA256": "e55d627e28e60a78ef8f23d93a48f60d4bab5d5f925742fd8514bf9be51cd19d",
+          "posthocAnnotationAudit": {
+            "angleDegrees": -88.09084756700362,
+            "interval": [
+              -115,
+              -65
+            ],
+            "fits": [
+              {
+                "margin": 1.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -89.29605589272408,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 1.5,
+                "window": 8,
+                "available": true,
+                "angleDegrees": -86.72293497998794,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 1.5,
+                "window": 12,
+                "available": true,
+                "angleDegrees": -87.5106293871527,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -88.99248342087493,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 8,
+                "available": true,
+                "angleDegrees": -86.53225668148308,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 12,
+                "available": true,
+                "angleDegrees": -87.45611328368221,
+                "withinAnnotatedInterval": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "PI729R2",
+          "nativeRGBA_SHA256": "ea5eb38c6cd64ef3b1f224cb591ac96168635cbfd93b08519074d7b7069e8983",
+          "posthocAnnotationAudit": {
+            "angleDegrees": -59.03624346792648,
+            "interval": [
+              -85,
+              -35
+            ],
+            "fits": [
+              {
+                "margin": 1.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -59.28442887528308,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 1.5,
+                "window": 8,
+                "available": true,
+                "angleDegrees": -44.142479716156714,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 1.5,
+                "window": 12,
+                "available": true,
+                "angleDegrees": -47.800847466362626,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 6,
+                "available": true,
+                "angleDegrees": -59.1182343138429,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 8,
+                "available": true,
+                "angleDegrees": -44.22051767887305,
+                "withinAnnotatedInterval": true
+              },
+              {
+                "margin": 2.5,
+                "window": 12,
+                "available": true,
+                "angleDegrees": -49.752419521208765,
+                "withinAnnotatedInterval": true
+              }
+            ]
+          }
+        }
+      ],
+      "configs": [
+        {
+          "id": "C104-right-old16",
+          "margin": 1.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.4370659839383877,
+            "ty": -0.8994294445280124,
+            "angleDegrees": -64.0831713189956,
+            "center": {
+              "x": 126.95516314423016,
+              "y": 132.49391374344214
+            },
+            "coherence": 0.9998144283301278,
+            "maxOrthogonalResidual": 0.024733395154359916,
+            "rmsOrthogonalResidual": 0.017489343045407363,
+            "span": 4.447166343398383,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 12,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.17712471710086095,
+            "maxResponseOffsets1to2": 0.19489661484499674
+          }
+        },
+        {
+          "id": "C104-right-old16",
+          "margin": 1.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": false,
+            "reason": "incomplete-observed-centers"
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": false,
+              "reason": "search-boundary"
+            }
+          ],
+          "denseAvailable": false,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 0,
+          "denseUnsupported": 0,
+          "forward": null
+        },
+        {
+          "id": "C104-right-old16",
+          "margin": 1.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": false,
+            "reason": "incomplete-observed-centers"
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": false,
+              "reason": "search-boundary"
+            },
+            {
+              "distance": 10,
+              "accepted": false,
+              "reason": "search-boundary"
+            },
+            {
+              "distance": 12,
+              "accepted": false,
+              "reason": "weak-valley"
+            }
+          ],
+          "denseAvailable": false,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 0,
+          "denseUnsupported": 0,
+          "forward": null
+        },
+        {
+          "id": "C104-right-old16",
+          "margin": 2.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.4414315697066793,
+            "ty": -0.8972949176643636,
+            "angleDegrees": -63.80474336124883,
+            "center": {
+              "x": 126.96038484921961,
+              "y": 132.49391374344214
+            },
+            "coherence": 0.9996939573015338,
+            "maxOrthogonalResidual": 0.031838845693078495,
+            "rmsOrthogonalResidual": 0.022513880643938926,
+            "span": 4.457678033636885,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 12,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.17629429483625464,
+            "maxResponseOffsets1to2": 0.18649597104694
+          }
+        },
+        {
+          "id": "C104-right-old16",
+          "margin": 2.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": false,
+            "reason": "incomplete-observed-centers"
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": false,
+              "reason": "search-boundary"
+            }
+          ],
+          "denseAvailable": false,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 0,
+          "denseUnsupported": 0,
+          "forward": null
+        },
+        {
+          "id": "C104-right-old16",
+          "margin": 2.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": false,
+            "reason": "incomplete-observed-centers"
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": false,
+              "reason": "search-boundary"
+            },
+            {
+              "distance": 10,
+              "accepted": false,
+              "reason": "search-boundary"
+            },
+            {
+              "distance": 12,
+              "accepted": false,
+              "reason": "search-boundary"
+            }
+          ],
+          "denseAvailable": false,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 0,
+          "denseUnsupported": 0,
+          "forward": null
+        },
+        {
+          "id": "PI729R1",
+          "margin": 1.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.012285833326885785,
+            "ty": -0.9999245263015925,
+            "angleDegrees": -89.29605589272408,
+            "center": {
+              "x": 128.3602989651279,
+              "y": 131.91802552672732
+            },
+            "coherence": 0.8929892191711205,
+            "maxOrthogonalResidual": 0.549121101433658,
+            "rmsOrthogonalResidual": 0.3882889113404742,
+            "span": 4.000267779173361,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 12,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.012080889864118372,
+            "maxResponseOffsets1to2": 0.01022305159153257
+          }
+        },
+        {
+          "id": "PI729R1",
+          "margin": 1.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.05716439519949225,
+            "ty": -0.9983647789868573,
+            "angleDegrees": -86.72293497998794,
+            "center": {
+              "x": 128.2748730364474,
+              "y": 132.91802552672732
+            },
+            "coherence": 0.9535554038949654,
+            "maxOrthogonalResidual": 0.5763863898302426,
+            "rmsOrthogonalResidual": 0.34532940092036385,
+            "span": 5.995350997312178,
+            "count": 4
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 18,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.009339990947096782,
+            "maxResponseOffsets1to2": 0.009772024220630796
+          }
+        },
+        {
+          "id": "PI729R1",
+          "margin": 1.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.04343404538433574,
+            "ty": -0.9990562965626869,
+            "angleDegrees": -87.5106293871527,
+            "center": {
+              "x": 128.19403213987684,
+              "y": 134.91802552672732
+            },
+            "coherence": 0.9861596021524285,
+            "maxOrthogonalResidual": 0.5844520847008787,
+            "rmsOrthogonalResidual": 0.28539593862998847,
+            "span": 9.993105644237765,
+            "count": 6
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 10,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 12,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 30,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.010176259946590244,
+            "maxResponseOffsets1to2": 0.009897299449706465
+          }
+        },
+        {
+          "id": "PI729R1",
+          "margin": 2.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.01758357536021532,
+            "ty": -0.9998453969877301,
+            "angleDegrees": -88.99248342087493,
+            "center": {
+              "x": 128.36796159658198,
+              "y": 131.91802552672732
+            },
+            "coherence": 0.8953950720334121,
+            "maxOrthogonalResidual": 0.542606882870038,
+            "rmsOrthogonalResidual": 0.38368428085460926,
+            "span": 4.000550223382624,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 12,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.011756132437288042,
+            "maxResponseOffsets1to2": 0.010163186980683026
+          }
+        },
+        {
+          "id": "PI729R1",
+          "margin": 2.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.06048659467321878,
+            "ty": -0.9981690096696239,
+            "angleDegrees": -86.53225668148308,
+            "center": {
+              "x": 128.28038713009047,
+              "y": 132.91802552672732
+            },
+            "coherence": 0.9547844448708052,
+            "maxOrthogonalResidual": 0.5686246467381996,
+            "rmsOrthogonalResidual": 0.34068810709096153,
+            "span": 5.995799647176862,
+            "count": 4
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 18,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.009137910706888297,
+            "maxResponseOffsets1to2": 0.00974320064887814
+          }
+        },
+        {
+          "id": "PI729R1",
+          "margin": 2.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.04438461316072942,
+            "ty": -0.9990145174693771,
+            "angleDegrees": -87.45611328368221,
+            "center": {
+              "x": 128.19909584149764,
+              "y": 134.91802552672732
+            },
+            "coherence": 0.9864295995130952,
+            "maxOrthogonalResidual": 0.5777014735628938,
+            "rmsOrthogonalResidual": 0.2825910549302818,
+            "span": 9.993264517616357,
+            "count": 6
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 10,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 12,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": true,
+          "denseSamples": 30,
+          "denseUnsupported": 0,
+          "forward": {
+            "interpretation": "continuing-transverse-ridge",
+            "response0": 0.010118304679202939,
+            "maxResponseOffsets1to2": 0.009888293350222899
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 1.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.5107765788665621,
+            "ty": -0.8597134909266986,
+            "angleDegrees": -59.28442887528308,
+            "center": {
+              "x": 125.36450794902511,
+              "y": 130.57753127735342
+            },
+            "coherence": 0.8711453638311332,
+            "maxOrthogonalResidual": 0.6221360868361376,
+            "rmsOrthogonalResidual": 0.4408701667274294,
+            "span": 4.106291347815503,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 12,
+          "denseUnsupported": 1,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 1.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.7176101430956284,
+            "ty": -0.6964450319488765,
+            "angleDegrees": -44.142479716156714,
+            "center": {
+              "x": 124.52959706950469,
+              "y": 131.15769737022868
+            },
+            "coherence": 0.8649891794057063,
+            "maxOrthogonalResidual": 0.806468408504731,
+            "rmsOrthogonalResidual": 0.6017259933845694,
+            "span": 5.998035593400792,
+            "count": 4
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 18,
+          "denseUnsupported": 4,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 1.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.6717096319507032,
+            "ty": -0.7408145316775656,
+            "angleDegrees": -47.800847466362626,
+            "center": {
+              "x": 123.20129028819498,
+              "y": 132.65725858588996
+            },
+            "coherence": 0.9521645908533269,
+            "maxOrthogonalResidual": 0.8463452371762314,
+            "rmsOrthogonalResidual": 0.5352160163546615,
+            "span": 10.04874025965628,
+            "count": 6
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 10,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 12,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 30,
+          "denseUnsupported": 4,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 2.5,
+          "window": 6,
+          "axis": {
+            "window": 6,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.5132681479183914,
+            "ty": -0.8582282961615891,
+            "angleDegrees": -59.1182343138429,
+            "center": {
+              "x": 125.35489667229785,
+              "y": 130.56798433419428
+            },
+            "coherence": 0.8652755326432223,
+            "maxOrthogonalResidual": 0.6366239023469616,
+            "rmsOrthogonalResidual": 0.4511594696844823,
+            "span": 4.102908453727056,
+            "count": 3
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 12,
+          "denseUnsupported": 2,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 2.5,
+          "window": 8,
+          "axis": {
+            "window": 8,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.7166609061326213,
+            "ty": -0.6974217845903368,
+            "angleDegrees": -44.22051767887305,
+            "center": {
+              "x": 124.52323039181621,
+              "y": 131.15137330822012
+            },
+            "coherence": 0.8653799737530269,
+            "maxOrthogonalResidual": 0.8177378893460523,
+            "rmsOrthogonalResidual": 0.6007781857786393,
+            "span": 5.997943824486566,
+            "count": 4
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 18,
+          "denseUnsupported": 5,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        },
+        {
+          "id": "PI729R2",
+          "margin": 2.5,
+          "window": 12,
+          "axis": {
+            "window": 12,
+            "available": true,
+            "reason": "all-pre-tip-centers-observed-not-fiber-certification",
+            "tx": 0.6460917488194857,
+            "ty": -0.7632597540204635,
+            "angleDegrees": -49.752419521208765,
+            "center": {
+              "x": 123.24835756094762,
+              "y": 132.70401081146585
+            },
+            "coherence": 0.941053673124114,
+            "maxOrthogonalResidual": 0.8815933839599783,
+            "rmsOrthogonalResidual": 0.5970599652946657,
+            "span": 10.108541799589398,
+            "count": 6
+          },
+          "centerReasons": [
+            {
+              "distance": 2,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 4,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 6,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 8,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 10,
+              "accepted": true,
+              "reason": "ok"
+            },
+            {
+              "distance": 12,
+              "accepted": true,
+              "reason": "ok"
+            }
+          ],
+          "denseAvailable": true,
+          "denseAllSamplesSupported": false,
+          "denseSamples": 30,
+          "denseUnsupported": 5,
+          "forward": {
+            "interpretation": "weak-fitted-tip-direction",
+            "response0": 0,
+            "maxResponseOffsets1to2": 0
+          }
+        }
+      ]
+    }
+  }
+}

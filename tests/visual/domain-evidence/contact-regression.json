@@ -1,0 +1,56 @@
+{
+  "meaning": "Critic-reproduced numeric contour defect; synthetic diagnostic, not portrait quality.",
+  "upper": [
+    {
+      "x": 0,
+      "y": 0
+    },
+    {
+      "x": 40,
+      "y": 0
+    },
+    {
+      "x": 60,
+      "y": 0
+    },
+    {
+      "x": 40,
+      "y": 0
+    },
+    {
+      "x": 100,
+      "y": 0
+    }
+  ],
+  "lower": [
+    {
+      "x": 0,
+      "y": 0
+    },
+    {
+      "x": 50,
+      "y": 10
+    },
+    {
+      "x": 100,
+      "y": 0
+    }
+  ],
+  "initialHelperSHA256": "b6e68764b6f0ad90c8bcb84d90169bc3bb8b6125be31ee8b44f70404b3fc10cc",
+  "fixedHelperSHA256": "2c7739c290c49052e3d54136e43df059d5c4ae1089359f82d57e4fb1befe005d",
+  "initial": {
+    "nonzeroArea": true,
+    "crossed": false,
+    "gapSignChange": false,
+    "topologyAligned": true,
+    "usable": true
+  },
+  "fixed": {
+    "nonzeroArea": true,
+    "crossed": false,
+    "selfContact": true,
+    "gapSignChange": false,
+    "topologyAligned": true,
+    "usable": false
+  }
+}

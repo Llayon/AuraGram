@@ -1,0 +1,18 @@
+{
+  "meaning":"Manual ORIGINAL-ONLY viewing rectangles, not FaceMesh landmarks or applicator geometry. Screen side only; no anatomical side is inferred. Selected before detector results.",
+  "crops":[
+    {"file":"pexels-8727422.jpg","view":"screen-right","rect":[1650,700,750,430]},
+    {"file":"pexels-8727422.jpg","view":"screen-left","rect":[800,830,600,380]},
+    {"file":"pexels-12367370.jpg","view":"screen-right","rect":[2250,1650,700,600]},
+    {"file":"pexels-12367370.jpg","view":"screen-left","rect":[1580,1450,650,600]},
+    {"file":"pexels-7479551.jpg","view":"visible-closed-eye","rect":[1650,2400,1300,900]},
+    {"file":"pexels-7123010.jpg","view":"screen-right","rect":[1600,1800,800,500]},
+    {"file":"pexels-7123010.jpg","view":"screen-left","rect":[800,1750,750,500]},
+    {"file":"unsplash-purejulia.jpg","view":"screen-right","rect":[1450,2250,1000,750]},
+    {"file":"unsplash-purejulia.jpg","view":"screen-left-partial","rect":[0,1750,600,650]},
+    {"file":"unsplash-andrey-eye.jpg","view":"visible-closed-eye","rect":[600,1600,1100,800]},
+    {"file":"pexels-18485027.jpg","view":"visible-open-eye","rect":[1250,2250,1500,1100]},
+    {"file":"pexels-7859838.jpg","view":"screen-left","rect":[1200,300,900,600]},
+    {"file":"pexels-7859838.jpg","view":"screen-right","rect":[2300,350,1000,650]}
+  ]
+}

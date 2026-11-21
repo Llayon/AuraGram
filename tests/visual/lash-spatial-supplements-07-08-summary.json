@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-18",
+  "stage": "original-only-development-screening",
+  "detectorExecuted": false,
+  "validationViewsOpened": false,
+  "qualifiedPositiveCount": 0,
+  "identityReview": "pending; authors and different photo IDs do not establish independent identities",
+  "inputs": {
+    "tests/visual/out/spatial-supplement-07/downloads.json": "1c0da892177138f0fad1e3c1c46481d4746b1b18b683ad0e31a0edd10b90998c",
+    "tests/visual/out/spatial-supplement-07-chromium/screening.json": "16497d9faee4c831c833ca7ed320be6d98724313c7dab4d3d33b8fb94c7906bf",
+    "tests/visual/out/spatial-supplement-07-webkit/screening.json": "154d637b7a30d1d5994c53b25e7d1df51c8f001b379138092cb2b394151426b2",
+    "tests/visual/out/spatial-supplement-08/downloads.json": "274b6f3e18876d7507988df2f8d39a27a1072fcb95762febfbeafc73c3da6395",
+    "tests/visual/out/spatial-supplement-08-chromium/screening.json": "89788b1fb60c3784b7e1e6caa455f477a6ea7e8587a1260f458cfe4793570f9e",
+    "tests/visual/out/spatial-supplement-08-webkit/screening.json": "704c3b511848593fa8d657ccdb748705085a8bae6008518b30e74890ae3e6925"
+  },
+  "sources": [
+    {
+      "id": "28354416",
+      "file": "pexels-28354416.jpg",
+      "group": "07",
+      "page": "https://www.pexels.com/photo/a-close-up-of-a-woman-with-freckles-28354416/",
+      "author": "B\u00fc\u015franur Ayd\u0131n",
+      "sha256": "e8bb96d852d22edf8adf791916ea189bb30b678ccca9ec397a82f5ad8af60de8",
+      "status": "downloaded",
+      "split": "development",
+      "identityGroup": null,
+      "faceMesh": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      },
+      "width": 4160,
+      "height": 6240,
+      "positiveQualified": false,
+      "reason": "Off-frame face; both engines no_face. No substitute geometry or hand-labelled tips."
+    },
+    {
+      "id": "4356958",
+      "file": "pexels-4356958.jpg",
+      "group": "07",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-woman-s-face-4356958/",
+      "author": "Eliza Maria de Souza",
+      "sha256": "2809c1c705291b597a72ab59ba07635fb9bc076bf1b1a89dcc260f23dc8c7767",
+      "status": "downloaded",
+      "split": "development",
+      "identityGroup": null,
+      "faceMesh": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      },
+      "width": 3456,
+      "height": 5184,
+      "positiveQualified": false,
+      "reason": "Both engines no_face; upper structures also appear soft at source review. No geometry substitution."
+    },
+    {
+      "id": "4995558",
+      "file": "pexels-4995558.jpg",
+      "group": "07",
+      "page": "https://www.pexels.com/photo/woman-with-freckles-on-her-face-seriously-looking-at-the-camera-4995558/",
+      "author": "Hamid Tajik",
+      "sha256": "74cd089bb014adf9e75deedbe7a2c1d6ed27de545fafe8726b8460aca9068383",
+      "status": "downloaded",
+      "split": "development",
+      "identityGroup": null,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "width": 3712,
+      "height": 5568,
+      "positiveQualified": false,
+      "reason": "Actual FaceMesh ready in both engines; intersecting/clumped dark upper structures. Provisional ambiguity controls only, not positive qualification."
+    },
+    {
+      "id": "30390002",
+      "file": "pexels-30390002.jpg",
+      "group": "08",
+      "page": "https://www.pexels.com/photo/close-up-portrait-of-woman-with-freckles-30390002/",
+      "author": "Viktoriia",
+      "sha256": "db0abac6a273cb98cbcbcd3f6f7a6fd3803e514a633278150dc00b2d5803831f",
+      "status": "downloaded",
+      "split": "development",
+      "identityGroup": null,
+      "faceMesh": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      },
+      "width": 3075,
+      "height": 4096,
+      "positiveQualified": false,
+      "reason": "Portrait is strongly rotated in original orientation and both engines return no_face. No alternate-orientation retries or substituted geometry in this experiment."
+    },
+    {
+      "id": "20669039",
+      "file": "pexels-20669039.jpg",
+      "group": "08",
+      "page": "https://www.pexels.com/photo/face-of-woman-20669039/",
+      "author": "Ester Lorraine",
+      "sha256": "e6e2d09f41c0dd0f972f16eff30a95157b575dcc52c8fa508f3c3ed24d9cfc81",
+      "status": "downloaded",
+      "split": "development",
+      "identityGroup": null,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "width": 5472,
+      "height": 3648,
+      "positiveQualified": false,
+      "reason": "Actual FaceMesh ready in both engines; left upper structures show hair overlap and intersections, right eye is defocused/overlapped. No positive qualification."
+    }
+  ],
+  "annotations": {
+    "tests/visual/lash-spatial-control-4995558.json": "095a5a9f2f895d80b4cc082612d983e583f3ba09e497aeefc62f81e5912978b8",
+    "tests/visual/lash-spatial-control-20669039.json": "672403b4a3b19f9e23fa3c90b43adfc67da4a9ba2750f6a28c57afab2e3b2ed2"
+  },
+  "metadataCorrections": [
+    {
+      "file": "pexels-28354416.jpg",
+      "field": "author",
+      "historicalDownloadAndScreeningValue": "B??ranur Ayd?n",
+      "correctOfficialPageValue": "B\u00fc\u015franur Ayd\u0131n",
+      "reason": "PowerShell pipe encoding corrupted non-ASCII author characters. Raw acquisition/screening records remain unchanged; current source manifest and this summary preserve corrected spelling."
+    }
+  ],
+  "decision": "Five further development leads, three per-engine no_face refusals and two provisional ambiguity controls; zero qualified positive eyes. DATA INSUFFICIENT / LENGTH HOLD.",
+  "limitations": [
+    "No endpoint detector or rendering has run on these five originals.",
+    "Primary-agent provisional ambiguity annotations need independent critique; no positive labels, specificity or recall claim.",
+    "No inferred biological absence or makeup-free claim.",
+    "No final cohort has been opened."
+  ]
+}

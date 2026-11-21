@@ -1,0 +1,31 @@
+{
+  "total": 192,
+  "counts": {
+    "straight/0/0/point": {
+      "arc-budget": 24
+    },
+    "straight/0/0/pixel-area-8x8": {
+      "arc-budget": 24
+    },
+    "straight/25/0/point": {
+      "arc-budget": 20,
+      "bootstrap-search-boundary": 4
+    },
+    "straight/25/0/pixel-area-8x8": {
+      "arc-budget": 20,
+      "bootstrap-search-boundary": 4
+    },
+    "quadratic/0/0.015/point": {
+      "arc-budget": 24
+    },
+    "quadratic/0/0.015/pixel-area-8x8": {
+      "arc-budget": 24
+    },
+    "quadratic/0/0.03/point": {
+      "arc-budget": 24
+    },
+    "quadratic/0/0.03/pixel-area-8x8": {
+      "arc-budget": 24
+    }
+  }
+}

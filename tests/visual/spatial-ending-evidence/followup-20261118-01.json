@@ -1,0 +1,436 @@
+{
+  "date": "2026-11-18",
+  "restoreDirectory": "tests/visual/out",
+  "policy": "Explicit public-source numeric evidence only; JPEGs and PNGs omitted. Source snapshots are for review, not automatic overwrite.",
+  "archive": "followup-20261118-01.zip",
+  "bytes": 13904623,
+  "sha256": "95595fea4f8b9b3aa6a65b615b7c3951c4353df4e7efa15fa2aefe3739805173",
+  "members": [
+    {
+      "path": "cell-boundary-unit-sequential-01.txt",
+      "bytes": 27506,
+      "sha256": "e47015067bda8eead47e103b27a75021085b273dfb6912d31c12622f5d6e9654"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/chromium.json",
+      "bytes": 4000908,
+      "sha256": "9de941af33590b3b2e25e83e483bbc2981a4efcdce6772f72edc52fe13fe05b4"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/failure.json",
+      "bytes": 159,
+      "sha256": "75db3c6b1d75e0915ceb36c0ec10413f5b0a8aaf17e6c0834cb51d50352ccc6d"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/protocol.json",
+      "bytes": 2475,
+      "sha256": "706576679bf60c3ee95a9594e4fa2bc0918d121e3683d76f69f4c743c185a9aa"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31113,
+      "sha256": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3470,
+      "sha256": "32b6dba821a8b1925ff57f525cc0c9994e9610da6929243f71a30e3ff638a55f"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-distal-body-start.mjs",
+      "bytes": 1383,
+      "sha256": "a4d5ee5a8ee595e601a6b6e0d88ac404f14eb4af6453a52d3041bf7a3320ffa1"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 4529,
+      "sha256": "ec92bcaa1a22b42da7c39ee998792631096583852a5e121c1a61248b7b6aa8ae"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-native-real.cjs",
+      "bytes": 9678,
+      "sha256": "37ef74b61c7eac562f0e7851aa70b5a135eadbd9aa4f110691f6fc6103cd1ed7"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-scale-correspondence.mjs",
+      "bytes": 1498,
+      "sha256": "182ba5f4dbe4a08e876eb186b0089df18ef713ac22d92c8e2284f95cbd681435"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-01/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-02/chromium.json",
+      "bytes": 4000856,
+      "sha256": "39d40a46d4dd67d38b5e96381cd2678243f0266a4d18e2f7f53323bf0959bb15"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-02/failure.json",
+      "bytes": 159,
+      "sha256": "75db3c6b1d75e0915ceb36c0ec10413f5b0a8aaf17e6c0834cb51d50352ccc6d"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-02/protocol.json",
+      "bytes": 2475,
+      "sha256": "706576679bf60c3ee95a9594e4fa2bc0918d121e3683d76f69f4c743c185a9aa"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/chromium.json",
+      "bytes": 4000882,
+      "sha256": "1348ee5d6f43a385186a39afd75b05e1e98b065645fac70d7819d94d41d83d76"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/protocol.json",
+      "bytes": 2475,
+      "sha256": "706576679bf60c3ee95a9594e4fa2bc0918d121e3683d76f69f4c743c185a9aa"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31113,
+      "sha256": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3470,
+      "sha256": "32b6dba821a8b1925ff57f525cc0c9994e9610da6929243f71a30e3ff638a55f"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-distal-body-start.mjs",
+      "bytes": 1383,
+      "sha256": "a4d5ee5a8ee595e601a6b6e0d88ac404f14eb4af6453a52d3041bf7a3320ffa1"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 4529,
+      "sha256": "ec92bcaa1a22b42da7c39ee998792631096583852a5e121c1a61248b7b6aa8ae"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-native-real.cjs",
+      "bytes": 9678,
+      "sha256": "37ef74b61c7eac562f0e7851aa70b5a135eadbd9aa4f110691f6fc6103cd1ed7"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-scale-correspondence.mjs",
+      "bytes": 1498,
+      "sha256": "182ba5f4dbe4a08e876eb186b0089df18ef713ac22d92c8e2284f95cbd681435"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "path": "native-boundary-baseline-14297936-03/webkit.json",
+      "bytes": 4697573,
+      "sha256": "2173c2a6bcd363b001ea59e39716ba66772a1c3807261039134cd650ac587d6d"
+    },
+    {
+      "path": "native-boundary-comparison-01.json",
+      "bytes": 11998,
+      "sha256": "1af451480f35d91f62f1ce0a320f6d358581c70d7d5340f9e8e90538d28e2134"
+    },
+    {
+      "path": "native-boundary-comparison-02.json",
+      "bytes": 12508,
+      "sha256": "beef28941a77840a8638fef39e21e70a6558cbf7941ca8ee3808084ab6b32193"
+    },
+    {
+      "path": "native-boundary-default-14297936-01/chromium.json",
+      "bytes": 4000908,
+      "sha256": "20e0ab0291ed12ee571cdbf8f706d5bdbe7806a68a82002a99fe52161eb143c4"
+    },
+    {
+      "path": "native-boundary-default-14297936-01/protocol.json",
+      "bytes": 2508,
+      "sha256": "d32ae30973b6f80e98f2a1b663b605fb65981cdb23c66caa0c26a178baff5e4b"
+    },
+    {
+      "path": "native-boundary-default-14297936-01/webkit.json",
+      "bytes": 4697573,
+      "sha256": "9a3b21a94d7b88ad7338dd976e2bd748cf29bfd7187c32844d70eaa04d6dff86"
+    },
+    {
+      "path": "native-boundary-ending-14297936-01/chromium.json",
+      "bytes": 28016834,
+      "sha256": "00287d986001c700db131034ab95c7aace8408bc0fb639fa4956a19c152376fe"
+    },
+    {
+      "path": "native-boundary-ending-14297936-01/failure.json",
+      "bytes": 159,
+      "sha256": "75db3c6b1d75e0915ceb36c0ec10413f5b0a8aaf17e6c0834cb51d50352ccc6d"
+    },
+    {
+      "path": "native-boundary-ending-14297936-01/protocol.json",
+      "bytes": 2148,
+      "sha256": "7b7991cb192bac8c1f689355ccdc0adbdf20d445e4d0e0f5f348064e931d081c"
+    },
+    {
+      "path": "native-boundary-ending-14297936-02/chromium.json",
+      "bytes": 28016834,
+      "sha256": "00287d986001c700db131034ab95c7aace8408bc0fb639fa4956a19c152376fe"
+    },
+    {
+      "path": "native-boundary-ending-14297936-02/failure.json",
+      "bytes": 157,
+      "sha256": "ed39d719d08cf9e82ac8ab6cedd2bf802f2e52b8dda15fc6bec5601684c884a0"
+    },
+    {
+      "path": "native-boundary-ending-14297936-02/protocol.json",
+      "bytes": 2148,
+      "sha256": "7b7991cb192bac8c1f689355ccdc0adbdf20d445e4d0e0f5f348064e931d081c"
+    },
+    {
+      "path": "native-boundary-ending-summary-01.json",
+      "bytes": 3548,
+      "sha256": "37d45658f44c6dcb4ab877a7c5ee3d0951426f448f6f574325ec40139a38598e"
+    },
+    {
+      "path": "native-boundary-ending-webkit-01/protocol.json",
+      "bytes": 2148,
+      "sha256": "ea9728d904442bb93e7f96838c1447760f6d911cd22fff05bf3c1f126c73c7bc"
+    },
+    {
+      "path": "native-boundary-ending-webkit-01/webkit.json",
+      "bytes": 26427532,
+      "sha256": "f64ceed4008b67d1f29427887a71cd0d1a2a27a9d53fdd447d3e8e00b68970e9"
+    },
+    {
+      "path": "native-boundary-exact-14297936-01/chromium.json",
+      "bytes": 4674040,
+      "sha256": "699e585f0a551ba7556f6bed241f7cec75f4a0d83f56de7f68a1bb584a300a0b"
+    },
+    {
+      "path": "native-boundary-exact-14297936-01/protocol.json",
+      "bytes": 2603,
+      "sha256": "3029893db0c26c35dcb8c4426ac3d129d206bd7c1a364258cf85f66265b937cd"
+    },
+    {
+      "path": "native-boundary-exact-14297936-01/webkit.json",
+      "bytes": 4703812,
+      "sha256": "187d9feafc6868f70f38396073410123235943466d50480c490ed16968104494"
+    },
+    {
+      "path": "native-boundary-exact-14297936-repeat-01/chromium.json",
+      "bytes": 4674042,
+      "sha256": "fd2997364e68cb0e63d3b14d3943104f18e79734731b68adb7e8a3f1f5da2bbb"
+    },
+    {
+      "path": "native-boundary-exact-14297936-repeat-01/protocol.json",
+      "bytes": 2603,
+      "sha256": "3029893db0c26c35dcb8c4426ac3d129d206bd7c1a364258cf85f66265b937cd"
+    },
+    {
+      "path": "native-boundary-exact-14297936-repeat-01/webkit.json",
+      "bytes": 4703812,
+      "sha256": "c2745930af66a43bce7ef636ef1ff02c6db2c157dd880fb6cd5dbc3a2c02fe32"
+    },
+    {
+      "path": "source-snapshots/scripts/package-lash-followup-evidence.py",
+      "bytes": 11731,
+      "sha256": "52b7e8a8741d4b9f303e280e183b0ca6047c816d4a34d4821398afdcda8f34e8"
+    },
+    {
+      "path": "source-snapshots/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "path": "source-snapshots/src/retouch/lashAnalysis.mjs",
+      "bytes": 31113,
+      "sha256": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d"
+    },
+    {
+      "path": "source-snapshots/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-cell-boundary-compare.mjs",
+      "bytes": 3388,
+      "sha256": "59dfb3b4a2d572f817689db3f4bb7d11eda652e75f5a507bd67e67f38308a652"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-cell-boundary-protocol.json",
+      "bytes": 1217,
+      "sha256": "eae8b13050da897890d978f8b51ef52a41272028b11fa49669c70cfa1900fca3"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3470,
+      "sha256": "32b6dba821a8b1925ff57f525cc0c9994e9610da6929243f71a30e3ff638a55f"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-distal-body-start.mjs",
+      "bytes": 1383,
+      "sha256": "a4d5ee5a8ee595e601a6b6e0d88ac404f14eb4af6453a52d3041bf7a3320ffa1"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-local-ending-run.cjs",
+      "bytes": 7274,
+      "sha256": "ee57abe53cb61684b5f34ffef6beac66a3480350af585549be4a0c71ae4ec947"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 4579,
+      "sha256": "36175b95356308d127de57278a6a039c2100fa3b2d0ca4f61718dfe641ea4997"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-native-cell.mjs",
+      "bytes": 2022,
+      "sha256": "c09ddec87c73af95bb30c5da5dcd6cb1fa7564d0aa79ec47949a411ddeb24dd9"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-native-cell.test.mjs",
+      "bytes": 5209,
+      "sha256": "278569685995b2c243323b91a1ec7e2895e441d5aead1caf16f98df2f4d2ccbe"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-native-real.cjs",
+      "bytes": 10194,
+      "sha256": "93b2a50a02f7ea5e83211d0c9d9cec03ac58497eb5b6254275c810edfa7ee289"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-resolved-edges-protocol.json",
+      "bytes": 1025,
+      "sha256": "091d90b0d7564d9ce434e07f4fce4855b9f53dced0afe1463fe066b3184fe9d8"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-resolved-edges.mjs",
+      "bytes": 3655,
+      "sha256": "4fee3235a98c1aae76b205fed486b04cacffdee7d8989e8386671b1c3bfa7076"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-scale-correspondence.mjs",
+      "bytes": 1498,
+      "sha256": "182ba5f4dbe4a08e876eb186b0089df18ef713ac22d92c8e2284f95cbd681435"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2613,
+      "sha256": "aef38e3a2b7363d10c66794026d62ea7096684b1947c95ad969bc4e254d7d216"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    }
+  ],
+  "omitted": []
+}

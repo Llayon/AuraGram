@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-13",
+  "status": "hypothesis-insufficient-for-terminal-approval",
+  "protocolTiming": "Recorded after implementation and mechanism runs; not a blind preregistration",
+  "hypothesis": "Connected observed intensity-deficit contours converge to a cap and have no supported continuation inside the window",
+  "sampling": {
+    "along": [
+      -2,
+      4
+    ],
+    "across": [
+      -3,
+      3
+    ],
+    "stepNative": 0.25,
+    "minimumDeficit": 0.006,
+    "connectivity": 8,
+    "minimumTailSamples": 3,
+    "minimumWidthConvergence": 0.5,
+    "profileRadii": [
+      0.75,
+      1.5
+    ]
+  },
+  "policy": "Side closure is evidence only; endpointConfirmed always false. Shared raw-intensity closure across profile radii is not two independent measurements.",
+  "counterexample": "Fixed-width Gaussian transverse profile with multiplicative longitudinal contrast fade has the same threshold cap and tip uncertainty as an apparent rounded end. Both produce closure-candidate; neither grants terminal.",
+  "moduleSHA256": {
+    "tests/visual/lash-side-closure.mjs": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7",
+    "tests/visual/lash-side-closure.test.mjs": "dae8ad12546b6eed12b670e6e2b48daba58c52b3f52a8727822b3c34dc1130c5",
+    "tests/visual/lash-spatial-ending.mjs": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686",
+    "tests/visual/lash-native-path-browser.cjs": "18575589c26acf4ef77c2779b61d3c8c7e9abedd6b73fdba9732680e36a94373"
+  },
+  "browserResult": {
+    "file": "tests/visual/out/side-closure-browser-01.json",
+    "sha256": "9e1ab5e1ff0b9d910476909bc67566dfd6137b7ce103e338902f457a7a2a5e86",
+    "engineAgreement": true
+  },
+  "verification": {
+    "unit": {
+      "passed": 221,
+      "failed": 0
+    },
+    "browser": "Chromium and WebKit synthetic path and cap records exactly equal",
+    "realPhotoRecognition": "UNVERIFIED",
+    "fullE2E": "Not rerun: offline helper only; previous two Length failures remain open"
+  },
+  "decision": "LENGTH HOLD"
+}

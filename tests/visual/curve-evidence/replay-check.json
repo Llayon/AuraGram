@@ -1,0 +1,7 @@
+{
+  "chromiumExact": true,
+  "webkitExact": true,
+  "initialControlsExact": true,
+  "rasterControlsExact": true,
+  "helpersAndProtocolsUnchanged": true
+}

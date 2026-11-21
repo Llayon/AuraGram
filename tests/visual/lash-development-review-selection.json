@@ -1,0 +1,12 @@
+{
+  "census": "tests/visual/out/spatial-screening-census-reserve-01.json",
+  "censusSummary": "tests/visual/lash-spatial-validation-reserve-summary.json",
+  "sources": [
+    "pexels-14297936.jpg",
+    "pexels-29117992.jpg",
+    "pexels-10598787.jpg",
+    "pexels-4672290.jpg",
+    "pexels-14818485.jpg",
+    "pexels-11383300.jpg"
+  ]
+}

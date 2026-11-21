@@ -1,0 +1,6 @@
+{
+  "chromiumExact": true,
+  "webkitExact": true,
+  "sameHelperProtocolHashes": true,
+  "initialPlotViewsRetained": 36
+}

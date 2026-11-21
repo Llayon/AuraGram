@@ -1,0 +1,122 @@
+{
+  "decision": "Insufficient improvement for adoption; LENGTH HOLD",
+  "comparison": "Same source, same automatic seed identities and ordering; development diagnostic only",
+  "results": [
+    {
+      "engine": "chromium",
+      "side": "left",
+      "sourceSeedsUnchanged": true,
+      "baselineTipsUnchanged": true,
+      "initializationAccepted": 26,
+      "initializationRejected": 7,
+      "maxAcceptedShift": 1.454571311097575,
+      "before": {
+        "proximalConnected": 0,
+        "bootstrapBoundaryReasonOccurrences": 30,
+        "observedPathRecords": 1
+      },
+      "after": {
+        "proximalConnected": 0,
+        "bootstrapBoundaryReasonOccurrences": 24,
+        "observedPathRecords": 3
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/native-real-01/chromium.json",
+          "sha256": "83f814231f8b89c9e1778b6c1b2fb12726b5fd93911a38b8037d3303807fe78a"
+        },
+        {
+          "file": "tests/visual/out/native-cell-real-01/chromium.json",
+          "sha256": "36cd3302bae13e43b46de7074fdede2bc83ffd56c6b67a15d72143aee0d2bb12"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "side": "right",
+      "sourceSeedsUnchanged": true,
+      "baselineTipsUnchanged": true,
+      "initializationAccepted": 101,
+      "initializationRejected": 27,
+      "maxAcceptedShift": 2.2307536364731693,
+      "before": {
+        "proximalConnected": 0,
+        "bootstrapBoundaryReasonOccurrences": 125,
+        "observedPathRecords": 20
+      },
+      "after": {
+        "proximalConnected": 0,
+        "bootstrapBoundaryReasonOccurrences": 52,
+        "observedPathRecords": 53
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/native-real-01/chromium.json",
+          "sha256": "83f814231f8b89c9e1778b6c1b2fb12726b5fd93911a38b8037d3303807fe78a"
+        },
+        {
+          "file": "tests/visual/out/native-cell-real-01/chromium.json",
+          "sha256": "36cd3302bae13e43b46de7074fdede2bc83ffd56c6b67a15d72143aee0d2bb12"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "left",
+      "sourceSeedsUnchanged": true,
+      "baselineTipsUnchanged": true,
+      "initializationAccepted": 58,
+      "initializationRejected": 11,
+      "maxAcceptedShift": 2.00249810211037,
+      "before": {
+        "proximalConnected": 0,
+        "bootstrapBoundaryReasonOccurrences": 48,
+        "observedPathRecords": 8
+      },
+      "after": {
+        "proximalConnected": 0,
+        "bootstrapBoundaryReasonOccurrences": 37,
+        "observedPathRecords": 13
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/native-real-01/webkit.json",
+          "sha256": "475df7aa0a5245c46b8d1dd7500304913fd45ac2437b7bdd938eaeab5eb261fa"
+        },
+        {
+          "file": "tests/visual/out/native-cell-real-01/webkit.json",
+          "sha256": "72130951759e2188a4295cd0aa2664f40d80eb9b474b307dc828c4e70d1a97dc"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "right",
+      "sourceSeedsUnchanged": true,
+      "baselineTipsUnchanged": true,
+      "initializationAccepted": 106,
+      "initializationRejected": 22,
+      "maxAcceptedShift": 2.093851468314828,
+      "before": {
+        "proximalConnected": 0,
+        "bootstrapBoundaryReasonOccurrences": 119,
+        "observedPathRecords": 26
+      },
+      "after": {
+        "proximalConnected": 0,
+        "bootstrapBoundaryReasonOccurrences": 78,
+        "observedPathRecords": 41
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/native-real-01/webkit.json",
+          "sha256": "475df7aa0a5245c46b8d1dd7500304913fd45ac2437b7bdd938eaeab5eb261fa"
+        },
+        {
+          "file": "tests/visual/out/native-cell-real-01/webkit.json",
+          "sha256": "72130951759e2188a4295cd0aa2664f40d80eb9b474b307dc828c4e70d1a97dc"
+        }
+      ]
+    }
+  ]
+}

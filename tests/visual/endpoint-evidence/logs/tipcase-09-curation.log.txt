@@ -1,0 +1,24 @@
+node : D:\Programms\alisagram\tests\visual\curate-lash-endpoint.cjs:3
+строка:2 знак:120
++ ... s.log 2>&1; node tests/visual/curate-lash-endpoint.cjs tests/visual/e ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\Programms\al...-endpoint.cjs:3:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+const target=process.argv[2],base=path.join(__dirname,'out'),hash=b=>crypto.createHash('sha256').update(b).digest('hex'
+);if(!target||fs.existsSync(target))throw Error('Supply NEW evidence 
+directory');fs.mkdirSync(target,{recursive:true});fs.mkdirSync(path.join(target,'assets'));
+                                                                                                                       
+                                    ^
+
+Error: Supply NEW evidence directory
+    at Object.<anonymous> (D:\Programms\alisagram\tests\visual\curate-lash-endpoint.cjs:3:162)
+    at Module._compile (node:internal/modules/cjs/loader:1812:14)
+    at Object..js (node:internal/modules/cjs/loader:1943:10)
+    at Module.load (node:internal/modules/cjs/loader:1533:32)
+    at Module._load (node:internal/modules/cjs/loader:1335:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.14.0

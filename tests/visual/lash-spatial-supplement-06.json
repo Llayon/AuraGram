@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-18",
+  "license": "https://www.pexels.com/license/",
+  "licenseVerified": "2026-11-18",
+  "status": "source-leads-not-qualified",
+  "policy": "Development source-only screening, no lash detector before annotation; sources selected for open upward gaze, not detector results. Source descriptions do not certify visible tips or absence of makeup. Identity separation not reviewed; do not transfer viewed sources to validation.",
+  "sources": [
+    {
+      "id": "14942933",
+      "file": "pexels-14942933.jpg",
+      "page": "https://www.pexels.com/photo/woman-face-while-looking-up-14942933/",
+      "url": "https://images.pexels.com/photos/14942933/pexels-photo-14942933.jpeg?cs=srgb&fm=jpg",
+      "author": "Evlogia Pictures",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "8537914",
+      "file": "pexels-8537914.jpg",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-woman-s-face-8537914/",
+      "url": "https://images.pexels.com/photos/8537914/pexels-photo-8537914.jpeg?cs=srgb&fm=jpg",
+      "author": "Engin Akyurt",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "16473154",
+      "file": "pexels-16473154.jpg",
+      "page": "https://www.pexels.com/photo/face-of-woman-looking-up-16473154/",
+      "url": "https://images.pexels.com/photos/16473154/pexels-photo-16473154.jpeg?cs=srgb&fm=jpg",
+      "author": "dong ma",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    }
+  ]
+}

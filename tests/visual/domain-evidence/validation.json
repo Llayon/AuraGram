@@ -1,0 +1,8 @@
+{
+  "initialFinalRealMeasurementsIdentical": true,
+  "numericalContactGuardRegression": "New unit; initial helper and audit retained",
+  "actualCrossingReplayCases": 16,
+  "modelInferenceRequests": 0,
+  "runtime": "UNCHANGED",
+  "release": "HOLD"
+}

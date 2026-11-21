@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-16",
+  "license": "https://www.pexels.com/license/",
+  "licenseVerified": "2026-11-16",
+  "status": "source-leads-not-qualified",
+  "policy": "Development only; no lash detector before original-only review. Author and search descriptions are not annotation or proof of lash visibility. Identity grouping remains unreviewed. Never move viewed sources to validation.",
+  "sources": [
+    {
+      "id": "37686910",
+      "file": "pexels-37686910.jpg",
+      "page": "https://www.pexels.com/photo/close-up-portrait-of-a-young-woman-with-flowing-hair-37686910/",
+      "url": "https://images.pexels.com/photos/37686910/pexels-photo-37686910.jpeg?cs=srgb&fm=jpg",
+      "author": "Alina Degli",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "18574102",
+      "file": "pexels-18574102.jpg",
+      "page": "https://www.pexels.com/photo/head-shot-18574102/",
+      "url": "https://images.pexels.com/photos/18574102/pexels-photo-18574102.jpeg?cs=srgb&fm=jpg",
+      "author": "Eden Kefale",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "29117992",
+      "file": "pexels-29117992.jpg",
+      "page": "https://www.pexels.com/photo/portrait-of-woman-with-curly-hair-in-soft-light-29117992/",
+      "url": "https://images.pexels.com/photos/29117992/pexels-photo-29117992.jpeg?cs=srgb&fm=jpg",
+      "author": "Gisele Seidel",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "14818485",
+      "file": "pexels-14818485.jpg",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-woman-s-face-14818485/",
+      "url": "https://images.pexels.com/photos/14818485/pexels-photo-14818485.jpeg?cs=srgb&fm=jpg",
+      "author": "Alexander Krivitskiy",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "20053159",
+      "file": "pexels-20053159.jpg",
+      "page": "https://www.pexels.com/photo/eye-and-face-of-woman-20053159/",
+      "url": "https://images.pexels.com/photos/20053159/pexels-photo-20053159.jpeg?cs=srgb&fm=jpg",
+      "author": "juliane Monari",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "hard-control-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "13722239",
+      "file": "pexels-13722239.jpg",
+      "page": "https://www.pexels.com/photo/grayscale-photo-of-a-woman-s-eyes-13722239/",
+      "url": "https://images.pexels.com/photos/13722239/pexels-photo-13722239.jpeg?cs=srgb&fm=jpg",
+      "author": "Leticia Rodrigues",
+      "metadataStatus": "indexed-source-review-direct-page-fetch-failed",
+      "split": "development",
+      "role": "hard-control-lead",
+      "identityGroup": null
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "b46b2855f3b8cbd4e0fd990c420bfbdf15151557",
+  "annotationMethod": "Independent recovery_critic agent viewed only six original PNGs during this pass, without current detector overlays/JSON. Historical exposure to earlier overlays prevents a strict memory-blind claim. Provisional visual measurements, not certified ground truth.",
+  "coordinateSystem": "4x PNG pixels. Polyline order is merged-line attachment, distal shaft, tip.",
+  "eyes": [
+    {
+      "file": "light.jpg", "side": "left", "status": "partial-resolvable",
+      "tipUncertaintySourcePx": 1.5, "rootVisibility": "merged-dark-line",
+      "strands": [
+        {"id": "ILL1", "points4x": [[226,177],[215,159],[211,143]], "tipUncertaintySourcePx": 2},
+        {"id": "ILL2", "points4x": [[272,150],[252,123],[243,104]]},
+        {"id": "ILL3", "points4x": [[291,145],[282,122],[278,103]]},
+        {"id": "ILL4", "points4x": [[318,146],[309,127],[306,109]]},
+        {"id": "ILL5", "points4x": [[348,140],[347,111],[347,89]]},
+        {"id": "ILL6", "points4x": [[392,145],[400,124],[408,106]], "tipUncertaintySourcePx": 2, "notes": "Fork/bundle, one visible component, individual hair identity uncertain."}
+      ]
+    },
+    {
+      "file": "light.jpg", "side": "right", "status": "partial-resolvable",
+      "tipUncertaintySourcePx": 2, "rootVisibility": "merged-dark-line",
+      "strands": [
+        {"id": "ILR1", "points4x": [[256,143],[249,125],[244,108]]},
+        {"id": "ILR2", "points4x": [[305,149],[295,130],[289,112]]},
+        {"id": "ILR3", "points4x": [[373,184],[377,165],[378,148]], "tipUncertaintySourcePx": 1.5}
+      ],
+      "notes": "Overlapping fan x65..215,y80..160 is not individually resolvable. No labels invented to reach a target count."
+    },
+    {
+      "file": "natural.jpg", "side": "left", "status": "partial-resolvable",
+      "tipUncertaintySourcePx": 2, "rootVisibility": "merged-dark-line",
+      "strands": [
+        {"id": "INL1", "points4x": [[505,222],[534,163],[540,143]]},
+        {"id": "INL2", "points4x": [[472,218],[486,181],[502,158]]},
+        {"id": "INL3", "points4x": [[438,216],[450,192],[462,174]]},
+        {"id": "INL4", "points4x": [[405,217],[415,193],[423,174]], "tipUncertaintySourcePx": 2.5},
+        {"id": "INL5", "points4x": [[539,246],[559,213],[572,184]], "tipUncertaintySourcePx": 2.5}
+      ],
+      "notes": "x580..650,y205..300 overlaps hair/shadow, exact lash tips not labelled. Root uncertainty3sourcepx."
+    },
+    {
+      "file": "natural.jpg", "side": "right", "status": "partial-resolvable",
+      "tipUncertaintySourcePx": 1.5, "rootVisibility": "merged-dark-line",
+      "strands": [
+        {"id": "INR1", "points4x": [[286,260],[261,204],[246,175]]},
+        {"id": "INR2", "points4x": [[337,252],[313,194],[304,161]]},
+        {"id": "INR3", "points4x": [[383,250],[363,196],[352,165]]},
+        {"id": "INR4", "points4x": [[423,242],[413,166],[408,131]]},
+        {"id": "INR5", "points4x": [[459,249],[461,185],[460,151]]},
+        {"id": "INR6", "points4x": [[488,261],[501,208],[509,181]]},
+        {"id": "INR7", "points4x": [[531,279],[553,235],[568,212]], "tipUncertaintySourcePx": 2}
+      ],
+      "notes": "Merged root uncertainty2.5sourcepx, last branch3px."
+    },
+    {"file": "edge900.jpg", "side": "left", "status": "not-resolvable", "strands": [], "notes": "Blur/blue makeup prevents reliable individual paths. Visibility insufficient, not proof of lash absence."},
+    {"file": "edge900.jpg", "side": "right", "status": "not-resolvable", "strands": [], "notes": "Short fragments cannot be separated from the upper line. Visibility insufficient."}
+  ]
+}

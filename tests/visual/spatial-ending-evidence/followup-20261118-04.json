@@ -1,0 +1,267 @@
+{
+  "date": "2026-11-18",
+  "restoreDirectory": "tests/visual/out",
+  "policy": "Explicit public-source numeric evidence only; JPEGs and PNGs omitted. Source snapshots are for review, not automatic overwrite.",
+  "archive": "followup-20261118-04.zip",
+  "bytes": 47691,
+  "sha256": "2d41bcd858fa0c77fc840ff7f193f4de804e2760cfe105b61ffbe3770bf8bfee",
+  "members": [
+    {
+      "path": "source-snapshots/scripts/package-lash-followup-evidence.py",
+      "bytes": 17045,
+      "sha256": "fc53638d5d9f795df18d7162b609bd7eba692e61ce5839840cf626e9e00a1bec"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-cohort-gate.cjs",
+      "bytes": 4243,
+      "sha256": "a305d39641625a2756a83664e4b2a91c8345ed6356620861cf95eb6e5091375d"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-control-20669039.json",
+      "bytes": 2170,
+      "sha256": "672403b4a3b19f9e23fa3c90b43adfc67da4a9ba2750f6a28c57afab2e3b2ed2"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-control-4995558.json",
+      "bytes": 1780,
+      "sha256": "095a5a9f2f895d80b4cc082612d983e583f3ba09e497aeefc62f81e5912978b8"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-controls-07-08.freeze.json",
+      "bytes": 1081,
+      "sha256": "a82a0a91825abcfe8d76bef606a29a8909cf737c250d9ff0c4a2cf1e52a11a76"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-download.cjs",
+      "bytes": 1720,
+      "sha256": "eef61f28dd40149d5c70be784fc88b91809567570af424ce774d17cc17858457"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-label-views.cjs",
+      "bytes": 2058,
+      "sha256": "72bf09f3f14194218f9fe8dd775c4a36e94c720370b1d501d172f5c629fe7c30"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-qualify.cjs",
+      "bytes": 3248,
+      "sha256": "76abbe35c274cb3d9ff907528b3364f3469066c21ca93dc1dd3d235d6932f99e"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-screen.cjs",
+      "bytes": 3781,
+      "sha256": "a1c9185f5f161d0b1c3ad63c9ea0dc0064f0459ffa67e26a3545c9cc5ab852f8"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-supplement-07.json",
+      "bytes": 1759,
+      "sha256": "e7f8fd6fb1992b301d836c840d4202158f3a8d72ac7b1ad5d29ce75f2f56d69b"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-supplement-08.json",
+      "bytes": 1349,
+      "sha256": "8c7ce9a202d5e512e61069410262945be67f1b064564afdce96385d1690b79f3"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-supplements-07-08-summary.json",
+      "bytes": 5886,
+      "sha256": "03f9e293fb62e32ab2d949a16368fce351a2f6c7f37304a87d6f5a3e8744de7d"
+    },
+    {
+      "path": "spatial-control-review-20669039-01/inputs.json",
+      "bytes": 296,
+      "sha256": "f150e8ec798b66f7dd9c3d15484ba3c05185e3c0662fcdd2b7c6e17d603510ea"
+    },
+    {
+      "path": "spatial-control-review-4995558-01/inputs.json",
+      "bytes": 296,
+      "sha256": "ee3b28afc0af1825c4ab11b3c32de97b6761eacc6c865b69e4944a5a98d83f3f"
+    },
+    {
+      "path": "spatial-supplement-07-chromium/screening.json",
+      "bytes": 30187,
+      "sha256": "16497d9faee4c831c833ca7ed320be6d98724313c7dab4d3d33b8fb94c7906bf"
+    },
+    {
+      "path": "spatial-supplement-07-qualification-input.json",
+      "bytes": 2105,
+      "sha256": "03e906994a2c90bc7651cbd1aad72736a69f04d3cb523804498c570642d3d453"
+    },
+    {
+      "path": "spatial-supplement-07-qualification.json",
+      "bytes": 1542,
+      "sha256": "cb2899d22c7611f6828a53535279b94ed28b1e9b833260bc0ff631fb4d075e3a"
+    },
+    {
+      "path": "spatial-supplement-07-webkit/screening.json",
+      "bytes": 30202,
+      "sha256": "154d637b7a30d1d5994c53b25e7d1df51c8f001b379138092cb2b394151426b2"
+    },
+    {
+      "path": "spatial-supplement-07/downloads.json",
+      "bytes": 1818,
+      "sha256": "1c0da892177138f0fad1e3c1c46481d4746b1b18b683ad0e31a0edd10b90998c"
+    },
+    {
+      "path": "spatial-supplement-08-chromium/screening.json",
+      "bytes": 29100,
+      "sha256": "89788b1fb60c3784b7e1e6caa455f477a6ea7e8587a1260f458cfe4793570f9e"
+    },
+    {
+      "path": "spatial-supplement-08-qualification-input.json",
+      "bytes": 1473,
+      "sha256": "37588f73d4d871454b82fdaab024028398c0d04be8a521e894c730b8bd3e19f8"
+    },
+    {
+      "path": "spatial-supplement-08-qualification.json",
+      "bytes": 1273,
+      "sha256": "6d4adb1de5e713f3659a95429a033c8aba63f1ebb3c9c025413792c89515e1bf"
+    },
+    {
+      "path": "spatial-supplement-08-webkit/screening.json",
+      "bytes": 29103,
+      "sha256": "704c3b511848593fa8d657ccdb748705085a8bae6008518b30e74890ae3e6925"
+    },
+    {
+      "path": "spatial-supplement-08/downloads.json",
+      "bytes": 1201,
+      "sha256": "274b6f3e18876d7507988df2f8d39a27a1072fcb95762febfbeafc73c3da6395"
+    }
+  ],
+  "omitted": [
+    {
+      "path": "spatial-control-review-4995558-01/left.png",
+      "bytes": 591533,
+      "sha256": "c47d8aa61021d26dd2b5e2b376a00f3e3f3bc04aeb0b8675e30e83d775448ff6"
+    },
+    {
+      "path": "spatial-control-review-4995558-01/right.png",
+      "bytes": 563242,
+      "sha256": "f333e8ec2c4cf6647bd09c0a7c19757c5975a96045542d42bf44afd9ec061185"
+    },
+    {
+      "path": "spatial-control-review-20669039-01/left.png",
+      "bytes": 1619648,
+      "sha256": "93c4f4936b64507e720ded57ed8677f9d1a8be7d005fbe1af1bac470ef6a78ef"
+    },
+    {
+      "path": "spatial-control-review-20669039-01/right.png",
+      "bytes": 723425,
+      "sha256": "f1c3bf4d6bf02f67e1cbad2a5cff209e95441e0c831f7ac35d080e4a27e7fd64"
+    },
+    {
+      "path": "spatial-supplement-07/pexels-28354416.jpg",
+      "bytes": 5074984,
+      "sha256": "e8bb96d852d22edf8adf791916ea189bb30b678ccca9ec397a82f5ad8af60de8"
+    },
+    {
+      "path": "spatial-supplement-07/pexels-4356958.jpg",
+      "bytes": 4185786,
+      "sha256": "2809c1c705291b597a72ab59ba07635fb9bc076bf1b1a89dcc260f23dc8c7767"
+    },
+    {
+      "path": "spatial-supplement-07/pexels-4995558.jpg",
+      "bytes": 2830887,
+      "sha256": "74cd089bb014adf9e75deedbe7a2c1d6ed27de545fafe8726b8460aca9068383"
+    },
+    {
+      "path": "spatial-supplement-07-chromium/pexels-28354416-portrait.png",
+      "bytes": 1279050,
+      "sha256": "34f39ba3848c9bb126785ce22ccd479deab6665b361df530aaf63b86eeeed738"
+    },
+    {
+      "path": "spatial-supplement-07-chromium/pexels-4356958-portrait.png",
+      "bytes": 1056810,
+      "sha256": "127c3c0ee1ad8048221614daec6f8aaef5a034b221b8cc9b5d5ddf6f7fdea76b"
+    },
+    {
+      "path": "spatial-supplement-07-chromium/pexels-4995558-left.png",
+      "bytes": 590725,
+      "sha256": "b740d4e7bf1aa4b43a5d2ab8d73183d438fa12ce2aa3ef714f376f4d22770caf"
+    },
+    {
+      "path": "spatial-supplement-07-chromium/pexels-4995558-portrait.png",
+      "bytes": 977144,
+      "sha256": "ea1e457a71e46ccb2c7a8570af5f447614bf8b375400cd91e3baad2279d404ac"
+    },
+    {
+      "path": "spatial-supplement-07-chromium/pexels-4995558-right.png",
+      "bytes": 562369,
+      "sha256": "aad5e10382c3d90bfe3f9b4b8421bd57fed2838e59a532a8e1a76609948e926e"
+    },
+    {
+      "path": "spatial-supplement-07-webkit/pexels-28354416-portrait.png",
+      "bytes": 1279050,
+      "sha256": "34f39ba3848c9bb126785ce22ccd479deab6665b361df530aaf63b86eeeed738"
+    },
+    {
+      "path": "spatial-supplement-07-webkit/pexels-4356958-portrait.png",
+      "bytes": 1056810,
+      "sha256": "127c3c0ee1ad8048221614daec6f8aaef5a034b221b8cc9b5d5ddf6f7fdea76b"
+    },
+    {
+      "path": "spatial-supplement-07-webkit/pexels-4995558-left.png",
+      "bytes": 590725,
+      "sha256": "b740d4e7bf1aa4b43a5d2ab8d73183d438fa12ce2aa3ef714f376f4d22770caf"
+    },
+    {
+      "path": "spatial-supplement-07-webkit/pexels-4995558-portrait.png",
+      "bytes": 977144,
+      "sha256": "ea1e457a71e46ccb2c7a8570af5f447614bf8b375400cd91e3baad2279d404ac"
+    },
+    {
+      "path": "spatial-supplement-07-webkit/pexels-4995558-right.png",
+      "bytes": 562369,
+      "sha256": "aad5e10382c3d90bfe3f9b4b8421bd57fed2838e59a532a8e1a76609948e926e"
+    },
+    {
+      "path": "spatial-supplement-08/pexels-20669039.jpg",
+      "bytes": 1580216,
+      "sha256": "e6e2d09f41c0dd0f972f16eff30a95157b575dcc52c8fa508f3c3ed24d9cfc81"
+    },
+    {
+      "path": "spatial-supplement-08/pexels-30390002.jpg",
+      "bytes": 731539,
+      "sha256": "db0abac6a273cb98cbcbcd3f6f7a6fd3803e514a633278150dc00b2d5803831f"
+    },
+    {
+      "path": "spatial-supplement-08-chromium/pexels-20669039-left.png",
+      "bytes": 1617108,
+      "sha256": "1162fa3e4717bf64e0a354e2cafc1d8ed3251c437b65096341a90f4e74570ae5"
+    },
+    {
+      "path": "spatial-supplement-08-chromium/pexels-20669039-portrait.png",
+      "bytes": 466446,
+      "sha256": "91a056755c76009de430e2c1dcf3a13caad92007e95427911595a21c78eda128"
+    },
+    {
+      "path": "spatial-supplement-08-chromium/pexels-20669039-right.png",
+      "bytes": 723499,
+      "sha256": "0c46791447b67ca9652bebedb894ae0a392443a6b83126665c6f24b22be637aa"
+    },
+    {
+      "path": "spatial-supplement-08-chromium/pexels-30390002-portrait.png",
+      "bytes": 686136,
+      "sha256": "c365dfd6747618f95493f3caedc21cd47916fef44920cc588a511c5383d96779"
+    },
+    {
+      "path": "spatial-supplement-08-webkit/pexels-20669039-left.png",
+      "bytes": 1617108,
+      "sha256": "1162fa3e4717bf64e0a354e2cafc1d8ed3251c437b65096341a90f4e74570ae5"
+    },
+    {
+      "path": "spatial-supplement-08-webkit/pexels-20669039-portrait.png",
+      "bytes": 466446,
+      "sha256": "91a056755c76009de430e2c1dcf3a13caad92007e95427911595a21c78eda128"
+    },
+    {
+      "path": "spatial-supplement-08-webkit/pexels-20669039-right.png",
+      "bytes": 723499,
+      "sha256": "0c46791447b67ca9652bebedb894ae0a392443a6b83126665c6f24b22be637aa"
+    },
+    {
+      "path": "spatial-supplement-08-webkit/pexels-30390002-portrait.png",
+      "bytes": 686136,
+      "sha256": "c365dfd6747618f95493f3caedc21cd47916fef44920cc588a511c5383d96779"
+    }
+  ]
+}

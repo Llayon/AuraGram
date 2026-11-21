@@ -1,0 +1,28 @@
+{
+  "baseline": "b75bbb254b06113cc09fad83169b8ed9cdc5530a",
+  "meaning": "Supplemental sequential selection; original-only assessments frozen before inference. Labels never inference seeds. Not biological groundtruth.",
+  "inputs": {
+    "tests/visual/lash-freeend2-sources.json": "88ca1a0514cfcb09604aae7ecf52ebf42f4388d407fe4b1c5e3eb5ca93c5a65f",
+    "tests/visual/lash-freeend2-crops.json": "04b5bbde8bf8c157ee3fec6ee4f75f140d9bb413b9a51e0d6fc6edefaac92ad5",
+    "tests/visual/lash-freeend2-primary-screen.json": "081f33824c0b4705303b6736d678adcbb6e4ef3322bd7a3db3f492004761d801",
+    "tests/visual/lash-freeend2-independent-labels.json": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810",
+    "tests/visual/out/freeend2-01-download/manifest.json": "e2e6ac6b4592bc6934c245ddb367b3058bbddd49808c4adf440f03a9b676bb57",
+    "tests/visual/out/freeend2-03-native/manifest.json": "76be026f00db10ce6474c85854b8087a896892b0632770f17da72b8bbce0b85a"
+  },
+  "sources": [
+    {
+      "file": "pexels-16720351.jpg",
+      "width": 4480,
+      "height": 6720,
+      "sha256": "925d272e71b809145f347cd8f6699486600db62dfed49f0188c6dc9d8f114ce8",
+      "bytes": 3239025
+    },
+    {
+      "file": "pexels-21792059.jpg",
+      "width": 2832,
+      "height": 4256,
+      "sha256": "f1f9fe785f1afed56f504fa3c0c06f22b1cabc95978cd912c999840217e15079",
+      "bytes": 1045359
+    }
+  ]
+}

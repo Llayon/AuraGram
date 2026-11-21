@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Координаты на оригинале</title>
+  <style>
+    :root { color-scheme:dark; font:15px system-ui,sans-serif; }
+    body { margin:0; background:#12151a; color:#e7ebef; }
+    main { max-width:1400px; margin:auto; padding:18px; }
+    h1 { font-size:1.35rem; margin:0 0 12px; }
+    .bar { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:10px; }
+    button,textarea,input { font:inherit; }
+    button { padding:6px 11px; }
+    output { color:#b8c8d9; }
+    #viewport { overflow:auto; height:60vh; min-height:240px; background:#080a0d; border:1px solid #414a55; }
+    #stage { position:relative; width:max-content; }
+    #photo { display:block; height:auto; image-orientation:from-image; cursor:crosshair; user-select:none; }
+    #overlay { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+    #points { box-sizing:border-box; width:100%; resize:vertical; margin-top:5px; font-family:monospace; }
+    .bottom { margin-top:10px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Координаты на оригинале</h1>
+  <div class="bar">
+    <label>Исходный JPEG <input id="source" type="file" accept="image/jpeg,.jpeg,.jpg"></label>
+    <output id="source-info" aria-live="polite"></output>
+  </div>
+  <div class="bar">
+    <button id="fit" type="button" disabled>Вписать</button>
+    <button id="actual" type="button" disabled>100%</button>
+    <button id="minus" type="button" aria-label="Уменьшить" disabled>−</button>
+    <button id="plus" type="button" aria-label="Увеличить" disabled>+</button>
+    <output id="zoom"></output>
+    <label><input id="close-polygon" type="checkbox"> Замкнуть полигон на экране</label>
+    <output id="coordinate"></output>
+  </div>
+  <div id="viewport" tabindex="0" aria-label="Оригинал снимка">
+    <div id="stage" hidden>
+      <img id="photo" alt="Выбранный оригинал" draggable="false">
+      <svg id="overlay" preserveAspectRatio="none" aria-hidden="true"></svg>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="bar">
+      <label for="points">Точки в пикселях исходника</label>
+      <button id="undo" type="button" disabled>Убрать последнюю</button>
+      <button id="clear" type="button" disabled>Очистить</button>
+      <button id="select" type="button" disabled>Выделить JSON</button>
+    </div>
+    <textarea id="points" rows="3" readonly>[]</textarea>
+  </div>
+</main>
+<script>
+  const byId = id => document.getElementById(id);
+  const photo = byId('photo'), viewport = byId('viewport'), stage = byId('stage'), overlay = byId('overlay');
+  const controls = ['fit','actual','minus','plus'].map(byId);
+  const pointControls = ['undo','clear','select'].map(byId);
+  const text = byId('points');
+  const namespace = 'http://www.w3.org/2000/svg';
+  let objectURL = null, scale = 1, points = [];
+
+  function renderPoints() {
+    overlay.replaceChildren();
+    if (points.length > 1) {
+      const tag = byId('close-polygon').checked && points.length > 2 ? 'polygon' : 'polyline';
+      const line = document.createElementNS(namespace, tag);
+      line.setAttribute('points', points.map(([x,y]) => `${x+.5},${y+.5}`).join(' '));
+      line.setAttribute('fill','none');
+      line.setAttribute('stroke','#41ebdd');
+      line.setAttribute('stroke-width','1.5');
+      line.setAttribute('vector-effect','non-scaling-stroke');
+      overlay.append(line);
+    }
+    for (const [x,y] of points) {
+      const dot = document.createElementNS(namespace,'circle');
+      dot.setAttribute('cx',x+.5);
+      dot.setAttribute('cy',y+.5);
+      dot.setAttribute('r',2.5/scale);
+      dot.setAttribute('fill','#ffe288');
+      overlay.append(dot);
+    }
+    text.value = JSON.stringify(points);
+    for (const button of pointControls) button.disabled = points.length===0;
+  }
+
+  function setZoom(next, keepCenter=false) {
+    const displayed = photo.getBoundingClientRect();
+    const x = (viewport.scrollLeft + Math.min(viewport.clientWidth,displayed.width)/2)/scale;
+    const y = (viewport.scrollTop + Math.min(viewport.clientHeight,displayed.height)/2)/scale;
+    scale = Math.min(8,Math.max(.01,next));
+    photo.style.width = `${photo.naturalWidth*scale}px`;
+    byId('zoom').textContent = `${Math.round(scale*100)}%`;
+    viewport.scrollLeft = keepCenter ? x*scale-viewport.clientWidth/2 : 0;
+    viewport.scrollTop = keepCenter ? y*scale-viewport.clientHeight/2 : 0;
+    renderPoints();
+  }
+  const fit = () => setZoom(Math.min(1,viewport.clientWidth/photo.naturalWidth,viewport.clientHeight/photo.naturalHeight));
+
+  byId('source').addEventListener('change', event => {
+    const file = event.target.files[0];
+    if (!file) return;
+    if (objectURL) URL.revokeObjectURL(objectURL);
+    for (const control of controls) control.disabled=true;
+    stage.hidden=true;
+    points=[];
+    renderPoints();
+    byId('source-info').textContent='Загрузка…';
+    byId('coordinate').textContent='';
+    byId('zoom').textContent='';
+    objectURL=URL.createObjectURL(file);
+    photo.onload=()=>{
+      const {naturalWidth:w,naturalHeight:h}=photo;
+      stage.hidden=false;
+      overlay.setAttribute('viewBox',`0 0 ${w} ${h}`);
+      byId('source-info').textContent=`${file.name} · ${w} × ${h} px`;
+      fit();
+      for (const control of controls) control.disabled=false;
+    };
+    photo.onerror=()=>{byId('source-info').textContent='Не удалось открыть изображение.';};
+    photo.src=objectURL;
+  });
+
+  function nativePoint(event) {
+    const box=photo.getBoundingClientRect();
+    return [Math.min(photo.naturalWidth-1,Math.max(0,Math.floor((event.clientX-box.left)*photo.naturalWidth/box.width))),
+      Math.min(photo.naturalHeight-1,Math.max(0,Math.floor((event.clientY-box.top)*photo.naturalHeight/box.height)))];
+  }
+  photo.addEventListener('pointermove',event=>{byId('coordinate').textContent=nativePoint(event).join(', ');});
+  photo.addEventListener('click',event=>{points.push(nativePoint(event));renderPoints();});
+  byId('fit').onclick=fit;
+  byId('actual').onclick=()=>setZoom(1,true);
+  byId('minus').onclick=()=>setZoom(scale/1.5,true);
+  byId('plus').onclick=()=>setZoom(scale*1.5,true);
+  byId('close-polygon').onchange=renderPoints;
+  byId('undo').onclick=()=>{points.pop();renderPoints();};
+  byId('clear').onclick=()=>{points=[];renderPoints();};
+  byId('select').onclick=()=>{text.focus();text.select();};
+</script>
+</body>
+</html>

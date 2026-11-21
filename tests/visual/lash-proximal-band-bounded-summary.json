@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-19",
+  "archive": "followup-proximal-band-bounded-20261119.zip",
+  "archiveSHA256": "65cde6819c829e452d41804df5d2dadd4b38170c4f8cefe3b7df1043655d81f8",
+  "bytes": 3597468,
+  "members": {
+    "distal-band-bounded-14297936-audit-01/chromium.json": "17ed02c7844dacabd539bbde5e307ecabf7831e203652d1d27f79f8f22309d59",
+    "distal-band-bounded-14297936-audit-01/webkit.json": "b740330f277fb425c76f37619f84097d4763a861ca097eca625fd23e7fa95b3e",
+    "distal-band-bounded-14297936-audit-01/protocol.json": "977b5e7cefea9deab502696170f030796a5a5b1467ea06ea4f0c5684b0fbef65",
+    "distal-band-bounded-14297936-repeat-01/chromium.json": "48b9919657ed49d27b7b72a2423ea3b95f5e315322ad1809b2013895b99b4607",
+    "distal-band-bounded-14297936-repeat-01/webkit.json": "dccafad8ddf255b6aa9c88fd3b837b775d4f53308344fa2b2ff2ced4e64725dd",
+    "distal-band-bounded-14297936-repeat-01/protocol.json": "977b5e7cefea9deab502696170f030796a5a5b1467ea06ea4f0c5684b0fbef65",
+    "distal-band-bounded-29117992-audit-01/chromium.json": "a32985a6c912a12cf5c47f2d0170c9587f776edca674dd9ebdad82cdd2c543eb",
+    "distal-band-bounded-29117992-audit-01/webkit.json": "b0bab9f77526e54601a81bd18e7e54af9e72391131338cf0da76dacede578391",
+    "distal-band-bounded-29117992-audit-01/protocol.json": "ddfe42b096eb25eba4bffc64dd3b052c97dcda869cd544b82fdc0813b3bac975",
+    "distal-band-bounded-29117992-repeat-01/chromium.json": "10a7586b5fe423bba41efc75f7d674dc109ecc722e4589db7d26bc3d823818fd",
+    "distal-band-bounded-29117992-repeat-01/webkit.json": "5c56cf6b5e567229760dd3e373917d4cd35c688213cc13d2f68f91e3f8c1a256",
+    "distal-band-bounded-29117992-repeat-01/protocol.json": "ddfe42b096eb25eba4bffc64dd3b052c97dcda869cd544b82fdc0813b3bac975",
+    "distal-band-bounded-14297936-summary.json": "92e8456a29f823cf967cf0c9d7ee8cfd8104a5ce2df3d9c0809c50c44dba3ef8",
+    "distal-band-bounded-29117992-summary.json": "d65c3fdb510e3f11d599c4e09396c3bad85ce87702e17972eb2651f1519d3bea",
+    "proximal-band-bounded-stress-01.json": "7d33cb819fe848dd184aaf6275d1c5e5bd27e3b3cf5053e7f433e1d6011cee3d",
+    "proximal-band-bounded-original-01.json": "f549f61fe6bf83ac2362d40472228cff4edb14cadf89ce3dcb13ac0d55f95f45",
+    "proximal-band-bounded-stress-inputs-01.json": "380fa8bda6798e76ea49054f3edeb9d2f2da7426d7f2224820a9d6935bd223a0",
+    "proximal-band-bounded-unit-01.txt": "12eb945011a4954fde669cbf22f1020ff34de1a752c1d7317a2a1e50223e1db6",
+    "proximal-band-bounded-browser-01/chromium.json": "1be214d5faa6c08b43903b2299ada5945e12267dfcd39a7368e1ab176dd35b20",
+    "proximal-band-bounded-browser-01/webkit.json": "53542ca2e02249a7a51d2d98e94f40d3ee762ec95032076993cfeac5f4e965d0",
+    "proximal-band-bounded-browser-01/protocol.json": "e436c6ceb5645276d11a90f0c2c54881c7bcd287caa5360fb6d4f520165945cc"
+  },
+  "realAmbiguousToCensored": {
+    "14297936": {
+      "chromium": {
+        "response": 7,
+        "transverseContrast": 8
+      },
+      "webkit": {
+        "transverseContrast": 4
+      }
+    },
+    "29117992": {
+      "chromium": {
+        "response": 1,
+        "transverseContrast": 1
+      },
+      "webkit": {
+        "response": 1,
+        "transverseContrast": 1
+      }
+    }
+  },
+  "noPriorVetoCleared": true,
+  "browser": {
+    "kind": "serialized-input-runtime-parity",
+    "inputSHA256": "380fa8bda6798e76ea49054f3edeb9d2f2da7426d7f2224820a9d6935bd223a0",
+    "cases": 70,
+    "repeatsPerEngine": 2,
+    "tolerance": 1e-12,
+    "inputs": {
+      "tests/visual/lash-proximal-ambiguity-matrix.mjs": "919c60b10741c008dd6053b016595662b7a6caf01ff212b09bfddcfd067c4a59",
+      "tests/visual/lash-shared-arc-proximal.mjs": "a274d858d34a04890f46f47e5b2c1aaa09406a3d2563dbb75c8e1dc3c74722d4",
+      "tests/visual/lash-proximal-budget-bound.mjs": "cdf0d1ffa0fe1a497e27850e45e3bacde2d7f9391caf0b5dbd22b7d2274edadc",
+      "tests/visual/lash-native-path.mjs": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325",
+      "tests/visual/lash-subpixel-probe.mjs": "9052961224a0ff4f4084e34ed2e82e9d51b3db5135799756e9c6e2b4795eb096",
+      "tests/visual/lash-subpixel-center.mjs": "ba75e2fa815139ac11ab045e46ebbea53e994a6fe280b43bec5ec29af0cfa44d",
+      "tests/visual/lash-endpoint-profile.mjs": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530",
+      "tests/visual/lash-native-shaft.mjs": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12",
+      "src/retouch/lashAnalysis.mjs": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d",
+      "tests/visual/lash-proximal-band-audit.mjs": "bb5211c647b1360074d2860a6c768f299135ec892c69afb18837042b3a028bd9"
+    },
+    "score": "transverseContrast",
+    "engines": {
+      "chromium": {
+        "version": "156.0.8078.4",
+        "exactRepeat": true,
+        "exactDecisions": true,
+        "exactNodeParity": true,
+        "maxNumericDifference": 0
+      },
+      "webkit": {
+        "version": "27.2",
+        "exactRepeat": true,
+        "exactDecisions": true,
+        "exactNodeParity": false,
+        "maxNumericDifference": 2.220446049250313e-15
+      }
+    }
+  }
+}

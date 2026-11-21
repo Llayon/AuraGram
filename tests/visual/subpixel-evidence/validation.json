@@ -1,0 +1,13 @@
+{
+  "realConfigurations": 36,
+  "seeded": 8,
+  "acceptedLinks": 52,
+  "controls": 14,
+  "rasterControls": 192,
+  "oldBudget": 36,
+  "newBudget": 184,
+  "engineTolerance": 1e-10,
+  "endpointApproved": 0,
+  "runtime": "UNCHANGED",
+  "release": "HOLD"
+}

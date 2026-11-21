@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-18",
+  "purpose": "Freeze source-only provisional endpoint regions and screening review before any lash detector use. Not independent benchmark approval.",
+  "inputs": {
+    "tests/visual/lash-spatial-labels-8537914.json": "d5e267f15e8c8cfd99afb1ab92fcca4cdb4b3c16a1f2f6211e0fbfdd11e30a7c",
+    "tests/visual/lash-spatial-supplement-06-summary.json": "dc5c89a12390550ca9d1eb05308471cad9f4965baf24ed38b0e729b3aa210e35"
+  },
+  "sourceSHA256": "e95443ea48ff678e4023e813e3d64e011e87b3082ba9006548edd0e87bf5d54b",
+  "sourceHashes": {
+    "pexels-14942933.jpg": "5cbcb52ee15c9112d1df08888518784eeb5ee8a31ef7315aab4b8998ccbe2bf5",
+    "pexels-8537914.jpg": "e95443ea48ff678e4023e813e3d64e011e87b3082ba9006548edd0e87bf5d54b",
+    "pexels-16473154.jpg": "9b9130358dbba22400331d17c6a72592dbb9ebbd72df46771a3b87f9b8a4dd71"
+  }
+}

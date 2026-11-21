@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-18",
+  "license": "https://www.pexels.com/license/",
+  "status": "reserve-not-qualified",
+  "policy": "Ordered reserve selected from official text metadata before FaceMesh. Seal image views and lash detector output. Readiness and different source IDs do not establish identity separation or annotations.",
+  "sources": [
+    {
+      "id": "8639179",
+      "file": "pexels-8639179.jpg",
+      "page": "https://www.pexels.com/photo/a-woman-looking-at-the-camera-8639179/",
+      "url": "https://images.pexels.com/photos/8639179/pexels-photo-8639179.jpeg?cs=srgb&fm=jpg",
+      "author": "Ron Lach",
+      "split": "validation",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "12577594",
+      "file": "pexels-12577594.jpg",
+      "page": "https://www.pexels.com/photo/a-woman-with-beautiful-face-looking-at-the-camera-12577594/",
+      "url": "https://images.pexels.com/photos/12577594/pexels-photo-12577594.jpeg?cs=srgb&fm=jpg",
+      "author": "Robie Davalos",
+      "split": "validation",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "5197865",
+      "file": "pexels-5197865.jpg",
+      "page": "https://www.pexels.com/photo/woman-looking-at-the-camera-5197865/",
+      "url": "https://images.pexels.com/photos/5197865/pexels-photo-5197865.jpeg?cs=srgb&fm=jpg",
+      "author": "Nothing Ahead",
+      "split": "validation",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "8668086",
+      "file": "pexels-8668086.jpg",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-woman-looking-at-the-camera-8668086/",
+      "url": "https://images.pexels.com/photos/8668086/pexels-photo-8668086.jpeg?cs=srgb&fm=jpg",
+      "author": "Ekaterina Nt",
+      "split": "validation",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "6454924",
+      "file": "pexels-6454924.jpg",
+      "page": "https://www.pexels.com/photo/a-close-up-shot-of-a-woman-with-wavy-hair-6454924/",
+      "url": "https://images.pexels.com/photos/6454924/pexels-photo-6454924.jpeg?cs=srgb&fm=jpg",
+      "author": "Olha Ruskykh",
+      "split": "validation",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "10260778",
+      "file": "pexels-10260778.jpg",
+      "page": "https://www.pexels.com/photo/a-beautiful-woman-with-long-hair-seriously-looking-at-the-camera-10260778/",
+      "url": "https://images.pexels.com/photos/10260778/pexels-photo-10260778.jpeg?cs=srgb&fm=jpg",
+      "author": "Beth Swart",
+      "split": "validation",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "8062780",
+      "file": "pexels-8062780.jpg",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-woman-with-messy-hair-looking-at-the-camera-8062780/",
+      "url": "https://images.pexels.com/photos/8062780/pexels-photo-8062780.jpeg?cs=srgb&fm=jpg",
+      "author": "Amir Esrafili",
+      "split": "validation",
+      "role": "hard-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "6314116",
+      "file": "pexels-6314116.jpg",
+      "page": "https://www.pexels.com/photo/a-woman-s-face-partially-covered-with-hair-6314116/",
+      "url": "https://images.pexels.com/photos/6314116/pexels-photo-6314116.jpeg?cs=srgb&fm=jpg",
+      "author": "Alexander Krivitskiy",
+      "split": "validation",
+      "role": "hard-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "3598852",
+      "file": "pexels-3598852.jpg",
+      "page": "https://www.pexels.com/photo/a-face-covered-with-hair-3598852/",
+      "url": "https://images.pexels.com/photos/3598852/pexels-photo-3598852.jpeg?cs=srgb&fm=jpg",
+      "author": "Chermiti Mohamed",
+      "split": "validation",
+      "role": "hard-lead",
+      "identityGroup": null
+    }
+  ]
+}

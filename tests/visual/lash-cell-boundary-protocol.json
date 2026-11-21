@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-18",
+  "stage": "development-native-localization-correction",
+  "hypothesis": "Quarter-pixel sampling quantization must not shrink the geometric cell's center-admissibility bound. Separate the unchanged sample grid/radius from the exact normal-line intersection with the original source cell.",
+  "policy": "Opt-in only. Keep ordered128-seed budget, selected distal cell, measured axis, source pixels, profile sampling positions, margin1.5, contrast floors and branch/gap guards unchanged. No wider source cell, alternate seed, tangent or retry. A newly admissible center does not grant ownership or terminal status.",
+  "checks": [
+    "Sampled profile values/offsets must be exactly unchanged between modes on the same input.",
+    "Default-mode traces must retain prior decisions.",
+    "Accepted centers stay strictly inside the original source-cell rectangle; centers outside still refuse.",
+    "Purely quantization-induced refusals may change only under the opt-in flag; all later guards remain active."
+  ],
+  "evaluation": "Controlled mechanism tests first, then fixed development source14297936 in both engines. Labels used post hoc only. No held-out evaluation or threshold tuning."
+}

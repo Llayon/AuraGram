@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-18",
+  "archive": "followup-proximal-band-browser-20261118.zip",
+  "archiveSHA256": "aeb86227af83ea49869674da86d1c02805140fb2f4dbeb5b37bfaea71f3fe642",
+  "bytes": 137706,
+  "protocol": {
+    "kind": "serialized-input-runtime-parity",
+    "inputSHA256": "6f42c1b63bee2cb0369ac214cc9e41279c413a7136a2875936e864f5a6a39e40",
+    "cases": 31,
+    "repeatsPerEngine": 2,
+    "tolerance": 1e-12,
+    "inputs": {
+      "tests/visual/lash-proximal-ambiguity-matrix.mjs": "90ac4860ab38035a2cd6fe7f8de11dd2fecc334f294d1b7789ceab986fdb2fd4",
+      "tests/visual/lash-shared-arc-proximal.mjs": "a274d858d34a04890f46f47e5b2c1aaa09406a3d2563dbb75c8e1dc3c74722d4",
+      "tests/visual/lash-proximal-budget-bound.mjs": "cdf0d1ffa0fe1a497e27850e45e3bacde2d7f9391caf0b5dbd22b7d2274edadc",
+      "tests/visual/lash-native-path.mjs": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325",
+      "tests/visual/lash-subpixel-probe.mjs": "9052961224a0ff4f4084e34ed2e82e9d51b3db5135799756e9c6e2b4795eb096",
+      "tests/visual/lash-subpixel-center.mjs": "ba75e2fa815139ac11ab045e46ebbea53e994a6fe280b43bec5ec29af0cfa44d",
+      "tests/visual/lash-endpoint-profile.mjs": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530",
+      "tests/visual/lash-native-shaft.mjs": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12",
+      "src/retouch/lashAnalysis.mjs": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d",
+      "tests/visual/lash-proximal-band-audit.mjs": "c03ddd6fda9744ba9b2d59f51489c8e53e06a2ece3e3a7571f52c4a31a56d533"
+    },
+    "engines": {
+      "chromium": {
+        "version": "156.0.8078.4",
+        "exactRepeat": true,
+        "exactDecisions": true,
+        "exactNodeParity": true,
+        "maxNumericDifference": 0
+      },
+      "webkit": {
+        "version": "27.2",
+        "exactRepeat": true,
+        "exactDecisions": true,
+        "exactNodeParity": false,
+        "maxNumericDifference": 2.220446049250313e-15
+      }
+    }
+  },
+  "firstAttempt": "Exact numeric comparison failed in WebKit. Raw results and failure retained.",
+  "members": {
+    "proximal-band-browser-inputs-01.json": "6f42c1b63bee2cb0369ac214cc9e41279c413a7136a2875936e864f5a6a39e40",
+    "proximal-band-browser-matrix-01.json": "5682f50e6b5848874cd52efefcdcf236e094cd1946af8629d6cb99f78d3b0dad",
+    "proximal-band-browser-01/chromium.json": "4d23209019e137359be1198ad89eb7edf38fbdb1df0ae5eedbcd635f8ed94ab4",
+    "proximal-band-browser-01/webkit.json": "b012dfea9e88f56c6c9bdfd52e3d2158f375a5686479138f6830a8cfb6e57f0d",
+    "proximal-band-browser-01/failure.json": "fb7798e64812f733da1c5e43144e7c3358ad9e3e8bc196b3f42121a3def10a75",
+    "proximal-band-browser-02/chromium.json": "4d23209019e137359be1198ad89eb7edf38fbdb1df0ae5eedbcd635f8ed94ab4",
+    "proximal-band-browser-02/webkit.json": "b012dfea9e88f56c6c9bdfd52e3d2158f375a5686479138f6830a8cfb6e57f0d",
+    "proximal-band-browser-02/protocol.json": "80fca50430858e0da0fd1a7a65886fd51f08a435d8a8d36060307a3554f73f6d"
+  }
+}

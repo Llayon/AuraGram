@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-16",
+  "purpose": "Original-only uncertainty controls frozen before detector use; no eligible positive tips",
+  "inputs": {
+    "tests/visual/lash-spatial-control-29117992.json": "aebe247878d9a1079b7ded0ffb53699da0610bf0f65a5c0516998c629ec579a9",
+    "tests/visual/lash-spatial-control-14818485.json": "c7139ac722af4e14859748fa1942f957719b1d4ce3c9869ca5da0de16dd65e93"
+  },
+  "sourceHashes": {
+    "pexels-29117992.jpg": "aa8fa316fb9db9a671778224185ac56e3c9eb8852ae3d8c5839d623708118a79",
+    "pexels-14818485.jpg": "491f631d2cbe453c9ea6fca37ebf7410b21763687f9dbfbf271d7a6baf536965"
+  }
+}

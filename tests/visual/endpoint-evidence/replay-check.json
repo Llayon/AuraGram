@@ -1,0 +1,14 @@
+[
+  {
+    "engine": "chromium",
+    "cases": 3,
+    "allNativeAndCoarseMeasurementsExact": true,
+    "allOffsetAndCurveMeasurementsExact": true
+  },
+  {
+    "engine": "webkit",
+    "cases": 3,
+    "allNativeAndCoarseMeasurementsExact": true,
+    "allOffsetAndCurveMeasurementsExact": true
+  }
+]

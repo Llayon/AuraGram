@@ -1,0 +1,404 @@
+{
+  "schema": "spatial-original-annotation-v1",
+  "file": "pexels-14297936.jpg",
+  "sourceSHA256": "237333fc947c0e4abe0ce0355fbc7f439e8bc3a5b05e6f1a5a8526c93318f948",
+  "coordinateSpace": "original-source-pixels",
+  "originalOnly": true,
+  "detectorExecuted": false,
+  "reviewer": "primary-agent-original-only-visual-review",
+  "reviewStatus": "provisional-needs-independent-critique",
+  "role": "unqualified-positive-lead",
+  "eyes": {
+    "left": {
+      "cropRect": [
+        2455,
+        1995,
+        957,
+        677
+      ],
+      "qualification": "insufficient-tips",
+      "tips": [
+        {
+          "id": "left-1",
+          "region": [
+            [
+              3064,
+              2177
+            ],
+            [
+              3082,
+              2177
+            ],
+            [
+              3082,
+              2195
+            ],
+            [
+              3064,
+              2195
+            ]
+          ],
+          "observedPath": [
+            [
+              3050,
+              2236
+            ],
+            [
+              3061,
+              2212
+            ],
+            [
+              3073,
+              2186
+            ]
+          ],
+          "directionRange": [
+            -80,
+            -45
+          ],
+          "uncertainty": "Engineering visual estimate, approximately +/-9 native px at end. Shaft ownership through clumped root is unproven; interval in degrees atan2(dy,dx), y down."
+        },
+        {
+          "id": "left-2",
+          "region": [
+            [
+              3013,
+              2204
+            ],
+            [
+              3031,
+              2204
+            ],
+            [
+              3031,
+              2222
+            ],
+            [
+              3013,
+              2222
+            ]
+          ],
+          "observedPath": [
+            [
+              2995,
+              2240
+            ],
+            [
+              3007,
+              2225
+            ],
+            [
+              3022,
+              2213
+            ]
+          ],
+          "directionRange": [
+            -65,
+            -20
+          ],
+          "uncertainty": "Engineering visual estimate, approximately +/-9 native px at end. Shaft ownership through clumped root is unproven; interval in degrees atan2(dy,dx), y down."
+        },
+        {
+          "id": "left-3",
+          "region": [
+            [
+              2938,
+              2202
+            ],
+            [
+              2956,
+              2202
+            ],
+            [
+              2956,
+              2220
+            ],
+            [
+              2938,
+              2220
+            ]
+          ],
+          "observedPath": [
+            [
+              2946,
+              2240
+            ],
+            [
+              2945,
+              2227
+            ],
+            [
+              2947,
+              2211
+            ]
+          ],
+          "directionRange": [
+            -110,
+            -70
+          ],
+          "uncertainty": "Engineering visual estimate, approximately +/-9 native px at end. Shaft ownership through clumped root is unproven; interval in degrees atan2(dy,dx), y down."
+        }
+      ],
+      "ambiguities": [
+        {
+          "region": [
+            [
+              2845,
+              2220
+            ],
+            [
+              3215,
+              2220
+            ],
+            [
+              3275,
+              2335
+            ],
+            [
+              2835,
+              2305
+            ]
+          ],
+          "reason": "Dense clumped/crossing proximal structures; same-fiber ownership not established",
+          "expected": "abstain"
+        }
+      ]
+    },
+    "right": {
+      "cropRect": [
+        1246,
+        1657,
+        905,
+        831
+      ],
+      "qualification": "count-only-provisional",
+      "tips": [
+        {
+          "id": "right-1",
+          "region": [
+            [
+              1482,
+              1879
+            ],
+            [
+              1500,
+              1879
+            ],
+            [
+              1500,
+              1897
+            ],
+            [
+              1482,
+              1897
+            ]
+          ],
+          "observedPath": [
+            [
+              1546,
+              1952
+            ],
+            [
+              1519,
+              1922
+            ],
+            [
+              1491,
+              1888
+            ]
+          ],
+          "directionRange": [
+            -145,
+            -110
+          ],
+          "uncertainty": "Engineering visual estimate, approximately +/-9 native px at end. Shaft ownership through clumped root is unproven; interval in degrees atan2(dy,dx), y down."
+        },
+        {
+          "id": "right-2",
+          "region": [
+            [
+              1567,
+              1858
+            ],
+            [
+              1585,
+              1858
+            ],
+            [
+              1585,
+              1876
+            ],
+            [
+              1567,
+              1876
+            ]
+          ],
+          "observedPath": [
+            [
+              1601,
+              1945
+            ],
+            [
+              1584,
+              1904
+            ],
+            [
+              1576,
+              1867
+            ]
+          ],
+          "directionRange": [
+            -115,
+            -80
+          ],
+          "uncertainty": "Engineering visual estimate, approximately +/-9 native px at end. Shaft ownership through clumped root is unproven; interval in degrees atan2(dy,dx), y down."
+        },
+        {
+          "id": "right-3",
+          "region": [
+            [
+              1620,
+              1873
+            ],
+            [
+              1638,
+              1873
+            ],
+            [
+              1638,
+              1891
+            ],
+            [
+              1620,
+              1891
+            ]
+          ],
+          "observedPath": [
+            [
+              1629,
+              1949
+            ],
+            [
+              1630,
+              1912
+            ],
+            [
+              1629,
+              1882
+            ]
+          ],
+          "directionRange": [
+            -110,
+            -70
+          ],
+          "uncertainty": "Engineering visual estimate, approximately +/-9 native px at end. Shaft ownership through clumped root is unproven; interval in degrees atan2(dy,dx), y down."
+        },
+        {
+          "id": "right-4",
+          "region": [
+            [
+              1662,
+              1894
+            ],
+            [
+              1680,
+              1894
+            ],
+            [
+              1680,
+              1912
+            ],
+            [
+              1662,
+              1912
+            ]
+          ],
+          "observedPath": [
+            [
+              1655,
+              1969
+            ],
+            [
+              1664,
+              1936
+            ],
+            [
+              1671,
+              1903
+            ]
+          ],
+          "directionRange": [
+            -90,
+            -55
+          ],
+          "uncertainty": "Engineering visual estimate, approximately +/-9 native px at end. Shaft ownership through clumped root is unproven; interval in degrees atan2(dy,dx), y down."
+        },
+        {
+          "id": "right-5",
+          "region": [
+            [
+              1689,
+              1909
+            ],
+            [
+              1707,
+              1909
+            ],
+            [
+              1707,
+              1927
+            ],
+            [
+              1689,
+              1927
+            ]
+          ],
+          "observedPath": [
+            [
+              1679,
+              1978
+            ],
+            [
+              1690,
+              1946
+            ],
+            [
+              1698,
+              1918
+            ]
+          ],
+          "directionRange": [
+            -95,
+            -50
+          ],
+          "uncertainty": "Engineering visual estimate, approximately +/-9 native px at end. Shaft ownership through clumped root is unproven; interval in degrees atan2(dy,dx), y down."
+        }
+      ],
+      "ambiguities": [
+        {
+          "region": [
+            [
+              1461,
+              1922
+            ],
+            [
+              1746,
+              1922
+            ],
+            [
+              1796,
+              2022
+            ],
+            [
+              1396,
+              2032
+            ]
+          ],
+          "reason": "Dense clumped/crossing proximal structures; same-fiber ownership not established",
+          "expected": "abstain"
+        }
+      ]
+    }
+  },
+  "note": "Do not count as a qualified positive: left count 3, right count 5 provisional. Labels may only score future outputs, never seed or direct tracing."
+}

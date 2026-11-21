@@ -1,0 +1,66 @@
+{
+  "source": "pexels-11383300.jpg",
+  "originalRecordsPreserved": true,
+  "stableExcludingTiming": true,
+  "labelsUsedPosthocOnly": true,
+  "inputs": {
+    "tests/visual/lash-spatial-case-11383300.json": "1960d97608ae1e5d18144a36abb28d653b6ad8f1498f4c2ac6467536dc971984",
+    "tests/visual/lash-spatial-labels-11383300.freeze.json": "1adfb51c645bb344f643d58bd0858a28318948ce245e36584c3509a3f9448b2b",
+    "tests/visual/lash-spatial-labels-11383300.json": "048cbdb832d33be9fe2684c3bb312296a69732175cc707146827a9b5693eff84",
+    "tests\\visual\\out\\shared-arc-11383300-baseline-01\\protocol.json": "5613f7f82e2c351a232e497c2a621716002625bd3e0b971f9198a98595afcae9",
+    "tests\\visual\\out\\shared-arc-11383300-probe-01\\protocol.json": "6a5c7b3a84f22bce83e2bd33ea466ca989fb6bac5b43f825871f6a6562dbacb1",
+    "tests\\visual\\out\\shared-arc-11383300-repeat-01\\protocol.json": "6a5c7b3a84f22bce83e2bd33ea466ca989fb6bac5b43f825871f6a6562dbacb1",
+    "tests\\visual\\out\\shared-arc-11383300-baseline-01\\chromium.json": "789307af62c395c13b18e070adcc6e6f83d4fbc0c8f19328dfa84c808a5b2829",
+    "tests\\visual\\out\\shared-arc-11383300-probe-01\\chromium.json": "138decf77427385ae6c617dac0fed63550028559074ce86718f50d586a6263ce",
+    "tests\\visual\\out\\shared-arc-11383300-repeat-01\\chromium.json": "30d1cf3ccb4fa2fbcab5c2e65c373b1ab613bf392019584d1a353dc33a6f1a63",
+    "tests\\visual\\out\\spatial-supplement-04-chromium\\screening.json": "0479b15d09136824994bf98e0f752950de3b977a083c9a9ee02a74e363265b4a",
+    "tests\\visual\\out\\shared-arc-11383300-baseline-01\\webkit.json": "62c3f7013842e41669b502ebd6f303c61ec75071f6d1a81f92e2e92cf678d557",
+    "tests\\visual\\out\\shared-arc-11383300-probe-01\\webkit.json": "c2a374fc66a32d2986cde80dd7db3965f4d84b8b176841c8323b8841b75f61b7",
+    "tests\\visual\\out\\shared-arc-11383300-repeat-01\\webkit.json": "9c4b54b857944d6f63fdcd7f38a016e52eb24ea374f1daa06f0031fbcf011dc4",
+    "tests\\visual\\out\\spatial-supplement-04-webkit\\screening.json": "d4d362a62959422ca05a47be78f7a031910d79cd84c844c59d96eb5669f5297a"
+  },
+  "engines": {
+    "chromium": {
+      "left": {
+        "observedStarts": 0,
+        "reasons": {},
+        "observedInAmbiguity": 0,
+        "attempted": 0,
+        "gateArrivals": 0,
+        "maxAcceptedProximalArc": 0,
+        "attempts": []
+      },
+      "right": {
+        "observedStarts": 5,
+        "reasons": {
+          "proximal-gate-beyond-budget": 5
+        },
+        "observedInAmbiguity": 0,
+        "attempted": 0,
+        "gateArrivals": 0,
+        "maxAcceptedProximalArc": 0,
+        "attempts": []
+      }
+    },
+    "webkit": {
+      "left": {
+        "observedStarts": 0,
+        "reasons": {},
+        "observedInAmbiguity": 0,
+        "attempted": 0,
+        "gateArrivals": 0,
+        "maxAcceptedProximalArc": 0,
+        "attempts": []
+      },
+      "right": {
+        "observedStarts": 0,
+        "reasons": {},
+        "observedInAmbiguity": 0,
+        "attempted": 0,
+        "gateArrivals": 0,
+        "maxAcceptedProximalArc": 0,
+        "attempts": []
+      }
+    }
+  }
+}

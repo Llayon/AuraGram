@@ -1,0 +1,151 @@
+{
+  "date": "2026-11-18",
+  "archive": "followup-proximal-band-stress-20261118.zip",
+  "archiveSHA256": "2515b4fbd2f2d8d756f4514fd4b76015fc5fba58bb5c04b399148550c0987025",
+  "members": {
+    "proximal-band-stress-01.json": "d3f1b4b730c5295486a4fd8287a25783fde61c40eed309b9f7c85d219755a0ba",
+    "proximal-band-stress-inputs-01.json": "cd369868c7b25f8d62d9ef29a97bf2a8f789e40660ecd7872d16f5032edb419b",
+    "proximal-band-stress-browser-01/chromium.json": "91c3e1e2868246a0b533ae22f47062d30217014bce3803b22ef3574c29742986",
+    "proximal-band-stress-browser-01/webkit.json": "d761a04eee873f6f4dcff68af7bbabe8e3a14426062bec6ba2aea032fab95d56",
+    "proximal-band-stress-browser-01/protocol.json": "d8498e6c61e004aff2d8da2790419795c1a901fbfa82f4dbaf52d293f55cbf16"
+  },
+  "nodeRepeatByteIdentical": true,
+  "originalMatrixRowsPreserved": true,
+  "counts": {
+    "single": {
+      "cases": 4,
+      "gateArrivals": 4,
+      "reasons": {
+        "proximal-gate": 4
+      },
+      "bandAudit": {
+        "no-separated-band-observed": 4
+      },
+      "contrastAudit": {
+        "refusals": 0,
+        "newRefusals": 0,
+        "lostRefusals": 0
+      }
+    },
+    "gap": {
+      "cases": 4,
+      "gateArrivals": 0,
+      "reasons": {
+        "weak-valley": 4
+      }
+    },
+    "crossing": {
+      "cases": 36,
+      "gateArrivals": 18,
+      "reasons": {
+        "proximal-gate": 18,
+        "search-boundary": 5,
+        "unconfirmed-dense-link": 4,
+        "turn-bound": 7,
+        "multiple-valleys": 2
+      },
+      "bandAudit": {
+        "multiple-supported-bands": 18
+      },
+      "contrastAudit": {
+        "refusals": 18,
+        "newRefusals": 0,
+        "lostRefusals": 0
+      }
+    },
+    "fork": {
+      "cases": 36,
+      "gateArrivals": 14,
+      "reasons": {
+        "proximal-gate": 14,
+        "turn-bound": 2,
+        "search-boundary": 17,
+        "unconfirmed-dense-link": 1,
+        "multiple-valleys": 2
+      },
+      "bandAudit": {
+        "multiple-supported-bands": 8,
+        "no-separated-band-observed": 6
+      },
+      "contrastAudit": {
+        "refusals": 11,
+        "newRefusals": 3,
+        "lostRefusals": 0
+      }
+    },
+    "parallel": {
+      "cases": 36,
+      "gateArrivals": 34,
+      "reasons": {
+        "proximal-gate": 34,
+        "search-boundary": 1,
+        "no-observed-distal-start": 1
+      },
+      "bandAudit": {
+        "no-separated-band-observed": 18,
+        "multiple-supported-bands": 16
+      },
+      "contrastAudit": {
+        "refusals": 16,
+        "newRefusals": 0,
+        "lostRefusals": 0
+      }
+    }
+  },
+  "uncaughtForks": [
+    {
+      "kind": "fork",
+      "slope": 0.8,
+      "strength": 0.25,
+      "phase": -0.4
+    },
+    {
+      "kind": "fork",
+      "slope": 0.8,
+      "strength": 0.25,
+      "phase": -0.125
+    },
+    {
+      "kind": "fork",
+      "slope": 0.8,
+      "strength": 0.25,
+      "phase": 0.125
+    }
+  ],
+  "browser": {
+    "kind": "serialized-input-runtime-parity",
+    "inputSHA256": "cd369868c7b25f8d62d9ef29a97bf2a8f789e40660ecd7872d16f5032edb419b",
+    "cases": 70,
+    "repeatsPerEngine": 2,
+    "tolerance": 1e-12,
+    "inputs": {
+      "tests/visual/lash-proximal-ambiguity-matrix.mjs": "919c60b10741c008dd6053b016595662b7a6caf01ff212b09bfddcfd067c4a59",
+      "tests/visual/lash-shared-arc-proximal.mjs": "a274d858d34a04890f46f47e5b2c1aaa09406a3d2563dbb75c8e1dc3c74722d4",
+      "tests/visual/lash-proximal-budget-bound.mjs": "cdf0d1ffa0fe1a497e27850e45e3bacde2d7f9391caf0b5dbd22b7d2274edadc",
+      "tests/visual/lash-native-path.mjs": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325",
+      "tests/visual/lash-subpixel-probe.mjs": "9052961224a0ff4f4084e34ed2e82e9d51b3db5135799756e9c6e2b4795eb096",
+      "tests/visual/lash-subpixel-center.mjs": "ba75e2fa815139ac11ab045e46ebbea53e994a6fe280b43bec5ec29af0cfa44d",
+      "tests/visual/lash-endpoint-profile.mjs": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530",
+      "tests/visual/lash-native-shaft.mjs": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12",
+      "src/retouch/lashAnalysis.mjs": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d",
+      "tests/visual/lash-proximal-band-audit.mjs": "dc9758af04799339e75cf187dfcec485cb56b2f3ab645496e3aea7c497327c6f"
+    },
+    "score": "transverseContrast",
+    "engines": {
+      "chromium": {
+        "version": "156.0.8078.4",
+        "exactRepeat": true,
+        "exactDecisions": true,
+        "exactNodeParity": true,
+        "maxNumericDifference": 0
+      },
+      "webkit": {
+        "version": "27.2",
+        "exactRepeat": true,
+        "exactDecisions": true,
+        "exactNodeParity": false,
+        "maxNumericDifference": 1.7763568394002505e-15
+      }
+    }
+  }
+}

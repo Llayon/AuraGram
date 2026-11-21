@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-14",
+  "detectorExecuted": false,
+  "validationOpened": false,
+  "inputs": {
+    "chromium": {
+      "file": "tests/visual/out/spatial-supplement-screen-chromium-03/screening.json",
+      "sha256": "d4dbe6f5b31cafa4be2d79dd4b394336e6975bc09335cab6c845cc0810949ce8"
+    },
+    "webkit": {
+      "file": "tests/visual/out/spatial-supplement-screen-webkit-03/screening.json",
+      "sha256": "a82c060779e2acc78180d4bda17c6fecd0c583ab30899e08dc929a84edabb4f0"
+    }
+  },
+  "sources": [
+    {
+      "file": "pexels-4456732.jpg",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-a-beautiful-woman-s-face-4456732/",
+      "author": "Nataliya Vaitkevich",
+      "sha256": "5e212045cfe1e4e9a0d7a283f9e098bd732b2ec40a37fb79ce708b680324a8a4",
+      "width": 2617,
+      "height": 3925,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "review": "Dark upper band and soft/partially shadowed endings; five clear upper tips on a selected eye not established.",
+      "qualifiedPositive": false
+    },
+    {
+      "file": "pexels-4672290.jpg",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-a-woman-4672290/",
+      "author": "Anna Shvets",
+      "sha256": "8887432f96c46502b97caa16fd10967a77a2ef67891e6c20a44b223fb517b5ec",
+      "width": 6240,
+      "height": 4160,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "review": "Open eyes with bright/low-contrast upper hairs on one eye and defocused contralateral eye. Existing dark-valley evidence is not applicable to every bright structure; provisional scope review needed.",
+      "qualifiedPositive": false
+    },
+    {
+      "file": "pexels-7737959.jpg",
+      "page": "https://www.pexels.com/photo/a-close-up-shot-of-a-womans-face-7737959/",
+      "author": null,
+      "sha256": "963e350fbbfd28cb7d51cc311ea380bccf6d38ed614964d2167fbd21cf67ba20",
+      "width": 2848,
+      "height": 4272,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "review": "Eyes closed; hard-control lead only.",
+      "qualifiedPositive": false
+    },
+    {
+      "file": "pexels-16778620.jpg",
+      "page": "https://www.pexels.com/photo/portrait-of-man-16778620/",
+      "author": "Estevam Foto",
+      "sha256": "954662b1f9163a3a72f75c5fe751d5d0ea6504adec4f52a336fee41aa80128ef",
+      "width": 3327,
+      "height": 5000,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "review": "Open eyes but image is soft at native resolution; five independently distinct upper endings not established.",
+      "qualifiedPositive": false
+    },
+    {
+      "file": "pexels-9157920.jpg",
+      "page": "https://www.pexels.com/photo/man-in-gray-shirt-9157920/",
+      "author": "Valeria Boltneva",
+      "sha256": "720bef5c5cd9b4b19afff6108404358656bf43d2e820f49b9cd5512b9e2472b9",
+      "width": 4480,
+      "height": 6720,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "no_face"
+      },
+      "review": "Five provisional single-eye labels frozen; other eye excluded for severe defocus. WebKit no_face, native permitted-region audit and independent critique pending. Not a qualified positive.",
+      "qualifiedPositive": false
+    },
+    {
+      "file": "pexels-11396392.jpg",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-man-s-face-11396392/",
+      "author": null,
+      "sha256": "b8c82a414e84c4bf5dea6663187683182a6fadc5b87649ae7fa3fe27bc5833ae",
+      "width": 4000,
+      "height": 6000,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "review": "Open downcast eyes with uneven green lighting; five unambiguous upper endings not established.",
+      "qualifiedPositive": false
+    }
+  ],
+  "provisionalLabelScope": {
+    "file": "pexels-9157920.jpg",
+    "side": "left",
+    "labelSHA256": "562922b1fa34b409d601dbfa23df194669f4c6348a2c5def2b627ad4f0353518",
+    "method": "Geometry-only centre checks against necessary baseline analysis constraints; no image analysis, tip generation, crossing classifier or final render-mask eligibility proof",
+    "scope": [
+      {
+        "id": "left-1",
+        "centerSource": {
+          "x": 2450,
+          "y": 2094
+        },
+        "signedLidDistanceROI": 67.64643088363262,
+        "baselineBandHROI": 32.10422871106378,
+        "browSampleClearanceROI": 17.164054406569228,
+        "insideAnalyzerBrowExclusion": true,
+        "insideEyeOpening": false,
+        "insideInnerCornerExclusion": false,
+        "outsideBaselineAnalysisBand": true
+      },
+      {
+        "id": "left-2",
+        "centerSource": {
+          "x": 2525,
+          "y": 2125
+        },
+        "signedLidDistanceROI": 47.26295161235026,
+        "baselineBandHROI": 32.10422871106378,
+        "browSampleClearanceROI": 31.778378621223748,
+        "insideAnalyzerBrowExclusion": false,
+        "insideEyeOpening": false,
+        "insideInnerCornerExclusion": false,
+        "outsideBaselineAnalysisBand": true
+      },
+      {
+        "id": "left-3",
+        "centerSource": {
+          "x": 2584,
+          "y": 2142
+        },
+        "signedLidDistanceROI": 40.975639583551605,
+        "baselineBandHROI": 32.10422871106378,
+        "browSampleClearanceROI": 45.83794661732807,
+        "insideAnalyzerBrowExclusion": false,
+        "insideEyeOpening": false,
+        "insideInnerCornerExclusion": false,
+        "outsideBaselineAnalysisBand": true
+      },
+      {
+        "id": "left-4",
+        "centerSource": {
+          "x": 2615,
+          "y": 2172
+        },
+        "signedLidDistanceROI": 30.85763740530142,
+        "baselineBandHROI": 32.10422871106378,
+        "browSampleClearanceROI": 57.244039509507374,
+        "insideAnalyzerBrowExclusion": false,
+        "insideEyeOpening": false,
+        "insideInnerCornerExclusion": false,
+        "outsideBaselineAnalysisBand": false
+      },
+      {
+        "id": "left-5",
+        "centerSource": {
+          "x": 2648,
+          "y": 2191
+        },
+        "signedLidDistanceROI": 23.337758298857437,
+        "baselineBandHROI": 32.10422871106378,
+        "browSampleClearanceROI": 59.60145328311055,
+        "insideAnalyzerBrowExclusion": false,
+        "insideEyeOpening": false,
+        "insideInnerCornerExclusion": false,
+        "outsideBaselineAnalysisBand": false
+      }
+    ]
+  },
+  "decision": "DATA-INSUFFICIENT / LENGTH HOLD"
+}

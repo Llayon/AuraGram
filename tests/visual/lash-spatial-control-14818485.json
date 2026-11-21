@@ -1,0 +1,57 @@
+{
+  "schema": "spatial-original-annotation-v1",
+  "file": "pexels-14818485.jpg",
+  "sourceSHA256": "491f631d2cbe453c9ea6fca37ebf7410b21763687f9dbfbf271d7a6baf536965",
+  "coordinateSpace": "original-source-pixels",
+  "originalOnly": true,
+  "detectorExecuted": false,
+  "reviewer": "primary-agent-original-only-visual-review",
+  "reviewStatus": "provisional-needs-independent-critique",
+  "role": "hard-control-lead",
+  "eyes": {
+    "left": {
+      "cropRect": [
+        2728,
+        266,
+        1624,
+        1119
+      ],
+      "tips": [],
+      "annotationExhaustive": false,
+      "ambiguities": [
+        {
+          "region": [
+            [
+              2728,
+              266
+            ],
+            [
+              4352,
+              266
+            ],
+            [
+              4352,
+              1385
+            ],
+            [
+              2728,
+              1385
+            ]
+          ],
+          "reason": "Visible hair overlap: no free lash ending or same-fiber connection may be inferred through this region. Region is an approximate engineering uncertainty annotation, not exhaustive segmentation."
+        }
+      ]
+    },
+    "right": {
+      "cropRect": [
+        887,
+        260,
+        1469,
+        1163
+      ],
+      "tips": [],
+      "annotationExhaustive": false,
+      "ambiguities": []
+    }
+  }
+}

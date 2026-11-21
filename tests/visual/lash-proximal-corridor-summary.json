@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-14",
+  "kind": "development-diagnostic-not-recognition",
+  "decision": "No component candidates; no association change; LENGTH HOLD",
+  "sourceGraphArchivedAfterDigestVerification": true,
+  "annotationInput": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "side": "left",
+      "deterministic": true,
+      "records": 33,
+      "statusCounts": {
+        "not-inspected": 29,
+        "ambiguous": 1,
+        "censored": 3
+      },
+      "reasons": {
+        "no-observed-proximal-axis": 29,
+        "multiple-corridor-bands": 1,
+        "corridor-side-boundary": 3
+      },
+      "componentCandidates": 0,
+      "associationsGranted": 0,
+      "sideCensoredAtFirstRow": 3,
+      "maxObservedCorridorAhead": 0.75,
+      "artifacts": [
+        {
+          "file": "tests/visual/out/proximal-corridor-01/chromium.json",
+          "sha256": "52df6d50e583939988d4334f6b43bfeb1614bc0c8ca11e48587931147c59bec7"
+        },
+        {
+          "file": "tests/visual/out/proximal-corridor-02/chromium.json",
+          "sha256": "52df6d50e583939988d4334f6b43bfeb1614bc0c8ca11e48587931147c59bec7"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "side": "right",
+      "deterministic": true,
+      "records": 144,
+      "statusCounts": {
+        "not-inspected": 89,
+        "censored": 53,
+        "ambiguous": 2
+      },
+      "reasons": {
+        "no-observed-proximal-axis": 73,
+        "corridor-side-boundary": 52,
+        "multiple-corridor-bands": 2,
+        "shared-arc-budget": 1,
+        "original-seed-budget": 16
+      },
+      "componentCandidates": 0,
+      "associationsGranted": 0,
+      "sideCensoredAtFirstRow": 52,
+      "maxObservedCorridorAhead": 0.75,
+      "artifacts": [
+        {
+          "file": "tests/visual/out/proximal-corridor-01/chromium.json",
+          "sha256": "52df6d50e583939988d4334f6b43bfeb1614bc0c8ca11e48587931147c59bec7"
+        },
+        {
+          "file": "tests/visual/out/proximal-corridor-02/chromium.json",
+          "sha256": "52df6d50e583939988d4334f6b43bfeb1614bc0c8ca11e48587931147c59bec7"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "left",
+      "deterministic": true,
+      "records": 70,
+      "statusCounts": {
+        "not-inspected": 54,
+        "censored": 13,
+        "ambiguous": 3
+      },
+      "reasons": {
+        "no-observed-proximal-axis": 54,
+        "corridor-side-boundary": 13,
+        "unobserved-corridor-gap": 1,
+        "multiple-corridor-bands": 2
+      },
+      "componentCandidates": 0,
+      "associationsGranted": 0,
+      "sideCensoredAtFirstRow": 6,
+      "maxObservedCorridorAhead": 10.75,
+      "artifacts": [
+        {
+          "file": "tests/visual/out/proximal-corridor-01/webkit.json",
+          "sha256": "52da370743fc90b71c27bb6ec0ee24c42b42df122a47b936bf9b30d23b16c6b5"
+        },
+        {
+          "file": "tests/visual/out/proximal-corridor-02/webkit.json",
+          "sha256": "52da370743fc90b71c27bb6ec0ee24c42b42df122a47b936bf9b30d23b16c6b5"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "right",
+      "deterministic": true,
+      "records": 236,
+      "statusCounts": {
+        "censored": 45,
+        "not-inspected": 188,
+        "ambiguous": 3
+      },
+      "reasons": {
+        "corridor-side-boundary": 45,
+        "no-observed-proximal-axis": 80,
+        "multiple-corridor-bands": 2,
+        "unobserved-corridor-gap": 1,
+        "original-seed-budget": 108
+      },
+      "componentCandidates": 0,
+      "associationsGranted": 0,
+      "sideCensoredAtFirstRow": 42,
+      "maxObservedCorridorAhead": 2.25,
+      "artifacts": [
+        {
+          "file": "tests/visual/out/proximal-corridor-01/webkit.json",
+          "sha256": "52da370743fc90b71c27bb6ec0ee24c42b42df122a47b936bf9b30d23b16c6b5"
+        },
+        {
+          "file": "tests/visual/out/proximal-corridor-02/webkit.json",
+          "sha256": "52da370743fc90b71c27bb6ec0ee24c42b42df122a47b936bf9b30d23b16c6b5"
+        }
+      ]
+    }
+  ]
+}

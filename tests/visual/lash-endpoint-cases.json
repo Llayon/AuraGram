@@ -1,0 +1,334 @@
+{
+  "baseline": "5c262d62781a775c216b8fa9d89a5c968cec07f3",
+  "meaning": "Frozen exact Chromium224 old identities shared by both decoders. Native/source diagnostic only, no new candidate, tip relocation, direction fitting or product policy. WebKit104 no_face remains excluded from app eligibility.",
+  "inputHashes": {
+    "selection": "e212362b1067db15ad9a43e13dfe155b73d9ec523f197aac99923f5501c2d1e0",
+    "oldManifest": "4a5d7c48211a7f2bba5044560812a88915270a163aa3f614e24f2997f3cf39d1",
+    "independentLabels": "468daac3073d159cfd006e97e72a966e65de64d6928a6992dea233d8195c8462"
+  },
+  "protocol": {
+    "caps": [
+      224,
+      320,
+      384
+    ],
+    "curveDistancesNative": {
+      "from": -12,
+      "to": 24,
+      "step": 0.5
+    },
+    "analysisPhaseOffsets": [
+      -0.5,
+      0,
+      0.5
+    ],
+    "endpointOffsetsAnalysis": [
+      -2,
+      -1,
+      0,
+      0.5,
+      1,
+      1.5,
+      2,
+      3
+    ],
+    "radii": [
+      0.75,
+      1.5
+    ],
+    "nativeCropSide": 256,
+    "observationFloor": 0.006,
+    "thresholdMeaning": "Inherited engineering floor, not calibrated across native/filtered spaces. Outcomes diagnostic only. No favorable phase/direction selection."
+  },
+  "cases": [
+    {
+      "id": "C104-right-old16",
+      "file": "pexels-10460940.jpg",
+      "side": "right",
+      "tip": {
+        "x": 0.44419642857142855,
+        "y": 0.35561497326203206,
+        "dx": 0,
+        "dy": -1,
+        "c": 0.9619397521018982,
+        "length": 3,
+        "width": 1.5,
+        "evidence": {
+          "points": [
+            {
+              "x": 99,
+              "y": 66
+            },
+            {
+              "x": 99,
+              "y": 67
+            },
+            {
+              "x": 99,
+              "y": 68
+            },
+            {
+              "x": 99,
+              "y": 69
+            },
+            {
+              "x": 99,
+              "y": 70
+            },
+            {
+              "x": 99,
+              "y": 71
+            },
+            {
+              "x": 99,
+              "y": 72
+            },
+            {
+              "x": 99,
+              "y": 73
+            },
+            {
+              "x": 99,
+              "y": 74
+            },
+            {
+              "x": 99,
+              "y": 75
+            },
+            {
+              "x": 99,
+              "y": 76
+            },
+            {
+              "x": 99,
+              "y": 77
+            }
+          ],
+          "reason": "ok",
+          "confidence": 0.9619397521018982,
+          "connected": true,
+          "length": 11,
+          "observedLength": 3,
+          "continuity": 1,
+          "coherence": 0.9619397521018982,
+          "contrast": 0.6494867168586574,
+          "sharpness": 0.1999027244746685,
+          "outward": 0.9987969398498535,
+          "measuredCount": 4,
+          "distalCount": 4,
+          "rootDistance": 1.7063521146774292,
+          "tipDistance": 12.69311809539795,
+          "meanResponse": 0.02072725196679433,
+          "endpointProfile": [
+            {
+              "distance": 0.5,
+              "lumaRise": 0.08515214920043945
+            },
+            {
+              "distance": 1,
+              "lumaRise": 0.1703042984008789
+            },
+            {
+              "distance": 2,
+              "lumaRise": 0.1341450810432434
+            },
+            {
+              "distance": 3,
+              "lumaRise": 0.14421099424362183
+            }
+          ]
+        },
+        "color": [
+          123,
+          91,
+          68
+        ]
+      },
+      "source": {
+        "x": 478.241120568037,
+        "y": 2295.993913743442
+      },
+      "role": "observed-preterminal-looking-artifact-not-certified-same-biological-hair",
+      "manual": {
+        "pointsSourceTowardDistal": [
+          [
+            478,
+            2296
+          ],
+          [
+            482,
+            2286
+          ],
+          [
+            485,
+            2276
+          ]
+        ],
+        "pointUncertaintyPx": 2,
+        "angleIntervalDegrees": [
+          -85,
+          -50
+        ],
+        "axisSource": "post-selection original-only critic, profiles unseen; modified images known from earlier selection",
+        "notes": "Visible oblique continuation, not a true endpoint or root annotation; nearby parallel hair cannot be ruled out."
+      },
+      "W": 3648,
+      "H": 5472,
+      "roi": {
+        "x0": 0,
+        "y0": 0.3609082715511322,
+        "x1": 0.2951324908733368,
+        "y1": 0.5259217380285263
+      },
+      "rw": 224,
+      "rh": 187,
+      "sourceSHA256": "897807ffe7d7431fe2d1b3bc55741dd361cdc39be3d2a929886c9fcc52abca49"
+    },
+    {
+      "id": "PI729R1",
+      "file": "pexels-7298680.jpg",
+      "side": "left",
+      "tip": {
+        "x": 0.47544642857142855,
+        "y": 0.2099236641221374,
+        "dx": 0,
+        "dy": -1,
+        "c": 1,
+        "width": 2.5,
+        "length": 25.82842712474619
+      },
+      "source": {
+        "x": 2951.5082734580037,
+        "y": 969.4180255267273
+      },
+      "annotation": {
+        "tipSource": {
+          "x": 2952,
+          "y": 973
+        },
+        "radius": 4,
+        "localAxis": -90,
+        "angleInterval": [
+          -115,
+          -65
+        ]
+      },
+      "oldDistance": 3.6155685748275777,
+      "role": "old-candidate-near-provisional-coated-endpoint",
+      "manual": {
+        "tipSource": [
+          2952,
+          973
+        ],
+        "tipUncertaintyPx": 4,
+        "pointsSourceTowardDistal": [
+          [
+            2951,
+            1003
+          ],
+          [
+            2952,
+            993
+          ],
+          [
+            2952,
+            983
+          ],
+          [
+            2952,
+            973
+          ]
+        ],
+        "angleIntervalDegrees": [
+          -115,
+          -65
+        ],
+        "axisSource": "previous frozen independent original-only annotation; not an exact terminal derivative"
+      },
+      "W": 5184,
+      "H": 2920,
+      "roi": {
+        "x0": 0.5149631912708282,
+        "y0": 0.30689255821704864,
+        "x1": 0.6293533627986908,
+        "y1": 0.4264594321250915
+      },
+      "rw": 224,
+      "rh": 131,
+      "sourceSHA256": "bb652bce409113d758e990bb95fa70aa445000782a95766bd9e4cb40a26267f5"
+    },
+    {
+      "id": "PI729R2",
+      "file": "pexels-7298680.jpg",
+      "side": "left",
+      "tip": {
+        "x": 0.703125,
+        "y": 0.24045801526717558,
+        "dx": 0.7071067811865475,
+        "dy": -0.7071067811865475,
+        "c": 0.9543276980108683,
+        "width": 3.5,
+        "length": 26.62741699796953
+      },
+      "source": {
+        "x": 3086.5213587670323,
+        "y": 980.0786445133376
+      },
+      "annotation": {
+        "tipSource": {
+          "x": 3084,
+          "y": 982
+        },
+        "radius": 4,
+        "localAxis": -59.03624346792648,
+        "angleInterval": [
+          -85,
+          -35
+        ]
+      },
+      "oldDistance": 3.1699932079136053,
+      "role": "old-candidate-near-provisional-coated-endpoint",
+      "manual": {
+        "tipSource": [
+          3084,
+          982
+        ],
+        "tipUncertaintyPx": 4,
+        "pointsSourceTowardDistal": [
+          [
+            3066,
+            1012
+          ],
+          [
+            3072,
+            1002
+          ],
+          [
+            3078,
+            992
+          ],
+          [
+            3084,
+            982
+          ]
+        ],
+        "angleIntervalDegrees": [
+          -85,
+          -35
+        ],
+        "axisSource": "previous frozen independent original-only annotation; not an exact terminal derivative"
+      },
+      "W": 5184,
+      "H": 2920,
+      "roi": {
+        "x0": 0.5149631912708282,
+        "y0": 0.30689255821704864,
+        "x1": 0.6293533627986908,
+        "y1": 0.4264594321250915
+      },
+      "rw": 224,
+      "rh": 131,
+      "sourceSHA256": "bb652bce409113d758e990bb95fa70aa445000782a95766bd9e4cb40a26267f5"
+    }
+  ]
+}

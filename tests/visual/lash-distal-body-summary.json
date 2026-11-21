@@ -1,0 +1,202 @@
+{
+  "date": "2026-11-14",
+  "kind": "fixed-derived-origin-experiment",
+  "policy": "Exactly penultimate observed distal cell; min3 cells; measured cell axis; no retries or fallback",
+  "interpretation": "Seed records may share a derived cell; displacement along a coarse observed route is not native-refined arc",
+  "results": [
+    {
+      "engine": "chromium",
+      "side": "left",
+      "deterministic": true,
+      "originalSeedsBaselineAndCoarseRoutesUnchanged": true,
+      "seeds": 33,
+      "statusCounts": {
+        "ambiguous": 33
+      },
+      "reasons": {
+        "distal-start-insufficient-distal-body-cells": 8,
+        "native-cell-one-sided-edge": 17,
+        "unobserved-coarse-link": 2,
+        "native-cell-multiple-supported-cell-lobes": 2,
+        "multiple-coarse-continuations": 3,
+        "distal-start-coarse-distal-stop-unresolved": 1
+      },
+      "coarseConnected": 0,
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 0,
+      "baselineIdentical": true,
+      "derivedOriginAccepted": 24,
+      "uniqueDerivedROICells": 9,
+      "derivedSourceDisplacementRange": [
+        4.2652653462209855,
+        38.46369802354275
+      ],
+      "nativeInitializedRecords": 5,
+      "nativeNonemptyRecords": 0,
+      "maxLocalArc": 0,
+      "correspondence": {
+        "unavailable": 33
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/distal-body-real-01/chromium.json",
+          "sha256": "5fba71c7905119a8817e0dcaf5c46f760461c772be114013aaa34443aad82911"
+        },
+        {
+          "file": "tests/visual/out/distal-body-real-02/chromium.json",
+          "sha256": "98891ffc5b87f6281c15e7cf3a8d1c40161a24e25ab9929b7766918e455c15ab"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "side": "right",
+      "deterministic": true,
+      "originalSeedsBaselineAndCoarseRoutesUnchanged": true,
+      "seeds": 144,
+      "statusCounts": {
+        "ambiguous": 128,
+        "censored": 16
+      },
+      "reasons": {
+        "native-cell-search-boundary": 32,
+        "unobserved-coarse-link": 10,
+        "distal-start-insufficient-distal-body-cells": 32,
+        "native-cell-one-sided-edge": 2,
+        "multiple-coarse-continuations": 23,
+        "coarse-connection-native-ownership-unverified": 19,
+        "native-cell-multiple-valleys": 9,
+        "distal-start-coarse-distal-stop-unresolved": 1,
+        "seed-budget": 16
+      },
+      "coarseConnected": 37,
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 7,
+      "baselineIdentical": true,
+      "derivedOriginAccepted": 95,
+      "uniqueDerivedROICells": 16,
+      "derivedSourceDisplacementRange": [
+        4.036138396229035,
+        82.57956764644561
+      ],
+      "nativeInitializedRecords": 52,
+      "nativeNonemptyRecords": 29,
+      "maxLocalArc": 8.779894417116537,
+      "correspondence": {
+        "unavailable": 115,
+        "unconfirmed": 29
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/distal-body-real-01/chromium.json",
+          "sha256": "5fba71c7905119a8817e0dcaf5c46f760461c772be114013aaa34443aad82911"
+        },
+        {
+          "file": "tests/visual/out/distal-body-real-02/chromium.json",
+          "sha256": "98891ffc5b87f6281c15e7cf3a8d1c40161a24e25ab9929b7766918e455c15ab"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "left",
+      "deterministic": true,
+      "originalSeedsBaselineAndCoarseRoutesUnchanged": true,
+      "seeds": 70,
+      "statusCounts": {
+        "ambiguous": 70
+      },
+      "reasons": {
+        "distal-start-insufficient-distal-body-cells": 23,
+        "native-cell-multiple-supported-cell-lobes": 2,
+        "unobserved-coarse-link": 21,
+        "native-cell-search-boundary": 11,
+        "native-cell-one-sided-edge": 10,
+        "distal-start-coarse-distal-stop-unresolved": 3
+      },
+      "coarseConnected": 0,
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 0,
+      "baselineIdentical": true,
+      "derivedOriginAccepted": 44,
+      "uniqueDerivedROICells": 17,
+      "derivedSourceDisplacementRange": [
+        4.2759103285266065,
+        42.315074591710164
+      ],
+      "nativeInitializedRecords": 21,
+      "nativeNonemptyRecords": 4,
+      "maxLocalArc": 4.234461348522848,
+      "correspondence": {
+        "unavailable": 66,
+        "unconfirmed": 4
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/distal-body-real-01/webkit.json",
+          "sha256": "9b13bd529fa468f6f6d1b2e01bf9a95184439692cc55808ea749c4bf6dec4677"
+        },
+        {
+          "file": "tests/visual/out/distal-body-real-02/webkit.json",
+          "sha256": "50d54d07e29d7843393e8b0adf3f55db74a52e3521c1ddb8c2548a5d40c0d6ee"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "right",
+      "deterministic": true,
+      "originalSeedsBaselineAndCoarseRoutesUnchanged": true,
+      "seeds": 236,
+      "statusCounts": {
+        "ambiguous": 128,
+        "censored": 108
+      },
+      "reasons": {
+        "distal-start-insufficient-distal-body-cells": 45,
+        "multiple-coarse-continuations": 20,
+        "unobserved-coarse-link": 30,
+        "native-cell-weak-valley": 1,
+        "distal-start-coarse-distal-stop-unresolved": 9,
+        "native-cell-one-sided-edge": 2,
+        "coarse-connection-native-ownership-unverified": 16,
+        "native-cell-multiple-supported-cell-lobes": 1,
+        "native-cell-search-boundary": 4,
+        "seed-budget": 108
+      },
+      "coarseConnected": 23,
+      "proximalConnected": 0,
+      "accepted": 0,
+      "baselineTips": 9,
+      "baselineIdentical": true,
+      "derivedOriginAccepted": 74,
+      "uniqueDerivedROICells": 18,
+      "derivedSourceDisplacementRange": [
+        4.038082761475152,
+        73.88039596334843
+      ],
+      "nativeInitializedRecords": 66,
+      "nativeNonemptyRecords": 45,
+      "maxLocalArc": 6.188561426377256,
+      "correspondence": {
+        "unavailable": 194,
+        "consistent-local-evidence": 31,
+        "unconfirmed": 11
+      },
+      "artifacts": [
+        {
+          "file": "tests/visual/out/distal-body-real-01/webkit.json",
+          "sha256": "9b13bd529fa468f6f6d1b2e01bf9a95184439692cc55808ea749c4bf6dec4677"
+        },
+        {
+          "file": "tests/visual/out/distal-body-real-02/webkit.json",
+          "sha256": "50d54d07e29d7843393e8b0adf3f55db74a52e3521c1ddb8c2548a5d40c0d6ee"
+        }
+      ]
+    }
+  ],
+  "decision": "No closure candidates or approved endings; not adopted; LENGTH HOLD"
+}

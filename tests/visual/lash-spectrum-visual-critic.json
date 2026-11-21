@@ -1,0 +1,164 @@
+{
+  "schema": "auragram-independent-spectrum-visual-critic-v1",
+  "decision": "REJECT ADOPTION / LENGTH HOLD; renderer condition NOT met",
+  "scope": "Bounded real scientific PNG review:23images directly inspected (11initial-scoped04figures,6native160source crops,6corrected05figures), both eyes in C/W hair/white-liner controls plus C-V1restored217 and W-V3pairwise-only217references. Not all84figures manually reviewed. No browser/inference/new study, source/protocol/label or detector changes by critic. No Length/beauty effect rendered.",
+  "references": [
+    {
+      "path": "tests/visual/lash-spectrum-protocol.json",
+      "sha256": "84dd5c3ce9284a847e787f5a4dddcf2090989ae7d9e3f75a7588915c90555f5a"
+    },
+    {
+      "path": "tests/visual/lash-spectrum-protocol-critic.json",
+      "sha256": "459d1e9508fae0a658ac639880b500206b617aa1ba1a657bf11ed5e5c5587519"
+    },
+    {
+      "path": "tests/visual/lash-spectrum-code-critic.json",
+      "sha256": "58be2351eb2ac7fe2b34a7cc837711ab6b9926a24be3881e33dd00cdcfeb286a"
+    },
+    {
+      "path": "tests/visual/out/spectrum-02-experiment/result.json",
+      "sha256": "79ee04183d2a9a694754318e5fc830aff5ceb331d26b69bf4364594cdbf0b6d4"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/manifest.json",
+      "sha256": "c86d451ead27bbf6f040a9c07738e1d7f61a2e99f2a16f31a6cc976630656062"
+    },
+    {
+      "path": "tests/visual/out/spectrum-05-figures-scoped/manifest.json",
+      "sha256": "3fc6214bedf20397405940957506484b4b7c722e77f9defdaa76e729340b97b1"
+    }
+  ],
+  "inspectedImages": [
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/chromium-V1-pexels-21792059.jpg-right-F2-217-L1.png",
+      "sha256": "f2bf29b9fcbc8cf85ef9e4305c8353739ca087f681965f524761f9d1606c7bdd"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/chromium-V1-hair-occlusion.jpg-left-automatic.png",
+      "sha256": "ce162991ae5d2ae1e9297201c9ac0743ba24716c8fa3dbd6a342bb2ef92986ca"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/chromium-V1-pexels-7123010.jpg-left-automatic.png",
+      "sha256": "d4673fa67ae5b1bced96ac527f299721182677154edf1df2ecfdb1c56d267d60"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/webkit-V3-pexels-21792059.jpg-right-F2-217-L1.png",
+      "sha256": "23720a73ed731704558ff64f56f92b9e74748655df3120a81f87e63c94a2d8cc"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/webkit-V3-pexels-21792059.jpg-right-F2-217-L2.png",
+      "sha256": "436adb04614a532c3d40a7ebe9a18a45a357389f3e6e9c3e9f84ffba5a099ea1"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/chromium-V1-pexels-7123010.jpg-right-automatic.png",
+      "sha256": "9eecb5fd0587cacb64c0c6fd0ec6afe73c3109fefc0d21ae1de7caf1d6847a80"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/webkit-V1-pexels-7123010.jpg-left-automatic.png",
+      "sha256": "0aa41176a7e8f60a4b219f07af707c75f708d31c54d43a2346dfcf1cf6740a27"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/chromium-V1-hair-occlusion.jpg-right-automatic.png",
+      "sha256": "09b02af9040bd5ac8f52e8571c148ae9245a3b438d42f94c7e04855514c36111"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/webkit-V1-hair-occlusion.jpg-left-automatic.png",
+      "sha256": "1dcfb0976e397bfdc1597a71738be59988ca12e595e5726779ab307a85c75cef"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/webkit-V1-hair-occlusion.jpg-right-automatic.png",
+      "sha256": "04f8d9930890026b96a87f37c3e6683f73d5ba5e65941b2eedb116447d859580"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/webkit-V1-pexels-7123010.jpg-right-automatic.png",
+      "sha256": "f3b47b9bfb4a4fa55729130c8d81feec7b984f91a72499d3f9ac6c640aa2a0e2"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/chromium-V1-pexels-21792059.jpg-right-F2-217-L1-source160.png",
+      "sha256": "480f499bd6d4dbe0bb4626cb0a4417d337970dd45cea9eb1df7dbc3bd878d022"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/webkit-V3-pexels-21792059.jpg-right-F2-217-L1-source160.png",
+      "sha256": "2d95c6c2f810756d15b99daf988a553f22ca6980975c49f08e07aab81cab8a36"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/chromium-V1-pexels-7123010.jpg-left-automatic-source160.png",
+      "sha256": "76db4f910b90d2ee7b72955f57c9b03858d59cdf2bae987a235d32a33a040a77"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/chromium-V1-pexels-7123010.jpg-right-automatic-source160.png",
+      "sha256": "29a65ad2713d454610f76ba5ee904a8936adac42c431d966929cf39afe2a8767"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/chromium-V1-hair-occlusion.jpg-left-automatic-source160.png",
+      "sha256": "21f98736fbd6889b9011766e8eefa842c9b6e254da4998d5b624c7be0bc786d0"
+    },
+    {
+      "path": "tests/visual/out/spectrum-04-figures-fixed/chromium-V1-hair-occlusion.jpg-right-automatic-source160.png",
+      "sha256": "803f6b399cb94b70219ae484ac154db5757e7d05044dd6a3987e9a927b264a06"
+    },
+    {
+      "path": "tests/visual/out/spectrum-05-figures-scoped/chromium-V1-hair-occlusion.jpg-left-automatic.png",
+      "sha256": "4f8279581c36df191ce0483b44b3698099d906a0fa5c72dd960b523c68e827bd"
+    },
+    {
+      "path": "tests/visual/out/spectrum-05-figures-scoped/chromium-V1-pexels-7123010.jpg-left-automatic.png",
+      "sha256": "20afdd6cf21a8786db01d08121386b51f1b1c3eace9072e4820042d9f47b13fa"
+    },
+    {
+      "path": "tests/visual/out/spectrum-05-figures-scoped/chromium-V1-pexels-21792059.jpg-right-F2-217-L1.png",
+      "sha256": "be01721bdc9eaba3e98d0cb3c53293768b7a664bcb0333004ab8218ab4bef532"
+    },
+    {
+      "path": "tests/visual/out/spectrum-05-figures-scoped/webkit-V3-pexels-21792059.jpg-right-F2-217-L1.png",
+      "sha256": "48cc734289f78500fb9fc50bfdbbce6b9b3d232cccdef083ae7079db929df4a6"
+    },
+    {
+      "path": "tests/visual/out/spectrum-05-figures-scoped/webkit-V3-pexels-21792059.jpg-right-F2-217-L2.png",
+      "sha256": "0d479a0e983d80ad7fa9de0f2a1645762b36a3e75e8e0463c95505376eb9f050"
+    },
+    {
+      "path": "tests/visual/out/spectrum-05-figures-scoped/webkit-V1-hair-occlusion.jpg-left-automatic.png",
+      "sha256": "2c0cedd3a07bc6288b83a07dce6f27fe5edf2e809a0caa8b7c315f203e8378a7"
+    }
+  ],
+  "integrity": "04and05manifests both bind unchanged02resultSHA. Each84figure+84nativecrop hashes independently checked, all336PNG references match. Initial03overflow figures/tools retained by parent but not part of this manual review.",
+  "visualFindings": [
+    {
+      "context": "ChromiumV1F2-217-L1",
+      "observation": "Expanded orange reach and one cyan root-state path approach the known reference neighborhood. Source/native root crop contains dense coated/merged crossing shafts; local four-pixel witness uses eligible axis IDs2/2/2/3 while spectra support multiple alternatives.",
+      "judgment": "45distinct-pixel state route and7rooted mode pairs do not establish unique biological continuity, actual root or physical free tip. No natural extension benefit assessed because none was rendered."
+    },
+    {
+      "context": "WebKitV3F2-217-L1/L2",
+      "observation": "Both figures show8middle-mode pairs but no local/rooted four-point witness and no expanded target route. Eye-total expansion still exists elsewhere.",
+      "judgment": "Pairwise support correctly remains separate from local/global state continuity. No omitted connection or artificial gap drawn."
+    },
+    {
+      "context": "Hair-covered left eye C/W",
+      "observation": "Source is covering hair; orange expanded reach grows through that field. Some automatic probes gain state routes while others remain unreachable.",
+      "judgment": "Mode expansion is not specific to upper lashes. Observed root-neighborhood/state continuity on foreign hair does not establish eyelid attachment or safe processing."
+    },
+    {
+      "context": "Visible right eye of hair portrait C/W",
+      "observation": "Open eye/iris texture and upper fan visible; selected probe can remain unreachable while eye-level orange reach grows near or into predicted opening context. Original guard flags differ from covered side and remain shown.",
+      "judgment": "Individual eyes retained; do not assign covered-eye semantics to visible side or promote generic reach to permitted rendering."
+    },
+    {
+      "context": "White-liner left/right C/W",
+      "observation": "Thick liner/dark merged shafts and crossing texture coincide with expanded reach; some selected pairs have rooted4point support even when selected distant target remains unreachable. Native160crops do not resolve trustworthy single-fiber/root ownership.",
+      "judgment": "Control admission prevents a positive-specific safety claim. These are ambiguity contexts, not no-lash groundtruth or a calibrated false-positive rate."
+    }
+  ],
+  "displayCritique": {
+    "initial03": "Parent preserved full-crossing-object text overflow and exact old plot script; no numeric-method change claimed.",
+    "04findings": "Automatic overview initially showed only retained example0, despite protocol first3 retention; eye-wide summary totals and selected-pair0could appear contradictory. Parent accepted both findings.",
+    "05disposition": "RESOLVED by actual inspected scoped figures: source/working overview includes reachable first3probe routes in cyan/pink/lime, explicit unreachable statuses for others; no invented paths. EYE TOTALS and SELECTED PAIR sections separate global edge counts from auto0/reference pair facts. References remain reference-specific.",
+    "layout": "Inspected05titles/legends/text fit without overflow. Axis IDs are explicitly numbers, not measured direction arrows; bars show raw eight-axis engineering responses with.006floor, eligible black outline and original-winner star. Bars above floor alone are not full eligibility.",
+    "sourceDataLimit": "PillowRGBillustrations/native-coordinate axes are distinct from archived browserFloat32numeric evidence, explicitly labelled. Source160 crops are actual unresized image detail; plotted root/frontier context cannot certify exact native terminal ownership.",
+    "ambiguityLimit": "First displayed witness/state route is deterministic illustration, not best/unique strand. Overlapping or identical reference panels are not independent positive successes."
+  },
+  "adoptionAssessment": "Conditional renderer gate fails: restored reference remains ambiguous, control contexts also gain support, physical terminal/root ownership remains unverified, original qualified-photo count stays0 and original mandatory F1 failures remain. No confidence/orientation floor reduction, manual seed, gap invention, guard bypass or export/applicator integration justified.",
+  "coverageRemaining": "Manual inspection focused declared positive/negative contexts and corrected display examples; remaining figures/raw pair matrices are retained for later review, not silently scored PASS. Full functional/performance logs are parent-reported at this stage, not independently rerun by this visual critic.",
+  "nextDecision": "Maintain offline nonadoption. Any further bounded image-supported continuity test must preserve the same controls and distinguish supported alternate modes from one physical fiber and a real terminal. No stronger visual effect is warranted by graph reach alone."
+}

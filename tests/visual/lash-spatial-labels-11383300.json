@@ -1,0 +1,247 @@
+{
+  "schema": "spatial-original-annotation-v1",
+  "file": "pexels-11383300.jpg",
+  "sourceSHA256": "1a3f74d3dde1d50fe923cb55e303c4507b58f0d2986284eaf9a873e01245c2d6",
+  "coordinateSpace": "original-source-pixels",
+  "originalOnly": true,
+  "detectorExecuted": false,
+  "reviewer": "primary-agent-original-only-visual-review",
+  "reviewStatus": "provisional-needs-independent-critique",
+  "role": "unqualified-positive-lead",
+  "evaluatedEyes": [
+    "right"
+  ],
+  "excludedEyes": {
+    "left": "Defocused source eye: individual endings cannot be resolved confidently."
+  },
+  "eyes": {
+    "left": {
+      "cropRect": [
+        4628,
+        3234,
+        1512,
+        1240
+      ],
+      "qualification": "defocused-not-evaluated",
+      "tips": [],
+      "ambiguities": []
+    },
+    "right": {
+      "cropRect": [
+        2248,
+        3095,
+        1930,
+        1332
+      ],
+      "qualification": "three-provisional-candidates-insufficient-tips",
+      "tips": [
+        {
+          "id": "right-1",
+          "region": [
+            [
+              2971,
+              3430
+            ],
+            [
+              3003,
+              3430
+            ],
+            [
+              3003,
+              3466
+            ],
+            [
+              2971,
+              3466
+            ]
+          ],
+          "observedPath": [
+            [
+              2914,
+              3550
+            ],
+            [
+              2951,
+              3498
+            ],
+            [
+              2987,
+              3448
+            ]
+          ],
+          "directionRange": [
+            -78,
+            -40
+          ],
+          "uncertainty": "Engineering estimate +/-16px across and +/-18px along image axes; soft edges and overlapping proximal structures. Not independently reviewed or established same-fiber ownership."
+        },
+        {
+          "id": "right-2",
+          "region": [
+            [
+              3213,
+              3426
+            ],
+            [
+              3245,
+              3426
+            ],
+            [
+              3245,
+              3462
+            ],
+            [
+              3213,
+              3462
+            ]
+          ],
+          "observedPath": [
+            [
+              3163,
+              3551
+            ],
+            [
+              3198,
+              3496
+            ],
+            [
+              3229,
+              3444
+            ]
+          ],
+          "directionRange": [
+            -78,
+            -40
+          ],
+          "uncertainty": "Engineering estimate +/-16px across and +/-18px along image axes; soft edges and overlapping proximal structures. Not independently reviewed or established same-fiber ownership."
+        },
+        {
+          "id": "right-3",
+          "region": [
+            [
+              3286,
+              3427
+            ],
+            [
+              3318,
+              3427
+            ],
+            [
+              3318,
+              3463
+            ],
+            [
+              3286,
+              3463
+            ]
+          ],
+          "observedPath": [
+            [
+              3245,
+              3545
+            ],
+            [
+              3272,
+              3494
+            ],
+            [
+              3302,
+              3445
+            ]
+          ],
+          "directionRange": [
+            -78,
+            -40
+          ],
+          "uncertainty": "Engineering estimate +/-16px across and +/-18px along image axes; soft edges and overlapping proximal structures. Not independently reviewed or established same-fiber ownership."
+        }
+      ],
+      "ambiguities": [
+        {
+          "region": [
+            [
+              2748,
+              3555
+            ],
+            [
+              3608,
+              3555
+            ],
+            [
+              3608,
+              3735
+            ],
+            [
+              2748,
+              3735
+            ]
+          ],
+          "reason": "Overlapping/clumped proximal shafts: no single-fiber ownership established."
+        },
+        {
+          "region": [
+            [
+              2328,
+              3445
+            ],
+            [
+              2708,
+              3445
+            ],
+            [
+              2708,
+              4045
+            ],
+            [
+              2328,
+              4045
+            ]
+          ],
+          "reason": "Lateral hair overlap and crossing structures; refuse ambiguous ownership."
+        },
+        {
+          "region": [
+            [
+              3371,
+              3462
+            ],
+            [
+              3403,
+              3462
+            ],
+            [
+              3403,
+              3498
+            ],
+            [
+              3371,
+              3498
+            ]
+          ],
+          "reason": "Possible ending insufficiently resolved in original-only review; not counted as a distinguishable tip."
+        },
+        {
+          "region": [
+            [
+              3472,
+              3504
+            ],
+            [
+              3504,
+              3504
+            ],
+            [
+              3504,
+              3540
+            ],
+            [
+              3472,
+              3540
+            ]
+          ],
+          "reason": "Possible ending insufficiently resolved in original-only review; not counted as a distinguishable tip."
+        }
+      ]
+    }
+  }
+}

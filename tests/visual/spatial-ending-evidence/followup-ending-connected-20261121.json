@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-21",
+  "archive": "followup-ending-connected-20261121.zip",
+  "sha256": "1a1b2cd8ab671692e6111f521999317ed0e05978f4327d25ba84397d847fda0a",
+  "bytes": 7485182,
+  "restoreDirectory": "tests/visual/out",
+  "members": {
+    "connected-ending-14297936-chromium-01/protocol.json": "92f3e7c70fcabe77917a6772cbcba2a6c97d87c1c260011844f7fefbdb611639",
+    "connected-ending-14297936-chromium-01/chromium.json": "4e4c933c6c56941857b4fe343585a06f8688606f60081183c2a32c61a25df86a",
+    "connected-ending-14297936-webkit-01/protocol.json": "92f3e7c70fcabe77917a6772cbcba2a6c97d87c1c260011844f7fefbdb611639",
+    "connected-ending-14297936-webkit-01/webkit.json": "53c5f4849149b6150f1881d2a26910c3d295358ecb39b36b66615be9236a615f",
+    "connected-ending-29117992-chromium-01/protocol.json": "b685757058b31528510769cde5e3e86ff3559defcee0553cfb939b294e2e6502",
+    "connected-ending-29117992-chromium-01/chromium.json": "4545a958726a6d4342f0537877095b0dc4a58af8e2ae4303bd21cd420ed2b9eb",
+    "connected-ending-29117992-webkit-01/protocol.json": "b685757058b31528510769cde5e3e86ff3559defcee0553cfb939b294e2e6502",
+    "connected-ending-29117992-webkit-01/webkit.json": "b388eb39510b3757fe42aa04c5ff4b095ddb4da8d18e68d6d43085f7e5311af0",
+    "connected-ending-29117992-webkit-control-02/protocol.json": "0493176e1bda93e2f4a3333c61739469aa5eaf3f8d817ed5af8afbcbe91a5b62",
+    "connected-ending-29117992-webkit-control-02/webkit.json": "b388eb39510b3757fe42aa04c5ff4b095ddb4da8d18e68d6d43085f7e5311af0",
+    "connected-ending-29117992-webkit-repeat-02/protocol.json": "b685757058b31528510769cde5e3e86ff3559defcee0553cfb939b294e2e6502",
+    "connected-ending-29117992-webkit-repeat-02/webkit.json": "b388eb39510b3757fe42aa04c5ff4b095ddb4da8d18e68d6d43085f7e5311af0",
+    "connected-ending-unit-01.txt": "7b717cf0eaf07d7cb671f930f54c489701e8cf8935f7fc2e012720f4dccae31b"
+  }
+}

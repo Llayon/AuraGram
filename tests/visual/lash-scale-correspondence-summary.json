@@ -1,0 +1,190 @@
+{
+  "date": "2026-11-14",
+  "kind": "independent-coarse-distal-versus-native-local-evidence",
+  "ownershipOrTerminalApproval": false,
+  "decision": "Supporting local agreement only; broad-root ambiguity unresolved; LENGTH HOLD",
+  "results": [
+    {
+      "engine": "chromium",
+      "side": "left",
+      "deterministic": true,
+      "seeds": 33,
+      "previousSeedsBaselineCoarseAndNativeUnchanged": true,
+      "statuses": {
+        "unavailable": 32,
+        "unconfirmed": 1
+      },
+      "reasons": {
+        "missing-observed-overlap": 22,
+        "seed-cell-only": 3,
+        "native-local-not-evaluated": 7,
+        "outside-observed-distal-cells": 1
+      },
+      "distalStops": {
+        "unobserved-distal-link": 32,
+        "unobserved-distal-valley": 1
+      },
+      "consistentWithCoarseRootConnection": [],
+      "accepted": 0,
+      "artifacts": [
+        {
+          "file": "tests/visual/out/scale-correspondence-real-01/chromium.json",
+          "sha256": "2dfeb6e878c4c13ec6922ee961f9c939ab70a80b4cb439e302af82e7408e86e9"
+        },
+        {
+          "file": "tests/visual/out/scale-correspondence-real-02/chromium.json",
+          "sha256": "d063041bda650585b06b22336ce8e1080c3a396111018853889a0c36e0e124f7"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "side": "right",
+      "deterministic": true,
+      "seeds": 144,
+      "previousSeedsBaselineCoarseAndNativeUnchanged": true,
+      "statuses": {
+        "unavailable": 94,
+        "unconfirmed": 45,
+        "consistent-local-evidence": 4,
+        "ambiguous": 1
+      },
+      "reasons": {
+        "missing-observed-overlap": 46,
+        "seed-cell-only": 5,
+        "outside-observed-distal-cells": 45,
+        "native-local-not-evaluated": 43,
+        "observed-cell-correspondence-without-ownership": 4,
+        "coarse-branch-unresolved": 1
+      },
+      "distalStops": {
+        "unobserved-distal-link": 127,
+        "multiple-coarse-continuations": 1,
+        "seed-budget": 16
+      },
+      "consistentWithCoarseRootConnection": [
+        {
+          "rank": 122,
+          "index": 18196,
+          "broadRoot": true,
+          "ownershipConfirmed": false
+        }
+      ],
+      "accepted": 0,
+      "artifacts": [
+        {
+          "file": "tests/visual/out/scale-correspondence-real-01/chromium.json",
+          "sha256": "2dfeb6e878c4c13ec6922ee961f9c939ab70a80b4cb439e302af82e7408e86e9"
+        },
+        {
+          "file": "tests/visual/out/scale-correspondence-real-02/chromium.json",
+          "sha256": "d063041bda650585b06b22336ce8e1080c3a396111018853889a0c36e0e124f7"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "left",
+      "deterministic": true,
+      "seeds": 70,
+      "previousSeedsBaselineCoarseAndNativeUnchanged": true,
+      "statuses": {
+        "unavailable": 62,
+        "unconfirmed": 7,
+        "consistent-local-evidence": 1
+      },
+      "reasons": {
+        "missing-observed-overlap": 43,
+        "native-local-not-evaluated": 11,
+        "seed-cell-only": 8,
+        "outside-observed-distal-cells": 7,
+        "observed-cell-correspondence-without-ownership": 1
+      },
+      "distalStops": {
+        "unobserved-distal-link": 67,
+        "multiple-coarse-continuations": 2,
+        "unobserved-distal-valley": 1
+      },
+      "consistentWithCoarseRootConnection": [],
+      "accepted": 0,
+      "artifacts": [
+        {
+          "file": "tests/visual/out/scale-correspondence-real-01/webkit.json",
+          "sha256": "bfb2ae82619c9ae8ebf6daf1f475e881a301317b64edc17db98fcc586095eb3c"
+        },
+        {
+          "file": "tests/visual/out/scale-correspondence-real-02/webkit.json",
+          "sha256": "9fef218958af9caec78a9fcde7de0534386cdb44aad31e628c08aa6179279ec9"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "right",
+      "deterministic": true,
+      "seeds": 236,
+      "previousSeedsBaselineCoarseAndNativeUnchanged": true,
+      "statuses": {
+        "consistent-local-evidence": 11,
+        "unconfirmed": 27,
+        "unavailable": 198
+      },
+      "reasons": {
+        "observed-cell-correspondence-without-ownership": 11,
+        "outside-observed-distal-cells": 27,
+        "missing-observed-overlap": 58,
+        "seed-cell-only": 10,
+        "native-local-not-evaluated": 130
+      },
+      "distalStops": {
+        "unobserved-distal-link": 119,
+        "multiple-coarse-continuations": 7,
+        "unobserved-distal-valley": 2,
+        "seed-budget": 108
+      },
+      "consistentWithCoarseRootConnection": [
+        {
+          "rank": 50,
+          "index": 13995,
+          "broadRoot": true,
+          "ownershipConfirmed": false
+        },
+        {
+          "rank": 53,
+          "index": 13984,
+          "broadRoot": true,
+          "ownershipConfirmed": false
+        },
+        {
+          "rank": 59,
+          "index": 14219,
+          "broadRoot": true,
+          "ownershipConfirmed": false
+        },
+        {
+          "rank": 71,
+          "index": 14443,
+          "broadRoot": true,
+          "ownershipConfirmed": false
+        },
+        {
+          "rank": 81,
+          "index": 14667,
+          "broadRoot": true,
+          "ownershipConfirmed": false
+        }
+      ],
+      "accepted": 0,
+      "artifacts": [
+        {
+          "file": "tests/visual/out/scale-correspondence-real-01/webkit.json",
+          "sha256": "bfb2ae82619c9ae8ebf6daf1f475e881a301317b64edc17db98fcc586095eb3c"
+        },
+        {
+          "file": "tests/visual/out/scale-correspondence-real-02/webkit.json",
+          "sha256": "9fef218958af9caec78a9fcde7de0534386cdb44aad31e628c08aa6179279ec9"
+        }
+      ]
+    }
+  ]
+}

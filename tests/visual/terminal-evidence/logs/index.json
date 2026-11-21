@@ -1,0 +1,32 @@
+[
+  {
+    "file": "terminal-04-unit.txt",
+    "sha256": "9670de14004ca20d4a17b68e03130d0813fa1cdcee7f8f456b8c3a984982034d",
+    "rawSHA256": "eccc9640dd9bf695c79e5de8c7661ff1f813e7201472199151590f2460b085f7"
+  },
+  {
+    "file": "terminal-05-browser.txt",
+    "sha256": "23bb7ccb31c2c7e3a6d12a24760afbea91f091fc9772c37bae7abe32c82dfc4b",
+    "rawSHA256": "0c1cb7df555e80e375d8907dca52c01a4e689469d19a137e9a123ec9dc651267"
+  },
+  {
+    "file": "terminal-09-performance.txt",
+    "sha256": "fe18a6965be8bf914bad537392def0688fd5f2ecb9eea62028b458f4d5943c4a",
+    "rawSHA256": "409b95f755c8d8a2cae48481f2654353eee6ee9822a78a9e572fab96bad22409"
+  },
+  {
+    "file": "terminal-10-build.txt",
+    "sha256": "adf7f8cb7cca05ce6118fe9b1c7d301383094e19dec94f64d102f36278d56198",
+    "rawSHA256": "36d779ddf9968ec3d6973b56334f14c79d10685d57f28d37dd8634ee654ee866"
+  },
+  {
+    "file": "terminal-11-package.txt",
+    "sha256": "1da1367bfda82453a298c3c07ad6734e491bc79cdc902f03668a77f4f602898d",
+    "rawSHA256": "3fb22edde5bd86e3ae9b0566af91d6fdeb994e7f1fc8c946da3203ad5a549486"
+  },
+  {
+    "file": "terminal-12-checksite.txt",
+    "sha256": "b12f43096006624ce89f22f1d34f2cae3080327c6442e8daa562ea5c1f04b459",
+    "rawSHA256": "27d03545dd95ebfbd6180414d90c9554ac0a0a57e33704dcc4412b885c475961"
+  }
+]

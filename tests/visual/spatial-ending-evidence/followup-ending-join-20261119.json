@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-19",
+  "archive": "followup-ending-join-20261119.zip",
+  "sha256": "3ce5f5dd7e93d9127d4a90920ec9efcba294d0e27a07cf3f268c72406d4940d3",
+  "bytes": 6488597,
+  "restoreDirectory": "tests/visual/out",
+  "members": {
+    "bounded-ending-14297936-chromium-01/protocol.json": "d764230bfaee0bd899d89427251bd771a92654df950fe96bf09569de52fde32d",
+    "bounded-ending-14297936-chromium-02/protocol.json": "298eec438911b9cd8be2a9520fc53ca0c6e5f07ab329568ef3539170e76fcf17",
+    "bounded-ending-14297936-chromium-02/chromium.json": "38db6c2f17ec81fb95ea8859663632218909b5565789ab882e448687a395232d",
+    "bounded-ending-14297936-webkit-02/protocol.json": "298eec438911b9cd8be2a9520fc53ca0c6e5f07ab329568ef3539170e76fcf17",
+    "bounded-ending-14297936-webkit-02/webkit.json": "75de1eb0631df640d9011a0ed307789dcd77d2b5b2ecb29d092dda9eed9bdb39",
+    "bounded-ending-29117992-chromium-02/protocol.json": "67280025913e61c3943597d77200007057bf809786504dd96ba18f6291506b12",
+    "bounded-ending-29117992-chromium-02/chromium.json": "4545a958726a6d4342f0537877095b0dc4a58af8e2ae4303bd21cd420ed2b9eb",
+    "bounded-ending-29117992-webkit-02/protocol.json": "67280025913e61c3943597d77200007057bf809786504dd96ba18f6291506b12",
+    "bounded-ending-29117992-webkit-02/webkit.json": "016684bc425d5699d1bb7c5b436699eb9d9735d72f731a29fb38116ec6b66a79"
+  }
+}

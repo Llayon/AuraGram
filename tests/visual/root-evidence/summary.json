@@ -1,0 +1,108 @@
+{
+  "chromium": {
+    "grouped": {
+      "light.jpg/older-chromium-control/right": {
+        "conditions": 4,
+        "candidates": 8,
+        "observedCrossing": 0,
+        "unresolved": 8,
+        "stops": {
+          "no-observed-valley": 8
+        }
+      },
+      "hair-occlusion.jpg/older-chromium-control/left": {
+        "conditions": 1,
+        "candidates": 1,
+        "observedCrossing": 0,
+        "unresolved": 1,
+        "stops": {
+          "no-observed-valley": 1
+        }
+      },
+      "pexels-7123010.jpg/closed-chromium/right": {
+        "conditions": 4,
+        "candidates": 8,
+        "observedCrossing": 0,
+        "unresolved": 8,
+        "stops": {
+          "no-observed-valley": 8
+        }
+      },
+      "pexels-7123010.jpg/closed-webkit/right": {
+        "conditions": 9,
+        "candidates": 27,
+        "observedCrossing": 0,
+        "unresolved": 27,
+        "stops": {
+          "no-observed-valley": 27
+        }
+      }
+    },
+    "candidates": 44,
+    "observedCrossing": 0,
+    "unresolved": 44,
+    "conditions": 18
+  },
+  "webkit": {
+    "grouped": {
+      "light.jpg/older-chromium-control/right": {
+        "conditions": 6,
+        "candidates": 13,
+        "observedCrossing": 0,
+        "unresolved": 13,
+        "stops": {
+          "no-observed-valley": 13
+        }
+      },
+      "hair-occlusion.jpg/older-chromium-control/left": {
+        "conditions": 1,
+        "candidates": 1,
+        "observedCrossing": 0,
+        "unresolved": 1,
+        "stops": {
+          "no-observed-valley": 1
+        }
+      },
+      "pexels-12367370.jpg/actual-webkit/right": {
+        "conditions": 1,
+        "candidates": 3,
+        "observedCrossing": 0,
+        "unresolved": 3,
+        "stops": {
+          "no-observed-valley": 3
+        }
+      },
+      "pexels-7123010.jpg/closed-chromium/left": {
+        "conditions": 1,
+        "candidates": 2,
+        "observedCrossing": 0,
+        "unresolved": 2,
+        "stops": {
+          "no-observed-valley": 2
+        }
+      },
+      "pexels-7123010.jpg/closed-chromium/right": {
+        "conditions": 1,
+        "candidates": 2,
+        "observedCrossing": 0,
+        "unresolved": 2,
+        "stops": {
+          "no-observed-valley": 2
+        }
+      },
+      "pexels-7123010.jpg/closed-webkit/right": {
+        "conditions": 2,
+        "candidates": 5,
+        "observedCrossing": 0,
+        "unresolved": 5,
+        "stops": {
+          "no-observed-valley": 5
+        }
+      }
+    },
+    "candidates": 26,
+    "observedCrossing": 0,
+    "unresolved": 26,
+    "conditions": 12
+  }
+}

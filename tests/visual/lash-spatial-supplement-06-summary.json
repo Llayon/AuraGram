@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-18",
+  "stage": "original-only-development-screening",
+  "detectorExecuted": false,
+  "validationViewsOpened": false,
+  "identityReview": "pending; different IDs/authors do not establish independent people",
+  "qualifiedPositiveCount": 0,
+  "inputs": {
+    "acquisition": {
+      "path": "tests/visual/out/spatial-supplement-06/downloads.json",
+      "sha256": "5e5a06cd1c085c973452b1d077cdcafaf0cfe955085a45398c4c4c9f577e4302"
+    },
+    "chromium": {
+      "path": "tests/visual/out/spatial-supplement-06-chromium/screening.json",
+      "sha256": "da288afe6938f257e6d350c83be23d73ac3290742008a9507956c3cb3d52e35a"
+    },
+    "webkit": {
+      "path": "tests/visual/out/spatial-supplement-06-webkit/screening.json",
+      "sha256": "01f7ca6ef390befade61f008169b4ae6b58250ef2accf4b2bf27ebb1684008bc"
+    }
+  },
+  "sources": [
+    {
+      "id": "14942933",
+      "file": "pexels-14942933.jpg",
+      "page": "https://www.pexels.com/photo/woman-face-while-looking-up-14942933/",
+      "author": "Evlogia Pictures",
+      "sourceSHA256": "5cbcb52ee15c9112d1df08888518784eeb5ee8a31ef7315aab4b8998ccbe2bf5",
+      "width": 3264,
+      "height": 4928,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "positiveQualified": false,
+      "observation": "Both upper lash regions are visibly defocused; individual endings cannot be reliably located."
+    },
+    {
+      "id": "8537914",
+      "file": "pexels-8537914.jpg",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-woman-s-face-8537914/",
+      "author": "Engin Akyurt",
+      "sourceSHA256": "e95443ea48ff678e4023e813e3d64e011e87b3082ba9006548edd0e87bf5d54b",
+      "width": 8192,
+      "height": 5464,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "positiveQualified": false,
+      "observation": "Left native crop has individually visible upper segments and five provisional ending regions; right eye excluded for hair overlap and shadow. No independent critique or positive qualification yet.",
+      "provisionalTipCount": 5,
+      "evaluatedEyes": [
+        "left"
+      ],
+      "reviewStatus": "needs-independent-critique"
+    },
+    {
+      "id": "16473154",
+      "file": "pexels-16473154.jpg",
+      "page": "https://www.pexels.com/photo/face-of-woman-looking-up-16473154/",
+      "author": "dong ma",
+      "sourceSHA256": "9b9130358dbba22400331d17c6a72592dbb9ebbd72df46771a3b87f9b8a4dd71",
+      "width": 5792,
+      "height": 4219,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "positiveQualified": false,
+      "observation": "Upper band is dark and partly occluded by lid/liner-like contrast; five separately resolved upper endpoints not established. Not a claim of biological lash absence."
+    }
+  ],
+  "decision": "Source-only provisional labels; DATA-INSUFFICIENT / LENGTH HOLD"
+}

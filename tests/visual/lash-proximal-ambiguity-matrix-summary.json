@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-18",
+  "kind": "analytic development mechanism matrix",
+  "archive": "followup-proximal-ambiguity-20261118.zip",
+  "archiveSHA256": "c03d01e0033f218f779d3858b37b79317cac88f78f57b8926788b3f6122ff42a",
+  "resultFile": "proximal-ambiguity-matrix-01.json",
+  "resultSHA256": "594fd18859d689a7051c4443cefa5e7f77802c157aaefe8cef524081027beb2f",
+  "repeatMatchedByteForByte": true,
+  "inputs": {
+    "tests/visual/lash-proximal-ambiguity-matrix.mjs": "78cbad024bedea00eed3394370b2f67f207461e71cf2b2e73fbdcedc1e3e1b07",
+    "tests/visual/lash-shared-arc-proximal.mjs": "a274d858d34a04890f46f47e5b2c1aaa09406a3d2563dbb75c8e1dc3c74722d4",
+    "tests/visual/lash-proximal-budget-bound.mjs": "cdf0d1ffa0fe1a497e27850e45e3bacde2d7f9391caf0b5dbd22b7d2274edadc",
+    "tests/visual/lash-native-path.mjs": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325",
+    "tests/visual/lash-subpixel-probe.mjs": "9052961224a0ff4f4084e34ed2e82e9d51b3db5135799756e9c6e2b4795eb096",
+    "tests/visual/lash-subpixel-center.mjs": "ba75e2fa815139ac11ab045e46ebbea53e994a6fe280b43bec5ec29af0cfa44d",
+    "tests/visual/lash-endpoint-profile.mjs": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530",
+    "tests/visual/lash-native-shaft.mjs": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12",
+    "src/retouch/lashAnalysis.mjs": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d"
+  },
+  "summary": {
+    "single": {
+      "cases": 3,
+      "gateArrivals": 3,
+      "reasons": {
+        "proximal-gate": 3
+      }
+    },
+    "gap": {
+      "cases": 3,
+      "gateArrivals": 0,
+      "reasons": {
+        "weak-valley": 3
+      }
+    },
+    "crossing": {
+      "cases": 18,
+      "gateArrivals": 9,
+      "reasons": {
+        "proximal-gate": 9,
+        "one-sided-edge": 3,
+        "turn-bound": 5,
+        "search-boundary": 1
+      }
+    },
+    "fork": {
+      "cases": 18,
+      "gateArrivals": 3,
+      "reasons": {
+        "proximal-gate": 3,
+        "search-boundary": 4,
+        "multiple-valleys": 7,
+        "turn-bound": 4
+      }
+    },
+    "parallel": {
+      "cases": 18,
+      "gateArrivals": 16,
+      "reasons": {
+        "proximal-gate": 16,
+        "unconfirmed-dense-link": 1,
+        "no-observed-distal-start": 1
+      }
+    }
+  }
+}

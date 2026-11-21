@@ -1,0 +1,10 @@
+{
+  "schema": "auragram-downward-observation-fixer-v2",
+  "meaning": "Declared after V1 all-observation abstention and critic synthetic repro, before V2 real runs. Not untouched held-out evidence. Preserve V1 tools/outputs; no parameter threshold changes.",
+  "changes": [
+    "Thin observed ridges by transverse response nonmaximum suppression at0.75working pixel. Strict positive-perpendicular / non-strict negative tie break. No gap filling.",
+    "Remove a redundant directed graph edge only if the same observed destination is directly reachable through another observed neighbor. Do not merge arbitrary nearby branches.",
+    "Measure alternative attachment span at projections onto canonical upper arc, rather than Euclidean spacing of pixels at different distances along one shaft inside the2px root zone. Retain original root-zone coordinates/count/span as diagnostics. A merged attachment is still not certified same-fiber ownership."
+  ],
+  "unchanged": "Frozen ridge/anisotropy/direction/root-radius/terminal/protected-area/forward-response thresholds, budgets, source geometry, corpus and manual labels. All product guards/applicator unchanged. Unsupported terminal or geometry means abstention."
+}

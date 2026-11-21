@@ -1,0 +1,11 @@
+{
+ "meaning":"Exploratory supplement declared after initial analytic results/critic, before raster controls. Hold the real/curve protocol unchanged. Separate width, horizontal pixel phase and point versus pixel-area sampling. Not portrait naturalness or endpoint validation.",
+ "width":80,"height":80,"seedY":34,"baseX":40,
+ "background":0.8,"amplitude":0.55,
+ "sigmasNative":[0.35,0.7,1.2],
+ "phasesNative":[0,0.25,0.5,0.75],
+ "samplingModes":["point","pixel-area-8x8"],
+ "marginsNative":[1.5,2.5],
+ "shapes":[{"kind":"straight","error":0,"k":0},{"kind":"straight","error":25,"k":0},{"kind":"quadratic","error":0,"k":0.015},{"kind":"quadratic","error":0,"k":0.03}],
+ "shape":"centerX=40+phase+k*(34-y)^2; luminance=.8-.55*exp(-(x-centerX)^2/(2*sigma^2)). Pixel-area mode averages64 midpoint samples at offsets((i+.5)/8-.5) on both coordinates within each pixel. Seed is exactly on the known continuous centerline; initial direction -90+error. All192variants retained; no favorable case selection."
+}

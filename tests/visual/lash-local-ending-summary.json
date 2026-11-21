@@ -1,0 +1,871 @@
+{
+  "date": "2026-11-14",
+  "kind": "posthoc-local-ending-diagnostic-not-recognition",
+  "labelsInputToDetection": false,
+  "annotationSHA256": "4d23df2501e30e27aaa5d1bb01f02231b8c62636ca09d465471adfecd1f6ed74",
+  "results": [
+    {
+      "engine": "chromium",
+      "side": "left",
+      "deterministic": true,
+      "records": 33,
+      "statuses": {
+        "ambiguous": 22,
+        "censored": 4,
+        "not-inspected": 7
+      },
+      "reasons": {
+        "no-observed-native-path-or-tangent": 22,
+        "unavailable-or-side-boundary": 4,
+        "no-native-local-record": 7
+      },
+      "closureProfileCounts": {
+        "ambiguous": 4,
+        "censored": 4
+      },
+      "accepted": 0,
+      "locallyConsistentRecords": [],
+      "unacceptedStopMatching": {
+        "matches": [
+          {
+            "label": "left-3",
+            "candidate": "21"
+          }
+        ],
+        "unmatchedCandidates": [
+          "1",
+          "9",
+          "12"
+        ],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2"
+        ]
+      },
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "tipRegionIntersections": [
+        {
+          "rank": 21,
+          "status": "censored",
+          "reasons": [
+            "unavailable-or-side-boundary"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "unavailable",
+          "sourcePoint": {
+            "x": 2943.155866313619,
+            "y": 2205.802254099249,
+            "arc": 1.004842121742386
+          },
+          "tangent": {
+            "x": 0.11595732188081892,
+            "y": -0.9932541968208481
+          },
+          "tipRegions": [
+            {
+              "id": "left-3",
+              "directionAgrees": true
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "file": "tests\\visual\\out\\local-ending-real-01\\chromium.json",
+          "sha256": "4864e59100603f6def05c568ca8fa9cbd176cd789dc3ae9f99c3137074e45c0b"
+        },
+        {
+          "file": "tests\\visual\\out\\local-ending-real-02\\chromium.json",
+          "sha256": "4864e59100603f6def05c568ca8fa9cbd176cd789dc3ae9f99c3137074e45c0b"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "side": "right",
+      "deterministic": true,
+      "records": 144,
+      "statuses": {
+        "ambiguous": 55,
+        "continuing": 26,
+        "not-inspected": 43,
+        "censored": 20
+      },
+      "reasons": {
+        "no-observed-native-path-or-tangent": 46,
+        "profile-disagreement": 4,
+        "spatial-continuation": 26,
+        "no-native-local-record": 27,
+        "unavailable-or-side-boundary": 18,
+        "multiple-supported-bands": 5,
+        "path-budget": 2,
+        "original-seed-budget": 16
+      },
+      "closureProfileCounts": {
+        "censored": 72,
+        "ambiguous": 34
+      },
+      "accepted": 0,
+      "locallyConsistentRecords": [
+        {
+          "rank": 9,
+          "status": "censored",
+          "reasons": [
+            "unavailable-or-side-boundary"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 11,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 52,
+          "status": "ambiguous",
+          "reasons": [
+            "multiple-supported-bands"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 122,
+          "status": "censored",
+          "reasons": [
+            "unavailable-or-side-boundary"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        }
+      ],
+      "unacceptedStopMatching": {
+        "matches": [],
+        "unmatchedCandidates": [
+          "2",
+          "6",
+          "7",
+          "9",
+          "11",
+          "15",
+          "28",
+          "32",
+          "34",
+          "35",
+          "37",
+          "39",
+          "42",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "52",
+          "53",
+          "56",
+          "57",
+          "60",
+          "61",
+          "62",
+          "64",
+          "65",
+          "66",
+          "67",
+          "70",
+          "72",
+          "73",
+          "75",
+          "76",
+          "78",
+          "79",
+          "83",
+          "84",
+          "85",
+          "86",
+          "90",
+          "93",
+          "96",
+          "108",
+          "109",
+          "110",
+          "111",
+          "115",
+          "116",
+          "117",
+          "120",
+          "121",
+          "122"
+        ],
+        "unmatchedLabels": [
+          "right-1",
+          "right-2",
+          "right-3",
+          "right-4",
+          "right-5"
+        ]
+      },
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "right-1",
+          "right-2",
+          "right-3",
+          "right-4",
+          "right-5"
+        ]
+      },
+      "tipRegionIntersections": [
+        {
+          "rank": 39,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.527211740327,
+            "y": 1911.5405922662915,
+            "arc": 7.065380431139765
+          },
+          "tangent": {
+            "x": -0.022252770226940995,
+            "y": -0.9997523764499022
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 47,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.547891023449,
+            "y": 1911.587945203839,
+            "arc": 11.195078178658774
+          },
+          "tangent": {
+            "x": -0.005224665417830016,
+            "y": -0.9999863513424929
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 60,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.3645266775186,
+            "y": 1911.2884325890611,
+            "arc": 19.842054867865183
+          },
+          "tangent": {
+            "x": -0.1336416559755389,
+            "y": -0.9910297209408584
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 70,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.4302126332502,
+            "y": 1911.3856446111647,
+            "arc": 23.862224973909036
+          },
+          "tangent": {
+            "x": -0.09493017321684476,
+            "y": -0.9954839336790021
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 83,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.4969082930877,
+            "y": 1911.4668726492785,
+            "arc": 27.852885015946985
+          },
+          "tangent": {
+            "x": -0.05064695006893585,
+            "y": -0.9987166196918497
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "file": "tests\\visual\\out\\local-ending-real-01\\chromium.json",
+          "sha256": "4864e59100603f6def05c568ca8fa9cbd176cd789dc3ae9f99c3137074e45c0b"
+        },
+        {
+          "file": "tests\\visual\\out\\local-ending-real-02\\chromium.json",
+          "sha256": "4864e59100603f6def05c568ca8fa9cbd176cd789dc3ae9f99c3137074e45c0b"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "left",
+      "deterministic": true,
+      "records": 70,
+      "statuses": {
+        "ambiguous": 50,
+        "not-inspected": 11,
+        "censored": 8,
+        "continuing": 1
+      },
+      "reasons": {
+        "no-observed-native-path-or-tangent": 43,
+        "no-native-local-record": 11,
+        "multiple-supported-bands": 3,
+        "unavailable-or-side-boundary": 8,
+        "profile-disagreement": 4,
+        "spatial-continuation": 1
+      },
+      "closureProfileCounts": {
+        "ambiguous": 18,
+        "censored": 14
+      },
+      "accepted": 0,
+      "locallyConsistentRecords": [
+        {
+          "rank": 43,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        }
+      ],
+      "unacceptedStopMatching": {
+        "matches": [],
+        "unmatchedCandidates": [
+          "4",
+          "7",
+          "11",
+          "12",
+          "21",
+          "22",
+          "24",
+          "28",
+          "32",
+          "39",
+          "43",
+          "51",
+          "56",
+          "59",
+          "65",
+          "67"
+        ],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "left-1",
+          "left-2",
+          "left-3"
+        ]
+      },
+      "tipRegionIntersections": [],
+      "artifacts": [
+        {
+          "file": "tests\\visual\\out\\local-ending-real-01\\webkit.json",
+          "sha256": "93a3fc4e4432a1331bc52516b8c92d050ef1c959da3b80c650258274fb1548d9"
+        },
+        {
+          "file": "tests\\visual\\out\\local-ending-real-02\\webkit.json",
+          "sha256": "93a3fc4e4432a1331bc52516b8c92d050ef1c959da3b80c650258274fb1548d9"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "side": "right",
+      "deterministic": true,
+      "records": 236,
+      "statuses": {
+        "ambiguous": 68,
+        "continuing": 27,
+        "not-inspected": 130,
+        "censored": 11
+      },
+      "reasons": {
+        "profile-disagreement": 6,
+        "spatial-continuation": 27,
+        "no-observed-native-path-or-tangent": 58,
+        "no-native-local-record": 22,
+        "unavailable-or-side-boundary": 11,
+        "multiple-supported-bands": 4,
+        "original-seed-budget": 108
+      },
+      "closureProfileCounts": {
+        "censored": 62,
+        "ambiguous": 34
+      },
+      "accepted": 0,
+      "locallyConsistentRecords": [
+        {
+          "rank": 0,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 2,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 11,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 41,
+          "status": "censored",
+          "reasons": [
+            "unavailable-or-side-boundary"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 50,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        },
+        {
+          "rank": 53,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        },
+        {
+          "rank": 54,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        },
+        {
+          "rank": 59,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        },
+        {
+          "rank": 71,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        },
+        {
+          "rank": 81,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true
+        },
+        {
+          "rank": 90,
+          "status": "ambiguous",
+          "reasons": [
+            "multiple-supported-bands"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false
+        }
+      ],
+      "unacceptedStopMatching": {
+        "matches": [
+          {
+            "label": "right-2",
+            "candidate": "0"
+          },
+          {
+            "label": "right-4",
+            "candidate": "122"
+          }
+        ],
+        "unmatchedCandidates": [
+          "1",
+          "2",
+          "7",
+          "9",
+          "11",
+          "16",
+          "18",
+          "22",
+          "25",
+          "31",
+          "37",
+          "41",
+          "43",
+          "45",
+          "50",
+          "53",
+          "54",
+          "55",
+          "59",
+          "60",
+          "63",
+          "67",
+          "68",
+          "71",
+          "72",
+          "74",
+          "76",
+          "79",
+          "80",
+          "81",
+          "82",
+          "85",
+          "86",
+          "88",
+          "90",
+          "92",
+          "94",
+          "99",
+          "101",
+          "105",
+          "108",
+          "115",
+          "116",
+          "117",
+          "123",
+          "127"
+        ],
+        "unmatchedLabels": [
+          "right-1",
+          "right-3",
+          "right-5"
+        ]
+      },
+      "acceptedMatching": {
+        "matches": [],
+        "unmatchedCandidates": [],
+        "unmatchedLabels": [
+          "right-1",
+          "right-2",
+          "right-3",
+          "right-4",
+          "right-5"
+        ]
+      },
+      "tipRegionIntersections": [
+        {
+          "rank": 0,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1577.004820517515,
+            "y": 1861.1709990652007,
+            "arc": 2.041674428569018
+          },
+          "tangent": {
+            "x": 0.040602962924571245,
+            "y": -0.9991753596850484
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": true
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "status": "ambiguous",
+          "reasons": [
+            "profile-disagreement"
+          ],
+          "coarseConnected": false,
+          "broadRoot": false,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1576.68065136419,
+            "y": 1861.0698580977485,
+            "arc": 6.571500654934683
+          },
+          "tangent": {
+            "x": 0.23515722456361626,
+            "y": -0.9719573446070239
+          },
+          "tipRegions": [
+            {
+              "id": "right-2",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 50,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1679.391046131203,
+            "y": 1911.305308242401,
+            "arc": 5.1409243986958
+          },
+          "tangent": {
+            "x": -0.10099041239634084,
+            "y": -0.9948873989572976
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 59,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1679.343846351666,
+            "y": 1911.2258567549943,
+            "arc": 9.206047451619085
+          },
+          "tangent": {
+            "x": -0.14252163948405475,
+            "y": -0.9897916863051422
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 71,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1679.3559672812366,
+            "y": 1911.2693952071677,
+            "arc": 13.276413992130506
+          },
+          "tangent": {
+            "x": -0.13784140369389258,
+            "y": -0.9904543136499014
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 81,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "consistent-local-evidence",
+          "sourcePoint": {
+            "x": 1679.3892650910334,
+            "y": 1911.3417484846607,
+            "arc": 17.31264061163035
+          },
+          "tangent": {
+            "x": -0.11914004282864575,
+            "y": -0.9928774598080009
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 105,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.5497578029974,
+            "y": 1911.5923484313516,
+            "arc": 25.345354043746266
+          },
+          "tangent": {
+            "x": -0.00395704742029861,
+            "y": -0.999992170857209
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": false
+            }
+          ]
+        },
+        {
+          "rank": 122,
+          "status": "continuing",
+          "reasons": [
+            "spatial-continuation"
+          ],
+          "coarseConnected": true,
+          "broadRoot": true,
+          "correspondence": "unconfirmed",
+          "sourcePoint": {
+            "x": 1679.581411473071,
+            "y": 1911.6755556721673,
+            "arc": 29.394475710858295
+          },
+          "tangent": {
+            "x": 0.02126259292485986,
+            "y": -0.9997739255162198
+          },
+          "tipRegions": [
+            {
+              "id": "right-4",
+              "directionAgrees": true
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "file": "tests\\visual\\out\\local-ending-real-01\\webkit.json",
+          "sha256": "93a3fc4e4432a1331bc52516b8c92d050ef1c959da3b80c650258274fb1548d9"
+        },
+        {
+          "file": "tests\\visual\\out\\local-ending-real-02\\webkit.json",
+          "sha256": "93a3fc4e4432a1331bc52516b8c92d050ef1c959da3b80c650258274fb1548d9"
+        }
+      ]
+    }
+  ],
+  "decision": "No closure candidates or approved endings; LENGTH HOLD"
+}

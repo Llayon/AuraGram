@@ -1,0 +1,13 @@
+{
+  "configurations": 36,
+  "available": 16,
+  "acceptedLinks": 18,
+  "analyticControls": 14,
+  "engineTolerance": 1e-10,
+  "frozenInputs": true,
+  "nativePixelsUnchanged": true,
+  "endpointApproved": 0,
+  "runtime": "UNCHANGED",
+  "release": "HOLD",
+  "rasterControls": 192
+}

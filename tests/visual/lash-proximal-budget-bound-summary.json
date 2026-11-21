@@ -1,0 +1,1427 @@
+{
+  "kind": "posthoc signed-gate budget lower bounds",
+  "inputs": {
+    "tests\\visual\\out\\native-roi-contained-14297936-01\\protocol.json": "3b8022049b5232006fcf184b92c48539a9cbde663ba863aee9c60344e1d27198",
+    "tests/visual/lash-spatial-original-labels-01.json": "4d23df2501e30e27aaa5d1bb01f02231b8c62636ca09d465471adfecd1f6ed74",
+    "src/retouch/lashAnalysis.mjs": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d",
+    "tests/visual/lash-proximal-budget-bound.mjs": "cdf0d1ffa0fe1a497e27850e45e3bacde2d7f9391caf0b5dbd22b7d2274edadc",
+    "tests\\visual\\out\\native-roi-contained-14297936-01\\chromium.json": "7d86ce792319d0a1c2a9f7c0fa9b57f16fb88e4030122fc59cb7658ff2ff7b92",
+    "tests\\visual\\out\\spatial-supplement-screen-chromium-02\\screening.json": "88c7b44b0f63cdd2708d5464d33d0bc5483e27b36a0a29c0d8802878d89a1028",
+    "tests\\visual\\out\\native-roi-contained-14297936-01\\webkit.json": "193f268266ffd83140e3e7477bc432633f7bb1b239f23d2e37fd858a3e13ada0",
+    "tests\\visual\\out\\spatial-supplement-screen-webkit-02\\screening.json": "5788a4f68b91c07c9a8437707457f11dcaa001424818235a5d06a472fa7e359d"
+  },
+  "engines": {
+    "chromium": {
+      "left": {
+        "regions": [
+          {
+            "id": "left-1",
+            "center": {
+              "x": 3073,
+              "y": 2186
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 44.08457278339976,
+            "lowerBound": 31.3566507220419
+          },
+          {
+            "id": "left-2",
+            "center": {
+              "x": 3022,
+              "y": 2213
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 34.06662116959018,
+            "lowerBound": 21.33869910823232
+          },
+          {
+            "id": "left-3",
+            "center": {
+              "x": 2947,
+              "y": 2211
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 43.19498047143419,
+            "lowerBound": 30.467058410076334
+          }
+        ],
+        "observedStarts": [],
+        "regionsBeyond36": 0,
+        "observedStartsBeyond36": 0,
+        "observedCombinedBeyond36": 0
+      },
+      "right": {
+        "regions": [
+          {
+            "id": "right-1",
+            "center": {
+              "x": 1491,
+              "y": 1888
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 46.04512224415349,
+            "lowerBound": 33.31720018279563
+          },
+          {
+            "id": "right-2",
+            "center": {
+              "x": 1576,
+              "y": 1867
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 53.74263919615497,
+            "lowerBound": 41.01471713479711
+          },
+          {
+            "id": "right-3",
+            "center": {
+              "x": 1629,
+              "y": 1882
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 44.9097688226762,
+            "lowerBound": 32.18184676131834
+          },
+          {
+            "id": "right-4",
+            "center": {
+              "x": 1671,
+              "y": 1903
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 42.35998136365795,
+            "lowerBound": 29.632059302300092
+          },
+          {
+            "id": "right-5",
+            "center": {
+              "x": 1698,
+              "y": 1918
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 34.97669421608198,
+            "lowerBound": 22.248772154724122
+          }
+        ],
+        "observedStarts": [
+          {
+            "rank": 0,
+            "index": 11730,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 1,
+            "index": 11954,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 2,
+            "index": 12607,
+            "point": {
+              "x": 1497.8784109951732,
+              "y": 1882.017819962823,
+              "arc": 0
+            },
+            "bound": 54.053825382851684,
+            "measuredDistalArc": 6.6812632596866885,
+            "combinedLowerBound": 60.73508864253837
+          },
+          {
+            "rank": 3,
+            "index": 12178,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 4,
+            "index": 12402,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 5,
+            "index": 13056,
+            "point": {
+              "x": 1497.8784109951732,
+              "y": 1882.017819962823,
+              "arc": 0
+            },
+            "bound": 54.053825382851684,
+            "measuredDistalArc": 6.6812632596866885,
+            "combinedLowerBound": 60.73508864253837
+          },
+          {
+            "rank": 6,
+            "index": 12626,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 7,
+            "index": 13281,
+            "point": {
+              "x": 1497.8784109951732,
+              "y": 1882.017819962823,
+              "arc": 0
+            },
+            "bound": 54.053825382851684,
+            "measuredDistalArc": 6.6812632596866885,
+            "combinedLowerBound": 60.73508864253837
+          },
+          {
+            "rank": 9,
+            "index": 12850,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 11,
+            "index": 13506,
+            "point": {
+              "x": 1497.8784109951732,
+              "y": 1882.017819962823,
+              "arc": 0
+            },
+            "bound": 54.053825382851684,
+            "measuredDistalArc": 6.6812632596866885,
+            "combinedLowerBound": 60.73508864253837
+          },
+          {
+            "rank": 12,
+            "index": 13075,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 13,
+            "index": 13074,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 15,
+            "index": 13730,
+            "point": {
+              "x": 1497.8784109951732,
+              "y": 1882.017819962823,
+              "arc": 0
+            },
+            "bound": 54.053825382851684,
+            "measuredDistalArc": 6.6812632596866885,
+            "combinedLowerBound": 60.73508864253837
+          },
+          {
+            "rank": 16,
+            "index": 13299,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 18,
+            "index": 13523,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 19,
+            "index": 13955,
+            "point": {
+              "x": 1497.8784109951732,
+              "y": 1882.017819962823,
+              "arc": 0
+            },
+            "bound": 54.053825382851684,
+            "measuredDistalArc": 6.6812632596866885,
+            "combinedLowerBound": 60.73508864253837
+          },
+          {
+            "rank": 26,
+            "index": 13747,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 30,
+            "index": 13972,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 31,
+            "index": 13971,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 34,
+            "index": 14208,
+            "point": {
+              "x": 1634.2394924533307,
+              "y": 1910.3601885673709,
+              "arc": 0
+            },
+            "bound": 44.45722715600834,
+            "measuredDistalArc": 6.528849343901261,
+            "combinedLowerBound": 50.9860764999096
+          },
+          {
+            "rank": 38,
+            "index": 14195,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 41,
+            "index": 14433,
+            "point": {
+              "x": 1634.2394924533307,
+              "y": 1910.3601885673709,
+              "arc": 0
+            },
+            "bound": 44.45722715600834,
+            "measuredDistalArc": 6.528849343901261,
+            "combinedLowerBound": 50.9860764999096
+          },
+          {
+            "rank": 46,
+            "index": 14419,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 47,
+            "index": 14667,
+            "point": {
+              "x": 1678.4032452108474,
+              "y": 1918.458792386683,
+              "arc": 0
+            },
+            "bound": 35.78046335082696,
+            "measuredDistalArc": 7.065380431139765,
+            "combinedLowerBound": 42.84584378196673
+          },
+          {
+            "rank": 48,
+            "index": 14657,
+            "point": {
+              "x": 1634.2394924533307,
+              "y": 1910.3601885673709,
+              "arc": 0
+            },
+            "bound": 44.45722715600834,
+            "measuredDistalArc": 6.528849343901261,
+            "combinedLowerBound": 50.9860764999096
+          },
+          {
+            "rank": 52,
+            "index": 14643,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 53,
+            "index": 14855,
+            "point": {
+              "x": 1530.316701534659,
+              "y": 1922.449246163364,
+              "arc": 0
+            },
+            "bound": 38.02919329671716,
+            "measuredDistalArc": 8.779894417116537,
+            "combinedLowerBound": 46.8090877138337
+          },
+          {
+            "rank": 54,
+            "index": 14891,
+            "point": {
+              "x": 1678.4032452108474,
+              "y": 1918.458792386683,
+              "arc": 0
+            },
+            "bound": 35.78046335082696,
+            "measuredDistalArc": 7.065380431139765,
+            "combinedLowerBound": 42.84584378196673
+          },
+          {
+            "rank": 56,
+            "index": 14881,
+            "point": {
+              "x": 1634.2394924533307,
+              "y": 1910.3601885673709,
+              "arc": 0
+            },
+            "bound": 44.45722715600834,
+            "measuredDistalArc": 6.528849343901261,
+            "combinedLowerBound": 50.9860764999096
+          },
+          {
+            "rank": 57,
+            "index": 14868,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 60,
+            "index": 15114,
+            "point": {
+              "x": 1678.4032452108474,
+              "y": 1918.458792386683,
+              "arc": 0
+            },
+            "bound": 35.78046335082696,
+            "measuredDistalArc": 7.065380431139765,
+            "combinedLowerBound": 42.84584378196673
+          },
+          {
+            "rank": 61,
+            "index": 15080,
+            "point": {
+              "x": 1530.316701534659,
+              "y": 1922.449246163364,
+              "arc": 0
+            },
+            "bound": 38.02919329671716,
+            "measuredDistalArc": 8.779894417116537,
+            "combinedLowerBound": 46.8090877138337
+          },
+          {
+            "rank": 64,
+            "index": 15105,
+            "point": {
+              "x": 1634.2394924533307,
+              "y": 1910.3601885673709,
+              "arc": 0
+            },
+            "bound": 44.45722715600834,
+            "measuredDistalArc": 6.528849343901261,
+            "combinedLowerBound": 50.9860764999096
+          },
+          {
+            "rank": 68,
+            "index": 15092,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 70,
+            "index": 15338,
+            "point": {
+              "x": 1678.4032452108474,
+              "y": 1918.458792386683,
+              "arc": 0
+            },
+            "bound": 35.78046335082696,
+            "measuredDistalArc": 7.065380431139765,
+            "combinedLowerBound": 42.84584378196673
+          },
+          {
+            "rank": 72,
+            "index": 15330,
+            "point": {
+              "x": 1634.2394924533307,
+              "y": 1910.3601885673709,
+              "arc": 0
+            },
+            "bound": 44.45722715600834,
+            "measuredDistalArc": 6.528849343901261,
+            "combinedLowerBound": 50.9860764999096
+          },
+          {
+            "rank": 73,
+            "index": 15305,
+            "point": {
+              "x": 1530.316701534659,
+              "y": 1922.449246163364,
+              "arc": 0
+            },
+            "bound": 38.02919329671716,
+            "measuredDistalArc": 8.779894417116537,
+            "combinedLowerBound": 46.8090877138337
+          },
+          {
+            "rank": 79,
+            "index": 15306,
+            "point": {
+              "x": 1530.316701534659,
+              "y": 1922.449246163364,
+              "arc": 0
+            },
+            "bound": 38.02919329671716,
+            "measuredDistalArc": 8.779894417116537,
+            "combinedLowerBound": 46.8090877138337
+          },
+          {
+            "rank": 81,
+            "index": 15316,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 83,
+            "index": 15562,
+            "point": {
+              "x": 1678.4032452108474,
+              "y": 1918.458792386683,
+              "arc": 0
+            },
+            "bound": 35.78046335082696,
+            "measuredDistalArc": 7.065380431139765,
+            "combinedLowerBound": 42.84584378196673
+          },
+          {
+            "rank": 84,
+            "index": 15554,
+            "point": {
+              "x": 1634.2394924533307,
+              "y": 1910.3601885673709,
+              "arc": 0
+            },
+            "bound": 44.45722715600834,
+            "measuredDistalArc": 6.528849343901261,
+            "combinedLowerBound": 50.9860764999096
+          },
+          {
+            "rank": 86,
+            "index": 15530,
+            "point": {
+              "x": 1530.316701534659,
+              "y": 1922.449246163364,
+              "arc": 0
+            },
+            "bound": 38.02919329671716,
+            "measuredDistalArc": 8.779894417116537,
+            "combinedLowerBound": 46.8090877138337
+          },
+          {
+            "rank": 88,
+            "index": 15541,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 91,
+            "index": 15540,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 93,
+            "index": 15531,
+            "point": {
+              "x": 1530.316701534659,
+              "y": 1922.449246163364,
+              "arc": 0
+            },
+            "bound": 38.02919329671716,
+            "measuredDistalArc": 8.779894417116537,
+            "combinedLowerBound": 46.8090877138337
+          },
+          {
+            "rank": 95,
+            "index": 15786,
+            "point": {
+              "x": 1678.4032452108474,
+              "y": 1918.458792386683,
+              "arc": 0
+            },
+            "bound": 35.78046335082696,
+            "measuredDistalArc": 7.065380431139765,
+            "combinedLowerBound": 42.84584378196673
+          },
+          {
+            "rank": 102,
+            "index": 15765,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 103,
+            "index": 15764,
+            "point": {
+              "x": 1576.6075201418898,
+              "y": 1862.6090933996527,
+              "arc": 0
+            },
+            "bound": 56.67402311559391,
+            "measuredDistalArc": 1.0034276511075895,
+            "combinedLowerBound": 57.6774507667015
+          },
+          {
+            "rank": 105,
+            "index": 15755,
+            "point": {
+              "x": 1530.316701534659,
+              "y": 1922.449246163364,
+              "arc": 0
+            },
+            "bound": 38.02919329671716,
+            "measuredDistalArc": 8.779894417116537,
+            "combinedLowerBound": 46.8090877138337
+          },
+          {
+            "rank": 107,
+            "index": 16010,
+            "point": {
+              "x": 1678.4032452108474,
+              "y": 1918.458792386683,
+              "arc": 0
+            },
+            "bound": 35.78046335082696,
+            "measuredDistalArc": 7.065380431139765,
+            "combinedLowerBound": 42.84584378196673
+          },
+          {
+            "rank": 110,
+            "index": 15756,
+            "point": {
+              "x": 1530.316701534659,
+              "y": 1922.449246163364,
+              "arc": 0
+            },
+            "bound": 38.02919329671716,
+            "measuredDistalArc": 8.779894417116537,
+            "combinedLowerBound": 46.8090877138337
+          },
+          {
+            "rank": 121,
+            "index": 16452,
+            "point": {
+              "x": 1647.8919469773082,
+              "y": 1950.185617684418,
+              "arc": 0
+            },
+            "bound": 24.44488456228652,
+            "measuredDistalArc": 1.5712011786720816,
+            "combinedLowerBound": 26.0160857409586
+          }
+        ],
+        "regionsBeyond36": 1,
+        "observedStartsBeyond36": 44,
+        "observedCombinedBeyond36": 51
+      }
+    },
+    "webkit": {
+      "left": {
+        "regions": [
+          {
+            "id": "left-1",
+            "center": {
+              "x": 3073,
+              "y": 2186
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 43.88687791052485,
+            "lowerBound": 31.158955849166993
+          },
+          {
+            "id": "left-2",
+            "center": {
+              "x": 3022,
+              "y": 2213
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 32.48254885588472,
+            "lowerBound": 19.754626794526864
+          },
+          {
+            "id": "left-3",
+            "center": {
+              "x": 2947,
+              "y": 2211
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 47.08021531982406,
+            "lowerBound": 34.352293258466204
+          }
+        ],
+        "observedStarts": [
+          {
+            "rank": 17,
+            "index": 11352,
+            "point": {
+              "x": 3112.5882786936463,
+              "y": 2213.6668100809593,
+              "arc": 0
+            },
+            "bound": 51.792953081490744,
+            "measuredDistalArc": 4.234461348522848,
+            "combinedLowerBound": 56.02741443001359
+          },
+          {
+            "rank": 19,
+            "index": 11351,
+            "point": {
+              "x": 3112.5882786936463,
+              "y": 2213.6668100809593,
+              "arc": 0
+            },
+            "bound": 51.792953081490744,
+            "measuredDistalArc": 4.234461348522848,
+            "combinedLowerBound": 56.02741443001359
+          },
+          {
+            "rank": 22,
+            "index": 11575,
+            "point": {
+              "x": 3112.5882786936463,
+              "y": 2213.6668100809593,
+              "arc": 0
+            },
+            "bound": 51.792953081490744,
+            "measuredDistalArc": 4.234461348522848,
+            "combinedLowerBound": 56.02741443001359
+          },
+          {
+            "rank": 32,
+            "index": 11797,
+            "point": {
+              "x": 3112.5882786936463,
+              "y": 2213.6668100809593,
+              "arc": 0
+            },
+            "bound": 51.792953081490744,
+            "measuredDistalArc": 4.234461348522848,
+            "combinedLowerBound": 56.02741443001359
+          }
+        ],
+        "regionsBeyond36": 0,
+        "observedStartsBeyond36": 4,
+        "observedCombinedBeyond36": 4
+      },
+      "right": {
+        "regions": [
+          {
+            "id": "right-1",
+            "center": {
+              "x": 1491,
+              "y": 1888
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 47.70707679537133,
+            "lowerBound": 34.97915473401347
+          },
+          {
+            "id": "right-2",
+            "center": {
+              "x": 1576,
+              "y": 1867
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 58.431369397199305,
+            "lowerBound": 45.703447335841446
+          },
+          {
+            "id": "right-3",
+            "center": {
+              "x": 1629,
+              "y": 1882
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 47.92167836968136,
+            "lowerBound": 35.1937563083235
+          },
+          {
+            "id": "right-4",
+            "center": {
+              "x": 1671,
+              "y": 1903
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 45.77265204553738,
+            "lowerBound": 33.04472998417952
+          },
+          {
+            "id": "right-5",
+            "center": {
+              "x": 1698,
+              "y": 1918
+            },
+            "enclosingRadius": 12.727922061357857,
+            "centerBound": 37.21672218358794,
+            "lowerBound": 24.48880012223008
+          }
+        ],
+        "observedStarts": [
+          {
+            "rank": 2,
+            "index": 11282,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 3,
+            "index": 11506,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 4,
+            "index": 12159,
+            "point": {
+              "x": 1496.7490899485788,
+              "y": 1879.6151322395594,
+              "arc": 0
+            },
+            "bound": 57.57186151894268,
+            "measuredDistalArc": 4.071658305725553,
+            "combinedLowerBound": 61.64351982466823
+          },
+          {
+            "rank": 6,
+            "index": 11730,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 7,
+            "index": 11956,
+            "point": {
+              "x": 1586.156288081351,
+              "y": 1867.4988211593627,
+              "arc": 0
+            },
+            "bound": 51.64890449036555,
+            "measuredDistalArc": 1.0083146465107178,
+            "combinedLowerBound": 52.65721913687627
+          },
+          {
+            "rank": 8,
+            "index": 11954,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 9,
+            "index": 12608,
+            "point": {
+              "x": 1496.7490899485788,
+              "y": 1879.6151322395594,
+              "arc": 0
+            },
+            "bound": 57.57186151894268,
+            "measuredDistalArc": 4.071658305725553,
+            "combinedLowerBound": 61.64351982466823
+          },
+          {
+            "rank": 11,
+            "index": 12178,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 12,
+            "index": 12833,
+            "point": {
+              "x": 1496.7490899485788,
+              "y": 1879.6151322395594,
+              "arc": 0
+            },
+            "bound": 57.57186151894268,
+            "measuredDistalArc": 4.071658305725553,
+            "combinedLowerBound": 61.64351982466823
+          },
+          {
+            "rank": 16,
+            "index": 12402,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 18,
+            "index": 13057,
+            "point": {
+              "x": 1496.7490899485788,
+              "y": 1879.6151322395594,
+              "arc": 0
+            },
+            "bound": 57.57186151894268,
+            "measuredDistalArc": 4.071658305725553,
+            "combinedLowerBound": 61.64351982466823
+          },
+          {
+            "rank": 22,
+            "index": 13058,
+            "point": {
+              "x": 1496.7490899485788,
+              "y": 1879.6151322395594,
+              "arc": 0
+            },
+            "bound": 57.57186151894268,
+            "measuredDistalArc": 4.071658305725553,
+            "combinedLowerBound": 61.64351982466823
+          },
+          {
+            "rank": 24,
+            "index": 12627,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 25,
+            "index": 13282,
+            "point": {
+              "x": 1496.7490899485788,
+              "y": 1879.6151322395594,
+              "arc": 0
+            },
+            "bound": 57.57186151894268,
+            "measuredDistalArc": 4.071658305725553,
+            "combinedLowerBound": 61.64351982466823
+          },
+          {
+            "rank": 26,
+            "index": 12851,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 30,
+            "index": 13075,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 31,
+            "index": 13507,
+            "point": {
+              "x": 1496.7490899485788,
+              "y": 1879.6151322395594,
+              "arc": 0
+            },
+            "bound": 57.57186151894268,
+            "measuredDistalArc": 4.071658305725553,
+            "combinedLowerBound": 61.64351982466823
+          },
+          {
+            "rank": 35,
+            "index": 13300,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 36,
+            "index": 13299,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 40,
+            "index": 13524,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 41,
+            "index": 13523,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 49,
+            "index": 13748,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 51,
+            "index": 13747,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 58,
+            "index": 13972,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 59,
+            "index": 14219,
+            "point": {
+              "x": 1679.0166440709097,
+              "y": 1916.3449966441433,
+              "arc": 0
+            },
+            "bound": 40.39292684041825,
+            "measuredDistalArc": 5.1409243986958,
+            "combinedLowerBound": 45.53385123911405
+          },
+          {
+            "rank": 60,
+            "index": 13971,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 69,
+            "index": 14196,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 71,
+            "index": 14443,
+            "point": {
+              "x": 1679.0166440709097,
+              "y": 1916.3449966441433,
+              "arc": 0
+            },
+            "bound": 40.39292684041825,
+            "measuredDistalArc": 5.1409243986958,
+            "combinedLowerBound": 45.53385123911405
+          },
+          {
+            "rank": 72,
+            "index": 14194,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 73,
+            "index": 14407,
+            "point": {
+              "x": 1528.408625977577,
+              "y": 1920.3707683287255,
+              "arc": 0
+            },
+            "bound": 37.94605691627081,
+            "measuredDistalArc": 6.188561426377256,
+            "combinedLowerBound": 44.13461834264807
+          },
+          {
+            "rank": 80,
+            "index": 14420,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 81,
+            "index": 14667,
+            "point": {
+              "x": 1679.0166440709097,
+              "y": 1916.3449966441433,
+              "arc": 0
+            },
+            "bound": 40.39292684041825,
+            "measuredDistalArc": 5.1409243986958,
+            "combinedLowerBound": 45.53385123911405
+          },
+          {
+            "rank": 82,
+            "index": 14418,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 85,
+            "index": 14632,
+            "point": {
+              "x": 1528.408625977577,
+              "y": 1920.3707683287255,
+              "arc": 0
+            },
+            "bound": 37.94605691627081,
+            "measuredDistalArc": 6.188561426377256,
+            "combinedLowerBound": 44.13461834264807
+          },
+          {
+            "rank": 90,
+            "index": 14644,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 91,
+            "index": 14891,
+            "point": {
+              "x": 1679.0166440709097,
+              "y": 1916.3449966441433,
+              "arc": 0
+            },
+            "bound": 40.39292684041825,
+            "measuredDistalArc": 5.1409243986958,
+            "combinedLowerBound": 45.53385123911405
+          },
+          {
+            "rank": 94,
+            "index": 14857,
+            "point": {
+              "x": 1528.408625977577,
+              "y": 1920.3707683287255,
+              "arc": 0
+            },
+            "bound": 37.94605691627081,
+            "measuredDistalArc": 6.188561426377256,
+            "combinedLowerBound": 44.13461834264807
+          },
+          {
+            "rank": 100,
+            "index": 15118,
+            "point": {
+              "x": 1694.3452733273298,
+              "y": 1932.2003731825635,
+              "arc": 0
+            },
+            "bound": 36.77713080401596,
+            "measuredDistalArc": 1.5893252435653769,
+            "combinedLowerBound": 38.36645604758134
+          },
+          {
+            "rank": 103,
+            "index": 14868,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 105,
+            "index": 15114,
+            "point": {
+              "x": 1679.0166440709097,
+              "y": 1916.3449966441433,
+              "arc": 0
+            },
+            "bound": 40.39292684041825,
+            "measuredDistalArc": 5.1409243986958,
+            "combinedLowerBound": 45.53385123911405
+          },
+          {
+            "rank": 116,
+            "index": 15082,
+            "point": {
+              "x": 1528.408625977577,
+              "y": 1920.3707683287255,
+              "arc": 0
+            },
+            "bound": 37.94605691627081,
+            "measuredDistalArc": 6.188561426377256,
+            "combinedLowerBound": 44.13461834264807
+          },
+          {
+            "rank": 118,
+            "index": 15342,
+            "point": {
+              "x": 1694.3452733273298,
+              "y": 1932.2003731825635,
+              "arc": 0
+            },
+            "bound": 36.77713080401596,
+            "measuredDistalArc": 1.5893252435653769,
+            "combinedLowerBound": 38.36645604758134
+          },
+          {
+            "rank": 119,
+            "index": 15093,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 120,
+            "index": 15092,
+            "point": {
+              "x": 1576.8004432710045,
+              "y": 1863.1869065639703,
+              "arc": 0
+            },
+            "bound": 60.88966850247742,
+            "measuredDistalArc": 2.041674428569018,
+            "combinedLowerBound": 62.93134293104644
+          },
+          {
+            "rank": 122,
+            "index": 15338,
+            "point": {
+              "x": 1679.0166440709097,
+              "y": 1916.3449966441433,
+              "arc": 0
+            },
+            "bound": 40.39292684041825,
+            "measuredDistalArc": 5.1409243986958,
+            "combinedLowerBound": 45.53385123911405
+          }
+        ],
+        "regionsBeyond36": 1,
+        "observedStartsBeyond36": 45,
+        "observedCombinedBeyond36": 45
+      }
+    }
+  },
+  "limitations": "Bounds above 36 rule out the specified single native arc. Bounds within 36 are inconclusive. Labels are provisional and were used only for posthoc region bounds."
+}

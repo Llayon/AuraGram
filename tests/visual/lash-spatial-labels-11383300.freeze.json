@@ -1,0 +1,7 @@
+{
+  "purpose": "Freeze provisional original-only annotations before lash detector use. Three possible tips do not qualify this eye.",
+  "inputs": {
+    "tests/visual/lash-spatial-labels-11383300.json": "048cbdb832d33be9fe2684c3bb312296a69732175cc707146827a9b5693eff84"
+  },
+  "sourceSHA256": "1a3f74d3dde1d50fe923cb55e303c4507b58f0d2986284eaf9a873e01245c2d6"
+}

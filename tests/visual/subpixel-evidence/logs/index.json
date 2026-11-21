@@ -1,0 +1,77 @@
+[
+  {
+    "file": "subpixel-01-controls.txt",
+    "sha256": "d6eb7fcdfb198c925d191916e2bd5427f872ccba633a456806892952683a81fe",
+    "rawSHA256": "634e8deeb52c16c42e74030beac7c992f6fa376987e1a46e16aec0eb1d7f254b"
+  },
+  {
+    "file": "subpixel-02-raster.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rawSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "subpixel-03-controls.txt",
+    "sha256": "4a6767d71f7ab779545358d8e2b6715816f9abc3aa2e4e661423d099a9074a88",
+    "rawSHA256": "b913c970ea1809d8a7d498e54cfdbfec010752b2f0840512698b727ae7271e9d"
+  },
+  {
+    "file": "subpixel-04-raster.txt",
+    "sha256": "f4e88f24ef73fd1cdb1e557127d5ab0848304550ce02eb2f83371ae47791f3e4",
+    "rawSHA256": "22f2a1230170c904ca97be359da7e7a306023366089d9175d0011d09efa47478"
+  },
+  {
+    "file": "subpixel-09-unit.txt",
+    "sha256": "db0a3fabaaaabe461aad1ce570815998e1f8f12563d2578578763d5d88df67e4",
+    "rawSHA256": "12592bf8ea2069391fe772b0025f4f418b6aff45ebd4bdc97e796e09b2f419b8"
+  },
+  {
+    "file": "subpixel-10-browser.txt",
+    "sha256": "a71e8cc42ad9c08c9a484dcf46ac74ac2de67c83796ec1c90aee5024dd6c64dc",
+    "rawSHA256": "bb561529403268e3b00cd273e9ae5ea0357d9fb100e2ed55f6aa0bc8068bb11c"
+  },
+  {
+    "file": "subpixel-14-controls-v2.txt",
+    "sha256": "2f5c7f48bbe7c94540b43107e446092b9ee70693d2777adcb31f5942995b91e2",
+    "rawSHA256": "80fb0213b6e06fec94b0148ac305fe5a51996fdf9053a1ff72e8b3a80ce31c24"
+  },
+  {
+    "file": "subpixel-15-raster-v2.txt",
+    "sha256": "f4e88f24ef73fd1cdb1e557127d5ab0848304550ce02eb2f83371ae47791f3e4",
+    "rawSHA256": "22f2a1230170c904ca97be359da7e7a306023366089d9175d0011d09efa47478"
+  },
+  {
+    "file": "subpixel-16-unit-v2.txt",
+    "sha256": "34c53ccae17ad5ab880df483ceb8e0a9e6aad2450570226413e415e5dc2fd909",
+    "rawSHA256": "5369b4d0ac94cada7871ae2c95322fb33981e2f87e489aa1a96ecdf41c943dc6"
+  },
+  {
+    "file": "subpixel-20-performance.txt",
+    "sha256": "743f6908d39473ad5ee27bd6bfa414638a3aefe14a53b6fc3e3498addc316bc7",
+    "rawSHA256": "75c067e3d3a99b18ff1548531c243c72a20b854324c4268fa1bf0aa4e80bbf41"
+  },
+  {
+    "file": "subpixel-21-build.txt",
+    "sha256": "07ce8280485616b4f9078810e8fd1414931bb45e58a2854bc69cd1dc673bdc98",
+    "rawSHA256": "6288aa2d2b47909a71900cb566ddcc9b5b9e00ea551a8428a08a541c726c5c37"
+  },
+  {
+    "file": "subpixel-22-package.txt",
+    "sha256": "1da1367bfda82453a298c3c07ad6734e491bc79cdc902f03668a77f4f602898d",
+    "rawSHA256": "3fb22edde5bd86e3ae9b0566af91d6fdeb994e7f1fc8c946da3203ad5a549486"
+  },
+  {
+    "file": "subpixel-23-checksite.txt",
+    "sha256": "b12f43096006624ce89f22f1d34f2cae3080327c6442e8daa562ea5c1f04b459",
+    "rawSHA256": "27d03545dd95ebfbd6180414d90c9554ac0a0a57e33704dcc4412b885c475961"
+  },
+  {
+    "file": "subpixel-24-controls-replay.txt",
+    "sha256": "2f5c7f48bbe7c94540b43107e446092b9ee70693d2777adcb31f5942995b91e2",
+    "rawSHA256": "80fb0213b6e06fec94b0148ac305fe5a51996fdf9053a1ff72e8b3a80ce31c24"
+  },
+  {
+    "file": "subpixel-25-raster-replay.txt",
+    "sha256": "f4e88f24ef73fd1cdb1e557127d5ab0848304550ce02eb2f83371ae47791f3e4",
+    "rawSHA256": "22f2a1230170c904ca97be359da7e7a306023366089d9175d0011d09efa47478"
+  }
+]

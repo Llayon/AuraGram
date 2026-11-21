@@ -1,0 +1,54 @@
+{
+  "meaning": "CI-only availability-fixture coupling fix. No source/hash normalization, replay-gate bypass, assertion/threshold/golden change. Frozen metadata reader uses exactly same actual MediaPipe records and label identities.",
+  "failedWorkflow": "https://github.com/Llayon/AuraGram/actions/runs/43246135530",
+  "failedJob": "https://github.com/Llayon/AuraGram/actions/runs/43246135530/job/131279157071",
+  "beforeTestSHA256": "cea1b391a6f88ed3bdbc9d18b5b2dc5414be1e911c45037c45ec464ed01078f2",
+  "afterTestSHA256": "37df367afd4bf3d42a5da47d76f044572dbff3e7917e3b367f078973181cd50e",
+  "readerFile": "tests/visual/lash-break-references.cjs",
+  "readerSHA256": "d012d58c5ba9bebb3de2eb2a94535073052e00c4ebac8946d67405fc31c349ab",
+  "assertionTailSHA256": "ef58daae307ad22208180af228164a864b2a7421b33bc4a136516c9d39b81160",
+  "earlierTestsIdentical": true,
+  "fixtureReferenceIdentitiesEqual": true,
+  "fixtureAvailableFileOrderEqual": true,
+  "frozenManifestMapSHA256": "189c3860c9de312880b63e0c05991acb3483cea3c490d13e87a282ba13350d69",
+  "manifestSHA256": {
+    "chromium": "ed119ee6cf4478027cd7f87ae257b1cba7381573e2d5aed2eb896cf8eb25022b",
+    "webkit": "65897688eb1f469edb7036c44bc8826cadae76b872889438be67cdd8fdb859f9"
+  },
+  "lineEndingProof": {
+    "file": "src/retouch/eyeGeometry.mjs",
+    "workingRawSHA256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950",
+    "gitBlobLFSHA256": "3a57b7db43da55bb42017225438cf959982c39bd16f24dd9eebd55f3aae973d0",
+    "workingCRLF": 128,
+    "canonicalContentEqual": true
+  },
+  "validation": {
+    "fixedWindowsUnit": "188PASS",
+    "isolatedGitBlobLFDependencies": "7PASS; Node on Windows using exact LF Git blobs, not a physical Linux runner claim",
+    "firstLFProbe": "Incomplete temporary dependency fixture lacked faceGeometry.mjs; preserved, then dependencies completed",
+    "previousFunctionalBrowser": "166PASS/2originalF1FAIL/3dependentNOTRUN; product and functional tests unchanged",
+    "CI": "Pending new-head run; no PASS claim"
+  },
+  "logs": {
+    "initialCIBuild": {
+      "file": "initialCIBuild.txt.gz",
+      "sha256": "e480a8f809351dd1904f83927651100e031f8673aaf856c910e7ea5921c51926",
+      "bytes": 93426
+    },
+    "fixedWindowsUnit": {
+      "file": "fixedWindowsUnit.txt.gz",
+      "sha256": "e8e80b916bc82fa1dd069966867b7e732a29535c45e374856b001990c3bbe5db",
+      "bytes": 37552
+    },
+    "initialLFProbe": {
+      "file": "initialLFProbe.txt.gz",
+      "sha256": "d67e899b4699ec460622aa3afbe1a6d1f1ca9ad68971974ca76c08d7ced79bae",
+      "bytes": 2970
+    },
+    "completedLFProbe": {
+      "file": "completedLFProbe.txt.gz",
+      "sha256": "219f12cbfa701ef30ca99d4402aae4a4f6f1624918fc47e5304604adcfa18fd1",
+      "bytes": 1546
+    }
+  }
+}

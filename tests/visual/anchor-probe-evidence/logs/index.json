@@ -1,0 +1,42 @@
+[
+  {
+    "file": "anchor-03-unit.txt",
+    "sha256": "1fe5d0d8498a9cde73dd72840c938751679fa682e717b80de43c1082be21bed2",
+    "rawSHA256": "c26b99a478bd6cce44d58c632301d702357fc27d5e20911413e196458f5f61fb"
+  },
+  {
+    "file": "anchor-04-browser.txt",
+    "sha256": "43104435837dcbf30ec707bd9a16d29fd15a7c54ed2836cf429d6cdbc3178a13",
+    "rawSHA256": "2e0b8e5d86258c1680dce52bc7676825d077228e43ef3952387eb552e46a7636"
+  },
+  {
+    "file": "anchor-07-unit-final.txt",
+    "sha256": "765568b2e46225da22cc1c964a9e2f5b7e7a4d3ef68b64dcd9726bbdeaefd7c1",
+    "rawSHA256": "8c12531f044e203a6a15cf51eec20ebf13697f9561b1d1a39f1b269b5e13e5a1"
+  },
+  {
+    "file": "anchor-08-performance.txt",
+    "sha256": "c9facae11518cb190b9293c763fc99b0092b7dafcbb54f483378458791f24fa4",
+    "rawSHA256": "b03e6139996db75e199919eb91d7a6803b5440bacd3a42b06072dda9519d0ff9"
+  },
+  {
+    "file": "anchor-09-active-performance.txt",
+    "sha256": "5869d780680aaaa10ded8493d2ea1937087d03cfc8f4aca899a22c5a5ba838ef",
+    "rawSHA256": "063d41d8c8783446170055f6668b872395c183cb57b2e88dd60d548eaa931928"
+  },
+  {
+    "file": "anchor-10-build.txt",
+    "sha256": "1ff27f3e9caa3c599efad285c89071114dc100ba107366129892630510011391",
+    "rawSHA256": "263e775bc3faec81188e89c310e193e87cbda065ef7725dfb3b248e57d644b99"
+  },
+  {
+    "file": "anchor-11-package.txt",
+    "sha256": "1da1367bfda82453a298c3c07ad6734e491bc79cdc902f03668a77f4f602898d",
+    "rawSHA256": "3fb22edde5bd86e3ae9b0566af91d6fdeb994e7f1fc8c946da3203ad5a549486"
+  },
+  {
+    "file": "anchor-12-checksite.txt",
+    "sha256": "b12f43096006624ce89f22f1d34f2cae3080327c6442e8daa562ea5c1f04b459",
+    "rawSHA256": "27d03545dd95ebfbd6180414d90c9554ac0a0a57e33704dcc4412b885c475961"
+  }
+]
