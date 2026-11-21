@@ -34,6 +34,14 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-21: offline coordinate picker for independent development review
+
+Built a standalone original-image coordinate picker for the source-only packet. The reviewer opens a local JPEG, zooms or scrolls, and clicks the vertices of a region or observed path. The viewer displays the chosen positions over the original and emits a plain array of original pixel coordinates. Display zoom never changes the saved coordinates. The reviewer still determines the roles, directions and regions and copies each array into their own JSON. The viewer does not open detector or annotation files and makes no network requests.
+
+Verified with the development JPEG 14297936 in Chromium and WebKit using a direct file URL. Both match the recorded 4016 by 6016 original dimensions. At fit scale the measured positions agree within one display pixel. At native scale after scrolling they match the exact intended image pixels. Both browsers retain the view center on zoom and pass polygon display, undo and JSON selection.
+
+The local `tests/visual/out/lash-development-review-02.zip` preserves the six original JPEGs, source index and blank templates byte for byte. Added `coordinates.html` and updated instructions. All 15 members verify. The archive SHA256 is `84fba07b52c091c0c91ea4ebd5cd0e96e59f18801632eecae7ee48c8175ddc81`. The previous archive remains intact. The local archives are excluded from Git. Independently completed annotations are still missing. The held-out group stays closed. **LENGTH HOLD.**
+
 ### 2026-11-21: ingest source-only reviewer files without discarding deficits
 
 Added `node tests/visual/lash-development-review-intake.mjs EXTRACTED-REVIEW-DIRECTORY NEW-report.json`. It checks the development packet inventory and JPEG digests against the frozen census. Source bounds come from the saved per-engine screening dimensions after checking their digests and agreement. It checks finite source coordinates, nonempty path segments and regions, tip IDs, direction ranges, reviewer and role, and reasons for omitted eyes. For hard cases, declare any observed control eye in `evaluatedEyes` and explain omissions. Record a reason in `notes` for `unqualified`. Angles use [-180,180] and may wrap at the endpoints.

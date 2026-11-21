@@ -9,6 +9,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 LOCAL_OUT = ROOT / 'tests/visual/out'
 INSTRUCTIONS = ROOT / 'tests/visual/lash-development-review-instructions.md'
+PICKER = ROOT / 'tests/visual/lash-development-review-picker.html'
 
 
 def sha256(data):
@@ -43,7 +44,7 @@ def build_packet(selection, output):
         if file != Path(file).name or '/' in file or '\\' in file:
             raise ValueError(f'Unsafe source name: {file}')
 
-    files = {'README.md': INSTRUCTIONS.read_bytes()}
+    files = {'README.md': INSTRUCTIONS.read_bytes(), 'coordinates.html': PICKER.read_bytes()}
     index = []
     for file in selected:
         record = by_file[file]
