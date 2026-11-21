@@ -1,0 +1,599 @@
+{
+  "decision": "LENGTH HOLD",
+  "scope": "Frozen inputs from development only. No acceptance or recall estimate.",
+  "cases": {
+    "2507723": {
+      "role": "shorter-scale unqualified development lead",
+      "sourceSHA256": "a346b8390f6a580f4c4a4bbc01e9f4b375802a84ee81ca0835b81046b1c87260",
+      "main": "native-proximal-stop-2507723-main-02",
+      "repeat": "native-proximal-stop-2507723-repeat-02",
+      "prior": "native-short-2507723-main-01",
+      "engines": {
+        "chromium": {
+          "geometrySHA256": "ea40cc4b54d454a3fdd01edbd185d0bf4b1442c2a3db0e7051a4e431caf3f51a",
+          "repeatIdenticalIgnoringTiming": true,
+          "priorIdenticalIgnoringTimingAndStopEvidence": true,
+          "eyes": {
+            "left": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 1.3274985307965952,
+                "y": 1.332821867971709
+              },
+              "seeds": 16,
+              "notExaminedBySeedBudget": 0,
+              "baselineTips": 0,
+              "observedDistalStarts": 2,
+              "uniqueDistalStarts": 1,
+              "reverseReasons": {
+                "no-observed-distal-start": 14,
+                "unconfirmed-dense-link": 2
+              },
+              "attemptedReverse": 2,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": null,
+              "uniqueRejectedSteps": {
+                "unconfirmed-dense-link": 1
+              },
+              "uniqueDenseSamples": {
+                "below-floor-after-along-penalty": 1,
+                "supported": 3
+              },
+              "witnessRanks": [
+                {
+                  "reason": "unconfirmed-dense-link",
+                  "ranks": [
+                    9,
+                    13
+                  ]
+                }
+              ],
+              "priorReverseAuditIdentical": true
+            },
+            "right": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 1.2130853959937802,
+                "y": 1.2162677549353627
+              },
+              "seeds": 29,
+              "notExaminedBySeedBudget": 0,
+              "baselineTips": 0,
+              "observedDistalStarts": 21,
+              "uniqueDistalStarts": 3,
+              "reverseReasons": {
+                "no-observed-distal-start": 3,
+                "unconfirmed-dense-link": 21
+              },
+              "attemptedReverse": 21,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": null,
+              "uniqueRejectedSteps": {
+                "unconfirmed-dense-link": 3
+              },
+              "uniqueDenseSamples": {
+                "below-floor-after-along-penalty": 1,
+                "below-transverse-floor": 7,
+                "supported": 4
+              },
+              "witnessRanks": [
+                {
+                  "reason": "unconfirmed-dense-link",
+                  "ranks": [
+                    5,
+                    7,
+                    8,
+                    10,
+                    12,
+                    13,
+                    16,
+                    19,
+                    22,
+                    28
+                  ]
+                },
+                {
+                  "reason": "unconfirmed-dense-link",
+                  "ranks": [
+                    14,
+                    17,
+                    20,
+                    23,
+                    25,
+                    26,
+                    27
+                  ]
+                },
+                {
+                  "reason": "unconfirmed-dense-link",
+                  "ranks": [
+                    15,
+                    18,
+                    21,
+                    24
+                  ]
+                }
+              ],
+              "priorReverseAuditIdentical": true
+            }
+          }
+        },
+        "webkit": {
+          "geometrySHA256": "87aab7223ed752918eaa20d75ef594ed12dd288788cf8fee557f80f0d07a4cd2",
+          "repeatIdenticalIgnoringTiming": true,
+          "priorIdenticalIgnoringTimingAndStopEvidence": true,
+          "eyes": {
+            "left": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 1.3256754324776787,
+                "y": 1.330473931760204
+              },
+              "seeds": 14,
+              "notExaminedBySeedBudget": 0,
+              "baselineTips": 0,
+              "observedDistalStarts": 4,
+              "uniqueDistalStarts": 2,
+              "reverseReasons": {
+                "no-observed-distal-start": 10,
+                "unconfirmed-dense-link": 4
+              },
+              "attemptedReverse": 4,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": null,
+              "uniqueRejectedSteps": {
+                "unconfirmed-dense-link": 2
+              },
+              "uniqueDenseSamples": {
+                "below-floor-after-along-penalty": 1,
+                "below-transverse-floor": 2,
+                "supported": 5
+              },
+              "witnessRanks": [
+                {
+                  "reason": "unconfirmed-dense-link",
+                  "ranks": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reason": "unconfirmed-dense-link",
+                  "ranks": [
+                    7,
+                    11
+                  ]
+                }
+              ],
+              "priorReverseAuditIdentical": true
+            },
+            "right": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 1.226665788076456,
+                "y": 1.2219516318184986
+              },
+              "seeds": 33,
+              "notExaminedBySeedBudget": 0,
+              "baselineTips": 2,
+              "observedDistalStarts": 29,
+              "uniqueDistalStarts": 2,
+              "reverseReasons": {
+                "no-observed-distal-start": 2,
+                "search-boundary": 19,
+                "unconfirmed-dense-link": 10
+              },
+              "attemptedReverse": 29,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": null,
+              "uniqueRejectedSteps": {
+                "search-boundary": 1,
+                "unconfirmed-dense-link": 1
+              },
+              "uniqueDenseSamples": {
+                "below-floor-after-along-penalty": 1,
+                "supported": 3
+              },
+              "witnessRanks": [
+                {
+                  "reason": "search-boundary",
+                  "ranks": [
+                    0,
+                    1,
+                    3,
+                    6,
+                    8,
+                    10,
+                    11,
+                    13,
+                    15,
+                    16,
+                    18,
+                    19,
+                    21,
+                    22,
+                    24,
+                    25,
+                    26,
+                    27,
+                    29
+                  ]
+                },
+                {
+                  "reason": "unconfirmed-dense-link",
+                  "ranks": [
+                    7,
+                    9,
+                    12,
+                    14,
+                    17,
+                    20,
+                    23,
+                    28,
+                    30,
+                    31
+                  ]
+                }
+              ],
+              "priorReverseAuditIdentical": true
+            }
+          }
+        }
+      }
+    },
+    "11383300": {
+      "role": "unqualified development lead",
+      "sourceSHA256": "1a3f74d3dde1d50fe923cb55e303c4507b58f0d2986284eaf9a873e01245c2d6",
+      "main": "native-proximal-stop-11383300-main-01",
+      "repeat": "native-proximal-stop-11383300-repeat-01",
+      "prior": "shared-arc-11383300-probe-01",
+      "engines": {
+        "chromium": {
+          "geometrySHA256": "0479b15d09136824994bf98e0f752950de3b977a083c9a9ee02a74e363265b4a",
+          "repeatIdenticalIgnoringTiming": true,
+          "priorIdenticalIgnoringTimingAndStopEvidence": true,
+          "eyes": {
+            "left": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 6.743511985029497,
+                "y": 6.767236310276179
+              },
+              "seeds": 19,
+              "notExaminedBySeedBudget": 0,
+              "baselineTips": 0,
+              "observedDistalStarts": 0,
+              "uniqueDistalStarts": 0,
+              "reverseReasons": {
+                "no-observed-distal-start": 12
+              },
+              "attemptedReverse": 0,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": null,
+              "uniqueRejectedSteps": {},
+              "uniqueDenseSamples": {},
+              "witnessRanks": [],
+              "priorReverseAuditIdentical": true
+            },
+            "right": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 8.613644823006222,
+                "y": 8.644510016038822
+              },
+              "seeds": 365,
+              "notExaminedBySeedBudget": 237,
+              "baselineTips": 17,
+              "observedDistalStarts": 5,
+              "uniqueDistalStarts": 3,
+              "reverseReasons": {
+                "no-observed-distal-start": 31,
+                "proximal-gate-beyond-budget": 5
+              },
+              "attemptedReverse": 0,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": [
+                66.81253163169595,
+                114.28691146050055
+              ],
+              "uniqueRejectedSteps": {},
+              "uniqueDenseSamples": {},
+              "witnessRanks": [],
+              "priorReverseAuditIdentical": true
+            }
+          }
+        },
+        "webkit": {
+          "geometrySHA256": "d4d362a62959422ca05a47be78f7a031910d79cd84c844c59d96eb5669f5297a",
+          "repeatIdenticalIgnoringTiming": true,
+          "priorIdenticalIgnoringTimingAndStopEvidence": true,
+          "eyes": {
+            "left": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 6.803048963631901,
+                "y": 6.8153779307452345
+              },
+              "seeds": 37,
+              "notExaminedBySeedBudget": 0,
+              "baselineTips": 0,
+              "observedDistalStarts": 0,
+              "uniqueDistalStarts": 0,
+              "reverseReasons": {
+                "no-observed-distal-start": 16
+              },
+              "attemptedReverse": 0,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": null,
+              "uniqueRejectedSteps": {},
+              "uniqueDenseSamples": {},
+              "witnessRanks": [],
+              "priorReverseAuditIdentical": true
+            },
+            "right": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 8.746807845149721,
+                "y": 8.748981829313252
+              },
+              "seeds": 547,
+              "notExaminedBySeedBudget": 419,
+              "baselineTips": 26,
+              "observedDistalStarts": 0,
+              "uniqueDistalStarts": 0,
+              "reverseReasons": {
+                "no-observed-distal-start": 40
+              },
+              "attemptedReverse": 0,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": null,
+              "uniqueRejectedSteps": {},
+              "uniqueDenseSamples": {},
+              "witnessRanks": [],
+              "priorReverseAuditIdentical": true
+            }
+          }
+        }
+      }
+    },
+    "14297936": {
+      "role": "unqualified development lead",
+      "sourceSHA256": "237333fc947c0e4abe0ce0355fbc7f439e8bc3a5b05e6f1a5a8526c93318f948",
+      "main": "native-proximal-stop-14297936-main-01",
+      "repeat": "native-proximal-stop-14297936-repeat-01",
+      "prior": "native-shared-arc-14297936-01",
+      "engines": {
+        "chromium": {
+          "geometrySHA256": "88c7b44b0f63cdd2708d5464d33d0bc5483e27b36a0a29c0d8802878d89a1028",
+          "repeatIdenticalIgnoringTiming": true,
+          "priorIdenticalIgnoringTimingAndStopEvidence": true,
+          "eyes": {
+            "left": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 4.26526534622056,
+                "y": 4.273744224838063
+              },
+              "seeds": 33,
+              "notExaminedBySeedBudget": 0,
+              "baselineTips": 0,
+              "observedDistalStarts": 0,
+              "uniqueDistalStarts": 0,
+              "reverseReasons": {
+                "no-observed-distal-start": 5
+              },
+              "attemptedReverse": 0,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": null,
+              "uniqueRejectedSteps": {},
+              "uniqueDenseSamples": {},
+              "witnessRanks": [],
+              "priorReverseAuditIdentical": true
+            },
+            "right": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 4.036138396229064,
+                "y": 4.049301909656059
+              },
+              "seeds": 144,
+              "notExaminedBySeedBudget": 16,
+              "baselineTips": 7,
+              "observedDistalStarts": 52,
+              "uniqueDistalStarts": 6,
+              "reverseReasons": {
+                "no-observed-distal-start": 23,
+                "proximal-gate-beyond-budget": 51,
+                "unconfirmed-dense-link": 1
+              },
+              "attemptedReverse": 1,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": [
+                6.845843781966728,
+                24.735088642538372
+              ],
+              "uniqueRejectedSteps": {
+                "unconfirmed-dense-link": 1
+              },
+              "uniqueDenseSamples": {
+                "below-transverse-floor": 1,
+                "supported": 3
+              },
+              "witnessRanks": [
+                {
+                  "reason": "unconfirmed-dense-link",
+                  "ranks": [
+                    121
+                  ]
+                }
+              ],
+              "priorReverseAuditIdentical": true
+            }
+          }
+        },
+        "webkit": {
+          "geometrySHA256": "5788a4f68b91c07c9a8437707457f11dcaa001424818235a5d06a472fa7e359d",
+          "repeatIdenticalIgnoringTiming": true,
+          "priorIdenticalIgnoringTimingAndStopEvidence": true,
+          "eyes": {
+            "left": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 4.273025238990785,
+                "y": 4.275910328526651
+              },
+              "seeds": 70,
+              "notExaminedBySeedBudget": 0,
+              "baselineTips": 0,
+              "observedDistalStarts": 4,
+              "uniqueDistalStarts": 1,
+              "reverseReasons": {
+                "no-observed-distal-start": 17,
+                "proximal-gate-beyond-budget": 4
+              },
+              "attemptedReverse": 0,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": [
+                20.027414430013593,
+                20.027414430013593
+              ],
+              "uniqueRejectedSteps": {},
+              "uniqueDenseSamples": {},
+              "witnessRanks": [],
+              "priorReverseAuditIdentical": true
+            },
+            "right": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 4.038082761475019,
+                "y": 4.048913090016583
+              },
+              "seeds": 236,
+              "notExaminedBySeedBudget": 108,
+              "baselineTips": 9,
+              "observedDistalStarts": 45,
+              "uniqueDistalStarts": 6,
+              "reverseReasons": {
+                "no-observed-distal-start": 21,
+                "proximal-gate-beyond-budget": 45
+              },
+              "attemptedReverse": 0,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": [
+                2.3664560475813374,
+                26.931342931046437
+              ],
+              "uniqueRejectedSteps": {},
+              "uniqueDenseSamples": {},
+              "witnessRanks": [],
+              "priorReverseAuditIdentical": true
+            }
+          }
+        }
+      }
+    },
+    "29117992": {
+      "role": "development hair-overlap control",
+      "sourceSHA256": "aa8fa316fb9db9a671778224185ac56e3c9eb8852ae3d8c5839d623708118a79",
+      "main": "native-proximal-stop-29117992-main-01",
+      "repeat": "native-proximal-stop-29117992-repeat-01",
+      "prior": "shared-arc-29117992-probe-01",
+      "engines": {
+        "chromium": {
+          "geometrySHA256": "c4e838d2868eaeb93713bb41d79b81590e8328277411bf2ad9af23cd9616696f",
+          "repeatIdenticalIgnoringTiming": true,
+          "priorIdenticalIgnoringTimingAndStopEvidence": true,
+          "eyes": {
+            "left": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 3.2158072761126912,
+                "y": 3.2325951658564516
+              },
+              "seeds": 150,
+              "notExaminedBySeedBudget": 22,
+              "baselineTips": 0,
+              "observedDistalStarts": 0,
+              "uniqueDistalStarts": 0,
+              "reverseReasons": {
+                "no-observed-distal-start": 54
+              },
+              "attemptedReverse": 0,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": null,
+              "uniqueRejectedSteps": {},
+              "uniqueDenseSamples": {},
+              "witnessRanks": [],
+              "priorReverseAuditIdentical": true
+            },
+            "right": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 3.5003326875822873,
+                "y": 3.5229285028245725
+              },
+              "seeds": 87,
+              "notExaminedBySeedBudget": 0,
+              "baselineTips": 3,
+              "observedDistalStarts": 1,
+              "uniqueDistalStarts": 1,
+              "reverseReasons": {
+                "no-observed-distal-start": 23,
+                "proximal-gate-beyond-budget": 1
+              },
+              "attemptedReverse": 0,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": [
+                13.091250153254329,
+                13.091250153254329
+              ],
+              "uniqueRejectedSteps": {},
+              "uniqueDenseSamples": {},
+              "witnessRanks": [],
+              "priorReverseAuditIdentical": true
+            }
+          }
+        },
+        "webkit": {
+          "geometrySHA256": "ba0e4ed6ce1842136f2d016fbbebd927dbb6548105efdf26ca92e29acb0d0156",
+          "repeatIdenticalIgnoringTiming": true,
+          "priorIdenticalIgnoringTimingAndStopEvidence": true,
+          "eyes": {
+            "left": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 3.158442761216843,
+                "y": 3.1801677906691137
+              },
+              "seeds": 354,
+              "notExaminedBySeedBudget": 226,
+              "baselineTips": 0,
+              "observedDistalStarts": 6,
+              "uniqueDistalStarts": 2,
+              "reverseReasons": {
+                "no-observed-distal-start": 26,
+                "proximal-gate-beyond-budget": 6
+              },
+              "attemptedReverse": 0,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": [
+                2.812503941723456,
+                10.388136739243912
+              ],
+              "uniqueRejectedSteps": {},
+              "uniqueDenseSamples": {},
+              "witnessRanks": [],
+              "priorReverseAuditIdentical": true
+            },
+            "right": {
+              "nativePixelsPerAnalysisPixel": {
+                "x": 3.483106217214039,
+                "y": 3.5047349664900023
+              },
+              "seeds": 209,
+              "notExaminedBySeedBudget": 81,
+              "baselineTips": 0,
+              "observedDistalStarts": 0,
+              "uniqueDistalStarts": 0,
+              "reverseReasons": {
+                "no-observed-distal-start": 21
+              },
+              "attemptedReverse": 0,
+              "gatesObserved": 0,
+              "budgetExcludedExcessPx": null,
+              "uniqueRejectedSteps": {},
+              "uniqueDenseSamples": {},
+              "witnessRanks": [],
+              "priorReverseAuditIdentical": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

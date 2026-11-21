@@ -34,6 +34,21 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-22: comparison across four development sources
+
+Repeated the stop measurement on development sources 14297936 and 11383300 and on the 29117992 hair-overlap control. Compared them with the earlier 2507723 run. Each run used its stored, browser-specific FaceMesh and the existing shared 36 native px limit. Repeat records match exactly after omitting timing. For all eight source/engine pairs, omitting the new stop evidence and timing also reproduces the respective historical native run. The comparison counts exact observed starts separately from seed records and groups exact rejected step geometries within each eye and engine.
+
+| Source | Native pixels per analysis pixel (approx.) | Observed distal start records, Chromium / WebKit | Rejected by remaining arc before reverse tracing, Chromium / WebKit | Reverse attempts, Chromium / WebKit |
+| --- | --- | --- | --- | --- |
+| 2507723 | 1.21–1.33 | 23 / 33 | 0 / 0 | 23 / 33 |
+| 14297936 | 4.04–4.28 | 52 / 49 | 51 / 49 | 1 / 0 |
+| 11383300 | 6.74–8.75 | 5 / 0 | 5 / 0 | 0 / 0 |
+| 29117992 (hair overlap) | 3.16–3.52 | 1 / 6 | 1 / 6 | 0 / 0 |
+
+The additional reverse attempt was Chromium right-eye seed 121 on 14297936. One of its four dense-link samples fell below the transverse floor at both radii. The along-axis penalty does not explain that failed sample. The other 112 observed start records across the three additional sources were excluded by the geometric lower bound before reverse tracing. Many ranks share the same start. These counts describe stage attrition and cannot estimate lash recall or identify scale as the sole cause because the sources also differ in content and contrast.
+
+No signed lid gate was observed on the four sources. The new comparison shows no evidence for treating the along-axis penalty as the common blocker. Evidence after entering reverse tracing is concentrated on 2507723. Saved the per-eye comparison in `tests/visual/lash-native-proximal-stop-comparison.json` and the three additional pairs of per-engine reverse audit extracts in `followup-proximal-stop-comparison-20261122.zip`. Product and experimental algorithms were unchanged for this comparison. Final-set and independent review requirements remain pending. **LENGTH HOLD.**
+
 ### 2026-11-22: measured reverse-link refusals on 2507723
 
 The optional reverse-stop recorder keeps the rejected center profile and the exact dense-link sample coordinates, both transverse valleys and the along-axis penalty. It verifies the original response at every remeasured sample. Both browser repeats match when timing is excluded. Removing the new evidence field also reproduces the previous native run, with unchanged seed order, paths, refusals and baseline tips.

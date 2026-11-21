@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-22",
+  "archive": "followup-proximal-stop-comparison-20261122.zip",
+  "sha256": "9f3d4a2bb8fa2f21abd0a895bce17f791c932a72cdd39e71589f527267cf6e26",
+  "bytes": 62202,
+  "restoreDirectory": "tests/visual/out",
+  "members": {
+    "native-proximal-stop-11383300-main-01/protocol.json": "01ec460923d2fb1d2bfc7c0cc571db7f043aa3d2d87428694f6e6029761b6c7d",
+    "native-proximal-stop-11383300-main-01/chromium-reverse-extract.json": "d3f91ccc376ec772658091fa4ef3eed660b6f309fd074654bc0a59901d9efd54",
+    "native-proximal-stop-11383300-main-01/webkit-reverse-extract.json": "be205a1c971796c2cf322301eb555e148bd41be37ef1feacdd94b4b25efe4255",
+    "native-proximal-stop-11383300-repeat-01/protocol.json": "01ec460923d2fb1d2bfc7c0cc571db7f043aa3d2d87428694f6e6029761b6c7d",
+    "native-proximal-stop-11383300-repeat-01/chromium-reverse-extract.json": "d3f91ccc376ec772658091fa4ef3eed660b6f309fd074654bc0a59901d9efd54",
+    "native-proximal-stop-11383300-repeat-01/webkit-reverse-extract.json": "be205a1c971796c2cf322301eb555e148bd41be37ef1feacdd94b4b25efe4255",
+    "native-proximal-stop-14297936-main-01/protocol.json": "ab2e99926acff3963bb4fb57b0deb86d5917d25949ac72d63539dfc54252d02d",
+    "native-proximal-stop-14297936-main-01/chromium-reverse-extract.json": "78e72f369c0daf1cfa793aed16418b9493efab613a2bd7d8b67ca501f740d9e4",
+    "native-proximal-stop-14297936-main-01/webkit-reverse-extract.json": "c8bc362e02b672392dedc6a2474c51a40b1e4319c140bfc69be9ca92b619c634",
+    "native-proximal-stop-14297936-repeat-01/protocol.json": "ab2e99926acff3963bb4fb57b0deb86d5917d25949ac72d63539dfc54252d02d",
+    "native-proximal-stop-14297936-repeat-01/chromium-reverse-extract.json": "78e72f369c0daf1cfa793aed16418b9493efab613a2bd7d8b67ca501f740d9e4",
+    "native-proximal-stop-14297936-repeat-01/webkit-reverse-extract.json": "c8bc362e02b672392dedc6a2474c51a40b1e4319c140bfc69be9ca92b619c634",
+    "native-proximal-stop-29117992-main-01/protocol.json": "58696b1bc71bb137c602dc9f71444f91c7033b6d1120c4daf0b3cd9ea74438e1",
+    "native-proximal-stop-29117992-main-01/chromium-reverse-extract.json": "fe3e124b049d6cdb4b4f7291434d9f8b302f6e015aed307cc29e42214ec6c042",
+    "native-proximal-stop-29117992-main-01/webkit-reverse-extract.json": "d7e1f9668aaf6986257de2a29f55a8e215c4bcbae3fb24bc9d93f40915838e2f",
+    "native-proximal-stop-29117992-repeat-01/protocol.json": "58696b1bc71bb137c602dc9f71444f91c7033b6d1120c4daf0b3cd9ea74438e1",
+    "native-proximal-stop-29117992-repeat-01/chromium-reverse-extract.json": "fe3e124b049d6cdb4b4f7291434d9f8b302f6e015aed307cc29e42214ec6c042",
+    "native-proximal-stop-29117992-repeat-01/webkit-reverse-extract.json": "d7e1f9668aaf6986257de2a29f55a8e215c4bcbae3fb24bc9d93f40915838e2f"
+  },
+  "fullRunSHA256ForLocalNonpackagedArtifacts": {
+    "native-proximal-stop-11383300-main-01/chromium.json": "5ad4f818b7ea9c016bf7588af3e822e223e070f8e9eb721e50daa0e34a2fcc8c",
+    "native-proximal-stop-11383300-main-01/webkit.json": "949fd5b7a6a3dbb62170b8d68302079b11f1f2fb0033505b60fa0e0ae3a54aae",
+    "native-proximal-stop-11383300-repeat-01/chromium.json": "c6c328436318f2feb7ea58b8b18657b8056dcc5c68671d4d810c5afd7e64572c",
+    "native-proximal-stop-11383300-repeat-01/webkit.json": "4d6fc616139c9a44171278f9e69d6b027d2dd288ae386093fe5300664833e70a",
+    "native-proximal-stop-14297936-main-01/chromium.json": "7671a59e5c7904020c1ae9593b4d2702dcd2e13de69b7526034e63fcc6ca243b",
+    "native-proximal-stop-14297936-main-01/webkit.json": "d018e73c63912b9e898fbea6f584d42651175788867a388ed99d73b529184000",
+    "native-proximal-stop-14297936-repeat-01/chromium.json": "d4761ecf10a7a4b4723c377e889c89c611f2a46fabe8a28e7ac7d6ebe7608aa0",
+    "native-proximal-stop-14297936-repeat-01/webkit.json": "f371d5d66fed06e091480ac6ac5df42854d95e334b06238317f061ef58f5b04b",
+    "native-proximal-stop-29117992-main-01/chromium.json": "a2020dd4db9bb229d0bc8258d440503f1e0efc599e9fd8f5bb66e225fb1f55e1",
+    "native-proximal-stop-29117992-main-01/webkit.json": "d9488405a14fe26de7c0717ef06988eb98d5cc63d0780f01ffdb302f92d449e7",
+    "native-proximal-stop-29117992-repeat-01/chromium.json": "55e952e7b275398a565884e31a6ec7b0d74ac1310e23dae314eb179cf1ba0358",
+    "native-proximal-stop-29117992-repeat-01/webkit.json": "ece3989f533b05823ecf2ee286ba340d1350450527458ce4894c5014ebad0f5c"
+  }
+}
