@@ -34,6 +34,14 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-22: measured reverse-link refusals on 2507723
+
+The optional reverse-stop recorder keeps the rejected center profile and the exact dense-link sample coordinates, both transverse valleys and the along-axis penalty. It verifies the original response at every remeasured sample. Both browser repeats match when timing is excluded. Removing the new evidence field also reproduces the previous native run, with unchanged seed order, paths, refusals and baseline tips.
+
+On the right eye, Chromium's 21 dense-link refusals reduce to three unique stop geometries. Across those three, seven refused samples fall below the transverse floor at both radii and one falls below the response floor after the along-axis penalty. WebKit's ten dense-link refusals reduce to one geometry with one refused sample after the penalty. Its 19 center-search refusals likewise reduce to one geometry. The centroid shift is −0.295 px, while the connected interval above 90% of peak deficit spans −1.270 to −0.534 px, wholly outside the ±0.5 px center bound on that side. This explains the recorded boundary check without extending the search or picking a different lobe.
+
+These measurements identify the checks that stopped the traces. They leave same-fiber identity and the signed lid connection unconfirmed. The excluded left eye remains in the summary. See `tests/visual/lash-native-proximal-stop-2507723-summary.json` and the paired reverse-audit extracts in `followup-proximal-stop-2507723-20261122.zip`. Complete unit suite: 328 PASS. No additional full E2E run. The final group stays sealed. **LENGTH HOLD.**
+
 ### 2026-11-22: fixed native tracing on the shorter-scale development frame
 
 Ran the existing fixed multiscale detector on 2507723 using frozen labels, true per-engine FaceMesh and the same 36 px shared budget. This is a development diagnostic because the mask check found zero universally covered provisional regions. The labels are checked before opening the original. They never seed browser tracing or supply its direction. Ran the regular exact-cell and distal-body options, the paired band diagnostic and the shared-arc reverse probe, then the existing resolved-edge and connected-continuation audits. Native repeats match exactly after excluding timing. Baseline detector outputs remain equal with and without the seed ledger.

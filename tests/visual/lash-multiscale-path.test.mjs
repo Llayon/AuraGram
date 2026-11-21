@@ -76,7 +76,8 @@ test('reverse diagnostic reaches the lid only through observed samples within th
  const geometry={lid:[{x:110,y:82},{x:130,y:82}],lower:[{x:120,y:90}]};
  const luma=new Float32Array(patch.w*patch.h);
  for(let y=0;y<patch.h;y++)for(let x=0;x<patch.w;x++)luma[y*patch.w+x]=.8-.5*Math.exp(-((x-20)**2)/.35);
- const probe=arc=>auditSharedArcProximal(luma,patch,start,axis,{points:[start,{x:20,y:18-arc,arc}]},geometry);
+ const probe=(arc,recordStop=false)=>auditSharedArcProximal(luma,patch,start,axis,
+  {points:[start,{x:20,y:18-arc,arc}]},{...geometry,recordStop});
  const reachable=probe(8);
  assert.equal(reachable.status,'gate-observed');
  assert.equal(reachable.points[0].y,68);
@@ -87,4 +88,12 @@ test('reverse diagnostic reaches the lid only through observed samples within th
  const broken=probe(8);
  assert.equal(broken.status,'ambiguous');
  assert.ok(broken.points.at(-1).y<74);
+ const {stopEvidence,...recorded}=probe(8,true);
+ assert.deepEqual(recorded,broken);
+ assert.deepEqual(stopEvidence.last,broken.points.at(-1));
+ assert.ok(stopEvidence.reference.y>stopEvidence.last.y);
+ assert.equal(stopEvidence.profile.length,17);
+ assert.equal(stopEvidence.centerReason,'weak-valley');
+ assert.equal(stopEvidence.center,null);
+ assert.equal(stopEvidence.dense,undefined);
 });
