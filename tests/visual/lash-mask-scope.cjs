@@ -8,6 +8,7 @@ async function main(){
  if(!out||fs.existsSync(out))throw Error('Supply frozen labels, freeze, original, screening directory and NEW output');
  const frozen=JSON.parse(fs.readFileSync(freezeFile)),labels=JSON.parse(fs.readFileSync(labelFile));
  if(hash(fs.readFileSync(labelFile))!==frozen.inputs[labelFile]||hash(fs.readFileSync(sourceFile))!==frozen.sourceSHA256)throw Error('Frozen input mismatch');
+ const screenPair=screenDir.endsWith('.json')?JSON.parse(fs.readFileSync(screenDir)):null;
  const original=fs.readFileSync('src/retouch/lashEnhancement.mjs','utf8');
  if(original.split('function buildBandMask(').length!==2)throw Error('Mask helper identity changed');
  const instrumented=original.replace('function buildBandMask(','export function buildBandMask(');
@@ -19,7 +20,10 @@ async function main(){
  try{
  const url=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Server timeout')),15000);server.once('error',reject);server.stdout.on('data',b=>{const m=String(b).match(/http:\/\/127\.0\.0\.1:\d+/);if(m){clearTimeout(timer);resolve(m[0]);}});});
  for(const engine of [chromium,webkit]){
- const screenFile=path.join(screenDir.replace('{engine}',engine.name()),'screening.json'),screen=JSON.parse(fs.readFileSync(screenFile));
+ const screenRecord=screenPair?.[engine.name()];
+ const screenFile=screenRecord?.file??path.join(screenDir.replace('{engine}',engine.name()),'screening.json');
+ const screenBytes=fs.readFileSync(screenFile),screen=JSON.parse(screenBytes);
+ if(screenPair&&(!screenRecord||hash(screenBytes)!==screenRecord.sha256||screen.engine!==engine.name()))throw Error('Screening provenance differs');
  const r=screen.results.find(r=>r.file===labels.file);if(!r||r.sha256!==frozen.sourceSHA256)throw Error('Source geometry identity differs');
  if(r.status!=='ready'){
  fs.writeFileSync(path.join(out,engine.name()+'.json'),JSON.stringify({engine:engine.name(),status:r.status,reason:'No actual FaceMesh; no geometry substitution',screenSHA256:hash(fs.readFileSync(screenFile))},null,2)+'\n',{flag:'wx'});console.log(engine.name(),r.status);continue;}
