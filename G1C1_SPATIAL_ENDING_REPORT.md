@@ -34,6 +34,14 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-21: width feasibility inside the measured endpoint windows
+
+Replayed the resolved-edge operator on the eight distinct right-eye stop windows (four per engine) that clear the transverse veto on development source 14297936. The inputs match the archived measurements by digest, and the operator exactly reproduces each saved edge result. To separate missing width evidence from the monotonicity rule, enumerated every contiguous interval of at least three resolved rows. This post-hoc feasibility check keeps the original requirement of at least 0.5 px reduction and a final width at most half the initial width at both relative contrast levels. It omits monotonic edge motion and inward edge direction. It grants no endpoint decisions.
+
+Across the eight windows, 417 contiguous intervals meet the minimum available row count. Zero meet both width requirements. The best interval in any window retains 73.46% of the initial width at the less-converged level. The result rules out recovering a width witness by selecting another contiguous interval within these saved windows while preserving the width criteria. It does not resolve whether a different automatically reached window or improved image evidence would contain the actual ending.
+
+For a check against the prior fixed analytic matrix, all 30 existing resolved tapers also contain a feasible interval. No interval qualifies in 243 amplitude-fade controls or 243 continuing controls. These positive and negative counts describe only the archived synthetic grid. The photo and synthetic summaries repeat byte for byte. Eight resolved-edge unit tests pass. The latest complete suite remains 314 passes. Results are in `lash-taper-window-bound-summary.json` and reference the existing measurement archives. This finishes the width-feasibility audit of these windows. The current hypothesis remains rejected for integration, with independent cohort qualification and a useful real-image candidate still pending. **LENGTH HOLD.**
+
 ### 2026-11-21: verify opaque JPEG patch readback
 
 Compared the six differing WebKit control records with the retained older run. Source, saved native input, patch coordinates and stop centers match. Every one of the 625 raw luma values in each older window is exactly zero, whereas the new runs show positive luma throughout each of those windows. The old archive stores no alpha, so the cause of the historical zero read is still unverified.

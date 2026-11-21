@@ -1,0 +1,412 @@
+{
+  "inputs": {
+    "tests/visual/lash-resolved-edges-protocol.json": "091d90b0d7564d9ce434e07f4fce4855b9f53dced0afe1463fe066b3184fe9d8",
+    "tests/visual/spatial-ending-evidence/followup-ending-join-20261119.json": "e0661503006c43a022fd27fe34389c83d4548c8825a4726f9238d732d8ef2cd2",
+    "tests/visual/spatial-ending-evidence/followup-20261117-02.json": "515a4202e57132926d71540f40ed48a32dbab1f35ebe8848b113e72b08321e64",
+    "tests/visual/lash-ending-window-diagnosis-summary.json": "1b3edf9154a5e645ca5355326fa6cbb4319062b0b3fc4f9d87d4593a23cdc51b",
+    "tests/visual/out/bounded-ending-14297936-chromium-02/chromium.json": "38db6c2f17ec81fb95ea8859663632218909b5565789ab882e448687a395232d",
+    "tests/visual/out/bounded-ending-14297936-webkit-02/webkit.json": "75de1eb0631df640d9011a0ed307789dcd77d2b5b2ecb29d092dda9eed9bdb39",
+    "tests/visual/out/resolved-observability-01/inputs.json": "4580fd9529bbe2e06dc14309644c77be745bbddeea2d863e22b4d28ac553064f"
+  },
+  "rule": {
+    "levels": [
+      0.25,
+      0.5
+    ],
+    "minimumRows": 3,
+    "minimumReduction": 0.5,
+    "maximumRatio": 0.5
+  },
+  "photo": {
+    "chromium": [
+      {
+        "point": {
+          "x": 1576.8667381208384,
+          "y": 1861.6411595189734,
+          "arc": 1.0034276511075895
+        },
+        "tangent": {
+          "x": 0.2924214377259728,
+          "y": -0.9562895496439742
+        },
+        "ranks": [
+          0,
+          1,
+          3,
+          4,
+          6,
+          9,
+          12,
+          13,
+          16,
+          18,
+          26,
+          30,
+          31,
+          38,
+          46,
+          52,
+          57,
+          68,
+          81,
+          88,
+          91,
+          102,
+          103
+        ],
+        "recordedReason": "unresolved-intervening-profile",
+        "resolvedRows": 6,
+        "longestRun": 5,
+        "intervals": 6,
+        "feasible": 0,
+        "best": {
+          "from": -2,
+          "to": -1.5,
+          "worstRatio": 1.0892668439147917,
+          "levels": [
+            {
+              "level": 0.25,
+              "initial": 3.9676630740249577,
+              "final": 4.218264574995376,
+              "ratio": 1.0631609832525921,
+              "reduction": -0.25060150097041856
+            },
+            {
+              "level": 0.5,
+              "initial": 2.6641389860612934,
+              "final": 2.9019582650973383,
+              "ratio": 1.0892668439147917,
+              "reduction": -0.23781927903604494
+            }
+          ]
+        }
+      },
+      {
+        "point": {
+          "x": 1493.706361782388,
+          "y": 1877.123084151989,
+          "arc": 6.6812632596866885
+        },
+        "tangent": {
+          "x": -0.7765843630522858,
+          "y": -0.6300132753066998
+        },
+        "ranks": [
+          2,
+          5,
+          7,
+          11,
+          15,
+          19
+        ],
+        "recordedReason": "unresolved-intervening-profile",
+        "resolvedRows": 8,
+        "longestRun": 4,
+        "intervals": 6,
+        "feasible": 0,
+        "best": {
+          "from": -1.75,
+          "to": -1.25,
+          "worstRatio": 1.0675234723637859,
+          "levels": [
+            {
+              "level": 0.25,
+              "initial": 3.4533012796348226,
+              "final": 3.686480173154071,
+              "ratio": 1.0675234723637859,
+              "reduction": -0.23317889351924848
+            },
+            {
+              "level": 0.5,
+              "initial": 2.4787960533244657,
+              "final": 2.5804782759289404,
+              "ratio": 1.041020810271221,
+              "reduction": -0.10168222260447468
+            }
+          ]
+        }
+      },
+      {
+        "point": {
+          "x": 1679.527211740327,
+          "y": 1911.5405922662915,
+          "arc": 7.065380431139765
+        },
+        "tangent": {
+          "x": -0.022252770226940995,
+          "y": -0.9997523764499022
+        },
+        "ranks": [
+          47,
+          54,
+          60,
+          70,
+          83,
+          95,
+          107
+        ],
+        "recordedReason": "unresolved-intervening-profile",
+        "resolvedRows": 18,
+        "longestRun": 10,
+        "intervals": 57,
+        "feasible": 0,
+        "best": {
+          "from": -2,
+          "to": -0.5,
+          "worstRatio": 0.9367367017957006,
+          "levels": [
+            {
+              "level": 0.25,
+              "initial": 2.878942532063764,
+              "final": 2.696811132144773,
+              "ratio": 0.9367367017957006,
+              "reduction": 0.18213139991899086
+            },
+            {
+              "level": 0.5,
+              "initial": 2.13826413549455,
+              "final": 1.868760166092021,
+              "ratio": 0.873961329225495,
+              "reduction": 0.2695039694025292
+            }
+          ]
+        }
+      },
+      {
+        "point": {
+          "x": 1647.2718407510063,
+          "y": 1948.742016522911,
+          "arc": 1.5712011786720816
+        },
+        "tangent": {
+          "x": -0.39556101493742113,
+          "y": -0.9184397005038911
+        },
+        "ranks": [
+          121
+        ],
+        "recordedReason": "no-resolved-width-reduction",
+        "resolvedRows": 25,
+        "longestRun": 25,
+        "intervals": 276,
+        "feasible": 0,
+        "best": {
+          "from": -2,
+          "to": 2.5,
+          "worstRatio": 0.7346166649981455,
+          "levels": [
+            {
+              "level": 0.25,
+              "initial": 4.788324592429673,
+              "final": 3.5175830430192905,
+              "ratio": 0.7346166649981455,
+              "reduction": 1.2707415494103822
+            },
+            {
+              "level": 0.5,
+              "initial": 3.6009867717067117,
+              "final": 2.617215571381193,
+              "ratio": 0.7268051057407096,
+              "reduction": 0.9837712003255188
+            }
+          ]
+        }
+      }
+    ],
+    "webkit": [
+      {
+        "point": {
+          "x": 1577.004820517515,
+          "y": 1861.1709990652007,
+          "arc": 2.041674428569018
+        },
+        "tangent": {
+          "x": 0.040602962924571245,
+          "y": -0.9991753596850484
+        },
+        "ranks": [
+          2,
+          3,
+          6,
+          8,
+          11,
+          16,
+          24,
+          26,
+          30,
+          35,
+          36,
+          40,
+          41,
+          49,
+          51,
+          58,
+          60,
+          69,
+          72,
+          80,
+          82,
+          90,
+          103,
+          119,
+          120
+        ],
+        "recordedReason": "no-resolved-width-reduction",
+        "resolvedRows": 8,
+        "longestRun": 8,
+        "intervals": 21,
+        "feasible": 0,
+        "best": {
+          "from": -1.75,
+          "to": -1.25,
+          "worstRatio": 1.043037018586424,
+          "levels": [
+            {
+              "level": 0.25,
+              "initial": 3.9409208797810455,
+              "final": 4.09575754587296,
+              "ratio": 1.0392894632537046,
+              "reduction": -0.1548366660919145
+            },
+            {
+              "level": 0.5,
+              "initial": 2.87853197917031,
+              "final": 3.0024154134594783,
+              "ratio": 1.043037018586424,
+              "reduction": -0.12388343428916837
+            }
+          ]
+        }
+      },
+      {
+        "point": {
+          "x": 1493.666759124767,
+          "y": 1877.0177276952943,
+          "arc": 4.071658305725553
+        },
+        "tangent": {
+          "x": -0.7609885034360674,
+          "y": -0.6487653640863811
+        },
+        "ranks": [
+          4,
+          9,
+          12,
+          18,
+          22,
+          25,
+          31
+        ],
+        "recordedReason": "unresolved-intervening-profile",
+        "resolvedRows": 9,
+        "longestRun": 5,
+        "intervals": 9,
+        "feasible": 0,
+        "best": {
+          "from": 2.5,
+          "to": 3,
+          "worstRatio": 0.9922671886297727,
+          "levels": [
+            {
+              "level": 0.25,
+              "initial": 2.7617628464793023,
+              "final": 2.671364119868072,
+              "ratio": 0.9672677446847144,
+              "reduction": 0.09039872661123027
+            },
+            {
+              "level": 0.5,
+              "initial": 2.159095267832736,
+              "final": 2.142399391396235,
+              "ratio": 0.9922671886297727,
+              "reduction": 0.016695876436501056
+            }
+          ]
+        }
+      },
+      {
+        "point": {
+          "x": 1586.0266434422244,
+          "y": 1866.4998053073125,
+          "arc": 1.0083146465107178
+        },
+        "tangent": {
+          "x": -0.09243478826326444,
+          "y": -0.9957187403673416
+        },
+        "ranks": [
+          7
+        ],
+        "recordedReason": "insufficient-resolved-rows",
+        "resolvedRows": 2,
+        "longestRun": 2,
+        "intervals": 0,
+        "feasible": 0,
+        "best": null
+      },
+      {
+        "point": {
+          "x": 1679.391046131203,
+          "y": 1911.305308242401,
+          "arc": 5.1409243986958
+        },
+        "tangent": {
+          "x": -0.10099041239634084,
+          "y": -0.9948873989572976
+        },
+        "ranks": [
+          59,
+          71,
+          81,
+          91,
+          105,
+          122
+        ],
+        "recordedReason": "unresolved-intervening-profile",
+        "resolvedRows": 16,
+        "longestRun": 8,
+        "intervals": 42,
+        "feasible": 0,
+        "best": {
+          "from": -2,
+          "to": -1.5,
+          "worstRatio": 0.9779138782440984,
+          "levels": [
+            {
+              "level": 0.25,
+              "initial": 2.75022724012151,
+              "final": 2.689485386439789,
+              "ratio": 0.9779138782440984,
+              "reduction": 0.060741853681721025
+            },
+            {
+              "level": 0.5,
+              "initial": 2.042447442204923,
+              "final": 1.9858844492636503,
+              "ratio": 0.9723062675824793,
+              "reduction": 0.05656299294127276
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "synthetic": {
+    "taper": {
+      "cases": 243,
+      "resolvedTaper": 30,
+      "widthFeasible": 30
+    },
+    "fade": {
+      "cases": 243,
+      "resolvedTaper": 0,
+      "widthFeasible": 0
+    },
+    "continuing": {
+      "cases": 243,
+      "resolvedTaper": 0,
+      "widthFeasible": 0
+    }
+  },
+  "meaning": "Upper bound on feasible taper intervals within saved profiles, not a detector or endpoint decision."
+}
