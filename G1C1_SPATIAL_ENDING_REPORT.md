@@ -1,6 +1,6 @@
 # Spatial ending experiment - LENGTH HOLD
 
-## Current decision (2026-11-21)
+## Current decision (2026-11-22)
 
 **No detector candidate is accepted. Keep Draft PR #5; no Length adapter, merge, deployment, partial release or version bump.** The measured paths and refusal diagnostics are retained for review. The recognition plan is not fully completed: the independent 6+6 cohort, reviewed identity separation and final critic/held-out evaluation remain incomplete. This is an engineering rejection for adoption, not a proof that all image-based endpoint hypotheses are false.
 
@@ -8,7 +8,7 @@ The experiment now separates complete observed ROI routes (source-cell uncertain
 
 On development source14297936, the fixed distal-body experiment yielded no side-closure candidates or approved endings. On its right eye,29 Chromium stops have supported structure ahead; WebKit has13 continuing,26 profile disagreements,2 multiple-band refusals and4 boundary censors. Coarse root reach remains37/23 seed records, all involving unresolved broad support. These are neither distinct lash counts nor recall estimates. Later hair-overlap controls do produce unapproved contrast-closure candidates, including one in a frozen hair region, reinforcing that contrast closure alone is insufficient. Blind final-set performance and native same-fiber ownership are unverified.
 
-54 originals were downloaded with source, license and digest records. The held-out pool now has seven positive leads and four hard leads with ready FaceMesh in both engines. Independent qualification and annotation are pending. One previously frozen five-label right eye lies fully inside actual Length masks in both engines and at both render sizes, but the detector still fails its association/ending requirements there. The new11383300 development source adds3 provisional right-eye labels, also inside the existing masks; its fixed native experiment confirms no endings. Supplement05 adds5 source-only originals and2 frozen hair-overlap control annotations, with0 newly qualified positives. Other leads remain explicitly unqualified; WebKit no_face is never replaced with Chromium geometry. Frozen labels are preliminary engineering annotations awaiting independent critique.
+59 originals were downloaded with source, license and digest records. The held-out pool now has seven positive leads and four hard leads with ready FaceMesh in both engines. Independent qualification and annotation are pending. One previously frozen five-label right eye lies fully inside actual Length masks in both engines and at both render sizes, but the detector still fails its association/ending requirements there. The new11383300 development source adds3 provisional right-eye labels, also inside the existing masks; its fixed native experiment confirms no endings. Supplement05 adds5 source-only originals and2 frozen hair-overlap control annotations, with0 newly qualified positives. Other leads remain explicitly unqualified; WebKit no_face is never replaced with Chromium geometry. Frozen labels are preliminary engineering annotations awaiting independent critique.
 
 Production changes are opt-in automatic seed-ledger/debug exposure only. Default Density, confidence, tips and render guards are preserved; default numeric equality and prior goldens are checked. The optional stop callback is in an offline V2 helper. All further experimental modules are under tests/visual and are not imported by the app.
 
@@ -22,7 +22,7 @@ This cycle delivers a documented engineering rejection for integration and retai
 
 | Planned requirement | Evidence and disposition |
 | --- | --- |
-| Independent licensed6+6 cohort,4 positive +2 hard per split | Incomplete. The inventory contains 54 downloaded originals awaiting cohort qualification. Identity review, positive quotas, independent annotation/critique and sealed final evaluation remain missing. |
+| Independent licensed6+6 cohort,4 positive +2 hard per split | Incomplete. The inventory contains 59 downloaded originals awaiting cohort qualification. Identity review, positive quotas, independent annotation/critique and sealed final evaluation remain missing. |
 | Automatic pre-tip seed ledger and explicit128-seed budget | Implemented and checked; no replacement after refusal. |
 | Observed native path, measured tangent/width/contrast,36px local budget | Implemented experimentally. Broad coarse-root reach does not establish native same-fiber ownership. Real-source paths often lack required narrow-profile/dense-link evidence. |
 | Sufficient evidence for a terminal, including two-profile agreement | Not implemented successfully. Contrast-closure candidates occur on ambiguous hair; fading shafts also defeat closure-only interpretation. No terminal grant or Length adapter. |
@@ -33,6 +33,16 @@ This cycle delivers a documented engineering rejection for integration and retai
 A subsequent recognition experiment needs both (1) source-only acquisition/independent review sufficient to fill the unchanged development and sealed final quotas, and (2) a predeclared mechanism that distinguishes an actual ending from image-contrast loss while establishing observed same-fiber proximal ownership. Any new operator or scale policy must first survive the retained gap, crossing, fading-shaft and hair-control counterexamples. Freeze code and protocol before opening new final detector outputs. Existing provisional development labels cannot be relabelled as held-out cases. Only after passing the original recognition gates should the existing tips adapter and render/performance validation proceed. Canvas/SDF comparison remains a separate later cycle. No release, merge or version bump is warranted by this cycle.
 
 ## Chronological experiment record
+
+### 2026-11-22: shorter projected lashes on a further development source
+
+Acquired five new original source leads from the official Pexels pages. Four pass FaceMesh in both engines. Source 13871690 returns no_face in both, and no replacement geometry is used. Contralateral defocus, shadows, occlusion or bright lash structures limit the other screened examples. No lash detector or final image was opened for these acquisitions.
+
+Source 2507723 has a 257?272 native right-eye crop. Froze five provisional endpoint uncertainty regions and observed local directions before generating any mask output. The opposite eye lacks a confirmed five-tip count. Checked the overlay against the original and left the labels unchanged after scope measurement. Conservative distances from these regions to the signed lid gate range from 9.77 to 18.67 source pixels across the two engines. The 36 px budget does not exclude them by this lower bound. Reachability and same-fiber continuity remain unverified.
+
+No region is inside every sampled baseline mask. Right-1/right-2 lie outside all four baseline combinations. Right-3 intersects the edge in all four. Right-4 is partial in preview and outside at native size. Right-5 is fully covered in three combinations and partial in Chromium at native size. The initially reported full-coverage count of one was corrected after comparing all four combinations. The maximum recovery envelope is recorded separately. No positive is qualified and the provisional labels are still pending independent review.
+
+Verified the five JPEG digests and archived acquisition, screening, freeze and mask records in `followup-supplement09-20261122.zip`. Five focused tests pass. The prior full run remains 328 tests. No change to the detector, masks or renderer. The final group stays sealed. **LENGTH HOLD.**
 
 ### 2026-11-21: mask-scope review from the development intake
 

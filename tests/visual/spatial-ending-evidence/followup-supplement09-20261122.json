@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-22",
+  "archive": "followup-supplement09-20261122.zip",
+  "sha256": "d377ee288157a5ec53052a44365262afcdc8267fa1886c53421f4a9fc223bb55",
+  "bytes": 47439,
+  "restoreDirectory": "tests/visual/out",
+  "members": {
+    "spatial-supplement-09/downloads.json": "694cbfbb22f1e6738385235e0dcf8e90406679c8a8e60011489891d5d2aa5f76",
+    "spatial-supplement-09-chromium/screening.json": "ea40cc4b54d454a3fdd01edbd185d0bf4b1442c2a3db0e7051a4e431caf3f51a",
+    "spatial-supplement-09-webkit/screening.json": "87aab7223ed752918eaa20d75ef594ed12dd288788cf8fee557f80f0d07a4cd2",
+    "source-snapshots/tests/visual/lash-spatial-labels-2507723.json": "59b8991577d87cd270f37b8474c44ec8bee1b5b6f012c9320edf05825ab2da2f",
+    "source-snapshots/tests/visual/lash-spatial-labels-2507723.freeze.json": "ce40d17fb8cf5f4f8331bbcb168c1b2ce367e86a851e78a78edf78b318f86d93",
+    "mask-scope-2507723-01/protocol.json": "e62344cbbcaca78de21c4b96d3166b35fceaaab88a8e087af987694b8ac9aad1",
+    "mask-scope-2507723-01/chromium.json": "e64f610377c97d3bc8c4b0b422fa090b3f905767ed410256efbc66c9846b79e7",
+    "mask-scope-2507723-01/webkit.json": "b5ac7bcfac0466b981c6a0201b5bbe7da292b665c99908ca12f3a4ad997fe30c"
+  }
+}
