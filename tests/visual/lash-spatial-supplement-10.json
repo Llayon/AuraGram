@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-22",
+  "license": "https://www.pexels.com/license/",
+  "status": "source-leads-not-qualified",
+  "policy": "Source-only development screening. Preserve full-size source JPEG bytes. No final cohort or independent identity claims.",
+  "sources": [
+    {
+      "id": "11306008",
+      "file": "pexels-11306008.jpg",
+      "page": "https://www.pexels.com/photo/woman-in-close-up-photography-11306008/",
+      "url": "https://images.pexels.com/photos/11306008/pexels-photo-11306008.png?cs=srgb&dl=pexels-eman-genatilan-3459781-11306008.jpg&fm=jpg",
+      "author": "Eman Genatilan",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null,
+      "initialURL": "https://images.pexels.com/photos/11306008/pexels-photo-11306008.jpeg?cs=srgb&fm=jpg"
+    },
+    {
+      "id": "9854093",
+      "file": "pexels-9854093.jpg",
+      "page": "https://www.pexels.com/photo/a-portrait-of-a-woman-9854093/",
+      "url": "https://images.pexels.com/photos/9854093/pexels-photo-9854093.jpeg?cs=srgb&fm=jpg",
+      "author": "Francesca Zama",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "40337270",
+      "file": "pexels-40337270.jpg",
+      "page": "https://www.pexels.com/photo/portrait-of-a-young-woman-with-long-hair-40337270/",
+      "url": "https://images.pexels.com/photos/40337270/pexels-photo-40337270.jpeg?cs=srgb&fm=jpg",
+      "author": "Mariya Eskina",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "14933917",
+      "file": "pexels-14933917.jpg",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-woman-looking-upwards-14933917/",
+      "url": "https://images.pexels.com/photos/14933917/pexels-photo-14933917.jpeg?cs=srgb&fm=jpg",
+      "author": "Alexander Krivitskiy",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "36806961",
+      "file": "pexels-36806961.jpg",
+      "page": "https://www.pexels.com/photo/black-and-white-close-up-of-woman-looking-up-36806961/",
+      "url": "https://images.pexels.com/photos/36806961/pexels-photo-36806961.jpeg?cs=srgb&fm=jpg",
+      "author": "Finn Semmer",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "8780905",
+      "file": "pexels-8780905.jpg",
+      "page": "https://www.pexels.com/photo/face-of-woman-8780905/",
+      "url": "https://images.pexels.com/photos/8780905/pexels-photo-8780905.jpeg?cs=srgb&fm=jpg",
+      "author": "Henry de Guzman",
+      "split": "development",
+      "role": "hard-lead",
+      "identityGroup": null
+    }
+  ]
+}

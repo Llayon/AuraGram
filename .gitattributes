@@ -12,6 +12,8 @@ tests/visual/lash-spatial-source-review-10598787.json -text
 tests/visual/lash-spatial-source-review-10598787.freeze.json -text
 tests/visual/lash-spatial-labels-2507723.json -text
 tests/visual/lash-spatial-labels-2507723.freeze.json -text
+tests/visual/lash-spatial-labels-40337270.json -text
+tests/visual/lash-spatial-labels-40337270.freeze.json -text
 tests/visual/lash-spatial-labels-8537914.json -text
 tests/visual/lash-spatial-labels-8537914.freeze.json -text
 tests/visual/lash-spatial-supplement-06-summary.json -text

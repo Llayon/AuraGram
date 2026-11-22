@@ -1,0 +1,263 @@
+{
+  "date": "2026-11-22",
+  "stage": "source-only review and frozen-region geometric mask check",
+  "detectorExecuted": false,
+  "validationViewsOpened": false,
+  "independentCritique": "pending",
+  "qualifiedPositiveEyes": 0,
+  "sources": [
+    {
+      "file": "pexels-11306008.jpg",
+      "author": "Eman Genatilan",
+      "page": "https://www.pexels.com/photo/woman-in-close-up-photography-11306008/",
+      "batch": "spatial-supplement-10-retry",
+      "sha256": "68a4dcc4bdc65ff2d8249afc5f2902ddc3d37f8fcbdbe1d20517eab5a158a72d",
+      "bytes": 540639,
+      "width": 2136,
+      "height": 3200,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "initialDownloadError": "HTTP 404",
+      "sourceOnlyObservation": "In both eyes, visible upper fibers chiefly project into the eye opening. No five separable outward free ends established in source review."
+    },
+    {
+      "file": "pexels-9854093.jpg",
+      "author": "Francesca Zama",
+      "page": "https://www.pexels.com/photo/a-portrait-of-a-woman-9854093/",
+      "batch": "spatial-supplement-10",
+      "sha256": "5e13ede8860978e741fea1eb9692a05449434fe9f589e355fa75389366c032b8",
+      "bytes": 1041211,
+      "width": 2688,
+      "height": 3802,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "sourceOnlyObservation": "Upper bands are soft and partially occluded by hair. No five separable free ends established."
+    },
+    {
+      "file": "pexels-40337270.jpg",
+      "author": "Mariya Eskina",
+      "page": "https://www.pexels.com/photo/portrait-of-a-young-woman-with-long-hair-40337270/",
+      "batch": "spatial-supplement-10",
+      "sha256": "b1fa507f1f40816de2e212fe5689088a63370c637543402b3f0c386002e523eb",
+      "bytes": 3212940,
+      "width": 3767,
+      "height": 5661,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "sourceOnlyObservation": "Right eye has five separately traceable distal fragments selected provisionally. Left lid crease and crossings remain ambiguous."
+    },
+    {
+      "file": "pexels-14933917.jpg",
+      "author": "Alexander Krivitskiy",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-woman-looking-upwards-14933917/",
+      "batch": "spatial-supplement-10",
+      "sha256": "c4e3ea29c964c6daeb287537e2c9c5c7e014b9e723edf86f747880ed3d41511f",
+      "bytes": 3078255,
+      "width": 3659,
+      "height": 6000,
+      "faceMesh": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      },
+      "sourceOnlyObservation": "No actual FaceMesh in either engine."
+    },
+    {
+      "file": "pexels-36806961.jpg",
+      "author": "Finn Semmer",
+      "page": "https://www.pexels.com/photo/black-and-white-close-up-of-woman-looking-up-36806961/",
+      "batch": "spatial-supplement-10",
+      "sha256": "2a73740044da4dfef22c5e2630fda6e48a571044e2fcb3940b9903af2e4426e1",
+      "bytes": 309583,
+      "width": 2756,
+      "height": 1550,
+      "faceMesh": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      },
+      "sourceOnlyObservation": "No actual FaceMesh in either engine."
+    },
+    {
+      "file": "pexels-8780905.jpg",
+      "author": "Henry de Guzman",
+      "page": "https://www.pexels.com/photo/face-of-woman-8780905/",
+      "batch": "spatial-supplement-10",
+      "sha256": "89775dd02c204b1d2fd20de86e36086b9a31791697d18e65f7e3de2a4b94febf",
+      "bytes": 1936255,
+      "width": 3648,
+      "height": 5472,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "sourceOnlyObservation": "Reflective eye makeup and overlapping, clumped upper structures. Retained as a hard lead pending independent review."
+    }
+  ],
+  "scope": {
+    "chromium": {
+      "regions": [
+        {
+          "id": "right-1",
+          "center": {
+            "x": 1277,
+            "y": 2250
+          },
+          "enclosingRadius": 5.8309518948453,
+          "centerBound": 23.26652241659136,
+          "lowerBound": 17.43557052174606
+        },
+        {
+          "id": "right-2",
+          "center": {
+            "x": 1310,
+            "y": 2219
+          },
+          "enclosingRadius": 5.8309518948453,
+          "centerBound": 31.156840739326135,
+          "lowerBound": 25.325888844480836
+        },
+        {
+          "id": "right-3",
+          "center": {
+            "x": 1329,
+            "y": 2219
+          },
+          "enclosingRadius": 5.8309518948453,
+          "centerBound": 34.22800000939335,
+          "lowerBound": 28.39704811454805
+        },
+        {
+          "id": "right-4",
+          "center": {
+            "x": 1347,
+            "y": 2219
+          },
+          "enclosingRadius": 5.8309518948453,
+          "centerBound": 27.96262456139438,
+          "lowerBound": 22.131672666549083
+        },
+        {
+          "id": "right-5",
+          "center": {
+            "x": 1381,
+            "y": 2198
+          },
+          "enclosingRadius": 5.8309518948453,
+          "centerBound": 33.671339098853956,
+          "lowerBound": 27.840387204008657
+        }
+      ],
+      "masks": [
+        {
+          "target": "preview720long",
+          "group": "baselineLength",
+          "allRegionSamplesAlpha255": 385,
+          "protectedProbesAllZero": true
+        },
+        {
+          "target": "preview720long",
+          "group": "maximumRecoveryLength",
+          "allRegionSamplesAlpha255": 385,
+          "protectedProbesAllZero": true
+        },
+        {
+          "target": "native",
+          "group": "baselineLength",
+          "allRegionSamplesAlpha255": 385,
+          "protectedProbesAllZero": true
+        },
+        {
+          "target": "native",
+          "group": "maximumRecoveryLength",
+          "allRegionSamplesAlpha255": 385,
+          "protectedProbesAllZero": true
+        }
+      ]
+    },
+    "webkit": {
+      "regions": [
+        {
+          "id": "right-1",
+          "center": {
+            "x": 1277,
+            "y": 2250
+          },
+          "enclosingRadius": 5.8309518948453,
+          "centerBound": 32.432062100222545,
+          "lowerBound": 26.601110205377246
+        },
+        {
+          "id": "right-2",
+          "center": {
+            "x": 1310,
+            "y": 2219
+          },
+          "enclosingRadius": 5.8309518948453,
+          "centerBound": 39.09297775918953,
+          "lowerBound": 33.26202586434423
+        },
+        {
+          "id": "right-3",
+          "center": {
+            "x": 1329,
+            "y": 2219
+          },
+          "enclosingRadius": 5.8309518948453,
+          "centerBound": 41.81742625322061,
+          "lowerBound": 35.98647435837531
+        },
+        {
+          "id": "right-4",
+          "center": {
+            "x": 1347,
+            "y": 2219
+          },
+          "enclosingRadius": 5.8309518948453,
+          "centerBound": 36.102425617701954,
+          "lowerBound": 30.271473722856655
+        },
+        {
+          "id": "right-5",
+          "center": {
+            "x": 1381,
+            "y": 2198
+          },
+          "enclosingRadius": 5.8309518948453,
+          "centerBound": 32.51720551523955,
+          "lowerBound": 26.686253620394254
+        }
+      ],
+      "masks": [
+        {
+          "target": "preview720long",
+          "group": "baselineLength",
+          "allRegionSamplesAlpha255": 385,
+          "protectedProbesAllZero": true
+        },
+        {
+          "target": "preview720long",
+          "group": "maximumRecoveryLength",
+          "allRegionSamplesAlpha255": 385,
+          "protectedProbesAllZero": true
+        },
+        {
+          "target": "native",
+          "group": "baselineLength",
+          "allRegionSamplesAlpha255": 385,
+          "protectedProbesAllZero": true
+        },
+        {
+          "target": "native",
+          "group": "maximumRecoveryLength",
+          "allRegionSamplesAlpha255": 385,
+          "protectedProbesAllZero": true
+        }
+      ]
+    }
+  }
+}
