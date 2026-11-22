@@ -34,6 +34,16 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-22: rank 118 on 40337270, source and stop review
+
+Rechecked the single region overlap on the right eye of 40337270 against the original source crop, frozen annotation and recorded Chromium paths. The prior main and repeat records agree excluding timing. The distal path occupies 2.053 px with a stop direction of −64.30°, outside the provisional −107° to −77° interval. The observed reverse path stops above the dense upper-lid band. Nearby dark strokes are visible, leaving identity of the traced fiber uncertain.
+
+At the last accepted reverse point, the signed FaceMesh lid distance is 17.71 px and the conservative lower bound to enter the signed gate is 13.63 px. The shared arc has used 35.49094 of 36 px, leaving 0.50906 px. The next proposed center is 0.51050 px away. The slightly longer next step triggers the recorded budget stop, and the gate bound exceeds the remaining budget by at least 13.12 px. The proposed point itself still has a lower bound of 13.85 px to the gate.
+
+All 625 samples are available at each radius. The 0.75 and 1.50 px profiles have respectively six and four supported samples on the lateral boundary, and seven and two rows with multiple supported bands. Both contain support ahead of the stop. They disagree on central support in the preceding shaft and both report a split connected contour. This localizes the window censoring to side-boundary support. The saved profile cannot resolve whether the forward response belongs to the same fiber. The rank remains censored, with zero accepted endpoints.
+
+Exact input hashes, paths, distances and profile counts are in `tests/visual/lash-native-40337270-rank118-review.json`. The source-derived four-times overlay is local at `tests/visual/out/rank118-40337270-review-01/rank118-source-and-profiles.png`. This is a review of saved records with unchanged thresholds. **LENGTH HOLD.**
+
 ### 2026-11-22: supplement10, in-scope provisional right eye and fixed native follow-up
 
 Downloaded six full-size Pexels development photographs with recorded author, source page, license and JPEG SHA-256. The initial CDN path for 11306008 returned HTTP 404. The canonical Photo page's JPEG download succeeded at the advertised 2136×3200 dimensions. Actual FaceMesh independently reports four ready and two no_face in both Chromium and WebKit. Review of the six sources leaves 8780905 as a makeup/overlap lead and 40337270 as an unqualified positive lead. The 11306008 upper fibers predominantly extend into the eye opening, and 9854093 has blur and hair occlusion. Identity and independent review remain pending. The final group stayed sealed.
