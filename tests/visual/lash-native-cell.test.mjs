@@ -47,6 +47,29 @@ test('a broad cell center cannot bypass missing narrow native shaft evidence',()
  assert.equal(curve.bootstrap[0].accepted,false);
 });
 
+test('a strong bright ridge does not satisfy the dark-valley start gate',()=>{
+ const pixels=image(x=>.25+.35*Math.exp(-((x-40)**2)/.5));
+ const result=init(pixels);
+ assert.equal(result.reason,'weak-valley');
+ assert.equal(result.center,null);
+ assert.ok(result.profile.find(sample=>sample.offset===0).deficit<-.3);
+});
+
+test('a strong shifted final bootstrap profile cannot start a path',()=>{
+ const pixels=image((x,y)=>.8-.5*Math.exp(-((x-(y>40?39:40))**2)/.15));
+ const center=init(pixels);
+ assert.equal(center.accepted,true);
+ const curve=followCurve(pixels,w,h,center.center,{available:true,tx:axis.x,ty:axis.y},
+  {body:true,association:true},{margin:1.5,protocol:NATIVE_PATH_PROTOCOL});
+ assert.equal(curve.reason,'bootstrap-search-boundary');
+ assert.deepEqual(curve.bootstrap.map(step=>step.accepted),[true,true,true,true,false]);
+ const refused=curve.bootstrap.at(-1);
+ assert.ok(Math.max(...refused.profile.map(sample=>sample.deficit))>.4);
+ assert.ok(refused.shift < -NATIVE_PATH_PROTOCOL.searchHalfNative);
+ assert.deepEqual(curve.points,[]);
+ assert.equal(curve.endpointConfirmed,false);
+});
+
 test('opt-in exact cell bound does not discard an interior center by grid rounding',()=>{
  const pixels=line(2.05),cell={w:4.2,h:4};
  const old=init(pixels,cell),next=initializeNativeCell(pixels,w,h,point,axis,cell,NATIVE_PATH_PROTOCOL,{geometricCenterBound:true});
