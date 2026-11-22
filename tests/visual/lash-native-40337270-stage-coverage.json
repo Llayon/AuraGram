@@ -1,0 +1,661 @@
+{
+  "kind": "posthoc-development-stage-coverage",
+  "source": "pexels-40337270.jpg",
+  "sourceSHA256": "b1fa507f1f40816de2e212fe5689088a63370c637543402b3f0c386002e523eb",
+  "archiveManifestSHA256": "a09b2a651583607acdcdb222fa2241fae4efbf2e1d9f3bc9f2cf215b035748ff",
+  "inputSHA256": {
+    "tests/visual/lash-spatial-labels-40337270.json": "645506c5d066ca03b7ebb7388696358a4488f229d7f09fffcb6c8fe3a35f84d2",
+    "tests/visual/out/native-40337270-main-01/protocol.json": "1912cad306e258d36ba64263ef3c60e8a6ef7743427133de36d5495f2abb914b",
+    "tests/visual/out/native-40337270-main-01/chromium.json": "4f36286c2f406afb1b61e65299515914c6fbb03d43af44b8326c0902cf7e9e23",
+    "tests/visual/out/ending-40337270-chromium-01/chromium.json": "b0b94823ced357e9f7de0d044d456d4201230850df85d626ccfd4cb0d4c280b7",
+    "tests/visual/out/spatial-supplement-10-chromium/screening.json": "56b8cf1a20bf7201e37d099a6bf326917c05274983a6b23490792573ebb81287",
+    "tests/visual/out/native-40337270-main-01/webkit.json": "375e1a8309ebd9ccc5d928631b9a8f945f26d3344b3f4262a748f412a916b187",
+    "tests/visual/out/ending-40337270-webkit-01/webkit.json": "4259745a688f47d8928a2915a30a96a6061ef175d8d246fc266d9edd05505eac",
+    "tests/visual/out/spatial-supplement-10-webkit/screening.json": "d315cc30d11136e64d35a9ad79c9502f29e82f54af4e690875e66a658dcd2ff3"
+  },
+  "engines": {
+    "chromium": {
+      "right": {
+        "baselineTipCount": 21,
+        "acceptedCount": 0,
+        "baselineMatch": {
+          "matches": [
+            {
+              "label": "right-3",
+              "candidate": "baseline-11"
+            }
+          ],
+          "unmatchedCandidates": [
+            "baseline-0",
+            "baseline-1",
+            "baseline-2",
+            "baseline-3",
+            "baseline-4",
+            "baseline-5",
+            "baseline-6",
+            "baseline-7",
+            "baseline-8",
+            "baseline-9",
+            "baseline-10",
+            "baseline-12",
+            "baseline-13",
+            "baseline-14",
+            "baseline-15",
+            "baseline-16",
+            "baseline-17",
+            "baseline-18",
+            "baseline-19",
+            "baseline-20"
+          ],
+          "unmatchedLabels": [
+            "right-1",
+            "right-2",
+            "right-4",
+            "right-5"
+          ]
+        },
+        "candidateMatch": {
+          "matches": [],
+          "unmatchedCandidates": [],
+          "unmatchedLabels": [
+            "right-1",
+            "right-2",
+            "right-3",
+            "right-4",
+            "right-5"
+          ]
+        },
+        "losses": [
+          {
+            "label": "right-3",
+            "candidate": "baseline-11",
+            "point": {
+              "x": 1331.4866511243022,
+              "y": 2217.5964563173557
+            },
+            "tangent": {
+              "x": 0,
+              "y": -3.7814128946003165
+            },
+            "trace": {
+              "pointsROI": [
+                {
+                  "x": 109,
+                  "y": 58
+                },
+                {
+                  "x": 109,
+                  "y": 59
+                },
+                {
+                  "x": 109,
+                  "y": 60
+                },
+                {
+                  "x": 109,
+                  "y": 61
+                },
+                {
+                  "x": 109,
+                  "y": 62
+                },
+                {
+                  "x": 109,
+                  "y": 63
+                },
+                {
+                  "x": 109,
+                  "y": 64
+                },
+                {
+                  "x": 109,
+                  "y": 65
+                },
+                {
+                  "x": 109,
+                  "y": 66
+                },
+                {
+                  "x": 109,
+                  "y": 67
+                },
+                {
+                  "x": 109,
+                  "y": 68
+                },
+                {
+                  "x": 109,
+                  "y": 69
+                },
+                {
+                  "x": 109,
+                  "y": 70
+                },
+                {
+                  "x": 109,
+                  "y": 71
+                }
+              ],
+              "pointsSource": [
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2217.5964563173557
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2221.377869211956
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2225.1592821065565
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2228.9406950011567
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2232.722107895757
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2236.5035207903575
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2240.2849336849577
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2244.066346579558
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2247.847759474158
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2251.6291723687586
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2255.410585263359
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2259.191998157959
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2262.9734110525596
+                },
+                {
+                  "x": 1331.4866511243022,
+                  "y": 2266.75482394716
+                }
+              ],
+              "connectedAtROIScale": true,
+              "rootDistanceROI": 1.6882169246673584,
+              "roiArc": 13,
+              "nativeArc": 49.15836762980416,
+              "distalValleyPrefixNativeArc": 49.15836762980416,
+              "afterDistalValleyPrefixNativeArc": 0,
+              "tipToRootDistanceNative": 49.15836762980416,
+              "fullPathExceeds36": true,
+              "distalPrefixExceeds36": true,
+              "referenceRootGateROI": 2,
+              "sourceEquivalentRootGateRange": [
+                7.525192390486597,
+                7.562825789200633
+              ],
+              "nativeExperimentalRootGate": 1.5,
+              "sharedAutomaticSeeds": [
+                {
+                  "rank": 93,
+                  "index": 13325,
+                  "processed": true,
+                  "status": "ambiguous",
+                  "proximalConnection": false,
+                  "proximalStop": null
+                },
+                {
+                  "rank": 118,
+                  "index": 13549,
+                  "processed": true,
+                  "status": "ambiguous",
+                  "proximalConnection": false,
+                  "proximalStop": null
+                },
+                {
+                  "rank": 141,
+                  "index": 13773,
+                  "processed": false,
+                  "status": "censored",
+                  "proximalConnection": false,
+                  "proximalStop": null
+                },
+                {
+                  "rank": 174,
+                  "index": 13997,
+                  "processed": false,
+                  "status": "censored",
+                  "proximalConnection": false,
+                  "proximalStop": null
+                },
+                {
+                  "rank": 197,
+                  "index": 14221,
+                  "processed": false,
+                  "status": "censored",
+                  "proximalConnection": false,
+                  "proximalStop": null
+                },
+                {
+                  "rank": 217,
+                  "index": 14445,
+                  "processed": false,
+                  "status": "censored",
+                  "proximalConnection": false,
+                  "proximalStop": null
+                },
+                {
+                  "rank": 242,
+                  "index": 14669,
+                  "processed": false,
+                  "status": "censored",
+                  "proximalConnection": false,
+                  "proximalStop": null
+                },
+                {
+                  "rank": 267,
+                  "index": 14893,
+                  "processed": false,
+                  "status": "censored",
+                  "proximalConnection": false,
+                  "proximalStop": null
+                }
+              ],
+              "endpointConfirmed": false,
+              "meaning": "Coarse observed route and distal valley prefix; broader proximal support is not native same-fiber ownership. Shared raster indices are not biological identity."
+            }
+          }
+        ],
+        "regions": [
+          {
+            "id": "right-1",
+            "baselinePointHits": [],
+            "seedCellContacts": [],
+            "scheduledCoarseRouteCellContacts": [],
+            "nativePathPointRanks": [],
+            "stopWindows": []
+          },
+          {
+            "id": "right-2",
+            "baselinePointHits": [],
+            "seedCellContacts": [
+              {
+                "rank": 84,
+                "index": 13320,
+                "seedStatus": "scheduled",
+                "resultReason": "native-cell-weak-valley",
+                "localStart": "fixed-distal-body-cell",
+                "localStartCellIndex": 12199,
+                "initialization": "weak-valley",
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              },
+              {
+                "rank": 101,
+                "index": 13544,
+                "seedStatus": "scheduled",
+                "resultReason": "native-cell-weak-valley",
+                "localStart": "fixed-distal-body-cell",
+                "localStartCellIndex": 12199,
+                "initialization": "weak-valley",
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              }
+            ],
+            "scheduledCoarseRouteCellContacts": [
+              {
+                "rank": 84,
+                "index": 13320,
+                "seedStatus": "scheduled",
+                "resultReason": "native-cell-weak-valley",
+                "localStart": "fixed-distal-body-cell",
+                "localStartCellIndex": 12199,
+                "initialization": "weak-valley",
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              },
+              {
+                "rank": 101,
+                "index": 13544,
+                "seedStatus": "scheduled",
+                "resultReason": "native-cell-weak-valley",
+                "localStart": "fixed-distal-body-cell",
+                "localStartCellIndex": 12199,
+                "initialization": "weak-valley",
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              },
+              {
+                "rank": 125,
+                "index": 13768,
+                "seedStatus": "scheduled",
+                "resultReason": "native-cell-weak-valley",
+                "localStart": "fixed-distal-body-cell",
+                "localStartCellIndex": 12199,
+                "initialization": "weak-valley",
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              }
+            ],
+            "nativePathPointRanks": [],
+            "stopWindows": []
+          },
+          {
+            "id": "right-3",
+            "baselinePointHits": [
+              {
+                "id": "baseline-11",
+                "point": {
+                  "x": 1331.4866511243022,
+                  "y": 2217.5964563173557
+                },
+                "tangent": {
+                  "x": 0,
+                  "y": -3.7814128946003165
+                },
+                "directionAgrees": true
+              }
+            ],
+            "seedCellContacts": [
+              {
+                "rank": 93,
+                "index": 13325,
+                "seedStatus": "scheduled",
+                "resultReason": "distal-start-insufficient-distal-body-cells",
+                "localStart": "insufficient-distal-body-cells",
+                "localStartCellIndex": null,
+                "initialization": null,
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              },
+              {
+                "rank": 118,
+                "index": 13549,
+                "seedStatus": "scheduled",
+                "resultReason": "coarse-connection-native-ownership-unverified",
+                "localStart": "fixed-distal-body-cell",
+                "localStartCellIndex": 13325,
+                "initialization": "single-supported-native-cell-centre",
+                "nativeStop": "search-boundary",
+                "nativePointCount": 5,
+                "reverseStop": "arc-budget"
+              }
+            ],
+            "scheduledCoarseRouteCellContacts": [
+              {
+                "rank": 93,
+                "index": 13325,
+                "seedStatus": "scheduled",
+                "resultReason": "distal-start-insufficient-distal-body-cells",
+                "localStart": "insufficient-distal-body-cells",
+                "localStartCellIndex": null,
+                "initialization": null,
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              },
+              {
+                "rank": 118,
+                "index": 13549,
+                "seedStatus": "scheduled",
+                "resultReason": "coarse-connection-native-ownership-unverified",
+                "localStart": "fixed-distal-body-cell",
+                "localStartCellIndex": 13325,
+                "initialization": "single-supported-native-cell-centre",
+                "nativeStop": "search-boundary",
+                "nativePointCount": 5,
+                "reverseStop": "arc-budget"
+              }
+            ],
+            "nativePathPointRanks": [
+              118
+            ],
+            "stopWindows": [
+              {
+                "rank": 118,
+                "status": "censored",
+                "reasons": [
+                  "unavailable-or-side-boundary"
+                ],
+                "stopInRegion": true,
+                "directionAgrees": false
+              }
+            ]
+          },
+          {
+            "id": "right-4",
+            "baselinePointHits": [],
+            "seedCellContacts": [],
+            "scheduledCoarseRouteCellContacts": [],
+            "nativePathPointRanks": [],
+            "stopWindows": []
+          },
+          {
+            "id": "right-5",
+            "baselinePointHits": [],
+            "seedCellContacts": [],
+            "scheduledCoarseRouteCellContacts": [
+              {
+                "rank": 91,
+                "index": 13116,
+                "seedStatus": "scheduled",
+                "resultReason": "unobserved-coarse-link",
+                "localStart": "fixed-distal-body-cell",
+                "localStartCellIndex": 11546,
+                "initialization": "single-supported-native-cell-centre",
+                "nativeStop": "bootstrap-search-boundary",
+                "nativePointCount": 0,
+                "reverseStop": "no-observed-distal-start"
+              },
+              {
+                "rank": 116,
+                "index": 13340,
+                "seedStatus": "scheduled",
+                "resultReason": "unobserved-coarse-link",
+                "localStart": "fixed-distal-body-cell",
+                "localStartCellIndex": 11546,
+                "initialization": "single-supported-native-cell-centre",
+                "nativeStop": "bootstrap-search-boundary",
+                "nativePointCount": 0,
+                "reverseStop": "no-observed-distal-start"
+              }
+            ],
+            "nativePathPointRanks": [],
+            "stopWindows": []
+          }
+        ]
+      }
+    },
+    "webkit": {
+      "right": {
+        "baselineTipCount": 22,
+        "acceptedCount": 0,
+        "baselineMatch": {
+          "matches": [],
+          "unmatchedCandidates": [
+            "baseline-0",
+            "baseline-1",
+            "baseline-2",
+            "baseline-3",
+            "baseline-4",
+            "baseline-5",
+            "baseline-6",
+            "baseline-7",
+            "baseline-8",
+            "baseline-9",
+            "baseline-10",
+            "baseline-11",
+            "baseline-12",
+            "baseline-13",
+            "baseline-14",
+            "baseline-15",
+            "baseline-16",
+            "baseline-17",
+            "baseline-18",
+            "baseline-19",
+            "baseline-20",
+            "baseline-21"
+          ],
+          "unmatchedLabels": [
+            "right-1",
+            "right-2",
+            "right-3",
+            "right-4",
+            "right-5"
+          ]
+        },
+        "candidateMatch": {
+          "matches": [],
+          "unmatchedCandidates": [],
+          "unmatchedLabels": [
+            "right-1",
+            "right-2",
+            "right-3",
+            "right-4",
+            "right-5"
+          ]
+        },
+        "losses": [],
+        "regions": [
+          {
+            "id": "right-1",
+            "baselinePointHits": [],
+            "seedCellContacts": [
+              {
+                "rank": 532,
+                "index": 14877,
+                "seedStatus": "seed-budget",
+                "resultReason": "seed-budget",
+                "localStart": null,
+                "localStartCellIndex": null,
+                "initialization": null,
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              }
+            ],
+            "scheduledCoarseRouteCellContacts": [],
+            "nativePathPointRanks": [],
+            "stopWindows": []
+          },
+          {
+            "id": "right-2",
+            "baselinePointHits": [],
+            "seedCellContacts": [
+              {
+                "rank": 261,
+                "index": 12422,
+                "seedStatus": "seed-budget",
+                "resultReason": "seed-budget",
+                "localStart": null,
+                "localStartCellIndex": null,
+                "initialization": null,
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              },
+              {
+                "rank": 282,
+                "index": 12647,
+                "seedStatus": "seed-budget",
+                "resultReason": "seed-budget",
+                "localStart": null,
+                "localStartCellIndex": null,
+                "initialization": null,
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              }
+            ],
+            "scheduledCoarseRouteCellContacts": [],
+            "nativePathPointRanks": [],
+            "stopWindows": []
+          },
+          {
+            "id": "right-3",
+            "baselinePointHits": [],
+            "seedCellContacts": [
+              {
+                "rank": 319,
+                "index": 12876,
+                "seedStatus": "seed-budget",
+                "resultReason": "seed-budget",
+                "localStart": null,
+                "localStartCellIndex": null,
+                "initialization": null,
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              }
+            ],
+            "scheduledCoarseRouteCellContacts": [],
+            "nativePathPointRanks": [],
+            "stopWindows": []
+          },
+          {
+            "id": "right-4",
+            "baselinePointHits": [],
+            "seedCellContacts": [],
+            "scheduledCoarseRouteCellContacts": [],
+            "nativePathPointRanks": [],
+            "stopWindows": []
+          },
+          {
+            "id": "right-5",
+            "baselinePointHits": [],
+            "seedCellContacts": [
+              {
+                "rank": 216,
+                "index": 11321,
+                "seedStatus": "seed-budget",
+                "resultReason": "seed-budget",
+                "localStart": null,
+                "localStartCellIndex": null,
+                "initialization": null,
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              },
+              {
+                "rank": 241,
+                "index": 11545,
+                "seedStatus": "seed-budget",
+                "resultReason": "seed-budget",
+                "localStart": null,
+                "localStartCellIndex": null,
+                "initialization": null,
+                "nativeStop": null,
+                "nativePointCount": 0,
+                "reverseStop": null
+              }
+            ],
+            "scheduledCoarseRouteCellContacts": [],
+            "nativePathPointRanks": [],
+            "stopWindows": []
+          }
+        ]
+      }
+    }
+  },
+  "interpretation": "Contacts with a source cell or measurement window are geometric. Provisional matches and losses do not establish endpoint accuracy or cohort recall."
+}

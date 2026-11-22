@@ -34,6 +34,24 @@ A subsequent recognition experiment needs both (1) source-only acquisition/indep
 
 ## Chronological experiment record
 
+### 2026-11-22: baseline loss and stage coverage on 40337270
+
+Compared archived baseline tips and fixed experiment records with all five provisional right-eye regions of 40337270. The post-hoc audit checks the archive digests and browser provenance before using the saved seed order. Baseline endpoints are matched one-to-one by position and direction. A seed or coarse-route cell contact counts only as geometric coverage. No label enters tracing.
+
+Chromium has one provisional baseline match out of 21 legacy tips. Baseline tip 11 matches right-3 in position and direction. Its coarse route measures 49.16 source px and shares raster indices with eight automatic records, two in the first 128. Rank 93 has insufficient distal body cells. Rank 118 enters the region with an incompatible tangent and has neither a confirmed lid link nor a terminal. The experimental output loses this one provisional match. WebKit has 22 baseline tips and zero region-and-direction matches. The fixed experiment accepts zero endpoints in both engines.
+
+| Region | Chromium stage evidence | WebKit stage evidence |
+| --- | --- | --- |
+| right-1 | No automatic seed cell or scheduled coarse distal route contacts | One seed cell, beyond rank 127 |
+| right-2 | Three scheduled routes touch the region. All select the same native start cell and fail the weak-valley check | Two seed cells, both beyond rank 127 |
+| right-3 | Two scheduled routes touch the region. One lacks sufficient distal cells. Only rank 118 has a native path point inside | One seed cell, beyond rank 127 |
+| right-4 | No seed cell or scheduled coarse distal route contacts | No seed cell or scheduled coarse distal route contacts |
+| right-5 | Two scheduled routes touch the region. Both select the same native start cell and fail the bootstrap search boundary | Two seed cells, both beyond rank 127 |
+
+The six budget-excluded WebKit cell contacts do not establish whether any of those candidates would survive later checks. Most region losses in this frame occur before a native ending window reaches them. The report therefore counts those losses separately from the final decision on rank 118. The annotations remain provisional and non-exhaustive. There is no cohort recall estimate.
+
+Saved `tests/visual/lash-native-40337270-stage-coverage.json` with the exact ranks and input hashes. The `tests/visual/lash-stage-coverage.mjs` audit produced byte-identical repeats and rejected an altered WebKit digest without writing an output. Ten focused tests passed. **LENGTH HOLD.**
+
 ### 2026-11-22: rank 118 on 40337270, source and stop review
 
 Rechecked the single region overlap on the right eye of 40337270 against the original source crop, frozen annotation and recorded Chromium paths. The prior main and repeat records agree excluding timing. The distal path occupies 2.053 px with a stop direction of −64.30°, outside the provisional −107° to −77° interval. The observed reverse path stops above the dense upper-lid band. Nearby dark strokes are visible, leaving identity of the traced fiber uncertain.
