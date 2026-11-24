@@ -103,22 +103,52 @@ test('software color transforms agree with native Canvas filters where supported
   if(result!==null)expect(result).toBeLessThanOrEqual(2);
 });
 
-test('each Beauty tool and lash control changes portrait pixels with valid face geometry',async({page})=>{
+test('each Beauty tool and lash control changes portrait pixels with valid face geometry',async({page},testInfo)=>{
+  const minimumDifference=10;
   const path=require('node:path');await page.setInputFiles('#fileInput',path.join(__dirname,'fixtures/edge-source.jpg'));
   await page.waitForFunction(()=>window.AuraGram.face.status()==='ready');
   await page.waitForFunction(()=>window.AuraGram.retouch.ready());
-  const results=await page.evaluate(async()=>{
+  const {results,lengthEvidence}=await page.evaluate(async minimumDifference=>{
     const A=window.AuraGram,img=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src='tests/fixtures/edge-source.jpg';});
     const c=document.createElement('canvas');c.width=450;c.height=563;const x=c.getContext('2d'),face=A.retouch.snapshot();
     function draw(st){A.renderImage(x,450,563,img,st,face);return x.getImageData(0,0,450,563).data.slice();}
     const base=draw(A.createNeutralState()),results=[];
     for(const tool of A.BEAUTY_TOOLS){const st=A.createNeutralState();st.beauty[tool.key]=100;
       results.push({id:tool.key,difference:draw(st).reduce((sum,v,i)=>sum+Math.abs(v-base[i]),0)});}
+    let cachedLength=null;
     for(const key of ['density','length','definition']){const st=A.createNeutralState();st.lashes[key]=100;
-      results.push({id:key,difference:draw(st).reduce((sum,v,i)=>sum+Math.abs(v-base[i]),0)});}
-    return results;
+      results.push({id:key,difference:draw(st).reduce((sum,v,i)=>sum+Math.abs(v-base[i]),0)});
+      if(key==='length')cachedLength=A.lash.info();}
+    if(results.find(result=>result.id==='length').difference>minimumDifference)return {results,lengthEvidence:null};
+
+    const {describeEyes}=await import('/src/retouch/eyeGeometry.mjs');
+    const {faceMetrics}=await import('/src/retouch/skinMask.mjs');
+    const {analyzeEye,LASH_ANALYSIS_VERSION}=await import('/src/retouch/lashAnalysis.mjs');
+    const {applyLashPass}=await import('/src/retouch/lashEnhancement.mjs');
+    const eyes=describeEyes(face.regions,faceMetrics(face.regions).w);
+    const analysis=Object.fromEntries(['left','right'].map(side=>[side,analyzeEye(img,eyes[side],side)]));
+    draw(A.createNeutralState());
+    const direct=applyLashPass(x,c.width,c.height,eyes,analysis,{density:0,length:100,definition:0},{diagnostics:true});
+    const directDifference=x.getImageData(0,0,c.width,c.height).data.reduce((sum,v,i)=>sum+Math.abs(v-base[i]),0);
+    return {results,lengthEvidence:{
+      analysisVersion:LASH_ANALYSIS_VERSION,source:{width:img.naturalWidth,height:img.naturalHeight},
+      output:{width:c.width,height:c.height},faceStatus:A.face.status(),
+      cachedEyes:cachedLength?{left:cachedLength.left,right:cachedLength.right}:null,
+      eyes:Object.fromEntries(Object.entries(analysis).map(([side,a])=>[side,{
+        usable:eyes[side]?.usable,reason:a.reason,roi:{width:a.rw,height:a.rh},
+        densityConfidence:a.densityConfidence,lengthConfidence:a.lengthConfidence,
+        tips:a.tips.length,tracingEnabled:a.diagnostics?.tracingEnabled,
+        lengthAbstention:a.diagnostics?.lengthAbstention,
+        crossing:a.diagnostics?.crossing,boundaryContext:a.diagnostics?.boundaryContext,
+        tracedStructures:a.diagnostics?.tracedStructures,rejectionCounts:a.diagnostics?.rejectionCounts
+      }])),
+      direct:{difference:directDifference,ran:direct.ran,perEye:direct.perEye}
+    }};
+  },minimumDifference);
+  if(lengthEvidence)await testInfo.attach('length-pixel-failure.json',{
+    body:JSON.stringify({results,...lengthEvidence},null,2),contentType:'application/json'
   });
-  for(const result of results)expect(result.difference,result.id).toBeGreaterThan(10);
+  for(const result of results)expect(result.difference,result.id).toBeGreaterThan(minimumDifference);
 });
 
 test('maximum lash density darkens real lashes without opaque black blocks',async({page})=>{

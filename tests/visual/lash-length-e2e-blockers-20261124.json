@@ -1,0 +1,753 @@
+{
+  "date": "2026-11-24",
+  "decision": "Both original efficacy failures remain open; LENGTH HOLD",
+  "scope": "targeted E2E and archived analyzer replay only",
+  "minimumRequiredDifferenceExclusive": 10,
+  "archiveRevision": "7cb527659b6f4599e0a11ed9d39042aec08d84ca",
+  "previousAnalyzerSHA256": "7dcd589bec24c5ff96e6c00e08385625114ed2a37c481e65e89cb4f8604d70a4",
+  "sources": {
+    "edgeSource": {
+      "path": "tests/fixtures/edge-source.jpg",
+      "sha256": "c43db5cf32c49064e30cabc8eb80a109159d7dc43d1e7b50ae9d74aa2587a0f0"
+    },
+    "active": {
+      "path": "tests/visual/g1c1-evidence/natural-full-original.jpg",
+      "sha256": "abbe280b58a2119c32256e760299fd29337ba46d2291a8c3d60a93f004a0aaf0"
+    }
+  },
+  "inputSHA256": {
+    "tests/visual/out/length-gate-report-20261124-02.json": "71fd2acb3036f397c138b80b0521ca82fc3654a2a66f647a1d48c22b2cd6e5d4",
+    "tests/visual/out/length-gate-historical-20261124-01.json": "07e0771e998ff89f0cd652fdff72fca85270ae4bbf7f5937d6df1f5c7c7b5842",
+    "src/retouch/lashAnalysis.mjs": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d",
+    "src/retouch/lashEnhancement.mjs": "d1e42d9f5b88b881a43526bccfb7b3ec0551580af2e4213ce0da2e27ef618554",
+    "tests/e2e-colors.spec.js": "d8e23c8b4a3d6dce490b957c6ead149918cf7904ba54663c850c1e3cc1b0cfb1"
+  },
+  "selectedTests": {
+    "passed": 2,
+    "failed": 2
+  },
+  "engines": {
+    "chromium": {
+      "edgeSource": {
+        "result": "failed",
+        "data": {
+          "results": [
+            {
+              "id": "smooth",
+              "difference": 372038
+            },
+            {
+              "id": "antired",
+              "difference": 421448
+            },
+            {
+              "id": "blush",
+              "difference": 5502
+            },
+            {
+              "id": "glow",
+              "difference": 207408
+            },
+            {
+              "id": "eyes",
+              "difference": 61860
+            },
+            {
+              "id": "sculpt",
+              "difference": 692046
+            },
+            {
+              "id": "density",
+              "difference": 178
+            },
+            {
+              "id": "length",
+              "difference": 0
+            },
+            {
+              "id": "definition",
+              "difference": 81
+            }
+          ],
+          "analysisVersion": "g1c1-recovery-6-crossing-length-abstention",
+          "source": {
+            "width": 900,
+            "height": 1125
+          },
+          "output": {
+            "width": 450,
+            "height": 563
+          },
+          "faceStatus": "ready",
+          "cachedEyes": {
+            "left": {
+              "confidence": 0.9771008424590681,
+              "reason": "ok",
+              "tips": 0,
+              "recoveredTips": 0,
+              "lengthAbstention": null
+            },
+            "right": {
+              "confidence": 1,
+              "reason": "ok",
+              "tips": 0,
+              "recoveredTips": 0,
+              "lengthAbstention": "observed-crossing-continuation"
+            }
+          },
+          "eyes": {
+            "left": {
+              "usable": true,
+              "reason": "ok",
+              "roi": {
+                "width": 98,
+                "height": 69
+              },
+              "densityConfidence": 0.9771008424590681,
+              "lengthConfidence": 0,
+              "tips": 0,
+              "tracingEnabled": true,
+              "lengthAbstention": null,
+              "crossing": {
+                "paths": [],
+                "testedOpenings": [
+                  5.84721307708554,
+                  7.430289809220633,
+                  9.016617175710051,
+                  10.604736522033209,
+                  12.193947714924587,
+                  13.69825205483715,
+                  15.061623665141527,
+                  16.42685149073503,
+                  17.793508275851277,
+                  19.161288266260264,
+                  19.916705339590994,
+                  20.393693236707374,
+                  20.870902008905038,
+                  21.34831684422145,
+                  21.82592422054065,
+                  21.257751282471933,
+                  20.690066566295357,
+                  20.12291139153751,
+                  19.556331830106796,
+                  18.793050725526907,
+                  17.596820728148966,
+                  16.402278658948983,
+                  15.209822220322861,
+                  14.019983596376104,
+                  12.775688017465923,
+                  11.497485880472198,
+                  10.219402004544458,
+                  8.941487102049155,
+                  7.663825700557766
+                ],
+                "coveredAxisFraction": 0,
+                "occluded": false,
+                "lengthAbstain": false
+              },
+              "boundaryContext": {
+                "baselineTipCount": 0,
+                "recoveredTips": 0,
+                "clippedSeeds": 0,
+                "measuredContextPixels": 0,
+                "baselineDirectionUpdates": 0,
+                "referenceBandH": 14.186850743351423,
+                "searchBandH": 14.186850743351423
+              },
+              "tracedStructures": 5,
+              "rejectionCounts": {
+                "short-measured": 5
+              }
+            },
+            "right": {
+              "usable": true,
+              "reason": "ok",
+              "roi": {
+                "width": 113,
+                "height": 67
+              },
+              "densityConfidence": 1,
+              "lengthConfidence": 0,
+              "tips": 0,
+              "tracingEnabled": false,
+              "lengthAbstention": "observed-crossing-continuation",
+              "crossing": {
+                "paths": [
+                  {
+                    "root": {
+                      "x": 79.5245108298356,
+                      "y": 38.15670588132695
+                    },
+                    "dx": -0.30063934068206516,
+                    "dy": 0.9537379025886793,
+                    "points": [
+                      {
+                        "x": 79.5245108298356,
+                        "y": 38.15670588132695
+                      },
+                      {
+                        "x": 80.17760939174222,
+                        "y": 39.411083124597695
+                      },
+                      {
+                        "x": 80.83070795364884,
+                        "y": 40.66546036786844
+                      },
+                      {
+                        "x": 81.48380651555546,
+                        "y": 41.91983761113919
+                      },
+                      {
+                        "x": 81.18316717487339,
+                        "y": 42.873575513727864
+                      },
+                      {
+                        "x": 81.83626573678,
+                        "y": 44.12795275699861
+                      },
+                      {
+                        "x": 82.48936429868662,
+                        "y": 45.382330000269356
+                      },
+                      {
+                        "x": 81.23498705541587,
+                        "y": 46.035428562175966
+                      },
+                      {
+                        "x": 79.98060981214512,
+                        "y": 46.688527124082576
+                      },
+                      {
+                        "x": 79.67997047146305,
+                        "y": 47.642265026671254
+                      },
+                      {
+                        "x": 79.37933113078098,
+                        "y": 48.59600292925993
+                      },
+                      {
+                        "x": 79.07869179009892,
+                        "y": 49.54974083184861
+                      },
+                      {
+                        "x": 79.73179035200553,
+                        "y": 50.804118075119355
+                      },
+                      {
+                        "x": 80.38488891391215,
+                        "y": 52.0584953183901
+                      }
+                    ]
+                  }
+                ],
+                "testedOpenings": [
+                  7.339187758864041,
+                  8.445777512329604,
+                  9.52614381434446,
+                  10.606918679313187,
+                  11.687988769747438,
+                  12.769279102913782,
+                  13.805625343526717,
+                  14.785720649161416,
+                  15.767834189292252,
+                  16.75161099249121,
+                  17.73677430039788,
+                  18.72310525098657,
+                  19.178067365470145,
+                  19.616543272664785,
+                  20.055657603785537,
+                  20.495369324078148,
+                  20.93564079264301,
+                  20.945282638240652,
+                  20.523897152060137,
+                  20.10251203691153,
+                  19.681127316626924,
+                  19.25974301712404,
+                  18.81443888165112,
+                  17.627764706087902,
+                  16.441443137894296,
+                  15.255556436971563,
+                  14.070214560135106,
+                  12.88556786317359,
+                  11.620613128355147,
+                  10.293317377679303,
+                  8.967081196624406,
+                  7.642456223398443,
+                  6.32045555769159,
+                  5.038478082071443
+                ],
+                "coveredAxisFraction": 0,
+                "occluded": false,
+                "lengthAbstain": true
+              },
+              "boundaryContext": {
+                "baselineTipCount": 0,
+                "recoveredTips": 0,
+                "clippedSeeds": 0,
+                "measuredContextPixels": 0,
+                "baselineDirectionUpdates": 0,
+                "referenceBandH": 13.751384083800703,
+                "searchBandH": 13.751384083800703
+              },
+              "tracedStructures": 0,
+              "rejectionCounts": {}
+            }
+          },
+          "direct": {
+            "difference": 0,
+            "ran": [],
+            "perEye": [
+              {
+                "usable": true,
+                "confidence": 0.9771008424590681,
+                "reason": "ok",
+                "ran": [],
+                "lengthAttempts": 0,
+                "extensions": [],
+                "side": "left"
+              },
+              {
+                "usable": true,
+                "confidence": 1,
+                "reason": "ok",
+                "ran": [],
+                "lengthAttempts": 0,
+                "extensions": [],
+                "side": "right"
+              }
+            ]
+          }
+        },
+        "previousAnalyzer": {
+          "version": "g1c1-recovery-5-boundary-context",
+          "difference": 0,
+          "ran": [],
+          "perEye": [
+            {
+              "usable": true,
+              "confidence": 0.9771008424590681,
+              "reason": "ok",
+              "ran": [],
+              "lengthAttempts": 0,
+              "extensions": [],
+              "side": "left"
+            },
+            {
+              "usable": true,
+              "confidence": 1,
+              "reason": "ok",
+              "ran": [],
+              "lengthAttempts": 0,
+              "extensions": [],
+              "side": "right"
+            }
+          ],
+          "eyes": {
+            "left": {
+              "tips": 0,
+              "lengthConfidence": 0,
+              "crossingPaths": 0,
+              "tracingEnabled": null,
+              "tracedStructures": 5,
+              "rejections": {
+                "short-measured": 5
+              }
+            },
+            "right": {
+              "tips": 0,
+              "lengthConfidence": 0,
+              "crossingPaths": 1,
+              "tracingEnabled": null,
+              "tracedStructures": 23,
+              "rejections": {
+                "disconnected": 4,
+                "short-measured": 16,
+                "eyeliner": 3
+              }
+            }
+          }
+        }
+      },
+      "activePreviewExport": {
+        "result": "passed",
+        "data": {
+          "preview": {
+            "difference": 227,
+            "renderMs": 149.69999998807907,
+            "ran": "length,lashes"
+          },
+          "exported": {
+            "difference": 597,
+            "changed": 67,
+            "width": 2400,
+            "height": 3600,
+            "bytes": 9224866,
+            "ran": "length,lashes",
+            "renderMs": 222
+          }
+        }
+      }
+    },
+    "webkit": {
+      "edgeSource": {
+        "result": "failed",
+        "data": {
+          "results": [
+            {
+              "id": "smooth",
+              "difference": 370327
+            },
+            {
+              "id": "antired",
+              "difference": 420345
+            },
+            {
+              "id": "blush",
+              "difference": 5475
+            },
+            {
+              "id": "glow",
+              "difference": 205131
+            },
+            {
+              "id": "eyes",
+              "difference": 62607
+            },
+            {
+              "id": "sculpt",
+              "difference": 711805
+            },
+            {
+              "id": "density",
+              "difference": 174
+            },
+            {
+              "id": "length",
+              "difference": 0
+            },
+            {
+              "id": "definition",
+              "difference": 81
+            }
+          ],
+          "analysisVersion": "g1c1-recovery-6-crossing-length-abstention",
+          "source": {
+            "width": 900,
+            "height": 1125
+          },
+          "output": {
+            "width": 450,
+            "height": 563
+          },
+          "faceStatus": "ready",
+          "cachedEyes": {
+            "left": {
+              "confidence": 0.9454444375260879,
+              "reason": "ok",
+              "tips": 0,
+              "recoveredTips": 0,
+              "lengthAbstention": null
+            },
+            "right": {
+              "confidence": 1,
+              "reason": "ok",
+              "tips": 0,
+              "recoveredTips": 0,
+              "lengthAbstention": "observed-crossing-continuation"
+            }
+          },
+          "eyes": {
+            "left": {
+              "usable": true,
+              "reason": "ok",
+              "roi": {
+                "width": 98,
+                "height": 69
+              },
+              "densityConfidence": 0.9454444375260879,
+              "lengthConfidence": 0,
+              "tips": 0,
+              "tracingEnabled": true,
+              "lengthAbstention": null,
+              "crossing": {
+                "paths": [],
+                "testedOpenings": [
+                  5.837514400977239,
+                  7.419480172754272,
+                  9.00467568254128,
+                  10.591650896965309,
+                  12.179710167331619,
+                  13.683791864577005,
+                  15.048447878179399,
+                  16.414901968840663,
+                  17.78273964006011,
+                  19.151664442570816,
+                  19.909794959423635,
+                  20.390206569050765,
+                  20.870825788161596,
+                  21.35163859707215,
+                  21.83263220569454,
+                  21.267491471719104,
+                  20.702820775592233,
+                  20.138659655723725,
+                  19.575052170760344,
+                  18.81367252079656,
+                  17.61702964576415,
+                  16.42206822337243,
+                  15.22918406546695,
+                  14.038906696750107,
+                  12.793088913037389,
+                  11.512717702959582,
+                  10.232460655338436,
+                  8.952366748626348,
+                  7.67251763925139
+                ],
+                "coveredAxisFraction": 0,
+                "occluded": false,
+                "lengthAbstain": false
+              },
+              "boundaryContext": {
+                "baselineTipCount": 0,
+                "recoveredTips": 0,
+                "clippedSeeds": 0,
+                "measuredContextPixels": 0,
+                "baselineDirectionUpdates": 0,
+                "referenceBandH": 14.191210933701452,
+                "searchBandH": 14.191210933701452
+              },
+              "tracedStructures": 6,
+              "rejectionCounts": {
+                "short-measured": 6
+              }
+            },
+            "right": {
+              "usable": true,
+              "reason": "ok",
+              "roi": {
+                "width": 113,
+                "height": 67
+              },
+              "densityConfidence": 1,
+              "lengthConfidence": 0,
+              "tips": 0,
+              "tracingEnabled": false,
+              "lengthAbstention": "observed-crossing-continuation",
+              "crossing": {
+                "paths": [
+                  {
+                    "root": {
+                      "x": 79.52300397446153,
+                      "y": 38.19774068389682
+                    },
+                    "dx": -0.3000793995619082,
+                    "dy": 0.9539142277786639,
+                    "points": [
+                      {
+                        "x": 79.52300397446153,
+                        "y": 38.19774068389682
+                      },
+                      {
+                        "x": 80.17683880267829,
+                        "y": 39.45173431123739
+                      },
+                      {
+                        "x": 80.83067363089505,
+                        "y": 40.70572793857796
+                      },
+                      {
+                        "x": 81.48450845911181,
+                        "y": 41.95972156591853
+                      },
+                      {
+                        "x": 81.1844290595499,
+                        "y": 42.91363579369719
+                      },
+                      {
+                        "x": 81.83826388776666,
+                        "y": 44.16762942103776
+                      },
+                      {
+                        "x": 81.53818448820475,
+                        "y": 45.12154364881642
+                      },
+                      {
+                        "x": 80.28419086086417,
+                        "y": 45.77537847703317
+                      },
+                      {
+                        "x": 79.98411146130226,
+                        "y": 46.72929270481183
+                      },
+                      {
+                        "x": 79.68403206174035,
+                        "y": 47.683206932590494
+                      },
+                      {
+                        "x": 79.38395266217844,
+                        "y": 48.637121160369155
+                      },
+                      {
+                        "x": 79.08387326261654,
+                        "y": 49.591035388147816
+                      },
+                      {
+                        "x": 79.7377080908333,
+                        "y": 50.845029015488386
+                      },
+                      {
+                        "x": 79.43762869127139,
+                        "y": 51.79894324326705
+                      }
+                    ]
+                  }
+                ],
+                "testedOpenings": [
+                  7.338391956789918,
+                  8.44555489224085,
+                  9.526570458165994,
+                  10.607995587569652,
+                  11.689716613859488,
+                  12.771658352529501,
+                  13.808661217429206,
+                  14.789439914422704,
+                  15.772260788949781,
+                  16.756764510331447,
+                  17.742670947816798,
+                  18.72975859209183,
+                  19.185849727868078,
+                  19.625471325564234,
+                  20.065735869064458,
+                  20.50660194741887,
+                  20.948031581487886,
+                  20.95847244695114,
+                  20.53752408653786,
+                  20.11657597682924,
+                  19.69562813389997,
+                  19.274680575228935,
+                  18.829768860186224,
+                  17.642119242385046,
+                  16.45482584838645,
+                  15.267971782218536,
+                  14.081668128748706,
+                  12.896066785555716,
+                  11.62964368138028,
+                  10.300472846258298,
+                  8.972357871269633,
+                  7.645848997773701,
+                  6.321957310546581,
+                  5.038261606540155
+                ],
+                "coveredAxisFraction": 0,
+                "occluded": false,
+                "lengthAbstain": true
+              },
+              "boundaryContext": {
+                "baselineTipCount": 0,
+                "recoveredTips": 0,
+                "clippedSeeds": 0,
+                "measuredContextPixels": 0,
+                "baselineDirectionUpdates": 0,
+                "referenceBandH": 13.759815365723894,
+                "searchBandH": 13.759815365723894
+              },
+              "tracedStructures": 0,
+              "rejectionCounts": {}
+            }
+          },
+          "direct": {
+            "difference": 0,
+            "ran": [],
+            "perEye": [
+              {
+                "usable": true,
+                "confidence": 0.9454444375260879,
+                "reason": "ok",
+                "ran": [],
+                "lengthAttempts": 0,
+                "extensions": [],
+                "side": "left"
+              },
+              {
+                "usable": true,
+                "confidence": 1,
+                "reason": "ok",
+                "ran": [],
+                "lengthAttempts": 0,
+                "extensions": [],
+                "side": "right"
+              }
+            ]
+          }
+        },
+        "previousAnalyzer": {
+          "version": "g1c1-recovery-5-boundary-context",
+          "difference": 0,
+          "ran": [],
+          "perEye": [
+            {
+              "usable": true,
+              "confidence": 0.9454444375260879,
+              "reason": "ok",
+              "ran": [],
+              "lengthAttempts": 0,
+              "extensions": [],
+              "side": "left"
+            },
+            {
+              "usable": true,
+              "confidence": 1,
+              "reason": "ok",
+              "ran": [],
+              "lengthAttempts": 0,
+              "extensions": [],
+              "side": "right"
+            }
+          ],
+          "eyes": {
+            "left": {
+              "tips": 0,
+              "lengthConfidence": 0,
+              "crossingPaths": 0,
+              "tracingEnabled": null,
+              "tracedStructures": 6,
+              "rejections": {
+                "short-measured": 6
+              }
+            },
+            "right": {
+              "tips": 0,
+              "lengthConfidence": 0,
+              "crossingPaths": 1,
+              "tracingEnabled": null,
+              "tracedStructures": 20,
+              "rejections": {
+                "short-measured": 14,
+                "disconnected": 3,
+                "eyeliner": 3
+              }
+            }
+          }
+        }
+      },
+      "activePreviewExport": {
+        "result": "passed",
+        "data": {
+          "preview": {
+            "difference": 68,
+            "renderMs": 179,
+            "ran": "length,lashes"
+          },
+          "exported": {
+            "difference": 224,
+            "changed": 56,
+            "width": 2400,
+            "height": 3600,
+            "bytes": 6283204,
+            "ran": "length,lashes",
+            "renderMs": 486
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Spatial ending experiment - LENGTH HOLD
 
-## Current decision (2026-11-22)
+## Current decision (2026-11-24)
 
 **No detector candidate is accepted. Keep Draft PR #5; no Length adapter, merge, deployment, partial release or version bump.** The measured paths and refusal diagnostics are retained for review. The recognition plan is not fully completed: the independent 6+6 cohort, reviewed identity separation and final critic/held-out evaluation remain incomplete. This is an engineering rejection for adoption, not a proof that all image-based endpoint hypotheses are false.
 
@@ -33,6 +33,21 @@ This cycle delivers a documented engineering rejection for integration and retai
 A subsequent recognition experiment needs both (1) source-only acquisition/independent review sufficient to fill the unchanged development and sealed final quotas, and (2) a predeclared mechanism that distinguishes an actual ending from image-contrast loss while establishing observed same-fiber proximal ownership. Any new operator or scale policy must first survive the retained gap, crossing, fading-shaft and hair-control counterexamples. Freeze code and protocol before opening new final detector outputs. Existing provisional development labels cannot be relabelled as held-out cases. Only after passing the original recognition gates should the existing tips adapter and render/performance validation proceed. Canvas/SDF comparison remains a separate later cycle. No release, merge or version bump is warranted by this cycle.
 
 ## Chronological experiment record
+
+### 2026-11-24: reproduced and located both Length efficacy blockers
+
+Re-ran the original pixel-difference gate in `e2e-colors.spec.js` alongside the existing active-Length Preview/Export control. Both Chromium and WebKit detect actual FaceMesh on `edge-source.jpg`. The app and a direct invocation of the same Length pass each produce a difference of zero, with zero drawing attempts. Density and Definition still change pixels on that fixture. The test now attaches per-eye analysis and direct render evidence on Length failure. The original requirement remains greater than 10.
+
+On the fixture's left eye, tracing runs and rejects all five Chromium traces and all six WebKit traces as `short-measured`. The analyzer requires at least four measured points and at least three distal points before a trace passes that check. On the right, both engines observe one crossing continuation and the current conservative Length policy skips tracing. Both eyes have zero Length confidence and zero tips, yielding no work for the Length renderer.
+
+Replayed the exact V5 analyzer from the parent of `a4f0789` using the same fixture, engine-specific FaceMesh and current unchanged renderer. The right eye traces 23 records in Chromium and 20 in WebKit. Every trace is rejected by the measured-length, root connection or eyeliner checks. The older analyzer also produces zero attempts and zero pixel difference in both engines. Dropping the right-eye crossing veto alone would leave the efficacy failures open.
+
+| Browser | Mandatory fixture, Length difference | Active control, Preview | Active control, exported PNG |
+| --- | --- | --- | --- |
+| Chromium | 0, FAIL | 227, PASS | 597, PASS |
+| WebKit mobile project | 0, FAIL | 68, PASS | 224, PASS |
+
+Targeted result: two passes and two original failures. Numeric attachments, versions and input digests are in `tests/visual/lash-length-e2e-blockers-20261124.json`. The full E2E suite was not rerun for this diagnostic. The original fixture, production analysis, rendering and goldens were unchanged. Both mandatory failures remain blockers. **LENGTH HOLD.**
 
 ### 2026-11-22: two native start refusals on 40337270
 
