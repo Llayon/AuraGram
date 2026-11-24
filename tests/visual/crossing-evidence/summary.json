@@ -1,0 +1,366 @@
+{
+  "nominal": {
+    "chromium": {
+      "ready": 14,
+      "excluded": [
+        {
+          "file": "mascara.jpg",
+          "status": "no_face"
+        },
+        {
+          "file": "pexels-7479551.jpg",
+          "status": "no_face"
+        },
+        {
+          "file": "unsplash-purejulia.jpg",
+          "status": "no_face"
+        },
+        {
+          "file": "unsplash-andrey-eye.jpg",
+          "status": "no_face"
+        },
+        {
+          "file": "pexels-18485027.jpg",
+          "status": "no_face"
+        }
+      ],
+      "controls": 168,
+      "activeChanges": [
+        {
+          "file": "pexels-7123010.jpg",
+          "side": "right",
+          "paths": 4,
+          "coveredAxisFraction": 0.2489275814291436,
+          "oldOccluded": false,
+          "abstain": true,
+          "previousTips": 2,
+          "currentTips": 0,
+          "previousEligible": 2,
+          "currentEligible": 0,
+          "densityIdentical": true
+        }
+      ],
+      "outsideVetoDifferences": 0
+    },
+    "webkit": {
+      "ready": 13,
+      "excluded": [
+        {
+          "file": "glasses.jpg",
+          "status": "no_face"
+        },
+        {
+          "file": "mascara.jpg",
+          "status": "no_face"
+        },
+        {
+          "file": "pexels-7479551.jpg",
+          "status": "no_face"
+        },
+        {
+          "file": "unsplash-purejulia.jpg",
+          "status": "no_face"
+        },
+        {
+          "file": "unsplash-andrey-eye.jpg",
+          "status": "no_face"
+        },
+        {
+          "file": "pexels-18485027.jpg",
+          "status": "no_face"
+        }
+      ],
+      "controls": 156,
+      "activeChanges": [],
+      "outsideVetoDifferences": 0
+    }
+  },
+  "jitter": {
+    "chromium": {
+      "samples": 198,
+      "observedCrossing": 60,
+      "verified": 60,
+      "candidateLosses": [
+        {
+          "file": "light.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": -1,
+          "normalNative": -1,
+          "previousEligible": 2
+        },
+        {
+          "file": "light.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 1,
+          "normalNative": -1,
+          "previousEligible": 2
+        },
+        {
+          "file": "light.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 1,
+          "normalNative": 0,
+          "previousEligible": 2
+        },
+        {
+          "file": "light.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 1,
+          "normalNative": 1,
+          "previousEligible": 2
+        },
+        {
+          "file": "hair-occlusion.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "left",
+          "mode": "lower-only",
+          "tangentNative": 0,
+          "normalNative": -1,
+          "previousEligible": 1
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-chromium",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 0,
+          "normalNative": -1,
+          "previousEligible": 2
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-chromium",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 0,
+          "normalNative": 0,
+          "previousEligible": 2
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-chromium",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 0,
+          "normalNative": 1,
+          "previousEligible": 2
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-chromium",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 1,
+          "normalNative": 1,
+          "previousEligible": 2
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-webkit",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": -1,
+          "normalNative": -1,
+          "previousEligible": 3
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-webkit",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": -1,
+          "normalNative": 0,
+          "previousEligible": 3
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-webkit",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": -1,
+          "normalNative": 1,
+          "previousEligible": 5
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-webkit",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 0,
+          "normalNative": -1,
+          "previousEligible": 2
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-webkit",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 0,
+          "normalNative": 0,
+          "previousEligible": 3
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-webkit",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 1,
+          "normalNative": -1,
+          "previousEligible": 2
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-webkit",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 1,
+          "normalNative": 1,
+          "previousEligible": 4
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-webkit",
+          "side": "right",
+          "mode": "lower-only",
+          "tangentNative": 0,
+          "normalNative": -1,
+          "previousEligible": 2
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-webkit",
+          "side": "right",
+          "mode": "lower-only",
+          "tangentNative": 0,
+          "normalNative": 1,
+          "previousEligible": 3
+        }
+      ],
+      "densityIdentities": 60
+    },
+    "webkit": {
+      "samples": 198,
+      "observedCrossing": 64,
+      "verified": 64,
+      "candidateLosses": [
+        {
+          "file": "light.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": -1,
+          "normalNative": -1,
+          "previousEligible": 2
+        },
+        {
+          "file": "light.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": -1,
+          "normalNative": 0,
+          "previousEligible": 2
+        },
+        {
+          "file": "light.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 0,
+          "normalNative": 1,
+          "previousEligible": 3
+        },
+        {
+          "file": "light.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 1,
+          "normalNative": -1,
+          "previousEligible": 2
+        },
+        {
+          "file": "light.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 1,
+          "normalNative": 0,
+          "previousEligible": 2
+        },
+        {
+          "file": "light.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 1,
+          "normalNative": 1,
+          "previousEligible": 2
+        },
+        {
+          "file": "hair-occlusion.jpg",
+          "geometryLabel": "older-chromium-control",
+          "side": "left",
+          "mode": "lower-only",
+          "tangentNative": 0,
+          "normalNative": -1,
+          "previousEligible": 1
+        },
+        {
+          "file": "pexels-12367370.jpg",
+          "geometryLabel": "actual-webkit",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 1,
+          "normalNative": 0,
+          "previousEligible": 3
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-chromium",
+          "side": "left",
+          "mode": "lower-only",
+          "tangentNative": 0,
+          "normalNative": -1,
+          "previousEligible": 2
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-chromium",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": -1,
+          "normalNative": 0,
+          "previousEligible": 2
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-webkit",
+          "side": "right",
+          "mode": "both-arcs",
+          "tangentNative": 1,
+          "normalNative": 1,
+          "previousEligible": 3
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "geometryLabel": "closed-webkit",
+          "side": "right",
+          "mode": "lower-only",
+          "tangentNative": 0,
+          "normalNative": -1,
+          "previousEligible": 2
+        }
+      ],
+      "densityIdentities": 64
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "chromiumExact": true,
+  "webkitExact": true,
+  "analyticControlsExact": true,
+  "rasterControlsExact": true,
+  "V1RawAndToolsRetained": true,
+  "V1ViewsRetained": 36
+}

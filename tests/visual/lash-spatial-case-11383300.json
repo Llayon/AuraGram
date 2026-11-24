@@ -1,0 +1,6 @@
+{
+  "freeze": "tests/visual/lash-spatial-labels-11383300.freeze.json",
+  "labels": "tests/visual/lash-spatial-labels-11383300.json",
+  "sourceDirectory": "tests/visual/out/spatial-supplement-04-network",
+  "screeningDirectory": "tests/visual/out/spatial-supplement-04-{engine}"
+}

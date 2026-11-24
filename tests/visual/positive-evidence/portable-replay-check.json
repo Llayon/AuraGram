@@ -1,0 +1,14 @@
+[
+  {
+    "engine": "chromium",
+    "sourceGraph": true,
+    "allTipTraceBudgetRecordsExact": true,
+    "allFixedAndNewCandidateRecordsExact": true
+  },
+  {
+    "engine": "webkit",
+    "sourceGraph": true,
+    "allTipTraceBudgetRecordsExact": true,
+    "allFixedAndNewCandidateRecordsExact": true
+  }
+]

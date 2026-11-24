@@ -1,0 +1,371 @@
+{
+  "real": [
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "margin": 1.5,
+      "window": 6,
+      "reason": "arc-budget",
+      "points": 24,
+      "arc": 11.53765235810373,
+      "initial": 4.900566667113451
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "margin": 1.5,
+      "window": 8,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "margin": 1.5,
+      "window": 12,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "margin": 2.5,
+      "window": 6,
+      "reason": "bootstrap-search-boundary",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "margin": 2.5,
+      "window": 8,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "C104-right-old16",
+      "margin": 2.5,
+      "window": 12,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "margin": 1.5,
+      "window": 6,
+      "reason": "bootstrap-search-boundary",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "margin": 1.5,
+      "window": 8,
+      "reason": "bootstrap-search-boundary",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "margin": 1.5,
+      "window": 12,
+      "reason": "bootstrap-search-boundary",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "margin": 2.5,
+      "window": 6,
+      "reason": "one-sided-edge",
+      "points": 2,
+      "arc": 0.5905489743683079,
+      "initial": 3.7752195583351917
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "margin": 2.5,
+      "window": 8,
+      "reason": "one-sided-edge",
+      "points": 2,
+      "arc": 0.5934124172738874,
+      "initial": 3.0657176188859476
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R1",
+      "margin": 2.5,
+      "window": 12,
+      "reason": "one-sided-edge",
+      "points": 2,
+      "arc": 0.5915102058326662,
+      "initial": 3.2440795085444663
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "margin": 1.5,
+      "window": 6,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "margin": 1.5,
+      "window": 8,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "margin": 1.5,
+      "window": 12,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "margin": 2.5,
+      "window": 6,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "margin": 2.5,
+      "window": 8,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "chromium",
+      "id": "PI729R2",
+      "margin": 2.5,
+      "window": 12,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "margin": 1.5,
+      "window": 6,
+      "reason": "arc-budget",
+      "points": 24,
+      "arc": 11.53765235810373,
+      "initial": 4.900566667113451
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "margin": 1.5,
+      "window": 8,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "margin": 1.5,
+      "window": 12,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "margin": 2.5,
+      "window": 6,
+      "reason": "bootstrap-search-boundary",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "margin": 2.5,
+      "window": 8,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "C104-right-old16",
+      "margin": 2.5,
+      "window": 12,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "margin": 1.5,
+      "window": 6,
+      "reason": "bootstrap-search-boundary",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "margin": 1.5,
+      "window": 8,
+      "reason": "bootstrap-search-boundary",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "margin": 1.5,
+      "window": 12,
+      "reason": "bootstrap-search-boundary",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "margin": 2.5,
+      "window": 6,
+      "reason": "one-sided-edge",
+      "points": 2,
+      "arc": 0.5905489743683079,
+      "initial": 3.7752195583351917
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "margin": 2.5,
+      "window": 8,
+      "reason": "one-sided-edge",
+      "points": 2,
+      "arc": 0.5934124172738874,
+      "initial": 3.0657176188859476
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R1",
+      "margin": 2.5,
+      "window": 12,
+      "reason": "one-sided-edge",
+      "points": 2,
+      "arc": 0.5915102058326662,
+      "initial": 3.2440795085444663
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "margin": 1.5,
+      "window": 6,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "margin": 1.5,
+      "window": 8,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "margin": 1.5,
+      "window": 12,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "margin": 2.5,
+      "window": 6,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "margin": 2.5,
+      "window": 8,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    },
+    {
+      "engine": "webkit",
+      "id": "PI729R2",
+      "margin": 2.5,
+      "window": 12,
+      "reason": "unconfirmed-seed-association-or-body",
+      "points": 0,
+      "arc": 0,
+      "initial": null
+    }
+  ],
+  "transitions": {
+    "arc-budget -> arc-budget": 36,
+    "search-boundary -> arc-budget": 116,
+    "turn-bound -> arc-budget": 32,
+    "search-boundary -> bootstrap-search-boundary": 4,
+    "turn-bound -> bootstrap-search-boundary": 4
+  }
+}

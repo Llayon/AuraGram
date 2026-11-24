@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-22",
+  "license": "https://www.pexels.com/license/",
+  "status": "source-leads-not-qualified",
+  "policy": "Source-only development screening. Prefer less tightly framed portraits with frontal or upward gaze. Retain JPEG bytes and native scale. No final eligibility or identity claims.",
+  "sources": [
+    {
+      "id": "30639069",
+      "file": "pexels-30639069.jpg",
+      "page": "https://www.pexels.com/photo/thoughtful-portrait-of-a-man-looking-up-30639069/",
+      "url": "https://images.pexels.com/photos/30639069/pexels-photo-30639069.jpeg?cs=srgb&fm=jpg",
+      "author": "Ytalo Marcos",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "8649020",
+      "file": "pexels-8649020.jpg",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-man-in-blue-jacket-8649020/",
+      "url": "https://images.pexels.com/photos/8649020/pexels-photo-8649020.jpeg?cs=srgb&fm=jpg",
+      "author": "Mushtaq Hussain",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "5096204",
+      "file": "pexels-5096204.jpg",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-bearded-man-in-white-shirt-looking-at-camera-5096204/",
+      "url": "https://images.pexels.com/photos/5096204/pexels-photo-5096204.jpeg?cs=srgb&fm=jpg",
+      "author": "Yelena from Pexels",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "2507723",
+      "file": "pexels-2507723.jpg",
+      "page": "https://www.pexels.com/photo/portrait-photo-of-woman-posing-while-looking-up-2507723/",
+      "url": "https://images.pexels.com/photos/2507723/pexels-photo-2507723.jpeg?cs=srgb&fm=jpg",
+      "author": "Rene Terp",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "13871690",
+      "file": "pexels-13871690.jpg",
+      "page": "https://www.pexels.com/photo/portrait-of-a-woman-looking-up-13871690/",
+      "url": "https://images.pexels.com/photos/13871690/pexels-photo-13871690.jpeg?cs=srgb&fm=jpg",
+      "author": "Matheus Bertelli",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    }
+  ]
+}

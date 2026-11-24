@@ -1,0 +1,11 @@
+✔ diagnostic fit preserves observed straight direction through rotation (3.5518ms)
+✔ diagnostic cannot infer a quadratic from repeated or insufficient observations (0.2646ms)
+✔ distal fit ignores a diverging merged root beyond its observed window (1.2825ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 129.1088

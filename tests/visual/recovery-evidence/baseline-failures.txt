@@ -1,0 +1,154 @@
+
+> auragram@0.5.1 test:e2e
+> node scripts/run-e2e.cjs --project=chromium --project=webkit-mobile --grep each Beauty tool and lash control|maximum lash density|L6 density|L22 real portrait
+
+
+Running 6 tests using 3 workers
+
+node.exe : (node:33840) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+строка:1 знак:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:33840) Wa... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34320) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35036) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry (3.0s)
+(node:20976) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 [chromium] › tests\e2e-lashes.spec.js:334:1 › L6 density monotonicity without jumps or strips (4.1s)
+(node:25940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [webkit-mobile] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry (6.2s)
+  ✘  4 [chromium] › tests\e2e-colors.spec.js:124:1 › maximum lash density darkens real lashes without opaque black blocks (1.7s)
+(node:27208) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 [chromium] › tests\e2e-lashes.spec.js:754:1 › L22 real portrait: detection finds lashes and enhances them (2.0s)
+  ✘  6 [webkit-mobile] › tests\e2e-colors.spec.js:124:1 › maximum lash density darkens real lashes without opaque black blocks (4.4s)
+
+
+  1) [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+
+    Error: length
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 10
+    Received:   0
+
+      119 |     return results;
+      120 |   });
+    > 121 |   for(const result of results)expect(result.difference,result.id).toBeGreaterThan(10);
+          |                                                                   ^
+      122 | });
+      123 |
+      124 | test('maximum lash density darkens real lashes without opaque black blocks',async({page})=>{
+        at D:\Programms\alisagram\tests\e2e-colors.spec.js:121:67
+
+    Error Context: test-results\e2e-colors-each-Beauty-too-c121f-ls-with-valid-face-geometry-chromium\error-context.md
+
+  2) [chromium] › tests\e2e-colors.spec.js:124:1 › maximum lash density darkens real lashes without opaque black blocks 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 10
+    Received:   3
+
+      135 |     return {changed,tooDark};
+      136 |   });
+    > 137 |   expect(result.changed).toBeGreaterThan(10);expect(result.tooDark).toBe(0);
+          |                          ^
+      138 | });
+      139 |
+        at D:\Programms\alisagram\tests\e2e-colors.spec.js:137:26
+
+    Error Context: test-results\e2e-colors-maximum-lash-de-a97cf-without-opaque-black-blocks-chromium\error-context.md
+
+  3) [chromium] › tests\e2e-lashes.spec.js:334:1 › L6 density monotonicity without jumps or strips ─
+
+    Error: density100 changes the band
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0.005
+    Received:   0.0007987220447284345
+
+      345 |     means.push(s.mean);
+      346 |     if (v === 100) {
+    > 347 |       expect(s.changedFrac, 'density100 changes the band').toBeGreaterThan(0.005);
+          |                                                            ^
+      348 |       expect(s.changedFrac, 'no solid strip (gaps preserved)').toBeLessThan(0.6);
+      349 |     }
+      350 |   }
+        at D:\Programms\alisagram\tests\e2e-lashes.spec.js:347:60
+
+    Error Context: test-results\e2e-lashes-L6-density-monotonicity-without-jumps-or-strips-chromium\error-context.md
+
+  4) [chromium] › tests\e2e-lashes.spec.js:754:1 › L22 real portrait: detection finds lashes and enhances them 
+
+    Error: visible enhancement in the band
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0.02
+    Received:   0.002396166134185304
+
+      766 |   if (confident) {
+      767 |     const s = await callPx(page, PX.bandStats, { a: base, b: await canvasDataUrl(page) });
+    > 768 |     expect(s.mean, 'visible enhancement in the band').toBeGreaterThan(0.02);
+          |                                                       ^
+      769 |   }
+      770 |   const fatal = errors.filter((e) => !NOISE.test(e));
+      771 |   expect(fatal, JSON.stringify(fatal)).toEqual([]);
+        at D:\Programms\alisagram\tests\e2e-lashes.spec.js:768:55
+
+    Error Context: test-results\e2e-lashes-L22-real-portra-12f79-ds-lashes-and-enhances-them-chromium\error-context.md
+
+  5) [webkit-mobile] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+
+    Error: length
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 10
+    Received:   0
+
+      119 |     return results;
+      120 |   });
+    > 121 |   for(const result of results)expect(result.difference,result.id).toBeGreaterThan(10);
+          |                                                                   ^
+      122 | });
+      123 |
+      124 | test('maximum lash density darkens real lashes without opaque black blocks',async({page})=>{
+        at D:\Programms\alisagram\tests\e2e-colors.spec.js:121:67
+
+    Error Context: test-results\e2e-colors-each-Beauty-too-c121f-ls-with-valid-face-geometry-webkit-mobile\error-context.md
+
+  6) [webkit-mobile] › tests\e2e-colors.spec.js:124:1 › maximum lash density darkens real lashes without opaque black blocks 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 10
+    Received:   3
+
+      135 |     return {changed,tooDark};
+      136 |   });
+    > 137 |   expect(result.changed).toBeGreaterThan(10);expect(result.tooDark).toBe(0);
+          |                          ^
+      138 | });
+      139 |
+        at D:\Programms\alisagram\tests\e2e-colors.spec.js:137:26
+
+    Error Context: test-results\e2e-colors-maximum-lash-de-a97cf-without-opaque-black-blocks-webkit-mobile\error-context.md
+
+  6 failed
+    [chromium] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+    [chromium] › tests\e2e-colors.spec.js:124:1 › maximum lash density darkens real lashes without opaque black blocks 
+    [chromium] › tests\e2e-lashes.spec.js:334:1 › L6 density monotonicity without jumps or strips ──
+    [chromium] › tests\e2e-lashes.spec.js:754:1 › L22 real portrait: detection finds lashes and enhances them 
+    [webkit-mobile] › tests\e2e-colors.spec.js:106:1 › each Beauty tool and lash control changes portrait pixels with valid face geometry 
+    [webkit-mobile] › tests\e2e-colors.spec.js:124:1 › maximum lash density darkens real lashes without opaque black blocks 

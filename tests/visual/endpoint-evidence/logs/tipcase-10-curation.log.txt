@@ -1,0 +1,19 @@
+{
+  "views": 77,
+  "uniqueAssets": 74,
+  "nativeRGBA": [
+    {
+      "id": "C104-right-old16",
+      "equal": true
+    },
+    {
+      "id": "PI729R1",
+      "equal": true
+    },
+    {
+      "id": "PI729R2",
+      "equal": true
+    }
+  ],
+  "csvRows": 7884
+}

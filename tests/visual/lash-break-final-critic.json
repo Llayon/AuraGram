@@ -1,0 +1,127 @@
+{
+  "schema": "auragram-independent-break-final-critic-v1",
+  "verdict": "LENGTH HOLD; diagnostic evidence only; no graph/detector/effect adoption",
+  "scope": "Bounded final integrity, corrected display and report review. Local stored-byte validator/logs and two fixed PNGs inspected; no browser/model inference, new source, new unrelated experiment or label/protocol/product edit. Final artifact separate from preserved pack.",
+  "references": [
+    {
+      "path": "tests/visual/break-evidence/files.json",
+      "sha256": "b05fdac805865a3f585bb2ae8c3c41ec0b4e651a2a548c93eb0464be8b0c0b3e"
+    },
+    {
+      "path": "tests/visual/break-evidence/index.html",
+      "sha256": "6cdcd460a2eb3a8193ca6844209875db5b7cbd2c73c4ebd64b7c1dc7e6a5168a"
+    },
+    {
+      "path": "tests/visual/validate-lash-break.cjs",
+      "sha256": "6a5438d21f60dd469187b2adb26ca634de05ba49402c0e96cc7a40fc97d1aa79"
+    },
+    {
+      "path": "tests/visual/lash-break-protocol.json",
+      "sha256": "19d3a58b29d4c7a94ff7d0783815b5c6b37a5a454f45b904ac2766aebf131280"
+    },
+    {
+      "path": "tests/visual/out/break-03-display-data/census.json",
+      "sha256": "ff4abd58cfad025770e13b87ff6078503dfdf216ba8c8d8821e40daf60df24fa"
+    },
+    {
+      "path": "tests/visual/out/break-04-plots/manifest.json",
+      "sha256": "f656a8f3bc3ad3564ed29490852389c248c1d96973da7ebb35951dcd3d405bc2"
+    },
+    {
+      "path": "tests/visual/out/break-05-plots-fixed/manifest.json",
+      "sha256": "439032f4e827d6c3f6f2fc5027d616a981b76c205d6db70339e9f1875699fa3e"
+    },
+    {
+      "path": "G1C1_BREAK_CENSUS_REPORT.md",
+      "sha256": "0d0170a61749de8035f2a9963feaf3abee177642ad4863f8cb4ccb8b24dad60c"
+    }
+  ],
+  "priorCritics": [
+    {
+      "path": "tests/visual/lash-break-protocol-critic.json",
+      "sha256": "57f88b476d7952d7ade890703128319db294a6514dda24ede7eb34b37d36076c"
+    },
+    {
+      "path": "tests/visual/lash-break-code-critic.json",
+      "sha256": "753874ebf9c8a7e8c608eb936804abec9b2eb84a1f348831f21038a3101da427"
+    },
+    {
+      "path": "tests/visual/lash-break-visual-critic.json",
+      "sha256": "e673955b88c54b9973335f60b9fc7162c384b57f3810f77cd6a135f5e16e3970"
+    }
+  ],
+  "integrityVerification": {
+    "independentlyRun": "node tests/visual/validate-lash-break.cjs PASS",
+    "rawMappings": 559,
+    "PNGReferences": 336,
+    "galleryLocalLinks": 423,
+    "brokenLinks": 0,
+    "eyeVersionReplays": 64,
+    "frontierPredicateChecks": 34458,
+    "numericReplay": "Original instrumentation arrays/traces/diagnostics and reconstructed strict parents/masks exactly preserved. Archived browser numeric maximum discrepancy4.4964e-15 within1e-9. Integer/structural identity is distinct from tolerance-based float replay.",
+    "inputBindings": "Validator verifies parent archive Float32 SHA/length references, protocol and prior image/module hashes, tool/plot sidecars, initial/corrected metadata deltas and all packed byte hashes.",
+    "retention": "Initial01 exclusion bookkeeping error and exact source tools retained;02 correct5ready/3no_face while measured runs unchanged. Display03 adds only plot vectors/sidecar hashes. Initial04 figures/script and fixed05 retained; no unfavorable source/route removed."
+  },
+  "displayFixVerification": {
+    "automaticID": "Fixed05 maps automatic representative to declared V1 reference auto-0.26automatic panels now record nmsShown=true and correct reference ID; initial04 omission retained/documented.",
+    "outsideLocalZoom": "Actual fixed WebKitV3F2L1 PNG explicitly says NMS star outside local zoom and directs viewer to wide source/coordinates. Root-route removal is not silently interpreted as absent.",
+    "actualFixedPNG": [
+      {
+        "path": "tests/visual/out/break-05-plots-fixed/webkit-V3-pexels-21792059.jpg-right-F2-217-L1.png",
+        "sha256": "8432b680283b5c27b69b28d79f80611e8bd1f88002f67da71a555de6638ad68a"
+      },
+      {
+        "path": "tests/visual/out/break-05-plots-fixed/chromium-V3-hair-occlusion.jpg-left-automatic.png",
+        "sha256": "e10c2a531f4554a181926ddc527ae4a763917bc4db7397342855e258ed3ff9dd"
+      }
+    ],
+    "hairAutomatic": "Actual corrected hair plot shows magenta V1 auto-0 reference marker, root=True, and outside-zoom note; it does not identify this old reference with current V3 cyan route.",
+    "disposition": "Both reproducible display findings resolved; scientific source/working-data distinctions and route caveats visible."
+  },
+  "causalAndVisualScope": {
+    "rawVsPruned": "All64recorded within-version raw/pruned directed reach sets agree; zero reach loss from pruning observed on this corpus. Not a universal graph theorem.",
+    "firstFailure": "Chosen-route firstFailure can precede firstFrontier and can enter already reachable vertices; no unique/global cut or physical first-hair break inferred. Alternative-route status retained.",
+    "orientationWitness": "Same.707 agreement rejection occurs near217 and white-liner/hair controls; W217V1 also fails target alignment. Software rejection witnesses do not prove a curved physical hair or justify lowering.85/step-alignment floors.",
+    "nmsWitness": "Mixed best-direction bilinear contributors explain response competition on selected V1 route; removal does not certify suppressed strand ownership. WebKitV3 still has alternative loose reach, so removed reference pixel is not unique cut.",
+    "imageScope": "Native Pillow RGB illustrations are for context, actual numeric vectors/filters use archived browser Float32. No effect rendered, no natural Length acceptance. Coated/merged/foreign-hair/inside-opening contexts retain ambiguity/protection."
+  },
+  "freshStoredVerification": {
+    "unit": "188PASS/0FAIL/0SKIPPED/0CANCELLED;181previous+7new diagnostic tests.",
+    "fullBrowser": "166PASS/2originalF1FAIL/3dependentNOTRUN; mandatory suite remains RED. Original LengthRGB0 vs required>10 in Chromium/WebKit unchanged.",
+    "isolatedProductPerformance": "3PASS on unchanged appv6, not census/prototype: active natural720x1080 D35/L100/Def25 off16.8ms/active20.6ms/delta+3.8ms,LengthRGB227/DensityRGB206,2tips,stablecache/analysis. Separate PASS does not relabel dependent NOTRUN.",
+    "coldProductAnalysisMs": 147.8,
+    "activeProductExport": {
+      "size": [
+        2400,
+        3600
+      ],
+      "renderMs": 226.3,
+      "encodeMs": 323.4,
+      "buttonToBlobMs": 629.6
+    },
+    "buildPackageSite": "Completed logs inspected: build resources prepared, static site prepared, Chromium native/WebKit software real face/retouch/PNG smoke passed.",
+    "physicalPhones": "UNVERIFIED; scientific instrumentation/plotting not app/mobile/peak-memory benchmark."
+  },
+  "changeReview": {
+    "unchanged": "git diff HEAD for src, rejected downward prototype, existing relevant E2E/lash unit/golden paths and package-lock empty. Protocol/labels match frozen hashes.",
+    "packageJson": "Only npm test command adds lash-break.test.mjs; version/dependencies unchanged.",
+    "report": "Current report preserves HOLD and reports prior CI failures, metadata/display corrections and all physical/semantic limitations. Frozen wording no image-analysis rerun is explicitly clarified as exact prototype-feature numerical replay on archived grids, without new source detection decode/browser/MediaPipe inference.",
+    "reportFreshCheckSync": "Fresh-check paragraph is completed in reviewed report."
+  },
+  "blockers": "No new reproducible integrity/display blocker. Original efficacy failure remains a release blocker; no merge/deploy/partial release justified.",
+  "nextBoundedDecision": "Keep diagnostic findings separate. Further local direction/continuity evidence must preserve image support, protected opening and liner/hair controls. No weaker gate, manual seed or invented bridge enters applicator based on this census.",
+  "immutableReferences": [
+    {
+      "path": "tests/visual/lash-break-protocol.json",
+      "sha256": "19d3a58b29d4c7a94ff7d0783815b5c6b37a5a454f45b904ac2766aebf131280"
+    },
+    {
+      "path": "tests/visual/lash-freeend-independent-labels.json",
+      "sha256": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800"
+    },
+    {
+      "path": "tests/visual/lash-freeend2-independent-labels.json",
+      "sha256": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810"
+    }
+  ]
+}

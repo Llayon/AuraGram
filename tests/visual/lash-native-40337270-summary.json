@@ -1,0 +1,660 @@
+{
+  "source": "pexels-40337270.jpg",
+  "sourceSHA256": "b1fa507f1f40816de2e212fe5689088a63370c637543402b3f0c386002e523eb",
+  "status": "unqualified development diagnostic; LENGTH HOLD",
+  "repeatEqualExcludingTiming": true,
+  "inputs": {
+    "tests/visual/lash-spatial-labels-40337270.json": "645506c5d066ca03b7ebb7388696358a4488f229d7f09fffcb6c8fe3a35f84d2",
+    "tests/visual/lash-spatial-labels-40337270.freeze.json": "84ccf84aa5392e8e6a6771b6780e81190e5f09a11293016d7b55d08956200626",
+    "tests/visual/out/native-40337270-main-01/protocol.json": "1912cad306e258d36ba64263ef3c60e8a6ef7743427133de36d5495f2abb914b",
+    "tests/visual/out/native-40337270-repeat-01/protocol.json": "1912cad306e258d36ba64263ef3c60e8a6ef7743427133de36d5495f2abb914b",
+    "tests/visual/out/native-40337270-main-01/chromium.json": "4f36286c2f406afb1b61e65299515914c6fbb03d43af44b8326c0902cf7e9e23",
+    "tests/visual/out/native-40337270-repeat-01/chromium.json": "d651b5c319061ba1cc99c679fcabcb7fffad8f96f037d77921c64e1653950694",
+    "tests/visual/out/spatial-supplement-10-chromium/screening.json": "56b8cf1a20bf7201e37d099a6bf326917c05274983a6b23490792573ebb81287",
+    "tests/visual/out/ending-40337270-chromium-01/protocol.json": "baef46dcff60735e07442e0d507681b302e91addaf73b0ca976e5616657846be",
+    "tests/visual/out/ending-40337270-chromium-01/chromium.json": "b0b94823ced357e9f7de0d044d456d4201230850df85d626ccfd4cb0d4c280b7",
+    "tests/visual/out/native-40337270-main-01/webkit.json": "375e1a8309ebd9ccc5d928631b9a8f945f26d3344b3f4262a748f412a916b187",
+    "tests/visual/out/native-40337270-repeat-01/webkit.json": "f96305ea8aa0222671972d111e3e422e10ba9c371ffe5bc6cd6a8ce7140e42fd",
+    "tests/visual/out/spatial-supplement-10-webkit/screening.json": "d315cc30d11136e64d35a9ad79c9502f29e82f54af4e690875e66a658dcd2ff3",
+    "tests/visual/out/ending-40337270-webkit-01/protocol.json": "baef46dcff60735e07442e0d507681b302e91addaf73b0ca976e5616657846be",
+    "tests/visual/out/ending-40337270-webkit-01/webkit.json": "4259745a688f47d8928a2915a30a96a6061ef175d8d246fc266d9edd05505eac"
+  },
+  "engines": {
+    "chromium": {
+      "left": {
+        "seeds": 245,
+        "overBudgetSeeds": 117,
+        "baselineTips": 16,
+        "observedDistalRecords": 6,
+        "uniqueDistalStarts": 3,
+        "reverseReasons": {
+          "one-sided-edge": 3,
+          "proximal-gate-beyond-budget": 3
+        },
+        "observedEndingStatuses": {
+          "ambiguous": 5,
+          "censored": 1
+        },
+        "gateObserved": 0,
+        "accepted": 0,
+        "allObservedRegionIds": [],
+        "witnesses": [
+          {
+            "rank": 4,
+            "start": {
+              "x": 2289.236707347202,
+              "y": 1984.1223672465123,
+              "arc": 0
+            },
+            "distalArc": 1.0128954039549019,
+            "proximalArc": 0,
+            "gateObserved": false,
+            "reverseReason": "proximal-gate-beyond-budget",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.9906046702881874,
+              "y": -0.1367566715126961
+            },
+            "measuredStopDirectionDegrees": -172.1397880211289
+          },
+          {
+            "rank": 8,
+            "start": {
+              "x": 2213.494635416001,
+              "y": 2034.5817935927732,
+              "arc": 0
+            },
+            "distalArc": 3.061640829681445,
+            "proximalArc": 0,
+            "gateObserved": false,
+            "reverseReason": "proximal-gate-beyond-budget",
+            "endingStatus": "ambiguous",
+            "endingReasons": [
+              "multiple-supported-bands"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.9163602095302894,
+              "y": -0.4003548006326439
+            },
+            "measuredStopDirectionDegrees": -156.39963934930995
+          },
+          {
+            "rank": 20,
+            "start": {
+              "x": 2213.494635416001,
+              "y": 2034.5817935927732,
+              "arc": 0
+            },
+            "distalArc": 3.061640829681445,
+            "proximalArc": 0,
+            "gateObserved": false,
+            "reverseReason": "proximal-gate-beyond-budget",
+            "endingStatus": "ambiguous",
+            "endingReasons": [
+              "multiple-supported-bands"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.9163602095302894,
+              "y": -0.4003548006326439
+            },
+            "measuredStopDirectionDegrees": -156.39963934930995
+          },
+          {
+            "rank": 91,
+            "start": {
+              "x": 2198.6655598558773,
+              "y": 2109.830181183408,
+              "arc": 0
+            },
+            "distalArc": 1.0677061862986177,
+            "proximalArc": 5.602503036000234,
+            "gateObserved": false,
+            "reverseReason": "one-sided-edge",
+            "endingStatus": "ambiguous",
+            "endingReasons": [
+              "multiple-supported-bands"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.7036903147446648,
+              "y": -0.7105068197663936
+            },
+            "measuredStopDirectionDegrees": -134.72383344959871
+          },
+          {
+            "rank": 99,
+            "start": {
+              "x": 2198.6655598558773,
+              "y": 2109.830181183408,
+              "arc": 0
+            },
+            "distalArc": 1.0677061862986177,
+            "proximalArc": 5.602503036000234,
+            "gateObserved": false,
+            "reverseReason": "one-sided-edge",
+            "endingStatus": "ambiguous",
+            "endingReasons": [
+              "multiple-supported-bands"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.7036903147446648,
+              "y": -0.7105068197663936
+            },
+            "measuredStopDirectionDegrees": -134.72383344959871
+          },
+          {
+            "rank": 107,
+            "start": {
+              "x": 2198.6655598558773,
+              "y": 2109.830181183408,
+              "arc": 0
+            },
+            "distalArc": 1.0677061862986177,
+            "proximalArc": 5.602503036000234,
+            "gateObserved": false,
+            "reverseReason": "one-sided-edge",
+            "endingStatus": "ambiguous",
+            "endingReasons": [
+              "multiple-supported-bands"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.7036903147446648,
+              "y": -0.7105068197663936
+            },
+            "measuredStopDirectionDegrees": -134.72383344959871
+          }
+        ]
+      },
+      "right": {
+        "seeds": 276,
+        "overBudgetSeeds": 148,
+        "baselineTips": 21,
+        "observedDistalRecords": 8,
+        "uniqueDistalStarts": 6,
+        "reverseReasons": {
+          "arc-budget": 1,
+          "one-sided-edge": 5,
+          "proximal-gate-beyond-budget": 1,
+          "turn-bound": 1
+        },
+        "observedEndingStatuses": {
+          "ambiguous": 1,
+          "censored": 7
+        },
+        "gateObserved": 0,
+        "accepted": 0,
+        "allObservedRegionIds": [
+          "right-3"
+        ],
+        "witnesses": [
+          {
+            "rank": 76,
+            "start": {
+              "x": 1362.729803622412,
+              "y": 2210.033630528155,
+              "arc": 0
+            },
+            "distalArc": 1.6204999433926668,
+            "proximalArc": 1.5088153096563879,
+            "gateObserved": false,
+            "reverseReason": "one-sided-edge",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": 0.4910168590086574,
+              "y": -0.8711500698325589
+            },
+            "measuredStopDirectionDegrees": -60.59256129933546
+          },
+          {
+            "rank": 95,
+            "start": {
+              "x": 1362.729803622412,
+              "y": 2210.033630528155,
+              "arc": 0
+            },
+            "distalArc": 1.6204999433926668,
+            "proximalArc": 1.5088153096563879,
+            "gateObserved": false,
+            "reverseReason": "one-sided-edge",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": 0.4910168590086574,
+              "y": -0.8711500698325589
+            },
+            "measuredStopDirectionDegrees": -60.59256129933546
+          },
+          {
+            "rank": 97,
+            "start": {
+              "x": 1087.2906831680882,
+              "y": 2315.5422618575317,
+              "arc": 0
+            },
+            "distalArc": 2.069809105024005,
+            "proximalArc": 1.0194462990643394,
+            "gateObserved": false,
+            "reverseReason": "turn-bound",
+            "endingStatus": "ambiguous",
+            "endingReasons": [
+              "multiple-supported-bands"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.9564004356693561,
+              "y": -0.29205856715985223
+            },
+            "measuredStopDirectionDegrees": -163.01876029895095
+          },
+          {
+            "rank": 114,
+            "start": {
+              "x": 1160.7542098553308,
+              "y": 2267.338272028126,
+              "arc": 0
+            },
+            "distalArc": 7.275270242220048,
+            "proximalArc": 0,
+            "gateObserved": false,
+            "reverseReason": "proximal-gate-beyond-budget",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.36817156495808634,
+              "y": -0.9297578710375695
+            },
+            "measuredStopDirectionDegrees": -111.60289707457247
+          },
+          {
+            "rank": 115,
+            "start": {
+              "x": 1463.1503157646966,
+              "y": 2225.17049355571,
+              "arc": 0
+            },
+            "distalArc": 1.5765921268964753,
+            "proximalArc": 2.5705309653285235,
+            "gateObserved": false,
+            "reverseReason": "one-sided-edge",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.5118089272627225,
+              "y": -0.8590993085634403
+            },
+            "measuredStopDirectionDegrees": -120.78439676878021
+          },
+          {
+            "rank": 118,
+            "start": {
+              "x": 1329.6138183569444,
+              "y": 2220.605976693918,
+              "arc": 0
+            },
+            "distalArc": 2.0531596542247805,
+            "proximalArc": 33.43777784476041,
+            "gateObserved": false,
+            "reverseReason": "arc-budget",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [
+              "right-3"
+            ],
+            "proximalPointRegions": [
+              "right-3"
+            ],
+            "stopRegions": [
+              "right-3"
+            ],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": 0.43372524458195905,
+              "y": -0.9010451776755257
+            },
+            "measuredStopDirectionDegrees": -64.29579308389522
+          },
+          {
+            "rank": 119,
+            "start": {
+              "x": 1362.729803622412,
+              "y": 2210.033630528155,
+              "arc": 0
+            },
+            "distalArc": 1.6204999433926668,
+            "proximalArc": 1.5088153096563879,
+            "gateObserved": false,
+            "reverseReason": "one-sided-edge",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": 0.4910168590086574,
+              "y": -0.8711500698325589
+            },
+            "measuredStopDirectionDegrees": -60.59256129933546
+          },
+          {
+            "rank": 120,
+            "start": {
+              "x": 1145.0655469342078,
+              "y": 2277.394815530206,
+              "arc": 0
+            },
+            "distalArc": 1.5360028106026833,
+            "proximalArc": 1.5516502333348958,
+            "gateObserved": false,
+            "reverseReason": "one-sided-edge",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.7944461983323295,
+              "y": -0.6073345354541506
+            },
+            "measuredStopDirectionDegrees": -142.60297893971423
+          }
+        ]
+      }
+    },
+    "webkit": {
+      "left": {
+        "seeds": 476,
+        "overBudgetSeeds": 348,
+        "baselineTips": 16,
+        "observedDistalRecords": 1,
+        "uniqueDistalStarts": 1,
+        "reverseReasons": {
+          "proximal-gate-beyond-budget": 1
+        },
+        "observedEndingStatuses": {
+          "censored": 1
+        },
+        "gateObserved": 0,
+        "accepted": 0,
+        "allObservedRegionIds": [],
+        "witnesses": [
+          {
+            "rank": 32,
+            "start": {
+              "x": 2348.2112489095844,
+              "y": 1988.6022313685712,
+              "arc": 0
+            },
+            "distalArc": 1.62520219331389,
+            "proximalArc": 0,
+            "gateObserved": false,
+            "reverseReason": "proximal-gate-beyond-budget",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": 0.440059941803819,
+              "y": -0.8979684001230887
+            },
+            "measuredStopDirectionDegrees": -63.89229427795947
+          }
+        ]
+      },
+      "right": {
+        "seeds": 616,
+        "overBudgetSeeds": 488,
+        "baselineTips": 22,
+        "observedDistalRecords": 6,
+        "uniqueDistalStarts": 3,
+        "reverseReasons": {
+          "proximal-gate-beyond-budget": 6
+        },
+        "observedEndingStatuses": {
+          "censored": 6
+        },
+        "gateObserved": 0,
+        "accepted": 0,
+        "allObservedRegionIds": [],
+        "witnesses": [
+          {
+            "rank": 24,
+            "start": {
+              "x": 1395.2277918847903,
+              "y": 2147.427083838534,
+              "arc": 0
+            },
+            "distalArc": 0.5005573245486735,
+            "proximalArc": 0,
+            "gateObserved": false,
+            "reverseReason": "proximal-gate-beyond-budget",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": 0.19907092688822042,
+              "y": -0.979985084614998
+            },
+            "measuredStopDirectionDegrees": -78.51736536840336
+          },
+          {
+            "rank": 40,
+            "start": {
+              "x": 1395.2277918847903,
+              "y": 2147.427083838534,
+              "arc": 0
+            },
+            "distalArc": 0.5005573245486735,
+            "proximalArc": 0,
+            "gateObserved": false,
+            "reverseReason": "proximal-gate-beyond-budget",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": 0.19907092688822042,
+              "y": -0.979985084614998
+            },
+            "measuredStopDirectionDegrees": -78.51736536840336
+          },
+          {
+            "rank": 45,
+            "start": {
+              "x": 1240.7327534054941,
+              "y": 2177.456551857628,
+              "arc": 0
+            },
+            "distalArc": 0.5022514476656722,
+            "proximalArc": 0,
+            "gateObserved": false,
+            "reverseReason": "proximal-gate-beyond-budget",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.13078250896322982,
+              "y": -0.9914110829263927
+            },
+            "measuredStopDirectionDegrees": -97.51481284362899
+          },
+          {
+            "rank": 59,
+            "start": {
+              "x": 1492.4633709068,
+              "y": 2169.6001265934747,
+              "arc": 0
+            },
+            "distalArc": 2.7243235785567084,
+            "proximalArc": 0,
+            "gateObserved": false,
+            "reverseReason": "proximal-gate-beyond-budget",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": 0.8872168192948661,
+              "y": -0.4613527019106976
+            },
+            "measuredStopDirectionDegrees": -27.474429383357005
+          },
+          {
+            "rank": 75,
+            "start": {
+              "x": 1492.4633709068,
+              "y": 2169.6001265934747,
+              "arc": 0
+            },
+            "distalArc": 2.7243235785567084,
+            "proximalArc": 0,
+            "gateObserved": false,
+            "reverseReason": "proximal-gate-beyond-budget",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": 0.8872168192948661,
+              "y": -0.4613527019106976
+            },
+            "measuredStopDirectionDegrees": -27.474429383357005
+          },
+          {
+            "rank": 120,
+            "start": {
+              "x": 1240.7327534054941,
+              "y": 2177.456551857628,
+              "arc": 0
+            },
+            "distalArc": 0.5022514476656722,
+            "proximalArc": 0,
+            "gateObserved": false,
+            "reverseReason": "proximal-gate-beyond-budget",
+            "endingStatus": "censored",
+            "endingReasons": [
+              "unavailable-or-side-boundary"
+            ],
+            "taperStatus": "ambiguous",
+            "distalPointRegions": [],
+            "proximalPointRegions": [],
+            "stopRegions": [],
+            "stopRegionAndDirection": [],
+            "measuredStopTangent": {
+              "x": -0.13078250896322982,
+              "y": -0.9914110829263927
+            },
+            "measuredStopDirectionDegrees": -97.51481284362899
+          }
+        ]
+      }
+    }
+  }
+}

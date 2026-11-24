@@ -1,0 +1,10 @@
+{
+  "archive": "followup-development-scale-review-20261122.zip",
+  "sha256": "ab071bf2c67a286ce2356b364ce603c811c25625c04481d28ad5325a3b42c2e0",
+  "bytes": 12376,
+  "restoreDirectory": "tests/visual/out",
+  "members": {
+    "spatial-supplement-07-webkit-explicit-01/screening.json": "d8a9caa481477e749f4bad34fdeff7c20312ea8687819f98b679a9c0b15a6941",
+    "spatial-supplement-08-webkit-explicit-01/screening.json": "ad7c93a118ece0a8353ab691a8905fbffd63e9c401a40234114d370a3b823675"
+  }
+}

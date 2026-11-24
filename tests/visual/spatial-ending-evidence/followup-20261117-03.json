@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-17",
+  "restoreDirectory": "tests/visual/out",
+  "policy": "Explicit public-source numeric evidence only; JPEGs and PNGs omitted. Source snapshots are for review, not automatic overwrite.",
+  "archive": "followup-20261117-03.zip",
+  "bytes": 123954,
+  "sha256": "a2525a02e5543c6c764a62c8f8bf8cf156ae3544623a05fd9b93ff4d1a9c7b70",
+  "members": [
+    {
+      "path": "resolved-coverage-14297936-01.json",
+      "bytes": 23511,
+      "sha256": "a7746ac7975e20c152e5962a505b67e046ef60e7706a62f153b27475ead581a3"
+    },
+    {
+      "path": "resolved-coverage-14297936-02.json",
+      "bytes": 25561,
+      "sha256": "9b27fdf172d897a86a4680e5e2c670a9470df2b827b558deabd92802dbbb00c0"
+    },
+    {
+      "path": "resolved-coverage-unit-sequential-01.txt",
+      "bytes": 27112,
+      "sha256": "dc0172359a6121d3157ba3f1684612511f977b045788bbe36b1029e8377bf459"
+    },
+    {
+      "path": "resolved-edges-14297936-replay-01.json",
+      "bytes": 2024292,
+      "sha256": "5ee55f0f1e1200d14af54ad2e80afd62d80ae98807e7d26dcd9aa82e66c6002c"
+    },
+    {
+      "path": "source-snapshots/package.json",
+      "bytes": 1864,
+      "sha256": "163c212c4158ad37ee94237d3aa068f391b8399004cb83d1794b42da33e9281c"
+    },
+    {
+      "path": "source-snapshots/scripts/package-lash-followup-evidence.py",
+      "bytes": 9985,
+      "sha256": "684ceee15caaf111863db253399e01e5d6de5e88fc19e819e2cebf161d934e88"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-label-coverage.mjs",
+      "bytes": 3970,
+      "sha256": "9f90e32a924aefa8cc3c6b9680adf426cd1ae16f37b66428f41475fe56762951"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-label-window.mjs",
+      "bytes": 1295,
+      "sha256": "9730f86803ac692071a1c4ac0a423198e37ea7e66559c4e40a3ddb8efffb9d43"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-label-window.test.mjs",
+      "bytes": 1207,
+      "sha256": "aa3c44f7b66fa400dd28e4caf809cbd50806c2e14d8aaf720a5cb898a85d0fce"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-resolved-edges-replay.cjs",
+      "bytes": 1439,
+      "sha256": "cdfd6b1d7628a603b8ab9aba78c516faea2886677b7003f4c12b117ed82598e8"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-resolved-edges.mjs",
+      "bytes": 3655,
+      "sha256": "4fee3235a98c1aae76b205fed486b04cacffdee7d8989e8386671b1c3bfa7076"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-match.mjs",
+      "bytes": 1717,
+      "sha256": "80f2cf178db0c5ea9591b7ebe1a018a7b61b7a6f6ee4404cc64db3ff06fa44df"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-original-labels-01.freeze.json",
+      "bytes": 344,
+      "sha256": "94bebf8c481c35619e8c2a569d4c1fb3cd40eacc20ec4e2e990a5c0fa507da89"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-original-labels-01.json",
+      "bytes": 8810,
+      "sha256": "4d23df2501e30e27aaa5d1bb01f02231b8c62636ca09d465471adfecd1f6ed74"
+    },
+    {
+      "path": "source-snapshots/tests/visual/spatial-ending-evidence/manifest.json",
+      "bytes": 124506,
+      "sha256": "9db9bec25d2550ee8631edc38a205aefca8c31520c9df96804292fbf5fa08861"
+    }
+  ],
+  "omitted": []
+}

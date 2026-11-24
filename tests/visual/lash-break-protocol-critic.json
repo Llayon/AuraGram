@@ -1,0 +1,67 @@
+{
+  "schema": "auragram-independent-break-protocol-critic-v1",
+  "decision": "Appropriate read-only explanatory census if equivalence and scope restrictions hold. No detector fix, new eligible candidate or Length adoption. HOLD.",
+  "scope": "Frozen protocol and prepare helper reviewed before new census data. Instrumentation/census implementation not present at review and therefore not code-verified here. No browser/image inference, protocol/label/product edit.",
+  "references": [
+    {
+      "path": "tests/visual/lash-break-protocol.json",
+      "sha256": "19d3a58b29d4c7a94ff7d0783815b5c6b37a5a454f45b904ac2766aebf131280"
+    },
+    {
+      "path": "tests/visual/lash-break-prepare.cjs",
+      "sha256": "977467973fbe7786895bb5f9a2cb7452ea640541db052311a3403b51aff00746"
+    }
+  ],
+  "frozenProtocolSHA": "19d3a58b29d4c7a94ff7d0783815b5c6b37a5a454f45b904ac2766aebf131280",
+  "strengths": [
+    "Same frozen V1/V3 C/W Float32 inputs and exposed annotations, with no blind benchmark claim.",
+    "Hidden feature/edge instrumentation must preserve original arrays, traces and diagnostics.",
+    "All co-occurring gate failures retained; counts are not mutually exclusive or semantic error rates.",
+    "Automatic-root BFS route and representative/display ordering fixed before data; manual labels are posthoc destinations, never detector seeds.",
+    "NMS contributor audit is diagnostic only, no gap filling or hypothetical acceptance."
+  ],
+  "implementationCautions": [
+    {
+      "id": "BREAK-C1",
+      "issue": "A whole loose-root-connected active component necessarily contains an automatic root that is already strictly visited.",
+      "requirement": "Define the phrase loose-connected but strictly-unreached component precisely: components of active AND loose AND NOT strict, or active components containing unreached vertices. Report which subset is used; do not imply a whole loose component lacks all strict vertices."
+    },
+    {
+      "id": "BREAK-C2",
+      "issue": "Original prototype queue is reused and overwritten by each reverse root census after strict BFS.",
+      "requirement": "Capture/reconstruct deterministic root-BFS routes and ordering before reuse. Final queue contents are not original strict-root BFS traversal. Original parent/visited arrays may be stable, but verify rather than infer queue meaning."
+    },
+    {
+      "id": "BREAK-C3",
+      "issue": "First failing edge on one undirected shortest root route is a route-specific witness, not a unique graph cut or first physical hair break.",
+      "requirement": "Keep every co-occurring failed gate and state that another route may fail elsewhere. A first-gate frequency is not causal percentage or evidence changing that gate restores full route/real ownership."
+    },
+    {
+      "id": "BREAK-C4",
+      "issue": "Raw-directed vs pruned-directed reach attribution requires identical masks, geometry, dimensions and root set.",
+      "requirement": "Compare within the same version before interpreting pruning contribution. Across-version NMS/root-mask changes remain separately controlled by prior07 mask proof."
+    },
+    {
+      "id": "BREAK-C5",
+      "issue": "Posthoc nearest active sample may belong to another shaft or skin texture; ties and native working footprint matter.",
+      "requirement": "Use deterministic pixel-index tie handling or record exact ties. Keep engineering uncertainty and source patch visible. Do not interpret association as confirmed same hair or feed its coordinate/direction into detector."
+    },
+    {
+      "id": "BREAK-C6",
+      "issue": "First removed V1 route pixel can be the initial root itself, not an internal connecting sample.",
+      "requirement": "Distinguish root removal from intermediate vertex deletion and include bilinear contributors/active/orientation data. Neither is an invented image gap or proof preserving that pixel safely recovers a lash."
+    },
+    {
+      "id": "BREAK-C7",
+      "issue": "Exact in-memory source instrumentation is vulnerable to silent anchor mismatch or diagnostic side effects.",
+      "requirement": "Assert exact occurrence counts of version-specific anchors, retain original source hash, compare integer masks/parent/structure exactly and float arrays under stated1e-9 only where necessary. Diagnostic routes must not change detector arrays, graph eligibility or returned traces."
+    }
+  ],
+  "interpretationLimits": [
+    "Observed 8-connectivity can cross fibers/noise; graph root reach is not biological attachment.",
+    "Frontier counts depend on sampled grid, seed neighborhood and available reachable graph, not exhaustive image strands.",
+    "Instrumentation/object/route storage cost is offline; do not reuse typed-array memory figures as total runtime/process bounds.",
+    "No root route or support threshold boundary qualifies as a physical free tip or approved Length."
+  ],
+  "laterVisualReview": "Inspect unchanged original patches with all automatic components/frontiers, fixed representative routes and first removed pixels; retain white-liner/hair/opening negatives and unfavorable V1/V3 results."
+}

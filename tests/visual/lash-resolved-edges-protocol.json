@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-17",
+  "stage": "mechanism-feasibility-before-real-photo-evaluation",
+  "hypothesis": "A resolved taper must shrink both lateral intensity-profile edges after local contrast normalization; a constant-width contrast fade must not supply taper evidence.",
+  "levels": [0.25, 0.5],
+  "minimumContrast": 0.024,
+  "observationFloor": 0.006,
+  "minimumResolvedRows": 3,
+  "minimumWidthReductionPixels": 0.5,
+  "maximumFinalWidthRatio": 0.5,
+  "policy": "Parameters fixed before mechanism execution. No threshold lowering, alternate directions, seeds or annotation inputs. Source unavailable/boundary evidence refuses. Taper evidence alone is not terminal or ownership proof. Pixel-identical causes must receive identical decisions. No production imports or Length adapter.",
+  "stopCondition": "Reject this operator if pure amplitude fade yields resolved taper evidence, or if distinguishable taper cannot be measured on controlled supported profiles. Any revision is separately recorded before evaluation."
+}

@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-13",
+  "status": "original-only-source-leads",
+  "license": "https://www.pexels.com/license/",
+  "policy": "Supplementary development-only acquisition after first batch insufficient. No detector outputs viewed. Same people must be grouped; do not transfer these sources into validation.",
+  "sources": [
+    {
+      "id": "24735911",
+      "file": "pexels-24735911.jpg",
+      "page": "https://www.pexels.com/photo/woman-with-freckles-on-face-24735911/",
+      "url": "https://images.pexels.com/photos/24735911/pexels-photo-24735911.jpeg?cs=srgb&fm=jpg",
+      "author": "ahmed akeri",
+      "split": "development",
+      "role": "unqualified-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "13673830",
+      "file": "pexels-13673830.jpg",
+      "page": "https://www.pexels.com/photo/womans-face-with-black-hair-13673830/",
+      "url": "https://images.pexels.com/photos/13673830/pexels-photo-13673830.jpeg?cs=srgb&fm=jpg",
+      "author": null,
+      "split": "development",
+      "role": "unqualified-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "2212718",
+      "file": "pexels-2212718.jpg",
+      "page": "https://www.pexels.com/photo/portrait-of-woman-wearing-teal-eyelashes-2212718/",
+      "url": "https://images.pexels.com/photos/2212718/pexels-photo-2212718.jpeg?cs=srgb&fm=jpg",
+      "author": null,
+      "split": "development",
+      "role": "unqualified-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "3762757",
+      "file": "pexels-3762757.jpg",
+      "page": "https://www.pexels.com/photo/woman-applying-black-mascara-3762757/",
+      "url": "https://images.pexels.com/photos/3762757/pexels-photo-3762757.jpeg?cs=srgb&fm=jpg",
+      "author": "Shiny Diamond",
+      "split": "development",
+      "role": "unqualified-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "8990738",
+      "file": "pexels-8990738.jpg",
+      "page": "https://www.pexels.com/photo/woman-applying-mascara-on-her-lashes-8990738/",
+      "url": "https://images.pexels.com/photos/8990738/pexels-photo-8990738.jpeg?cs=srgb&fm=jpg",
+      "author": "Alena Darmel",
+      "split": "development",
+      "role": "unqualified-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "5240254",
+      "file": "pexels-5240254.jpg",
+      "page": "https://www.pexels.com/photo/woman-applying-mascara-5240254/",
+      "url": "https://images.pexels.com/photos/5240254/pexels-photo-5240254.jpeg?cs=srgb&fm=jpg",
+      "author": "kaboompics.com",
+      "split": "development",
+      "role": "unqualified-lead",
+      "identityGroup": null
+    }
+  ]
+}

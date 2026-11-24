@@ -1,0 +1,637 @@
+{
+  "schema": "auragram-original-only-independent-screening-v1",
+  "stage": "freeend-five-new-sources",
+  "role": "independent engineering annotation, not human-certified ground truth",
+  "exposureDisclosure": "Prior AuraGram algorithms and earlier different-source studies are known. These five sources were first viewed during this original-only stage. Only provenance, download/native-view manifests, original contact/native crops/tiles and original-only added context were read. No detector output, algorithm source, primary labels, model inference or browser execution was read/run for this stage. Unsuccessful batch image delivery was re-viewed in smaller original-only calls.",
+  "coordinateConvention": {
+    "unit": "decoded source native pixels",
+    "points": "x,y in labelCoordinateFrame crop, origin at top-left; source point = crop sourceRect origin + point; y increases down",
+    "uncertainty": "engineering positional radius, not calibrated probability; shaft points ordered from tip toward proximal shaft",
+    "regions": "rectangles use same labelCoordinateFrame; contextual non-target/ambiguous references only, not pixel absence masks"
+  },
+  "restrictions": [
+    "Do not use these labels as algorithm seeds, tracing directions or fit constraints.",
+    "No FaceMesh or full-face eligibility result is known; all are UNTESTED.",
+    "No biological naturalness, coating or makeup history inferred from title.",
+    "No exact terminal derivative, root connection or exhaustive recall/absence claim."
+  ],
+  "sources": [
+    {
+      "file": "commons-radic-eyelashes.jpg",
+      "sha256": "5cc74becc6992830b32e1ba49edff8217ecdad5b3b90d5888cf81e5c193c8e69",
+      "dimensions": [
+        3688,
+        2459
+      ],
+      "provenancePage": "https://commons.wikimedia.org/wiki/File:Close-up_of_human_eyelashes.jpg",
+      "license": "https://creativecommons.org/licenses/by/2.0/"
+    },
+    {
+      "file": "pexels-22032198.jpg",
+      "sha256": "0bc6265b86e5354f3b13db63ea67b11a832206a4d924b81cb57dea7c11ebaaa1",
+      "dimensions": [
+        5660,
+        3698
+      ],
+      "provenancePage": "https://www.pexels.com/photo/brown-eye-of-a-man-22032198/",
+      "license": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "pexels-31215869.jpg",
+      "sha256": "cbed3fd127d9b7998772ffd95af6073f35ce465d7aefc5d1b81451635712a197",
+      "dimensions": [
+        3024,
+        4032
+      ],
+      "provenancePage": "https://www.pexels.com/photo/close-up-of-a-human-eye-with-natural-eyelashes-31215869/",
+      "license": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "pexels-32526448.jpg",
+      "sha256": "cc97727d9f549a1bf1354b5ae016c3472ecadd26f16bfe23ba329435d29eb0e3",
+      "dimensions": [
+        4240,
+        2384
+      ],
+      "provenancePage": "https://www.pexels.com/photo/intense-portrait-of-man-with-freckles-and-dark-eyes-32526448/",
+      "license": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "pexels-4611686.jpg",
+      "sha256": "85ffae39a492e774c76080065e11fa4cb3823a8b3539fd2daf6a38847f159364",
+      "dimensions": [
+        6240,
+        4160
+      ],
+      "provenancePage": "https://www.pexels.com/photo/young-man-s-face-in-close-up-photography-4611686/",
+      "license": "https://www.pexels.com/license/"
+    }
+  ],
+  "views": [
+    {
+      "source": "commons-radic-eyelashes.jpg",
+      "view": "commons-radic-eyelashes-visible-lid",
+      "crop": {
+        "path": "tests/visual/out/freeend-03-native/commons-radic-eyelashes-visible-lid.png",
+        "sourceRectXYWH": [
+          500,
+          850,
+          2700,
+          1450
+        ],
+        "sha256": "cb7035a6f1691e31ce01624c85a5214d451fb20342088ce30f782d753ac8c30b",
+        "nativeUnresized": true
+      },
+      "faceMeshStatus": "UNTESTED",
+      "status": "OUT_OF_UPPER_SCOPE",
+      "assessment": "Contact shows iris above visible lid: these are lower lashes. Some shafts are sharp, other endings defocused; no upper-lash positive inferred.",
+      "labelCoordinateFrame": {
+        "path": "tests/visual/out/freeend-03-native/commons-radic-eyelashes-visible-lid.png",
+        "sourceRectXYWH": [
+          500,
+          850,
+          2700,
+          1450
+        ],
+        "sha256": "cb7035a6f1691e31ce01624c85a5214d451fb20342088ce30f782d753ac8c30b",
+        "nativeUnresized": true
+      },
+      "labels": [],
+      "regionsNotForEndpointScoring": [
+        {
+          "rectNativeXYWH": [
+            0,
+            0,
+            2700,
+            1450
+          ],
+          "kind": "lower_lashes_out_of_scope",
+          "notPixelNegativeGroundTruth": true
+        }
+      ]
+    },
+    {
+      "source": "pexels-22032198.jpg",
+      "view": "pexels-22032198-visible-eye",
+      "crop": {
+        "path": "tests/visual/out/freeend-03-native/pexels-22032198-visible-eye.png",
+        "sourceRectXYWH": [
+          1100,
+          1250,
+          3700,
+          1500
+        ],
+        "sha256": "1049d74bdebc1151113137aa38edc1be84e42bbecc5ca5fc7609a81ee7d5405a",
+        "nativeUnresized": true
+      },
+      "faceMeshStatus": "UNTESTED",
+      "status": "UPPER_ENDINGS_UNRESOLVED_IN_REVIEWED_REGIONS",
+      "assessment": "Central upper lashes are defocused over iris; external fan has crossing and focus changes. Reviewed center and outer native tiles, not every source hair. Many crisp lower lashes are not substitutes for upper labels.",
+      "labelCoordinateFrame": {
+        "path": "tests/visual/out/freeend-03-native/pexels-22032198-visible-eye.png",
+        "sourceRectXYWH": [
+          1100,
+          1250,
+          3700,
+          1500
+        ],
+        "sha256": "1049d74bdebc1151113137aa38edc1be84e42bbecc5ca5fc7609a81ee7d5405a",
+        "nativeUnresized": true
+      },
+      "labels": [],
+      "regionsNotForEndpointScoring": [
+        {
+          "rectNativeXYWH": [
+            2240,
+            0,
+            640,
+            640
+          ],
+          "kind": "defocused_upper_band",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            3060,
+            560,
+            640,
+            640
+          ],
+          "kind": "upper_lower_fan_overlap",
+          "notPixelNegativeGroundTruth": true
+        }
+      ]
+    },
+    {
+      "source": "pexels-31215869.jpg",
+      "view": "pexels-31215869-side-eye",
+      "crop": {
+        "path": "tests/visual/out/freeend-03-native/pexels-31215869-side-eye.png",
+        "sourceRectXYWH": [
+          450,
+          1700,
+          2350,
+          1150
+        ],
+        "sha256": "3bfd88ca757d804b879e6b4553fc3ecea977f6591a10dfdccfa9a7c0b6a4a7dc",
+        "nativeUnresized": true
+      },
+      "faceMeshStatus": "UNTESTED",
+      "status": "SPARSE_UPPER_ENDINGS_RESOLVABLE_WITH_ADDITIONAL_CONTEXT",
+      "assessment": "Native extra context contains separated outside upper-fan endings. Upper-root band merges and multiple shafts cross. Thick/dark appearance does not certify bare biology, coating, or extensions.",
+      "labelCoordinateFrame": {
+        "path": "tests/visual/out/freeend-04-additional/pexels-31215869-upper-outside.png",
+        "sourceRectXYWH": [
+          1600,
+          1200,
+          1250,
+          900
+        ],
+        "sha256": "558e882a40db7ac072afb096bda91c4f28e52bdc94f82821725a3af19947e8f5",
+        "nativeUnresized": true
+      },
+      "labels": [
+        {
+          "id": "F312-U1",
+          "tipNative": [
+            672,
+            315
+          ],
+          "proximalShaftNative": [
+            [
+              665,
+              330
+            ],
+            [
+              657,
+              341
+            ],
+            [
+              648,
+              352
+            ]
+          ],
+          "tipUncertaintyNativePx": 3,
+          "shaftUncertaintyNativePx": 2.5,
+          "status": "provisional_visible_upper_ending",
+          "rootVisibility": "merged; not annotated",
+          "limitations": "Dark, relatively thick ending; local path only. Nearby parallel strand and coating history unknown."
+        },
+        {
+          "id": "F312-U2",
+          "tipNative": [
+            637,
+            333
+          ],
+          "proximalShaftNative": [
+            [
+              630,
+              342
+            ],
+            [
+              623,
+              351
+            ],
+            [
+              615,
+              360
+            ]
+          ],
+          "tipUncertaintyNativePx": 3,
+          "shaftUncertaintyNativePx": 2.5,
+          "status": "provisional_visible_upper_ending",
+          "rootVisibility": "merged; not annotated",
+          "limitations": "Separate nearby upper ending, distal segment distinguishable before merge; local axis not instantaneous derivative."
+        },
+        {
+          "id": "F312-U3",
+          "tipNative": [
+            825,
+            417
+          ],
+          "proximalShaftNative": [
+            [
+              816,
+              423
+            ],
+            [
+              806,
+              429
+            ],
+            [
+              797,
+              435
+            ]
+          ],
+          "tipUncertaintyNativePx": 3.5,
+          "shaftUncertaintyNativePx": 2.5,
+          "status": "provisional_visible_upper_ending",
+          "rootVisibility": "merged; not annotated",
+          "limitations": "Outside nearly oblique ending; avoid adjacent short branch below. Root is not individually separable."
+        }
+      ],
+      "regionsNotForEndpointScoring": [
+        {
+          "rectNativeXYWH": [
+            100,
+            450,
+            350,
+            180
+          ],
+          "kind": "merged_upper_root_band",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            100,
+            100,
+            250,
+            180
+          ],
+          "kind": "skin_texture_background_reference",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            700,
+            320,
+            90,
+            90
+          ],
+          "kind": "nearby_fork_overlap_ambiguous",
+          "notPixelNegativeGroundTruth": true
+        }
+      ]
+    },
+    {
+      "source": "pexels-32526448.jpg",
+      "view": "pexels-32526448-screen-left",
+      "crop": {
+        "path": "tests/visual/out/freeend-03-native/pexels-32526448-screen-left.png",
+        "sourceRectXYWH": [
+          1150,
+          420,
+          900,
+          700
+        ],
+        "sha256": "5c5a2f6b5e5ae11dc34a78f8f611691a34c671459ae985c499dd4ebc8b253b9b",
+        "nativeUnresized": true
+      },
+      "faceMeshStatus": "UNTESTED",
+      "status": "SPARSE_UPPER_ENDINGS_PROVISIONAL",
+      "assessment": "Upper hairs descend over sclera. Selected two locally separated endings, not prominent lower row. Image appears strongly detailed; sharpening/history unknown.",
+      "labelCoordinateFrame": {
+        "path": "tests/visual/out/freeend-03-native/pexels-32526448-screen-left.png",
+        "sourceRectXYWH": [
+          1150,
+          420,
+          900,
+          700
+        ],
+        "sha256": "5c5a2f6b5e5ae11dc34a78f8f611691a34c671459ae985c499dd4ebc8b253b9b",
+        "nativeUnresized": true
+      },
+      "labels": [
+        {
+          "id": "F325-L1",
+          "tipNative": [
+            557,
+            185
+          ],
+          "proximalShaftNative": [
+            [
+              555,
+              176
+            ],
+            [
+              554,
+              167
+            ],
+            [
+              555,
+              157
+            ]
+          ],
+          "tipUncertaintyNativePx": 2.5,
+          "shaftUncertaintyNativePx": 2.5,
+          "status": "provisional_visible_upper_ending",
+          "rootVisibility": "merged; not annotated",
+          "limitations": "Upper-lash downward ending over pale sclera; darker neighboring shafts merge proximally."
+        },
+        {
+          "id": "F325-L2",
+          "tipNative": [
+            542,
+            171
+          ],
+          "proximalShaftNative": [
+            [
+              542,
+              162
+            ],
+            [
+              543,
+              153
+            ],
+            [
+              541,
+              144
+            ]
+          ],
+          "tipUncertaintyNativePx": 3,
+          "shaftUncertaintyNativePx": 2.5,
+          "status": "provisional_visible_upper_ending",
+          "rootVisibility": "merged; not annotated",
+          "limitations": "Short adjacent upper ending; nearby crossings limit same-fiber certainty farther proximal."
+        }
+      ],
+      "regionsNotForEndpointScoring": [
+        {
+          "rectNativeXYWH": [
+            180,
+            225,
+            500,
+            110
+          ],
+          "kind": "lower_lashes_out_of_scope",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            575,
+            210,
+            85,
+            50
+          ],
+          "kind": "sclera_corner_and_skin_boundary",
+          "notPixelNegativeGroundTruth": true
+        }
+      ]
+    },
+    {
+      "source": "pexels-32526448.jpg",
+      "view": "pexels-32526448-screen-right",
+      "crop": {
+        "path": "tests/visual/out/freeend-03-native/pexels-32526448-screen-right.png",
+        "sourceRectXYWH": [
+          2200,
+          530,
+          800,
+          650
+        ],
+        "sha256": "3c74c92f7ba713a9cbed22b36c7fa24c931993b87e9d06f267d7467618087617",
+        "nativeUnresized": true
+      },
+      "faceMeshStatus": "UNTESTED",
+      "status": "NO_CONFIDENT_UPPER_ENDPOINT_LABEL",
+      "assessment": "Upper external fan is softer and projected against dark lid; individual free endings not reliably localized in this screening. Lower lashes are clearer.",
+      "labelCoordinateFrame": {
+        "path": "tests/visual/out/freeend-03-native/pexels-32526448-screen-right.png",
+        "sourceRectXYWH": [
+          2200,
+          530,
+          800,
+          650
+        ],
+        "sha256": "3c74c92f7ba713a9cbed22b36c7fa24c931993b87e9d06f267d7467618087617",
+        "nativeUnresized": true
+      },
+      "labels": [],
+      "regionsNotForEndpointScoring": [
+        {
+          "rectNativeXYWH": [
+            470,
+            70,
+            180,
+            120
+          ],
+          "kind": "soft_upper_overlap",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            300,
+            215,
+            300,
+            110
+          ],
+          "kind": "lower_lashes_out_of_scope",
+          "notPixelNegativeGroundTruth": true
+        }
+      ]
+    },
+    {
+      "source": "pexels-4611686.jpg",
+      "view": "pexels-4611686-screen-left",
+      "crop": {
+        "path": "tests/visual/out/freeend-03-native/pexels-4611686-screen-left.png",
+        "sourceRectXYWH": [
+          2600,
+          750,
+          1250,
+          800
+        ],
+        "sha256": "30eab261e637b84173768c94c90e520a2fd2720a98fc18543f0b7d02d722c444",
+        "nativeUnresized": true
+      },
+      "faceMeshStatus": "UNTESTED",
+      "status": "ONE_PROVISIONAL_UPPER_ENDING_WITH_OVERLAP_LIMIT",
+      "assessment": "Downward-looking eye: upper row projects over lower row. One locally curled upper ending selected; nearby long thin downward hairs may merge with or belong to lower lashes and remain unlabelled.",
+      "labelCoordinateFrame": {
+        "path": "tests/visual/out/freeend-03-native/pexels-4611686-screen-left.png",
+        "sourceRectXYWH": [
+          2600,
+          750,
+          1250,
+          800
+        ],
+        "sha256": "30eab261e637b84173768c94c90e520a2fd2720a98fc18543f0b7d02d722c444",
+        "nativeUnresized": true
+      },
+      "labels": [
+        {
+          "id": "F461-L1",
+          "tipNative": [
+            249,
+            359
+          ],
+          "proximalShaftNative": [
+            [
+              242,
+              354
+            ],
+            [
+              239,
+              347
+            ],
+            [
+              237,
+              338
+            ]
+          ],
+          "tipUncertaintyNativePx": 4,
+          "shaftUncertaintyNativePx": 2.5,
+          "status": "provisional_visible_upper_ending",
+          "rootVisibility": "merged; not annotated",
+          "limitations": "Visible local curl from upper fan; neighboring crossings and grain make ownership less certain than F312. Do not treat as certified isolated biological fiber."
+        }
+      ],
+      "regionsNotForEndpointScoring": [
+        {
+          "rectNativeXYWH": [
+            290,
+            320,
+            220,
+            120
+          ],
+          "kind": "crossing_upper_lower_shafts",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            520,
+            400,
+            200,
+            130
+          ],
+          "kind": "lower_lashes_out_of_scope",
+          "notPixelNegativeGroundTruth": true
+        },
+        {
+          "rectNativeXYWH": [
+            750,
+            100,
+            200,
+            90
+          ],
+          "kind": "skin_background_reference",
+          "notPixelNegativeGroundTruth": true
+        }
+      ]
+    },
+    {
+      "source": "pexels-4611686.jpg",
+      "view": "pexels-4611686-screen-right",
+      "crop": {
+        "path": "tests/visual/out/freeend-03-native/pexels-4611686-screen-right.png",
+        "sourceRectXYWH": [
+          3900,
+          900,
+          1100,
+          800
+        ],
+        "sha256": "838ca191ca9e7937dc0d8e7ba008e238d40c2b7102b6a6946ca90ddf8ca4730a",
+        "nativeUnresized": true
+      },
+      "faceMeshStatus": "UNTESTED",
+      "status": "NO_CONFIDENT_UPPER_ENDPOINT_LABEL",
+      "assessment": "Much softer near eye with merged upper fan and shallow focus. No reliable endpoint/local shaft pair assigned.",
+      "labelCoordinateFrame": {
+        "path": "tests/visual/out/freeend-03-native/pexels-4611686-screen-right.png",
+        "sourceRectXYWH": [
+          3900,
+          900,
+          1100,
+          800
+        ],
+        "sha256": "838ca191ca9e7937dc0d8e7ba008e238d40c2b7102b6a6946ca90ddf8ca4730a",
+        "nativeUnresized": true
+      },
+      "labels": [],
+      "regionsNotForEndpointScoring": [
+        {
+          "rectNativeXYWH": [
+            450,
+            170,
+            380,
+            200
+          ],
+          "kind": "defocused_upper_fan",
+          "notPixelNegativeGroundTruth": true
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "sourceCount": 5,
+    "nativeViewCount": 7,
+    "labelCount": 6,
+    "positiveViewCount": 3,
+    "qualityCaution": "Six sparse provisional labels in three views, with especially uncertain overlapping F461. No forced lower-lash positives. Source resolution does not guarantee useful full-face/MediaPipe eligibility."
+  },
+  "originalOnlyZoomViews": [
+    {
+      "path": "tests/visual/out/freeend-independent/pexels-32526448-screen-left-zoom.png",
+      "parentCropRectXYXY": [
+        450,
+        100,
+        600,
+        220
+      ],
+      "scale": 3,
+      "resampling": "nearest; no new detail"
+    },
+    {
+      "path": "tests/visual/out/freeend-independent/pexels-4611686-screen-left-zoom.png",
+      "parentCropRectXYXY": [
+        180,
+        280,
+        350,
+        440
+      ],
+      "scale": 3,
+      "resampling": "nearest; no new detail"
+    },
+    {
+      "path": "tests/visual/out/freeend-independent/pexels-31215869-upper-outside-zoom.png",
+      "parentCropRectXYXY": [
+        580,
+        290,
+        850,
+        460
+      ],
+      "scale": 3,
+      "resampling": "nearest; no new detail"
+    }
+  ]
+}

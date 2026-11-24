@@ -1,0 +1,37 @@
+[
+  {
+    "file": "loss-04-unit.txt",
+    "sha256": "072b9a237edb28318ed704bb1b8b10bd3a9ed1b8bdf9ca364ed73e1e08121a58",
+    "rawSHA256": "9d5e50bee678f7472a840005cd2008fe8977c7efc5552d3b0253aa6f490a3b56"
+  },
+  {
+    "file": "loss-05-browser.txt",
+    "sha256": "3eba43da5d81294f911a2e1ac9c8b5b66a6fe6f803e84bbe59f93b8e70eaf239",
+    "rawSHA256": "cd2058c68eaff4aaa37868028aee7a1814a4b5e3ef3ff1c03e56100c0e8c1126"
+  },
+  {
+    "file": "loss-08-validation.txt",
+    "sha256": "887dd5a423a85196018d926f7808a048b303361887174ce2a90317521bb3e905",
+    "rawSHA256": "e2c018c7861c12693003f8f3c58154685959278a952172b13c2f6a857917c6f9"
+  },
+  {
+    "file": "loss-09-performance.txt",
+    "sha256": "c50859b1cc00091ac2602b32cd478e32a7404788d1ffb9d3ef27e040558078e8",
+    "rawSHA256": "c689b8a73a5736d2f4c1d30773de3d92e5d28d5595fe11149ffd53b57f65031d"
+  },
+  {
+    "file": "loss-10-build.txt",
+    "sha256": "adf7f8cb7cca05ce6118fe9b1c7d301383094e19dec94f64d102f36278d56198",
+    "rawSHA256": "36d779ddf9968ec3d6973b56334f14c79d10685d57f28d37dd8634ee654ee866"
+  },
+  {
+    "file": "loss-11-package.txt",
+    "sha256": "1da1367bfda82453a298c3c07ad6734e491bc79cdc902f03668a77f4f602898d",
+    "rawSHA256": "3fb22edde5bd86e3ae9b0566af91d6fdeb994e7f1fc8c946da3203ad5a549486"
+  },
+  {
+    "file": "loss-12-checksite.txt",
+    "sha256": "b12f43096006624ce89f22f1d34f2cae3080327c6442e8daa562ea5c1f04b459",
+    "rawSHA256": "27d03545dd95ebfbd6180414d90c9554ac0a0a57e33704dcc4412b885c475961"
+  }
+]

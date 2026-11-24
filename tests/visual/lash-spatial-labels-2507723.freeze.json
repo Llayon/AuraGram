@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-22",
+  "purpose": "Source-only provisional regions before any lash detector or scope output.",
+  "sourceSHA256": "a346b8390f6a580f4c4a4bbc01e9f4b375802a84ee81ca0835b81046b1c87260",
+  "inputs": {
+    "tests/visual/lash-spatial-labels-2507723.json": "59b8991577d87cd270f37b8474c44ec8bee1b5b6f012c9320edf05825ab2da2f"
+  }
+}

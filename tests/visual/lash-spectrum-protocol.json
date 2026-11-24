@@ -1,0 +1,26 @@
+{
+  "schema": "auragram-offline-direction-spectrum-v1",
+  "baseline": "630f2d10e25d5d0d5be623f31aee3e0f6aca5341",
+  "meaning": "One bounded hypothesis on already-known frozen cases. Capture all8original responses before winner/Float32 selection. No new photo/model inference, node/root/domain/budget/threshold change or effect rendering. Not blind or physical strand evidence.",
+  "inputs": {
+    "tests/visual/lash-downward.mjs": "4f62a02b3593ee4b8067f0418cb01d3e39663993ea92403de6a67d1ef2a8c3e8",
+    "tests/visual/lash-domain.mjs": "2c7739c290c49052e3d54136e43df059d5c4ae1089359f82d57e4fb1befe005d",
+    "tests/visual/lash-downward-protocol.json": "7ff4778a30cc1d7147c34217dc9f04ed3aaa8ebab993e203e4ed7b1cf2661363",
+    "tests/visual/lash-break-protocol.json": "19d3a58b29d4c7a94ff7d0783815b5c6b37a5a454f45b904ac2766aebf131280",
+    "tests/visual/break-evidence/files.json": "b05fdac805865a3f585bb2ae8c3c41ec0b4e651a2a548c93eb0464be8b0c0b3e",
+    "tests/visual/downward-evidence/files.json": "189c3860c9de312880b63e0c05991acb3483cea3c490d13e87a282ba13350d69",
+    "tests/visual/lash-freeend-independent-labels.json": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800",
+    "tests/visual/lash-freeend2-independent-labels.json": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810"
+  },
+  "corpus": "Same8files/7original photographs,16C-Wsourcecases,32paired eyes/64V1-V3records.",
+  "directionEligibility": "For an EXISTING active pixel only: each raw directional response must independently pass the unchanged response floor, orthogonal anisotropy and inward-normal projection. Preserve original winning mode and Float32 directed vectors. Null/unmeasured response is unavailable, not zero.",
+  "graph": "Expanded(pixel,axis-bin) states; only original8neighbor active pixels, originalautomaticrootpixelset, originaldepth/orientation.85/stepalignment.5 thresholds. Axis state persists through each pixel: no incompatible incoming/outgoing pair teleport. Compare raw-directed baseline; previous pruning reach loss was0. Expanded reach must contain raw-directed reach and remain inside undirected active reach. No new or joined pixel.",
+  "localWitness": "All original active frontier pairs and fixed reference witnesses. Require a consistent four-distinct-pixel observed path before/after the middle edge with the same thresholds and state axes. Enumerate all supported mode pairs and preserve ambiguity counts; a witness is not a free tip or permission for Length.",
+  "selection": "Every active-frontierpair in all cases, not only favorable positives. For plots retain same automatic first3components/nearest-label references from prior census. Labels enter only posthoc. First lexicographic supported state/neighbor witness is displayed; all counts/mode matrices retained.",
+  "acceptance": "No new Length candidate/render unless local physical continuity/end ownership is independently convincing and ambiguity controls remain protected. Restoration on hair/liner/crossing contexts or unverified fiber ownership => REJECT ADOPTION/HOLD, not lower threshold or claim false-positive precision.",
+  "numericTolerance": 1e-9,
+  "display": {
+    "automaticExamplesPerEye": 3,
+    "maxLocalPixelStates": 8
+  }
+}

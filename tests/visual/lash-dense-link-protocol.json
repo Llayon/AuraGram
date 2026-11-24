@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-18",
+  "purpose": "Diagnose every saved unconfirmed-dense-link refusal in the fixed exact-cell development run; not a trace retry",
+  "comparison": "Same original interpolated link points and radii. Compare original segment axis with the already measured prior tangent. Never choose the more favorable response for acceptance.",
+  "floor": 0.006,
+  "candidateReproductionTolerance": 1e-9,
+  "checks": ["Original candidate center, shift and variance reproduce within tolerance", "Original segment link still fails the unchanged observation floor", "Separate start/interior/end failures and transverse deficit versus alongPenalty"],
+  "policy": "No labels, seed replacement, alternative tangent search, gap bridging, threshold change or terminal grant. Preserve all selected records and repeated ranks. Stop diagnosis on source/dependency/reproduction mismatch."
+}

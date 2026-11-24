@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-14",
+  "license": "https://www.pexels.com/license/",
+  "licenseVerified": "2026-11-14",
+  "status": "source-leads-not-qualified",
+  "policy": "Original-only development supplement seeking visible proximal paths. No lash detector before labels. Never transfer viewed development sources into validation. Natural-beauty search tags do not certify makeup absence.",
+  "sources": [
+    {
+      "id": "4456732",
+      "file": "pexels-4456732.jpg",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-a-beautiful-woman-s-face-4456732/",
+      "url": "https://images.pexels.com/photos/4456732/pexels-photo-4456732.jpeg?cs=srgb&fm=jpg",
+      "author": "Nataliya Vaitkevich",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "4672290",
+      "file": "pexels-4672290.jpg",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-a-woman-4672290/",
+      "url": "https://images.pexels.com/photos/4672290/pexels-photo-4672290.jpeg?cs=srgb&fm=jpg",
+      "author": "Anna Shvets",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "7737959",
+      "file": "pexels-7737959.jpg",
+      "page": "https://www.pexels.com/photo/a-close-up-shot-of-a-womans-face-7737959/",
+      "url": "https://images.pexels.com/photos/7737959/pexels-photo-7737959.jpeg?cs=srgb&fm=jpg",
+      "author": null,
+      "metadataStatus": "source-page-503-author-pending",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "16778620",
+      "file": "pexels-16778620.jpg",
+      "page": "https://www.pexels.com/photo/portrait-of-man-16778620/",
+      "url": "https://images.pexels.com/photos/16778620/pexels-photo-16778620.jpeg?cs=srgb&fm=jpg",
+      "author": "Estevam Foto",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "9157920",
+      "file": "pexels-9157920.jpg",
+      "page": "https://www.pexels.com/photo/man-in-gray-shirt-9157920/",
+      "url": "https://images.pexels.com/photos/9157920/pexels-photo-9157920.jpeg?cs=srgb&fm=jpg",
+      "author": "Valeria Boltneva",
+      "metadataStatus": "page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "11396392",
+      "file": "pexels-11396392.jpg",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-man-s-face-11396392/",
+      "url": "https://images.pexels.com/photos/11396392/pexels-photo-11396392.jpeg?cs=srgb&fm=jpg",
+      "author": null,
+      "metadataStatus": "source-page-503-author-pending",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    }
+  ]
+}

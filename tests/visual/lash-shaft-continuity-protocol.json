@@ -1,0 +1,13 @@
+{
+ "baseline":"0bb38cb928bdc6f90ded0af93f87931421439b3b",
+ "shaftProtocolSHA256":"4b5477dca5396bc3c1e986ee2595f817ab7dc4c644ff5479177f199eb85ab514",
+ "meaning":"Exploratory supplement declared after center outputs, before dense/forward measurements. Sample all available automatic fits, no chosen window, manual direction, tip movement, new seed or product effect. This is not blinded validation.",
+ "denseStepNative":0.5,
+ "forwardDistancesNative":{"from":0,"to":12,"step":0.5},
+ "radiiNative":[0.75,1.5],
+ "alongStepNative":1,
+ "observationFloor":0.006,
+ "endpointOffsetsAnalysis":[-2,-1,0,0.5,1,1.5,2,3],
+ "continuityPolicy":"Measure bilateral valley at every <=.5native-pixel sample on consecutive observed-center segments. No recentering, missing-step bridging or partial pass. This is sampled contrast support, not biological same-fiber or 8-connected native skeleton proof.",
+ "forwardPolicy":"Keep the old physical anchor. Probe every available fitted direction with source-pixel kernels; endpoint positions use the mapped analysis step, forward curve uses native pixels. Inherited floor is not calibrated for this operator or a release probability. Report every fit and every missing fit."
+}

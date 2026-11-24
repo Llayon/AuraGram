@@ -1,0 +1,1788 @@
+{
+  "scope": "Previously downloaded development originals only; no final images opened.",
+  "ranking": "Maximum upper-lid polyline length across the two actual FaceMesh engines. 400 px was a triage cutoff for manual source review, not an acceptance threshold or a lower bound for lash length.",
+  "sourceCount": 41,
+  "faceMeshStatusChromiumThenWebKit": {
+    "ready/ready": 28,
+    "no_face/no_face": 12,
+    "ready/no_face": 1
+  },
+  "compactEyesReviewed": 12,
+  "newQualifiedEyes": 0,
+  "eyes": [
+    {
+      "file": "pexels-2507723.jpg",
+      "eye": "right",
+      "worstLidArcPx": 203.7047638920266,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            724,
+            961,
+            257,
+            272
+          ],
+          "upperLidArcPx": 203.7047638920266
+        },
+        "webkit": {
+          "roi": [
+            725,
+            958,
+            253,
+            275
+          ],
+          "upperLidArcPx": 202.47511120408774
+        }
+      },
+      "sourceReview": "Five previously frozen provisional tips; no region fully inside all existing mask checks."
+    },
+    {
+      "file": "pexels-7737959.jpg",
+      "eye": "right",
+      "worstLidArcPx": 217.13893156935836,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            0,
+            1293,
+            283,
+            198
+          ],
+          "upperLidArcPx": 214.90259496840258
+        },
+        "webkit": {
+          "roi": [
+            0,
+            1295,
+            286,
+            185
+          ],
+          "upperLidArcPx": 217.13893156935836
+        }
+      },
+      "sourceReview": "Closed eye, control lead."
+    },
+    {
+      "file": "pexels-8649020.jpg",
+      "eye": "left",
+      "worstLidArcPx": 217.86137118245068,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1839,
+            1579,
+            271,
+            288
+          ],
+          "upperLidArcPx": 217.86137118245068
+        },
+        "webkit": {
+          "roi": [
+            1840,
+            1589,
+            261,
+            273
+          ],
+          "upperLidArcPx": 206.4385582202262
+        }
+      },
+      "sourceReview": "Partly occluded and upper band in shadow."
+    },
+    {
+      "file": "pexels-2507723.jpg",
+      "eye": "left",
+      "worstLidArcPx": 223.7565738817392,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1057,
+            1071,
+            299,
+            265
+          ],
+          "upperLidArcPx": 223.7565738817392
+        },
+        "webkit": {
+          "roi": [
+            1058,
+            1072,
+            298,
+            262
+          ],
+          "upperLidArcPx": 222.964039539307
+        }
+      },
+      "sourceReview": "Fewer than five separable upper tips established."
+    },
+    {
+      "file": "pexels-16778620.jpg",
+      "eye": "right",
+      "worstLidArcPx": 285.27815721370763,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1120,
+            1517,
+            407,
+            294
+          ],
+          "upperLidArcPx": 284.44751403074105
+        },
+        "webkit": {
+          "roi": [
+            1120,
+            1516,
+            407,
+            296
+          ],
+          "upperLidArcPx": 285.27815721370763
+        }
+      },
+      "sourceReview": "Soft dark upper band, five separable endings not established."
+    },
+    {
+      "file": "pexels-8649020.jpg",
+      "eye": "right",
+      "worstLidArcPx": 287.7211331908661,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1345,
+            1638,
+            380,
+            346
+          ],
+          "upperLidArcPx": 287.7211331908661
+        },
+        "webkit": {
+          "roi": [
+            1342,
+            1646,
+            374,
+            328
+          ],
+          "upperLidArcPx": 278.4973669198738
+        }
+      },
+      "sourceReview": "Dark upper band and visible structures projecting toward the sclera; no five distinct outward tips established."
+    },
+    {
+      "file": "pexels-16778620.jpg",
+      "eye": "left",
+      "worstLidArcPx": 295.5492614565412,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1666,
+            1545,
+            430,
+            286
+          ],
+          "upperLidArcPx": 295.5492614565412
+        },
+        "webkit": {
+          "roi": [
+            1666,
+            1541,
+            427,
+            291
+          ],
+          "upperLidArcPx": 294.59306888359936
+        }
+      },
+      "sourceReview": "Soft upper lash line, five separable endings not established."
+    },
+    {
+      "file": "pexels-8990738.jpg",
+      "eye": "right",
+      "worstLidArcPx": 340.2207144361067,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            976,
+            546,
+            381,
+            701
+          ],
+          "upperLidArcPx": 340.2207144361067
+        },
+        "webkit": {
+          "roi": [
+            977,
+            549,
+            379,
+            698
+          ],
+          "upperLidArcPx": 338.40472935499145
+        }
+      },
+      "sourceReview": "Downcast near-closed eye and mascara contact."
+    },
+    {
+      "file": "pexels-7737959.jpg",
+      "eye": "left",
+      "worstLidArcPx": 380.08138917316245,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            440,
+            1274,
+            613,
+            224
+          ],
+          "upperLidArcPx": 380.08138917316245
+        },
+        "webkit": {
+          "roi": [
+            444,
+            1272,
+            611,
+            221
+          ],
+          "upperLidArcPx": 378.8535663937591
+        }
+      },
+      "sourceReview": "Closed eye, control lead."
+    },
+    {
+      "file": "pexels-4456732.jpg",
+      "eye": "left",
+      "worstLidArcPx": 393.1553831516932,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1297,
+            1116,
+            570,
+            387
+          ],
+          "upperLidArcPx": 393.1553831516932
+        },
+        "webkit": {
+          "roi": [
+            1304,
+            1121,
+            560,
+            382
+          ],
+          "upperLidArcPx": 384.6798395354598
+        }
+      },
+      "sourceReview": "Hair overlap and diffuse dark upper line."
+    },
+    {
+      "file": "pexels-4456732.jpg",
+      "eye": "right",
+      "worstLidArcPx": 395.8104667526694,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            565,
+            1146,
+            575,
+            370
+          ],
+          "upperLidArcPx": 395.8104667526694
+        },
+        "webkit": {
+          "roi": [
+            570,
+            1151,
+            572,
+            364
+          ],
+          "upperLidArcPx": 391.092543581727
+        }
+      },
+      "sourceReview": "Dense dark upper line and soft tips."
+    },
+    {
+      "file": "pexels-5096204.jpg",
+      "eye": "left",
+      "worstLidArcPx": 398.1798077311671,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2678,
+            3085,
+            575,
+            424
+          ],
+          "upperLidArcPx": 388.07483957327025
+        },
+        "webkit": {
+          "roi": [
+            2675,
+            3090,
+            587,
+            423
+          ],
+          "upperLidArcPx": 398.1798077311671
+        }
+      },
+      "sourceReview": "Bright intersecting or clumped structures, outside the dark-valley evidence tested in this cycle."
+    },
+    {
+      "file": "pexels-11396392.jpg",
+      "eye": "right",
+      "worstLidArcPx": 402.83064995112096,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1134,
+            2506,
+            596,
+            365
+          ],
+          "upperLidArcPx": 402.83064995112096
+        },
+        "webkit": {
+          "roi": [
+            1148,
+            2517,
+            577,
+            352
+          ],
+          "upperLidArcPx": 388.0218003805624
+        }
+      }
+    },
+    {
+      "file": "pexels-2212718.jpg",
+      "eye": "right",
+      "worstLidArcPx": 403.8490277357522,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1920,
+            1736,
+            590,
+            368
+          ],
+          "upperLidArcPx": 402.6474364336647
+        },
+        "webkit": {
+          "roi": [
+            1911,
+            1738,
+            597,
+            361
+          ],
+          "upperLidArcPx": 403.8490277357522
+        }
+      }
+    },
+    {
+      "file": "pexels-13722239.jpg",
+      "eye": "left",
+      "worstLidArcPx": 407.5491161190188,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2391,
+            684,
+            511,
+            519
+          ],
+          "upperLidArcPx": 388.1571057206963
+        },
+        "webkit": {
+          "roi": [
+            2379,
+            660,
+            529,
+            564
+          ],
+          "upperLidArcPx": 407.5491161190188
+        }
+      }
+    },
+    {
+      "file": "pexels-5253967.jpg",
+      "eye": "right",
+      "worstLidArcPx": 412.59661452642365,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1712,
+            964,
+            614,
+            373
+          ],
+          "upperLidArcPx": 408.5429462244977
+        },
+        "webkit": {
+          "roi": [
+            1708,
+            963,
+            621,
+            375
+          ],
+          "upperLidArcPx": 412.59661452642365
+        }
+      }
+    },
+    {
+      "file": "pexels-8990738.jpg",
+      "eye": "left",
+      "worstLidArcPx": 420.10176231934895,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1523,
+            1100,
+            586,
+            593
+          ],
+          "upperLidArcPx": 420.10176231934895
+        },
+        "webkit": {
+          "roi": [
+            1523,
+            1102,
+            585,
+            592
+          ],
+          "upperLidArcPx": 419.6273079132426
+        }
+      }
+    },
+    {
+      "file": "pexels-4672290.jpg",
+      "eye": "right",
+      "worstLidArcPx": 432.75057054963673,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            3115,
+            402,
+            563,
+            491
+          ],
+          "upperLidArcPx": 432.75057054963673
+        },
+        "webkit": {
+          "roi": [
+            3119,
+            416,
+            569,
+            465
+          ],
+          "upperLidArcPx": 432.6918576814984
+        }
+      }
+    },
+    {
+      "file": "pexels-9854230.jpg",
+      "eye": "left",
+      "worstLidArcPx": 433.78286853849124,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1577,
+            923,
+            610,
+            422
+          ],
+          "upperLidArcPx": 429.9941319915371
+        },
+        "webkit": {
+          "roi": [
+            1576,
+            918,
+            614,
+            425
+          ],
+          "upperLidArcPx": 433.78286853849124
+        }
+      }
+    },
+    {
+      "file": "pexels-2212718.jpg",
+      "eye": "left",
+      "worstLidArcPx": 436.39282846445724,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2726,
+            1655,
+            655,
+            343
+          ],
+          "upperLidArcPx": 434.7703308063967
+        },
+        "webkit": {
+          "roi": [
+            2722,
+            1658,
+            658,
+            343
+          ],
+          "upperLidArcPx": 436.39282846445724
+        }
+      }
+    },
+    {
+      "file": "pexels-5253967.jpg",
+      "eye": "left",
+      "worstLidArcPx": 439.5307513516627,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2600,
+            851,
+            650,
+            374
+          ],
+          "upperLidArcPx": 435.252079424517
+        },
+        "webkit": {
+          "roi": [
+            2595,
+            848,
+            656,
+            380
+          ],
+          "upperLidArcPx": 439.5307513516627
+        }
+      }
+    },
+    {
+      "file": "pexels-9854230.jpg",
+      "eye": "right",
+      "worstLidArcPx": 445.36823604693507,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            778,
+            894,
+            621,
+            435
+          ],
+          "upperLidArcPx": 441.08893410626104
+        },
+        "webkit": {
+          "roi": [
+            771,
+            891,
+            627,
+            438
+          ],
+          "upperLidArcPx": 445.36823604693507
+        }
+      }
+    },
+    {
+      "file": "pexels-11396392.jpg",
+      "eye": "left",
+      "worstLidArcPx": 457.4998196968639,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1957,
+            2495,
+            702,
+            335
+          ],
+          "upperLidArcPx": 457.4998196968639
+        },
+        "webkit": {
+          "roi": [
+            1958,
+            2495,
+            696,
+            338
+          ],
+          "upperLidArcPx": 454.5132892905849
+        }
+      }
+    },
+    {
+      "file": "pexels-4995558.jpg",
+      "eye": "left",
+      "worstLidArcPx": 488.00454242400383,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1964,
+            1787,
+            692,
+            451
+          ],
+          "upperLidArcPx": 474.66599649318715
+        },
+        "webkit": {
+          "roi": [
+            1957,
+            1773,
+            708,
+            465
+          ],
+          "upperLidArcPx": 488.00454242400383
+        }
+      }
+    },
+    {
+      "file": "pexels-29117992.jpg",
+      "eye": "left",
+      "worstLidArcPx": 492.182268318055,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2330,
+            1953,
+            721,
+            450
+          ],
+          "upperLidArcPx": 492.182268318055
+        },
+        "webkit": {
+          "roi": [
+            2339,
+            1964,
+            708,
+            427
+          ],
+          "upperLidArcPx": 475.5219048926855
+        }
+      }
+    },
+    {
+      "file": "pexels-4995558.jpg",
+      "eye": "right",
+      "worstLidArcPx": 493.1550731009564,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1019,
+            1713,
+            703,
+            480
+          ],
+          "upperLidArcPx": 488.8316471222823
+        },
+        "webkit": {
+          "roi": [
+            1018,
+            1700,
+            706,
+            490
+          ],
+          "upperLidArcPx": 493.1550731009564
+        }
+      }
+    },
+    {
+      "file": "pexels-30639069.jpg",
+      "eye": "left",
+      "worstLidArcPx": 500.04270313217506,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2456,
+            2190,
+            416,
+            875
+          ],
+          "upperLidArcPx": 500.04270313217506
+        },
+        "webkit": {
+          "roi": [
+            2485,
+            2258,
+            416,
+            779
+          ],
+          "upperLidArcPx": 457.25652053491746
+        }
+      }
+    },
+    {
+      "file": "pexels-8537914.jpg",
+      "eye": "left",
+      "worstLidArcPx": 500.08191109797406,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            4348,
+            1107,
+            696,
+            448
+          ],
+          "upperLidArcPx": 498.2954742231758
+        },
+        "webkit": {
+          "roi": [
+            4368,
+            1095,
+            690,
+            467
+          ],
+          "upperLidArcPx": 500.08191109797406
+        }
+      }
+    },
+    {
+      "file": "pexels-8537914.jpg",
+      "eye": "right",
+      "worstLidArcPx": 503.2389951218381,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            3182,
+            1092,
+            734,
+            366
+          ],
+          "upperLidArcPx": 501.82344181661364
+        },
+        "webkit": {
+          "roi": [
+            3193,
+            1074,
+            730,
+            383
+          ],
+          "upperLidArcPx": 503.2389951218381
+        }
+      }
+    },
+    {
+      "file": "pexels-10598787.jpg",
+      "eye": "right",
+      "worstLidArcPx": 508.6436740308568,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1581,
+            1131,
+            441,
+            1118
+          ],
+          "upperLidArcPx": 508.58404048193376
+        },
+        "webkit": {
+          "roi": [
+            1581,
+            1140,
+            446,
+            1105
+          ],
+          "upperLidArcPx": 508.6436740308568
+        }
+      }
+    },
+    {
+      "file": "pexels-13722239.jpg",
+      "eye": "right",
+      "worstLidArcPx": 516.997689927725,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1486,
+            942,
+            733,
+            534
+          ],
+          "upperLidArcPx": 505.00099908720586
+        },
+        "webkit": {
+          "roi": [
+            1477,
+            944,
+            751,
+            524
+          ],
+          "upperLidArcPx": 516.997689927725
+        }
+      }
+    },
+    {
+      "file": "pexels-5096204.jpg",
+      "eye": "right",
+      "worstLidArcPx": 524.7420889559537,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1656,
+            3122,
+            792,
+            448
+          ],
+          "upperLidArcPx": 518.8019644513911
+        },
+        "webkit": {
+          "roi": [
+            1651,
+            3124,
+            801,
+            436
+          ],
+          "upperLidArcPx": 524.7420889559537
+        }
+      }
+    },
+    {
+      "file": "pexels-29117992.jpg",
+      "eye": "right",
+      "worstLidArcPx": 531.5904395350723,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1338,
+            1976,
+            785,
+            477
+          ],
+          "upperLidArcPx": 531.5904395350723
+        },
+        "webkit": {
+          "roi": [
+            1329,
+            1971,
+            782,
+            474
+          ],
+          "upperLidArcPx": 524.122999616159
+        }
+      }
+    },
+    {
+      "file": "pexels-24735911.jpg",
+      "eye": "right",
+      "worstLidArcPx": 533.958630640559,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            931,
+            2647,
+            757,
+            581
+          ],
+          "upperLidArcPx": 533.6221846642972
+        },
+        "webkit": {
+          "roi": [
+            926,
+            2655,
+            766,
+            570
+          ],
+          "upperLidArcPx": 533.958630640559
+        }
+      }
+    },
+    {
+      "file": "pexels-37686910.jpg",
+      "eye": "left",
+      "worstLidArcPx": 545.7210870322845,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            3083,
+            83,
+            630,
+            924
+          ],
+          "upperLidArcPx": 545.7210870322845
+        },
+        "webkit": {
+          "roi": [
+            3081,
+            87,
+            635,
+            903
+          ],
+          "upperLidArcPx": 540.5918218949085
+        }
+      }
+    },
+    {
+      "file": "pexels-10598787.jpg",
+      "eye": "left",
+      "worstLidArcPx": 547.2346219901668,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2170,
+            1982,
+            685,
+            826
+          ],
+          "upperLidArcPx": 546.3434716596317
+        },
+        "webkit": {
+          "roi": [
+            2173,
+            1974,
+            682,
+            838
+          ],
+          "upperLidArcPx": 547.2346219901668
+        }
+      }
+    },
+    {
+      "file": "pexels-4672290.jpg",
+      "eye": "left",
+      "worstLidArcPx": 559.7222008959683,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            3951,
+            540,
+            786,
+            523
+          ],
+          "upperLidArcPx": 559.7222008959683
+        },
+        "webkit": {
+          "roi": [
+            3947,
+            540,
+            787,
+            518
+          ],
+          "upperLidArcPx": 554.2195933078715
+        }
+      }
+    },
+    {
+      "file": "pexels-11971337.jpg",
+      "eye": "right",
+      "worstLidArcPx": 571.1992503054569,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            862,
+            2240,
+            844,
+            545
+          ],
+          "upperLidArcPx": 571.1992503054569
+        },
+        "webkit": {
+          "roi": [
+            859,
+            2246,
+            838,
+            554
+          ],
+          "upperLidArcPx": 569.4826212601779
+        }
+      }
+    },
+    {
+      "file": "pexels-11971337.jpg",
+      "eye": "left",
+      "worstLidArcPx": 588.2940322362854,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2050,
+            2196,
+            863,
+            518
+          ],
+          "upperLidArcPx": 578.0543688917601
+        },
+        "webkit": {
+          "roi": [
+            1999,
+            2205,
+            864,
+            566
+          ],
+          "upperLidArcPx": 588.2940322362854
+        }
+      }
+    },
+    {
+      "file": "pexels-37686910.jpg",
+      "eye": "right",
+      "worstLidArcPx": 611.6681203011553,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2069,
+            769,
+            799,
+            771
+          ],
+          "upperLidArcPx": 595.1275130076945
+        },
+        "webkit": {
+          "roi": [
+            2036,
+            761,
+            818,
+            797
+          ],
+          "upperLidArcPx": 611.6681203011553
+        }
+      }
+    },
+    {
+      "file": "pexels-24735911.jpg",
+      "eye": "left",
+      "worstLidArcPx": 614.6562945709329,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1969,
+            2531,
+            878,
+            608
+          ],
+          "upperLidArcPx": 614.6562945709329
+        },
+        "webkit": {
+          "roi": [
+            1970,
+            2548,
+            883,
+            585
+          ],
+          "upperLidArcPx": 611.0982875011531
+        }
+      }
+    },
+    {
+      "file": "pexels-20669039.jpg",
+      "eye": "right",
+      "worstLidArcPx": 649.6902191060406,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1732,
+            560,
+            763,
+            762
+          ],
+          "upperLidArcPx": 637.5697869310559
+        },
+        "webkit": {
+          "roi": [
+            1700,
+            525,
+            792,
+            779
+          ],
+          "upperLidArcPx": 649.6902191060406
+        }
+      }
+    },
+    {
+      "file": "pexels-14297936.jpg",
+      "eye": "left",
+      "worstLidArcPx": 670.1861409078138,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2455,
+            1995,
+            957,
+            677
+          ],
+          "upperLidArcPx": 670.1861409078138
+        },
+        "webkit": {
+          "roi": [
+            2453,
+            2003,
+            958,
+            663
+          ],
+          "upperLidArcPx": 666.6674995727216
+        }
+      }
+    },
+    {
+      "file": "pexels-14297936.jpg",
+      "eye": "right",
+      "worstLidArcPx": 681.6837256605304,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1246,
+            1657,
+            905,
+            831
+          ],
+          "upperLidArcPx": 681.6837256605304
+        },
+        "webkit": {
+          "roi": [
+            1244,
+            1663,
+            906,
+            819
+          ],
+          "upperLidArcPx": 676.4879703520375
+        }
+      }
+    },
+    {
+      "file": "pexels-14942933.jpg",
+      "eye": "right",
+      "worstLidArcPx": 697.7294503499594,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            461,
+            1672,
+            966,
+            663
+          ],
+          "upperLidArcPx": 696.3037153249179
+        },
+        "webkit": {
+          "roi": [
+            456,
+            1675,
+            969,
+            658
+          ],
+          "upperLidArcPx": 697.7294503499594
+        }
+      }
+    },
+    {
+      "file": "pexels-6896644.jpg",
+      "eye": "right",
+      "worstLidArcPx": 700.9215929873653,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            0,
+            916,
+            899,
+            657
+          ],
+          "upperLidArcPx": 700.9215929873653
+        },
+        "webkit": {
+          "roi": [
+            0,
+            890,
+            941,
+            680
+          ],
+          "upperLidArcPx": 665.0909190241163
+        }
+      }
+    },
+    {
+      "file": "pexels-14942933.jpg",
+      "eye": "left",
+      "worstLidArcPx": 706.4156226703857,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1883,
+            1297,
+            934,
+            858
+          ],
+          "upperLidArcPx": 705.2167259025113
+        },
+        "webkit": {
+          "roi": [
+            1882,
+            1306,
+            939,
+            851
+          ],
+          "upperLidArcPx": 706.4156226703857
+        }
+      }
+    },
+    {
+      "file": "pexels-30639069.jpg",
+      "eye": "right",
+      "worstLidArcPx": 764.0318742183725,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1372,
+            2458,
+            918,
+            1017
+          ],
+          "upperLidArcPx": 764.0318742183725
+        },
+        "webkit": {
+          "roi": [
+            1396,
+            2490,
+            902,
+            955
+          ],
+          "upperLidArcPx": 729.8996872384387
+        }
+      }
+    },
+    {
+      "file": "pexels-16473154.jpg",
+      "eye": "right",
+      "worstLidArcPx": 785.8003414218225,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1589,
+            554,
+            1056,
+            898
+          ],
+          "upperLidArcPx": 782.8780899027932
+        },
+        "webkit": {
+          "roi": [
+            1580,
+            554,
+            1063,
+            913
+          ],
+          "upperLidArcPx": 785.8003414218225
+        }
+      }
+    },
+    {
+      "file": "pexels-16473154.jpg",
+      "eye": "left",
+      "worstLidArcPx": 818.3408660048051,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            3056,
+            611,
+            1127,
+            889
+          ],
+          "upperLidArcPx": 812.0963357490538
+        },
+        "webkit": {
+          "roi": [
+            3046,
+            599,
+            1130,
+            911
+          ],
+          "upperLidArcPx": 818.3408660048051
+        }
+      }
+    },
+    {
+      "file": "pexels-20669039.jpg",
+      "eye": "left",
+      "worstLidArcPx": 970.5586191799912,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2897,
+            348,
+            1245,
+            865
+          ],
+          "upperLidArcPx": 937.8075206149116
+        },
+        "webkit": {
+          "roi": [
+            2876,
+            329,
+            1278,
+            901
+          ],
+          "upperLidArcPx": 970.5586191799912
+        }
+      }
+    },
+    {
+      "file": "pexels-6896644.jpg",
+      "eye": "left",
+      "worstLidArcPx": 1035.6369554890814,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            1273,
+            375,
+            1587,
+            939
+          ],
+          "upperLidArcPx": 1035.6369554890814
+        },
+        "webkit": {
+          "roi": [
+            1306,
+            365,
+            1522,
+            938
+          ],
+          "upperLidArcPx": 986.7728362535338
+        }
+      }
+    },
+    {
+      "file": "pexels-11383300.jpg",
+      "eye": "left",
+      "worstLidArcPx": 1053.7725304053158,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            4628,
+            3234,
+            1512,
+            1240
+          ],
+          "upperLidArcPx": 1053.7725304053158
+        },
+        "webkit": {
+          "roi": [
+            4630,
+            3228,
+            1525,
+            1235
+          ],
+          "upperLidArcPx": 1053.3194367114722
+        }
+      }
+    },
+    {
+      "file": "pexels-14818485.jpg",
+      "eye": "right",
+      "worstLidArcPx": 1102.038750836513,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            887,
+            260,
+            1469,
+            1163
+          ],
+          "upperLidArcPx": 1102.038750836513
+        },
+        "webkit": {
+          "roi": [
+            904,
+            309,
+            1456,
+            1097
+          ],
+          "upperLidArcPx": 1070.2870315794037
+        }
+      }
+    },
+    {
+      "file": "pexels-14818485.jpg",
+      "eye": "left",
+      "worstLidArcPx": 1170.4759656929882,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2728,
+            266,
+            1624,
+            1119
+          ],
+          "upperLidArcPx": 1170.4759656929882
+        },
+        "webkit": {
+          "roi": [
+            2751,
+            256,
+            1605,
+            1079
+          ],
+          "upperLidArcPx": 1136.746131671725
+        }
+      }
+    },
+    {
+      "file": "pexels-11383300.jpg",
+      "eye": "right",
+      "worstLidArcPx": 1341.823234697196,
+      "measurements": {
+        "chromium": {
+          "roi": [
+            2248,
+            3095,
+            1930,
+            1332
+          ],
+          "upperLidArcPx": 1338.3878880876
+        },
+        "webkit": {
+          "roi": [
+            2224,
+            3106,
+            1961,
+            1322
+          ],
+          "upperLidArcPx": 1341.823234697196
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "file": "pexels-10598787.jpg",
+      "sha256": "c9414e588ac2bdea54b1dcbdd94bf719e35820ba76775104bd3787d8313a8527",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-11383300.jpg",
+      "sha256": "1a3f74d3dde1d50fe923cb55e303c4507b58f0d2986284eaf9a873e01245c2d6",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-11396392.jpg",
+      "sha256": "b8c82a414e84c4bf5dea6663187683182a6fadc5b87649ae7fa3fe27bc5833ae",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-11971337.jpg",
+      "sha256": "99b98216df79b70ddb4dc4a77f4147453a8fa2a9266977cc92c17fd587dce3d0",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-13673830.jpg",
+      "sha256": "7752e72bcdc3dd75f2207bbbb1d141e8e77f19954c1674eba79b66eb55f1131e",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-13722239.jpg",
+      "sha256": "c2d001d753cce02a0b2e8ec137a6f4f24528308aa62bcd51d6fd30a6780623b1",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-13871690.jpg",
+      "sha256": "aee5f8c5d030507db816f1d8b657f65a20ea95e10b01c8a4c66b27bfbefd3d35",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-14297936.jpg",
+      "sha256": "237333fc947c0e4abe0ce0355fbc7f439e8bc3a5b05e6f1a5a8526c93318f948",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-14818485.jpg",
+      "sha256": "491f631d2cbe453c9ea6fca37ebf7410b21763687f9dbfbf271d7a6baf536965",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-14942933.jpg",
+      "sha256": "5cbcb52ee15c9112d1df08888518784eeb5ee8a31ef7315aab4b8998ccbe2bf5",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-16473154.jpg",
+      "sha256": "9b9130358dbba22400331d17c6a72592dbb9ebbd72df46771a3b87f9b8a4dd71",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-16778620.jpg",
+      "sha256": "954662b1f9163a3a72f75c5fe751d5d0ea6504adec4f52a336fee41aa80128ef",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-20053159.jpg",
+      "sha256": "b09e0ef4b14ed30401a9ac0bc4df85180139d6eaee584e20d72fe64ff576a0eb",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-20669039.jpg",
+      "sha256": "e6e2d09f41c0dd0f972f16eff30a95157b575dcc52c8fa508f3c3ed24d9cfc81",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-2212718.jpg",
+      "sha256": "0caa35499182b6877b63b62bd5555e305a550722fd050423a3dd68f52793edc0",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-24735911.jpg",
+      "sha256": "f7309c571bd298fc3299c1860e22d34bf676a6856df19f5f243e344f61137cca",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-2507723.jpg",
+      "sha256": "a346b8390f6a580f4c4a4bbc01e9f4b375802a84ee81ca0835b81046b1c87260",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-2817080.jpg",
+      "sha256": "1201db28cac2875d9cc77ae8f2bb3ebb74218d12076a575e2c5082344e331be5",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-28354416.jpg",
+      "sha256": "e8bb96d852d22edf8adf791916ea189bb30b678ccca9ec397a82f5ad8af60de8",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-29117992.jpg",
+      "sha256": "aa8fa316fb9db9a671778224185ac56e3c9eb8852ae3d8c5839d623708118a79",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-30390002.jpg",
+      "sha256": "db0abac6a273cb98cbcbcd3f6f7a6fd3803e514a633278150dc00b2d5803831f",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-30639069.jpg",
+      "sha256": "9be994f0bc344a881d7b9bcaca8c04dd87691fc0a3a92b98a0634250dd66d785",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-34460007.jpg",
+      "sha256": "9556ec1c861e410e82e1ce49c3ebcd78a3b1d33110677824449a96e7e38358aa",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-3762757.jpg",
+      "sha256": "041939a5c54486db6c8cfb9ef62a7403b0a162c262a2a051ba351447f30b0382",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-37686910.jpg",
+      "sha256": "76660e803157994d2677a02fdcb412c0a405f3f0eb390fddf7b97d84fef2a4b2",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-4356958.jpg",
+      "sha256": "2809c1c705291b597a72ab59ba07635fb9bc076bf1b1a89dcc260f23dc8c7767",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-4456732.jpg",
+      "sha256": "5e212045cfe1e4e9a0d7a283f9e098bd732b2ec40a37fb79ce708b680324a8a4",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-4672290.jpg",
+      "sha256": "8887432f96c46502b97caa16fd10967a77a2ef67891e6c20a44b223fb517b5ec",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-4995558.jpg",
+      "sha256": "74cd089bb014adf9e75deedbe7a2c1d6ed27de545fafe8726b8460aca9068383",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-5096204.jpg",
+      "sha256": "3e8a6a882895c6b3b803e58f34bb3498a8996b3c1ffe991739eb7d9812472d60",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-5240254.jpg",
+      "sha256": "3dca5e797b7dba4bd76a23e467ab6f3dc582c71d40779a3af5459df0c4a56204",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-5253967.jpg",
+      "sha256": "b16374c3be724d3a2a610fc34684437e4561b621b2ed791f3cf8fd44049c23e2",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-6705392.jpg",
+      "sha256": "e1f6eb4e2a379790f2fc9417aadaab13428aedbe4e214be6a5917308852f5acd",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-6896644.jpg",
+      "sha256": "b87c0b43c6fae3bbdb2e426dc10e08f84ceb43ebefcbe87af50031b8f813e2c4",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-7298463.jpg",
+      "sha256": "e73bb67d572c8163d5945cb620672aa84c5fb17db539878af98c7dfab8fd5aaa",
+      "status": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-7737959.jpg",
+      "sha256": "963e350fbbfd28cb7d51cc311ea380bccf6d38ed614964d2167fbd21cf67ba20",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-8537914.jpg",
+      "sha256": "e95443ea48ff678e4023e813e3d64e011e87b3082ba9006548edd0e87bf5d54b",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-8649020.jpg",
+      "sha256": "110a825d3362c86d8bb7161dfbbd818a1b56c5962230f26c9836ef3cc0a302ec",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-8990738.jpg",
+      "sha256": "3c903e0fadbe38bf2523b4996f128a30f0849ffc64422933020e882cdbc708d5",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    },
+    {
+      "file": "pexels-9157920.jpg",
+      "sha256": "720bef5c5cd9b4b19afff6108404358656bf43d2e820f49b9cd5512b9e2472b9",
+      "status": {
+        "chromium": "ready",
+        "webkit": "no_face"
+      }
+    },
+    {
+      "file": "pexels-9854230.jpg",
+      "sha256": "d3edf93ac65746cc7da562ffb33be524c992cd3b08c8a45928f7aeb03d1cf43a",
+      "status": {
+        "chromium": "ready",
+        "webkit": "ready"
+      }
+    }
+  ],
+  "screeningSHA256": {
+    "tests/visual/out/spatial-screen-chromium-01/screening.json": "17648a161994a356efa267c771093a37560becc9cf11094ac1a3afbe45f0bbc6",
+    "tests/visual/out/spatial-screen-webkit-01/screening.json": "0867167e9990f0e6f9cbb43cac51f817403e1c5b32031687418a7bb9e185c346",
+    "tests/visual/out/spatial-supplement-04-chromium/screening.json": "0479b15d09136824994bf98e0f752950de3b977a083c9a9ee02a74e363265b4a",
+    "tests/visual/out/spatial-supplement-04-webkit/screening.json": "d4d362a62959422ca05a47be78f7a031910d79cd84c844c59d96eb5669f5297a",
+    "tests/visual/out/spatial-supplement-05-chromium/screening.json": "c4e838d2868eaeb93713bb41d79b81590e8328277411bf2ad9af23cd9616696f",
+    "tests/visual/out/spatial-supplement-05-webkit/screening.json": "ba0e4ed6ce1842136f2d016fbbebd927dbb6548105efdf26ca92e29acb0d0156",
+    "tests/visual/out/spatial-supplement-06-chromium/screening.json": "da288afe6938f257e6d350c83be23d73ac3290742008a9507956c3cb3d52e35a",
+    "tests/visual/out/spatial-supplement-06-webkit/screening.json": "01f7ca6ef390befade61f008169b4ae6b58250ef2accf4b2bf27ebb1684008bc",
+    "tests/visual/out/spatial-supplement-07-chromium/screening.json": "16497d9faee4c831c833ca7ed320be6d98724313c7dab4d3d33b8fb94c7906bf",
+    "tests/visual/out/spatial-supplement-07-webkit-explicit-01/screening.json": "d8a9caa481477e749f4bad34fdeff7c20312ea8687819f98b679a9c0b15a6941",
+    "tests/visual/out/spatial-supplement-08-chromium/screening.json": "89788b1fb60c3784b7e1e6caa455f477a6ea7e8587a1260f458cfe4793570f9e",
+    "tests/visual/out/spatial-supplement-08-webkit-explicit-01/screening.json": "ad7c93a118ece0a8353ab691a8905fbffd63e9c401a40234114d370a3b823675",
+    "tests/visual/out/spatial-supplement-09-chromium/screening.json": "ea40cc4b54d454a3fdd01edbd185d0bf4b1442c2a3db0e7051a4e431caf3f51a",
+    "tests/visual/out/spatial-supplement-09-webkit/screening.json": "87aab7223ed752918eaa20d75ef594ed12dd288788cf8fee557f80f0d07a4cd2",
+    "tests/visual/out/spatial-supplement-screen-chromium-01/screening.json": "af571cfa33f938e5ae96c987d00ac2d64e431a8416d337af163bbefefbae046b",
+    "tests/visual/out/spatial-supplement-screen-chromium-02/screening.json": "88c7b44b0f63cdd2708d5464d33d0bc5483e27b36a0a29c0d8802878d89a1028",
+    "tests/visual/out/spatial-supplement-screen-chromium-03/screening.json": "d4dbe6f5b31cafa4be2d79dd4b394336e6975bc09335cab6c845cc0810949ce8",
+    "tests/visual/out/spatial-supplement-screen-webkit-01/screening.json": "5499ff0fbbb462dd81a932ede49c600a03184de5f8ce8a30b26a7cb6a25a9f0d",
+    "tests/visual/out/spatial-supplement-screen-webkit-02/screening.json": "5788a4f68b91c07c9a8437707457f11dcaa001424818235a5d06a472fa7e359d",
+    "tests/visual/out/spatial-supplement-screen-webkit-03/screening.json": "a82c060779e2acc78180d4bda17c6fecd0c583ab30899e08dc929a84edabb4f0"
+  },
+  "quarantinedHistoricalLogs": {
+    "tests/visual/out/spatial-supplement-07-webkit/screening.json": {
+      "declaredEngine": "chromium",
+      "sha256": "154d637b7a30d1d5994c53b25e7d1df51c8f001b379138092cb2b394151426b2"
+    },
+    "tests/visual/out/spatial-supplement-08-webkit/screening.json": {
+      "declaredEngine": "chromium",
+      "sha256": "704c3b511848593fa8d657ccdb748705085a8bae6008518b30e74890ae3e6925"
+    }
+  }
+}

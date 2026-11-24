@@ -1,0 +1,9 @@
+
+> auragram@0.5.1 build
+> npm run build:css && node scripts/vendor-ui.cjs
+
+
+> auragram@0.5.1 build:css
+> tailwindcss -c tailwind.config.cjs -i src/utilities.input.css -o src/utilities.css --minify
+
+Local UI resources prepared.

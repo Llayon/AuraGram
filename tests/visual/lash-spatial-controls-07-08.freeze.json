@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-18",
+  "purpose": "Freeze original-only ambiguity regions and screening summary before any lash detector. No positive endpoint labels; independent critique pending.",
+  "inputs": {
+    "tests/visual/lash-spatial-control-4995558.json": "095a5a9f2f895d80b4cc082612d983e583f3ba09e497aeefc62f81e5912978b8",
+    "tests/visual/lash-spatial-control-20669039.json": "672403b4a3b19f9e23fa3c90b43adfc67da4a9ba2750f6a28c57afab2e3b2ed2",
+    "tests/visual/lash-spatial-supplements-07-08-summary.json": "03f9e293fb62e32ab2d949a16368fce351a2f6c7f37304a87d6f5a3e8744de7d"
+  },
+  "sourceHashes": {
+    "pexels-28354416.jpg": "e8bb96d852d22edf8adf791916ea189bb30b678ccca9ec397a82f5ad8af60de8",
+    "pexels-4356958.jpg": "2809c1c705291b597a72ab59ba07635fb9bc076bf1b1a89dcc260f23dc8c7767",
+    "pexels-4995558.jpg": "74cd089bb014adf9e75deedbe7a2c1d6ed27de545fafe8726b8460aca9068383",
+    "pexels-30390002.jpg": "db0abac6a273cb98cbcbcd3f6f7a6fd3803e514a633278150dc00b2d5803831f",
+    "pexels-20669039.jpg": "e6e2d09f41c0dd0f972f16eff30a95157b575dcc52c8fa508f3c3ed24d9cfc81"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "chromiumResultsExact": true,
+  "webkitResultsExact": true,
+  "initialAndHardenedPreserved": true,
+  "CLIOnlyHardening": true,
+  "finalHarnessHashVerified": true
+}

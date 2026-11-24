@@ -1,0 +1,290 @@
+{
+  "schema": "spatial-original-annotation-v1",
+  "file": "pexels-40337270.jpg",
+  "sourceSHA256": "b1fa507f1f40816de2e212fe5689088a63370c637543402b3f0c386002e523eb",
+  "coordinateSpace": "original-source-pixels",
+  "originalOnly": true,
+  "detectorExecuted": false,
+  "reviewer": "primary-agent-source-only-visual-review",
+  "reviewStatus": "provisional-needs-independent-critique",
+  "role": "unqualified-positive-lead",
+  "evaluatedEyes": [
+    "right"
+  ],
+  "excludedEyes": {
+    "left": "Crossings and alignment with the dark lid crease preclude five independently separable ends in this pass."
+  },
+  "eyes": {
+    "right": {
+      "cropRect": [
+        919,
+        1996,
+        844,
+        648
+      ],
+      "annotationExhaustive": false,
+      "tips": [
+        {
+          "id": "right-1",
+          "region": [
+            [
+              1274,
+              2245
+            ],
+            [
+              1280,
+              2245
+            ],
+            [
+              1280,
+              2255
+            ],
+            [
+              1274,
+              2255
+            ]
+          ],
+          "observedPath": [
+            [
+              1289,
+              2287
+            ],
+            [
+              1283,
+              2269
+            ],
+            [
+              1277,
+              2250
+            ]
+          ],
+          "directionRange": [
+            -126,
+            -95
+          ]
+        },
+        {
+          "id": "right-2",
+          "region": [
+            [
+              1307,
+              2214
+            ],
+            [
+              1313,
+              2214
+            ],
+            [
+              1313,
+              2224
+            ],
+            [
+              1307,
+              2224
+            ]
+          ],
+          "observedPath": [
+            [
+              1320,
+              2259
+            ],
+            [
+              1315,
+              2238
+            ],
+            [
+              1310,
+              2219
+            ]
+          ],
+          "directionRange": [
+            -120,
+            -91
+          ]
+        },
+        {
+          "id": "right-3",
+          "region": [
+            [
+              1326,
+              2214
+            ],
+            [
+              1332,
+              2214
+            ],
+            [
+              1332,
+              2224
+            ],
+            [
+              1326,
+              2224
+            ]
+          ],
+          "observedPath": [
+            [
+              1331,
+              2253
+            ],
+            [
+              1330,
+              2235
+            ],
+            [
+              1329,
+              2219
+            ]
+          ],
+          "directionRange": [
+            -107,
+            -77
+          ]
+        },
+        {
+          "id": "right-4",
+          "region": [
+            [
+              1344,
+              2214
+            ],
+            [
+              1350,
+              2214
+            ],
+            [
+              1350,
+              2224
+            ],
+            [
+              1344,
+              2224
+            ]
+          ],
+          "observedPath": [
+            [
+              1353,
+              2252
+            ],
+            [
+              1351,
+              2234
+            ],
+            [
+              1347,
+              2219
+            ]
+          ],
+          "directionRange": [
+            -126,
+            -92
+          ]
+        },
+        {
+          "id": "right-5",
+          "region": [
+            [
+              1378,
+              2193
+            ],
+            [
+              1384,
+              2193
+            ],
+            [
+              1384,
+              2203
+            ],
+            [
+              1378,
+              2203
+            ]
+          ],
+          "observedPath": [
+            [
+              1392,
+              2240
+            ],
+            [
+              1387,
+              2217
+            ],
+            [
+              1381,
+              2198
+            ]
+          ],
+          "directionRange": [
+            -124,
+            -94
+          ]
+        }
+      ],
+      "ambiguities": [
+        {
+          "region": [
+            [
+              1140,
+              2295
+            ],
+            [
+              1292,
+              2295
+            ],
+            [
+              1292,
+              2329
+            ],
+            [
+              1140,
+              2329
+            ]
+          ],
+          "reason": "Dark proximal band and intersecting strokes. Proximal ownership not assigned."
+        },
+        {
+          "region": [
+            [
+              1301,
+              2257
+            ],
+            [
+              1493,
+              2257
+            ],
+            [
+              1493,
+              2300
+            ],
+            [
+              1301,
+              2300
+            ]
+          ],
+          "reason": "Several shafts converge into an unresolved proximal band."
+        },
+        {
+          "region": [
+            [
+              1393,
+              2173
+            ],
+            [
+              1529,
+              2173
+            ],
+            [
+              1529,
+              2258
+            ],
+            [
+              1393,
+              2258
+            ]
+          ],
+          "reason": "Neighboring strokes touch or overlap the lid crease. Ending identity uncertain."
+        }
+      ]
+    }
+  }
+}

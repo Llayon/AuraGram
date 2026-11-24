@@ -1,0 +1,79 @@
+{
+  "schema": "spatial-original-annotation-v1",
+  "file": "pexels-4995558.jpg",
+  "sourceSHA256": "74cd089bb014adf9e75deedbe7a2c1d6ed27de545fafe8726b8460aca9068383",
+  "coordinateSpace": "original-source-pixels",
+  "originalOnly": true,
+  "detectorExecuted": false,
+  "reviewer": "primary-agent-source-only-visual-review",
+  "reviewStatus": "provisional-needs-independent-critique",
+  "role": "hard-control-lead",
+  "eyes": {
+    "left": {
+      "cropRect": [
+        1964,
+        1787,
+        692,
+        451
+      ],
+      "tips": [],
+      "annotationExhaustive": false,
+      "ambiguities": [
+        {
+          "region": [
+            [
+              2224,
+              1862
+            ],
+            [
+              2514,
+              1862
+            ],
+            [
+              2514,
+              1997
+            ],
+            [
+              2224,
+              1997
+            ]
+          ],
+          "reason": "Visible intersecting upper shafts and clumped dark support. Same-fiber ownership through this region is uncertain; empty space between branches is not a free ending."
+        }
+      ]
+    },
+    "right": {
+      "cropRect": [
+        1019,
+        1713,
+        703,
+        480
+      ],
+      "tips": [],
+      "annotationExhaustive": false,
+      "ambiguities": [
+        {
+          "region": [
+            [
+              1144,
+              1778
+            ],
+            [
+              1404,
+              1778
+            ],
+            [
+              1404,
+              1938
+            ],
+            [
+              1144,
+              1938
+            ]
+          ],
+          "reason": "Several upper structures overlap or branch near dense dark support; no unambiguous ending is labelled here."
+        }
+      ]
+    }
+  }
+}

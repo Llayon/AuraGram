@@ -1,0 +1,99 @@
+{
+  "schema": "auragram-independent-break-code-critic-v1",
+  "decision": "Read-only census implementation is consistent with intended explanatory scope; no detector/Length adoption or orientation-floor relaxation justified. HOLD.",
+  "scope": "Reviewed instrumentation/graph/census/tests and raw02 results before new PNG critique. Independently ran seven mechanism/regression tests; no browser/model inference or new source decoding executed by critic. Frozen labels/protocol/product unchanged.",
+  "references": [
+    {
+      "path": "tests/visual/lash-break-protocol.json",
+      "sha256": "19d3a58b29d4c7a94ff7d0783815b5c6b37a5a454f45b904ac2766aebf131280"
+    },
+    {
+      "path": "tests/visual/lash-break-instrument.cjs",
+      "sha256": "fc32584c58dae82c5e48e3ac497efe5eee2b170e513d1143550ae8d66e70bf48"
+    },
+    {
+      "path": "tests/visual/lash-break-graph.mjs",
+      "sha256": "93c564cf8c33cb7408809c82d9c1a8fcf9a8bc34c595d2f40083edd57e859f87"
+    },
+    {
+      "path": "tests/visual/lash-break-run.cjs",
+      "sha256": "08414184826f398a814a15eef8e919e59239687e7524e84b82b3f14c31bc6e80"
+    },
+    {
+      "path": "tests/visual/lash-break.test.mjs",
+      "sha256": "cea1b391a6f88ed3bdbc9d18b5b2dc5414be1e911c45037c45ec464ed01078f2"
+    },
+    {
+      "path": "tests/visual/out/break-01-census/census.json",
+      "sha256": "5842a6e1f5d197f1fb3684eda2565dbe216ba9a502195877f964904394be331c"
+    },
+    {
+      "path": "tests/visual/out/break-02-census-fixed/census.json",
+      "sha256": "5cb0be2b8ad604b7267df76578bc978f3e306e98707b64ffa5db2db75fd38c8e"
+    }
+  ],
+  "tests": "node --test tests/visual/lash-break.test.mjs:7PASS/0FAIL/0SKIPPED/0CANCELLED.",
+  "protocolCautionDispositions": [
+    {
+      "id": "BREAK-C1",
+      "status": "RESOLVED",
+      "detail": "unreachedComponents operates precisely on active AND loose-reached AND NOT strictly-reached vertices; components exclude roots/strict vertices."
+    },
+    {
+      "id": "BREAK-C2",
+      "status": "RESOLVED",
+      "detail": "rootReach reconstructs deterministic BFS with fresh queue from automatic roots and fixed neighbor order. It never interprets overwritten original root-census queue; recomputed strict masks/parents equal captured originals."
+    },
+    {
+      "id": "BREAK-C3",
+      "status": "QUALIFIED_CORRECTLY",
+      "detail": "firstFailure and firstFrontier both stored; status ALREADY_STRICTLY_REACHABLE explicit. Test preserves failed chosen loose route even when alternate strict route reaches target. These are witnesses, not unique physical/global cuts."
+    },
+    {
+      "id": "BREAK-C4",
+      "status": "CONTROLLED_WITHIN_VERSION",
+      "detail": "Raw-directed vs actual-pruned BFS uses identical active/root masks within each version. All recorded raw/pruned reach sets agree in this corpus; pruning does not explain observed reach losses here."
+    },
+    {
+      "id": "BREAK-C5",
+      "status": "QUALIFIED_CORRECTLY",
+      "detail": "Nearest active sample selected after all automatic measurements; ascending pixel scan plus strict lower distance comparison gives deterministic lowest-index exact ties. Engineering uncertainty and route status retained. Not confirmed same hair or a detector seed."
+    },
+    {
+      "id": "BREAK-C6",
+      "status": "RESOLVED",
+      "detail": "firstRemoval includes route step and wasRoot, with actual bilateral bilinear contributors/weights/responses/bestIndex/rawActive. This describes selected-route deletion, not a proposed gap bridge."
+    },
+    {
+      "id": "BREAK-C7",
+      "status": "STRONG_EQUIVALENCE_CHECKS",
+      "detail": "Every capture anchor requires exactly one occurrence. Synthetic test compares all original public fields and input nonmutation. Census compares returned arrays/traces/diagnostics exactly to original function, archived browser fields numerically, and BFS masks/parents exactly."
+    }
+  ],
+  "rawFindings": {
+    "verification": {
+      "eyeReplays": 64,
+      "originalFieldsInstrumentedExactlyEqual": true,
+      "recomputedStrictMasksAndParentsExactlyEqual": true,
+      "browserNumericMaxDifference": 4.496403249731884e-15,
+      "frontierEdgePredicateChecks": 34458,
+      "thresholdChanges": 0,
+      "modelRequests": 0
+    },
+    "metadataFix": "Initial01 incorrectly excluded all8 references.02 correctly excludes only3P312no_face labels. Critic independently confirmed entire runs array identical01/02; only excludedLabels,harnessSHA256,graphToolSHA256 differ. Preserve old data/tools.",
+    "217V1ChromiumL1": "First strict frontier agreement.70710677<.85,sourcealignment~1,target~.707; selected route fails orientation-agreement.",
+    "217V1WebKitBoth": "Same chosen frontier has agreement~0 and targetalignment?.707; simultaneous reasons retained.",
+    "217V3WebKitBoth": "Selected frontier agreement.707<.85.",
+    "noRouteCases": "V1ChromiumL2 and V3Chromiumboth nearest active references have no undirected active root route; no missing route fabricated.",
+    "nmsWitness": "WebKit first selected V1 route deletion occurs at step1; V3 loose reach still reaches both references via other route. First removed route pixel is demonstrably not a unique global disconnection cut. Different bilinear contributor best-direction indices are evidence of mixed response maxima, not proof a suppressed physical lash should be restored."
+  },
+  "remainingLimits": [
+    "Directed orientation failure can be a legitimate rejection of a crossing/branch/texture route; do not lower.85 or alignment floor because a manual nearby ending exists.",
+    "Counts are frontier neighbor-pair witnesses with co-occurring gates, not mutually exclusive causal percentages, hair counts or precision/recall.",
+    "Inactive targets use pixelFacts reasons rather than meaningless zero-direction edge histograms; active-edge angle facts still describe grid responses, not anatomical tangents.",
+    "A failed chosen route may have earlier failures inside still-strictly-reachable vertices; firstFailure can precede firstFrontier.",
+    "All components and first3 representative display choices are deterministic diagnostics, not certified fibers or endpoints."
+  ],
+  "wordingQualification": "Frozen corpus text says no image-analysis rerun. Actual implementation exactly replays prototype feature computation on archived Float32 working buffers to expose hidden state, without new source-image decode, browser/model/MediaPipe inference or changed analysis. Report this precise meaning; do not imply no feature calculation occurred. Frozen protocol need not be edited.",
+  "laterVisualReview": "Inspect unchanged native patches and working-grid witnesses for217, white-liner/hair/opening controls, source/target orientation samples and first NMS contributors. Do not infer physical first break or safe restoration from graph witnesses alone."
+}

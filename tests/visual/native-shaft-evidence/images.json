@@ -1,0 +1,398 @@
+[
+  {
+    "label": "shaft-02-native/chromium-C104-right-old16-margin1.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/9841527053d7ccae8d6d1196f9a242eeaf1133ce8e5fb67cea476d522ea57269.png",
+    "sha256": "9841527053d7ccae8d6d1196f9a242eeaf1133ce8e5fb67cea476d522ea57269",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/chromium-C104-right-old16-margin2.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/0400e7e1018f818332c5f0733213ac8bf4647c8f214b5c9e4860bb307b3b32b0.png",
+    "sha256": "0400e7e1018f818332c5f0733213ac8bf4647c8f214b5c9e4860bb307b3b32b0",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/chromium-C104-right-old16-native-original.png",
+    "kind": "native-centers",
+    "file": "assets/9c4656c2127693ee00081474b5d5b8640e86b15f1c343628b5632ee0f4de85e7.png",
+    "sha256": "9c4656c2127693ee00081474b5d5b8640e86b15f1c343628b5632ee0f4de85e7",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/chromium-PI729R1-margin1.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/af00919dd1a80c9ee3e3ee2dcdc8d5c0b658d28bf185230c7309c6dd1d3400fa.png",
+    "sha256": "af00919dd1a80c9ee3e3ee2dcdc8d5c0b658d28bf185230c7309c6dd1d3400fa",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/chromium-PI729R1-margin2.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/ca9e0bbcb55c921e7705878baabf2a1116bf8b8dff3010501c3ec6cdff102739.png",
+    "sha256": "ca9e0bbcb55c921e7705878baabf2a1116bf8b8dff3010501c3ec6cdff102739",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/chromium-PI729R1-native-original.png",
+    "kind": "native-centers",
+    "file": "assets/83e257d8e0080f3f16be897b80068797c094922f2a7e1f8bf948f3c2574f2a1c.png",
+    "sha256": "83e257d8e0080f3f16be897b80068797c094922f2a7e1f8bf948f3c2574f2a1c",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/chromium-PI729R2-margin1.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/fb9347a6a5426526739e97d9cfd9cedf91756154bdb94aa93834fe5cce50cc54.png",
+    "sha256": "fb9347a6a5426526739e97d9cfd9cedf91756154bdb94aa93834fe5cce50cc54",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/chromium-PI729R2-margin2.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/caadec6cf9cea0e92d02f93b5a2bf20dc487ad3dceb7bdcb8d2c3651c969c944.png",
+    "sha256": "caadec6cf9cea0e92d02f93b5a2bf20dc487ad3dceb7bdcb8d2c3651c969c944",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/chromium-PI729R2-native-original.png",
+    "kind": "native-centers",
+    "file": "assets/d32562e57fd086c433f64236d8c1102dd5f20e9544e3909d72d8fafd0ddbcf62.png",
+    "sha256": "d32562e57fd086c433f64236d8c1102dd5f20e9544e3909d72d8fafd0ddbcf62",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/webkit-C104-right-old16-margin1.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/2f3266d8a713248e19d9abbc8731ba9e9080e9383dc8149a853f12bf70a71402.png",
+    "sha256": "2f3266d8a713248e19d9abbc8731ba9e9080e9383dc8149a853f12bf70a71402",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/webkit-C104-right-old16-margin2.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/7287e8fc2e4fe6864cd5f9db4e60a6b175fead7af87b490260316a899eb0f9dc.png",
+    "sha256": "7287e8fc2e4fe6864cd5f9db4e60a6b175fead7af87b490260316a899eb0f9dc",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/webkit-C104-right-old16-native-original.png",
+    "kind": "native-centers",
+    "file": "assets/1c7dd7fdc91ca134536b188cac873f3233f8f58e0eb4368fec4bea61024cf361.png",
+    "sha256": "1c7dd7fdc91ca134536b188cac873f3233f8f58e0eb4368fec4bea61024cf361",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/webkit-PI729R1-margin1.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/4909192fb72960f04f2c6cfd66beba7638444c8ef5e049025bcbcf3943fc3a4a.png",
+    "sha256": "4909192fb72960f04f2c6cfd66beba7638444c8ef5e049025bcbcf3943fc3a4a",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/webkit-PI729R1-margin2.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/a3a8afe10c9020dcd3b39300aae3f539647b1b89346131d5f2a9de199919becd.png",
+    "sha256": "a3a8afe10c9020dcd3b39300aae3f539647b1b89346131d5f2a9de199919becd",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/webkit-PI729R1-native-original.png",
+    "kind": "native-centers",
+    "file": "assets/e28dca0b3137e6173bcbca9c4f06070fb335c0cb60fb6492dace7aeda43b44b4.png",
+    "sha256": "e28dca0b3137e6173bcbca9c4f06070fb335c0cb60fb6492dace7aeda43b44b4",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/webkit-PI729R2-margin1.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/f69afcd85af608c0422bc4d1ae20095f1f84d8038eb2e07b606efc07d98b614f.png",
+    "sha256": "f69afcd85af608c0422bc4d1ae20095f1f84d8038eb2e07b606efc07d98b614f",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/webkit-PI729R2-margin2.5-centers.png",
+    "kind": "native-centers",
+    "file": "assets/7187e85ab45666339f041782e7b2dcc278da731281aee531de1add076de24a57.png",
+    "sha256": "7187e85ab45666339f041782e7b2dcc278da731281aee531de1add076de24a57",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-02-native/webkit-PI729R2-native-original.png",
+    "kind": "native-centers",
+    "file": "assets/445537f3c6ecbdb080d17793c5a7fbee2a95d73b418ed8f5902b34ebbe2c82aa.png",
+    "sha256": "445537f3c6ecbdb080d17793c5a7fbee2a95d73b418ed8f5902b34ebbe2c82aa",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "label": "shaft-08-plots/chromium-C104-right-old16-dense-forward.png",
+    "kind": "measurement-chart",
+    "file": "assets/a53c33bda6d04ad1e7ea1ea21570ffd10e094fcd6818acc0b835998b3c1fa38c.png",
+    "sha256": "a53c33bda6d04ad1e7ea1ea21570ffd10e094fcd6818acc0b835998b3c1fa38c",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/chromium-C104-right-old16-dense-forward.svg",
+    "kind": "measurement-chart",
+    "file": "assets/e6eb04ee473fd9702184fc6ca3cb955a251de93bcc40f548663eff03849aeb6a.svg",
+    "sha256": "e6eb04ee473fd9702184fc6ca3cb955a251de93bcc40f548663eff03849aeb6a"
+  },
+  {
+    "label": "shaft-08-plots/chromium-C104-right-old16-margin1.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/81a00560e28018dd3daac4a23faf4982b210d652ad2e79c18037895944663aa5.png",
+    "sha256": "81a00560e28018dd3daac4a23faf4982b210d652ad2e79c18037895944663aa5",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/chromium-C104-right-old16-margin1.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/f29a25fe1dff66b6a3c64b7f02743c96e52e072dab89f9443919508c829699a1.svg",
+    "sha256": "f29a25fe1dff66b6a3c64b7f02743c96e52e072dab89f9443919508c829699a1"
+  },
+  {
+    "label": "shaft-08-plots/chromium-C104-right-old16-margin2.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/37d80e52f4c57567f882bc73e1bbd98ec8120e81e74c20f76b1390c267b62136.png",
+    "sha256": "37d80e52f4c57567f882bc73e1bbd98ec8120e81e74c20f76b1390c267b62136",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/chromium-C104-right-old16-margin2.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/ce1b8eaec1cf2456f88692dcd5eb8af49d124b8751a440f6c8b59aeb1c90f6cc.svg",
+    "sha256": "ce1b8eaec1cf2456f88692dcd5eb8af49d124b8751a440f6c8b59aeb1c90f6cc"
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R1-dense-forward.png",
+    "kind": "measurement-chart",
+    "file": "assets/bf9e19aef6a8346874aa94455fc8333bcdb4fd08b73a10277f0ed456ff178bbc.png",
+    "sha256": "bf9e19aef6a8346874aa94455fc8333bcdb4fd08b73a10277f0ed456ff178bbc",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R1-dense-forward.svg",
+    "kind": "measurement-chart",
+    "file": "assets/59048f0dc9bab44a43cc961719f12f04e487d9400c39f51c683c35fa71944519.svg",
+    "sha256": "59048f0dc9bab44a43cc961719f12f04e487d9400c39f51c683c35fa71944519"
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R1-margin1.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/5e377703f7cbb63daf6f2bed0501647cc17d226778ebd383a5ff1a854f755bf9.png",
+    "sha256": "5e377703f7cbb63daf6f2bed0501647cc17d226778ebd383a5ff1a854f755bf9",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R1-margin1.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/e97ade6eb16a0e9c9ba0d79d3129b9173fdda8d96e9ab9496637fd51eedd11bc.svg",
+    "sha256": "e97ade6eb16a0e9c9ba0d79d3129b9173fdda8d96e9ab9496637fd51eedd11bc"
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R1-margin2.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/5c8bfd49c6a18e54791dd945f23f84f17a4bb54325aaa103e2943ba8e10e3a09.png",
+    "sha256": "5c8bfd49c6a18e54791dd945f23f84f17a4bb54325aaa103e2943ba8e10e3a09",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R1-margin2.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/4164095eb95a52b269dbd50387d2ea5ae6a0a5adc911f620af4bea209ec51c28.svg",
+    "sha256": "4164095eb95a52b269dbd50387d2ea5ae6a0a5adc911f620af4bea209ec51c28"
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R2-dense-forward.png",
+    "kind": "measurement-chart",
+    "file": "assets/55f2c6ce759438a3d72aec6ec3a1c94e8061fa0ed1dcf1b880f7434d39e02fcf.png",
+    "sha256": "55f2c6ce759438a3d72aec6ec3a1c94e8061fa0ed1dcf1b880f7434d39e02fcf",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R2-dense-forward.svg",
+    "kind": "measurement-chart",
+    "file": "assets/d1854a98ce76581bc029c43f417498aaf4a91d7b3e86137da219f4775e3b22b2.svg",
+    "sha256": "d1854a98ce76581bc029c43f417498aaf4a91d7b3e86137da219f4775e3b22b2"
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R2-margin1.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/0387672db52758f71cdd48674499395c34da740c87d5c5f327aeb300e1641f6d.png",
+    "sha256": "0387672db52758f71cdd48674499395c34da740c87d5c5f327aeb300e1641f6d",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R2-margin1.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/29d915d990b8d099d3693ac4bf6edbf89191127db1baeb888b6f6c83d42e3d8d.svg",
+    "sha256": "29d915d990b8d099d3693ac4bf6edbf89191127db1baeb888b6f6c83d42e3d8d"
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R2-margin2.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/784481ab7ef9a5c73fa6b12d9eb0b21c13540506efdd8ad8fdee28d91011688f.png",
+    "sha256": "784481ab7ef9a5c73fa6b12d9eb0b21c13540506efdd8ad8fdee28d91011688f",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/chromium-PI729R2-margin2.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/b53351b32794e8f0738642ba964ce0b3c5b2c56a15686c1b80c642513cd7bd65.svg",
+    "sha256": "b53351b32794e8f0738642ba964ce0b3c5b2c56a15686c1b80c642513cd7bd65"
+  },
+  {
+    "label": "shaft-08-plots/webkit-C104-right-old16-dense-forward.png",
+    "kind": "measurement-chart",
+    "file": "assets/5a11d9846acaf724a0fb771dadc5dd20cabca28b5f7e2e65d9efd7d13f0c88cc.png",
+    "sha256": "5a11d9846acaf724a0fb771dadc5dd20cabca28b5f7e2e65d9efd7d13f0c88cc",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/webkit-C104-right-old16-dense-forward.svg",
+    "kind": "measurement-chart",
+    "file": "assets/8856bf9cda0dae014f750b76991fabb496f6c284c1cbd65e7e1622e2fa6f89a0.svg",
+    "sha256": "8856bf9cda0dae014f750b76991fabb496f6c284c1cbd65e7e1622e2fa6f89a0"
+  },
+  {
+    "label": "shaft-08-plots/webkit-C104-right-old16-margin1.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/2f6338221a12f6e9a8ca6ef03cab44a40dc708116bc48e4dedcff406d8f3bd27.png",
+    "sha256": "2f6338221a12f6e9a8ca6ef03cab44a40dc708116bc48e4dedcff406d8f3bd27",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/webkit-C104-right-old16-margin1.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/2f55f0d07060527884f4e5f0932bbefb13c03076dca61166b3827668a596d64d.svg",
+    "sha256": "2f55f0d07060527884f4e5f0932bbefb13c03076dca61166b3827668a596d64d"
+  },
+  {
+    "label": "shaft-08-plots/webkit-C104-right-old16-margin2.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/a62bb098969e993ee9de5bad4b045f005eab2e4e83d24b328177e554f63c3dfa.png",
+    "sha256": "a62bb098969e993ee9de5bad4b045f005eab2e4e83d24b328177e554f63c3dfa",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/webkit-C104-right-old16-margin2.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/680a97e76c2c2466c36180e27174763215e64d6e4797c525bc574d7837c17ff4.svg",
+    "sha256": "680a97e76c2c2466c36180e27174763215e64d6e4797c525bc574d7837c17ff4"
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R1-dense-forward.png",
+    "kind": "measurement-chart",
+    "file": "assets/0d7081b06f82b520431cdf61198abe799a590cf8ff8c47bbe9e0a4bfc63a0bd6.png",
+    "sha256": "0d7081b06f82b520431cdf61198abe799a590cf8ff8c47bbe9e0a4bfc63a0bd6",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R1-dense-forward.svg",
+    "kind": "measurement-chart",
+    "file": "assets/6680a324bac94ba28bd68b69d19100d2b4598c860e85922bcec85de4e43a75c8.svg",
+    "sha256": "6680a324bac94ba28bd68b69d19100d2b4598c860e85922bcec85de4e43a75c8"
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R1-margin1.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/7cc12f68c0fac078114356f5d8dfb9246dece868fe17091b0a229f900ae051a0.png",
+    "sha256": "7cc12f68c0fac078114356f5d8dfb9246dece868fe17091b0a229f900ae051a0",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R1-margin1.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/701d83ab6ddf1214a9eb56b586d6481926bcd6b8adb11380f6e92ad2a540c404.svg",
+    "sha256": "701d83ab6ddf1214a9eb56b586d6481926bcd6b8adb11380f6e92ad2a540c404"
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R1-margin2.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/9058318cad1441d41234d9da558b71ca817497034a84fe3126e56fac478c924e.png",
+    "sha256": "9058318cad1441d41234d9da558b71ca817497034a84fe3126e56fac478c924e",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R1-margin2.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/6f017c20947e8d3ed6e689d2dd2abef0a2503dadef6d3200afa7672b8ad5d1fb.svg",
+    "sha256": "6f017c20947e8d3ed6e689d2dd2abef0a2503dadef6d3200afa7672b8ad5d1fb"
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R2-dense-forward.png",
+    "kind": "measurement-chart",
+    "file": "assets/9347b01819397b7ca697ee6da1f0cb877c0b93f35cbb6561e3e8c0d91be53c2c.png",
+    "sha256": "9347b01819397b7ca697ee6da1f0cb877c0b93f35cbb6561e3e8c0d91be53c2c",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R2-dense-forward.svg",
+    "kind": "measurement-chart",
+    "file": "assets/93c55c50af9884dd515be5b25930c39717ac83915f9bbe72bf84c8149639ad7f.svg",
+    "sha256": "93c55c50af9884dd515be5b25930c39717ac83915f9bbe72bf84c8149639ad7f"
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R2-margin1.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/e877fd87e250a2c9c68c5f92ee3464012a9cc61f3845d87d16e9cd42a147ee1d.png",
+    "sha256": "e877fd87e250a2c9c68c5f92ee3464012a9cc61f3845d87d16e9cd42a147ee1d",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R2-margin1.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/05244969cb5799fa791500f00aab181d23e485f7b668593af2214858b3dd155a.svg",
+    "sha256": "05244969cb5799fa791500f00aab181d23e485f7b668593af2214858b3dd155a"
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R2-margin2.5-profiles.png",
+    "kind": "measurement-chart",
+    "file": "assets/67c88bde881648a8f5e53c2fa94d0f557316a6d1432f2a956f407ad613cd2026.png",
+    "sha256": "67c88bde881648a8f5e53c2fa94d0f557316a6d1432f2a956f407ad613cd2026",
+    "width": 1820,
+    "height": 980
+  },
+  {
+    "label": "shaft-08-plots/webkit-PI729R2-margin2.5-profiles.svg",
+    "kind": "measurement-chart",
+    "file": "assets/0cf59974dd305104424f20a2efc02b4fac0d529640b3993112e5a7edaa10b738.svg",
+    "sha256": "0cf59974dd305104424f20a2efc02b4fac0d529640b3993112e5a7edaa10b738"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-18",
+  "hypothesis": "Dense-link contrast should be measured in the already observed TLS shaft frame, rather than the potentially noisy direction of one centroid displacement.",
+  "mode": "Opt-in fixed measured-tangent mode on every link: bootstrap TLS for bootstrap links, prior measured local TLS for forward links. Never fall back to the more favorable axis.",
+  "unchanged": ["Original interpolation points and0.25px dense spacing", "radii0.75/1.5 and floor0.006", "centroid operator and candidate generation", "15-degree turn bound,36px arc budget and ordered128 seeds", "all ownership, branch, mask and ending guards"],
+  "mechanismGates": ["Continuous controlled shaft may retain observed support", "Observed gap, fork, weak/no signal and unavailable pixels must not grant endpoint permission", "Default segment-mode traces reproduce the archived baseline"],
+  "evaluation": "Fixed14297936 development source with the previously tested exact-cell flag. No labels used for tracing; no parameter tuning on final data. Positive path evidence is not terminal or ownership proof."
+}

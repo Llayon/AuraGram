@@ -1,0 +1,11 @@
+{
+  "method":"Manual integer native rectangles selected using original-only portrait previews; no detector output. screen-left/right are viewer sides, not anatomical sides.",
+  "crops":[
+    {"file":"pexels-10460940.jpg","view":"screen-left","rect":[0,2050,850,700]},
+    {"file":"pexels-10460940.jpg","view":"screen-right","rect":[1700,1690,1250,800]},
+    {"file":"pexels-7298680.jpg","view":"screen-left","rect":[1900,980,550,420]},
+    {"file":"pexels-7298680.jpg","view":"screen-right","rect":[2710,850,590,430]},
+    {"file":"pexels-3763152.jpg","view":"screen-left","rect":[2550,1390,680,540]},
+    {"file":"pexels-3763152.jpg","view":"screen-right","rect":[3520,1370,750,540]}
+  ]
+}

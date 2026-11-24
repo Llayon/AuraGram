@@ -1,0 +1,248 @@
+{
+  "schema": "spatial-original-annotation-v1",
+  "file": "pexels-2507723.jpg",
+  "sourceSHA256": "a346b8390f6a580f4c4a4bbc01e9f4b375802a84ee81ca0835b81046b1c87260",
+  "coordinateSpace": "original-source-pixels",
+  "originalOnly": true,
+  "detectorExecuted": false,
+  "reviewer": "primary-agent-source-only-visual-review",
+  "reviewStatus": "provisional-needs-independent-critique",
+  "role": "unqualified-positive-lead",
+  "evaluatedEyes": [
+    "right"
+  ],
+  "excludedEyes": {
+    "left": "Upper band mixes blurred dark support with isolated features. Five separately resolved tips not established."
+  },
+  "eyes": {
+    "right": {
+      "cropRect": [
+        724,
+        961,
+        257,
+        272
+      ],
+      "annotationExhaustive": false,
+      "tips": [
+        {
+          "id": "right-1",
+          "region": [
+            [
+              756,
+              1030
+            ],
+            [
+              760,
+              1030
+            ],
+            [
+              760,
+              1036
+            ],
+            [
+              756,
+              1036
+            ]
+          ],
+          "observedPath": [
+            [
+              771,
+              1049
+            ],
+            [
+              763,
+              1041
+            ],
+            [
+              758,
+              1033
+            ]
+          ],
+          "directionRange": [
+            -135,
+            -100
+          ]
+        },
+        {
+          "id": "right-2",
+          "region": [
+            [
+              763,
+              1023
+            ],
+            [
+              767,
+              1023
+            ],
+            [
+              767,
+              1029
+            ],
+            [
+              763,
+              1029
+            ]
+          ],
+          "observedPath": [
+            [
+              778,
+              1048
+            ],
+            [
+              770,
+              1037
+            ],
+            [
+              765,
+              1026
+            ]
+          ],
+          "directionRange": [
+            -135,
+            -95
+          ]
+        },
+        {
+          "id": "right-3",
+          "region": [
+            [
+              779,
+              1025
+            ],
+            [
+              783,
+              1025
+            ],
+            [
+              783,
+              1031
+            ],
+            [
+              779,
+              1031
+            ]
+          ],
+          "observedPath": [
+            [
+              789,
+              1048
+            ],
+            [
+              784,
+              1038
+            ],
+            [
+              781,
+              1028
+            ]
+          ],
+          "directionRange": [
+            -120,
+            -85
+          ]
+        },
+        {
+          "id": "right-4",
+          "region": [
+            [
+              787,
+              1019
+            ],
+            [
+              791,
+              1019
+            ],
+            [
+              791,
+              1025
+            ],
+            [
+              787,
+              1025
+            ]
+          ],
+          "observedPath": [
+            [
+              795,
+              1042
+            ],
+            [
+              792,
+              1033
+            ],
+            [
+              789,
+              1022
+            ]
+          ],
+          "directionRange": [
+            -120,
+            -85
+          ]
+        },
+        {
+          "id": "right-5",
+          "region": [
+            [
+              810,
+              1021
+            ],
+            [
+              814,
+              1021
+            ],
+            [
+              814,
+              1027
+            ],
+            [
+              810,
+              1027
+            ]
+          ],
+          "observedPath": [
+            [
+              810,
+              1041
+            ],
+            [
+              811,
+              1033
+            ],
+            [
+              812,
+              1024
+            ]
+          ],
+          "directionRange": [
+            -95,
+            -60
+          ]
+        }
+      ],
+      "ambiguities": [
+        {
+          "region": [
+            [
+              741,
+              1040
+            ],
+            [
+              839,
+              1040
+            ],
+            [
+              839,
+              1074
+            ],
+            [
+              741,
+              1074
+            ]
+          ],
+          "reason": "Dense overlapping proximal strokes and dark eyelid band. Strand ownership remains uncertain."
+        }
+      ]
+    }
+  }
+}

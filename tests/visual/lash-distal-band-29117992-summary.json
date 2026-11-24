@@ -1,0 +1,162 @@
+{
+  "source": "pexels-29117992.jpg",
+  "baselinePreserved": true,
+  "repeatExactExcludingTiming": true,
+  "meaning": "Posthoc scan of observed distal sections. No proximal or endpoint approval.",
+  "inputs": {
+    "tests/visual/lash-spatial-control-29117992.json": "aebe247878d9a1079b7ded0ffb53699da0610bf0f65a5c0516998c629ec579a9",
+    "tests\\visual\\out\\distal-band-29117992-audit-01\\protocol.json": "7765bd308a97ddc5a0f1d0aa2b3efc2443da440be4d46412f152d0d4ecaf48bc",
+    "tests\\visual\\out\\distal-band-29117992-repeat-01\\protocol.json": "7765bd308a97ddc5a0f1d0aa2b3efc2443da440be4d46412f152d0d4ecaf48bc",
+    "tests\\visual\\out\\shared-arc-29117992-baseline-01\\chromium.json": "9a6123b296e106f20f119561cdf03c05d33c931f7b29ceaf599a0e97a8f5390f",
+    "tests\\visual\\out\\distal-band-29117992-audit-01\\chromium.json": "4c7bc773aeccce82a2740e51a6714f7989080717165f0e516a65fabb4bdee06e",
+    "tests\\visual\\out\\distal-band-29117992-repeat-01\\chromium.json": "4ddf536f54b7790b4f1159d7119c5fa743e05686a37b93c9f582d92088b05fe4",
+    "tests\\visual\\out\\spatial-supplement-05-chromium\\screening.json": "c4e838d2868eaeb93713bb41d79b81590e8328277411bf2ad9af23cd9616696f",
+    "tests\\visual\\out\\shared-arc-29117992-baseline-01\\webkit.json": "c51d3e3dcd2054f6b73f5355f13264fc648670e48a9e7c4bcb48d07fd5cc3855",
+    "tests\\visual\\out\\distal-band-29117992-audit-01\\webkit.json": "c11bf56a5cba2150f1091e15a4ee03198de8ea5e15aea6da892f1f90ccbd47ce",
+    "tests\\visual\\out\\distal-band-29117992-repeat-01\\webkit.json": "9a8a540eb1642cfaa45bbd7d0f3042df3d6669b5366d3a716f19ad53d4a28537",
+    "tests\\visual\\out\\spatial-supplement-05-webkit\\screening.json": "ba0e4ed6ce1842136f2d016fbbebd927dbb6548105efdf26ca92e29acb0d0156"
+  },
+  "results": {
+    "chromium": {
+      "left": {
+        "observed": 0,
+        "noVeto": 0,
+        "ambiguous": 0,
+        "censored": 0,
+        "unavailable": 0,
+        "changedStatus": 0,
+        "tipRegionRecords": 0,
+        "ambiguityRegionRecords": 0,
+        "rows": []
+      },
+      "right": {
+        "observed": 1,
+        "noVeto": 0,
+        "ambiguous": 1,
+        "censored": 0,
+        "unavailable": 0,
+        "changedStatus": 0,
+        "tipRegionRecords": 0,
+        "ambiguityRegionRecords": 0,
+        "rows": [
+          {
+            "rank": 7,
+            "index": 11131,
+            "points": 4,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          }
+        ]
+      }
+    },
+    "webkit": {
+      "left": {
+        "observed": 6,
+        "noVeto": 0,
+        "ambiguous": 6,
+        "censored": 0,
+        "unavailable": 0,
+        "changedStatus": 0,
+        "tipRegionRecords": 0,
+        "ambiguityRegionRecords": 1,
+        "rows": [
+          {
+            "rank": 68,
+            "index": 8826,
+            "points": 2,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          },
+          {
+            "rank": 97,
+            "index": 10826,
+            "points": 3,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 100,
+            "index": 11048,
+            "points": 3,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 115,
+            "index": 11494,
+            "points": 3,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 118,
+            "index": 11051,
+            "points": 3,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 125,
+            "index": 11052,
+            "points": 3,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          }
+        ]
+      },
+      "right": {
+        "observed": 0,
+        "noVeto": 0,
+        "ambiguous": 0,
+        "censored": 0,
+        "unavailable": 0,
+        "changedStatus": 0,
+        "tipRegionRecords": 0,
+        "ambiguityRegionRecords": 0,
+        "rows": []
+      }
+    }
+  }
+}

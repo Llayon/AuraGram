@@ -1,0 +1,391 @@
+{
+  "date": "2026-11-18",
+  "restoreDirectory": "tests/visual/out",
+  "policy": "Explicit public-source numeric evidence only; JPEGs and PNGs omitted. Source snapshots are for review, not automatic overwrite.",
+  "archive": "followup-20261118-02.zip",
+  "bytes": 3303664,
+  "sha256": "1b8bd3969631e996b956691dae1da92392b991246b3525d5280ce6f9108a3972",
+  "members": [
+    {
+      "path": "dense-axis-14297936-chromium-01/failure.json",
+      "bytes": 246,
+      "sha256": "5c79689006c16072d44cc43ab68cafa89ebc66f1c2f807ab7cda5bc471a4bffa"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-01/protocol.json",
+      "bytes": 3202,
+      "sha256": "2c04c5dc70d1654f608d285ea85873c6af13d0c30ce82113e8afccfa280cce5c"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/chromium.json",
+      "bytes": 352136,
+      "sha256": "26ac9f379520e22631d4821ac9ab7847d9a8b870da72fb48369caa0ee6b5321c"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/progress.json",
+      "bytes": 70,
+      "sha256": "5892e78b09ef5d5c4ae91d7365b48bd0880ebc975979cb4849dde769c2405141"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/protocol.json",
+      "bytes": 3202,
+      "sha256": "73f54623428d3de497305c798487985618041fccc7f38845a5d3f1c35303ef23"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31113,
+      "sha256": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3470,
+      "sha256": "32b6dba821a8b1925ff57f525cc0c9994e9610da6929243f71a30e3ff638a55f"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-dense-link-protocol.json",
+      "bytes": 884,
+      "sha256": "8c13e860a5da7a37fb1ed76cb8c224220529778bc818b26fcf1f81ce0c6fb817"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-distal-body-start.mjs",
+      "bytes": 1383,
+      "sha256": "a4d5ee5a8ee595e601a6b6e0d88ac404f14eb4af6453a52d3041bf7a3320ffa1"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 4579,
+      "sha256": "36175b95356308d127de57278a6a039c2100fa3b2d0ca4f61718dfe641ea4997"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 2022,
+      "sha256": "c09ddec87c73af95bb30c5da5dcd6cb1fa7564d0aa79ec47949a411ddeb24dd9"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-scale-correspondence.mjs",
+      "bytes": 1498,
+      "sha256": "182ba5f4dbe4a08e876eb186b0089df18ef713ac22d92c8e2284f95cbd681435"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2613,
+      "sha256": "aef38e3a2b7363d10c66794026d62ea7096684b1947c95ad969bc4e254d7d216"
+    },
+    {
+      "path": "dense-axis-14297936-chromium-02/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-01/failure.json",
+      "bytes": 188,
+      "sha256": "6d6afa92879001a7e0776595a53f895a9ae43f3a3bce2e9ed4fa4d5688db553b"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-01/protocol.json",
+      "bytes": 3200,
+      "sha256": "3b7bb266462a0a4bb4831c6bbf1068e565d7255ae556da0feca1c8ccb55aa12c"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/progress.json",
+      "bytes": 68,
+      "sha256": "2140ba6795fc9cc8338c765b740850cb290be3a00a12aae7aa49f31674014e01"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/protocol.json",
+      "bytes": 3200,
+      "sha256": "b48f82c005894a6b640cc8d2c4cea9b6bd397ff0afb032318ef473ba8583f8d7"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31113,
+      "sha256": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3470,
+      "sha256": "32b6dba821a8b1925ff57f525cc0c9994e9610da6929243f71a30e3ff638a55f"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-dense-link-protocol.json",
+      "bytes": 884,
+      "sha256": "8c13e860a5da7a37fb1ed76cb8c224220529778bc818b26fcf1f81ce0c6fb817"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-distal-body-start.mjs",
+      "bytes": 1383,
+      "sha256": "a4d5ee5a8ee595e601a6b6e0d88ac404f14eb4af6453a52d3041bf7a3320ffa1"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 4579,
+      "sha256": "36175b95356308d127de57278a6a039c2100fa3b2d0ca4f61718dfe641ea4997"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 2022,
+      "sha256": "c09ddec87c73af95bb30c5da5dcd6cb1fa7564d0aa79ec47949a411ddeb24dd9"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-scale-correspondence.mjs",
+      "bytes": 1498,
+      "sha256": "182ba5f4dbe4a08e876eb186b0089df18ef713ac22d92c8e2284f95cbd681435"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2613,
+      "sha256": "aef38e3a2b7363d10c66794026d62ea7096684b1947c95ad969bc4e254d7d216"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "path": "dense-axis-14297936-webkit-02/webkit.json",
+      "bytes": 336772,
+      "sha256": "a3e49e073b9f7b04c6ca569604a33d47078266e70bd3d1c799e0df900eb50b71"
+    },
+    {
+      "path": "measured-dense-axis-unit-sequential-01.txt",
+      "bytes": 27907,
+      "sha256": "2589e24f93eb1503e53428a057e2f57346f81ea1d94118fed76f35a83d303494"
+    },
+    {
+      "path": "native-dense-axis-comparison-01.json",
+      "bytes": 29048,
+      "sha256": "5d397f526bdd8b8ee0fec9841a5e2b691feccc800756dd1a8ed19c1fd5882e3b"
+    },
+    {
+      "path": "native-dense-axis-default-14297936-01/chromium.json",
+      "bytes": 4674012,
+      "sha256": "22e5a6b658a945d75de1085c2d96d75726ffce99af41af937f8be9af7f47b850"
+    },
+    {
+      "path": "native-dense-axis-default-14297936-01/protocol.json",
+      "bytes": 2629,
+      "sha256": "8e4f7e9459ab423cb6346040c682aa1bdb1153e144f0a78fb5ac8db9abd21ea8"
+    },
+    {
+      "path": "native-dense-axis-default-14297936-01/webkit.json",
+      "bytes": 4703812,
+      "sha256": "7a8426e1aa1580295c5b480c16a07d43a676bb736249663dde71f63035bef9df"
+    },
+    {
+      "path": "native-dense-axis-measured-14297936-01/chromium.json",
+      "bytes": 4708831,
+      "sha256": "a134994e1a57d03dd255ad868cfbbef9d7cb3162b70da6e8076d7dfd242ef3d1"
+    },
+    {
+      "path": "native-dense-axis-measured-14297936-01/protocol.json",
+      "bytes": 2735,
+      "sha256": "fb2301d9d9176c7ec26249894e1a45c4feb87fd3a0eeb1e3e174d63670a2ccfa"
+    },
+    {
+      "path": "native-dense-axis-measured-14297936-01/webkit.json",
+      "bytes": 4405389,
+      "sha256": "a2dbb24471c06dce300ea4323a3a17b4d14aa0670de0025f709141f46f8e5cd5"
+    },
+    {
+      "path": "native-dense-axis-measured-14297936-repeat-01/chromium.json",
+      "bytes": 4708861,
+      "sha256": "c5ac802aab78b674556807ab3fe7300b9d36a5d714aaea6c9afeef3611fdf15c"
+    },
+    {
+      "path": "native-dense-axis-measured-14297936-repeat-01/protocol.json",
+      "bytes": 2735,
+      "sha256": "fb2301d9d9176c7ec26249894e1a45c4feb87fd3a0eeb1e3e174d63670a2ccfa"
+    },
+    {
+      "path": "native-dense-axis-measured-14297936-repeat-01/webkit.json",
+      "bytes": 4405387,
+      "sha256": "e572ab93146b78ffa71f8946467e35756fa2299fb753b4ca7131a3c855551de8"
+    },
+    {
+      "path": "source-snapshots/package.json",
+      "bytes": 1911,
+      "sha256": "025250ab9f6efa49ea46f7460a9f8accaa7c1ef375a2fb5a5929058dcefcada6"
+    },
+    {
+      "path": "source-snapshots/scripts/package-lash-followup-evidence.py",
+      "bytes": 13102,
+      "sha256": "8ed643b4c4604906a830daa404b157728218bca3ed601e6ceac59f8c1b32ba53"
+    },
+    {
+      "path": "source-snapshots/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "path": "source-snapshots/src/retouch/lashAnalysis.mjs",
+      "bytes": 31113,
+      "sha256": "7b29ff693c74acefd95b763e62ed4b56ddc4447a109fe9c9ffa1baef3872f29d"
+    },
+    {
+      "path": "source-snapshots/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3470,
+      "sha256": "32b6dba821a8b1925ff57f525cc0c9994e9610da6929243f71a30e3ff638a55f"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-dense-axis-compare.mjs",
+      "bytes": 3126,
+      "sha256": "4429e843399d6f4cfaef06d22b745befd8393bc9e189e2899e195fd69f52f8fc"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-dense-link-diagnosis.cjs",
+      "bytes": 7261,
+      "sha256": "2b2432315e175e2745b88352484ce1e9ac6eda58aa4f713769f7ff9d3f8173c6"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-dense-link-protocol.json",
+      "bytes": 884,
+      "sha256": "8c13e860a5da7a37fb1ed76cb8c224220529778bc818b26fcf1f81ce0c6fb817"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-distal-body-start.mjs",
+      "bytes": 1383,
+      "sha256": "a4d5ee5a8ee595e601a6b6e0d88ac404f14eb4af6453a52d3041bf7a3320ffa1"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-measured-dense-axis-protocol.json",
+      "bytes": 1106,
+      "sha256": "51877c10cec28726fca3cf1561f6de903add6c0a0b20b7ccc57918e540e9dbf1"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-measured-dense-axis.test.mjs",
+      "bytes": 2115,
+      "sha256": "d1ad6099eaf07328262f60e3ec501371d9123c7c38c3def8f57d03ebf33e7396"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 4609,
+      "sha256": "d348a5415d130fabe874cb8803f09a64e41843bd25f256b3c201b8c95fc7d9cb"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-native-cell.mjs",
+      "bytes": 2022,
+      "sha256": "c09ddec87c73af95bb30c5da5dcd6cb1fa7564d0aa79ec47949a411ddeb24dd9"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-native-real.cjs",
+      "bytes": 10662,
+      "sha256": "d5e996c15625329c2b9a8ff3100a82de31b9597766b8973cf251ede801a052f4"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-scale-correspondence.mjs",
+      "bytes": 1498,
+      "sha256": "182ba5f4dbe4a08e876eb186b0089df18ef713ac22d92c8e2284f95cbd681435"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2799,
+      "sha256": "ba75e2fa815139ac11ab045e46ebbea53e994a6fe280b43bec5ec29af0cfa44d"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 5182,
+      "sha256": "de656d90e52c68019dc7d8f785001283870c5fabdeef739ecaa4dca434a45cf7"
+    }
+  ],
+  "omitted": []
+}

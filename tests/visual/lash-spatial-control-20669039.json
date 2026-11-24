@@ -1,0 +1,100 @@
+{
+  "schema": "spatial-original-annotation-v1",
+  "file": "pexels-20669039.jpg",
+  "sourceSHA256": "e6e2d09f41c0dd0f972f16eff30a95157b575dcc52c8fa508f3c3ed24d9cfc81",
+  "coordinateSpace": "original-source-pixels",
+  "originalOnly": true,
+  "detectorExecuted": false,
+  "reviewer": "primary-agent-source-only-visual-review",
+  "reviewStatus": "provisional-needs-independent-critique",
+  "role": "hard-control-lead",
+  "eyes": {
+    "left": {
+      "cropRect": [
+        2897,
+        348,
+        1245,
+        865
+      ],
+      "tips": [],
+      "annotationExhaustive": false,
+      "ambiguities": [
+        {
+          "region": [
+            [
+              3687,
+              348
+            ],
+            [
+              4142,
+              348
+            ],
+            [
+              4142,
+              883
+            ],
+            [
+              3687,
+              883
+            ]
+          ],
+          "reason": "Visible scalp-hair overlap across the upper lash region; no same-fiber connection may be inferred through occlusion."
+        },
+        {
+          "region": [
+            [
+              3187,
+              493
+            ],
+            [
+              3592,
+              493
+            ],
+            [
+              3592,
+              703
+            ],
+            [
+              3187,
+              703
+            ]
+          ],
+          "reason": "Upper structures intersect and curl near proximal support; individual branch ownership is uncertain."
+        }
+      ]
+    },
+    "right": {
+      "cropRect": [
+        1732,
+        560,
+        763,
+        762
+      ],
+      "tips": [],
+      "annotationExhaustive": false,
+      "ambiguities": [
+        {
+          "region": [
+            [
+              1732,
+              560
+            ],
+            [
+              2495,
+              560
+            ],
+            [
+              2495,
+              1322
+            ],
+            [
+              1732,
+              1322
+            ]
+          ],
+          "reason": "Defocused eye plus hair overlap; no five resolved upper tips or observed same-fiber ownership established."
+        }
+      ]
+    }
+  }
+}

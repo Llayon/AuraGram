@@ -1,0 +1,206 @@
+{
+  "date": "2026-11-18",
+  "restoreDirectory": "tests/visual/out",
+  "policy": "Explicit public-source numeric evidence only; JPEGs and PNGs omitted. Source snapshots are for review, not automatic overwrite.",
+  "archive": "followup-20261118-05.zip",
+  "bytes": 329241,
+  "sha256": "638ad8cc5f00bc78f58320bd3f7fe8e27e1059cf4e3823d961b23240dd35e192",
+  "members": [
+    {
+      "path": "screening-census-unit-sequential-01.txt",
+      "bytes": 28640,
+      "sha256": "faee9ebc9d902a7c807242e4e5a3ecb98026bf04fc932bbdee6087005f1cdaa2"
+    },
+    {
+      "path": "source-snapshots/package.json",
+      "bytes": 1955,
+      "sha256": "1e1acf2d6964accb03ed9e5d7000fab00a650e664cba812f29b7d06ddbe1149d"
+    },
+    {
+      "path": "source-snapshots/scripts/package-lash-followup-evidence.py",
+      "bytes": 18775,
+      "sha256": "7e8258e711c61a56e05ed4f00a2f04e6f6baaf1004fa62f605076b2368cf6c61"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-screening-census-inputs.json",
+      "bytes": 2239,
+      "sha256": "faf4ad70c8dea3868def469d6320bf75ef4433712ac6fedbcec0f96dcb9c8e44"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-screening-census.cjs",
+      "bytes": 1393,
+      "sha256": "cf2c83179043d641bc9d02289e411dd748918b0548b6779c67915bbd7dbea7fe"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-screening-census.mjs",
+      "bytes": 5154,
+      "sha256": "067cc100fee34215f6789441509c1f1842d9a3585c77ff947bddb4c1f0ee175e"
+    },
+    {
+      "path": "source-snapshots/tests/visual/lash-screening-census.test.mjs",
+      "bytes": 4283,
+      "sha256": "9d3b81864264f561df147086487a3bfa8d0017fdddc619f9b019bda62c8c9951"
+    },
+    {
+      "path": "spatial-cohort-01/downloads.json",
+      "bytes": 5964,
+      "sha256": "3ab44d9af16b91fdd5b1062dfe3d261312443c02a483f40e12c7e8b77784baee"
+    },
+    {
+      "path": "spatial-cohort-02/downloads.json",
+      "bytes": 6895,
+      "sha256": "0cb0253703f0f52435ba0701dbf7d28ae8ce5d8e467d6c277204d6b3abd0e99c"
+    },
+    {
+      "path": "spatial-screen-chromium-01/screening.json",
+      "bytes": 144530,
+      "sha256": "17648a161994a356efa267c771093a37560becc9cf11094ac1a3afbe45f0bbc6"
+    },
+    {
+      "path": "spatial-screen-webkit-01/screening.json",
+      "bytes": 144403,
+      "sha256": "0867167e9990f0e6f9cbb43cac51f817403e1c5b32031687418a7bb9e185c346"
+    },
+    {
+      "path": "spatial-screening-census-01.json",
+      "bytes": 49760,
+      "sha256": "392141bd71309ea35079d6e18d3373f86985b8a4d418687249cb227b1ccf44f5"
+    },
+    {
+      "path": "spatial-screening-census-02.json",
+      "bytes": 51177,
+      "sha256": "2b2959c9eba119e7cd3f4d63397e6b13e768a8e91abc9e902cad81ca358fc656"
+    },
+    {
+      "path": "spatial-screening-census-03.json",
+      "bytes": 51177,
+      "sha256": "2b2959c9eba119e7cd3f4d63397e6b13e768a8e91abc9e902cad81ca358fc656"
+    },
+    {
+      "path": "spatial-supplement-01/downloads.json",
+      "bytes": 3169,
+      "sha256": "6213b067a3389f8f0f54f98ea024671a1a333092a598003d638e8b30abc4afd9"
+    },
+    {
+      "path": "spatial-supplement-02/downloads.json",
+      "bytes": 1139,
+      "sha256": "8a61de7d85e12dbff0269b12c433db2cac2265cc0466179b7caec259fd55b103"
+    },
+    {
+      "path": "spatial-supplement-03/downloads.json",
+      "bytes": 3418,
+      "sha256": "6256bb151528fc729dd97e3dfb75cf7dc9c50c20e650cfa7be3b0b5a9da9bf89"
+    },
+    {
+      "path": "spatial-supplement-04-chromium/screening.json",
+      "bytes": 83942,
+      "sha256": "0479b15d09136824994bf98e0f752950de3b977a083c9a9ee02a74e363265b4a"
+    },
+    {
+      "path": "spatial-supplement-04-network/downloads.json",
+      "bytes": 1756,
+      "sha256": "752ea5d3b82f8fbae95fbd07d72547b448193c2910cd35418ef4f44685ac41e4"
+    },
+    {
+      "path": "spatial-supplement-04-webkit/screening.json",
+      "bytes": 83740,
+      "sha256": "d4d362a62959422ca05a47be78f7a031910d79cd84c844c59d96eb5669f5297a"
+    },
+    {
+      "path": "spatial-supplement-04/downloads.json",
+      "bytes": 2903,
+      "sha256": "61c928edfcd30d54f3df08ac473b16a4413ff581ade35b73876ab0d1db8393e8"
+    },
+    {
+      "path": "spatial-supplement-05-chromium/screening.json",
+      "bytes": 113468,
+      "sha256": "c4e838d2868eaeb93713bb41d79b81590e8328277411bf2ad9af23cd9616696f"
+    },
+    {
+      "path": "spatial-supplement-05-webkit/screening.json",
+      "bytes": 113377,
+      "sha256": "ba0e4ed6ce1842136f2d016fbbebd927dbb6548105efdf26ca92e29acb0d0156"
+    },
+    {
+      "path": "spatial-supplement-05/downloads.json",
+      "bytes": 3427,
+      "sha256": "fab8eb60b284882b756a7266f1fbb5ff933f727083692613ccf86b94644e07c3"
+    },
+    {
+      "path": "spatial-supplement-06-chromium/screening.json",
+      "bytes": 83651,
+      "sha256": "da288afe6938f257e6d350c83be23d73ac3290742008a9507956c3cb3d52e35a"
+    },
+    {
+      "path": "spatial-supplement-06-webkit/screening.json",
+      "bytes": 83644,
+      "sha256": "01f7ca6ef390befade61f008169b4ae6b58250ef2accf4b2bf27ebb1684008bc"
+    },
+    {
+      "path": "spatial-supplement-06/downloads.json",
+      "bytes": 1737,
+      "sha256": "5e5a06cd1c085c973452b1d077cdcafaf0cfe955085a45398c4c4c9f577e4302"
+    },
+    {
+      "path": "spatial-supplement-07-chromium/screening.json",
+      "bytes": 30187,
+      "sha256": "16497d9faee4c831c833ca7ed320be6d98724313c7dab4d3d33b8fb94c7906bf"
+    },
+    {
+      "path": "spatial-supplement-07-webkit/screening.json",
+      "bytes": 30202,
+      "sha256": "154d637b7a30d1d5994c53b25e7d1df51c8f001b379138092cb2b394151426b2"
+    },
+    {
+      "path": "spatial-supplement-07/downloads.json",
+      "bytes": 1818,
+      "sha256": "1c0da892177138f0fad1e3c1c46481d4746b1b18b683ad0e31a0edd10b90998c"
+    },
+    {
+      "path": "spatial-supplement-08-chromium/screening.json",
+      "bytes": 29100,
+      "sha256": "89788b1fb60c3784b7e1e6caa455f477a6ea7e8587a1260f458cfe4793570f9e"
+    },
+    {
+      "path": "spatial-supplement-08-webkit/screening.json",
+      "bytes": 29103,
+      "sha256": "704c3b511848593fa8d657ccdb748705085a8bae6008518b30e74890ae3e6925"
+    },
+    {
+      "path": "spatial-supplement-08/downloads.json",
+      "bytes": 1201,
+      "sha256": "274b6f3e18876d7507988df2f8d39a27a1072fcb95762febfbeafc73c3da6395"
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/screening.json",
+      "bytes": 86560,
+      "sha256": "af571cfa33f938e5ae96c987d00ac2d64e431a8416d337af163bbefefbae046b"
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-02/screening.json",
+      "bytes": 28989,
+      "sha256": "88c7b44b0f63cdd2708d5464d33d0bc5483e27b36a0a29c0d8802878d89a1028"
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/screening.json",
+      "bytes": 167365,
+      "sha256": "d4dbe6f5b31cafa4be2d79dd4b394336e6975bc09335cab6c845cc0810949ce8"
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/screening.json",
+      "bytes": 86520,
+      "sha256": "5499ff0fbbb462dd81a932ede49c600a03184de5f8ce8a30b26a7cb6a25a9f0d"
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-02/screening.json",
+      "bytes": 28987,
+      "sha256": "5788a4f68b91c07c9a8437707457f11dcaa001424818235a5d06a472fa7e359d"
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/screening.json",
+      "bytes": 140483,
+      "sha256": "a82c060779e2acc78180d4bda17c6fecd0c583ab30899e08dc929a84edabb4f0"
+    }
+  ],
+  "omitted": []
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "auragram-independent-ci-compatibility-critic-v1",
+  "decision": "APPROVE narrow availability-fixture compatibility fix; no assertion/CV-gate weakening found. LENGTH HOLD remains.",
+  "scope": "Independent local read/code/hash review of additive compatibility evidence and adapter changes. No browser/model inference, product/old-packet edit or broad functional rerun. This artifact is additive, outside original559 mapping.",
+  "references": [
+    {
+      "path": "tests/visual/break-evidence/ci-compatibility/attestation.json",
+      "sha256": "d0122bb8f97633d3eaf0a1d2497b4e72cdc9a1dbb7e0f314a83c86dd5df894d8"
+    },
+    {
+      "path": "tests/visual/break-evidence/ci-compatibility/README.md",
+      "sha256": "fa64d9e2c5150f9671b84e6783c84f602f7983122cefa78d4ee1ac5996377c03"
+    },
+    {
+      "path": "tests/visual/lash-break-references.cjs",
+      "sha256": "d012d58c5ba9bebb3de2eb2a94535073052e00c4ebac8946d67405fc31c349ab"
+    },
+    {
+      "path": "tests/visual/lash-break.test.mjs",
+      "sha256": "37df367afd4bf3d42a5da47d76f044572dbff3e7917e3b367f078973181cd50e"
+    },
+    {
+      "path": "tests/visual/validate-lash-break.cjs",
+      "sha256": "2bd0f18926e98fcde30dfbca9e4a0a03f5bd790ef01aa7e9ee7aea359927103e"
+    },
+    {
+      "path": "tests/visual/replay-lash-break.cjs",
+      "sha256": "dd671aa1b468b7ba74800eaacf0d58465a3846ca1c12ea755955f0f61dc2e0d9"
+    },
+    {
+      "path": "tests/visual/break-evidence/files.json",
+      "sha256": "b05fdac805865a3f585bb2ae8c3c41ec0b4e651a2a548c93eb0464be8b0c0b3e"
+    }
+  ],
+  "independentFindings": {
+    "rootCause": "Working eyeGeometry128CRLF vs Git blob0CRLF independently confirmed; replacingCRLFwithLF yields exactly the Git blob. FaceGeometry155CRLF has the same equality; lashAnalysis alreadyLF. This is byte-check coupling, not changed product logic.",
+    "equivalentFixtures": "New reader output exactly equals old loadInputs projection of all8label{id,file} entries and ordered16actual Chromium/WebKit available filenames on authored tree. Metadata is hash-bound to same packed manifests/labels.",
+    "unchangedAssertions": "Original five-ready/three-no_face/ID assertion suffix byte-identical; earlier six tests prefix byte-identical. Loader line alone changes in test.",
+    "strictCVChecks": "Legacy loadInputs and application CV source/module validators remain unchanged; no LF normalization, hash fallback or source gate bypass introduced. Availability metadata no longer invokes unrelated live-source replay hashes.",
+    "packetPreservation": "Original break-evidence/files.json bytes equal HEAD original map. Validator independently verifies all559raw mappings/336PNG/423links and prior source/protocol checks. Original test raw bytes remain archived; original final critics unmodified.",
+    "boundedAdapter": "Only tests/visual/lash-break.test.mjs mismatch accepted when exact beforeSHA matches original packet, exact afterSHA matches live file and exact pinned readerSHA matches declared reader. Validator also compares original assertions/earlier-test prefix; every other prior live-byte gate remains strict. Replay refuses other conflicts and does not overwrite revised test.",
+    "portableBytes": "New reader is LF-only and git text attribute explicitlyunset(-text), as are test and additive JSON; pinned reader/test hashes will not be silently converted by checkout attributes."
+  },
+  "hashBindings": {
+    "beforeTestSHA256": "cea1b391a6f88ed3bdbc9d18b5b2dc5414be1e911c45037c45ec464ed01078f2",
+    "afterTestSHA256": "37df367afd4bf3d42a5da47d76f044572dbff3e7917e3b367f078973181cd50e",
+    "readerSHA256": "d012d58c5ba9bebb3de2eb2a94535073052e00c4ebac8946d67405fc31c349ab",
+    "assertionTailSHA256": "ef58daae307ad22208180af228164a864b2a7421b33bc4a136516c9d39b81160",
+    "currentPins": "afterTest and reader SHA independently match. Four decompressed raw logs match declared bytecounts and SHA. Original map unchanged."
+  },
+  "executedByCritic": [
+    "node tests/visual/validate-lash-break.cjs PASS on current tree with explicit adapter",
+    "node --test tests/visual/lash-break.test.mjs:7PASS/0FAIL/0SKIPPED/0CANCELLED",
+    "Deep equality old/new8reference identity records and16availability order",
+    "CRLF/LF exact-byte proof and assertion-tail equality",
+    "git diff review:src/prototype/package/dependencies/legacyCVsource validators unchanged"
+  ],
+  "otherEvidence": {
+    "fixedWindowsFullUnit": "188PASS in preserved parent log; critic reran targeted7 only.",
+    "LFDependencyProbe": "Preserved completed fixture7PASS uses exact LF Git dependencies on Node/Windows. Not a physical Linux-runner result; first incomplete-dependency probe failure retained.",
+    "newUbuntuCI": "PENDING after followup commit/push. No new CI PASS claim.",
+    "functionalBrowser": "Historical166PASS/2originalLengthF1FAIL/3dependentNOTRUN remains unchanged; product/functional tests not changed, no full browser rerun by critic."
+  },
+  "remaining": "Initial CI build failure and platform distinction are documented honestly. New Ubuntu build must be checked independently after push. Original Length efficacy/visual/release gates remain mandatory; this metadata/unit fix does not close G1c.1 or authorize production release.",
+  "blockers": "No reproducible blocker to this scoped compatibility followup found."
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "development-only ROI containment comparison",
+  "source": "pexels-14297936.jpg",
+  "protocols": {
+    "native-dense-axis-default-14297936-01": "8e4f7e9459ab423cb6346040c682aa1bdb1153e144f0a78fb5ac8db9abd21ea8",
+    "native-roi-contained-14297936-01": "3b8022049b5232006fcf184b92c48539a9cbde663ba863aee9c60344e1d27198",
+    "native-roi-contained-14297936-repeat-01": "3b8022049b5232006fcf184b92c48539a9cbde663ba863aee9c60344e1d27198"
+  },
+  "engines": {
+    "chromium": {
+      "repeatIdenticalExcludingTiming": true,
+      "inputs": {
+        "tests/visual/out/native-dense-axis-default-14297936-01/chromium.json": "22e5a6b658a945d75de1085c2d96d75726ffce99af41af937f8be9af7f47b850",
+        "tests/visual/out/native-roi-contained-14297936-01/chromium.json": "7d86ce792319d0a1c2a9f7c0fa9b57f16fb88e4030122fc59cb7658ff2ff7b92",
+        "tests/visual/out/native-roi-contained-14297936-repeat-01/chromium.json": "b1f9df38f63126394494e5690a59736005a79cdaa2e1d7f5d5054713b084582d"
+      },
+      "sides": {
+        "left": {
+          "seeds": 33,
+          "observedPaths": 0,
+          "patchesClipped": 0,
+          "maxPositionDeltaNative": 0,
+          "changedDecisionsOrPointCounts": []
+        },
+        "right": {
+          "seeds": 144,
+          "patchesClipped": 0,
+          "observedPaths": 52,
+          "maxPositionDeltaNative": 0,
+          "changedDecisionsOrPointCounts": []
+        }
+      }
+    },
+    "webkit": {
+      "repeatIdenticalExcludingTiming": true,
+      "inputs": {
+        "tests/visual/out/native-dense-axis-default-14297936-01/webkit.json": "7a8426e1aa1580295c5b480c16a07d43a676bb736249663dde71f63035bef9df",
+        "tests/visual/out/native-roi-contained-14297936-01/webkit.json": "193f268266ffd83140e3e7477bc432633f7bb1b239f23d2e37fd858a3e13ada0",
+        "tests/visual/out/native-roi-contained-14297936-repeat-01/webkit.json": "45f99fe09cf659b9554adc91a5d4bbd882d94b86ac6f037b4330529267a756a5"
+      },
+      "sides": {
+        "left": {
+          "seeds": 70,
+          "observedPaths": 4,
+          "patchesClipped": 0,
+          "maxPositionDeltaNative": 0,
+          "changedDecisionsOrPointCounts": []
+        },
+        "right": {
+          "seeds": 236,
+          "observedPaths": 45,
+          "patchesClipped": 0,
+          "maxPositionDeltaNative": 0,
+          "changedDecisionsOrPointCounts": []
+        }
+      }
+    }
+  }
+}

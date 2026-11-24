@@ -1,0 +1,1533 @@
+{
+  "source": "pexels-14297936.jpg",
+  "baselinePreserved": true,
+  "repeatExactExcludingTiming": true,
+  "meaning": "Posthoc scan of observed distal sections. No proximal or endpoint approval.",
+  "inputs": {
+    "tests/visual/lash-spatial-original-labels-01.json": "4d23df2501e30e27aaa5d1bb01f02231b8c62636ca09d465471adfecd1f6ed74",
+    "tests\\visual\\out\\distal-band-14297936-audit-01\\protocol.json": "566ae6c83629885f116984a383577e924703650683c6f191808724af4da5089d",
+    "tests\\visual\\out\\distal-band-14297936-repeat-01\\protocol.json": "566ae6c83629885f116984a383577e924703650683c6f191808724af4da5089d",
+    "tests\\visual\\out\\native-roi-contained-14297936-01\\chromium.json": "7d86ce792319d0a1c2a9f7c0fa9b57f16fb88e4030122fc59cb7658ff2ff7b92",
+    "tests\\visual\\out\\distal-band-14297936-audit-01\\chromium.json": "4a78222a7891fad70fd0444d9d7cde28ff56e331005eff88e33f65109f994eac",
+    "tests\\visual\\out\\distal-band-14297936-repeat-01\\chromium.json": "e3468f202bab93b2069aecf92e7867848b1465a4cbb13ce2848e6d02d468c702",
+    "tests\\visual\\out\\spatial-supplement-screen-chromium-02\\screening.json": "88c7b44b0f63cdd2708d5464d33d0bc5483e27b36a0a29c0d8802878d89a1028",
+    "tests\\visual\\out\\native-roi-contained-14297936-01\\webkit.json": "193f268266ffd83140e3e7477bc432633f7bb1b239f23d2e37fd858a3e13ada0",
+    "tests\\visual\\out\\distal-band-14297936-audit-01\\webkit.json": "7896bddbfc515203c6e0b8f156a0a446645ee77f8025679afb54cf7c2c32587d",
+    "tests\\visual\\out\\distal-band-14297936-repeat-01\\webkit.json": "c2082e31432579d1d16a77c21fa64b7c89100a32db2432e8288699cf0565b5c9",
+    "tests\\visual\\out\\spatial-supplement-screen-webkit-02\\screening.json": "5788a4f68b91c07c9a8437707457f11dcaa001424818235a5d06a472fa7e359d"
+  },
+  "results": {
+    "chromium": {
+      "left": {
+        "observed": 0,
+        "noVeto": 0,
+        "ambiguous": 0,
+        "censored": 0,
+        "unavailable": 0,
+        "changedStatus": 0,
+        "tipRegionRecords": 0,
+        "ambiguityRegionRecords": 0,
+        "rows": []
+      },
+      "right": {
+        "observed": 52,
+        "noVeto": 37,
+        "ambiguous": 15,
+        "censored": 0,
+        "unavailable": 0,
+        "changedStatus": 8,
+        "tipRegionRecords": 36,
+        "ambiguityRegionRecords": 9,
+        "rows": [
+          {
+            "rank": 0,
+            "index": 11730,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 1,
+            "index": 11954,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 2,
+            "index": 12607,
+            "points": 14,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 3,
+            "index": 12178,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 4,
+            "index": 12402,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 5,
+            "index": 13056,
+            "points": 14,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 6,
+            "index": 12626,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 7,
+            "index": 13281,
+            "points": 14,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 9,
+            "index": 12850,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 11,
+            "index": 13506,
+            "points": 14,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 12,
+            "index": 13075,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 13,
+            "index": 13074,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 15,
+            "index": 13730,
+            "points": 14,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 16,
+            "index": 13299,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 18,
+            "index": 13523,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 19,
+            "index": 13955,
+            "points": 14,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 26,
+            "index": 13747,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 30,
+            "index": 13972,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 31,
+            "index": 13971,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 34,
+            "index": 14208,
+            "points": 14,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 38,
+            "index": 14195,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 41,
+            "index": 14433,
+            "points": 14,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 46,
+            "index": 14419,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 47,
+            "index": 14667,
+            "points": 15,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 48,
+            "index": 14657,
+            "points": 14,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 52,
+            "index": 14643,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 53,
+            "index": 14855,
+            "points": 18,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          },
+          {
+            "rank": 54,
+            "index": 14891,
+            "points": 15,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 56,
+            "index": 14881,
+            "points": 14,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 57,
+            "index": 14868,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 60,
+            "index": 15114,
+            "points": 15,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 61,
+            "index": 15080,
+            "points": 18,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          },
+          {
+            "rank": 64,
+            "index": 15105,
+            "points": 14,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 68,
+            "index": 15092,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 70,
+            "index": 15338,
+            "points": 15,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 72,
+            "index": 15330,
+            "points": 14,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 73,
+            "index": 15305,
+            "points": 18,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          },
+          {
+            "rank": 79,
+            "index": 15306,
+            "points": 18,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          },
+          {
+            "rank": 81,
+            "index": 15316,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 83,
+            "index": 15562,
+            "points": 15,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 84,
+            "index": 15554,
+            "points": 14,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 86,
+            "index": 15530,
+            "points": 18,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          },
+          {
+            "rank": 88,
+            "index": 15541,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 91,
+            "index": 15540,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 93,
+            "index": 15531,
+            "points": 18,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          },
+          {
+            "rank": 95,
+            "index": 15786,
+            "points": 15,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 102,
+            "index": 15765,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 103,
+            "index": 15764,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 105,
+            "index": 15755,
+            "points": 18,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          },
+          {
+            "rank": 107,
+            "index": 16010,
+            "points": 15,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 110,
+            "index": 15756,
+            "points": 18,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          },
+          {
+            "rank": 121,
+            "index": 16452,
+            "points": 4,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          }
+        ]
+      }
+    },
+    "webkit": {
+      "left": {
+        "observed": 4,
+        "noVeto": 0,
+        "ambiguous": 4,
+        "censored": 0,
+        "unavailable": 0,
+        "changedStatus": 0,
+        "tipRegionRecords": 0,
+        "ambiguityRegionRecords": 0,
+        "rows": [
+          {
+            "rank": 17,
+            "index": 11352,
+            "points": 9,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 19,
+            "index": 11351,
+            "points": 9,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 22,
+            "index": 11575,
+            "points": 9,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 32,
+            "index": 11797,
+            "points": 9,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          }
+        ]
+      },
+      "right": {
+        "observed": 45,
+        "noVeto": 39,
+        "ambiguous": 6,
+        "censored": 0,
+        "unavailable": 0,
+        "changedStatus": 4,
+        "tipRegionRecords": 38,
+        "ambiguityRegionRecords": 2,
+        "rows": [
+          {
+            "rank": 2,
+            "index": 11282,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 3,
+            "index": 11506,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 4,
+            "index": 12159,
+            "points": 9,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 6,
+            "index": 11730,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 7,
+            "index": 11956,
+            "points": 3,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 8,
+            "index": 11954,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 9,
+            "index": 12608,
+            "points": 9,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 11,
+            "index": 12178,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 12,
+            "index": 12833,
+            "points": 9,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 16,
+            "index": 12402,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 18,
+            "index": 13057,
+            "points": 9,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 22,
+            "index": 13058,
+            "points": 9,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 24,
+            "index": 12627,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 25,
+            "index": 13282,
+            "points": 9,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 26,
+            "index": 12851,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 30,
+            "index": 13075,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 31,
+            "index": 13507,
+            "points": 9,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-1"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 35,
+            "index": 13300,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 36,
+            "index": 13299,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 40,
+            "index": 13524,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 41,
+            "index": 13523,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 49,
+            "index": 13748,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 51,
+            "index": 13747,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 58,
+            "index": 13972,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 59,
+            "index": 14219,
+            "points": 11,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 60,
+            "index": 13971,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 69,
+            "index": 14196,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 71,
+            "index": 14443,
+            "points": 11,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 72,
+            "index": 14194,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 73,
+            "index": 14407,
+            "points": 13,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 80,
+            "index": 14420,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 81,
+            "index": 14667,
+            "points": 11,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 82,
+            "index": 14418,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 85,
+            "index": 14632,
+            "points": 13,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 90,
+            "index": 14644,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 91,
+            "index": 14891,
+            "points": 11,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 94,
+            "index": 14857,
+            "points": 13,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 100,
+            "index": 15118,
+            "points": 4,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          },
+          {
+            "rank": 103,
+            "index": 14868,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 105,
+            "index": 15114,
+            "points": 11,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 116,
+            "index": 15082,
+            "points": 13,
+            "response": "no-veto",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "no-separated-band-observed",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 118,
+            "index": 15342,
+            "points": 4,
+            "response": "ambiguous",
+            "transverseContrast": "ambiguous",
+            "reasons": [
+              "multiple-supported-bands",
+              "multiple-supported-bands"
+            ],
+            "tipRegionHits": [],
+            "insideAmbiguity": true
+          },
+          {
+            "rank": 119,
+            "index": 15093,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 120,
+            "index": 15092,
+            "points": 5,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-2"
+            ],
+            "insideAmbiguity": false
+          },
+          {
+            "rank": 122,
+            "index": 15338,
+            "points": 11,
+            "response": "no-veto",
+            "transverseContrast": "no-veto",
+            "reasons": [
+              "no-separated-band-observed",
+              "no-separated-band-observed"
+            ],
+            "tipRegionHits": [
+              "right-4"
+            ],
+            "insideAmbiguity": false
+          }
+        ]
+      }
+    }
+  }
+}

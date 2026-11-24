@@ -1,0 +1,8 @@
+{
+ "meaning":"Supplementary manual original-preview views, before detector use on these2sources. No label/status forced by the earlier batch's analysis.",
+ "crops":[
+  {"file":"pexels-16720351.jpg","view":"visible-profile-eye","rect":[1450,1450,1050,900]},
+  {"file":"pexels-21792059.jpg","view":"screen-left","rect":[430,1550,1100,900]},
+  {"file":"pexels-21792059.jpg","view":"screen-right","rect":[1550,1100,1050,850]}
+ ]
+}

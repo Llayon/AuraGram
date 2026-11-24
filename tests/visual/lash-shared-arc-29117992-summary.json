@@ -1,0 +1,68 @@
+{
+  "source": "pexels-29117992.jpg",
+  "originalRecordsPreserved": true,
+  "stableExcludingTiming": true,
+  "labelsUsedPosthocOnly": true,
+  "inputs": {
+    "tests/visual/lash-spatial-case-29117992.json": "80054855ac2b9f4a840d4c7be7101ee927df8bbd2f1353e0cc08b4ee2ef5f101",
+    "tests/visual/lash-spatial-controls-05.freeze.json": "0ce945b9a92e9ea71e9217322a47156f912a33a0b873924d206c14e5f9888d34",
+    "tests/visual/lash-spatial-control-29117992.json": "aebe247878d9a1079b7ded0ffb53699da0610bf0f65a5c0516998c629ec579a9",
+    "tests\\visual\\out\\shared-arc-29117992-baseline-01\\protocol.json": "6b287771e85faa055b5f59b16346762f6a145dc097965fc1bfe69afc4bf75f06",
+    "tests\\visual\\out\\shared-arc-29117992-probe-01\\protocol.json": "6d31048fcf553be2d4f9d2d8e618d383381aa31dadd6db3a83d44c60ed17937c",
+    "tests\\visual\\out\\shared-arc-29117992-repeat-01\\protocol.json": "6d31048fcf553be2d4f9d2d8e618d383381aa31dadd6db3a83d44c60ed17937c",
+    "tests\\visual\\out\\shared-arc-29117992-baseline-01\\chromium.json": "9a6123b296e106f20f119561cdf03c05d33c931f7b29ceaf599a0e97a8f5390f",
+    "tests\\visual\\out\\shared-arc-29117992-probe-01\\chromium.json": "f8b79a673360e462076a535bbdd9340379c0c22e3338e34b7f81c5fb4aeb8d48",
+    "tests\\visual\\out\\shared-arc-29117992-repeat-01\\chromium.json": "d6bbb5452870a8beb2e8816d8d7763b8cbbb5d93e09d5f36f0478d69b16e3b41",
+    "tests\\visual\\out\\spatial-supplement-05-chromium\\screening.json": "c4e838d2868eaeb93713bb41d79b81590e8328277411bf2ad9af23cd9616696f",
+    "tests\\visual\\out\\shared-arc-29117992-baseline-01\\webkit.json": "c51d3e3dcd2054f6b73f5355f13264fc648670e48a9e7c4bcb48d07fd5cc3855",
+    "tests\\visual\\out\\shared-arc-29117992-probe-01\\webkit.json": "8c24c10404747ec6f2e6cdc34a7746cc442066b9f3083950b02d26c35785981a",
+    "tests\\visual\\out\\shared-arc-29117992-repeat-01\\webkit.json": "74eab08ece19be8fae38af4deb4a85041f300e523087248738abcaff5a0553f2",
+    "tests\\visual\\out\\spatial-supplement-05-webkit\\screening.json": "ba0e4ed6ce1842136f2d016fbbebd927dbb6548105efdf26ca92e29acb0d0156"
+  },
+  "engines": {
+    "chromium": {
+      "left": {
+        "observedStarts": 0,
+        "reasons": {},
+        "observedInAmbiguity": 0,
+        "attempted": 0,
+        "gateArrivals": 0,
+        "maxAcceptedProximalArc": 0,
+        "attempts": []
+      },
+      "right": {
+        "observedStarts": 1,
+        "reasons": {
+          "proximal-gate-beyond-budget": 1
+        },
+        "observedInAmbiguity": 0,
+        "attempted": 0,
+        "gateArrivals": 0,
+        "maxAcceptedProximalArc": 0,
+        "attempts": []
+      }
+    },
+    "webkit": {
+      "left": {
+        "observedStarts": 6,
+        "reasons": {
+          "proximal-gate-beyond-budget": 6
+        },
+        "observedInAmbiguity": 1,
+        "attempted": 0,
+        "gateArrivals": 0,
+        "maxAcceptedProximalArc": 0,
+        "attempts": []
+      },
+      "right": {
+        "observedStarts": 0,
+        "reasons": {},
+        "observedInAmbiguity": 0,
+        "attempted": 0,
+        "gateArrivals": 0,
+        "maxAcceptedProximalArc": 0,
+        "attempts": []
+      }
+    }
+  }
+}

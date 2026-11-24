@@ -1,0 +1,94 @@
+{
+  "schema": "auragram-positive-original-independent-labels-v1",
+  "method": "Manual original-only endpoint and local distal shaft annotation before any detector results, current analysis code, or new primary labels were read in this stage. Viewed three portrait previews and six native integer crops. Two regions of 10460940 were additionally viewed with nearest-neighbour enlargement in memory; no sharpening or new image detail was introduced.",
+  "exposureDisclosure": "Earlier project datasets, algorithms and diagnostic results are known to this annotator. These three new photographs had not been seen before this annotation pass. This is an independent source-only measurement, not human-certified or statistically calibrated ground truth.",
+  "coordinateConvention": "tipNative and shaftPointsNative use x-right/y-down pixels in the exact 1x crop PNG. sourceRectNative supplies the full-photo origin. Shaft points are ordered from distal toward proximal and stop before the broad merged lid line. Outward angle intervals use atan2(dy,dx) in degrees, toward the tip. They describe the visible local shaft axis, not the instantaneous mathematical derivative at a terminal pixel.",
+  "uncertaintyConvention": "Position uncertainty is an engineering radius in native source pixels. It accounts for fading endpoints, coated width and manual center selection; it is not a confidence interval. Sparse selected labels do not measure whole-eye precision or recall. Biological roots are not annotated.",
+  "classificationLimits": "Visible dark distal structures can be coated or bundled. Photographs cannot establish bare biological lashes, absence of extensions, or makeup history. 10460940 has substantial eyeliner, glitter and patterned contact lenses; these labels must not be used to certify bare natural-lash quality.",
+  "sourceManifest": "tests/visual/out/positive-02-crops/manifest.json",
+  "faceMeshStatus": "UNTESTED_BEFORE_FREEZE",
+  "analysisExposure": "UNSEEN_BEFORE_FREEZE",
+  "views": [
+    {
+      "file": "pexels-10460940.jpg",
+      "sourceSHA256": "897807ffe7d7431fe2d1b3bc55741dd361cdc39be3d2a929886c9fcc52abca49",
+      "view": "screen-left",
+      "sourceRectNative": [0, 2050, 850, 700],
+      "crop": "tests/visual/out/positive-02-crops/pexels-10460940-screen-left-1x.png",
+      "cropSHA256": "2f977045fa0f2dd78a9a3015d33d4787d792a8586b51b29b330386b5230b8238",
+      "status": "VISIBLE_SEPARATED_DISTAL_ENDPOINTS_AND_LOCAL_AXES",
+      "limitations": "Fine dark distal shafts are separated above a broad coated/eyeliner root region. Some shaft forks and nearby parallel hairs remain ambiguous. Selected endpoints fade over several pixels.",
+      "labels": [
+        {"id":"PI104L1","tipNative":[213,148],"shaftPointsNative":[[215,160],[217,172],[220,184]],"tipUncertaintyNativePx":3,"shaftPointUncertaintyNativePx":2,"outwardAngleIntervalDegrees":[-125,-80],"status":"PROVISIONAL_POSITIVE_LOCAL_AXIS","branchStatus":"selected distal segment separated; root identity unresolved","structure":"coated thin distal shaft; biological single-hair status unverified"},
+        {"id":"PI104L2","tipNative":[268,133],"shaftPointsNative":[[270,145],[272,157],[274,169]],"tipUncertaintyNativePx":3,"shaftPointUncertaintyNativePx":2,"outwardAngleIntervalDegrees":[-120,-80],"status":"PROVISIONAL_POSITIVE_LOCAL_AXIS","branchStatus":"selected distal segment separated; nearby second hair not merged into this label","structure":"coated thin distal shaft; biological single-hair status unverified"},
+        {"id":"PI104L3","tipNative":[323,143],"shaftPointsNative":[[324,155],[325,167],[327,179]],"tipUncertaintyNativePx":3.5,"shaftPointUncertaintyNativePx":2,"outwardAngleIntervalDegrees":[-120,-75],"status":"PROVISIONAL_POSITIVE_LOCAL_AXIS","branchStatus":"close neighboring shaft/fork limits exact endpoint identity; label refers to the selected left distal center","structure":"coated distal shaft or narrow bundle"}
+      ]
+    },
+    {
+      "file": "pexels-10460940.jpg",
+      "sourceSHA256": "897807ffe7d7431fe2d1b3bc55741dd361cdc39be3d2a929886c9fcc52abca49",
+      "view": "screen-right",
+      "sourceRectNative": [1700, 1690, 1250, 800],
+      "crop": "tests/visual/out/positive-02-crops/pexels-10460940-screen-right-1x.png",
+      "cropSHA256": "690ea88bf1a050901073c059d57a8c09e0335e79176c0dd1d17b185a13babb89",
+      "status": "VISIBLE_SEPARATED_DISTAL_ENDPOINTS_AND_LOCAL_AXES",
+      "limitations": "Heavy black eyeliner and coating merge proximal structures. Glitter can interfere with local intensity profiles. The selected thin terminal sections are above the broad root band; no biological root correspondence is asserted.",
+      "labels": [
+        {"id":"PI104R1","tipNative":[689,154],"shaftPointsNative":[[688,166],[686,178],[684,190]],"tipUncertaintyNativePx":4,"shaftPointUncertaintyNativePx":2.5,"outwardAngleIntervalDegrees":[-105,-60],"status":"PROVISIONAL_POSITIVE_LOCAL_AXIS","branchStatus":"separated terminal shaft; proximal overlap not annotated","structure":"coated distal shaft"},
+        {"id":"PI104R2","tipNative":[919,150],"shaftPointsNative":[[918,162],[916,174],[913,186]],"tipUncertaintyNativePx":4,"shaftPointUncertaintyNativePx":2.5,"outwardAngleIntervalDegrees":[-105,-60],"status":"PROVISIONAL_POSITIVE_LOCAL_AXIS","branchStatus":"separated terminal shaft; proximal overlap not annotated","structure":"coated distal shaft"},
+        {"id":"PI104R3","tipNative":[1031,157],"shaftPointsNative":[[1032,169],[1032,181],[1033,193]],"tipUncertaintyNativePx":4,"shaftPointUncertaintyNativePx":2.5,"outwardAngleIntervalDegrees":[-115,-65],"status":"PROVISIONAL_POSITIVE_LOCAL_AXIS","branchStatus":"visible upright terminal shaft near other hairs; root identity unresolved","structure":"coated distal shaft or narrow bundle"}
+      ]
+    },
+    {
+      "file": "pexels-7298680.jpg",
+      "sourceSHA256": "bb652bce409113d758e990bb95fa70aa445000782a95766bd9e4cb40a26267f5",
+      "view": "screen-left",
+      "sourceRectNative": [1900, 980, 550, 420],
+      "crop": "tests/visual/out/positive-02-crops/pexels-7298680-screen-left-1x.png",
+      "cropSHA256": "c58412f81800ce02303cd04cfc0f52cf4cac84cd8d9d01bb4b90a4584e08ec83",
+      "status": "VISIBLE_COATED_ENDPOINTS_AND_LOCAL_AXES",
+      "limitations": "Mascara-like dark coating and bead/clump structure are visible. A bright scalp hair crosses part of the upper fan; the selected local shaft sections avoid that crossing. Bare natural lash status is not established.",
+      "labels": [
+        {"id":"PI729L1","tipNative":[77,228],"shaftPointsNative":[[90,233],[103,238],[116,242]],"tipUncertaintyNativePx":3.5,"shaftPointUncertaintyNativePx":2.5,"outwardAngleIntervalDegrees":[-180,-135],"status":"PROVISIONAL_POSITIVE_LOCAL_AXIS","branchStatus":"outer upper-lash fan segment separated before merged root","structure":"coated distal strand or bundle"},
+        {"id":"PI729L2","tipNative":[229,126],"shaftPointsNative":[[234,136],[240,146],[246,156]],"tipUncertaintyNativePx":3.5,"shaftPointUncertaintyNativePx":2.5,"outwardAngleIntervalDegrees":[-145,-95],"status":"PROVISIONAL_POSITIVE_LOCAL_AXIS","branchStatus":"selected upper terminal segment; nearby hairs overlap farther proximally","structure":"coated distal strand or bundle"}
+      ]
+    },
+    {
+      "file": "pexels-7298680.jpg",
+      "sourceSHA256": "bb652bce409113d758e990bb95fa70aa445000782a95766bd9e4cb40a26267f5",
+      "view": "screen-right",
+      "sourceRectNative": [2710, 850, 590, 430],
+      "crop": "tests/visual/out/positive-02-crops/pexels-7298680-screen-right-1x.png",
+      "cropSHA256": "5b9d7c9cd173b5726e79228ef8b3f0134dded0e287b7e7bd3003706b51520317",
+      "status": "VISIBLE_COATED_ENDPOINTS_AND_LOCAL_AXES",
+      "limitations": "Several terminal structures are visibly bundled/coated and cross the lid crease. These are structural endpoint samples, not confirmed individual bare hairs.",
+      "labels": [
+        {"id":"PI729R1","tipNative":[242,123],"shaftPointsNative":[[242,133],[242,143],[241,153]],"tipUncertaintyNativePx":4,"shaftPointUncertaintyNativePx":2.5,"outwardAngleIntervalDegrees":[-115,-65],"status":"PROVISIONAL_POSITIVE_LOCAL_AXIS","branchStatus":"terminal clump center selected; individual hair identity unresolved","structure":"coated narrow bundle"},
+        {"id":"PI729R2","tipNative":[374,132],"shaftPointsNative":[[368,142],[362,152],[356,162]],"tipUncertaintyNativePx":4,"shaftPointUncertaintyNativePx":2.5,"outwardAngleIntervalDegrees":[-85,-35],"status":"PROVISIONAL_POSITIVE_LOCAL_AXIS","branchStatus":"oblique terminal segment separated before proximal fan overlap","structure":"coated distal strand or bundle"}
+      ]
+    },
+    {
+      "file": "pexels-3763152.jpg",
+      "sourceSHA256": "a82cbf70db1b39b11bf8abe63a8d9ce9cd35f4619f0d88d7689d6ceae7dd6713",
+      "view": "screen-left",
+      "sourceRectNative": [2550, 1390, 680, 540],
+      "crop": "tests/visual/out/positive-02-crops/pexels-3763152-screen-left-1x.png",
+      "cropSHA256": "8b3b924b4394d1a813885dd9f66e149b5c5b5b557afad2819e623cec8b5edbd2",
+      "status": "UPPER_STRUCTURES_VISIBLE_ENDPOINT_IDENTITY_AMBIGUOUS",
+      "limitations": "Upper shafts are visible, but softness, overlap and a nearly vertical foreground scalp hair hinder confident terminal localization in this pass. No coordinates added to force positives.",
+      "labels": []
+    },
+    {
+      "file": "pexels-3763152.jpg",
+      "sourceSHA256": "a82cbf70db1b39b11bf8abe63a8d9ce9cd35f4619f0d88d7689d6ceae7dd6713",
+      "view": "screen-right",
+      "sourceRectNative": [3520, 1370, 750, 540],
+      "crop": "tests/visual/out/positive-02-crops/pexels-3763152-screen-right-1x.png",
+      "cropSHA256": "175df0437635b5c2e8da855cd5461f090d2911a3d59fe4aade0b4b8f9f095bb2",
+      "status": "UPPER_STRUCTURES_VISIBLE_ENDPOINT_IDENTITY_AMBIGUOUS",
+      "limitations": "The upper fan is visible, especially oblique outer shafts. Fading and overlapping terminal structures do not support sufficiently confident isolated endpoint-and-local-axis labels here. This does not establish absence of real measurable lashes.",
+      "labels": []
+    }
+  ],
+  "freezePolicy": "Immutable original-only annotation snapshot. Do not revise after detector or primary-label exposure; preserve disagreements and corrections in a separate artifact."
+}

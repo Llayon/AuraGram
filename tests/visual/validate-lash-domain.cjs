@@ -1,0 +1,14 @@
+'use strict';
+const fs=require('fs'),zlib=require('zlib'),assert=require('assert/strict'),path=require('path'),{hash,loadInputs,archived}=require('./lash-domain-inputs.cjs');
+const base='tests/visual/domain-evidence/',read=f=>fs.readFileSync(base+f),gz=f=>JSON.parse(zlib.gunzipSync(read(f))),audit=gz('audit.json.gz'),protocol=JSON.parse(read('protocol.json'));
+assert.equal(audit.protocolSHA256,hash(read('protocol.json')));assert.equal(hash(read('protocol.json')),hash(fs.readFileSync('tests/visual/lash-domain-protocol.json')));assert.equal(audit.helperSHA256,hash(fs.readFileSync('tests/visual/lash-domain.mjs')));assert.equal(audit.harnessSHA256,hash(fs.readFileSync('tests/visual/lash-domain-audit.cjs')));
+for(const[f,h]of Object.entries(protocol.inputs))assert.equal(hash(f.startsWith('tests/visual/out/')?archived(f):fs.readFileSync(f)),h);
+for(const[f,h]of Object.entries({...protocol.images,...protocol.modules}))assert.equal(hash(fs.readFileSync(f)),h);
+const tools=gz('tools.json.gz');for(const[f,t]of Object.entries(tools)){const b=Buffer.from(t.base64,'base64');assert.equal(hash(b),t.sha256);assert.equal(hash(fs.readFileSync('tests/visual/'+f)),t.sha256);}
+const images=JSON.parse(read('images.json'));for(const i of images)assert.equal(hash(read(i.file)),i.sha256);
+let actual=0;for(const e of ['chromium','webkit']){const d=gz('overlays-'+e+'.json.gz');assert.equal(d.auditSHA256,hash(zlib.gunzipSync(read('audit.json.gz'))));assert.equal(d.helperSHA256,audit.helperSHA256);assert.equal(d.harnessSHA256,hash(fs.readFileSync('tests/visual/lash-domain-overlays.cjs')));assert.equal(d.sourceAndModulesUnchangedBeforeAfter,true);assert.ok(!d.requests.some(p=>/\.(task|wasm)$/.test(p)));for(const r of d.runs){assert.equal(r.actualNativeCrossingReplay,'PASS exact paths/flags and working dimensions');actual++;for(const f of r.files)assert.ok(images.some(i=>i.original.endsWith('/'+f.file)));}}
+assert.equal(actual,16);assert.equal(audit.runs.length,16);assert.equal(audit.excludedLabels.length,3);assert.equal(audit.runs.reduce((n,r)=>n+Object.keys(r.eyes).length,0),32);
+const initial=gz('initial-audit.json.gz');assert.equal(initial.helperSHA256,hash(zlib.gunzipSync(read('initial-helper.mjs.gz'))));
+const strip=x=>Array.isArray(x)?x.map(strip):x&&typeof x==='object'?Object.fromEntries(Object.entries(x).filter(([k])=>!['helperSHA256','selfContact'].includes(k)).map(([k,v])=>[k,strip(v)])):x;assert.deepEqual(strip(initial),strip(audit));
+for(const match of read('index.html').toString().matchAll(/(?:src|href)="([^"]+)"/g))if(!/^https?:/.test(match[1]))assert.ok(fs.existsSync(path.resolve(base,match[1])),'Broken '+match[1]);
+loadInputs();console.log('PASS:32eyes,16 exact actual crossing replays,112PNG references, source/tool/protocol hashes, preserved initial/fixed measurements. No visual acceptance; HOLD.');

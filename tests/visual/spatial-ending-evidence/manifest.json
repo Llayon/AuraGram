@@ -1,0 +1,3053 @@
+{
+  "schema": "spatial-evidence-package-v2",
+  "date": "2026-11-14",
+  "restoreDirectory": "tests/visual/out",
+  "scope": "All numeric generated data and exact recorded source snapshots; selected source/probe views",
+  "originals": [
+    {
+      "path": "tests/visual/out/spatial-cohort-02/pexels-11971337.jpg",
+      "bytes": 8015644,
+      "sha256": "99b98216df79b70ddb4dc4a77f4147453a8fa2a9266977cc92c17fd587dce3d0",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-cohort-02/pexels-14476546.jpg",
+      "bytes": 4027967,
+      "sha256": "b596599cd1946e685156638e83a868314f29940b22bdaeafab8ab27118117620",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-cohort-02/pexels-20765765.jpg",
+      "bytes": 1516204,
+      "sha256": "a83e8fb5e840a6b3c2115ed27d81591d1731c4ad17c79ce10fb6c75702c0e512",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-cohort-02/pexels-24916633.jpg",
+      "bytes": 2333622,
+      "sha256": "53edc6f48000967cb38007b4e792acab65f551fb006bcc7c24360a693a2be67a",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-cohort-02/pexels-2817080.jpg",
+      "bytes": 1809132,
+      "sha256": "1201db28cac2875d9cc77ae8f2bb3ebb74218d12076a575e2c5082344e331be5",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-cohort-02/pexels-5253967.jpg",
+      "bytes": 3450004,
+      "sha256": "b16374c3be724d3a2a610fc34684437e4561b621b2ed791f3cf8fd44049c23e2",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-cohort-02/pexels-6705392.jpg",
+      "bytes": 4867698,
+      "sha256": "e1f6eb4e2a379790f2fc9417aadaab13428aedbe4e214be6a5917308852f5acd",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-cohort-02/pexels-6896644.jpg",
+      "bytes": 3995110,
+      "sha256": "b87c0b43c6fae3bbdb2e426dc10e08f84ceb43ebefcbe87af50031b8f813e2c4",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-cohort-02/pexels-7298463.jpg",
+      "bytes": 1216347,
+      "sha256": "e73bb67d572c8163d5945cb620672aa84c5fb17db539878af98c7dfab8fd5aaa",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-cohort-02/pexels-8058707.jpg",
+      "bytes": 745678,
+      "sha256": "33203d17b25e4f8f823105d75476997c2d5bad92cfbd2e96bb6b1be3fd69ecf8",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-cohort-02/pexels-9305437.jpg",
+      "bytes": 1449322,
+      "sha256": "4f68c11857e64e92419e6e9820f8482ed097a9835c16068244fdf11d3279ec15",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-01/pexels-13673830.jpg",
+      "bytes": 1262697,
+      "sha256": "7752e72bcdc3dd75f2207bbbb1d141e8e77f19954c1674eba79b66eb55f1131e",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-01/pexels-2212718.jpg",
+      "bytes": 2285701,
+      "sha256": "0caa35499182b6877b63b62bd5555e305a550722fd050423a3dd68f52793edc0",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-01/pexels-24735911.jpg",
+      "bytes": 2227782,
+      "sha256": "f7309c571bd298fc3299c1860e22d34bf676a6856df19f5f243e344f61137cca",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-01/pexels-3762757.jpg",
+      "bytes": 3324162,
+      "sha256": "041939a5c54486db6c8cfb9ef62a7403b0a162c262a2a051ba351447f30b0382",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-01/pexels-5240254.jpg",
+      "bytes": 4175173,
+      "sha256": "3dca5e797b7dba4bd76a23e467ab6f3dc582c71d40779a3af5459df0c4a56204",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-01/pexels-8990738.jpg",
+      "bytes": 706459,
+      "sha256": "3c903e0fadbe38bf2523b4996f128a30f0849ffc64422933020e882cdbc708d5",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-02/pexels-14297936.jpg",
+      "bytes": 2447362,
+      "sha256": "237333fc947c0e4abe0ce0355fbc7f439e8bc3a5b05e6f1a5a8526c93318f948",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-02/pexels-34460007.jpg",
+      "bytes": 3525403,
+      "sha256": "9556ec1c861e410e82e1ce49c3ebcd78a3b1d33110677824449a96e7e38358aa",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-03/pexels-11396392.jpg",
+      "bytes": 1483478,
+      "sha256": "b8c82a414e84c4bf5dea6663187683182a6fadc5b87649ae7fa3fe27bc5833ae",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-03/pexels-16778620.jpg",
+      "bytes": 1112805,
+      "sha256": "954662b1f9163a3a72f75c5fe751d5d0ea6504adec4f52a336fee41aa80128ef",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-03/pexels-4456732.jpg",
+      "bytes": 1632632,
+      "sha256": "5e212045cfe1e4e9a0d7a283f9e098bd732b2ec40a37fb79ce708b680324a8a4",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-03/pexels-4672290.jpg",
+      "bytes": 4172241,
+      "sha256": "8887432f96c46502b97caa16fd10967a77a2ef67891e6c20a44b223fb517b5ec",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-03/pexels-7737959.jpg",
+      "bytes": 537297,
+      "sha256": "963e350fbbfd28cb7d51cc311ea380bccf6d38ed614964d2167fbd21cf67ba20",
+      "packaged": false
+    },
+    {
+      "path": "tests/visual/out/spatial-supplement-03/pexels-9157920.jpg",
+      "bytes": 1501003,
+      "sha256": "720bef5c5cd9b4b19afff6108404358656bf43d2e820f49b9cd5512b9e2472b9",
+      "packaged": false
+    }
+  ],
+  "omittedSourceViews": [
+    {
+      "path": "mask-scope-01-01/chromium-left-native-baselineLength.png",
+      "bytes": 36119,
+      "sha256": "e54b99934c7f335cd8056581aa238cfd2285cb8c20d5541aab0cd963bb057c5f",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/chromium-left-native-maximumRecoveryLength.png",
+      "bytes": 37255,
+      "sha256": "33546221ad0218860d09dd0ce6b4846450a3d4617aa7f4db6ccebc2fe7bb70e2",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/chromium-left-preview720long-baselineLength.png",
+      "bytes": 2030,
+      "sha256": "f0f9933187efc7c1446d0dc8738fedd1c84a35335023fd25752133dce1d06ca5",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/chromium-left-preview720long-maximumRecoveryLength.png",
+      "bytes": 2044,
+      "sha256": "de80843079124e13e4b6744912bf3990dd3db3f491ab5c0288baecc162ae16dc",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/chromium-right-native-baselineLength.png",
+      "bytes": 40271,
+      "sha256": "c8b1f36479cd0f4e55b999b49b55c70fa4cb55e126d58b5e8d5118669a35b26a",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/chromium-right-native-maximumRecoveryLength.png",
+      "bytes": 41124,
+      "sha256": "b49ffe19063c8caa9d0ace3439d5276c7e9f5c129407951f7dba65b78b1afae5",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/chromium-right-preview720long-baselineLength.png",
+      "bytes": 2225,
+      "sha256": "bf0340912a9f1433ec6e7563cd88587dfb8e8ee0bb6325a20004f197855fa5cb",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/chromium-right-preview720long-maximumRecoveryLength.png",
+      "bytes": 2272,
+      "sha256": "42085fd3165554fbc190fcdcc79b18a2176505b287eb2d905b8bdd008992b677",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/webkit-left-native-baselineLength.png",
+      "bytes": 16109,
+      "sha256": "bd9de27cabf05304eed76b077d0c8b9de22ee3642e22de02ac385894680537c6",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/webkit-left-native-maximumRecoveryLength.png",
+      "bytes": 16311,
+      "sha256": "04a79b3b69abf4cdc0a18b99badbf2523abbf17a6a87a3bdd64f138c00a8e02f",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/webkit-left-preview720long-baselineLength.png",
+      "bytes": 1106,
+      "sha256": "eaa7626187cc66e10a7250f14666984286dd377fe4436636bf402992d9165012",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/webkit-left-preview720long-maximumRecoveryLength.png",
+      "bytes": 1161,
+      "sha256": "122206f907b1b16cf16c3729e3713bfaf9d2372b3983f682c5495987b49a90d7",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/webkit-right-native-baselineLength.png",
+      "bytes": 18380,
+      "sha256": "935b85588cfe13616961c88caa3349e40a6209d334b406f3b763ebdd7fe087dd",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/webkit-right-native-maximumRecoveryLength.png",
+      "bytes": 18849,
+      "sha256": "3c4b96387bd558c9801d63f94033f79f05b151b324b67cdd1984475f087234e9",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/webkit-right-preview720long-baselineLength.png",
+      "bytes": 1250,
+      "sha256": "60bb51a2f9e1244030b6a75bedf0dfe9604792be65446991f8035794e8388e1c",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-01/webkit-right-preview720long-maximumRecoveryLength.png",
+      "bytes": 1294,
+      "sha256": "932f660ececacf1371bb7907208cc6a30cd0abbdc6ca0b3bbeb6cacb5c166fe7",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/chromium-left-native-baselineLength.png",
+      "bytes": 36119,
+      "sha256": "e54b99934c7f335cd8056581aa238cfd2285cb8c20d5541aab0cd963bb057c5f",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/chromium-left-native-maximumRecoveryLength.png",
+      "bytes": 37255,
+      "sha256": "33546221ad0218860d09dd0ce6b4846450a3d4617aa7f4db6ccebc2fe7bb70e2",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/chromium-left-preview720long-baselineLength.png",
+      "bytes": 2030,
+      "sha256": "f0f9933187efc7c1446d0dc8738fedd1c84a35335023fd25752133dce1d06ca5",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/chromium-left-preview720long-maximumRecoveryLength.png",
+      "bytes": 2044,
+      "sha256": "de80843079124e13e4b6744912bf3990dd3db3f491ab5c0288baecc162ae16dc",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/chromium-right-native-baselineLength.png",
+      "bytes": 40271,
+      "sha256": "c8b1f36479cd0f4e55b999b49b55c70fa4cb55e126d58b5e8d5118669a35b26a",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/chromium-right-native-maximumRecoveryLength.png",
+      "bytes": 41124,
+      "sha256": "b49ffe19063c8caa9d0ace3439d5276c7e9f5c129407951f7dba65b78b1afae5",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/chromium-right-preview720long-baselineLength.png",
+      "bytes": 2225,
+      "sha256": "bf0340912a9f1433ec6e7563cd88587dfb8e8ee0bb6325a20004f197855fa5cb",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/chromium-right-preview720long-maximumRecoveryLength.png",
+      "bytes": 2272,
+      "sha256": "42085fd3165554fbc190fcdcc79b18a2176505b287eb2d905b8bdd008992b677",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/webkit-left-native-baselineLength.png",
+      "bytes": 16109,
+      "sha256": "bd9de27cabf05304eed76b077d0c8b9de22ee3642e22de02ac385894680537c6",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/webkit-left-native-maximumRecoveryLength.png",
+      "bytes": 16311,
+      "sha256": "04a79b3b69abf4cdc0a18b99badbf2523abbf17a6a87a3bdd64f138c00a8e02f",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/webkit-left-preview720long-baselineLength.png",
+      "bytes": 1106,
+      "sha256": "eaa7626187cc66e10a7250f14666984286dd377fe4436636bf402992d9165012",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/webkit-left-preview720long-maximumRecoveryLength.png",
+      "bytes": 1161,
+      "sha256": "122206f907b1b16cf16c3729e3713bfaf9d2372b3983f682c5495987b49a90d7",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/webkit-right-native-baselineLength.png",
+      "bytes": 18380,
+      "sha256": "935b85588cfe13616961c88caa3349e40a6209d334b406f3b763ebdd7fe087dd",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/webkit-right-native-maximumRecoveryLength.png",
+      "bytes": 18849,
+      "sha256": "3c4b96387bd558c9801d63f94033f79f05b151b324b67cdd1984475f087234e9",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/webkit-right-preview720long-baselineLength.png",
+      "bytes": 1250,
+      "sha256": "60bb51a2f9e1244030b6a75bedf0dfe9604792be65446991f8035794e8388e1c",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-01-02/webkit-right-preview720long-maximumRecoveryLength.png",
+      "bytes": 1294,
+      "sha256": "932f660ececacf1371bb7907208cc6a30cd0abbdc6ca0b3bbeb6cacb5c166fe7",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-02/chromium-left-native-baselineLength.png",
+      "bytes": 35683,
+      "sha256": "10958391244b481f3d095496f7a3e63924019b84fafef8e90417ae005422c356",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-02/chromium-left-native-maximumRecoveryLength.png",
+      "bytes": 36178,
+      "sha256": "e15786ab4ed1a6743c246f27f8c5ea1f1f6bb36093783a5533aaa547fef52be2",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-02/chromium-left-preview720long-baselineLength.png",
+      "bytes": 1717,
+      "sha256": "6c59a9b198cec40028a73cd9f542724bb2d95bc69f9f1c31c55773c7f018ff31",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-02/chromium-left-preview720long-maximumRecoveryLength.png",
+      "bytes": 1759,
+      "sha256": "b648b449acc83d88ef47842dcff5a9f785d68589f48a002a8e4935453e7fa90a",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-03/chromium-left-native-baselineLength.png",
+      "bytes": 35683,
+      "sha256": "10958391244b481f3d095496f7a3e63924019b84fafef8e90417ae005422c356",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-03/chromium-left-native-maximumRecoveryLength.png",
+      "bytes": 36178,
+      "sha256": "e15786ab4ed1a6743c246f27f8c5ea1f1f6bb36093783a5533aaa547fef52be2",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-03/chromium-left-preview720long-baselineLength.png",
+      "bytes": 1717,
+      "sha256": "6c59a9b198cec40028a73cd9f542724bb2d95bc69f9f1c31c55773c7f018ff31",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-03/chromium-left-preview720long-maximumRecoveryLength.png",
+      "bytes": 1759,
+      "sha256": "b648b449acc83d88ef47842dcff5a9f785d68589f48a002a8e4935453e7fa90a",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-04/chromium-left-native-baselineLength.png",
+      "bytes": 35683,
+      "sha256": "10958391244b481f3d095496f7a3e63924019b84fafef8e90417ae005422c356",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-04/chromium-left-native-maximumRecoveryLength.png",
+      "bytes": 36178,
+      "sha256": "e15786ab4ed1a6743c246f27f8c5ea1f1f6bb36093783a5533aaa547fef52be2",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-04/chromium-left-preview720long-baselineLength.png",
+      "bytes": 1717,
+      "sha256": "6c59a9b198cec40028a73cd9f542724bb2d95bc69f9f1c31c55773c7f018ff31",
+      "packaged": false
+    },
+    {
+      "path": "mask-scope-02-04/chromium-left-preview720long-maximumRecoveryLength.png",
+      "bytes": 1759,
+      "sha256": "b648b449acc83d88ef47842dcff5a9f785d68589f48a002a8e4935453e7fa90a",
+      "packaged": false
+    },
+    {
+      "path": "native-cell-real-views-01/chromium-left.png",
+      "bytes": 1000348,
+      "sha256": "491f388ff12676cdb295a50cc9148fab0e18dffb690b43a30408bf0588fc6427",
+      "packaged": false
+    },
+    {
+      "path": "native-cell-real-views-01/chromium-right.png",
+      "bytes": 1168807,
+      "sha256": "c8c864a784f759954bded80b178fbd5e10f429b92035464412990ef8aeb22e78",
+      "packaged": false
+    },
+    {
+      "path": "native-cell-real-views-01/webkit-left.png",
+      "bytes": 1001264,
+      "sha256": "f2fa660817af7e02b8e613693be99441501513e7bf234ffe2628d5160eca31b3",
+      "packaged": false
+    },
+    {
+      "path": "native-cell-real-views-01/webkit-right.png",
+      "bytes": 1168681,
+      "sha256": "e444c97a06bd46555bd701df942ebd1269bd27fa155a6f933f370069b538feb9",
+      "packaged": false
+    },
+    {
+      "path": "native-real-views-01/chromium-left.png",
+      "bytes": 1000463,
+      "sha256": "489d87307882caab8894e2caf3acd7490f05b83d88343c728550104aba5c9325",
+      "packaged": false
+    },
+    {
+      "path": "native-real-views-01/chromium-right.png",
+      "bytes": 1168250,
+      "sha256": "a97cf3a6cd543fdb207cfa6b02ac4bb5a9c55a3da98d3cfbf8e5bfb4a22bbcdf",
+      "packaged": false
+    },
+    {
+      "path": "native-real-views-01/webkit-left.png",
+      "bytes": 1000801,
+      "sha256": "bc44ff293a01d74209c2342c9903142d74b4e1fee7f151eb6459b39cc71e23db",
+      "packaged": false
+    },
+    {
+      "path": "native-real-views-01/webkit-right.png",
+      "bytes": 1168468,
+      "sha256": "378dda039d71c3adf30d2b5f9cef565d534f769ed5ade25a5e9045f6da00ed84",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-11971337-left.png",
+      "bytes": 969631,
+      "sha256": "27819485b11ce11ddeee32531113619634902862de81dde0c7a962f5c3a69c06",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-11971337-portrait.png",
+      "bytes": 1281063,
+      "sha256": "093c1dd6b6c49f20f469a7a739eb0b0234b35e02441d6bd4a4adede0a4b204c8",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-11971337-right.png",
+      "bytes": 1318285,
+      "sha256": "078fb379865468226faa0201b507be009b576f7f721655dcd8355c3ea8f29e9b",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-2817080-portrait.png",
+      "bytes": 1054925,
+      "sha256": "3b6fd3c7e9b14b0b1fd9abe7bec2a00faabe92916ba101868889bb9e64f12bd8",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-5253967-left.png",
+      "bytes": 407129,
+      "sha256": "092335f3da02ca352d4b7efbc465670cc53eb96a257f3d853c900a55157cbd28",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-5253967-portrait.png",
+      "bytes": 1018900,
+      "sha256": "8b34952b564671b83c3c52fd49776d99b6b541c6e555951b464f2e0b697a1a6b",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-5253967-right.png",
+      "bytes": 399376,
+      "sha256": "55fb822540169dca9aaac4b3e6ceac83fabc94526ae1c313be9b0946ca3ee576",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-6705392-portrait.png",
+      "bytes": 772277,
+      "sha256": "818124dc0aba08b417cc63c6727eab17749ecb08b3b52f2c94057a9e6a62a6ce",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-6896644-left.png",
+      "bytes": 2081744,
+      "sha256": "b77be93b852c9a5ebabc5238de087a77bbec71985f99f2f421f1a59eaed4caa6",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-6896644-portrait.png",
+      "bytes": 907226,
+      "sha256": "c39bbfe51b95ec2f080f307c82095d93855ba5efaca2655da8610c629bc0e38f",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-6896644-right.png",
+      "bytes": 852312,
+      "sha256": "442ad52d2d9f63c22765c57a73b8bf3306f04505a2f694938953ae586b19bff2",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-chromium-01/pexels-7298463-portrait.png",
+      "bytes": 428437,
+      "sha256": "b3850f6eb7254913e978210e514ec4e64a56bfaf1d8af21cb8c3252abb570534",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-11971337-left.png",
+      "bytes": 897692,
+      "sha256": "9624dea94aa0e5ccd03d6854f480f83ed74644cd54ee172530c3f86e32ffa6cd",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-11971337-portrait.png",
+      "bytes": 1404014,
+      "sha256": "44afbeacbd85901338547b5c17dd908cc4b653386872bf21d81f0e866fb5d269",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-11971337-right.png",
+      "bytes": 1185208,
+      "sha256": "7590ab57a2b4711b116e69ff9d9eba2b3de3648af30e6cd3ee69ef8e2b8f5165",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-2817080-portrait.png",
+      "bytes": 948275,
+      "sha256": "8fd9587076ed266dfcf3963af6c78c6f03680dc31f0ff1936193808bb4390815",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-5253967-left.png",
+      "bytes": 331799,
+      "sha256": "50c9ed2ad366a0876c4e1e9f2cf6092694a8f67f31e974d0172e5e02945e442b",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-5253967-portrait.png",
+      "bytes": 903435,
+      "sha256": "f63deb2b3fc0857b9cb2ccb6192682d98ce5ad602e94c5d7e651834a018f836a",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-5253967-right.png",
+      "bytes": 324456,
+      "sha256": "7e1ec3c3279538216363835aa81500432ddb818adb1caccd0b328330dbb67663",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-6705392-portrait.png",
+      "bytes": 661484,
+      "sha256": "13e0f89ed1b8a4df8e855e0d842a38adcecc902ee00cf037c94523028b7b1dab",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-6896644-left.png",
+      "bytes": 1578701,
+      "sha256": "4b827b980b4b12e9312c233eb5a4f62d0f261e9e2f63e089733ab0ba2e394cfa",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-6896644-portrait.png",
+      "bytes": 777766,
+      "sha256": "f0c1142c3fb86b9b78afc6dc6e1347aab740e18783da5f47b0b6412b2c636b00",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-6896644-right.png",
+      "bytes": 733027,
+      "sha256": "2995f829a611b3d4e10ef3e495aa7f4733b40805c4f06bb2477fb286ddac9cbb",
+      "packaged": false
+    },
+    {
+      "path": "spatial-screen-webkit-01/pexels-7298463-portrait.png",
+      "bytes": 373829,
+      "sha256": "64b4effcf3482947c4bb52e57ecea2c88a391ffa19c25e991045e1f6426aeb85",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-13673830-portrait.png",
+      "bytes": 602937,
+      "sha256": "992f1484ecc81386eec1ec32c39414f06370e7b232cfc9eed2b5461aa2d84d61",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-2212718-left.png",
+      "bytes": 508495,
+      "sha256": "40061f8fccfb6530f037af6c6e42a1bee56ba1b699f2c1888f648861839df3be",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-2212718-portrait.png",
+      "bytes": 487040,
+      "sha256": "1d32e6bf409364aa523c4fc3677d62d9f8105295d88d5f344887fa8395db56fe",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-2212718-right.png",
+      "bytes": 474526,
+      "sha256": "70d9a5d4e47a5cba641608a27376b1c1af772948a217ff06627f3d6e2911b882",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-24735911-left.png",
+      "bytes": 861275,
+      "sha256": "4aa2247c69ced007d2e8cfe0a68df081e735a93ba529fcc162076fe561fa2a69",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-24735911-portrait.png",
+      "bytes": 890002,
+      "sha256": "411a366496de9b6a86815cc4699d092683d56857e03d83dff99e98ec3e068ed8",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-24735911-right.png",
+      "bytes": 691006,
+      "sha256": "f515929a06fe76cc70118b1fee14bf53af1def70c11eea113f9cd0337b4af5a7",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-3762757-portrait.png",
+      "bytes": 1200113,
+      "sha256": "e515d26387fa4208ec9d28cc85038aebccafd04b38f45d1f36ed0d6fac002319",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-5240254-portrait.png",
+      "bytes": 477048,
+      "sha256": "714462311ac7bb23ec9addc9179edcf00e712d91fe21f1d3c08decdc6f26a2b9",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-8990738-left.png",
+      "bytes": 503916,
+      "sha256": "e999d2120d51dd3dac72d38aa21e836ec68f52dfb435879cbb516cd232ca9e89",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-8990738-portrait.png",
+      "bytes": 785578,
+      "sha256": "b46f6ba60b6ca8fcf635584cbb7df42adce8006fc465eae68d0b6cd619925616",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-01/pexels-8990738-right.png",
+      "bytes": 349142,
+      "sha256": "b8b4252a19093b6ce618912926e331b99ee1728c4eb4752cf39722e9acc7d9d5",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-02/pexels-14297936-left.png",
+      "bytes": 999402,
+      "sha256": "e893b05c396e225c3bff82deb6428d5824ce944bb536bea5c6ef811161d44128",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-02/pexels-14297936-portrait.png",
+      "bytes": 1133986,
+      "sha256": "59295bfccaa0c3afb38ba40cfb49b814d265be291265565e7597525fc419666b",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-02/pexels-14297936-right.png",
+      "bytes": 1165525,
+      "sha256": "2c77a12f1ff97f58aa27ccc53d0b2009a8ea1dbc3511f9f3523b53bb5760bea4",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-02/pexels-34460007-portrait.png",
+      "bytes": 1013514,
+      "sha256": "5126cb9bc3336a42c1958465c2d7181082cef5ef532463097f328b9153d01526",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-11396392-left.png",
+      "bytes": 335491,
+      "sha256": "aae0ac2f4bf84a55ee4061e627789d6ca75700f1ea894657c72bc47ceb80899a",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-11396392-portrait.png",
+      "bytes": 915974,
+      "sha256": "8fc0aedae3bd82333efc2e10217691a522812c873c4f58cc50f4b3f3e4695ae4",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-11396392-right.png",
+      "bytes": 269496,
+      "sha256": "96046c583715ddee893c8c0b4b38bb89bc4c63632d8525b70050314caf3bc6a4",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-16778620-left.png",
+      "bytes": 215125,
+      "sha256": "4fa76548473075825b8fc3d933cf297543ff0cb735f69a855150216e856d374e",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-16778620-portrait.png",
+      "bytes": 995625,
+      "sha256": "d2901d9bf4c669d2194bad9be6ef1433fb778d9bb069748a1915847edb02f9a1",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-16778620-right.png",
+      "bytes": 180614,
+      "sha256": "c40c9cd20f7f80c422c78be2a2c030bc76d329f5bd19e9c3524206c0d58dc728",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-4456732-left.png",
+      "bytes": 379050,
+      "sha256": "53af011448eec0f29fc72b81d24e00607cfa3f740d9b70274e0d59269117c964",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-4456732-portrait.png",
+      "bytes": 969510,
+      "sha256": "2eeaa13f04f4e8bee7be79814910b96d1a5a3e1bff079b36754087127f2c82bd",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-4456732-right.png",
+      "bytes": 367243,
+      "sha256": "07f11c9d5761c11484acb155366b5e20575bc92be5705764fe07e22ec0abff3a",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-4672290-left.png",
+      "bytes": 762931,
+      "sha256": "4c46f2e76f62ff6f467d932988e9247487dc4d1c1e46e0f27ad66eb5f470c62b",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-4672290-portrait.png",
+      "bytes": 426119,
+      "sha256": "40267980eb0b79eb9cd3980bb283226e2dd7225da935276983bfc6bc1aa6167e",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-4672290-right.png",
+      "bytes": 460799,
+      "sha256": "471365e4ab14cb31d5c9e88553ff8970909b9938c8d6361610cc622abc043a89",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-7737959-left.png",
+      "bytes": 163906,
+      "sha256": "c2f4d8331bc10be88c1139794fda13a8ffd6a556f1d6213c75a3bbc3bd3e9e66",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-7737959-portrait.png",
+      "bytes": 896456,
+      "sha256": "bdc15d1ea801cdec1cca91491543e4f4cecfd81d65a69c157ba79dea5a4a966d",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-7737959-right.png",
+      "bytes": 65760,
+      "sha256": "05b4fbbfa39f75ed7371e3667621820932393ad3269d439f66f914d40d4583aa",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-9157920-left.png",
+      "bytes": 930823,
+      "sha256": "c250b605d67ff552500a5946f349939bdac7c4d48cfa63bcc2ac6142d02e5c9d",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-9157920-portrait.png",
+      "bytes": 851428,
+      "sha256": "f0d0c8ec9a1e18262da56811700be382f20857d8584c989c5a8fd69fd8e29340",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-chromium-03/pexels-9157920-right.png",
+      "bytes": 295476,
+      "sha256": "aa90c68df68d925a21da346878a89734fc33b33b5cc1c6cdb9518615df12f644",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-13673830-portrait.png",
+      "bytes": 579091,
+      "sha256": "f3375be077b417205f0e1769a8206f2f5434830b183a6d0bdbe8c17a885c1a6d",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-2212718-left.png",
+      "bytes": 421752,
+      "sha256": "5146a0c7f51fbd72cf3ce41a1a73cc88b696417370fd7dea6e0b872e3fdd6610",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-2212718-portrait.png",
+      "bytes": 507396,
+      "sha256": "9c298376c602eb87e7b777e4142da5746f8822a1ddd84f68a107d84c48ddff61",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-2212718-right.png",
+      "bytes": 392317,
+      "sha256": "4751310341917472fab66761fc0f0798745645f545297308f1f98f24edbbf2f2",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-24735911-left.png",
+      "bytes": 655409,
+      "sha256": "5ecb50073f2899daf3d2a2988e354ccee65aad7186c2263e2ca5a0719d567296",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-24735911-portrait.png",
+      "bytes": 797493,
+      "sha256": "f07a1a14e08256141f58f85caf2c4b0017fba0f40623919e792839206c5c1e75",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-24735911-right.png",
+      "bytes": 532900,
+      "sha256": "3be6e3a69ba74512faa40266890dea8b964f4e32639cdd525d519d74d14b5f4d",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-3762757-portrait.png",
+      "bytes": 1063545,
+      "sha256": "45d2b77a9814e576ae4a19d404d3b3026140a351c06601edd8f8bac1df9bbd0e",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-5240254-portrait.png",
+      "bytes": 452109,
+      "sha256": "b751ed2a5993cd78656fb63a046f5700f3d7435c99e1237d6fb95739782f4dba",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-8990738-left.png",
+      "bytes": 382590,
+      "sha256": "32aa95ed720acaa205b1162ad420741d53b7a9e263e97e91e60c7711525bd6f3",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-8990738-portrait.png",
+      "bytes": 611093,
+      "sha256": "8ffed00d5c88258469f1a2cd4770e62a53471da45146b0d18db7db8860e05df6",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-01/pexels-8990738-right.png",
+      "bytes": 268040,
+      "sha256": "663d74b84a8646db468109a5a822595acaa3a42c9d40036c5b6e15a0023a2873",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-02/pexels-14297936-left.png",
+      "bytes": 762452,
+      "sha256": "fbb346626ff70ec6cbdd1500c09d42dddafaa3b79115dc8548b865547ae5db28",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-02/pexels-14297936-portrait.png",
+      "bytes": 1000855,
+      "sha256": "497c6b9960a988f00d2df01e7ed10f90e920a49b5c2b17b45ce58edb6691231b",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-02/pexels-14297936-right.png",
+      "bytes": 894597,
+      "sha256": "e5cce35700f38c7bf91b7138f7660d303b9bfef741a066e7ddd92c3aa04782fd",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-02/pexels-34460007-portrait.png",
+      "bytes": 892532,
+      "sha256": "02ee8ab2cd9a757bad9166a4a65e7a28c5e300df46db0f7591732207f4ea63fc",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-11396392-left.png",
+      "bytes": 250426,
+      "sha256": "181b5f28133b799787bf237c8dbd26104dbcce6e6c8103a901be38427632e3c1",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-11396392-portrait.png",
+      "bytes": 799107,
+      "sha256": "dacce6961188eb179b78e8fa8756b3238022d727bf8855fc031acfc3d7f363b5",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-11396392-right.png",
+      "bytes": 178769,
+      "sha256": "71dc09f0ac11a4eb14346128ab4d7c5c43bce829747b20fc4692e67ea669f4e1",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-16778620-left.png",
+      "bytes": 167479,
+      "sha256": "dfb5f05fb2ec4290f6d92bb9bac24035cd4fe62b41a6c837ba8b00618b0166c9",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-16778620-portrait.png",
+      "bytes": 847221,
+      "sha256": "71ed1a67e98646bdaa84645c13497ea8a555aee7788252e8c91090cec3604359",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-16778620-right.png",
+      "bytes": 140690,
+      "sha256": "c470481b337d8a8f1548a1a8cee907bfbf5105affa7096e510d77abde205e629",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-4456732-left.png",
+      "bytes": 301837,
+      "sha256": "43accfa9b1340dd5208548d80dacc92fba409a5c43d9df53fb0077f943cc3afe",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-4456732-portrait.png",
+      "bytes": 863909,
+      "sha256": "94cf2188877a04134189058524bed095f31d7cbe63e618b6bd0914d3122d615d",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-4456732-right.png",
+      "bytes": 290086,
+      "sha256": "bf3ead19bb8c398455f3c7e2af7774613012bcc5fa8d450814b987a4a60d3633",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-4672290-left.png",
+      "bytes": 616627,
+      "sha256": "504e0d88596d6b1bd221dcc8b6c2fcde63bd4d28d095e3a4d0780fe3fa9b9687",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-4672290-portrait.png",
+      "bytes": 425581,
+      "sha256": "550b8f2de57faedabc5e3793e3563f3bf94c72678b569c1814080db7f1d474ba",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-4672290-right.png",
+      "bytes": 364376,
+      "sha256": "7a118e30b1603c0b82799e1d28719a08dd9865f6bb145d906daf184b22804be3",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-7737959-left.png",
+      "bytes": 123897,
+      "sha256": "ba43d84b033c38906991fcc2237a9d3d7505d71dea7140406e9774b225007d05",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-7737959-portrait.png",
+      "bytes": 752267,
+      "sha256": "889f672d69cca287dac89c327b0b4a5aef89ede62a48a66512d340c64a1b6c95",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-7737959-right.png",
+      "bytes": 47549,
+      "sha256": "dcffd76ffcc0d7cf183031bea6f99f1827307b101476779b5a142cd149d40dd3",
+      "packaged": false
+    },
+    {
+      "path": "spatial-supplement-screen-webkit-03/pexels-9157920-portrait.png",
+      "bytes": 725227,
+      "sha256": "ccaf955acbd7a9c16e8f1a96bbfefdae91c92777c7171441870362e03b151bc0",
+      "packaged": false
+    }
+  ],
+  "originalPolicy": "Original JPEGs and most full screening PNGs omitted from distributed package, retained locally. Rebuild views from recorded public source URLs and require the original SHA256. No root-level user photos included.",
+  "archives": [
+    {
+      "file": "observation-evidence-01.zip",
+      "bytes": 17762455,
+      "sha256": "b33650e4c0ea59e18db191da4cd8216c4f07c7809e6ba6ac620d929035b410ac"
+    },
+    {
+      "file": "observation-evidence-02.zip",
+      "bytes": 18671781,
+      "sha256": "ff5c8a0dddd198059151fe439e3ffd1a35f56737121dc4a70a8b085a9e68a5fb"
+    },
+    {
+      "file": "observation-evidence-03.zip",
+      "bytes": 17772932,
+      "sha256": "14e160bb01b389c692c9f2143b7e3a5e679213b37b0a40f9c8fb05750f5e0281"
+    },
+    {
+      "file": "observation-evidence-04.zip",
+      "bytes": 2561797,
+      "sha256": "2a2414e458a77f7b06f067adf75292d4c695c23b3a192171d222e9a80a35401a"
+    }
+  ],
+  "members": [
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "baseline-association-views-01/chromium-left.png",
+      "bytes": 1000569,
+      "sha256": "3b1a4375f11fff44973fd5b338e7de06105f2941393c2e4271ae83afc2593f17"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "baseline-association-views-01/chromium-right.png",
+      "bytes": 1171533,
+      "sha256": "a3fcb10f6fd390fa4dd509e0ba4d6219ed11a64f3aed63b790151678862cabbe"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "baseline-association-views-01/legend.txt",
+      "bytes": 272,
+      "sha256": "ddae86da89eec316644e51925e3ae6a59b4463f0868486e49df757680dc7f8ba"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "baseline-association-views-01/webkit-left.png",
+      "bytes": 1001019,
+      "sha256": "4ecfc13dcbf4cf3219d94cc739b9cdb83dc33f37712689abc7ee8d379f999d42"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "baseline-association-views-01/webkit-right.png",
+      "bytes": 1172529,
+      "sha256": "5d361c347f9f986ca20f92bd5305b40eb59676f7321f6ea4a579955c07af4e70"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/chromium.json",
+      "bytes": 15365065,
+      "sha256": "abc51345f5067467c36a744f21f4f6c5a1f082279cd0df53331b2af71f47be43"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/protocol.json",
+      "bytes": 1779,
+      "sha256": "ce7e2e89161d68d1804eb616bf029a9df5deb94c0275b0d8b40f408254290fe6"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/runner.cjs",
+      "bytes": 6093,
+      "sha256": "ee5b80edccca4766d6d3b7c1cd2a684e1e5e0bed0b89628b0d31bfe188b5b840"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31142,
+      "sha256": "73b6ee9ed947c47a81c9c21240e64d445206372c72aca5815a1434ad3b43945f"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-01/webkit.json",
+      "bytes": 25906886,
+      "sha256": "5fdff1ffd28a43aa952587b1055842891fa24903880b4e8a729b2a3d56d4c8a8"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/chromium.json",
+      "bytes": 15365065,
+      "sha256": "abc51345f5067467c36a744f21f4f6c5a1f082279cd0df53331b2af71f47be43"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/protocol.json",
+      "bytes": 1779,
+      "sha256": "ce7e2e89161d68d1804eb616bf029a9df5deb94c0275b0d8b40f408254290fe6"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/runner.cjs",
+      "bytes": 6093,
+      "sha256": "ee5b80edccca4766d6d3b7c1cd2a684e1e5e0bed0b89628b0d31bfe188b5b840"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31142,
+      "sha256": "73b6ee9ed947c47a81c9c21240e64d445206372c72aca5815a1434ad3b43945f"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-ending-02/webkit.json",
+      "bytes": 25906886,
+      "sha256": "5fdff1ffd28a43aa952587b1055842891fa24903880b4e8a729b2a3d56d4c8a8"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/chromium.json",
+      "bytes": 2928892,
+      "sha256": "5fba71c7905119a8817e0dcaf5c46f760461c772be114013aaa34443aad82911"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/protocol.json",
+      "bytes": 2367,
+      "sha256": "5f05340157e339b5db271319bbeb3eb222c4309d985f8c9d0c3c95a47e395065"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/runner.cjs",
+      "bytes": 8487,
+      "sha256": "4fc43d617ede34ca0969a58d97381f662cf12701c1b8201311c2c374a0cac5bd"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31142,
+      "sha256": "73b6ee9ed947c47a81c9c21240e64d445206372c72aca5815a1434ad3b43945f"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3470,
+      "sha256": "32b6dba821a8b1925ff57f525cc0c9994e9610da6929243f71a30e3ff638a55f"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-distal-body-start.mjs",
+      "bytes": 1383,
+      "sha256": "a4d5ee5a8ee595e601a6b6e0d88ac404f14eb4af6453a52d3041bf7a3320ffa1"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 4529,
+      "sha256": "ec92bcaa1a22b42da7c39ee998792631096583852a5e121c1a61248b7b6aa8ae"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-scale-correspondence.mjs",
+      "bytes": 1498,
+      "sha256": "182ba5f4dbe4a08e876eb186b0089df18ef713ac22d92c8e2284f95cbd681435"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-01/webkit.json",
+      "bytes": 3146188,
+      "sha256": "9b13bd529fa468f6f6d1b2e01bf9a95184439692cc55808ea749c4bf6dec4677"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/chromium.json",
+      "bytes": 2928892,
+      "sha256": "98891ffc5b87f6281c15e7cf3a8d1c40161a24e25ab9929b7766918e455c15ab"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/protocol.json",
+      "bytes": 2367,
+      "sha256": "5f05340157e339b5db271319bbeb3eb222c4309d985f8c9d0c3c95a47e395065"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/runner.cjs",
+      "bytes": 8487,
+      "sha256": "4fc43d617ede34ca0969a58d97381f662cf12701c1b8201311c2c374a0cac5bd"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31142,
+      "sha256": "73b6ee9ed947c47a81c9c21240e64d445206372c72aca5815a1434ad3b43945f"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3470,
+      "sha256": "32b6dba821a8b1925ff57f525cc0c9994e9610da6929243f71a30e3ff638a55f"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-distal-body-start.mjs",
+      "bytes": 1383,
+      "sha256": "a4d5ee5a8ee595e601a6b6e0d88ac404f14eb4af6453a52d3041bf7a3320ffa1"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 4529,
+      "sha256": "ec92bcaa1a22b42da7c39ee998792631096583852a5e121c1a61248b7b6aa8ae"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-scale-correspondence.mjs",
+      "bytes": 1498,
+      "sha256": "182ba5f4dbe4a08e876eb186b0089df18ef713ac22d92c8e2284f95cbd681435"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "distal-body-real-02/webkit.json",
+      "bytes": 3146188,
+      "sha256": "50d54d07e29d7843393e8b0adf3f55db74a52e3521c1ddb8c2548a5d40c0d6ee"
+    },
+    {
+      "archive": "observation-evidence-01.zip",
+      "archivePath": "local-ending-real-01/chromium.json",
+      "bytes": 30199587,
+      "sha256": "4864e59100603f6def05c568ca8fa9cbd176cd789dc3ae9f99c3137074e45c0b"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/protocol.json",
+      "bytes": 1788,
+      "sha256": "3c8c160e21773ec33cdd7864f46347ed49694f97c85d0b4ddeebe75062403919"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/runner.cjs",
+      "bytes": 6093,
+      "sha256": "ee5b80edccca4766d6d3b7c1cd2a684e1e5e0bed0b89628b0d31bfe188b5b840"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31142,
+      "sha256": "73b6ee9ed947c47a81c9c21240e64d445206372c72aca5815a1434ad3b43945f"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-01/webkit.json",
+      "bytes": 33873675,
+      "sha256": "93a3fc4e4432a1331bc52516b8c92d050ef1c959da3b80c650258274fb1548d9"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/chromium.json",
+      "bytes": 30199587,
+      "sha256": "4864e59100603f6def05c568ca8fa9cbd176cd789dc3ae9f99c3137074e45c0b"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/protocol.json",
+      "bytes": 1788,
+      "sha256": "3c8c160e21773ec33cdd7864f46347ed49694f97c85d0b4ddeebe75062403919"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/runner.cjs",
+      "bytes": 6093,
+      "sha256": "ee5b80edccca4766d6d3b7c1cd2a684e1e5e0bed0b89628b0d31bfe188b5b840"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31142,
+      "sha256": "73b6ee9ed947c47a81c9c21240e64d445206372c72aca5815a1434ad3b43945f"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-real-02/webkit.json",
+      "bytes": 33873675,
+      "sha256": "93a3fc4e4432a1331bc52516b8c92d050ef1c959da3b80c650258274fb1548d9"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/chromium-right-122-four.png",
+      "bytes": 5631,
+      "sha256": "b0ebdbfd5795ed9b333985bf3c7896984abafd07365940f254d64cc021fa4eab"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/chromium-right-122-one.png",
+      "bytes": 3074,
+      "sha256": "17bb3ff145797ff897459f82da102426b7405e341a4deb983909daa8b6ca5397"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/chromium-right-122-overlay.png",
+      "bytes": 7159,
+      "sha256": "1ce7b14bcb0080b4e467d6b63f59bafd067c5d6b4e402fb9200504299e20ce9b"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/index.html",
+      "bytes": 1626,
+      "sha256": "6740eec70fab82505e9316572ca21f809c8722e46599b5ad6cf6070245a532d2"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/views.json",
+      "bytes": 3081,
+      "sha256": "55be0355287a1b9b2308e9745894bee0fc10e7ec71946c98a254dbb508bd90d2"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-50-four.png",
+      "bytes": 4115,
+      "sha256": "9d96ea0a94ff03899e6c8f28c9c2efd07235cb304463aa8671b3182b88a037d1"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-50-one.png",
+      "bytes": 2791,
+      "sha256": "2ba3db4eedddf28ea802b5ffecf0c46bcb7c4f0c5b9cac58f3fd61b1b65bf878"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-50-overlay.png",
+      "bytes": 5154,
+      "sha256": "8e189e52734a78cf1105d07cea85aa678ac5d7c3038853baea67351117c0b937"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-53-four.png",
+      "bytes": 4207,
+      "sha256": "133cc74d3af5e0ea9ad0ddd6bc2f3c4b559fa1f46b9d09f69257639de7e07dfe"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-53-one.png",
+      "bytes": 2882,
+      "sha256": "d8c12c5bdae11c3ddc27a4decae4fc02d99c30256ef3dd99f88efad78cf06836"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-53-overlay.png",
+      "bytes": 5061,
+      "sha256": "d100b3217b3689e7bee6d0b0e8a8c85f2c5807fb34679f9c4e1bbc61e903ca49"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-59-four.png",
+      "bytes": 4115,
+      "sha256": "9d96ea0a94ff03899e6c8f28c9c2efd07235cb304463aa8671b3182b88a037d1"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-59-one.png",
+      "bytes": 2791,
+      "sha256": "2ba3db4eedddf28ea802b5ffecf0c46bcb7c4f0c5b9cac58f3fd61b1b65bf878"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-59-overlay.png",
+      "bytes": 5272,
+      "sha256": "e0fa1c5622a013e66d8b5dd656f7c69be23c6a9da79c1f583eb4d13f77dcf34b"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-71-four.png",
+      "bytes": 4115,
+      "sha256": "9d96ea0a94ff03899e6c8f28c9c2efd07235cb304463aa8671b3182b88a037d1"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-71-one.png",
+      "bytes": 2791,
+      "sha256": "2ba3db4eedddf28ea802b5ffecf0c46bcb7c4f0c5b9cac58f3fd61b1b65bf878"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-71-overlay.png",
+      "bytes": 5242,
+      "sha256": "1c73df8cbfd387aca30a8cb7effcee78736de103d69af8882d775237c94ebfb0"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-81-four.png",
+      "bytes": 4115,
+      "sha256": "9d96ea0a94ff03899e6c8f28c9c2efd07235cb304463aa8671b3182b88a037d1"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-81-one.png",
+      "bytes": 2791,
+      "sha256": "2ba3db4eedddf28ea802b5ffecf0c46bcb7c4f0c5b9cac58f3fd61b1b65bf878"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "local-ending-views-01/webkit-right-81-overlay.png",
+      "bytes": 5239,
+      "sha256": "a05125a5c01dd3c0a83ea1da6bc2803f4fd9a7e950482cad18b082ddddfc9dc6"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-01/chromium.json",
+      "bytes": 15530,
+      "sha256": "29266493c2967a37fac1922f4455eccb1f02057a7596f873dfd0644bc7082ffa"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-01/protocol.json",
+      "bytes": 1403,
+      "sha256": "1ec677aad96b3cc8d0e44fda6f56716ae8f8c0967244eb96a635ebb28d57b075"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-01/verified-source/runner.cjs",
+      "bytes": 7937,
+      "sha256": "7810328eca7522b545a5a908358cb7f7f893fee079d3533ac465a9dd852084ee"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-01/verified-source/src/rendering/canvasFilters.js",
+      "bytes": 7620,
+      "sha256": "dfe7e11adcf495faccde264e7f7a8e07a43e3bfe5ef63c62256d7080eac0c2d9"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-01/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-01/verified-source/src/retouch/lashEnhancement.mjs",
+      "bytes": 16590,
+      "sha256": "d1e42d9f5b88b881a43526bccfb7b3ec0551580af2e4213ce0da2e27ef618554"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-01/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-01/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-01/verified-source/tests/visual/lash-spatial-match.mjs",
+      "bytes": 1717,
+      "sha256": "80f2cf178db0c5ea9591b7ebe1a018a7b61b7a6f6ee4404cc64db3ff06fa44df"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-01/webkit.json",
+      "bytes": 15529,
+      "sha256": "7c5dceed14670d91980f21e6536d7679b8a6dd1ccbf0f615364bb090c8a3b38a"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-02/chromium.json",
+      "bytes": 15530,
+      "sha256": "29266493c2967a37fac1922f4455eccb1f02057a7596f873dfd0644bc7082ffa"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-02/protocol.json",
+      "bytes": 1403,
+      "sha256": "1ec677aad96b3cc8d0e44fda6f56716ae8f8c0967244eb96a635ebb28d57b075"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-02/verified-source/runner.cjs",
+      "bytes": 7937,
+      "sha256": "7810328eca7522b545a5a908358cb7f7f893fee079d3533ac465a9dd852084ee"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-02/verified-source/src/rendering/canvasFilters.js",
+      "bytes": 7620,
+      "sha256": "dfe7e11adcf495faccde264e7f7a8e07a43e3bfe5ef63c62256d7080eac0c2d9"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-02/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-02/verified-source/src/retouch/lashEnhancement.mjs",
+      "bytes": 16590,
+      "sha256": "d1e42d9f5b88b881a43526bccfb7b3ec0551580af2e4213ce0da2e27ef618554"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-02/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-02/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-02/verified-source/tests/visual/lash-spatial-match.mjs",
+      "bytes": 1717,
+      "sha256": "80f2cf178db0c5ea9591b7ebe1a018a7b61b7a6f6ee4404cc64db3ff06fa44df"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-01-02/webkit.json",
+      "bytes": 15529,
+      "sha256": "7c5dceed14670d91980f21e6536d7679b8a6dd1ccbf0f615364bb090c8a3b38a"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-01.failed-protocol.json",
+      "bytes": 649,
+      "sha256": "2a3174dd5cee39e96e7fba0da92b4a9767fb0ab0cfef35ebcb09bd1699b2807e"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-02/chromium.json",
+      "bytes": 8687,
+      "sha256": "83604ede27879dcdf3b24d68523d6fa447bd95e80c9f590d1310baca62e01ea2"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-02/protocol.json",
+      "bytes": 649,
+      "sha256": "2a3174dd5cee39e96e7fba0da92b4a9767fb0ab0cfef35ebcb09bd1699b2807e"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-02/webkit.json",
+      "bytes": 194,
+      "sha256": "88cab11b0cb684939e5bb4ce6f3d3f38bdc0835329307972dc2ae2183ee3d703"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-03/chromium.json",
+      "bytes": 8687,
+      "sha256": "83604ede27879dcdf3b24d68523d6fa447bd95e80c9f590d1310baca62e01ea2"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-03/protocol.json",
+      "bytes": 1403,
+      "sha256": "7441a50832d41c3adcd699d6aca3e390b8ebe639790c49806e0f4a60db472ac7"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-03/verified-source/runner.cjs",
+      "bytes": 7937,
+      "sha256": "7810328eca7522b545a5a908358cb7f7f893fee079d3533ac465a9dd852084ee"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-03/verified-source/src/rendering/canvasFilters.js",
+      "bytes": 7620,
+      "sha256": "dfe7e11adcf495faccde264e7f7a8e07a43e3bfe5ef63c62256d7080eac0c2d9"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-03/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-03/verified-source/src/retouch/lashEnhancement.mjs",
+      "bytes": 16590,
+      "sha256": "d1e42d9f5b88b881a43526bccfb7b3ec0551580af2e4213ce0da2e27ef618554"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-03/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-03/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-03/verified-source/tests/visual/lash-spatial-match.mjs",
+      "bytes": 1717,
+      "sha256": "80f2cf178db0c5ea9591b7ebe1a018a7b61b7a6f6ee4404cc64db3ff06fa44df"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-03/webkit.json",
+      "bytes": 194,
+      "sha256": "88cab11b0cb684939e5bb4ce6f3d3f38bdc0835329307972dc2ae2183ee3d703"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-04/chromium.json",
+      "bytes": 8687,
+      "sha256": "83604ede27879dcdf3b24d68523d6fa447bd95e80c9f590d1310baca62e01ea2"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-04/protocol.json",
+      "bytes": 1403,
+      "sha256": "7441a50832d41c3adcd699d6aca3e390b8ebe639790c49806e0f4a60db472ac7"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-04/verified-source/runner.cjs",
+      "bytes": 7937,
+      "sha256": "7810328eca7522b545a5a908358cb7f7f893fee079d3533ac465a9dd852084ee"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-04/verified-source/src/rendering/canvasFilters.js",
+      "bytes": 7620,
+      "sha256": "dfe7e11adcf495faccde264e7f7a8e07a43e3bfe5ef63c62256d7080eac0c2d9"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-04/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-04/verified-source/src/retouch/lashEnhancement.mjs",
+      "bytes": 16590,
+      "sha256": "d1e42d9f5b88b881a43526bccfb7b3ec0551580af2e4213ce0da2e27ef618554"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-04/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-04/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-04/verified-source/tests/visual/lash-spatial-match.mjs",
+      "bytes": 1717,
+      "sha256": "80f2cf178db0c5ea9591b7ebe1a018a7b61b7a6f6ee4404cc64db3ff06fa44df"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "mask-scope-02-04/webkit.json",
+      "bytes": 194,
+      "sha256": "88cab11b0cb684939e5bb4ce6f3d3f38bdc0835329307972dc2ae2183ee3d703"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-01/chromium.json",
+      "bytes": 4077745,
+      "sha256": "448d9c701a898e04c6523cee43aec2b17cc4e3ef7980b33dd48d655795894215"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-01/protocol.json",
+      "bytes": 2004,
+      "sha256": "805b2495b684529c8607c21690b9ff0174bc08133efb0dded95864704e263920"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-01/webkit.json",
+      "bytes": 4111722,
+      "sha256": "fb3dacfeba25cc210957561ba42d00ac7971c5d82ac6b39227ed72e7ef85dc8c"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/chromium.json",
+      "bytes": 4081923,
+      "sha256": "6efbbbea578631725068c0648fbc77fe5e07f65a9d183def93eb9159e0d872d4"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/protocol.json",
+      "bytes": 2107,
+      "sha256": "2b7841e686d47646ae87d6f58f024b8f223073a4ae03feb305f53e0820912ba3"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/runner.cjs",
+      "bytes": 8186,
+      "sha256": "ef02eee6e04442d075187e43edf3b3b5254795922bd8d8ec81ce34c44e487b2d"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31142,
+      "sha256": "73b6ee9ed947c47a81c9c21240e64d445206372c72aca5815a1434ad3b43945f"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3092,
+      "sha256": "9cb14f767726dd7a61b541ffdaeec082446785d22e725ee22fb44c09b7e04101"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 3547,
+      "sha256": "8f55d70225094d079e3554c1b6f923d181fc80cc70be144c7319f3b80860c4a5"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-02/webkit.json",
+      "bytes": 4123560,
+      "sha256": "35c68334e96917bf751636b58614a4be487e7de3d98a15c0b716a6687112dbd3"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/chromium.json",
+      "bytes": 4081923,
+      "sha256": "267dbadbbf7b7cc4488dc83264ea0231a9b6c1ffa44c1d94ea41f37802c9830f"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/protocol.json",
+      "bytes": 2107,
+      "sha256": "2b7841e686d47646ae87d6f58f024b8f223073a4ae03feb305f53e0820912ba3"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/runner.cjs",
+      "bytes": 8186,
+      "sha256": "ef02eee6e04442d075187e43edf3b3b5254795922bd8d8ec81ce34c44e487b2d"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31142,
+      "sha256": "73b6ee9ed947c47a81c9c21240e64d445206372c72aca5815a1434ad3b43945f"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3092,
+      "sha256": "9cb14f767726dd7a61b541ffdaeec082446785d22e725ee22fb44c09b7e04101"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 3547,
+      "sha256": "8f55d70225094d079e3554c1b6f923d181fc80cc70be144c7319f3b80860c4a5"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "multiscale-native-real-03/webkit.json",
+      "bytes": 4123560,
+      "sha256": "4bed6ba0c52b7f0a89d948b22bc48e44ac4fc4b5730a75f08068ec3120cc30cc"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-legacy-browser-01.json",
+      "bytes": 29515,
+      "sha256": "9e1ab5e1ff0b9d910476909bc67566dfd6137b7ce103e338902f457a7a2a5e86"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/chromium.json",
+      "bytes": 19449962,
+      "sha256": "36cd3302bae13e43b46de7074fdede2bc83ffd56c6b67a15d72143aee0d2bb12"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/protocol.json",
+      "bytes": 1758,
+      "sha256": "1f0411db2de5e8a66580f4d1382b8ae0050f255a7b812e03d2186b13f372a26f"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/archive.json",
+      "bytes": 1305,
+      "sha256": "5e4b01957ed500e2bf7d8bd7a0261d404fc70e7492054bebc5058535e4394029"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/runner.cjs",
+      "bytes": 7588,
+      "sha256": "1199eafbd08d8aaf35fb91b9ebc03ba086e2d2b647d22f3cb3547899c7ea9dfe"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31054,
+      "sha256": "d697e02cbb3500adaf351652bffba54d0070ebd387b840d9105fcadee3d528e4"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-02.zip",
+      "archivePath": "native-cell-real-01/webkit.json",
+      "bytes": 22090434,
+      "sha256": "72130951759e2188a4295cd0aa2664f40d80eb9b474b307dc828c4e70d1a97dc"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/chromium.json",
+      "bytes": 19449964,
+      "sha256": "a796a5ee43009aa74e51604a1c1460a670355991001c00de250161525a77ff06"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/protocol.json",
+      "bytes": 1758,
+      "sha256": "1f0411db2de5e8a66580f4d1382b8ae0050f255a7b812e03d2186b13f372a26f"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/archive.json",
+      "bytes": 1305,
+      "sha256": "5e4b01957ed500e2bf7d8bd7a0261d404fc70e7492054bebc5058535e4394029"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/runner.cjs",
+      "bytes": 7588,
+      "sha256": "1199eafbd08d8aaf35fb91b9ebc03ba086e2d2b647d22f3cb3547899c7ea9dfe"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31054,
+      "sha256": "d697e02cbb3500adaf351652bffba54d0070ebd387b840d9105fcadee3d528e4"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-02/webkit.json",
+      "bytes": 22090434,
+      "sha256": "b9019264c2afdc6bead6bfd1d8e7714a20186ac9c618dfc00340d8061e3b8160"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-cell-real-views-01/legend.txt",
+      "bytes": 184,
+      "sha256": "2982e8db3b63bf8bea60b1ac17f53d4808323f9c8ddb6e0a4bc28f88a4a82b88"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-path-browser-01.json",
+      "bytes": 7427,
+      "sha256": "1cbcc5fbd856a19dd51bb5c9154cf1138483a41b8a0284238d177c3186cc85c1"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-path-browser-02.json",
+      "bytes": 7427,
+      "sha256": "1cbcc5fbd856a19dd51bb5c9154cf1138483a41b8a0284238d177c3186cc85c1"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-real-01/chromium.json",
+      "bytes": 6932787,
+      "sha256": "83f814231f8b89c9e1778b6c1b2fb12726b5fd93911a38b8037d3303807fe78a"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-real-01/protocol.json",
+      "bytes": 1623,
+      "sha256": "0ed088da27be20dbabfa22b299a429bf6e24e1a1b49014de8591d60e752a921c"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-real-01/webkit.json",
+      "bytes": 16553670,
+      "sha256": "475df7aa0a5245c46b8d1dd7500304913fd45ac2437b7bdd938eaeab5eb261fa"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-real-02/chromium.json",
+      "bytes": 6932757,
+      "sha256": "56db743728abd64192a257e8ebf2fa90d173d01d703eba93a82c2c518afe1ddc"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-real-02/protocol.json",
+      "bytes": 1623,
+      "sha256": "0ed088da27be20dbabfa22b299a429bf6e24e1a1b49014de8591d60e752a921c"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-real-02/webkit.json",
+      "bytes": 16553670,
+      "sha256": "80588e79cd169355838bd4f2d8ebbf3c4384332c9fdaa58b8147a5eb14e9d91a"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "native-real-views-01/legend.txt",
+      "bytes": 184,
+      "sha256": "2982e8db3b63bf8bea60b1ac17f53d4808323f9c8ddb6e0a4bc28f88a4a82b88"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/chromium.json",
+      "bytes": 602780,
+      "sha256": "52df6d50e583939988d4334f6b43bfeb1614bc0c8ca11e48587931147c59bec7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/protocol.json",
+      "bytes": 1675,
+      "sha256": "d904113c65d674204bdfb17bcc1785e4dd886cf0017b39be81d33d6e13b2be7f"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/runner.cjs",
+      "bytes": 5489,
+      "sha256": "62c192fa8b3a253a749eb9ffdb961140ac6f83359b708b100f4573ff7f78963f"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31054,
+      "sha256": "d697e02cbb3500adaf351652bffba54d0070ebd387b840d9105fcadee3d528e4"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/tests/visual/lash-proximal-corridor.mjs",
+      "bytes": 2999,
+      "sha256": "cf3c2c23eef53e63487a95180e94940267ad8c727853274e41f10d0016a69af0"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-01/webkit.json",
+      "bytes": 1626831,
+      "sha256": "52da370743fc90b71c27bb6ec0ee24c42b42df122a47b936bf9b30d23b16c6b5"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/chromium.json",
+      "bytes": 602780,
+      "sha256": "52df6d50e583939988d4334f6b43bfeb1614bc0c8ca11e48587931147c59bec7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/protocol.json",
+      "bytes": 1675,
+      "sha256": "d904113c65d674204bdfb17bcc1785e4dd886cf0017b39be81d33d6e13b2be7f"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/runner.cjs",
+      "bytes": 5489,
+      "sha256": "62c192fa8b3a253a749eb9ffdb961140ac6f83359b708b100f4573ff7f78963f"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31054,
+      "sha256": "d697e02cbb3500adaf351652bffba54d0070ebd387b840d9105fcadee3d528e4"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/tests/visual/lash-proximal-corridor.mjs",
+      "bytes": 2999,
+      "sha256": "cf3c2c23eef53e63487a95180e94940267ad8c727853274e41f10d0016a69af0"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-corridor-02/webkit.json",
+      "bytes": 1626831,
+      "sha256": "52da370743fc90b71c27bb6ec0ee24c42b42df122a47b936bf9b30d23b16c6b5"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-diagnosis-views-01/chromium-left.png",
+      "bytes": 1010781,
+      "sha256": "fd18538c90a0ed206d4b185ebaa05b171fcfaadc94da695aecec85c818873917"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-diagnosis-views-01/chromium-right.png",
+      "bytes": 1175836,
+      "sha256": "983fa74cbdda93ae32c321ab884f822b1937c901d7bc1d8b01cee814e6bd8d23"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-diagnosis-views-01/legend.txt",
+      "bytes": 244,
+      "sha256": "60664e9ea02346d86dc037d07d90d74030459e5477afc25923897ecb30c362ba"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-diagnosis-views-01/webkit-left.png",
+      "bytes": 1011335,
+      "sha256": "7b1fe5edf3f78e811a1ad4b5b02b1264adc26396b4a385462d748668c6611d63"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "proximal-diagnosis-views-01/webkit-right.png",
+      "bytes": 1174888,
+      "sha256": "7787103d313f3eff870ad15752705a13ead0c0a0e05103dad05077993e5314bc"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/chromium.json",
+      "bytes": 4773056,
+      "sha256": "2dfeb6e878c4c13ec6922ee961f9c939ab70a80b4cb439e302af82e7408e86e9"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/protocol.json",
+      "bytes": 2225,
+      "sha256": "0dd2490493172a1b9b6cf852a9ff50e0e9030df2e09df5bb7bb3b74d3e0d9098"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/runner.cjs",
+      "bytes": 8231,
+      "sha256": "20beae319a46bf61f6b55c82281b46a76282b8bcef58e24ecd2f88de5757d8b7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31142,
+      "sha256": "73b6ee9ed947c47a81c9c21240e64d445206372c72aca5815a1434ad3b43945f"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3470,
+      "sha256": "32b6dba821a8b1925ff57f525cc0c9994e9610da6929243f71a30e3ff638a55f"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 3924,
+      "sha256": "036284db145b9b2fa21a72cbcc17117595850a3d2a7d362e3b61085683584ff7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/tests/visual/lash-scale-correspondence.mjs",
+      "bytes": 1450,
+      "sha256": "0a2e9faba65f26be23ab0174989654748be183346b6e5b0d8f589e5d35294dc7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-01/webkit.json",
+      "bytes": 4938268,
+      "sha256": "bfb2ae82619c9ae8ebf6daf1f475e881a301317b64edc17db98fcc586095eb3c"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/chromium.json",
+      "bytes": 4773056,
+      "sha256": "d063041bda650585b06b22336ce8e1080c3a396111018853889a0c36e0e124f7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/protocol.json",
+      "bytes": 2225,
+      "sha256": "0dd2490493172a1b9b6cf852a9ff50e0e9030df2e09df5bb7bb3b74d3e0d9098"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/runner.cjs",
+      "bytes": 8231,
+      "sha256": "20beae319a46bf61f6b55c82281b46a76282b8bcef58e24ecd2f88de5757d8b7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/src/retouch/eyeGeometry.mjs",
+      "bytes": 5807,
+      "sha256": "b191884267d36f2c5815e6b529e8237e0d42522ade3c26327f62abe712300950"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/src/retouch/lashAnalysis.mjs",
+      "bytes": 31142,
+      "sha256": "73b6ee9ed947c47a81c9c21240e64d445206372c72aca5815a1434ad3b43945f"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/src/vision/faceGeometry.mjs",
+      "bytes": 5686,
+      "sha256": "56ae1750fe558f703a0c7a7a3eff3fd58ef2549774600be24458c9e3c344c009"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/tests/visual/lash-coarse-route.mjs",
+      "bytes": 3470,
+      "sha256": "32b6dba821a8b1925ff57f525cc0c9994e9610da6929243f71a30e3ff638a55f"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/tests/visual/lash-endpoint-profile.mjs",
+      "bytes": 1567,
+      "sha256": "40b245f595d93f6b18d2f477d1706e72a24beda1705d96d85df5f08d5d46d530"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/tests/visual/lash-multiscale-path.mjs",
+      "bytes": 3924,
+      "sha256": "036284db145b9b2fa21a72cbcc17117595850a3d2a7d362e3b61085683584ff7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/tests/visual/lash-native-cell.mjs",
+      "bytes": 1696,
+      "sha256": "e9ab72ce89654ab945b9f5e111d7eb51ef73761e162760a153886db00b5b8e6a"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/tests/visual/lash-native-path.mjs",
+      "bytes": 8849,
+      "sha256": "5f449b57e3708d3cddafaf6e10a483c3a3f23179eb00d4ad8bd0f83bcbb59325"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/tests/visual/lash-native-shaft.mjs",
+      "bytes": 4848,
+      "sha256": "664ae92d0838816622fef4ab98b98cc130321dc9c3d420d5cd939fca5c6bde12"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/tests/visual/lash-scale-correspondence.mjs",
+      "bytes": 1450,
+      "sha256": "0a2e9faba65f26be23ab0174989654748be183346b6e5b0d8f589e5d35294dc7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/tests/visual/lash-side-closure.mjs",
+      "bytes": 3344,
+      "sha256": "13336c356f6bf51f70aa633f05e287f737c3b3b6ca94b9eb8957cd9d0aaf14d7"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/tests/visual/lash-spatial-ending.mjs",
+      "bytes": 3102,
+      "sha256": "dc2e9d551d49c6a92ee9483769ce57457ecbe1ce34d9482097af8b434a199686"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/tests/visual/lash-subpixel-center.mjs",
+      "bytes": 2459,
+      "sha256": "b8a3e4654ce481406de01f8d204b840aa8abf056eb0a3cec8cca28cf44bc9dcf"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/verified-source/tests/visual/lash-subpixel-probe.mjs",
+      "bytes": 4957,
+      "sha256": "f03ca8a300891f3e71f2f0c2b6c362e36209376b1beffa01e1fad349c7cc62d9"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "scale-correspondence-real-02/webkit.json",
+      "bytes": 4938268,
+      "sha256": "9fef218958af9caec78a9fcde7de0534386cdb44aad31e628c08aa6179279ec9"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "side-closure-browser-01.json",
+      "bytes": 29515,
+      "sha256": "9e1ab5e1ff0b9d910476909bc67566dfd6137b7ce103e338902f457a7a2a5e86"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "spatial-cohort-01/downloads.json",
+      "bytes": 5964,
+      "sha256": "3ab44d9af16b91fdd5b1062dfe3d261312443c02a483f40e12c7e8b77784baee"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "spatial-cohort-02/downloads.json",
+      "bytes": 6895,
+      "sha256": "0cb0253703f0f52435ba0701dbf7d28ae8ce5d8e467d6c277204d6b3abd0e99c"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "spatial-label-review-01/inputs.json",
+      "bytes": 296,
+      "sha256": "ad63ccd942e9b2eb760283b712b3ad61e7d40b0cdbbdddd0df672800a7f1baf3"
+    },
+    {
+      "archive": "observation-evidence-03.zip",
+      "archivePath": "spatial-label-review-01/left.png",
+      "bytes": 1008736,
+      "sha256": "fce08e8fae57275175a8462fea426b1246613becc15a949f64006cc742973255"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-label-review-01/right.png",
+      "bytes": 1174004,
+      "sha256": "03fe7211a105ddf97941de66782fe199422a12052a8a9f629d846db289fedd2d"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-label-review-02/inputs.json",
+      "bytes": 296,
+      "sha256": "f1b73976dd34125f8216adf0f42766c1aef69ae3c88a3f3b106ede47e090d3d8"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-label-review-02/left.png",
+      "bytes": 939354,
+      "sha256": "2114978f624437faadcf50dd21e5de8659af6b530bf9293c57ec50fb8b0ad834"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-label-review-02/right.png",
+      "bytes": 295476,
+      "sha256": "aa90c68df68d925a21da346878a89734fc33b33b5cc1c6cdb9518615df12f644"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-screen-chromium-01/screening.json",
+      "bytes": 144530,
+      "sha256": "17648a161994a356efa267c771093a37560becc9cf11094ac1a3afbe45f0bbc6"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-screen-webkit-01/screening.json",
+      "bytes": 144403,
+      "sha256": "0867167e9990f0e6f9cbb43cac51f817403e1c5b32031687418a7bb9e185c346"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-supplement-01/downloads.json",
+      "bytes": 3169,
+      "sha256": "6213b067a3389f8f0f54f98ea024671a1a333092a598003d638e8b30abc4afd9"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-supplement-02/downloads.json",
+      "bytes": 1139,
+      "sha256": "8a61de7d85e12dbff0269b12c433db2cac2265cc0466179b7caec259fd55b103"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-supplement-03/downloads.json",
+      "bytes": 3418,
+      "sha256": "6256bb151528fc729dd97e3dfb75cf7dc9c50c20e650cfa7be3b0b5a9da9bf89"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-supplement-screen-chromium-01/screening.json",
+      "bytes": 86560,
+      "sha256": "af571cfa33f938e5ae96c987d00ac2d64e431a8416d337af163bbefefbae046b"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-supplement-screen-chromium-02/screening.json",
+      "bytes": 28989,
+      "sha256": "88c7b44b0f63cdd2708d5464d33d0bc5483e27b36a0a29c0d8802878d89a1028"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-supplement-screen-chromium-03/screening.json",
+      "bytes": 167365,
+      "sha256": "d4dbe6f5b31cafa4be2d79dd4b394336e6975bc09335cab6c845cc0810949ce8"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-supplement-screen-webkit-01/screening.json",
+      "bytes": 86520,
+      "sha256": "5499ff0fbbb462dd81a932ede49c600a03184de5f8ce8a30b26a7cb6a25a9f0d"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-supplement-screen-webkit-02/screening.json",
+      "bytes": 28987,
+      "sha256": "5788a4f68b91c07c9a8437707457f11dcaa001424818235a5d06a472fa7e359d"
+    },
+    {
+      "archive": "observation-evidence-04.zip",
+      "archivePath": "spatial-supplement-screen-webkit-03/screening.json",
+      "bytes": 140483,
+      "sha256": "a82c060779e2acc78180d4bda17c6fecd0c583ab30899e08dc929a84edabb4f0"
+    }
+  ]
+}

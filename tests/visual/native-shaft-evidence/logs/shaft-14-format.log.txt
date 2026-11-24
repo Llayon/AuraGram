@@ -1,0 +1,26 @@
+git : warning: in the working copy of 'tests/visual/.gitattributes', LF will be replaced by CRLF the next time Git 
+touches it
+строка:2 знак:82
++ ... us --short; git diff --check > tests/visual/out/shaft-14-format.log 2 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (warning: in the... Git touches it:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+warning: in the working copy of 'vendor/ui/icons/bold/Phosphor-Bold.svg', LF will be replaced by CRLF the next time 
+Git touches it
+warning: in the working copy of 'vendor/ui/icons/bold/style.css', LF will be replaced by CRLF the next time Git 
+touches it
+warning: in the working copy of 'vendor/ui/icons/fill/Phosphor-Fill.svg', LF will be replaced by CRLF the next time 
+Git touches it
+warning: in the working copy of 'vendor/ui/icons/fill/style.css', LF will be replaced by CRLF the next time Git 
+touches it
+warning: in the working copy of 'vendor/ui/icons/regular/Phosphor.svg', LF will be replaced by CRLF the next time Git 
+touches it
+warning: in the working copy of 'vendor/ui/icons/regular/style.css', LF will be replaced by CRLF the next time Git 
+touches it
+warning: in the working copy of 'vendor/ui/inter/400.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'vendor/ui/inter/500.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'vendor/ui/inter/600.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'vendor/ui/inter/700.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'vendor/ui/space-mono/700.css', LF will be replaced by CRLF the next time Git touches 
+it

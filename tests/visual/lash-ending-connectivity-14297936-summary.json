@@ -1,0 +1,251 @@
+{
+  "source": "14297936",
+  "inputs": {
+    "bounded-ending-14297936-chromium-02/chromium.json": "38db6c2f17ec81fb95ea8859663632218909b5565789ab882e448687a395232d",
+    "connected-ending-14297936-chromium-01/chromium.json": "4e4c933c6c56941857b4fe343585a06f8688606f60081183c2a32c61a25df86a",
+    "connected-ending-14297936-chromium-01/protocol.json": "92f3e7c70fcabe77917a6772cbcba2a6c97d87c1c260011844f7fefbdb611639",
+    "bounded-ending-14297936-webkit-02/webkit.json": "75de1eb0631df640d9011a0ed307789dcd77d2b5b2ecb29d092dda9eed9bdb39",
+    "connected-ending-14297936-webkit-01/webkit.json": "53c5f4849149b6150f1881d2a26910c3d295358ecb39b36b66615be9236a615f",
+    "connected-ending-14297936-webkit-01/protocol.json": "92f3e7c70fcabe77917a6772cbcba2a6c97d87c1c260011844f7fefbdb611639"
+  },
+  "engines": {
+    "chromium": {
+      "left": {
+        "records": 33,
+        "priorContinuing": 0,
+        "connectedContinuing": 0,
+        "changes": [],
+        "changedSinceArchive": []
+      },
+      "right": {
+        "records": 144,
+        "priorContinuing": 29,
+        "connectedContinuing": 7,
+        "changes": [
+          {
+            "rank": 2,
+            "index": 12607,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 5,
+            "index": 13056,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 7,
+            "index": 13281,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 11,
+            "index": 13506,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 15,
+            "index": 13730,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 19,
+            "index": 13955,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 34,
+            "index": 14208,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 41,
+            "index": 14433,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 48,
+            "index": 14657,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 53,
+            "index": 14855,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 56,
+            "index": 14881,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 61,
+            "index": 15080,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 64,
+            "index": 15105,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 72,
+            "index": 15330,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 73,
+            "index": 15305,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 79,
+            "index": 15306,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 84,
+            "index": 15554,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 86,
+            "index": 15530,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 93,
+            "index": 15531,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 105,
+            "index": 15755,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 110,
+            "index": 15756,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 121,
+            "index": 16452,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          }
+        ],
+        "changedSinceArchive": []
+      }
+    },
+    "webkit": {
+      "left": {
+        "records": 70,
+        "priorContinuing": 0,
+        "connectedContinuing": 0,
+        "changes": [],
+        "changedSinceArchive": []
+      },
+      "right": {
+        "records": 236,
+        "priorContinuing": 13,
+        "connectedContinuing": 6,
+        "changes": [
+          {
+            "rank": 4,
+            "index": 12159,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 9,
+            "index": 12608,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 12,
+            "index": 12833,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 18,
+            "index": 13057,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 22,
+            "index": 13058,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 25,
+            "index": 13282,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          },
+          {
+            "rank": 31,
+            "index": 13507,
+            "before": "continuing",
+            "after": "ambiguous",
+            "reason": "unconfirmed-connected-continuation"
+          }
+        ],
+        "changedSinceArchive": []
+      }
+    }
+  },
+  "meaning": "Observed grid connectivity restricts continuation claims. Existing refusals survive and no terminal is evaluated."
+}

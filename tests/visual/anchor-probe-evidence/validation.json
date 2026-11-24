@@ -1,0 +1,11 @@
+{
+  "sameFrozenInputs": true,
+  "sameNativePixels": true,
+  "allConfigurations": 36,
+  "available": 28,
+  "chromiumWebkitNumericAgreementTolerance": 1e-10,
+  "endpointApproved": 0,
+  "modelRequests": 0,
+  "runtime": "UNCHANGED",
+  "release": "HOLD"
+}

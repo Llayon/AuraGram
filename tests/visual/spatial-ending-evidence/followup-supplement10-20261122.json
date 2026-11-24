@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-22",
+  "archive": "followup-supplement10-20261122.zip",
+  "sha256": "3362df169bd4f19ab1365abc16051774c3becbb909e6ba41f2b7dd926ad22ee9",
+  "bytes": 2922173,
+  "restoreDirectory": "tests/visual/out",
+  "members": {
+    "spatial-supplement-10/downloads.json": "e0c9412f7ab67eba9063ae944133ee95bc439104374b94a9c0d1e806cc0432ac",
+    "spatial-supplement-10-chromium/screening.json": "56b8cf1a20bf7201e37d099a6bf326917c05274983a6b23490792573ebb81287",
+    "spatial-supplement-10-webkit/screening.json": "d315cc30d11136e64d35a9ad79c9502f29e82f54af4e690875e66a658dcd2ff3",
+    "spatial-supplement-10-retry/downloads.json": "25940831d090f257a85c9b3fce34d8a7664345babd62e2667dc0ebe38966843b",
+    "spatial-supplement-10-retry-chromium/screening.json": "3b7c5c05815da98c3935fcecc456d09ae67689f8feeca9b580795e1a31a842ff",
+    "spatial-supplement-10-retry-webkit/screening.json": "c8472a709ce7c335d5c94b6db416628b17becb69001c3478793134d30ac50f73",
+    "source-snapshots/tests/visual/lash-spatial-labels-40337270.json": "645506c5d066ca03b7ebb7388696358a4488f229d7f09fffcb6c8fe3a35f84d2",
+    "source-snapshots/tests/visual/lash-spatial-labels-40337270.freeze.json": "84ccf84aa5392e8e6a6771b6780e81190e5f09a11293016d7b55d08956200626",
+    "native-40337270-main-01/protocol.json": "1912cad306e258d36ba64263ef3c60e8a6ef7743427133de36d5495f2abb914b",
+    "native-40337270-repeat-01/protocol.json": "1912cad306e258d36ba64263ef3c60e8a6ef7743427133de36d5495f2abb914b",
+    "native-40337270-main-01/chromium.json": "4f36286c2f406afb1b61e65299515914c6fbb03d43af44b8326c0902cf7e9e23",
+    "native-40337270-repeat-01/chromium.json": "d651b5c319061ba1cc99c679fcabcb7fffad8f96f037d77921c64e1653950694",
+    "ending-40337270-chromium-01/protocol.json": "baef46dcff60735e07442e0d507681b302e91addaf73b0ca976e5616657846be",
+    "ending-40337270-chromium-01/chromium.json": "b0b94823ced357e9f7de0d044d456d4201230850df85d626ccfd4cb0d4c280b7",
+    "native-40337270-main-01/webkit.json": "375e1a8309ebd9ccc5d928631b9a8f945f26d3344b3f4262a748f412a916b187",
+    "native-40337270-repeat-01/webkit.json": "f96305ea8aa0222671972d111e3e422e10ba9c371ffe5bc6cd6a8ce7140e42fd",
+    "ending-40337270-webkit-01/protocol.json": "baef46dcff60735e07442e0d507681b302e91addaf73b0ca976e5616657846be",
+    "ending-40337270-webkit-01/webkit.json": "4259745a688f47d8928a2915a30a96a6061ef175d8d246fc266d9edd05505eac",
+    "mask-scope-40337270-01/protocol.json": "fdaf716e8b65bce7c555d6fdd1e4ece1c2c5f92a6695bda021fa82d537d33bc3",
+    "mask-scope-40337270-01/chromium.json": "4fc2dae3b4a5f52fd839ae1d022847b127e9ba4c3d03812868023af975d1a416",
+    "mask-scope-40337270-01/webkit.json": "4902017f2cd51b7fa719653d886ea001dbc713dd97507b4c1922f906253f2acc",
+    "source-snapshots/tests/visual/lash-spatial-supplement-10.json": "7dfaa82a4e181c6eb25616a4fe045f8bbfac47af545f7c583b5e8d26133b4b35",
+    "source-snapshots/tests/visual/lash-spatial-supplement-10-summary.json": "da4736ed8cdfbf032c327acbea0c75feffa2b2781ac61c80ec097e41cc42fac2",
+    "source-snapshots/tests/visual/lash-spatial-case-40337270.json": "c49ea7d56b0ff2a7db9f6903d9f15d59e30a3949c1e907ad8d62e72a09907859",
+    "verification/supplement-10-unit-01.txt": "620ae35eb4123dcb6399c7c2b1467d4ad6d847ff80f285cc29882c70e356b2ee"
+  },
+  "originalJPEGsOmitted": {
+    "tests/visual/out/spatial-supplement-10-retry/pexels-11306008.jpg": "68a4dcc4bdc65ff2d8249afc5f2902ddc3d37f8fcbdbe1d20517eab5a158a72d",
+    "tests/visual/out/spatial-supplement-10/pexels-9854093.jpg": "5e13ede8860978e741fea1eb9692a05449434fe9f589e355fa75389366c032b8",
+    "tests/visual/out/spatial-supplement-10/pexels-40337270.jpg": "b1fa507f1f40816de2e212fe5689088a63370c637543402b3f0c386002e523eb",
+    "tests/visual/out/spatial-supplement-10/pexels-14933917.jpg": "c4e3ea29c964c6daeb287537e2c9c5c7e014b9e723edf86f747880ed3d41511f",
+    "tests/visual/out/spatial-supplement-10/pexels-36806961.jpg": "2a73740044da4dfef22c5e2630fda6e48a571044e2fcb3940b9903af2e4426e1",
+    "tests/visual/out/spatial-supplement-10/pexels-8780905.jpg": "89775dd02c204b1d2fd20de86e36086b9a31791697d18e65f7e3de2a4b94febf"
+  }
+}

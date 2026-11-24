@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-17",
+  "purpose": "Controlled sampling stress test of the unchanged resolved-edge operator; not a portrait benchmark or terminal detector",
+  "widths": [0.6, 0.9, 1.6],
+  "amplitudes": [0.08, 0.16, 0.32],
+  "blurSigma": [0, 0.4, 0.8],
+  "noiseAmplitude": [0, 0.001, 0.003],
+  "phaseX": [-0.25, 0, 0.25],
+  "kinds": ["taper", "fade", "continuing"],
+  "sampling": "4x4 box integration per native pixel, separable post-integration Gaussian blur truncated at3sigma, deterministic additive noise, 8-bit quantization, then bilinear sampling at0.25px. Not a calibrated camera simulation.",
+  "taper": "Gaussian transverse sigma falls linearly from base width to0.25*base across y=-2..4; amplitude stays fixed. Structure continues beyond the window: taper evidence is not an endpoint.",
+  "fade": "Constant transverse sigma; amplitude falls linearly to0.15*base across the same y span.",
+  "stopConditions": ["Any fade/continuing case admitted as taper is a counterexample to sufficient discrimination on these inputs.", "If no native-sampled taper is admitted, the ideal continuous-profile positive is insufficient for mechanism feasibility."],
+  "policy": "No operator, thresholds, label inputs, trace seeds or directions change during this matrix. No subset selected after results; preserve all729 outcomes. Frozen final portrait set remains unopened."
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "label": "chromium-C104-right-old16-m1.5-w12.png",
+    "file": "assets/3e88261e1463b1fa069db7f91bb9d3c44e16821d9df15aa37803d963472fed93.png",
+    "sha256": "3e88261e1463b1fa069db7f91bb9d3c44e16821d9df15aa37803d963472fed93"
+  },
+  {
+    "label": "chromium-C104-right-old16-m1.5-w6.png",
+    "file": "assets/be9726eed5ef5be2f5ac7c7f1672803f62f85d181cb954766b2408f65454e146.png",
+    "sha256": "be9726eed5ef5be2f5ac7c7f1672803f62f85d181cb954766b2408f65454e146"
+  },
+  {
+    "label": "chromium-C104-right-old16-m1.5-w8.png",
+    "file": "assets/2de871211e8892b22603d43bb49bfd4071482eeeeb9c179b15fc7e9d0011135c.png",
+    "sha256": "2de871211e8892b22603d43bb49bfd4071482eeeeb9c179b15fc7e9d0011135c"
+  },
+  {
+    "label": "chromium-C104-right-old16-m2.5-w12.png",
+    "file": "assets/594347e85514ca3647cbc4a6ad34fd7ececf50c50531c9b24df0ddf2443ff4a2.png",
+    "sha256": "594347e85514ca3647cbc4a6ad34fd7ececf50c50531c9b24df0ddf2443ff4a2"
+  },
+  {
+    "label": "chromium-C104-right-old16-m2.5-w6.png",
+    "file": "assets/15da1116622ad3a198f6e9e980a737340878523c77e8dcbd81c8242636b9b3d0.png",
+    "sha256": "15da1116622ad3a198f6e9e980a737340878523c77e8dcbd81c8242636b9b3d0"
+  },
+  {
+    "label": "chromium-C104-right-old16-m2.5-w8.png",
+    "file": "assets/9b83439dd9f5d427585dd0c4cd2163343f306904d0ebcc23fcf0786f57c883d8.png",
+    "sha256": "9b83439dd9f5d427585dd0c4cd2163343f306904d0ebcc23fcf0786f57c883d8"
+  },
+  {
+    "label": "chromium-PI729R1-m1.5-w12.png",
+    "file": "assets/4b9ff54233c2517324c626f38ecd69deaec91156794ecf3f809f19e13111229e.png",
+    "sha256": "4b9ff54233c2517324c626f38ecd69deaec91156794ecf3f809f19e13111229e"
+  },
+  {
+    "label": "chromium-PI729R1-m1.5-w6.png",
+    "file": "assets/80bedc2081051670eac252e586f354b3a15d338ea2f5a042ccc75f6d33e0c462.png",
+    "sha256": "80bedc2081051670eac252e586f354b3a15d338ea2f5a042ccc75f6d33e0c462"
+  },
+  {
+    "label": "chromium-PI729R1-m1.5-w8.png",
+    "file": "assets/2e2fcc2399ff0308f9a848335d9632c946a2a79a40a3f5fb891081fc284acdb0.png",
+    "sha256": "2e2fcc2399ff0308f9a848335d9632c946a2a79a40a3f5fb891081fc284acdb0"
+  },
+  {
+    "label": "chromium-PI729R1-m2.5-w12.png",
+    "file": "assets/79dacb8b63c12b4ea2820829a64a1810732b06d3b9eb5151487b2dd0d1dc2b82.png",
+    "sha256": "79dacb8b63c12b4ea2820829a64a1810732b06d3b9eb5151487b2dd0d1dc2b82"
+  },
+  {
+    "label": "chromium-PI729R1-m2.5-w6.png",
+    "file": "assets/99fa2fae76cd054922533c1f21085741355af0279ecb3aa0d83aeae87fb2d32c.png",
+    "sha256": "99fa2fae76cd054922533c1f21085741355af0279ecb3aa0d83aeae87fb2d32c"
+  },
+  {
+    "label": "chromium-PI729R1-m2.5-w8.png",
+    "file": "assets/cf2c7a87b6f468e851aee62dcf6fce16db0b1a28afb47298e5e4d0f4f21492f1.png",
+    "sha256": "cf2c7a87b6f468e851aee62dcf6fce16db0b1a28afb47298e5e4d0f4f21492f1"
+  },
+  {
+    "label": "chromium-PI729R2-m1.5-w12.png",
+    "file": "assets/66d296ad4ffe223f8021f8b03fcb38e438d58456eec7d433dfc2850911f4e172.png",
+    "sha256": "66d296ad4ffe223f8021f8b03fcb38e438d58456eec7d433dfc2850911f4e172"
+  },
+  {
+    "label": "chromium-PI729R2-m1.5-w6.png",
+    "file": "assets/8fbc256ce001f7b56438759994cbef541b1a41123226565431e9c401a53a45c9.png",
+    "sha256": "8fbc256ce001f7b56438759994cbef541b1a41123226565431e9c401a53a45c9"
+  },
+  {
+    "label": "chromium-PI729R2-m1.5-w8.png",
+    "file": "assets/a8f124df6edcc7987c121ed798f68741b1688b48059aecd37ec35ebbc84a31c6.png",
+    "sha256": "a8f124df6edcc7987c121ed798f68741b1688b48059aecd37ec35ebbc84a31c6"
+  },
+  {
+    "label": "chromium-PI729R2-m2.5-w12.png",
+    "file": "assets/54ecefc7655d132df26df54d5af4029fee54d8c6a2b973d2e6da34642b4acc12.png",
+    "sha256": "54ecefc7655d132df26df54d5af4029fee54d8c6a2b973d2e6da34642b4acc12"
+  },
+  {
+    "label": "chromium-PI729R2-m2.5-w6.png",
+    "file": "assets/67e539c513b26ff817d7a87a64a09481cce4f6684d0e73626036677f78c9b4a1.png",
+    "sha256": "67e539c513b26ff817d7a87a64a09481cce4f6684d0e73626036677f78c9b4a1"
+  },
+  {
+    "label": "chromium-PI729R2-m2.5-w8.png",
+    "file": "assets/940bc6808bf19b09ee2352360aa0f0ea01734f7969558d67a0605d6b98645ba2.png",
+    "sha256": "940bc6808bf19b09ee2352360aa0f0ea01734f7969558d67a0605d6b98645ba2"
+  },
+  {
+    "label": "webkit-C104-right-old16-m1.5-w12.png",
+    "file": "assets/9d4f3cfcbfecda23e4a4e5f196710bd09044e65f4ebb98a68a71f7db31d901cc.png",
+    "sha256": "9d4f3cfcbfecda23e4a4e5f196710bd09044e65f4ebb98a68a71f7db31d901cc"
+  },
+  {
+    "label": "webkit-C104-right-old16-m1.5-w6.png",
+    "file": "assets/d9b56cd9276d744e87ef47d54fe8c228e9ebab43c7d8e1d3c690640e07e70572.png",
+    "sha256": "d9b56cd9276d744e87ef47d54fe8c228e9ebab43c7d8e1d3c690640e07e70572"
+  },
+  {
+    "label": "webkit-C104-right-old16-m1.5-w8.png",
+    "file": "assets/7080f33e72319622770cb63daf9187fde40ee9fa4631057364b70937c06c100e.png",
+    "sha256": "7080f33e72319622770cb63daf9187fde40ee9fa4631057364b70937c06c100e"
+  },
+  {
+    "label": "webkit-C104-right-old16-m2.5-w12.png",
+    "file": "assets/9df6e1d5d98f0f03315c9842cfcf7ce1ddfe38fa437bca102abe9ce9d20757f7.png",
+    "sha256": "9df6e1d5d98f0f03315c9842cfcf7ce1ddfe38fa437bca102abe9ce9d20757f7"
+  },
+  {
+    "label": "webkit-C104-right-old16-m2.5-w6.png",
+    "file": "assets/c7321513a618cf7245a85de41068956577ded96624dec54785ef5c6982474626.png",
+    "sha256": "c7321513a618cf7245a85de41068956577ded96624dec54785ef5c6982474626"
+  },
+  {
+    "label": "webkit-C104-right-old16-m2.5-w8.png",
+    "file": "assets/d9e2a3866d280ac1a64fedfc7a6a289982a5a4dad62d129001f2c2b8bb69f311.png",
+    "sha256": "d9e2a3866d280ac1a64fedfc7a6a289982a5a4dad62d129001f2c2b8bb69f311"
+  },
+  {
+    "label": "webkit-PI729R1-m1.5-w12.png",
+    "file": "assets/097e138b3d25a081d949f7cc1729d501cadeace086a7fb6ae12de317bb892299.png",
+    "sha256": "097e138b3d25a081d949f7cc1729d501cadeace086a7fb6ae12de317bb892299"
+  },
+  {
+    "label": "webkit-PI729R1-m1.5-w6.png",
+    "file": "assets/365ef69785b64ccc8dd67be61b59bbf0a92f9f419283bcea5fb690333f9b12f7.png",
+    "sha256": "365ef69785b64ccc8dd67be61b59bbf0a92f9f419283bcea5fb690333f9b12f7"
+  },
+  {
+    "label": "webkit-PI729R1-m1.5-w8.png",
+    "file": "assets/4d380967d97f2be0aca644a8fe68c1e91cd6c125d5c6986f8fc711f6beffb574.png",
+    "sha256": "4d380967d97f2be0aca644a8fe68c1e91cd6c125d5c6986f8fc711f6beffb574"
+  },
+  {
+    "label": "webkit-PI729R1-m2.5-w12.png",
+    "file": "assets/5e577ae3d98d5d619ecd4e27797e8a87f4dd6b7579af7e1e5e4c52cb5c0c6b47.png",
+    "sha256": "5e577ae3d98d5d619ecd4e27797e8a87f4dd6b7579af7e1e5e4c52cb5c0c6b47"
+  },
+  {
+    "label": "webkit-PI729R1-m2.5-w6.png",
+    "file": "assets/42ef00959e0c2224b2e693cbeb82e2b53180f65d84c67776a13e9dc6cb67a334.png",
+    "sha256": "42ef00959e0c2224b2e693cbeb82e2b53180f65d84c67776a13e9dc6cb67a334"
+  },
+  {
+    "label": "webkit-PI729R1-m2.5-w8.png",
+    "file": "assets/26b84c58a333a83df3c3f630b94406f0dbdfcf2ff51ca09f3881645b54605a05.png",
+    "sha256": "26b84c58a333a83df3c3f630b94406f0dbdfcf2ff51ca09f3881645b54605a05"
+  },
+  {
+    "label": "webkit-PI729R2-m1.5-w12.png",
+    "file": "assets/b18fe258230d2b98d086904338a19984b8dd92df1e214a870b57b8bc385a36f6.png",
+    "sha256": "b18fe258230d2b98d086904338a19984b8dd92df1e214a870b57b8bc385a36f6"
+  },
+  {
+    "label": "webkit-PI729R2-m1.5-w6.png",
+    "file": "assets/37706288e447687b76880bf4059f611876cd6f6afefaf1e04497024d079cc3c1.png",
+    "sha256": "37706288e447687b76880bf4059f611876cd6f6afefaf1e04497024d079cc3c1"
+  },
+  {
+    "label": "webkit-PI729R2-m1.5-w8.png",
+    "file": "assets/e335b14a3d4754cef4db440349fa940d768f9ad2afa147ba38373bac65a27bd2.png",
+    "sha256": "e335b14a3d4754cef4db440349fa940d768f9ad2afa147ba38373bac65a27bd2"
+  },
+  {
+    "label": "webkit-PI729R2-m2.5-w12.png",
+    "file": "assets/5576a21cf49439a2fea8d5a2621dd8d666127dfea60119557c324a37d8715fbe.png",
+    "sha256": "5576a21cf49439a2fea8d5a2621dd8d666127dfea60119557c324a37d8715fbe"
+  },
+  {
+    "label": "webkit-PI729R2-m2.5-w6.png",
+    "file": "assets/eecc19622289eb9440dfa5fef3a33821f539715989f74ef567bca9528737900a.png",
+    "sha256": "eecc19622289eb9440dfa5fef3a33821f539715989f74ef567bca9528737900a"
+  },
+  {
+    "label": "webkit-PI729R2-m2.5-w8.png",
+    "file": "assets/161a4c1a0a82e3a48dcc6fd27121ecda26b7de74c4c3a45cd6d94f828a7e09e0.png",
+    "sha256": "161a4c1a0a82e3a48dcc6fd27121ecda26b7de74c4c3a45cd6d94f828a7e09e0"
+  }
+]

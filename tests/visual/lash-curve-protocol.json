@@ -1,0 +1,19 @@
+{
+ "baseline":"01c10bf992198b093dc4bca83723e54d008b4e1e",
+ "meaning":"Exploratory protocol declared before curve measurements. Same identities/all automatic axes; seed only at the first previously observed native body center. No new candidate, manual angle, product tip relocation or rendering.",
+ "stepNative":0.5,
+ "maximumArcNative":12,
+ "maximumSteps":48,
+ "searchHalfNative":0.5,
+ "profileStepNative":0.25,
+ "maximumParabolicAdjustmentNative":0.125,
+ "minimumValley":0.006,
+ "competingPeakRatio":0.9,
+ "competingPeakSeparationNative":0.75,
+ "radiiNative":[0.75,1.5],
+ "observationFloor":0.006,
+ "denseStepNative":0.25,
+ "directionWindowNative":2,
+ "maximumTurnDegrees":15,
+ "policy":"Require prior complete axis, sampled body and anchor association. Predict half-pixel steps, measure bounded local transverse center with original margin, reject boundary/one-sided/competing/flat/weak centers. Require bilateral support at every <=.25native sample connecting successive centers. Update tangent by TLS only after >=2native arc of new observations; use most recent2native arc and reject turns>15degrees. Stop on first failure, never resume/bridge. Budgets and thresholds are engineering limits, not calibrated ownership/endpoint confidence. Local multiple-valley rejection is not a full branch detector. Every outcome remains UNKNOWN; stopping is never an ending."
+}

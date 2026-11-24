@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-18",
+  "license": "https://www.pexels.com/license/",
+  "licenseVerified": "2026-11-18",
+  "status": "source-leads-not-qualified",
+  "policy": "Source-only development screening before detector use; frontal views selected before any results. Metadata does not certify visible tips, makeup absence or identity independence. Viewed sources never enter final validation.",
+  "sources": [
+    {
+      "id": "30390002",
+      "file": "pexels-30390002.jpg",
+      "page": "https://www.pexels.com/photo/close-up-portrait-of-woman-with-freckles-30390002/",
+      "url": "https://images.pexels.com/photos/30390002/pexels-photo-30390002.jpeg?cs=srgb&fm=jpg",
+      "author": "Viktoriia",
+      "metadataStatus": "official-page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "20669039",
+      "file": "pexels-20669039.jpg",
+      "page": "https://www.pexels.com/photo/face-of-woman-20669039/",
+      "url": "https://images.pexels.com/photos/20669039/pexels-photo-20669039.jpeg?cs=srgb&fm=jpg",
+      "author": "Ester Lorraine",
+      "metadataStatus": "official-page-reviewed",
+      "split": "development",
+      "role": "positive-lead",
+      "identityGroup": null
+    }
+  ],
+  "excludedPreviouslyUsed": [
+    "2817080"
+  ]
+}

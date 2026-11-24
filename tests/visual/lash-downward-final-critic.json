@@ -1,0 +1,132 @@
+{
+  "schema": "auragram-independent-downward-final-critic-v1",
+  "verdict": "REJECT PRODUCT ADOPTION / LENGTH HOLD / G1c.1 NOT CLOSED",
+  "scope": "Bounded final integrity/report/causal-scope review. Local validator and stored-byte/log inspection only; stored gallery screenshot viewed. No browser/model inference, new source, unrelated experiment, product/label/protocol edit. Final artifact remains separate from preserved evidence pack.",
+  "references": [
+    {
+      "path": "tests/visual/downward-evidence/files.json",
+      "sha256": "189c3860c9de312880b63e0c05991acb3483cea3c490d13e87a282ba13350d69"
+    },
+    {
+      "path": "tests/visual/downward-evidence/index.html",
+      "sha256": "6fd5785fca43343a1613d39c95e81c28568d967e004f4988927fd067bdc26462"
+    },
+    {
+      "path": "tests/visual/validate-lash-downward.cjs",
+      "sha256": "fca54cb6aac2bef85424b05d3c0c329ca932346656f314d15cc04150d06103c5"
+    },
+    {
+      "path": "tests/visual/lash-downward-mask-isolation.mjs",
+      "sha256": "84c482eef6c154f62a10152471a8feee6d41f37a65ed9e16e8a345dfbdba6060"
+    },
+    {
+      "path": "tests/visual/out/downward-05-connectivity-audit.json",
+      "sha256": "c2b2e2dd488a4554ff620bd93bb5e40750cc8cb2d6db2029db370b14c2a76e14"
+    },
+    {
+      "path": "tests/visual/out/downward-07-mask-isolation.json",
+      "sha256": "b5541efffbe3675ef00217ada28caa2f08314652cc5ee4f9bf1775b3813bd993"
+    },
+    {
+      "path": "G1C1_DOWNWARD_REPORT.md",
+      "sha256": "052cac536f5ebdc83b3fc06d83e829a0d710c1379241ed6dd5eb8e09ff064d79"
+    }
+  ],
+  "priorCritics": [
+    {
+      "path": "tests/visual/lash-downward-code-critic.json",
+      "sha256": "e7997df73c4ab5c1ecfa6de5d977b0858cf65e2440eccd082799ee830bedd537"
+    },
+    {
+      "path": "tests/visual/lash-downward-fixer-critic.json",
+      "sha256": "38e73464eaef77e03bcd7fd6d9ac31315a808d2933a03386c760fca5f4a12135"
+    },
+    {
+      "path": "tests/visual/lash-downward-visual-critic.json",
+      "sha256": "d4cf2db99c9ccd3d6fc7f787a9e80af0f704f714b098ce364739987a48e9b652"
+    }
+  ],
+  "integrity": {
+    "independentlyExecuted": "node tests/visual/validate-lash-downward.cjs PASS.",
+    "rawByteMappings": 773,
+    "PNGLogicalReferences": 670,
+    "galleryLocalLinks": 707,
+    "brokenLinks": 0,
+    "eyeVersionRecords": 64,
+    "hypotheses": 2592,
+    "qualifiedPhotoHypotheses": 0,
+    "retention": "All V1/V3 manifests, original/native overlays/maps/crops,64Float32 inputs, V1 tools, V2 before-refinement tool snapshot, failed phase diagnostics/log, original04 audit and exact old audit tool, revised05 connectivity audit and07 mask isolation retained.",
+    "structuralReplay": "64records have structural agreement; maximum numeric discrepancy4.4964e-15 within declared1e-9. This is reproducibility, not photographic endpoint proof.",
+    "restore": "Parent reported restoration of one missing ignored Float32 without overwrite; critic verified packed hashes/inputs but did not remove/restore additional files.",
+    "screenshot": {
+      "path": "tests/visual/out/downward-gallery-400.png",
+      "sha256": "f17d5b0ad03e8099bb149b9270c38b8861c166aeb610950fa136b52f924ada67",
+      "judgment": "Readable full-context gallery/caveats;169native-pixel view displayed676CSSpx at400%. Magnification does not add details or accuracy."
+    }
+  },
+  "causalBoundReview": {
+    "supported": "07 records32same-luma SHA pairs, exact raw response equality, no active/root subset violations. Critic independently confirmed upper/lower geometry and ROI working dimensions/size exactly equal for all32pairs.",
+    "codeOwnership": "The revised05 loose diagnostic is undirected8-neighbor reach using only working dimensions, active mask and automatic root mask. It does not consume directional edge pruning, rootContactSpan or terminal-boundary refinement. Therefore observed loose-reach loss under identical inputs is attributable to changed thinned active/root masks, not those omitted graph policies.",
+    "nativeLoose217": {
+      "V1Chromium": [
+        1.8780991642479858,
+        18.83390780695199
+      ],
+      "V3Chromium": [
+        157.2746680116572,
+        121.95143854383078
+      ],
+      "V1WebKit": [
+        1.432729701307232,
+        0.6594224468556914
+      ],
+      "V3WebKit": [
+        1.432729701307232,
+        0.6594224468556914
+      ]
+    },
+    "scopeLimit": "This isolates LOOSE diagnostic reach only. It does not isolate every strict graph change, prove the undirected route is one physical lash, or justify dropping direction/ambiguity gates. Thinning/root-mask changes are not a full explanation of biological attachment or all missed endings.",
+    "minorWording": {
+      "status": "CORRECTED_IN_CURRENT_REPORT",
+      "detail": "Subset proof does not imply every root mask strictly shrinks: six pairs have equal root counts and, given subset relation, identical root masks. Use subsets with active pixels removed, not strict subsets for every root mask. This does not change loose-mask causal conclusion."
+    }
+  },
+  "testsAndProduct": {
+    "unitStoredLog": "181PASS/0FAIL/0SKIPPED/0CANCELLED;171previous+10new mechanism tests.",
+    "fullBrowserStoredLog": "166PASS/2originalF1FAIL/3dependentNOTRUN. Mandatory suite remains RED; original LengthRGB0 vs >10 unchanged.",
+    "isolatedActivePerformance": "3PASS on unchanged productv6, not the all-abstaining prototype. Natural720x1080 D35/L100/Def25:17ms off/20.9ms active,delta+3.9ms;LengthRGB227/DensityRGB206,2tips, cache/analysis timestamp stable.",
+    "coldProductAnalysisMs": 158.2,
+    "activeProductExport": {
+      "size": [
+        2400,
+        3600
+      ],
+      "renderMs": 226.2,
+      "encodeMs": 336,
+      "buttonToBlobMs": 640.9
+    },
+    "buildPackageSite": "Completed stored build/package/check:site logs inspected; native Chromium and software WebKit real face/retouch/PNG smoke success.",
+    "diffReview": "git diff HEAD for src, existing relevant E2E/lash unit/golden paths and package-lock empty. package.json only appends new downward test module to npm test; version0.5.1/dependencies unchanged.",
+    "physicalDevices": "UNVERIFIED; typed-buffer bounds omit object/canvas/decode/process memory and do not establish mobile guarantee."
+  },
+  "visualAndReportVerdict": {
+    "unchangedVisualCritique": "V1/V3 real-image qualified0. Source217 has local observed ridge evidence while strict root reach fails; original distal fan remains visible. White-liner/hair/opening contexts remain ambiguous/protected. Universal abstention is not negative precision.",
+    "reportCorrectness": "Report accurately rejects adoption and separates analytic positive phases from real-photo failure, working-grid support boundary from physical tip, loose connectivity from same-strand ownership, and unchanged-app active performance from prototype performance. No unsupported full-green CI, naturalness, semantic skin or release acceptance claim found.",
+    "release": "Keep Draft/HOLD; no merge/deploy/partial release justified by this prototype. Remote PR/production not independently queried by this local critic.",
+    "nextBoundedWork": "Gate-specific first-break localization between automatic root-reachable and distal observed components, with retained adversarial controls. No manual seeds, invented gap, confidence relaxation or product-applicator change authorized by present observations."
+  },
+  "immutableReferences": [
+    {
+      "path": "tests/visual/lash-downward-protocol.json",
+      "sha256": "7ff4778a30cc1d7147c34217dc9f04ed3aaa8ebab993e203e4ed7b1cf2661363"
+    },
+    {
+      "path": "tests/visual/lash-freeend-independent-labels.json",
+      "sha256": "97ce307b67ea92e2a4054f25a41d428eaadcbecb352fe840cf6e451e0580f800"
+    },
+    {
+      "path": "tests/visual/lash-freeend2-independent-labels.json",
+      "sha256": "3db2c8c999d8e58a324b2c833f00085f9c6c2c330859c12814bbf394281d8810"
+    }
+  ]
+}

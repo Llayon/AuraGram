@@ -1,0 +1,63 @@
+{
+  "schema": "auragram-independent-spectrum-protocol-critic-v1",
+  "decision": "Appropriate one bounded offline hypothesis with stated controls; no new candidate/Length adoption or physical continuity claim. HOLD.",
+  "scope": "Reviewed frozen protocol before new spectrum outcomes. Only protocol/prepare artifacts present; implementation, new matrices and PNGs not yet verified. No browser/inference/source/protocol/label edit.",
+  "references": [
+    {
+      "path": "tests/visual/lash-spectrum-protocol.json",
+      "sha256": "84dd5c3ce9284a847e787f5a4dddcf2090989ae7d9e3f75a7588915c90555f5a"
+    },
+    {
+      "path": "tests/visual/lash-spectrum-prepare.cjs",
+      "sha256": "13c726a6ad0701e6e78f6009c8007fbfee1b1fb4ced82ba6821fbbf3c9898687"
+    }
+  ],
+  "frozenProtocolSHA": "84dd5c3ce9284a847e787f5a4dddcf2090989ae7d9e3f75a7588915c90555f5a",
+  "strengths": [
+    "Same exposed frozen64eye/version records, fixed active/root/domain masks and automatic seeds; no manual label direction enters detector.",
+    "Eight original responses captured before winner/Float32 selection; null/unavailable distinguished from zero.",
+    "Every supported direction must independently pass original response/orthogonal-anisotropy/normal gates; graph numeric agreement/step/depth thresholds unchanged.",
+    "Pixel-axis states persist through incoming/outgoing edges; four-distinct-pixel local witness avoids immediate one-pixel incompatible-mode teleport.",
+    "Expanded state reach constrained to contain original raw-directed reach and remain inside observed undirected reach.",
+    "All frontier pairs/controls and supported mode ambiguity counts retained; first lexical witness only a declared display choice."
+  ],
+  "implementationCautions": [
+    {
+      "id": "SPECTRUM-C1",
+      "issue": "Fixed pixel/root masks do not make the hypothesis class identical: adding alternative direction states enlarges possible paths.",
+      "requirement": "Report unchanged numeric thresholds plus expanded state/path space. Do not imply no effective eligibility expansion merely because.85/.5 constants stay equal."
+    },
+    {
+      "id": "SPECTRUM-C2",
+      "issue": "Preserving baseline inclusion requires original raw preFloat32 eligibility and actual original winning Float32 direction/depth semantics.",
+      "requirement": "Capture all eight raw response values and original best mode before rounding. Per-mode anisotropy must use that mode versus its own orthogonal response. Null/unmeasured is unavailable. Retain winning vector/mask and assert original outputs unchanged; avoid recalc/rounding falsely excluding baseline states."
+    },
+    {
+      "id": "SPECTRUM-C3",
+      "issue": "Local four-pixel feasibility is not necessarily globally root-reachable in the compatible mode state.",
+      "requirement": "Keep local witness and expanded root-state reach separate. A source pixel originally reachable in winner mode does not guarantee its alternate witness mode is root-reachable. Record reachable state IDs or equivalent flags before claiming globally restored target reach."
+    },
+    {
+      "id": "SPECTRUM-C4",
+      "issue": "State-consistent paths still can switch physical strands through neighboring ambiguous modes, or revisit a pixel in another mode via a loop.",
+      "requirement": "No direct same-pixel teleport is necessary but insufficient for single-fiber ownership. Retain mode ambiguity and possible repeated spatial pixels in diagnostic routes; do not promote local continuity to physical same hair/root or free tip."
+    },
+    {
+      "id": "SPECTRUM-C5",
+      "issue": "Known no-undirected-root-route cases cannot be repaired while masks/roots are fixed.",
+      "requirement": "Chromium217V1L2 and V3both nearest active references remain bounded by prior loose reach. Any claimed restoration beyond that reach is an implementation/coordinate error, not new evidence."
+    },
+    {
+      "id": "SPECTRUM-C6",
+      "issue": "Enumerating modes can multiply states/edge combinations and witness alternatives.",
+      "requirement": "Bound at most8states per pixel; report actual counts/censoring and offline costs. Avoid calling first lexical witness unique/best or applying working-array memory figures to integrated app/process/mobile performance."
+    }
+  ],
+  "interpretationLimits": [
+    "Supported response modes are engineering evidence, not calibrated probabilities or native physical tangent truth.",
+    "Four distinct observed pixels can be hair, liner, fold or skin texture and do not establish terminal absence.",
+    "Restoration on ambiguous controls is not a measured false-positive rate, but it prevents a safe adoption claim.",
+    "No renderer authorized by purely expanded reach; physically convincing root/terminal ownership and protected controls remain unmet."
+  ],
+  "laterReview": "Inspect all per-pair mode matrices, actual root-state paths and same fixed positive/white-liner/hair/inside-opening source patches. Preserve unsupported modes, ambiguities and unfavorable outcomes; no subsequent threshold lowering or favorable selection."
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-22",
+  "archive": "followup-native-short-2507723-20261122.zip",
+  "sha256": "f1c467e3d5fe81631a18b9371af6eba21986c11ff19b8714e21b84604017b9ca",
+  "bytes": 4528508,
+  "restoreDirectory": "tests/visual/out",
+  "members": {
+    "native-short-2507723-main-01/protocol.json": "70e0f91a7861cafb921ee80f1ed6f63fbdf34bbf838b4a0355d84ae2e570e884",
+    "native-short-2507723-repeat-01/protocol.json": "70e0f91a7861cafb921ee80f1ed6f63fbdf34bbf838b4a0355d84ae2e570e884",
+    "source-snapshots/tests/visual/lash-spatial-labels-2507723.json": "59b8991577d87cd270f37b8474c44ec8bee1b5b6f012c9320edf05825ab2da2f",
+    "source-snapshots/tests/visual/lash-spatial-labels-2507723.freeze.json": "ce40d17fb8cf5f4f8331bbcb168c1b2ce367e86a851e78a78edf78b318f86d93",
+    "native-short-2507723-main-01/chromium.json": "ef19e4ae3e67d8a7691ffcf1416ab7948c525121a0c44e87becac26f2cefe3fd",
+    "native-short-2507723-repeat-01/chromium.json": "f50a86f591dc7627c8fdaf60ba35ee81c12c21a76069cae21dc927c40128239f",
+    "ending-short-2507723-chromium-01/protocol.json": "da7371201c808ec76247d34123497fa11fd90a9c9a7f5be631ed0f9a6bb991a4",
+    "ending-short-2507723-chromium-01/chromium.json": "3ca66f03e3f25497c44ed56529e8d62e80ac18f8464f7e7e3fbcfdd51086047a",
+    "native-short-2507723-main-01/webkit.json": "eaabc7456a07cfdf3de9e2d1598dca9fba87a4500a5d21b4dec6e3096b12af30",
+    "native-short-2507723-repeat-01/webkit.json": "903a2c62696fb91ff58034935d9f49725e640cddc5da43e333f1dd939c4c0a09",
+    "ending-short-2507723-webkit-01/protocol.json": "da7371201c808ec76247d34123497fa11fd90a9c9a7f5be631ed0f9a6bb991a4",
+    "ending-short-2507723-webkit-01/webkit.json": "f130b233af668b2ca293bf83efd94bbd38737fc3a1a329f1ba4fe91191372309"
+  }
+}

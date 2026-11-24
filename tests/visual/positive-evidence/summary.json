@@ -1,0 +1,528 @@
+{
+  "engines": {
+    "chromium": {
+      "ready": 7,
+      "excluded": [],
+      "audit": {
+        "primary-224": {
+          "labels": 3,
+          "withinAnnotation": 0,
+          "withinWithSampling": 0,
+          "withinWithSamplingAndAxis": 0
+        },
+        "primary-320": {
+          "labels": 3,
+          "withinAnnotation": 0,
+          "withinWithSampling": 0,
+          "withinWithSamplingAndAxis": 0
+        },
+        "primary-384": {
+          "labels": 3,
+          "withinAnnotation": 0,
+          "withinWithSampling": 0,
+          "withinWithSamplingAndAxis": 0
+        },
+        "independent-224": {
+          "labels": 10,
+          "withinAnnotation": 2,
+          "withinWithSampling": 2,
+          "withinWithSamplingAndAxis": 2
+        },
+        "independent-320": {
+          "labels": 10,
+          "withinAnnotation": 0,
+          "withinWithSampling": 1,
+          "withinWithSamplingAndAxis": 1
+        },
+        "independent-384": {
+          "labels": 10,
+          "withinAnnotation": 1,
+          "withinWithSampling": 1,
+          "withinWithSamplingAndAxis": 1
+        }
+      },
+      "densityMapIdentities": 42,
+      "densityDefinitionPNGIdentities": 16,
+      "endpoint224": [
+        {
+          "file": "pexels-10460940.jpg",
+          "side": "left",
+          "previousTips": 26,
+          "currentFullTips": 18,
+          "previousEligible": 25,
+          "fixedRetained": 13,
+          "newFullCandidates": 6,
+          "removedFullCandidates": 14
+        },
+        {
+          "file": "pexels-10460940.jpg",
+          "side": "right",
+          "previousTips": 24,
+          "currentFullTips": 14,
+          "previousEligible": 22,
+          "fixedRetained": 5,
+          "newFullCandidates": 9,
+          "removedFullCandidates": 19
+        },
+        {
+          "file": "pexels-7298680.jpg",
+          "side": "left",
+          "previousTips": 11,
+          "currentFullTips": 8,
+          "previousEligible": 11,
+          "fixedRetained": 6,
+          "newFullCandidates": 2,
+          "removedFullCandidates": 5
+        },
+        {
+          "file": "pexels-7298680.jpg",
+          "side": "right",
+          "previousTips": 13,
+          "currentFullTips": 7,
+          "previousEligible": 13,
+          "fixedRetained": 5,
+          "newFullCandidates": 2,
+          "removedFullCandidates": 8
+        },
+        {
+          "file": "pexels-3763152.jpg",
+          "side": "left",
+          "previousTips": 13,
+          "currentFullTips": 7,
+          "previousEligible": 13,
+          "fixedRetained": 4,
+          "newFullCandidates": 3,
+          "removedFullCandidates": 9
+        },
+        {
+          "file": "pexels-3763152.jpg",
+          "side": "right",
+          "previousTips": 11,
+          "currentFullTips": 4,
+          "previousEligible": 9,
+          "fixedRetained": 4,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 7
+        },
+        {
+          "file": "edge900.jpg",
+          "side": "left",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "edge900.jpg",
+          "side": "right",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "pexels-8727422.jpg",
+          "side": "left",
+          "previousTips": 6,
+          "currentFullTips": 2,
+          "previousEligible": 6,
+          "fixedRetained": 2,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 4
+        },
+        {
+          "file": "pexels-8727422.jpg",
+          "side": "right",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "side": "left",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "side": "right",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "hair-occlusion.jpg",
+          "side": "left",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "hair-occlusion.jpg",
+          "side": "right",
+          "previousTips": 1,
+          "currentFullTips": 1,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        }
+      ],
+      "fixedPixels": [
+        {
+          "file": "pexels-10460940.jpg",
+          "length50": {
+            "left": {
+              "changedPixels": 548,
+              "absoluteRGB": 8419
+            },
+            "right": {
+              "changedPixels": 111,
+              "absoluteRGB": 1386
+            }
+          },
+          "length100": {
+            "left": {
+              "changedPixels": 721,
+              "absoluteRGB": 20977
+            },
+            "right": {
+              "changedPixels": 158,
+              "absoluteRGB": 3100
+            }
+          }
+        },
+        {
+          "file": "pexels-7298680.jpg",
+          "length50": {
+            "left": {
+              "changedPixels": 81,
+              "absoluteRGB": 830
+            },
+            "right": {
+              "changedPixels": 62,
+              "absoluteRGB": 669
+            }
+          },
+          "length100": {
+            "left": {
+              "changedPixels": 107,
+              "absoluteRGB": 1773
+            },
+            "right": {
+              "changedPixels": 92,
+              "absoluteRGB": 1607
+            }
+          }
+        },
+        {
+          "file": "pexels-3763152.jpg",
+          "length50": {
+            "left": {
+              "changedPixels": 44,
+              "absoluteRGB": 382
+            },
+            "right": {
+              "changedPixels": 73,
+              "absoluteRGB": 801
+            }
+          },
+          "length100": {
+            "left": {
+              "changedPixels": 55,
+              "absoluteRGB": 716
+            },
+            "right": {
+              "changedPixels": 97,
+              "absoluteRGB": 1733
+            }
+          }
+        },
+        {
+          "file": "edge900.jpg",
+          "length50": {
+            "left": {
+              "changedPixels": 0,
+              "absoluteRGB": 0
+            },
+            "right": {
+              "changedPixels": 0,
+              "absoluteRGB": 0
+            }
+          },
+          "length100": {
+            "left": {
+              "changedPixels": 0,
+              "absoluteRGB": 0
+            },
+            "right": {
+              "changedPixels": 0,
+              "absoluteRGB": 0
+            }
+          }
+        }
+      ]
+    },
+    "webkit": {
+      "ready": 6,
+      "excluded": [
+        {
+          "file": "pexels-10460940.jpg",
+          "status": "no_face"
+        }
+      ],
+      "audit": {
+        "primary-224": {
+          "labels": 1,
+          "withinAnnotation": 1,
+          "withinWithSampling": 1,
+          "withinWithSamplingAndAxis": 0
+        },
+        "primary-320": {
+          "labels": 1,
+          "withinAnnotation": 1,
+          "withinWithSampling": 1,
+          "withinWithSamplingAndAxis": 0
+        },
+        "primary-384": {
+          "labels": 1,
+          "withinAnnotation": 1,
+          "withinWithSampling": 1,
+          "withinWithSamplingAndAxis": 0
+        },
+        "independent-224": {
+          "labels": 4,
+          "withinAnnotation": 1,
+          "withinWithSampling": 2,
+          "withinWithSamplingAndAxis": 2
+        },
+        "independent-320": {
+          "labels": 4,
+          "withinAnnotation": 1,
+          "withinWithSampling": 2,
+          "withinWithSamplingAndAxis": 2
+        },
+        "independent-384": {
+          "labels": 4,
+          "withinAnnotation": 3,
+          "withinWithSampling": 3,
+          "withinWithSamplingAndAxis": 3
+        }
+      },
+      "densityMapIdentities": 36,
+      "densityDefinitionPNGIdentities": 12,
+      "endpoint224": [
+        {
+          "file": "pexels-7298680.jpg",
+          "side": "left",
+          "previousTips": 11,
+          "currentFullTips": 8,
+          "previousEligible": 11,
+          "fixedRetained": 6,
+          "newFullCandidates": 2,
+          "removedFullCandidates": 5
+        },
+        {
+          "file": "pexels-7298680.jpg",
+          "side": "right",
+          "previousTips": 15,
+          "currentFullTips": 14,
+          "previousEligible": 15,
+          "fixedRetained": 10,
+          "newFullCandidates": 4,
+          "removedFullCandidates": 5
+        },
+        {
+          "file": "pexels-3763152.jpg",
+          "side": "left",
+          "previousTips": 14,
+          "currentFullTips": 6,
+          "previousEligible": 14,
+          "fixedRetained": 5,
+          "newFullCandidates": 1,
+          "removedFullCandidates": 9
+        },
+        {
+          "file": "pexels-3763152.jpg",
+          "side": "right",
+          "previousTips": 13,
+          "currentFullTips": 7,
+          "previousEligible": 12,
+          "fixedRetained": 5,
+          "newFullCandidates": 2,
+          "removedFullCandidates": 8
+        },
+        {
+          "file": "edge900.jpg",
+          "side": "left",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "edge900.jpg",
+          "side": "right",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "pexels-8727422.jpg",
+          "side": "left",
+          "previousTips": 6,
+          "currentFullTips": 5,
+          "previousEligible": 6,
+          "fixedRetained": 5,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 1
+        },
+        {
+          "file": "pexels-8727422.jpg",
+          "side": "right",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "side": "left",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "pexels-7123010.jpg",
+          "side": "right",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "hair-occlusion.jpg",
+          "side": "left",
+          "previousTips": 0,
+          "currentFullTips": 0,
+          "previousEligible": 0,
+          "fixedRetained": 0,
+          "newFullCandidates": 0,
+          "removedFullCandidates": 0
+        },
+        {
+          "file": "hair-occlusion.jpg",
+          "side": "right",
+          "previousTips": 3,
+          "currentFullTips": 2,
+          "previousEligible": 3,
+          "fixedRetained": 1,
+          "newFullCandidates": 1,
+          "removedFullCandidates": 2
+        }
+      ],
+      "fixedPixels": [
+        {
+          "file": "pexels-7298680.jpg",
+          "length50": {
+            "left": {
+              "changedPixels": 103,
+              "absoluteRGB": 1414
+            },
+            "right": {
+              "changedPixels": 129,
+              "absoluteRGB": 1162
+            }
+          },
+          "length100": {
+            "left": {
+              "changedPixels": 157,
+              "absoluteRGB": 3911
+            },
+            "right": {
+              "changedPixels": 189,
+              "absoluteRGB": 3229
+            }
+          }
+        },
+        {
+          "file": "pexels-3763152.jpg",
+          "length50": {
+            "left": {
+              "changedPixels": 66,
+              "absoluteRGB": 392
+            },
+            "right": {
+              "changedPixels": 46,
+              "absoluteRGB": 351
+            }
+          },
+          "length100": {
+            "left": {
+              "changedPixels": 89,
+              "absoluteRGB": 982
+            },
+            "right": {
+              "changedPixels": 78,
+              "absoluteRGB": 1037
+            }
+          }
+        },
+        {
+          "file": "edge900.jpg",
+          "length50": {
+            "left": {
+              "changedPixels": 0,
+              "absoluteRGB": 0
+            },
+            "right": {
+              "changedPixels": 0,
+              "absoluteRGB": 0
+            }
+          },
+          "length100": {
+            "left": {
+              "changedPixels": 0,
+              "absoluteRGB": 0
+            },
+            "right": {
+              "changedPixels": 0,
+              "absoluteRGB": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "views": 598,
+  "uniquePNGs": 374
+}

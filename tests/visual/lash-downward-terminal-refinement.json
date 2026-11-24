@@ -1,0 +1,7 @@
+{
+  "schema": "auragram-downward-support-boundary-v3",
+  "exposure": "Declared after V2 synthetic tapered phase-family failure, before revised real-photo runs. V1 real outputs and V2 failed analytic gate/tools retained. Not blind validation.",
+  "problem": "A graph leaf at an integer pixel center can still have real support0.5pixel ahead; that is not a resolved terminal. Do not lower the forward-response floor.",
+  "method": "Observe the same measured distal tangent at quarter-pixel steps up to1working pixel. Require a supported start and an observed supported-to-unsupported bracket. Bisect6times with the unchanged response floor; keep the last supported location, sample history and bracket. A continuing/unavailable/budget-limited response cannot qualify. Retest all original forward distances from this measured support boundary.",
+  "limits": "This local contrast-support boundary is not a certified physical free tip. Do not jump across gaps, walk more than1pixel, extrapolate a curve or render an extension. Protected regions/borders are rechecked at the refined observation. Original graph pixels remain unchanged."
+}

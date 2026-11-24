@@ -1,0 +1,100 @@
+{
+  "note": "Previously audited source bytes reused; see preceding source/provenance reports. Derived low-res/rotation controls are not independent photographs.",
+  "sources": [
+    {
+      "file": "light.jpg",
+      "sha256": "d0776e51a24cda5fa32b73bb1d464c75a3b02281331c88a42967330f5a3942de",
+      "path": "legacy-sources/light.jpg"
+    },
+    {
+      "file": "natural.jpg",
+      "sha256": "abbe280b58a2119c32256e760299fd29337ba46d2291a8c3d60a93f004a0aaf0",
+      "path": "legacy-sources/natural.jpg"
+    },
+    {
+      "file": "edge900.jpg",
+      "sha256": "c43db5cf32c49064e30cabc8eb80a109159d7dc43d1e7b50ae9d74aa2587a0f0",
+      "path": "legacy-sources/edge900.jpg"
+    },
+    {
+      "file": "beauty.jpg",
+      "sha256": "658f4028a1ae27b4cca24fc75539ed73ab72257f0fcacbd2c34c9888eb4809fc",
+      "path": "legacy-sources/beauty.jpg"
+    },
+    {
+      "file": "hair-occlusion.jpg",
+      "sha256": "b6211d89421b0f6dba6dcb3ca06103169c0ca9375767853ec83e6033e481b485",
+      "path": "legacy-sources/hair-occlusion.jpg"
+    },
+    {
+      "file": "eyeglasses.jpg",
+      "sha256": "646c3b14d6ebd3fd5d3e2c88521fc1b93d92688cf8cd733ae4d5f479e8e2c8de",
+      "path": "legacy-sources/eyeglasses.jpg"
+    },
+    {
+      "file": "freckles-blonde.jpg",
+      "sha256": "2023a7613e9bf04de46bc95cb52c64e7872ffa9e47e2d87a98ccf3a7d87ae613",
+      "path": "legacy-sources/freckles-blonde.jpg"
+    },
+    {
+      "file": "glasses.jpg",
+      "sha256": "35d947096bba8054e4ea19d315ce86f50214970b137e367d9e3cb1b96dc3fc9c",
+      "path": "legacy-sources/glasses.jpg"
+    },
+    {
+      "file": "light-rotated25.jpg",
+      "sha256": "18a40e2961fca6ce897811a441d2dfea281f216381de61431e2bc379ce24839f",
+      "path": "legacy-sources/light-rotated25.jpg"
+    },
+    {
+      "file": "low256.jpg",
+      "sha256": "f61475d72f68f4a2b5d8842ad6701fb390e78416bb7f26bca4b1c1ee0fd4fae3",
+      "path": "legacy-sources/low256.jpg"
+    },
+    {
+      "file": "mascara.jpg",
+      "sha256": "c0f1b8811d485c926c4db213d5d98fb839fafee8a9c902b71954f65760b64a3f",
+      "path": "legacy-sources/mascara.jpg"
+    },
+    {
+      "file": "pexels-8727422.jpg",
+      "sha256": "ad949e502d6ff35c6b9801b82d67f0d484532f65b8ee77fdc792548231127ecd",
+      "path": "../expanded-evidence/sources/pexels-8727422.jpg"
+    },
+    {
+      "file": "pexels-12367370.jpg",
+      "sha256": "edd057654203bb4adbb6851cc5aee0e82929364e87319619026ef49452f65954",
+      "path": "../expanded-evidence/sources/pexels-12367370.jpg"
+    },
+    {
+      "file": "pexels-7479551.jpg",
+      "sha256": "6da08a21618f2b240bca1f8d690ae3159eadd073e09c1f5ebb58a68537ff27fd",
+      "path": "../expanded-evidence/sources/pexels-7479551.jpg"
+    },
+    {
+      "file": "pexels-7123010.jpg",
+      "sha256": "4234570fa7eb81e3ac0b617b362ae92e0e4ec8ee803c31a6131eb42bb272631c",
+      "path": "../expanded-evidence/sources/pexels-7123010.jpg"
+    },
+    {
+      "file": "unsplash-purejulia.jpg",
+      "sha256": "c6ea2f5d44810141dcb9f09437933bbfb2ae675ada8bba3752d1efd43a2c2f00",
+      "path": "../expanded-evidence/sources/unsplash-purejulia.jpg"
+    },
+    {
+      "file": "unsplash-andrey-eye.jpg",
+      "sha256": "e8019ddab5ae3e8e3b2d91185b0cbcabbe05b6dd716cc4f99d9f032d7b608005",
+      "path": "../expanded-evidence/sources/unsplash-andrey-eye.jpg"
+    },
+    {
+      "file": "pexels-18485027.jpg",
+      "sha256": "459806e480f5553970d0dbaccb088daac30046fcae413d1dd50a382dbeae79d9",
+      "path": "../expanded-evidence/sources/pexels-18485027.jpg"
+    },
+    {
+      "file": "pexels-7859838.jpg",
+      "sha256": "3b3f37769db3b2b40e723a756a40379d060d46e5ccc4623f735949576a6c574e",
+      "path": "../expanded-evidence/sources/pexels-7859838.jpg"
+    }
+  ]
+}

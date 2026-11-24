@@ -1,0 +1,599 @@
+{
+  "date": "2026-11-22",
+  "stage": "source-only-screening-and-geometric-mask-check",
+  "detectorExecuted": false,
+  "validationViewsOpened": false,
+  "sources": [
+    {
+      "file": "pexels-30639069.jpg",
+      "page": "https://www.pexels.com/photo/thoughtful-portrait-of-a-man-looking-up-30639069/",
+      "author": "Ytalo Marcos",
+      "sha256": "9be994f0bc344a881d7b9bcaca8c04dd87691fc0a3a92b98a0634250dd66d785",
+      "bytes": 2073555,
+      "width": 4000,
+      "height": 6000,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "qualifiedPositive": false,
+      "note": "Left eye visibly defocused. Right upper band shadowed and overlapping."
+    },
+    {
+      "file": "pexels-8649020.jpg",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-man-in-blue-jacket-8649020/",
+      "author": "Mushtaq Hussain",
+      "sha256": "110a825d3362c86d8bb7161dfbbd818a1b56c5962230f26c9836ef3cc0a302ec",
+      "bytes": 1118615,
+      "width": 3376,
+      "height": 6000,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "qualifiedPositive": false,
+      "note": "Smaller eye region but dark upper band and opposite eye partly occluded."
+    },
+    {
+      "file": "pexels-5096204.jpg",
+      "page": "https://www.pexels.com/photo/close-up-shot-of-a-bearded-man-in-white-shirt-looking-at-camera-5096204/",
+      "author": "Yelena from Pexels",
+      "sha256": "3e8a6a882895c6b3b803e58f34bb3498a8996b3c1ffe991739eb7d9812472d60",
+      "bytes": 3643436,
+      "width": 4480,
+      "height": 6720,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "qualifiedPositive": false,
+      "note": "Bright lash-like structures on one eye and weak separability on the other."
+    },
+    {
+      "file": "pexels-2507723.jpg",
+      "page": "https://www.pexels.com/photo/portrait-photo-of-woman-posing-while-looking-up-2507723/",
+      "author": "Rene Terp",
+      "sha256": "a346b8390f6a580f4c4a4bbc01e9f4b375802a84ee81ca0835b81046b1c87260",
+      "bytes": 450344,
+      "width": 2048,
+      "height": 3072,
+      "faceMesh": {
+        "chromium": "ready",
+        "webkit": "ready"
+      },
+      "qualifiedPositive": false,
+      "note": "Five provisional right-eye regions frozen from sources only. Left eye excluded. Independent review pending."
+    },
+    {
+      "file": "pexels-13871690.jpg",
+      "page": "https://www.pexels.com/photo/portrait-of-a-woman-looking-up-13871690/",
+      "author": "Matheus Bertelli",
+      "sha256": "aee5f8c5d030507db816f1d8b657f65a20ea95e10b01c8a4c66b27bfbefd3d35",
+      "bytes": 1491117,
+      "width": 3475,
+      "height": 5212,
+      "faceMesh": {
+        "chromium": "no_face",
+        "webkit": "no_face"
+      },
+      "qualifiedPositive": false,
+      "note": "no_face in both engines. No geometry substitution."
+    }
+  ],
+  "inputs": {
+    "tests/visual/out/spatial-supplement-09/downloads.json": "694cbfbb22f1e6738385235e0dcf8e90406679c8a8e60011489891d5d2aa5f76",
+    "tests/visual/out/spatial-supplement-09-chromium/screening.json": "ea40cc4b54d454a3fdd01edbd185d0bf4b1442c2a3db0e7051a4e431caf3f51a",
+    "tests/visual/out/spatial-supplement-09-webkit/screening.json": "87aab7223ed752918eaa20d75ef594ed12dd288788cf8fee557f80f0d07a4cd2",
+    "tests/visual/lash-spatial-labels-2507723.json": "59b8991577d87cd270f37b8474c44ec8bee1b5b6f012c9320edf05825ab2da2f",
+    "tests/visual/lash-spatial-labels-2507723.freeze.json": "ce40d17fb8cf5f4f8331bbcb168c1b2ce367e86a851e78a78edf78b318f86d93",
+    "tests/visual/out/mask-scope-2507723-01/protocol.json": "e62344cbbcaca78de21c4b96d3166b35fceaaab88a8e087af987694b8ac9aad1",
+    "tests/visual/out/mask-scope-2507723-01/chromium.json": "e64f610377c97d3bc8c4b0b422fa090b3f905767ed410256efbc66c9846b79e7",
+    "tests/visual/out/mask-scope-2507723-01/webkit.json": "b5ac7bcfac0466b981c6a0201b5bbe7da292b665c99908ca12f3a4ad997fe30c"
+  },
+  "scope": [
+    {
+      "side": "right",
+      "insideAllBaselineMasks": 0,
+      "tips": [
+        {
+          "id": "right-1",
+          "insideAllBaselineMasks": false,
+          "measurements": [
+            {
+              "engine": "chromium",
+              "target": "preview720long",
+              "group": "baselineLength",
+              "status": "outside",
+              "samples": 35,
+              "positive": 0,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "preview720long",
+              "group": "maximumRecoveryLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 30,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "native",
+              "group": "baselineLength",
+              "status": "outside",
+              "samples": 35,
+              "positive": 0,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "native",
+              "group": "maximumRecoveryLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 3,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "preview720long",
+              "group": "baselineLength",
+              "status": "outside",
+              "samples": 35,
+              "positive": 0,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "preview720long",
+              "group": "maximumRecoveryLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 30,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "native",
+              "group": "baselineLength",
+              "status": "outside",
+              "samples": 35,
+              "positive": 0,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "native",
+              "group": "maximumRecoveryLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 5,
+              "full": 0
+            }
+          ]
+        },
+        {
+          "id": "right-2",
+          "insideAllBaselineMasks": false,
+          "measurements": [
+            {
+              "engine": "chromium",
+              "target": "preview720long",
+              "group": "baselineLength",
+              "status": "outside",
+              "samples": 35,
+              "positive": 0,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "preview720long",
+              "group": "maximumRecoveryLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 20,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "native",
+              "group": "baselineLength",
+              "status": "outside",
+              "samples": 35,
+              "positive": 0,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "native",
+              "group": "maximumRecoveryLength",
+              "status": "outside",
+              "samples": 35,
+              "positive": 0,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "preview720long",
+              "group": "baselineLength",
+              "status": "outside",
+              "samples": 35,
+              "positive": 0,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "preview720long",
+              "group": "maximumRecoveryLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 20,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "native",
+              "group": "baselineLength",
+              "status": "outside",
+              "samples": 35,
+              "positive": 0,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "native",
+              "group": "maximumRecoveryLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 1,
+              "full": 0
+            }
+          ]
+        },
+        {
+          "id": "right-3",
+          "insideAllBaselineMasks": false,
+          "measurements": [
+            {
+              "engine": "chromium",
+              "target": "preview720long",
+              "group": "baselineLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 30,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "preview720long",
+              "group": "maximumRecoveryLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "native",
+              "group": "baselineLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 7,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "native",
+              "group": "maximumRecoveryLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 32,
+              "full": 13
+            },
+            {
+              "engine": "webkit",
+              "target": "preview720long",
+              "group": "baselineLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 30,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "preview720long",
+              "group": "maximumRecoveryLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "native",
+              "group": "baselineLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 12,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "native",
+              "group": "maximumRecoveryLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 18
+            }
+          ]
+        },
+        {
+          "id": "right-4",
+          "insideAllBaselineMasks": false,
+          "measurements": [
+            {
+              "engine": "chromium",
+              "target": "preview720long",
+              "group": "baselineLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 20,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "preview720long",
+              "group": "maximumRecoveryLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "native",
+              "group": "baselineLength",
+              "status": "outside",
+              "samples": 35,
+              "positive": 0,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "native",
+              "group": "maximumRecoveryLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 17,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "preview720long",
+              "group": "baselineLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 20,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "preview720long",
+              "group": "maximumRecoveryLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "native",
+              "group": "baselineLength",
+              "status": "outside",
+              "samples": 35,
+              "positive": 0,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "native",
+              "group": "maximumRecoveryLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 20,
+              "full": 2
+            }
+          ]
+        },
+        {
+          "id": "right-5",
+          "insideAllBaselineMasks": false,
+          "measurements": [
+            {
+              "engine": "chromium",
+              "target": "preview720long",
+              "group": "baselineLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 0
+            },
+            {
+              "engine": "chromium",
+              "target": "preview720long",
+              "group": "maximumRecoveryLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 10
+            },
+            {
+              "engine": "chromium",
+              "target": "native",
+              "group": "baselineLength",
+              "status": "partial",
+              "samples": 35,
+              "positive": 34,
+              "full": 15
+            },
+            {
+              "engine": "chromium",
+              "target": "native",
+              "group": "maximumRecoveryLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 35
+            },
+            {
+              "engine": "webkit",
+              "target": "preview720long",
+              "group": "baselineLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 0
+            },
+            {
+              "engine": "webkit",
+              "target": "preview720long",
+              "group": "maximumRecoveryLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 10
+            },
+            {
+              "engine": "webkit",
+              "target": "native",
+              "group": "baselineLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 20
+            },
+            {
+              "engine": "webkit",
+              "target": "native",
+              "group": "maximumRecoveryLength",
+              "status": "inside",
+              "samples": 35,
+              "positive": 35,
+              "full": 35
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lowerBounds": {
+    "chromium": [
+      {
+        "id": "right-1",
+        "center": {
+          "x": 758,
+          "y": 1033
+        },
+        "enclosingRadius": 3.6055512754639896,
+        "centerBound": 18.959030123170795,
+        "lowerBound": 15.353478847706805
+      },
+      {
+        "id": "right-2",
+        "center": {
+          "x": 765,
+          "y": 1026
+        },
+        "enclosingRadius": 3.6055512754639896,
+        "centerBound": 16.48738585120743,
+        "lowerBound": 12.881834575743442
+      },
+      {
+        "id": "right-3",
+        "center": {
+          "x": 781,
+          "y": 1028
+        },
+        "enclosingRadius": 3.6055512754639896,
+        "centerBound": 13.37644396848209,
+        "lowerBound": 9.7708926930181
+      },
+      {
+        "id": "right-4",
+        "center": {
+          "x": 789,
+          "y": 1022
+        },
+        "enclosingRadius": 3.6055512754639896,
+        "centerBound": 22.280459668429142,
+        "lowerBound": 18.67490839296515
+      },
+      {
+        "id": "right-5",
+        "center": {
+          "x": 812,
+          "y": 1024
+        },
+        "enclosingRadius": 3.6055512754639896,
+        "centerBound": 13.917078863798675,
+        "lowerBound": 10.311527588334686
+      }
+    ],
+    "webkit": [
+      {
+        "id": "right-1",
+        "center": {
+          "x": 758,
+          "y": 1033
+        },
+        "enclosingRadius": 3.6055512754639896,
+        "centerBound": 19.30311478330977,
+        "lowerBound": 15.69756350784578
+      },
+      {
+        "id": "right-2",
+        "center": {
+          "x": 765,
+          "y": 1026
+        },
+        "enclosingRadius": 3.6055512754639896,
+        "centerBound": 16.858041720446778,
+        "lowerBound": 13.252490444982788
+      },
+      {
+        "id": "right-3",
+        "center": {
+          "x": 781,
+          "y": 1028
+        },
+        "enclosingRadius": 3.6055512754639896,
+        "centerBound": 13.678128442919505,
+        "lowerBound": 10.072577167455515
+      },
+      {
+        "id": "right-4",
+        "center": {
+          "x": 789,
+          "y": 1022
+        },
+        "enclosingRadius": 3.6055512754639896,
+        "centerBound": 20.34439532439005,
+        "lowerBound": 16.73884404892606
+      },
+      {
+        "id": "right-5",
+        "center": {
+          "x": 812,
+          "y": 1024
+        },
+        "enclosingRadius": 3.6055512754639896,
+        "centerBound": 13.371718912522233,
+        "lowerBound": 9.766167637058244
+      }
+    ]
+  },
+  "qualifiedPositiveCount": 0,
+  "limitations": "The distance lower bound cannot prove reachability. Provisional regions and sampled masks do not qualify any source."
+}

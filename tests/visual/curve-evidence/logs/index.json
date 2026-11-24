@@ -1,0 +1,57 @@
+[
+  {
+    "file": "curve-03-unit.txt",
+    "sha256": "30f5d8ea997766c2b49780264779609faf0948af2bdef37e9dedf31f399680db",
+    "rawSHA256": "d6f649e66310ee8149f960378e9e89a7f313a3993243dd3b7ba247c4ea6d6463"
+  },
+  {
+    "file": "curve-04-browser.txt",
+    "sha256": "8a387dd16e823cb1a9896a083eddbe5c684999fad77a0abdac61cb978128b58f",
+    "rawSHA256": "4be50a7dc5379e0c96c34f6756089b599dbc9e06a0ce8380cba638a2abc3bdc1"
+  },
+  {
+    "file": "curve-06-controls.txt",
+    "sha256": "7850166b03fd6d53f8db9d545db5b344ab029739b13739b627d182336759007b",
+    "rawSHA256": "0b2ed610faccb5bc58ade7b0befebdbf8d8d33ac347500cffe258ac2c036f4fd"
+  },
+  {
+    "file": "curve-07-raster.txt",
+    "sha256": "cd7c0bad3678b085d792b822bc29972202e949bdbd47464d59b4397ee594a68d",
+    "rawSHA256": "fb34ea2f51bf5f15353590044d1e963999e15e3af1cb6edc653c98f5537f1e1f"
+  },
+  {
+    "file": "curve-09-performance.txt",
+    "sha256": "e6c902c29316ce526efd1147f63d4c84173ac457b542f1d88b6e0ef5a6dcc882",
+    "rawSHA256": "198be962099bba6ea2cb2f4af14680793cb1c6566758561c5ab03672747859e8"
+  },
+  {
+    "file": "curve-10-performance-repeat.txt",
+    "sha256": "ff914241eec34214a0293fe4445792ef9ed3622d5eb0e8f09e3b3bc29999a5b2",
+    "rawSHA256": "014d27812d873d3442b092bc9f7892e6e4979577ad8010170532ff5efbc469ae"
+  },
+  {
+    "file": "curve-11-build.txt",
+    "sha256": "f4f57b52a89a7a0b57fdaf6eb630afce5a33732a4267f8ace787d4dfded479f5",
+    "rawSHA256": "d6459060ec43a2334f1872b319103d5e21236f5ff61db3c458d1e00946443fb6"
+  },
+  {
+    "file": "curve-12-package.txt",
+    "sha256": "1da1367bfda82453a298c3c07ad6734e491bc79cdc902f03668a77f4f602898d",
+    "rawSHA256": "3fb22edde5bd86e3ae9b0566af91d6fdeb994e7f1fc8c946da3203ad5a549486"
+  },
+  {
+    "file": "curve-13-checksite.txt",
+    "sha256": "b12f43096006624ce89f22f1d34f2cae3080327c6442e8daa562ea5c1f04b459",
+    "rawSHA256": "27d03545dd95ebfbd6180414d90c9554ac0a0a57e33704dcc4412b885c475961"
+  },
+  {
+    "file": "curve-14-controls-repeat.txt",
+    "sha256": "7850166b03fd6d53f8db9d545db5b344ab029739b13739b627d182336759007b",
+    "rawSHA256": "0b2ed610faccb5bc58ade7b0befebdbf8d8d33ac347500cffe258ac2c036f4fd"
+  },
+  {
+    "file": "curve-15-raster-repeat.txt",
+    "sha256": "cd7c0bad3678b085d792b822bc29972202e949bdbd47464d59b4397ee594a68d",
+    "rawSHA256": "fb34ea2f51bf5f15353590044d1e963999e15e3af1cb6edc653c98f5537f1e1f"
+  }
+]

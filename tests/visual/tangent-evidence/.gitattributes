@@ -1,0 +1,4 @@
+*.json -text
+*.gz -text
+*.png -text
+*.txt -whitespace

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-22",
+  "archive": "followup-proximal-stop-2507723-20261122.zip",
+  "sha256": "ff9e921449d49d6c99831bbff1c087dd3a1aceda0f1333aaf63fd05fd5b9340b",
+  "bytes": 57008,
+  "restoreDirectory": "tests/visual/out",
+  "members": {
+    "native-proximal-stop-2507723-main-02/protocol.json": "948d449b63e04b6f8724c4fb107b691d49026f38fcd4cc94c7850203b48e27dd",
+    "native-proximal-stop-2507723-main-02/chromium-reverse-extract.json": "bc512c41256ba84932595ed8804bd8080843178a26d3d56039ded57408d5fbf9",
+    "native-proximal-stop-2507723-main-02/webkit-reverse-extract.json": "4a18259082854b020e77b71e3617734a0f3a6e1f92223b449cc82803dc87c437",
+    "native-proximal-stop-2507723-repeat-02/protocol.json": "948d449b63e04b6f8724c4fb107b691d49026f38fcd4cc94c7850203b48e27dd",
+    "native-proximal-stop-2507723-repeat-02/chromium-reverse-extract.json": "bc512c41256ba84932595ed8804bd8080843178a26d3d56039ded57408d5fbf9",
+    "native-proximal-stop-2507723-repeat-02/webkit-reverse-extract.json": "4a18259082854b020e77b71e3617734a0f3a6e1f92223b449cc82803dc87c437"
+  }
+}

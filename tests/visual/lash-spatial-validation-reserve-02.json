@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-18",
+  "license": "https://www.pexels.com/license/",
+  "status": "reserve-not-qualified",
+  "policy": "Ordered reserve selected from official text metadata before FaceMesh. Seal image views and lash detector output. Readiness and different source IDs do not establish identity separation or annotations.",
+  "sources": [
+    {
+      "id": "19814806",
+      "file": "pexels-19814806.jpg",
+      "page": "https://www.pexels.com/photo/portrait-of-a-young-woman-with-eyeliner-makeup-19814806/",
+      "url": "https://images.pexels.com/photos/19814806/pexels-photo-19814806.jpeg?cs=srgb&fm=jpg",
+      "author": "Nemmy Media",
+      "split": "validation",
+      "role": "hard-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "32963979",
+      "file": "pexels-32963979.jpg",
+      "page": "https://www.pexels.com/photo/close-up-portrait-of-woman-with-bold-makeup-32963979/",
+      "url": "https://images.pexels.com/photos/32963979/pexels-photo-32963979.jpeg?cs=srgb&fm=jpg",
+      "author": "Reza Shahriari",
+      "split": "validation",
+      "role": "hard-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "14526034",
+      "file": "pexels-14526034.jpg",
+      "page": "https://www.pexels.com/photo/close-up-photo-of-woman-wearing-makeup-14526034/",
+      "url": "https://images.pexels.com/photos/14526034/pexels-photo-14526034.jpeg?cs=srgb&fm=jpg",
+      "author": "Nathan J Hilton",
+      "split": "validation",
+      "role": "hard-lead",
+      "identityGroup": null
+    },
+    {
+      "id": "18004624",
+      "file": "pexels-18004624.jpg",
+      "page": "https://www.pexels.com/photo/portrait-of-a-woman-18004624/",
+      "url": "https://images.pexels.com/photos/18004624/pexels-photo-18004624.jpeg?cs=srgb&fm=jpg",
+      "author": "Pollianna Bonnett",
+      "split": "validation",
+      "role": "hard-lead",
+      "identityGroup": null
+    }
+  ]
+}
